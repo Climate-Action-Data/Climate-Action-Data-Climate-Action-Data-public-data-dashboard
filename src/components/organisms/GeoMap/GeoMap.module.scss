@@ -1,0 +1,25 @@
+$dotAreaOpacity: 0.02;
+$normalColor: #666666;
+$hoverColor: green;
+
+.geoMap {
+    background-color: white;
+
+    .geoMapDot {
+        fill: $normalColor;
+        
+        &Hover {
+            fill: $hoverColor;
+        }
+    }
+
+    .geoMapDotArea {
+        fill: $normalColor;
+        opacity: $dotAreaOpacity;
+        
+        &Hover {
+            fill: $hoverColor;
+            opacity: $dotAreaOpacity;
+        }
+    }
+}
