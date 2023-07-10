@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Provider } from 'overmind-react'
 import { config } from './../overmind'
@@ -9,11 +8,13 @@ import './globals.css'
 import { createOvermind } from 'overmind'
 import NoSSR from './noSSR'
 import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { ChakraProvider, Spacer, extendTheme } from '@chakra-ui/react'
 import { Header } from '../components/organisms/Header'
 import { brandPrimary } from '@/styles/Button'
 import { Menu } from '@/components/organisms/Menu'
-
+import { Home } from './../components/pages/Home'
+import { mode } from "@chakra-ui/theme-tools";
+import { cardSection } from '@/styles/Section'
 
 
 
@@ -27,6 +28,11 @@ const theme = extendTheme({
       variants: {
         brandPrimary
       },
+    },
+    Container: {
+      variants: {
+        cardSection
+      }
     }
   },
   colors: {
@@ -57,6 +63,16 @@ const theme = extendTheme({
       900: "#364D3F"
     }
   },
+  styles: {
+    global: (props: any) => ({
+      body: {
+        bg: mode(
+          "#F8FAFA",
+          "#000"
+        )(props),
+      },
+    }),
+  },
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }): React.JSX.Element {
@@ -69,6 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
               <ChakraProvider theme={theme}>
                 <Header />
                 <Menu />
+                <Home />
                 {children}
               </ChakraProvider>
             </CacheProvider>
