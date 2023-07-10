@@ -126,11 +126,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
                 <Header />
                 <Menu />
                 <main className={styles.main}>{children}</main>
-              </ChakraProvider>
-            </CacheProvider>
-          </NoSSR>
-        </body>
-      </html>
-    </Provider>
+              </ChakraProvider >
+            </CacheProvider >
+          </NoSSR >
+        </body >
+      </html >
+    </Provider >
   )
 }

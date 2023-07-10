@@ -37,7 +37,7 @@ export const Menu = (): React.JSX.Element => {
                     </Button>
                 </Flex>
             </Flex>
-            <SlideFade in={isOpen} style={{ zIndex: 10 }}>
+            <SlideFade in={isOpen} style={{ zIndex: 10, width: "56px" }}>
                 <Box color={"white"} backgroundColor={"gray.400"} width={"56px"} height={"100vh"} position={"relative"}>
                     <Flex>
                         <Button variant={"brandPrimary"} onClick={redirect}>
