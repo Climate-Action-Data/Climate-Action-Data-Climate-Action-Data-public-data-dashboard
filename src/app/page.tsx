@@ -6,6 +6,7 @@ import GeoMap from '@/components/organisms/GeoMap/GeoMap'
 import { Flex, Container, Spacer } from '@chakra-ui/react'
 
 export default function Home(): React.JSX.Element {
+
   return (
     <>
       <Flex width={`100%`}>
