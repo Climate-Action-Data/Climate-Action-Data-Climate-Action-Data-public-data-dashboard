@@ -5,6 +5,7 @@ import { TimeframeSearch } from '@/components/molecules/TimeframeSearch/Timefram
 import { Flex, Container, Spacer } from '@chakra-ui/react'
 
 export default function Home(): React.JSX.Element {
+
   return (
     <>
       <Flex width={`100%`}>
