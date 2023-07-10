@@ -26,11 +26,9 @@ export const RegionSearch = (): React.JSX.Element => {
             <Divider marginX={6} height={"70%"} orientation="vertical" />
             <HStack spacing={4}>
                 {Regions.map((regionName) => (regionName !== region &&
-                    <Button variant={"unstyled"} onClick={() => setRegion(regionName)}>
-
+                    <Button key={regionName} variant={"unstyled"} onClick={() => setRegion(regionName)}>
                         <Tag
                             size={"md"}
-                            key={regionName}
                             borderRadius='full'
                             variant='solid'
                             colorScheme='gray'
