@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest --watch --coverage",
-    "test:once": "jest"
+    "test:once": "jest",
+    "postinstall": "husky install",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.4",
@@ -33,6 +35,7 @@
     "framer-motion": "^10.12.18",
     "i18next": "^23.2.11",
     "i18next-browser-languagedetector": "^7.1.0",
+    "husky": "^8.0.3",
     "next": "13.4.9",
     "overmind": "^28.0.3",
     "overmind-react": "^29.0.3",
