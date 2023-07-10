@@ -1,11 +1,7 @@
 import { Regions } from "@/@types/Region"
 import { Flex, Text, Box, Divider, HStack, Tag, Button, TagLabel } from "@chakra-ui/react"
-import { ReactNode, useState } from "react"
+import { useState } from "react"
 
-const RegionSearchTitle = (region: string | undefined) => {
-
-
-}
 
 export const RegionSearch = (): React.JSX.Element => {
     const [region, setRegion] = useState<string | undefined>(undefined)
