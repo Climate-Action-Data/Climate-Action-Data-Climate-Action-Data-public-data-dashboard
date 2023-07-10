@@ -1,14 +1,26 @@
+'use client'
 import Image from 'next/image'
 import styles from './page.module.css'
+import { useAppState, useActions } from "./../overmind";
+import { useEffect } from 'react'
+
 
 export default function Home(): React.JSX.Element {
+  const { carbonReduction } = useAppState().analytics
+  const { getCarbonReduction } = useActions().analytics
+  useEffect(() => {
+    getCarbonReduction()
+  }, [])
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
+    <main style={{ height: "200vh" }} className={styles.main}>
+      <div style={{ position: "sticky" }} className={styles.description}>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
+        {carbonReduction &&
+          <p>Active Project: {carbonReduction.activeProjects}</p>
+        }
         <div>
           <a href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer">
             By <Image src="/vercel.svg" alt="Vercel Logo" className={styles.vercelLogo} width={100} height={24} priority />
