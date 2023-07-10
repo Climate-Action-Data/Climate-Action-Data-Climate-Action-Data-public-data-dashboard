@@ -6,13 +6,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint/eslint-plugin'],
-  extends: [
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-    'plugin:react-hooks/recommended',
-  ],
+  extends: ['plugin:react/recommended', 'plugin:react/jsx-runtime', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended', 'plugin:react-hooks/recommended'],
   root: true,
   env: {
     node: true,
@@ -24,20 +18,17 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'off',
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/no-unused-vars': 'error',
-    '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/quotes': ['error', 'backtick'],
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'error',
     'no-magic-numbers': [
       'error',
       {
         ignore: [1, 0],
       },
     ],
-    'no-multi-spaces': 'error',
     'no-multiple-empty-lines': [
       'error',
       {
