@@ -2,7 +2,7 @@
 import React from 'react'
 import { Inter } from 'next/font/google'
 import { Provider } from 'overmind-react'
-import { config } from './../overmind'
+import { config } from '../overmind'
 const overmind = createOvermind(config)
 import './globals.css'
 import { createOvermind } from 'overmind'
@@ -12,9 +12,10 @@ import { ChakraProvider, Spacer, extendTheme } from '@chakra-ui/react'
 import { Header } from '../components/organisms/Header'
 import { brandPrimary } from '@/styles/Button'
 import { Menu } from '@/components/organisms/Menu'
-import { Home } from './../components/pages/Home'
+import { Home } from '../components/pages/Home'
 import { mode } from "@chakra-ui/theme-tools";
 import { cardSection } from '@/styles/Section'
+import { AppType } from 'next/app'
 
 
 
@@ -74,6 +75,7 @@ const theme = extendTheme({
     }),
   },
 });
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }): React.JSX.Element {
   return (
