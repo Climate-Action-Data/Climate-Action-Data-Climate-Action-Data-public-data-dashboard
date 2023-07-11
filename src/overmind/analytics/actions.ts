@@ -1,3 +1,4 @@
+import { ErrorResponse } from '@/@types/EffectResponse';
 import { Context } from '..';
 
 interface SearchParams {
@@ -5,10 +6,23 @@ interface SearchParams {
     timeframe: string | null
 }
 
-export const getCarbonReduction = async (context: Context, searchParams: SearchParams = { region: null, timeframe: null }) => {
-
+/**
+ * Retrieve the carbon reduction data
+ * @param context Prisma context allowing access to state, actions, effects
+ * @param searchParams Search params to filter data
+ * @returns Promise<boolean | ErrorResponse>
+ */
+export const getCarbonReduction = async (context: Context, searchParams: SearchParams = { region: null, timeframe: null }): Promise<boolean | ErrorResponse> => {
+    // Retrieve data from the API
     const carbonData = await context.effects.analytics.getCarbonReduction()
+    // Check if we have data
     if (carbonData.data) {
+        // Set our state
+        // TODO: Filter the data if needed
         context.state.analytics.carbonReduction = carbonData.data
+        return true
+    } else {
+        // Return our error
+        return carbonData.error
     }
 }
