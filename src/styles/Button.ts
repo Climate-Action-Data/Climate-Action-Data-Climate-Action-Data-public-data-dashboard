@@ -12,10 +12,4 @@ export const brandPrimary = defineStyle({
     _active: {
         background: "gray.200"
     },
-
-    // let's also provide dark mode alternatives
-    _dark: {
-        background: 'gray.500',
-        color: 'white',
-    }
 })
