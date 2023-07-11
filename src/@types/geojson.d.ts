@@ -1,65 +1,20 @@
-type GeoJson = {
-  type: string
-  features: GeoJsonCountry[]
-}
-
-type GeoJsonCountry =
-  | {
-      type: string
-      id: string
-      properties: { name: string }
-      geometry: GeoGeometry
-    }
-  | {
-      type: string
-      id: string
-      properties: { name: string }
-      geometry: GeoGeometry
-    }
-
-type GeoCountryPolygons = {
-  country: string
-  type: string
-  coordinates: number[][][][]
-}
-
-type GeoCountryPoint = {
-  x: number
-  y: number
-  country: string
-}
-
-type GeoGeometry = {
-  type: string
-  coordinates: number[][] | GeoCoordinatesArray
-}
-
-type GeoCoordinatesArray = GeoCoordinates[] | GeoCoordinates[][]
-
-type GeoCoordinates = number[][]
-
-type GeoRegion = {
-  lat: {
-    min: number
-    max: number
-  }
-  lng: {
-    min: number
-    max: number
-  }
-}
-
-interface GetMapProps {
-  gridHeight?: number
-  gridWidth?: number
-  countries?: string[]
-  grid?: string
-}
-
-interface MapPointParams {
-  shape: string
-  svgOptions: {
-    radius: number
-    color: string
-  }
+const enum MapArea {
+  SOUTHERN_ASIA = `southern-asia`,
+  NORTHERN_EUROPE = `northern-europe`,
+  SOUTHERN_EUROPE = `southern-europe`,
+  NORTHERN_AFRICA = `northern-africa`,
+  POLYNESIA = `polynesia`,
+  SUB_SAHARAN_AFRICA = `sub-saharan-africa`,
+  LATIN_AMERICA_AND_THE_CARIBBEAN = `latin-america-and-the-caribbean`,
+  WESTERN_ASIA = `western-asia`,
+  AUSTRALIA_AND_NEW_ZEALAND = `australia-and-new-zealand`,
+  WESTERN_EUROPE = `western-europe`,
+  EASTERN_EUROPE = `eastern-europe`,
+  NORTHERN_AMERICA = `northern-america`,
+  SOUTH_EASTERN_ASIA = `south-eastern-asia`,
+  EASTERN_ASIA = `eastern-asia`,
+  MELANESIA = `melanesia`,
+  MICRONESIA = `micronesia`,
+  CENTRAL_ASIA = `central-asia`,
+  WORLD = `world`,
 }

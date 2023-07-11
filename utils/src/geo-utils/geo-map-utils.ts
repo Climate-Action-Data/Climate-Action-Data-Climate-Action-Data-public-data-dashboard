@@ -4,7 +4,7 @@ import proj4 from 'proj4'
 import _ from 'lodash'
 import inside from '@turf/boolean-point-in-polygon'
 import { polygon, point } from '@turf/turf'
-import geojsonWorld from '../../../assets/countries.geo.json'
+import geojsonWorld from './countries.geo.json'
 
 const DEFAULT_WORLD_REGION = {
   lat: { min: -56, max: 71 },
@@ -24,6 +24,7 @@ export const geojsonToMultiPolygons = (geojson: GeoJson) => {
     if (feature.geometry.type === `Polygon`) {
       countriesData.push({
         country: feature.id,
+        continent: feature.continent,
         type: feature.geometry.type,
         coordinates: [feature.geometry.coordinates as number[][][]],
       })
@@ -31,6 +32,7 @@ export const geojsonToMultiPolygons = (geojson: GeoJson) => {
       feature.geometry.coordinates.forEach((coordsCollection) => {
         countriesData.push({
           country: feature.id,
+          continent: feature.continent,
           type: feature.geometry.type,
           coordinates: [coordsCollection as number[][][]],
         })
@@ -38,10 +40,11 @@ export const geojsonToMultiPolygons = (geojson: GeoJson) => {
     }
   })
 
-  return countriesData.map(({ country, coordinates }) => {
+  return countriesData.map(({ country, continent, coordinates }) => {
     return {
       type: `Feature`,
       id: country,
+      continent,
       geometry: { type: `MultiPolygon`, coordinates },
       properties: {},
     }
@@ -90,7 +93,7 @@ export const computeGeojsonBox = (geojson: GeoJson | GeoJsonCountry | GeoGeometr
   }
 }
 
-export const getMap = (props: GetMapProps) => {
+export const getMap = (props: GetMapProps): GeoMap => {
   const { countries = [], grid = `vertical` } = props
   let { gridHeight = 0, gridWidth = 0 } = props
 
@@ -102,16 +105,21 @@ export const getMap = (props: GetMapProps) => {
   let geojson: GeoJson = geojsonWorld
 
   if (countries.length > 0) {
-    const features = countries.map((country) => {
-      return geojsonByCountry.get(country)
-    })
+    const features = countries
+      .map((country) => {
+        return geojsonByCountry.get(country)
+      })
+      .filter((country) => !!country)
 
     geojson = {
       type: `FeatureCollection`,
       features: _.compact(features),
     }
-    if (!region) {
+
+    if (!region && features.length > 0) {
       region = computeGeojsonBox(geojson)
+    } else {
+      region = DEFAULT_WORLD_REGION
     }
   } else if (!region) {
     region = DEFAULT_WORLD_REGION
@@ -133,7 +141,7 @@ export const getMap = (props: GetMapProps) => {
     gridHeight = Math.round((gridWidth * Y_RANGE) / X_RANGE)
   }
 
-  const points = new Map<string, GeoCountryPoint>()
+  const dots: string[][] = new Array(gridWidth).fill(0).map(() => new Array(gridHeight).fill(0))
   const ystep = grid === `diagonal` ? Math.sqrt(3) / 2 : 1
 
   for (let y = 0; y * ystep < gridHeight; y += 1) {
@@ -148,29 +156,58 @@ export const getMap = (props: GetMapProps) => {
         const countryPoly = polygon(countryPolygons.geometry.coordinates[0])
 
         if (inside(wgs84Point, countryPoly)) {
-          points.set([x, y].join(`;`), {
-            x: localx,
-            y: localy,
-            country: countryPolygons.id,
-          })
+          dots[localx][localy] = countryPolygons.id
         }
       })
     }
   }
 
-  return {
-    points,
-    countriesPolygons,
-    X_MIN,
-    Y_MIN,
-    X_MAX,
-    Y_MAX,
+  return dots
+}
+
+export const getMap = (props: GetMapProps): GeoMap => {
+  const { countries = [], grid = `vertical` } = props
+
+  let { gridHeight = 0, gridWidth = 0 } = props
+
+  if (gridHeight <= 0 && gridWidth <= 0) {
+    throw new Error(`height or width is required`)
+  }
+
+  const geojson: GeoJson = {
+    ...geojsonWorld,
+    features: geojsonWorld.features.filter((jsonCountry) => (countries.length === 0 ? true : _.indexOf(countries, jsonCountry.id) >= 0)),
+  }
+  const region = getRegion(geojson, countries)
+
+  const countriesPolygons = geojsonToMultiPolygons(geojson)
+
+  const converter = proj4(`GOOGLE`)
+
+  const [X_MIN, Y_MIN] = converter.forward([region.lng.min, region.lat.min])
+  const [X_MAX, Y_MAX] = converter.forward([region.lng.max, region.lat.max])
+
+  const X_RANGE = X_MAX - X_MIN
+  const Y_RANGE = Y_MAX - Y_MIN
+
+  const gridParams = {
     X_RANGE,
     Y_RANGE,
-    region,
-    grid,
+    X_MIN,
+    Y_MAX,
+  }
+
+  if (gridWidth <= 0) {
+    gridWidth = Math.round((gridHeight * X_RANGE) / Y_RANGE)
+  } else if (gridHeight <= 0) {
+    gridHeight = Math.round((gridWidth * Y_RANGE) / X_RANGE)
+  }
+
+  const dots = computeMapDots(grid, gridWidth, gridHeight, countriesPolygons, gridParams)
+
+  return {
+    dots,
     gridHeight,
     gridWidth,
-    ystep,
   }
 }

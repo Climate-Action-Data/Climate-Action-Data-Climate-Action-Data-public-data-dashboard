@@ -41,6 +41,9 @@ dependencies:
   '@typescript-eslint/parser':
     specifier: ^5.59.11
     version: 5.61.0(eslint@8.44.0)(typescript@5.1.6)
+  case:
+    specifier: ^1.6.3
+    version: 1.6.3
   commitlint:
     specifier: ^17.6.6
     version: 17.6.6
@@ -5404,6 +5407,11 @@ packages:
   /caniuse-lite@1.0.30001514:
     resolution: { integrity: sha512-ENcIpYBmwAAOm/V2cXgM7rZUrKKaqisZl4ZAI520FIkqGXUxJjmaIssbRW5HVVR5tyV6ygTLIm15aU8LUmQSaQ== }
 
+  /case@1.6.3:
+    resolution: {integrity: sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==}
+    engines: {node: '>= 0.8.0'}
+    dev: false
+
   /chalk@2.4.2:
     resolution: { integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ== }
     engines: { node: '>=4' }
@@ -5495,6 +5503,7 @@ packages:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   /combined-stream@1.0.8:
     resolution: { integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg== }
     engines: { node: '>= 0.8' }
@@ -5509,11 +5518,12 @@ packages:
 =======
 =======
 >>>>>>> d16335e (feat(world map): import existing component)
+=======
+>>>>>>> 0e5290b (:sparkles: feat(world map): util programs to generate dots matrix for maps)
   /commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
     dev: false
 
-<<<<<<< HEAD
   /commitlint-config-gitmoji@2.3.1:
     resolution: {integrity: sha512-T15ssbsyNc6szHlnGWo0/xvIA1mObqM70E9TwKNVTpksxhm+OdFht8hvDdKJAVi4nlZX5tcfTeILOi7SHBGH3w==}
     dependencies:
@@ -5531,6 +5541,7 @@ packages:
       gitmojis: 3.13.5
     dev: false
 
+<<<<<<< HEAD
 >>>>>>> ea97ec1 (:construction: chore: add gitmoji to commit lint rules)
 <<<<<<< HEAD
 >>>>>>> 86f2f22 (:construction: chore: add gitmoji to commit lint rules)
@@ -5538,6 +5549,8 @@ packages:
 =======
 >>>>>>> d16335e (feat(world map): import existing component)
 >>>>>>> 496b9b5 (:sparkles: feat(world map): import existing component)
+=======
+>>>>>>> 0e5290b (:sparkles: feat(world map): util programs to generate dots matrix for maps)
   /commitlint@17.6.6:
     resolution: { integrity: sha512-Q5M+w1nqGQSEkEW43EtPNrU+uKL2pENrJl6QigFupZ0v4AfvI8k5Q6uFgWmxlEOrSkgCYaN436Q9c9pydqyJqg== }
     engines: { node: '>=v14' }
