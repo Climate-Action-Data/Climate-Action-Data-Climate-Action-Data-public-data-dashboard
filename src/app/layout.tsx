@@ -87,7 +87,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
               <ChakraProvider theme={theme}>
                 <Header />
                 <Menu />
-                <Home />
                 {children}
               </ChakraProvider>
             </CacheProvider>
