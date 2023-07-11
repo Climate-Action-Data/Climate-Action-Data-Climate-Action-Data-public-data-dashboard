@@ -2,7 +2,7 @@
 import React from 'react'
 import { Inter } from 'next/font/google'
 import { Provider } from 'overmind-react'
-import { config } from './../overmind'
+import { config } from '../overmind'
 const overmind = createOvermind(config)
 import './globals.css'
 import { createOvermind } from 'overmind'
@@ -114,6 +114,7 @@ const theme = extendTheme({
     }),
   },
 })
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }): React.JSX.Element {
   return (
