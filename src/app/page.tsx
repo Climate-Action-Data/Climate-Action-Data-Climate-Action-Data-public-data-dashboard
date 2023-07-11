@@ -15,7 +15,7 @@ export default function Home(): React.JSX.Element {
     getCarbonReduction()
   }, [])
   return (
-    <main style={{ height: "200vh" }} className={styles.main}>
+    <>
       <div style={{ position: "sticky" }} className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -38,8 +38,6 @@ export default function Home(): React.JSX.Element {
           </Flex>
         </Container>
       </Flex>
-
-
-    </main>
+    </>
   )
 }

@@ -15,7 +15,7 @@ import { Menu } from '@/components/organisms/Menu'
 import { Home } from '../components/pages/Home'
 import { mode } from "@chakra-ui/theme-tools";
 import { cardSection } from '@/styles/Section'
-import { AppType } from 'next/app'
+import styles from './page.module.css'
 
 
 
@@ -87,7 +87,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
               <ChakraProvider theme={theme}>
                 <Header />
                 <Menu />
-                {children}
+                <main style={{ height: "200vh" }} className={styles.main}>
+                  {children}
+                </main>
               </ChakraProvider>
             </CacheProvider>
           </NoSSR>
