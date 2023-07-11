@@ -121,7 +121,6 @@ const theme = extendTheme({
     }),
   },
 })
-
 export default function RootLayout({ children }: { children: React.ReactNode }): React.JSX.Element {
   return (
     <Provider value={overmind}>
@@ -133,11 +132,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
                 <AppHeader />
                 <Menu />
                 <main className={styles.main}>{children}</main>
-              </ChakraProvider >
-            </CacheProvider >
-          </NoSSR >
-        </body >
-      </html >
-    </Provider >
+              </ChakraProvider>
+            </CacheProvider>
+          </NoSSR>
+        </body>
+      </html>
+    </Provider>
   )
 }
