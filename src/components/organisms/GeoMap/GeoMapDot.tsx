@@ -1,34 +1,48 @@
-import styles from './GeoMap.module.scss'
+import _ from 'lodash'
 
-const DOT_RADIUS = 0.4
-const DOT_AREA_RADIUS_FACTOR = 2
+import styles from './GeoMap.module.scss'
 
 interface GeoMapPatternProps {
   x: number
   y: number
   country: string
-  hoveredCountry: string
-  onHoverChange: (country: string) => void
+  continent?: MapArea
+  hoveredArea: string
+  selectedArea: string
+  onHoverChange: (country: string, continent?: string) => void
+  onClick: (continent?: MapArea) => void
 }
 
 const GeoMapDot = (props: GeoMapPatternProps) => {
-  const { x, y, country, hoveredCountry, onHoverChange } = props
+  const { x, y, country, continent, hoveredArea, selectedArea, onHoverChange, onClick } = props
 
   const handleMouseOver = () => {
-    onHoverChange(country)
+    onHoverChange(country, continent)
+  }
+
+  const handleClick = () => {
+    onClick(continent)
   }
 
   const handleMouseLeave = () => {
-    onHoverChange(``)
+    onHoverChange(``, ``)
   }
 
-  const geoMapDotClassName = hoveredCountry === country ? styles.geoMapDotHover : styles.geoMapDot
-  const geoMapDotAreaClassName = hoveredCountry === country ? styles.geoMapDotAreaHover : styles.geoMapDotArea
+  let shouldDisplayHoverStyle = false
+
+  if (continent !== selectedArea) {
+    shouldDisplayHoverStyle = _.indexOf([country, continent], hoveredArea) >= 0
+  } else {
+    shouldDisplayHoverStyle = country === hoveredArea
+  }
+
+  const geoMapDotClassName = shouldDisplayHoverStyle ? styles.geoMapDotHover : styles.geoMapDot
+  const geoMapDotAreaClassName = shouldDisplayHoverStyle ? styles.geoMapDotAreaHover : styles.geoMapDotArea
 
   return (
     <>
-      <circle className={geoMapDotAreaClassName} cx={x} cy={y} r={DOT_RADIUS * DOT_AREA_RADIUS_FACTOR} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} />
-      <circle className={geoMapDotClassName} cx={x} cy={y} r={DOT_RADIUS} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} />
+      <circle className={geoMapDotAreaClassName} cx={x} cy={y} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} onClick={handleClick} />
+      <circle className={geoMapDotClassName} cx={x} cy={y} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} onClick={handleClick} />
     </>
   )
 }

@@ -227,3 +227,10 @@
     transform: rotate(0deg);
   }
 }
+
+.worldButton {
+    position: absolute;
+    left: 24px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
