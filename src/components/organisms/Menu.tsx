@@ -8,7 +8,7 @@ import Portrait from "./../../assets/portrait.png"
 import HelpIcon from "./../../assets/icons/help.svg"
 import BellIcons from "./../../assets/icons/bell.svg"
 import { Button, Box, Text, Flex, SlideFade, useDisclosure, Image, Icon } from "@chakra-ui/react"
-import { BellICon } from "@/assets/icons/icons"
+import { Link } from '@chakra-ui/next-js'
 
 
 export const Menu = (): React.JSX.Element => {
@@ -31,6 +31,7 @@ export const Menu = (): React.JSX.Element => {
                 <Flex alignItems={"center"}>
                     <Button alignSelf={"start"} colorScheme="gray" backgroundColor={"gray.500"} width={"56px"} height={"56px"}>
                         <Image alt="Menu" src={BellIcons.src} />
+
                     </Button>
                     <Button color={"white"} backgroundColor={"gray.500"} display={"flex"} height={"56px"} padding={"16px"} alignItems={"center"}>
                         <Text>Hello, Kat</Text>
@@ -41,9 +42,12 @@ export const Menu = (): React.JSX.Element => {
             <SlideFade in={isOpen} style={{ zIndex: 10, width: "56px" }}>
                 <Box color={"white"} backgroundColor={"gray.400"} width={"56px"} height={"100vh"} position={"relative"}>
                     <Flex>
-                        <Button variant={"brandPrimary"} onClick={redirect}>
+                        <Link as={"button"} variant={"brandPrimary"} href='/'>
                             <Image alt="Home" src={HomeIcon.src} />
-                        </Button>
+                        </Link>
+                        {/* <Button variant={"brandPrimary"} onClick={redirect}>
+                            <Image alt="Home" src={HomeIcon.src} />
+                        </Button> */}
                     </Flex>
                     <Flex>
                         <Button variant={"brandPrimary"} onClick={redirect}>
