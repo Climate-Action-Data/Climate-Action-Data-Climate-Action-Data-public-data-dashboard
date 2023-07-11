@@ -9,6 +9,7 @@ import { HamburgerIcon } from '../atoms/HamburgerIcon'
 import { HelpIcon } from '../atoms/HelpIcon'
 import { WebRedirectIcon } from '../atoms/WebRedirectIcon'
 import { HomeIcon } from '../atoms/HomeIcon'
+import { DarkModeSwitch } from '../atoms/DarkModeSwitch'
 export const Menu = (): React.JSX.Element => {
   const { isOpen, onToggle } = useDisclosure()
 
@@ -61,6 +62,7 @@ export const Menu = (): React.JSX.Element => {
               <HelpIcon color={`white`} />
             </Button>
           </Flex>
+          <DarkModeSwitch />
         </Box>
       </SlideFade>
     </Box>
