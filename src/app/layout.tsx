@@ -87,7 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
               <ChakraProvider theme={theme}>
                 <Header />
                 <Menu />
-                <main style={{ height: "200vh" }} className={styles.main}>
+                <main className={styles.main}>
                   {children}
                 </main>
               </ChakraProvider>
