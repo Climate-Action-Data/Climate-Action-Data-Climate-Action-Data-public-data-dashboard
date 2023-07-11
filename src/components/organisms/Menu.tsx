@@ -1,21 +1,16 @@
 import React from 'react'
 import Logo from './../../assets/logo.png'
 import Portrait from './../../assets/portrait.png'
-import { Button, Box, Text, Flex, SlideFade, useDisclosure, Image } from '@chakra-ui/react'
+import { Button, Box, Text, Flex, SlideFade, useDisclosure, Image, Center } from '@chakra-ui/react'
 import { Link } from '@chakra-ui/next-js'
-import { BellIcon } from '../atoms/BellIcon'
-import { BookmarkIcon } from '../atoms/BookmarkIcon'
-import { HamburgerIcon } from '../atoms/HamburgerIcon'
-import { HelpIcon } from '../atoms/HelpIcon'
-import { WebRedirectIcon } from '../atoms/WebRedirectIcon'
-import { HomeIcon } from '../atoms/HomeIcon'
+import { BellIcon } from '../atoms/icons/BellIcon'
+import { BookmarkIcon, HamburgerIcon, HelpIcon, HomeIcon, WebRedirectIcon } from '@/components/atoms/icons'
 import { DarkModeSwitch } from '../atoms/DarkModeSwitch'
+import { usePathname } from 'next/navigation'
+
 export const Menu = (): React.JSX.Element => {
   const { isOpen, onToggle } = useDisclosure()
-
-  const redirect = () => {
-    console.log(`redirect`)
-  }
+  const currentPath = usePathname()
 
   return (
     <Box className="menu">
@@ -40,27 +35,32 @@ export const Menu = (): React.JSX.Element => {
       <SlideFade in={isOpen} style={{ zIndex: 10, width: `56px` }}>
         <Box color={`white`} backgroundColor={`gray.400`} width={`56px`} height={`100vh`} position={`relative`}>
           <Flex>
-            <Link as={`button`} variant={`brandPrimary`} href="/">
-              <HomeIcon color={`white`} />
+            <Link as={`button`} variant={`brandPrimary`} href={`/`}>
+              <Center width={`100%`} height={`100%`}>
+                <HomeIcon color={currentPath === `/` ? `green.main` : `white`} />
+              </Center>
             </Link>
-            {/* <Button variant={"brandPrimary"} onClick={redirect}>
-                            <Image alt="Home" src={HomeIcon.src} />
-                        </Button> */}
           </Flex>
           <Flex>
-            <Button variant={`brandPrimary`} onClick={redirect}>
-              <BookmarkIcon color="white" />
-            </Button>
+            <Link as={`button`} variant={`brandPrimary`} href={`/bookmark`}>
+              <Center width={`100%`} height={`100%`}>
+                <BookmarkIcon color={currentPath === `/bookmark` ? `green.main` : `white`} />
+              </Center>
+            </Link>
           </Flex>
           <Flex>
-            <Button variant={`brandPrimary`} onClick={redirect}>
-              <WebRedirectIcon color={`white`} />
-            </Button>
+            <Link as={`button`} variant={`brandPrimary`} href={`https://www.google.com`}>
+              <Center width={`100%`} height={`100%`}>
+                <WebRedirectIcon color={`white`} />
+              </Center>
+            </Link>
           </Flex>
           <Flex>
-            <Button variant={`brandPrimary`} onClick={redirect}>
-              <HelpIcon color={`white`} />
-            </Button>
+            <Link as={`button`} variant={`brandPrimary`} href={`/help`}>
+              <Center width={`100%`} height={`100%`}>
+                <HelpIcon color={currentPath === `/help` ? `green.main` : `white`} />
+              </Center>
+            </Link>
           </Flex>
           <DarkModeSwitch />
         </Box>
