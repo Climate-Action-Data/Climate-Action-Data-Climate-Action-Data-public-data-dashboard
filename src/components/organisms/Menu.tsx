@@ -6,8 +6,9 @@ import WebRedirectIcon from "./../../assets/icons/web-redirect.svg"
 import Logo from "./../../assets/logo.png"
 import Portrait from "./../../assets/portrait.png"
 import HelpIcon from "./../../assets/icons/help.svg"
-import BellIcon from "./../../assets/icons/bell.svg"
-import { Button, Box, Text, Flex, SlideFade, useDisclosure, Image } from "@chakra-ui/react"
+import BellIcons from "./../../assets/icons/bell.svg"
+import { Button, Box, Text, Flex, SlideFade, useDisclosure, Image, Icon } from "@chakra-ui/react"
+import { BellICon } from "@/assets/icons/icons"
 
 
 export const Menu = (): React.JSX.Element => {
@@ -29,7 +30,7 @@ export const Menu = (): React.JSX.Element => {
                 <Box>Public Data Dashboard</Box>
                 <Flex alignItems={"center"}>
                     <Button alignSelf={"start"} colorScheme="gray" backgroundColor={"gray.500"} width={"56px"} height={"56px"}>
-                        <Image alt="Menu" src={BellIcon.src} />
+                        <Image alt="Menu" src={BellIcons.src} />
                     </Button>
                     <Button color={"white"} backgroundColor={"gray.500"} display={"flex"} height={"56px"} padding={"16px"} alignItems={"center"}>
                         <Text>Hello, Kat</Text>
