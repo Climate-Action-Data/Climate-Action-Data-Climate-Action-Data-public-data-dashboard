@@ -1,7 +1,5 @@
 type GeoMap = {
   dots: string[][]
-  //   points: Map<string, GeoCountryPoint>
-  //   countries: Array<GeoCountryPoints>
   gridHeight: number
   gridWidth: number
 }
@@ -11,21 +9,12 @@ type GeoJson = {
   features: GeoJsonCountry[]
 }
 
-type GeoJsonCountry =
-  | {
-      type: string
-      id: string
-      continent?: string
-      properties: { name: string }
-      geometry: GeoGeometry
-    }
-  | {
-      type: string
-      id: string
-      continent?: string
-      properties: { name: string }
-      geometry: GeoGeometry
-    }
+type GeoJsonCountry = {
+  type: string
+  id: string
+  continent?: string
+  geometry: GeoGeometry
+}
 
 type GeoCountryPolygons = {
   country: string
@@ -34,10 +23,17 @@ type GeoCountryPolygons = {
   coordinates: number[][][][]
 }
 
+type GridParams = {
+  X_RANGE: number
+  Y_RANGE: number
+  X_MIN: number
+  Y_MAX: number
+}
+
 type GeoCountryPoints = {
   country: string
   continent?: string
-  points: Array<GeoPoint>
+  points: GeoPoint[]
 }
 
 type GeoPoint = {
@@ -49,7 +45,6 @@ type GeoCountryPoint = {
   x: number
   y: number
   country: string
-  //   continent?: string
 }
 
 type GeoGeometry = {
