@@ -1,6 +1,4 @@
-import { useColorMode, Box, IconButton } from "@chakra-ui/react"
-import { LightModeIcon } from "./LightModeIcon"
-import { DarkModeIcon } from "./DarkModeIcon"
+import { useColorMode, Box } from "@chakra-ui/react"
 import { DarkModeSwitchIcon } from "./DarkModeSwitchIcon"
 import { LightModeSwitchIcon } from "./LightModeSwitchIcon copy"
 
