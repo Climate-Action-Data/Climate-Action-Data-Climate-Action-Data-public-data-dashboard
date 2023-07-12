@@ -37,3 +37,6 @@ next-env.d.ts
 
 test-report.xml
 coverage
+
+utils/dist
+utils/node_modules
