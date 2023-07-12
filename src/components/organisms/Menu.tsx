@@ -3,7 +3,7 @@ import Logo from './../../assets/logo.png'
 import { Box, Flex, SlideFade, useDisclosure, Image, Center } from '@chakra-ui/react'
 import { Link } from '@chakra-ui/next-js'
 import { BookmarkIcon, HelpIcon, HomeIcon, WebRedirectIcon } from '@/components/atoms/icons'
-import { DarkModeSwitch } from '../atoms/DarkModeSwitch'
+import { DarkModeSwitch } from '../atoms/DarkModeSwitch/DarkModeSwitch'
 import { usePathname } from 'next/navigation'
 
 export const Menu = (): React.JSX.Element => {
