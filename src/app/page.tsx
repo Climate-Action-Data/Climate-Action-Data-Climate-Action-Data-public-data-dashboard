@@ -12,9 +12,9 @@ export default function Home(): React.JSX.Element {
       <Flex width={"100%"}>
         <Container marginTop={"40px"} flex={1} variant="cardSection" >
           <Flex margin={"24px"} alignItems={"center"}>
-            <RegionSearch />
+            {/* <RegionSearch />
             <Spacer />
-            <TimeframeSearch />
+            <TimeframeSearch /> */}
           </Flex>
           <Flex marginX={"24px"}>
             my data
