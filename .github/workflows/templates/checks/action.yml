@@ -2,24 +2,24 @@ name: Checks
 description: Build and deploy the app to the specified environment
 
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
-#    - name: 'Download configuration artifact'
-#      uses: actions/download-artifact@v3
-#      with:
-#        name: configuration
-#
-#    - name: 'Unzip configuration files'
-#      uses: montudor/action-zip@v1
-#      with:
-#        args: unzip -qq configuration.zip -d ./configuration
-#
-#    - name: 'Move files'
-#      shell: bash
-#      run: |
-#        sudo mv ./configuration/configuration/.env ./
-#        sudo mv ./configuration/configuration/* ./
-#      working-directory: .
+    #    - name: 'Download configuration artifact'
+    #      uses: actions/download-artifact@v3
+    #      with:
+    #        name: configuration
+    #
+    #    - name: 'Unzip configuration files'
+    #      uses: montudor/action-zip@v1
+    #      with:
+    #        args: unzip -qq configuration.zip -d ./configuration
+    #
+    #    - name: 'Move files'
+    #      shell: bash
+    #      run: |
+    #        sudo mv ./configuration/configuration/.env ./
+    #        sudo mv ./configuration/configuration/* ./
+    #      working-directory: .
     - name: Checkout source code
       uses: actions/checkout@v3
 
@@ -28,25 +28,23 @@ runs:
       run: |
         ls -larth
 
-    - name: 'setup pnpm environment'
+    - name: Setup pnpm environment
       uses: pnpm/action-setup@v2
       with:
         version: 6.0.2
 
-    - name: 'Build and test'
+    - name: Build and test
       shell: bash
       run: |
         pnpm install
-#        pnpm run test
-#        pnpm run test:e2e
-#        pnpm run test:cov
+      #        pnpm run test
+      #        pnpm run test:e2e
+      #        pnpm run test:cov
       working-directory: .
-
 #    - name: 'Zip source and built admin'
 #      uses: montudor/action-zip@v1
 #      with:
 #        args: zip -qq -r starter-app-backend.zip .
-
 
 #
 #    - name: 'Google auth'
