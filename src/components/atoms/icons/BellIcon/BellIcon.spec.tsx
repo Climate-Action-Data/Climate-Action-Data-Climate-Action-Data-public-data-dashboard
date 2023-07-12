@@ -1,7 +1,9 @@
+'use strict';
+
 import { render } from '@testing-library/react'
-import { HamburgerIcon } from '../HamburgerIcon';
+import { BellIcon } from './BellIcon';
 
 it('renders correctly', () => {
-    const { container } = render(<HamburgerIcon />)
+    const { container } = render(<BellIcon />)
     expect(container).toMatchSnapshot();
 });
