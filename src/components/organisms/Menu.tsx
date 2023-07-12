@@ -1,10 +1,8 @@
 import React from 'react'
 import Logo from './../../assets/logo.png'
-import Portrait from './../../assets/portrait.png'
-import { Button, Box, Text, Flex, SlideFade, useDisclosure, Image, Center } from '@chakra-ui/react'
+import { Box, Flex, SlideFade, useDisclosure, Image, Center } from '@chakra-ui/react'
 import { Link } from '@chakra-ui/next-js'
-import { BellIcon } from '../atoms/icons/BellIcon'
-import { BookmarkIcon, HamburgerIcon, HelpIcon, HomeIcon, WebRedirectIcon } from '@/components/atoms/icons'
+import { BookmarkIcon, HelpIcon, HomeIcon, WebRedirectIcon } from '@/components/atoms/icons'
 import { DarkModeSwitch } from "../atoms/DarkModeSwitch"
 import { usePathname } from 'next/navigation'
 

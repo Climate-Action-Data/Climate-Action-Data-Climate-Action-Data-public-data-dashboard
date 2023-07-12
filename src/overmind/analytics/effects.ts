@@ -23,6 +23,7 @@ export const getCarbonReduction = async (): Promise<EffectResponse<CarbonReducti
                     { title: "ECO", value: 10 }
                 ]
             },
+            error: undefined
         }
     } catch (error) {
         return { error: { code: "200", message: "could not fetch data" } }
