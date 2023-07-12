@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
-import { LightModeSwitchIcon } from '../LightModeSwitchIcon';
+import { WebRedirectIcon } from './WebRedirectIcon';
 
 it('renders correctly', () => {
-    const { container } = render(<LightModeSwitchIcon />)
+    const { container } = render(<WebRedirectIcon />)
     expect(container).toMatchSnapshot();
 });
