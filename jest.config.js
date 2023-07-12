@@ -7,15 +7,12 @@ const createJestConfig = nextJest({
 const customJestConfig = {
     testEnvironment: 'jest-environment-jsdom',
     collectCoverage: true,
-    collectCoverageFrom: [
-        'src/**/*.ts'
-    ],
     coveragePathIgnorePatterns: [
         'node_modules',
         'src/overmind',
         'src/assets'
     ],
-    coverageDirectory: '<rootDir>/coverage/',
+    collectCoverageFrom: ['<rootDir>/src/**', '!<rootDir>/src/**/@types/*', '!<rootDir>/src/**/*.snap'],
     testMatch: ['**/*.spec.tsx', '**/*.spec.ts'],
     reporters: [
         'default',
