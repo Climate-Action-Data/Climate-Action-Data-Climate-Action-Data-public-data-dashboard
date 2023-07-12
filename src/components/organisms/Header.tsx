@@ -2,9 +2,9 @@ import { FC } from 'react'
 import { Box, Flex, Image, Spacer, Text, useBreakpointValue } from '@chakra-ui/react'
 import { Link } from '@chakra-ui/next-js'
 
-import headerBanner from '../../../assets/header.jpg'
-import headerFeatureLarge from '../../../assets/headerFeatureLarge.svg'
-import headerFeatureSmall from '../../../assets/headerFeatureSmall.svg'
+import headerBanner from '../../assets/header.jpg'
+import headerFeatureLarge from '../../assets/headerFeatureLarge.svg'
+import headerFeatureSmall from '../../assets/headerFeatureSmall.svg'
 
 import styles from './Header.module.scss'
 
