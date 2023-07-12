@@ -7,7 +7,7 @@ import { DarkModeSwitch } from "../atoms/DarkModeSwitch"
 import { usePathname } from 'next/navigation'
 
 export const Menu = (): React.JSX.Element => {
-    const { isOpen, onToggle } = useDisclosure()
+    const { isOpen } = useDisclosure()
     const currentPath = usePathname()
 
     return (
