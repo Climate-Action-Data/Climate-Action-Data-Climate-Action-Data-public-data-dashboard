@@ -14,22 +14,22 @@ export const Menu = (): React.JSX.Element => {
 
   return (
     <Box className="menu">
-      <Flex justifyContent={`space-between`} alignItems={`center`}>
+      <Flex height={`100%`} justifyContent={`space-between`} alignItems={`center`}>
         <Flex alignItems={`center`}>
-          <Button position={`sticky`} top={0} colorScheme="gray" width={`56px`} height={`56px`} backgroundColor={isOpen ? `gray.200` : `gray.500`} onClick={onToggle}>
-            <HamburgerIcon color={`white`} />
-          </Button>
+          {/* <Button position={`sticky`} top={0} colorScheme="gray" width={`56px`} height={`56px`} backgroundColor={isOpen ? `gray.200` : `gray.500`} onClick={onToggle}>
+                        <HamburgerIcon color={`white`} />
+                    </Button> */}
           <Image marginX={`8px`} alt="Logo" height={`32px`} src={Logo.src} />
         </Flex>
         <Box>Public Data Dashboard</Box>
         <Flex alignItems={`center`}>
-          <Button alignSelf={`start`} colorScheme="gray" backgroundColor={`gray.500`} width={`56px`} height={`56px`}>
-            <BellIcon color={`white`} />
-          </Button>
-          <Button color={`white`} backgroundColor={`gray.500`} display={`flex`} height={`56px`} padding={`16px`} alignItems={`center`}>
-            <Text>Hello, Kat</Text>
-            <Image margin={`4px`} width={`20px`} height={`20px`} alt="Portrait" src={Portrait.src} />
-          </Button>
+          {/* <Button alignSelf={`start`} colorScheme="gray" backgroundColor={`gray.500`} width={`56px`} height={`56px`}>
+                        <BellIcon color={`white`} />
+                    </Button>
+                    <Button color={`white`} backgroundColor={`gray.500`} display={`flex`} height={`56px`} padding={`16px`} alignItems={`center`}>
+                        <Text>Hello, Kat</Text>
+                        <Image margin={`4px`} width={`20px`} height={`20px`} alt="Portrait" src={Portrait.src} />
+                    </Button> */}
         </Flex>
       </Flex>
       <SlideFade in={isOpen} style={{ zIndex: 10, width: `56px` }}>
