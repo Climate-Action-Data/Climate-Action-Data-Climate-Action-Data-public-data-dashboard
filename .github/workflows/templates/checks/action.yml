@@ -1,4 +1,4 @@
-name: deploy
+name: Checks
 description: Build and deploy the app to the specified environment
 
 runs:

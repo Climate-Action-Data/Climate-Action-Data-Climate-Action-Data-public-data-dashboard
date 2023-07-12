@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  checks:
+  Checks:
     runs-on: ubuntu-latest
     environment: Development
     steps:
@@ -19,7 +19,7 @@ jobs:
       - name: Checks
         uses: "./.github/workflows/templates/checks"
 
-  sonar-analysis:
+  Sonar-analysis:
     name: SonarCloud
     runs-on: ubuntu-latest
     environment: Development

@@ -1,4 +1,4 @@
-name: sonar-analysis
+name: Sonar-analysis
 description: Build and Code analysis
 
 inputs:
