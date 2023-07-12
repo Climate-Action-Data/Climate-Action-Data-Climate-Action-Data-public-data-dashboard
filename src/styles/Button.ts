@@ -13,3 +13,23 @@ export const brandPrimary = defineStyle({
     background: `gray.200`,
   },
 })
+
+export const whiteSecondary = defineStyle({
+  background: `transparent`,
+  color: `white`,
+  fontSize: `14px`,
+  padding: `6px 12px`,
+  textDecoration: `none`,
+  width: `max-content`,
+  borderColor: `white`,
+  borderWidth: `1px`,
+  borderRadius: `32px`,
+  _hover: {
+    background: `gray.50`,
+    textDecoration: `none`,
+  },
+  _active: {
+    background: `#4D5C62`,
+    textDecoration: `none`,
+  },
+})
