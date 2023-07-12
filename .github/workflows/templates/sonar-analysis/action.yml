@@ -1,0 +1,22 @@
+name: sonar-analysis
+description: Build and Code analysis
+
+inputs:
+  github_token:
+    description: github token for get pr information
+    required: true
+  sonar_token:
+    description: Name sonar token
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ inputs.github_token }}  # Needed to get PR information, if any
+        SONAR_TOKEN: ${{ inputs.sonar_token }}
