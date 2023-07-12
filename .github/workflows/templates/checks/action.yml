@@ -1,0 +1,79 @@
+name: deploy
+description: Build and deploy the app to the specified environment
+
+runs:
+  using: "composite"
+  steps:
+#    - name: 'Download configuration artifact'
+#      uses: actions/download-artifact@v3
+#      with:
+#        name: configuration
+#
+#    - name: 'Unzip configuration files'
+#      uses: montudor/action-zip@v1
+#      with:
+#        args: unzip -qq configuration.zip -d ./configuration
+#
+#    - name: 'Move files'
+#      shell: bash
+#      run: |
+#        sudo mv ./configuration/configuration/.env ./
+#        sudo mv ./configuration/configuration/* ./
+#      working-directory: .
+    - name: Checkout source code
+      uses: actions/checkout@v3
+
+    - name: 'list files'
+      shell: bash
+      run: |
+        ls -larth
+
+    - name: 'setup pnpm environment'
+      uses: pnpm/action-setup@v2
+      with:
+        version: 6.0.2
+
+    - name: 'Build and test'
+      shell: bash
+      run: |
+        pnpm install
+#        pnpm run test
+#        pnpm run test:e2e
+#        pnpm run test:cov
+      working-directory: .
+
+#    - name: 'Zip source and built admin'
+#      uses: montudor/action-zip@v1
+#      with:
+#        args: zip -qq -r starter-app-backend.zip .
+
+
+#
+#    - name: 'Google auth'
+#      id: 'auth'
+#      uses: 'google-github-actions/auth@v1'
+#      with:
+#        workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
+#        service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}'
+#
+#    - name: 'Set up Cloud SDK'
+#      uses: 'google-github-actions/setup-gcloud@v1'
+#      with:
+#        project_id: '${{ env.PROJECT_ID }}'
+#
+#
+#    - name: 'Docker auth'
+#      run: |-
+#          gcloud auth configure-docker ${{ env.GAR_LOCATION }}-docker.pkg.dev
+#
+#    - name: 'Build and push container'
+#      shell: bash
+#      run: |-
+#        docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.APP }}/${{ env.APP }}:${{ github.sha }}" ./
+#        docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.APP }}/${{ env.APP }}:${{ github.sha }}"
+#
+#
+#    - name: 'Delete configuration artifact'
+#      uses: geekyeggo/delete-artifact@v2
+#      with:
+#          name: configuration
