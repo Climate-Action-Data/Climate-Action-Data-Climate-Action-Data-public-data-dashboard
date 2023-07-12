@@ -1,7 +1,6 @@
 import { EffectResponse } from "@/@types/EffectResponse";
 import { CarbonReduction } from "./state";
 
-// import axios from "axios";
 export const getCarbonReduction = async (): Promise<EffectResponse<CarbonReduction>> => {
     try {
         await new Promise(f => setTimeout(f, 5000));
@@ -18,6 +17,7 @@ export const getCarbonReduction = async (): Promise<EffectResponse<CarbonReducti
                     { title: "VCS", value: 74 },
                 ]
             },
+            error: undefined
         }
     } catch (error) {
         return { data: undefined, error: { code: "200", message: "could not fetch data" } }

@@ -5,7 +5,6 @@ import { useState } from "react"
 
 export const RegionSearch = (): React.JSX.Element => {
     const [region, setRegion] = useState<string | undefined>(undefined)
-    //TODO: Finish design of round button and colors of tags
     const regionTitle = () => {
         if (region) {
             return (<Flex alignItems={"center"}>
