@@ -29,7 +29,7 @@ const Header: FC = () => {
           </Flex>
           <Spacer />
           <Flex>
-            <Image {...headerFeatureImage} height={`100%`} />
+            <Image {...headerFeatureImage} height={`100%`} alt={`header feature image`} />
           </Flex>
         </Flex>
       </Flex>
