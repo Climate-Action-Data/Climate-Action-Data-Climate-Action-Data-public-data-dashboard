@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
-import { DarkModeIcon } from '../DarkModeIcon';
+import { HomeIcon } from './HomeIcon';
 
 it('renders correctly', () => {
-    const { container } = render(<DarkModeIcon />)
+    const { container } = render(<HomeIcon />)
     expect(container).toMatchSnapshot();
 });

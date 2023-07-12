@@ -1,9 +1,7 @@
-'use strict';
-
 import { render } from '@testing-library/react'
-import { BellIcon } from '../BellIcon';
+import { DarkModeIcon } from './DarkModeIcon';
 
 it('renders correctly', () => {
-    const { container } = render(<BellIcon />)
+    const { container } = render(<DarkModeIcon />)
     expect(container).toMatchSnapshot();
 });

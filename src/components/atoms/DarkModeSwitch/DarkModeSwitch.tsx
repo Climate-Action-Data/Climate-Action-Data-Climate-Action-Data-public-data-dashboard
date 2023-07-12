@@ -1,6 +1,6 @@
 import { useColorMode, Box } from "@chakra-ui/react"
-import { DarkModeSwitchIcon } from "./DarkModeSwitchIcon"
-import { LightModeSwitchIcon } from "./LightModeSwitchIcon"
+import { DarkModeSwitchIcon } from "../icons/DarkModeSwitchIcon/DarkModeSwitchIcon"
+import { LightModeSwitchIcon } from "../icons/LightModeSwitchIcon/LightModeSwitchIcon"
 
 export const DarkModeSwitch = () => {
     const { colorMode, toggleColorMode } = useColorMode()
