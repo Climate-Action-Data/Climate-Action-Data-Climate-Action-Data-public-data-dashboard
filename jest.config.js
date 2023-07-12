@@ -19,10 +19,6 @@ const customJestConfig = {
     testMatch: ['**/*.spec.tsx', '**/*.spec.ts'],
     reporters: [
         'default',
-        ['jest-sonar', {
-            outputDirectory: '<rootDir>/coverage',
-            outputName: 'test-report.xml'
-        }]
     ],
 }
 module.exports = createJestConfig(customJestConfig)
