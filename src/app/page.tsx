@@ -1,7 +1,5 @@
 'use client'
-import { RegionSearch } from '@/components/molecules/RegionSearch';
-import { TimeframeSearch } from '@/components/molecules/TimeframeSearch';
-import { Flex, Container, Spacer } from '@chakra-ui/react';
+import { Flex, Container } from '@chakra-ui/react';
 
 
 export default function Home(): React.JSX.Element {

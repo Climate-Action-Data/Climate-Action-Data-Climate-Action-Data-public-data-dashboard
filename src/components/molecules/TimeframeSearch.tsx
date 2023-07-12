@@ -1,5 +1,5 @@
 import { Timeframes } from "@/@types/Timeframe"
-import { Flex, Text, Box, Divider, HStack, Tag, Button, TagLabel, TagCloseButton } from "@chakra-ui/react"
+import { Flex, HStack, Tag, TagLabel, TagCloseButton } from "@chakra-ui/react"
 import { useState } from "react"
 
 export const TimeframeSearch = (): React.JSX.Element => {

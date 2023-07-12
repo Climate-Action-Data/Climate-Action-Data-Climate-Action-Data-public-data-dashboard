@@ -18,7 +18,6 @@ export const getCarbonReduction = async (context: Context, searchParams: SearchP
     // Check if we have data
     if (carbonData.data) {
         // Set our state
-        // TODO: Filter the data if needed
         context.state.analytics.carbonReduction = carbonData.data
         return true
     } else {

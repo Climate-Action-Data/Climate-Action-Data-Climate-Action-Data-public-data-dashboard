@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Icon, IconProps, StyleProps } from '@chakra-ui/react'
+import { Icon, IconProps } from '@chakra-ui/react'
 
 export const BellIcon: FC<IconProps> = (props: IconProps) => (
   <Icon viewBox="0 0 24 24" width={props?.width ?? `24px`} height={props?.height ?? `24px`} {...props}>
