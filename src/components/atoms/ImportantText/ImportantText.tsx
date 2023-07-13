@@ -12,7 +12,7 @@ export const ImportantText = ({ props, children }: { props?: ImportantTextProps,
         color: (props?.color) ?? `green.600`,
     }
 
-    return <Text {...actualProps}>
+    return <Text as="span" {...actualProps}>
         {children}
     </Text>
 }
