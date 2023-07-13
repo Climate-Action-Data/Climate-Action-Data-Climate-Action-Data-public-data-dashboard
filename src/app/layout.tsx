@@ -19,6 +19,18 @@ import "../i18n"
 const inter = Inter({ subsets: ['latin'] })
 
 const theme = extendTheme({
+  fontSizes: {
+    xs: "10px",
+    sm: "12px",
+    md: "14px",
+    lg: "16px",
+    xl: "18px",
+    "2xl": "22px",
+    "3xl": "28px",
+    "4xl": "36px",
+    "5xl": "48px",
+    "6xl": "64px",
+  },
   components: {
     Skeleton: {
       baseStyle: {
@@ -47,6 +59,11 @@ const theme = extendTheme({
         cardSection,
       },
     },
+    Text: {
+      baseStyle: {
+        fontSize: "14px"
+      }
+    }
   },
   colors: {
     gray: {
