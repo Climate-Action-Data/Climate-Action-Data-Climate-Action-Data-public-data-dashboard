@@ -1,39 +1,48 @@
+import { useMemo } from 'react'
 import _ from 'lodash'
 
+import countries from '../../../assets/geo-map/countries'
+
 import styles from './GeoMap.module.scss'
+import { Country, SubRegion } from '@/@types/geojson'
 
 interface GeoMapPatternProps {
   x: number
   y: number
-  country: string
-  continent?: MapArea
-  hoveredArea: string
-  selectedArea: string
-  onHoverChange: (country: string, continent?: string) => void
-  onClick: (continent?: MapArea) => void
+  countryAlpha3: string
+  subRegion?: SubRegion
+  hoveredRegion: string
+  selectedRegion: string
+  onHoverChange: (country?: Country) => void
+  onClick: (country: Country) => void
 }
 
 const GeoMapDot = (props: GeoMapPatternProps) => {
-  const { x, y, country, continent, hoveredArea, selectedArea, onHoverChange, onClick } = props
+  const { x, y, countryAlpha3, subRegion, hoveredRegion, selectedRegion, onHoverChange, onClick } = props
+
+  const countryDetails: Country = useMemo(() => countries.find((country) => country.alpha3 === countryAlpha3), [countryAlpha3]) ?? {
+    alpha3: countryAlpha3,
+    subRegion: subRegion,
+  }
 
   const handleMouseOver = () => {
-    onHoverChange(country, continent)
+    onHoverChange(countryDetails)
   }
 
   const handleClick = () => {
-    onClick(continent)
+    onClick(countryDetails)
   }
 
   const handleMouseLeave = () => {
-    onHoverChange(``, ``)
+    onHoverChange()
   }
 
   let shouldDisplayHoverStyle = false
 
-  if (continent !== selectedArea) {
-    shouldDisplayHoverStyle = _.indexOf([country, continent], hoveredArea) >= 0
+  if (subRegion !== selectedRegion) {
+    shouldDisplayHoverStyle = _.indexOf([countryAlpha3, subRegion], hoveredRegion) >= 0
   } else {
-    shouldDisplayHoverStyle = country === hoveredArea
+    shouldDisplayHoverStyle = countryAlpha3 === hoveredRegion
   }
 
   const geoMapDotClassName = shouldDisplayHoverStyle ? styles.geoMapDotHover : styles.geoMapDot

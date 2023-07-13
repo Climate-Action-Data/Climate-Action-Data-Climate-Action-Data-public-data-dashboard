@@ -1,4 +1,12 @@
-const enum MapArea {
+export const enum Region {
+  ASIA = `asia`,
+  AFRICA = `africa`,
+  AMERICAS = `americas`,
+  EUROPE = `europe`,
+  OCEANIA = `oceania`,
+}
+
+export const enum SubRegion {
   SOUTHERN_ASIA = `southern-asia`,
   NORTHERN_EUROPE = `northern-europe`,
   SOUTHERN_EUROPE = `southern-europe`,
@@ -17,4 +25,18 @@ const enum MapArea {
   MICRONESIA = `micronesia`,
   CENTRAL_ASIA = `central-asia`,
   WORLD = `world`,
+}
+
+export interface Country {
+  name?: string
+  alpha2?: string
+  alpha3: string
+  countryCode?: string
+  iso31662?: string
+  region?: Region
+  subRegion?: SubRegion
+  intermediateRegion?: string
+  regionCode?: string
+  subRegionCode?: string
+  intermediateRegionCode?: string
 }

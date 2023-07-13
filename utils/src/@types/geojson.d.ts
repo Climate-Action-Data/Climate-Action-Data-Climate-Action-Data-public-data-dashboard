@@ -82,7 +82,7 @@ interface MapPointParams {
   }
 }
 
-interface SubRegion {
+interface MapSubRegion {
   name: string
   countries: string[]
 }

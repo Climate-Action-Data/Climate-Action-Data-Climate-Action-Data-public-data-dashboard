@@ -5,47 +5,57 @@ import GeoMapDot from './GeoMapDot'
 import styles from './GeoMap.module.scss'
 import continentsPoints from '../../../assets/geo-map/continents-dots'
 import countriesContinentsMapping from '@/assets/geo-map/countries-continents-mapping'
+import { Country, SubRegion } from '@/@types/geojson'
 
-const DEFAULT_AREA = `world` as MapArea
+const DEFAULT_REGION = SubRegion.WORLD
 
 interface GeoMapProps {
   width?: string
   height?: string
-  area?: MapArea
-  onAreaChange?: (area: MapArea) => void
+  subRegion?: SubRegion
+  onRegionChange?: (subRegion: SubRegion) => void
+  onCountryClick?: (country: Country) => void
 }
 
 const GeoMap = (props: GeoMapProps) => {
-  const { width, height, area, onAreaChange } = props
+  const { width, height, subRegion, onRegionChange, onCountryClick } = props
 
-  const [hoveredArea, setHoveredArea] = useState(``)
-  const [selectedArea, setSelectedArea] = useState<MapArea>(DEFAULT_AREA)
+  const [hoveredRegion, setHoveredRegion] = useState(``)
+  const [selectedRegion, setselectedRegion] = useState<SubRegion>(DEFAULT_REGION)
 
   useEffect(() => {
-    if (area) {
-      setSelectedArea(area)
+    if (subRegion) {
+      setselectedRegion(subRegion)
     }
-  }, [area])
+  }, [subRegion])
 
-  const handleHoverChange = (country: string, continent?: string) => {
-    if (selectedArea === DEFAULT_AREA) {
-      setHoveredArea(continent ?? country)
+  const handleHoverChange = (country?: Country) => {
+    if (country) {
+      if (selectedRegion === DEFAULT_REGION) {
+        setHoveredRegion(country.subRegion ?? country.alpha3)
+      } else {
+        setHoveredRegion(country.alpha3)
+      }
     } else {
-      setHoveredArea(country)
+      setHoveredRegion(``)
     }
   }
 
-  const handleClick = (continent?: MapArea) => {
-    if (continent) {
-      setHoveredArea(``)
-      onAreaChange?.(continent ?? DEFAULT_AREA)
-      setSelectedArea(continent ?? DEFAULT_AREA)
+  const handleClick = (country: Country) => {
+    if (country.subRegion) {
+      setHoveredRegion(``)
+      onRegionChange?.(country.subRegion ?? DEFAULT_REGION)
+      setselectedRegion(country.subRegion ?? DEFAULT_REGION)
+
+      if (selectedRegion === subRegion) {
+        onCountryClick?.(country)
+      }
     }
   }
 
-  const displayedArea = area ?? selectedArea
+  const displayedRegion = subRegion ?? selectedRegion
 
-  const map = continentsPoints[displayedArea]
+  const map = continentsPoints[displayedRegion]
 
   const viewBox = `0 0 ${map.gridWidth} ${map.gridHeight}`
 
@@ -59,18 +69,18 @@ const GeoMap = (props: GeoMapProps) => {
   for (let x = 0; x < map.dots.length; x++) {
     for (let y = 0; y < map.dots[x].length; y++) {
       if (map.dots[x][y]) {
-        const country = map.dots[x][y] as string
-        const continent = countriesContinentsMapping.get(country) as MapArea
+        const countryAlpha3 = map.dots[x][y] as string
+        const subRegion = countriesContinentsMapping.get(countryAlpha3) as SubRegion
 
         svgDots.push(
           <GeoMapDot
             key={`dot-${x}-${y}`}
             x={x}
             y={y}
-            country={country}
-            continent={continent}
-            hoveredArea={hoveredArea}
-            selectedArea={displayedArea}
+            countryAlpha3={countryAlpha3}
+            subRegion={subRegion}
+            hoveredRegion={hoveredRegion}
+            selectedRegion={displayedRegion}
             onHoverChange={handleHoverChange}
             onClick={handleClick}
           />,
