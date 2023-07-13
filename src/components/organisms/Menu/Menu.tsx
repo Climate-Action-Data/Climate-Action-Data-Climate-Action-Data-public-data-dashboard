@@ -36,28 +36,28 @@ export const Menu = (): React.JSX.Element => {
             <SlideFade in={isOpen} style={{ zIndex: 10, width: `56px` }}>
                 <Box color={`white`} backgroundColor={`gray.400`} width={`56px`} height={`100vh`} position={`relative`}>
                     <Flex>
-                        <Link as={`button`} variant={`brandPrimary`} href={`/`}>
+                        <Link data-testid="button-home" as={`button`} variant={`brandPrimary`} href={`/`}>
                             <Center width={`100%`} height={`100%`}>
                                 <HomeIcon color={currentPath === `/` ? `green.main` : `white`} />
                             </Center>
                         </Link>
                     </Flex>
                     <Flex>
-                        <Link as={`button`} variant={`brandPrimary`} href={`/bookmark`}>
+                        <Link data-testid="button-bookmark" as={`button`} variant={`brandPrimary`} href={`/bookmark`}>
                             <Center width={`100%`} height={`100%`}>
                                 <BookmarkIcon color={currentPath === `/bookmark` ? `green.main` : `white`} />
                             </Center>
                         </Link>
                     </Flex>
                     <Flex>
-                        <Link as={`button`} variant={`brandPrimary`} href={`https://www.google.com`}>
+                        <Link data-testid="button-redirect" as={`button`} variant={`brandPrimary`} href={`https://www.google.com`}>
                             <Center width={`100%`} height={`100%`}>
                                 <WebRedirectIcon color={`white`} />
                             </Center>
                         </Link>
                     </Flex>
                     <Flex>
-                        <Link as={`button`} variant={`brandPrimary`} href={`/help`}>
+                        <Link data-testid="button-help" as={`button`} variant={`brandPrimary`} href={`/help`}>
                             <Center width={`100%`} height={`100%`}>
                                 <HelpIcon color={currentPath === `/help` ? `green.main` : `white`} />
                             </Center>

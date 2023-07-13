@@ -7,6 +7,7 @@ export const DarkModeSwitch = () => {
     return (
         <Box
             _hover={{ cursor: "pointer" }}
+            data-testid="button-darkmode"
             onClick={toggleColorMode}>
             {colorMode === "dark"
                 ? <DarkModeSwitchIcon />
