@@ -1,3 +1,5 @@
+import { EffectResponse } from "@/@types/EffectResponse"
+
 export interface CarbonReduction {
     activeProjects: number
     totalReduction: number
@@ -7,17 +9,9 @@ export interface CarbonReduction {
 }
 
 interface DataState {
-    carbonReduction: CarbonReduction | undefined
-}
-
-const defaultCarbonReduction: CarbonReduction = {
-    activeProjects: 0,
-    totalReduction: 0,
-    annualEstReduction: 0,
-    sectors: [],
-    standards: []
+    carbonReduction?: EffectResponse<CarbonReduction>
 }
 
 export const state: DataState = {
-    carbonReduction: defaultCarbonReduction,
+    carbonReduction: undefined,
 }

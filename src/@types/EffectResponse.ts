@@ -1,13 +1,8 @@
-export type EffectResponse<T> = EffectResponseValid<T> | EffectResponseError
+export type EffectResponse<T> = EffectResponseValid<T>
 
 export interface EffectResponseValid<T> {
-    data: T
-    error: undefined
-}
-
-export interface EffectResponseError {
-    data: undefined
-    error: ErrorResponse
+    data?: T
+    error?: ErrorResponse
 }
 
 export interface ErrorResponse {

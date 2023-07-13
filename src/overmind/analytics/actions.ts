@@ -6,12 +6,11 @@ interface SearchParams {
     timeframe: string | null
 }
 
-export const getCarbonReduction = async (context: Context, searchParams: SearchParams = { region: null, timeframe: null }): Promise<boolean | ErrorResponse> => {
+export const getCarbonReduction = async (context: Context, searchParams: SearchParams = { region: null, timeframe: null }): Promise<void> => {
     const carbonData = await context.effects.analytics.getCarbonReduction()
     if (carbonData.data) {
-        context.state.analytics.carbonReduction = carbonData.data
-        return true
+        context.state.analytics.carbonReduction = carbonData
     } else {
-        return carbonData.error
+
     }
 }
