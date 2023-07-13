@@ -1,0 +1,16 @@
+{
+    "regions": {
+        "north-america": "North America",
+        "south-america": "South America",
+        "europe": "Europe",
+        "africa": "Africa",
+        "asia": "Asia",
+        "anz": "ANZ"
+    },
+    "timeframes": {
+        "max": "Max",
+        "12m": "12m",
+        "ytd": "YTD",
+        "1m": "1m"
+    }
+}

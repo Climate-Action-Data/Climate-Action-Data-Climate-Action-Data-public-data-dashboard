@@ -15,7 +15,7 @@ import { Menu } from '@/components/organisms/Menu/Menu'
 import { mode } from '@chakra-ui/theme-tools'
 import { cardSection } from '@/styles/Section'
 import styles from './page.module.css'
-
+import "../i18n"
 const inter = Inter({ subsets: ['latin'] })
 
 const theme = extendTheme({

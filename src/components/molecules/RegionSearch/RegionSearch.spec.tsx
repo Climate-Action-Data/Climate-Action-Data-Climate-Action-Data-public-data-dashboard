@@ -3,7 +3,6 @@ import { RegionSearch } from './RegionSearch';
 import userEvent from "@testing-library/user-event"
 import React from 'react';
 
-
 it('renders correctly', () => {
     const { container } = render(<RegionSearch />)
     expect(container).toMatchSnapshot();
