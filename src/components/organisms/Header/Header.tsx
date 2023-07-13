@@ -1,5 +1,5 @@
 import { Box, Image } from "@chakra-ui/react"
-import headerBanner from "./../../assets/header.jpg"
+import headerBanner from "./../../../assets/header.jpg"
 
 
 

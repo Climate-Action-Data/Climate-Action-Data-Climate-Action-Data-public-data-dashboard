@@ -1,10 +1,13 @@
 import React from 'react'
-import Logo from './../../assets/logo.png'
+import Logo from './../../../assets/logo.png'
 import { Box, Flex, SlideFade, useDisclosure, Image, Center } from '@chakra-ui/react'
 import { Link } from '@chakra-ui/next-js'
-import { BookmarkIcon, HelpIcon, HomeIcon, WebRedirectIcon } from '@/components/atoms/icons'
-import { DarkModeSwitch } from "../atoms/DarkModeSwitch/DarkModeSwitch"
+import { DarkModeSwitch } from "../../atoms/DarkModeSwitch/DarkModeSwitch"
 import { usePathname } from 'next/navigation'
+import { BookmarkIcon } from '../../atoms/BookmarkIcon/BookmarkIcon'
+import { HelpIcon } from '../../atoms/HelpIcon/HelpIcon'
+import { HomeIcon } from '../../atoms/HomeIcon/HomeIcon'
+import { WebRedirectIcon } from '../../atoms/WebRedirectIcon/WebRedirectIcon'
 
 export const Menu = (): React.JSX.Element => {
     const { isOpen } = useDisclosure()
