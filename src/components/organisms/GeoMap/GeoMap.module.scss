@@ -1,7 +1,9 @@
 $dotAreaOpacity: 0.02;
 $dotRadius: 0.35;
 $normalColor: #666666;
+$noDataColor:   #dddddd;
 $hoverColor: green;
+$hoverNoDataColor:   #999999;
 
 .geoMap {
     background-color: white;
@@ -12,9 +14,18 @@ $hoverColor: green;
         cursor: pointer;
         
         &Hover {
-            cursor: pointer;
+            @extend .geoMapDot;
             fill: $hoverColor;
-            r: $dotRadius;
+        
+            &NoData {
+                @extend .geoMapDotHover;
+                fill: $hoverNoDataColor;
+            }
+        }
+        
+        &NoData {
+            @extend .geoMapDot;
+            fill: $noDataColor;
         }
     }
     
@@ -25,10 +36,20 @@ $hoverColor: green;
         cursor: pointer;
         
         &Hover {
+            @extend .geoMapDotArea;
             cursor: pointer;
             fill: $hoverColor;
-            r: $dotRadius * 2;
             opacity: $dotAreaOpacity * 5;
+        
+            &NoData {
+                @extend .geoMapDotAreaHover;
+                fill: $hoverNoDataColor;
+            }
+        }
+        
+        &NoData {
+            @extend .geoMapDotArea;
+            fill: $noDataColor;
         }
     }
 }
