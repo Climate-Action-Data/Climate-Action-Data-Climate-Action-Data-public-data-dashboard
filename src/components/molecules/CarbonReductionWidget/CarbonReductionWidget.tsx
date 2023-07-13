@@ -71,12 +71,12 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
                 <Divider marginY={"20px"} />
                 <Flex textAlign={"center"}>
                     <Box marginRight={"5px"} flex={1}>
-                        <Box><ImportantText>{carbonReduction.totalReduction}</ImportantText><Text>M MtCO2</Text></Box>
-                        <Text>Total Reduction (YTD)</Text>
+                        <Box><ImportantText>{carbonReduction.totalReduction}</ImportantText><Text as="span" fontSize="sm">M MtCO2</Text></Box>
+                        <Text fontWeight="500">Total Reduction (YTD)</Text>
                     </Box>
                     <Box marginLeft={"5px"} flex={1}>
-                        <Box><ImportantText>{carbonReduction.annualEstReduction}</ImportantText><Text>M MtCO2</Text></Box>
-                        <Text>Annual Est. Reduction</Text>
+                        <Box><ImportantText props={{ color: "green.700" }}>{carbonReduction.annualEstReduction}</ImportantText><Text as="span" fontSize="sm">M MtCO2</Text></Box>
+                        <Text fontWeight="500">Annual Est. Reduction</Text>
                     </Box>
                 </Flex>
                 <Divider marginY={"20px"} />
