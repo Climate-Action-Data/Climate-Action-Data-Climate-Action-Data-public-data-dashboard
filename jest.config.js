@@ -10,7 +10,8 @@ const customJestConfig = {
     coveragePathIgnorePatterns: [
         'node_modules',
         'src/overmind',
-        'src/assets'
+        'src/assets',
+        "<rootDir>/src/app/layout.tsx",
     ],
     collectCoverageFrom: ['<rootDir>/src/**', '!<rootDir>/src/**/@types/*', '!<rootDir>/src/**/*.snap'],
     testMatch: ['**/*.spec.tsx', '**/*.spec.ts'],

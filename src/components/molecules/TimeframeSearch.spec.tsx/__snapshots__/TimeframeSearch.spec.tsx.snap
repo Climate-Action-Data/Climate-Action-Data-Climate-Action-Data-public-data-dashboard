@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="css-hajjsy"
+  >
+    <div
+      class="chakra-stack css-1mlvmbj"
+    >
+      <span
+        class="css-ew0hq8"
+      >
+        <span
+          class="css-zvlevn"
+        >
+          Max
+        </span>
+      </span>
+      <span
+        class="css-ew0hq8"
+      >
+        <span
+          class="css-zvlevn"
+        >
+          12m
+        </span>
+      </span>
+      <span
+        class="css-ew0hq8"
+      >
+        <span
+          class="css-zvlevn"
+        >
+          YTD
+        </span>
+      </span>
+      <span
+        class="css-ew0hq8"
+      >
+        <span
+          class="css-zvlevn"
+        >
+          1m
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
