@@ -13,12 +13,13 @@ interface GeoMapProps {
   width?: string
   height?: string
   subRegion?: SubRegion
+  hasCountryData?: Map<string, boolean>
   onRegionChange?: (subRegion: SubRegion) => void
   onCountryClick?: (country: Country) => void
 }
 
 const GeoMap = (props: GeoMapProps) => {
-  const { width, height, subRegion, onRegionChange, onCountryClick } = props
+  const { width, height, subRegion, hasCountryData, onRegionChange, onCountryClick } = props
 
   const [hoveredRegion, setHoveredRegion] = useState(``)
   const [selectedRegion, setselectedRegion] = useState<SubRegion>(DEFAULT_REGION)
@@ -81,6 +82,7 @@ const GeoMap = (props: GeoMapProps) => {
             subRegion={subRegion}
             hoveredRegion={hoveredRegion}
             selectedRegion={displayedRegion}
+            hasData={hasCountryData?.get(countryAlpha3)}
             onHoverChange={handleHoverChange}
             onClick={handleClick}
           />,

@@ -11,6 +11,12 @@ export default function GeoMapDemo(): React.JSX.Element {
   const [selectedRegion, setselectedRegion] = useState<SubRegion>(DEFAULT_REGION)
   const [selectedCountry, setSelectedCountry] = useState<string>(``)
 
+  const hasCountryData: Map<string, boolean> = new Map([
+    [`FRA`, true],
+    [`BEL`, true],
+    [`CHN`, true],
+  ])
+
   const handleWorldButtonClick = () => {
     setselectedRegion(DEFAULT_REGION)
   }
@@ -29,7 +35,7 @@ export default function GeoMapDemo(): React.JSX.Element {
         World
       </button>
       <div>{selectedCountry}</div>
-      <GeoMap width="80vw" height="800px" subRegion={selectedRegion} onRegionChange={handleAreaChange} onCountryClick={handleCountryClick}></GeoMap>
+      <GeoMap width="80vw" height="800px" hasCountryData={hasCountryData} subRegion={selectedRegion} onRegionChange={handleAreaChange} onCountryClick={handleCountryClick}></GeoMap>
     </main>
   )
 }

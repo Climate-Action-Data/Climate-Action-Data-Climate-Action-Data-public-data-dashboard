@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import _ from 'lodash'
+import classNames from 'classnames/bind'
 
 import countries from '../../../assets/geo-map/countries'
 
@@ -13,12 +14,13 @@ interface GeoMapPatternProps {
   subRegion?: SubRegion
   hoveredRegion: string
   selectedRegion: string
+  hasData?: boolean
   onHoverChange: (country?: Country) => void
   onClick: (country: Country) => void
 }
 
 const GeoMapDot = (props: GeoMapPatternProps) => {
-  const { x, y, countryAlpha3, subRegion, hoveredRegion, selectedRegion, onHoverChange, onClick } = props
+  const { x, y, countryAlpha3, subRegion, hoveredRegion, selectedRegion, hasData, onHoverChange, onClick } = props
 
   const countryDetails: Country = useMemo(() => countries.find((country) => country.alpha3 === countryAlpha3), [countryAlpha3]) ?? {
     alpha3: countryAlpha3,
@@ -45,13 +47,26 @@ const GeoMapDot = (props: GeoMapPatternProps) => {
     shouldDisplayHoverStyle = countryAlpha3 === hoveredRegion
   }
 
-  const geoMapDotClassName = shouldDisplayHoverStyle ? styles.geoMapDotHover : styles.geoMapDot
-  const geoMapDotAreaClassName = shouldDisplayHoverStyle ? styles.geoMapDotAreaHover : styles.geoMapDotArea
+  const cx = classNames.bind(styles)
+
+  const dotClassName = cx({
+    geoMapDot: !shouldDisplayHoverStyle && hasData,
+    geoMapDotNoData: !shouldDisplayHoverStyle && !hasData,
+    geoMapDotHover: shouldDisplayHoverStyle && hasData,
+    geoMapDotHoverNoData: shouldDisplayHoverStyle && !hasData,
+  })
+
+  const dotAreaClassName = cx({
+    geoMapDotArea: !shouldDisplayHoverStyle && hasData,
+    geoMapDotAreaNoData: !shouldDisplayHoverStyle && !hasData,
+    geoMapDotAreaHover: shouldDisplayHoverStyle && hasData,
+    geoMapDotAreaHoverNoData: shouldDisplayHoverStyle && !hasData,
+  })
 
   return (
     <>
-      <circle className={geoMapDotAreaClassName} cx={x} cy={y} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} onClick={handleClick} />
-      <circle className={geoMapDotClassName} cx={x} cy={y} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} onClick={handleClick} />
+      <circle className={dotAreaClassName} cx={x} cy={y} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} onClick={handleClick} />
+      <circle className={dotClassName} cx={x} cy={y} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} onClick={handleClick} />
     </>
   )
 }
