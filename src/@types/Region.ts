@@ -1,8 +1,8 @@
 export const Regions = [
-    "North America",
-    "South America",
-    "Europe",
-    "Africa",
-    "Asia",
-    "ANZ"
+    "north-america",
+    "south-america",
+    "europe",
+    "africa",
+    "asia",
+    "anz"
 ]

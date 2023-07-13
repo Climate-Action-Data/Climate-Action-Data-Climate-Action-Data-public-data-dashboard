@@ -1,6 +1,6 @@
 export const Timeframes = [
-    "Max",
+    "max",
     "12m",
-    "YTD",
+    "ytd",
     "1m",
 ]

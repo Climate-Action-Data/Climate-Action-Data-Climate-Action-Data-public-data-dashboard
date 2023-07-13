@@ -13,6 +13,7 @@ const customJestConfig = {
         'src/assets',
         'src/styles',
         "<rootDir>/src/app/layout.tsx",
+        "<rootDir>/src/i18n.ts",
     ],
     collectCoverageFrom: ['<rootDir>/src/**', '!<rootDir>/src/**/@types/*', '!<rootDir>/src/**/*.snap'],
     testMatch: ['**/*.spec.tsx', '**/*.spec.ts'],

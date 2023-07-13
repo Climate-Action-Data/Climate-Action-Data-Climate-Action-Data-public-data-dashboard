@@ -1,10 +1,12 @@
 import { Regions } from "@/@types/Region"
 import { Flex, Text, Box, Divider, HStack, Tag, Button, TagLabel } from "@chakra-ui/react"
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 
 
 export const RegionSearch = (): React.JSX.Element => {
     const [region, setRegion] = useState<string | undefined>(undefined)
+    const { t } = useTranslation("home");
     const regionTitle = () => {
         if (region) {
             return (<Flex alignItems={"center"}>
@@ -28,7 +30,7 @@ export const RegionSearch = (): React.JSX.Element => {
                             variant='solid'
                             colorScheme='gray'
                         >
-                            <TagLabel>{regionName}</TagLabel>
+                            <TagLabel>{t(`regions.${regionName}`)}</TagLabel>
                         </Tag>
                     </Button>
 

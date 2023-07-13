@@ -15,7 +15,7 @@ exports[`renders correctly 1`] = `
           class="css-zvlevn"
           data-testid="button-timeframe-0"
         >
-          Max
+          timeframes.max
         </span>
       </span>
       <span
@@ -25,7 +25,7 @@ exports[`renders correctly 1`] = `
           class="css-zvlevn"
           data-testid="button-timeframe-1"
         >
-          12m
+          timeframes.12m
         </span>
       </span>
       <span
@@ -35,7 +35,7 @@ exports[`renders correctly 1`] = `
           class="css-zvlevn"
           data-testid="button-timeframe-2"
         >
-          YTD
+          timeframes.ytd
         </span>
       </span>
       <span
@@ -45,7 +45,7 @@ exports[`renders correctly 1`] = `
           class="css-zvlevn"
           data-testid="button-timeframe-3"
         >
-          1m
+          timeframes.1m
         </span>
       </span>
     </div>
@@ -68,7 +68,7 @@ exports[`renders with click on going back 1`] = `
           class="css-zvlevn"
           data-testid="button-timeframe-0"
         >
-          Max
+          timeframes.max
         </span>
       </span>
       <span
@@ -78,7 +78,7 @@ exports[`renders with click on going back 1`] = `
           class="css-zvlevn"
           data-testid="button-timeframe-1"
         >
-          12m
+          timeframes.12m
         </span>
       </span>
       <span
@@ -88,7 +88,7 @@ exports[`renders with click on going back 1`] = `
           class="css-zvlevn"
           data-testid="button-timeframe-2"
         >
-          YTD
+          timeframes.ytd
         </span>
       </span>
       <span
@@ -98,7 +98,7 @@ exports[`renders with click on going back 1`] = `
           class="css-zvlevn"
           data-testid="button-timeframe-3"
         >
-          1m
+          timeframes.1m
         </span>
       </span>
     </div>
@@ -121,7 +121,7 @@ exports[`renders with click on timeframe 1`] = `
           class="css-zvlevn"
           data-testid="button-timeframe-0"
         >
-          Max
+          timeframes.max
         </span>
         <button
           aria-label="close"
@@ -148,7 +148,7 @@ exports[`renders with click on timeframe 1`] = `
           class="css-zvlevn"
           data-testid="button-timeframe-1"
         >
-          12m
+          timeframes.12m
         </span>
       </span>
       <span
@@ -158,7 +158,7 @@ exports[`renders with click on timeframe 1`] = `
           class="css-zvlevn"
           data-testid="button-timeframe-2"
         >
-          YTD
+          timeframes.ytd
         </span>
       </span>
       <span
@@ -168,7 +168,7 @@ exports[`renders with click on timeframe 1`] = `
           class="css-zvlevn"
           data-testid="button-timeframe-3"
         >
-          1m
+          timeframes.1m
         </span>
       </span>
     </div>

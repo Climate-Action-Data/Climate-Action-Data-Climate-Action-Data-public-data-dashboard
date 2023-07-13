@@ -1,9 +1,11 @@
 import { Timeframes } from "@/@types/Timeframe"
 import { Flex, HStack, Tag, TagLabel, TagCloseButton } from "@chakra-ui/react"
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 
 export const TimeframeSearch = (): React.JSX.Element => {
     const [timeframe, setTimeframe] = useState<string | undefined>(undefined)
+    const { t } = useTranslation("home");
     return (
         <Flex height={"40px"} alignItems={"center"}>
             <HStack spacing={4}>
@@ -18,7 +20,7 @@ export const TimeframeSearch = (): React.JSX.Element => {
                         colorScheme='gray'
                     >
                         <TagLabel data-testid={`button-timeframe-${idx}`} onClick={() => setTimeframe(timeFrameName)}>
-                            {timeFrameName}
+                            {t(`timeframes.${timeFrameName}`)}
                         </TagLabel>
                         {timeFrameName === timeframe &&
                             <TagCloseButton data-testid={`button-timeframe-close`} onClick={() => setTimeframe(undefined)} />

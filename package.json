@@ -31,12 +31,15 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "framer-motion": "^10.12.18",
+    "i18next": "^23.2.11",
+    "i18next-browser-languagedetector": "^7.1.0",
     "next": "13.4.9",
     "overmind": "^28.0.3",
     "overmind-react": "^29.0.3",
     "prettier": "^2.8.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-i18next": "^13.0.2",
     "typescript": "5.1.6"
   },
   "devDependencies": {
