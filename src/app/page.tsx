@@ -1,4 +1,5 @@
 'use client'
+import { CarbonReductionWidget } from '@/components/molecules/CarbonReductionWidget/CarbonReductionWidget';
 import { RegionSearch } from '@/components/molecules/RegionSearch/RegionSearch';
 import { TimeframeSearch } from '@/components/molecules/TimeframeSearch.tsx/TimeframeSearch';
 import { Flex, Container, Spacer } from '@chakra-ui/react';
@@ -17,7 +18,7 @@ export default function Home(): React.JSX.Element {
             <TimeframeSearch />
           </Flex>
           <Flex marginX={"24px"}>
-            my data
+            <CarbonReductionWidget />
           </Flex>
         </Container>
       </Flex>
