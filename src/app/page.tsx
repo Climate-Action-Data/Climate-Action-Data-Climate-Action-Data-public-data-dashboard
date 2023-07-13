@@ -1,4 +1,5 @@
 'use client'
+import { CarbonReductionWidget } from '@/components/molecules/CarbonReductionWidget/CarbonReductionWidget'
 import { RegionSearch } from '@/components/molecules/RegionSearch/RegionSearch'
 import { TimeframeSearch } from '@/components/molecules/TimeframeSearch.tsx/TimeframeSearch'
 import GeoMap from '@/components/organisms/GeoMap/GeoMap'
@@ -15,7 +16,9 @@ export default function Home(): React.JSX.Element {
             <TimeframeSearch />
             <GeoMap width="80vw" height="400px" />
           </Flex>
-          <Flex marginX={`24px`}>my data</Flex>
+          <Flex marginX={"24px"}>
+            <CarbonReductionWidget />
+          </Flex>
         </Container>
       </Flex>
     </>
