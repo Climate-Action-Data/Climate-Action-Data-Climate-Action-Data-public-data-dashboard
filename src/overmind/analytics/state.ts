@@ -10,14 +10,6 @@ interface DataState {
     carbonReduction: CarbonReduction | undefined
 }
 
-const defaultCarbonReduction: CarbonReduction = {
-    activeProjects: 0,
-    totalReduction: 0,
-    annualEstReduction: 0,
-    sectors: [],
-    standards: []
-}
-
 export const state: DataState = {
-    carbonReduction: defaultCarbonReduction,
+    carbonReduction: undefined,
 }
