@@ -7,20 +7,21 @@ export const TimeframeSearch = (): React.JSX.Element => {
     return (
         <Flex height={"40px"} alignItems={"center"}>
             <HStack spacing={4}>
-                {Timeframes.map((timeFrameName) => (
+                {Timeframes.map((timeFrameName, idx) => (
                     <Tag
                         size={"md"}
                         key={timeFrameName}
+
                         borderRadius='full'
                         _hover={{ cursor: "pointer" }}
                         variant={timeFrameName === timeframe ? "solid" : "outline"}
                         colorScheme='gray'
                     >
-                        <TagLabel onClick={() => setTimeframe(timeFrameName)}>
+                        <TagLabel data-testid={`button-timeframe-${idx}`} onClick={() => setTimeframe(timeFrameName)}>
                             {timeFrameName}
                         </TagLabel>
                         {timeFrameName === timeframe &&
-                            <TagCloseButton onClick={() => setTimeframe(undefined)} />
+                            <TagCloseButton data-testid={`button-timeframe-close`} onClick={() => setTimeframe(undefined)} />
                         }
                     </Tag>
                 ))}

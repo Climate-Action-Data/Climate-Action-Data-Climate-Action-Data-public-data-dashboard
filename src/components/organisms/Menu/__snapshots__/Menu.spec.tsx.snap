@@ -38,6 +38,7 @@ exports[`renders correctly 1`] = `
         >
           <a
             class="chakra-link css-0"
+            data-testid="button-home"
             href="/"
           >
             <div
@@ -61,6 +62,7 @@ exports[`renders correctly 1`] = `
         >
           <a
             class="chakra-link css-0"
+            data-testid="button-bookmark"
             href="/bookmark"
           >
             <div
@@ -84,6 +86,7 @@ exports[`renders correctly 1`] = `
         >
           <a
             class="chakra-link css-0"
+            data-testid="button-redirect"
             href="https://www.google.com"
           >
             <div
@@ -107,6 +110,7 @@ exports[`renders correctly 1`] = `
         >
           <a
             class="chakra-link css-0"
+            data-testid="button-help"
             href="/help"
           >
             <div
@@ -127,6 +131,7 @@ exports[`renders correctly 1`] = `
         </div>
         <div
           class="css-1m8iww1"
+          data-testid="button-darkmode"
         >
           <svg
             class="chakra-icon css-ii8zuh"

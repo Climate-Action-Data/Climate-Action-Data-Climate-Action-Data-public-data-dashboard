@@ -13,6 +13,7 @@ exports[`renders correctly 1`] = `
       >
         <span
           class="css-zvlevn"
+          data-testid="button-timeframe-0"
         >
           Max
         </span>
@@ -22,6 +23,7 @@ exports[`renders correctly 1`] = `
       >
         <span
           class="css-zvlevn"
+          data-testid="button-timeframe-1"
         >
           12m
         </span>
@@ -31,6 +33,7 @@ exports[`renders correctly 1`] = `
       >
         <span
           class="css-zvlevn"
+          data-testid="button-timeframe-2"
         >
           YTD
         </span>
@@ -40,6 +43,130 @@ exports[`renders correctly 1`] = `
       >
         <span
           class="css-zvlevn"
+          data-testid="button-timeframe-3"
+        >
+          1m
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders with click on going back 1`] = `
+<div>
+  <div
+    class="css-hajjsy"
+  >
+    <div
+      class="chakra-stack css-1mlvmbj"
+    >
+      <span
+        class="css-ew0hq8"
+      >
+        <span
+          class="css-zvlevn"
+          data-testid="button-timeframe-0"
+        >
+          Max
+        </span>
+      </span>
+      <span
+        class="css-ew0hq8"
+      >
+        <span
+          class="css-zvlevn"
+          data-testid="button-timeframe-1"
+        >
+          12m
+        </span>
+      </span>
+      <span
+        class="css-ew0hq8"
+      >
+        <span
+          class="css-zvlevn"
+          data-testid="button-timeframe-2"
+        >
+          YTD
+        </span>
+      </span>
+      <span
+        class="css-ew0hq8"
+      >
+        <span
+          class="css-zvlevn"
+          data-testid="button-timeframe-3"
+        >
+          1m
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders with click on timeframe 1`] = `
+<div>
+  <div
+    class="css-hajjsy"
+  >
+    <div
+      class="chakra-stack css-1mlvmbj"
+    >
+      <span
+        class="css-ew0hq8"
+      >
+        <span
+          class="css-zvlevn"
+          data-testid="button-timeframe-0"
+        >
+          Max
+        </span>
+        <button
+          aria-label="close"
+          class="css-sorhh"
+          data-testid="button-timeframe-close"
+          type="button"
+        >
+          <svg
+            class="chakra-icon css-1md6f3y"
+            focusable="false"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </span>
+      <span
+        class="css-ew0hq8"
+      >
+        <span
+          class="css-zvlevn"
+          data-testid="button-timeframe-1"
+        >
+          12m
+        </span>
+      </span>
+      <span
+        class="css-ew0hq8"
+      >
+        <span
+          class="css-zvlevn"
+          data-testid="button-timeframe-2"
+        >
+          YTD
+        </span>
+      </span>
+      <span
+        class="css-ew0hq8"
+      >
+        <span
+          class="css-zvlevn"
+          data-testid="button-timeframe-3"
         >
           1m
         </span>

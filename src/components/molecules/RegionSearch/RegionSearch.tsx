@@ -8,7 +8,7 @@ export const RegionSearch = (): React.JSX.Element => {
     const regionTitle = () => {
         if (region) {
             return (<Flex alignItems={"center"}>
-                <Button borderRadius={"50%"} backgroundColor={"transparent"} onClick={() => setRegion(undefined)}>&lt;</Button>
+                <Button data-testid="button-region-back" borderRadius="50%" backgroundColor="transparent" onClick={() => setRegion(undefined)}>&lt;</Button>
                 <Text fontWeight={"bold"}>{region}</Text>
             </Flex>)
         } else {
@@ -20,8 +20,8 @@ export const RegionSearch = (): React.JSX.Element => {
             {regionTitle()}
             <Divider marginX={6} height={"70%"} orientation="vertical" />
             <HStack spacing={4}>
-                {Regions.map((regionName) => (regionName !== region &&
-                    <Button key={regionName} variant={"unstyled"} onClick={() => setRegion(regionName)}>
+                {Regions.map((regionName, idx) => (regionName !== region &&
+                    <Button data-testid={`button-region-${idx}`} key={regionName} variant={"unstyled"} onClick={() => setRegion(regionName)}>
                         <Tag
                             size={"md"}
                             borderRadius='full'

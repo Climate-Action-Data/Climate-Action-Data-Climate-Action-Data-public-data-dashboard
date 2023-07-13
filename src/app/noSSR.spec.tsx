@@ -1,7 +1,9 @@
-import { render } from '@testing-library/react'
+import { render, act } from '@testing-library/react'
 import NoSSR from './noSSR';
 
-it('renders correctly', () => {
-    const { container } = render(<NoSSR><></></NoSSR>)
-    expect(container).toMatchSnapshot();
+it('renders correctly', async () => {
+    await act(async () => {
+        const { container } = await render(<NoSSR><></></NoSSR>)
+        await expect(container).toMatchSnapshot();
+    });
 });

@@ -11,6 +11,7 @@ const customJestConfig = {
         'node_modules',
         'src/overmind',
         'src/assets',
+        'src/styles',
         "<rootDir>/src/app/layout.tsx",
     ],
     collectCoverageFrom: ['<rootDir>/src/**', '!<rootDir>/src/**/@types/*', '!<rootDir>/src/**/*.snap'],
