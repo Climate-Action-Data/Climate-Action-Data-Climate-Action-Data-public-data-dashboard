@@ -25,6 +25,18 @@ const inter = Inter({ subsets: ['latin'] })
 
 const theme = extendTheme({
   components: {
+    Skeleton: {
+      baseStyle: {
+        _light: {
+          "--skeleton-start-color": "#717D81",
+          "--skeleton-end-color": "#949DA1"
+        },
+        _dark: {
+          "--skeleton-start-color": "#717D81",
+          "--skeleton-end-color": "#949DA1"
+        }
+      },
+    },
     Button: {
       variants: {
         brandPrimary,
