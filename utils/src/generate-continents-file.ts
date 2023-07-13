@@ -23,9 +23,9 @@ const generateContinentsFileAction = () => {
     subRegionsMap.get(subRegion)?.push(country[`alpha-3`])
   })
 
-  const subRegions = new Array<SubRegion>()
+  const subRegions = new Array<MapSubRegion>()
 
-  console.log(`--------     ENUM    --------`)
+  console.log(`--------     SUB REGION ENUM    --------`)
   subRegionsMap.forEach((countryCodes, subRegion) => {
     if (_.isEmpty(subRegion)) {
       return
@@ -38,7 +38,7 @@ const generateContinentsFileAction = () => {
       countries: countryCodes,
     })
   })
-  console.log(`--------     ENUM    --------`)
+  console.log(`--------      SUB REGION ENUM    --------`)
 
   fs.writeFileSync(CONTINENTS_FILE_PATH, JSON.stringify(subRegions))
 }
