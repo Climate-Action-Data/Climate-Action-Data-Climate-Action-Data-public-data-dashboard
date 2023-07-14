@@ -1,7 +1,7 @@
 'use client'
 import { CarbonReductionWidget } from '@/components/molecules/CarbonReductionWidget/CarbonReductionWidget'
 import { RegionSearch } from '@/components/molecules/RegionSearch/RegionSearch'
-import { TimeframeSearch } from '@/components/molecules/TimeframeSearch.tsx/TimeframeSearch'
+import { TimeframeSearch } from '@/components/molecules/TimeframeSearch/TimeframeSearch'
 import { Flex, Container, Spacer } from '@chakra-ui/react'
 
 export default function Home(): React.JSX.Element {

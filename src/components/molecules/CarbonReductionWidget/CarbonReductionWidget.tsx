@@ -17,7 +17,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
         getCarbonReduction()
     }, [])
 
-    if (!carbonReduction) {
+    if (!carbonReduction?.data) {
         return <Box minW={"400px"}>
             <Stack>
                 <Center>
@@ -70,18 +70,18 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
             <Stack>
                 <Center>
                     <Box textAlign={"center"} width={"50%"}>
-                        <ImportantText>{carbonReduction.activeProjects}</ImportantText>
+                        <ImportantText>{carbonReduction.data.activeProjects}</ImportantText>
                         <Text fontWeight="500">Active Projects</Text>
                     </Box>
                 </Center>
                 <Divider marginY={"20px"} />
                 <Flex textAlign={"center"}>
                     <Box marginRight={"5px"} flex={1}>
-                        <Box><ImportantText>{carbonReduction.totalReduction}</ImportantText><Text as="span" fontSize="sm">M MtCO2</Text></Box>
+                        <Box><ImportantText>{carbonReduction.data.totalReduction}</ImportantText><Text as="span" fontSize="sm">M MtCO2</Text></Box>
                         <Text fontWeight="500">Total Reduction (YTD)</Text>
                     </Box>
                     <Box marginLeft={"5px"} flex={1}>
-                        <Box><ImportantText props={{ color: "green.700" }}>{carbonReduction.annualEstReduction}</ImportantText><Text as="span" fontSize="sm">M MtCO2</Text></Box>
+                        <Box><ImportantText props={{ color: "green.700" }}>{carbonReduction.data.annualEstReduction}</ImportantText><Text as="span" fontSize="sm">M MtCO2</Text></Box>
                         <Text fontWeight="500">Annual Est. Reduction</Text>
                     </Box>
                 </Flex>
