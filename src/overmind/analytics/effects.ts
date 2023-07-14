@@ -12,16 +12,16 @@ export const getCarbonReduction = async (): Promise<EffectResponse<CarbonReducti
                 totalReduction: 7.96,
                 annualEstReduction: 38.1,
                 sectors: [
-                    { title: "Renewable Energy", value: 40 },
-                    { title: "Waste Disposal", value: 24 },
-                    { title: "Energy Efficiency", value: 19 },
-                    { title: "Others", value: 17 }
+                    { label: "Renewable Energy", value: 40 },
+                    { label: "Waste Disposal", value: 24 },
+                    { label: "Energy Efficiency", value: 19 },
+                    { label: "Others", value: 17 }
                 ],
-                standards: [
-                    { title: "VCS", value: 74 },
-                    { title: "GCC", value: 15 },
-                    { title: "ECO", value: 10 }
-                ]
+                standards: {
+                    vcs: 74,
+                    gcc: 15,
+                    eco: 10
+                }
             },
             error: undefined
         }
