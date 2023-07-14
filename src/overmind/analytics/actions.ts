@@ -9,6 +9,5 @@ export const getCarbonReduction = async (context: Context, searchParams: SearchP
   const carbonData = await context.effects.analytics.getCarbonReduction()
   if (carbonData.data) {
     context.state.analytics.carbonReduction = carbonData
-  } else {
   }
 }
