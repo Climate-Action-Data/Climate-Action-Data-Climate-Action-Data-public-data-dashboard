@@ -3,3 +3,5 @@ src/assets/geo-map/countries-continents-mapping.ts
 utils/src/geo-utils/countries.geo.json
 utils/src/geo-utils/continents.json
 commitlint.config.js
+jest.config.js
+next.config.js

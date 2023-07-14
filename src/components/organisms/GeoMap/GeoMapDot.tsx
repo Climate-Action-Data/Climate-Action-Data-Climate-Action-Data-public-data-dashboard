@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import _ from 'lodash'
 import classNames from 'classnames/bind'
 
-import countries from '../../../assets/geo-map/countries'
+import { findCountry } from '../../../assets/geo-map/countries'
 
 import styles from './GeoMap.module.scss'
 import { Country, SubRegion } from '@/@types/geojson'
@@ -22,10 +22,7 @@ interface GeoMapPatternProps {
 const GeoMapDot = (props: GeoMapPatternProps) => {
   const { x, y, countryAlpha3, subRegion, hoveredRegion, selectedRegion, hasData, onHoverChange, onClick } = props
 
-  const countryDetails: Country = useMemo(() => countries.find((country) => country.alpha3 === countryAlpha3), [countryAlpha3]) ?? {
-    alpha3: countryAlpha3,
-    subRegion: subRegion,
-  }
+  const countryDetails: Country = useMemo(() => findCountry(countryAlpha3, subRegion), [countryAlpha3])
 
   const handleMouseOver = () => {
     onHoverChange(countryDetails)
