@@ -73,9 +73,22 @@ const theme = extendTheme({
     }
   },
   colors: {
+    lightGray: {
+      main: `#00242C`,
+      50: `#F8FAFA`,
+      100: `#EDEFFE`,
+      200: `#DBDEE0`,
+      300: `#CACED0`,
+      400: `#B8BEC0`,
+      500: `#949DA1`,
+      600: `#717D81`,
+      700: `#4D5C62`,
+      800: `#3E4A4E`,
+      900: `#2E373B`,
+    },
     gray: {
       main: `#00242C`,
-      50: `#3E4A4E`,
+      50: `#`,
       100: `#3E4A4E`,
       200: `#3E4A4E`,
       300: `#2E373B`,

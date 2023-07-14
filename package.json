@@ -29,6 +29,8 @@
     "@turf/turf": "^6.5.0",
     "@types/jest": "^29.5.3",
     "@types/lodash": "^4.14.195",
+    "@nivo/core": "^0.83.0",
+    "@nivo/pie": "^0.83.0",
     "@types/node": "20.4.1",
     "@types/proj4": "^2.5.2",
     "@types/react": "18.2.14",
