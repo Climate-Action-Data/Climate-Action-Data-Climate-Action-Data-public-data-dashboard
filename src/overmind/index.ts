@@ -1,7 +1,7 @@
 import { createStateHook, createActionsHook, createEffectsHook, createReactionHook } from 'overmind-react'
 import { IContext } from 'overmind'
 import { namespaced } from 'overmind/config'
-import analytics from './analytics'
+import * as analytics from './analytics'
 export const config = namespaced({
   analytics,
 })
