@@ -16,6 +16,7 @@ import { mode } from '@chakra-ui/theme-tools'
 import { cardSection } from '@/styles/Section'
 import styles from './page.module.css'
 import '../i18n'
+/*eslint @typescript-eslint/quotes: off*/
 const inter = Inter({ subsets: [`latin`] })
 
 const theme = extendTheme({

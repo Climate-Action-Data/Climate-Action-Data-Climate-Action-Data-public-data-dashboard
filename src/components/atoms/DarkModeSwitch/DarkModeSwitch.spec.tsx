@@ -8,14 +8,14 @@ it(`renders correctly`, () => {
 })
 
 it(`renders with click on dark mode`, async () => {
-  const { container } = await render(<DarkModeSwitch />)
+  const { container } = render(<DarkModeSwitch />)
   await userEvent.click(screen.getByTestId(`button-darkmode`))
-  await expect(container).toMatchSnapshot()
+  expect(container).toMatchSnapshot()
 })
 
 it(`renders with click on dark mode twice`, async () => {
-  const { container } = await render(<DarkModeSwitch />)
+  const { container } = render(<DarkModeSwitch />)
   await userEvent.click(screen.getByTestId(`button-darkmode`))
   await userEvent.click(screen.getByTestId(`button-darkmode`))
-  await expect(container).toMatchSnapshot()
+  expect(container).toMatchSnapshot()
 })
