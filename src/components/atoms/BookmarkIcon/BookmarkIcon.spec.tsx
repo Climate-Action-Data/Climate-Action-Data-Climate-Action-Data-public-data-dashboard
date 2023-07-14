@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
-import { BookmarkIcon } from './BookmarkIcon';
+import { BookmarkIcon } from './BookmarkIcon'
 
-it('renders correctly', () => {
-    const { container } = render(<BookmarkIcon />)
-    expect(container).toMatchSnapshot();
-});
+it(`renders correctly`, () => {
+  const { container } = render(<BookmarkIcon />)
+  expect(container).toMatchSnapshot()
+})

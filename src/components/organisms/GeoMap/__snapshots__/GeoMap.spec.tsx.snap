@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GeoMapDot component renders correctly 1`] = `
+exports[`GeoMap component renders correctly 1`] = `
 <svg
   className="geoMap"
   style={
@@ -47455,7 +47455,7 @@ exports[`GeoMapDot component renders correctly 1`] = `
 </svg>
 `;
 
-exports[`GeoMapDot component renders correctly 2`] = `
+exports[`GeoMap component renders when mouse over a dot 1`] = `
 <svg
   className="geoMap"
   style={

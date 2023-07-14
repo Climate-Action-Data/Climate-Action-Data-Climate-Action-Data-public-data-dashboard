@@ -1,16 +1,14 @@
-import { ErrorResponse } from '@/@types/EffectResponse';
-import { Context } from '..';
+import { Context } from '..'
 
 interface SearchParams {
-    region: string | null
-    timeframe: string | null
+  region: string | null
+  timeframe: string | null
 }
 
 export const getCarbonReduction = async (context: Context, searchParams: SearchParams = { region: null, timeframe: null }): Promise<void> => {
-    const carbonData = await context.effects.analytics.getCarbonReduction()
-    if (carbonData.data) {
-        context.state.analytics.carbonReduction = carbonData
-    } else {
-
-    }
+  const carbonData = await context.effects.analytics.getCarbonReduction()
+  if (carbonData.data) {
+    context.state.analytics.carbonReduction = carbonData
+  } else {
+  }
 }

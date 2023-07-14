@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
-import Home from './page';
+import Home from './page'
 
-it('renders correctly', () => {
-    const { container } = render(<Home />)
-    expect(container).toMatchSnapshot();
-});
+it(`renders correctly`, () => {
+  const { container } = render(<Home />)
+  expect(container).toMatchSnapshot()
+})

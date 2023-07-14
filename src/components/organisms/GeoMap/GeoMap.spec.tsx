@@ -2,7 +2,7 @@ import renderer, { ReactTestRenderer, ReactTestRendererJSON } from 'react-test-r
 import GeoMap from './GeoMap'
 import { SubRegion } from '@/@types/geojson'
 
-describe(`GeoMapDot component`, () => {
+describe(`GeoMap component`, () => {
   let component: ReactTestRenderer
 
   beforeAll(() => {
@@ -13,7 +13,7 @@ describe(`GeoMapDot component`, () => {
     expect(component.toJSON()).toMatchSnapshot()
   })
 
-  it(`renders correctly`, async () => {
+  it(`renders when mouse over a dot`, async () => {
     const tree = component.toJSON() as ReactTestRendererJSON
 
     expect(tree.children).not.toBeNull()

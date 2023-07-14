@@ -1,18 +1,12 @@
-import { useColorMode, Box } from "@chakra-ui/react"
-import { DarkModeSwitchIcon } from "../DarkModeSwitchIcon/DarkModeSwitchIcon"
-import { LightModeSwitchIcon } from "../LightModeSwitchIcon/LightModeSwitchIcon"
+import { useColorMode, Box } from '@chakra-ui/react'
+import { DarkModeSwitchIcon } from '../DarkModeSwitchIcon/DarkModeSwitchIcon'
+import { LightModeSwitchIcon } from '../LightModeSwitchIcon/LightModeSwitchIcon'
 
 export const DarkModeSwitch = () => {
-    const { colorMode, toggleColorMode } = useColorMode()
-    return (
-        <Box
-            _hover={{ cursor: "pointer" }}
-            data-testid="button-darkmode"
-            onClick={toggleColorMode}>
-            {colorMode === "dark"
-                ? <DarkModeSwitchIcon />
-                : <LightModeSwitchIcon />}
-        </Box>
-    )
+  const { colorMode, toggleColorMode } = useColorMode()
+  return (
+    <Box _hover={{ cursor: `pointer` }} data-testid="button-darkmode" onClick={toggleColorMode}>
+      {colorMode === `dark` ? <DarkModeSwitchIcon /> : <LightModeSwitchIcon />}
+    </Box>
+  )
 }
-

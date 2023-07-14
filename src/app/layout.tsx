@@ -15,8 +15,8 @@ import { Menu } from '@/components/organisms/Menu/Menu'
 import { mode } from '@chakra-ui/theme-tools'
 import { cardSection } from '@/styles/Section'
 import styles from './page.module.css'
-import "../i18n"
-const inter = Inter({ subsets: ['latin'] })
+import '../i18n'
+const inter = Inter({ subsets: [`latin`] })
 
 const theme = extendTheme({
   components: {
@@ -83,9 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
               <ChakraProvider theme={theme}>
                 <Header />
                 <Menu />
-                <main className={styles.main}>
-                  {children}
-                </main>
+                <main className={styles.main}>{children}</main>
               </ChakraProvider>
             </CacheProvider>
           </NoSSR>
