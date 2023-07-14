@@ -1,6 +1,7 @@
 'use client'
 import { RegionSearch } from '@/components/molecules/RegionSearch/RegionSearch'
 import { TimeframeSearch } from '@/components/molecules/TimeframeSearch.tsx/TimeframeSearch'
+import GeoMap from '@/components/organisms/GeoMap/GeoMap'
 import { Flex, Container, Spacer } from '@chakra-ui/react'
 
 export default function Home(): React.JSX.Element {
@@ -12,6 +13,7 @@ export default function Home(): React.JSX.Element {
             <RegionSearch />
             <Spacer />
             <TimeframeSearch />
+            <GeoMap width="80vw" height="400px" />
           </Flex>
           <Flex marginX={`24px`}>my data</Flex>
         </Container>
