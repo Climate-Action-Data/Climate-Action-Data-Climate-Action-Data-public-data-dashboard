@@ -17,7 +17,7 @@ import { cardSection } from '@/styles/Section'
 import styles from './page.module.css'
 import '../i18n'
 /*eslint @typescript-eslint/quotes: off*/
-const inter = Inter({ subsets: [`latin`] })
+const inter = Inter({ subsets: ['latin'] })
 
 const theme = extendTheme({
   components: {
