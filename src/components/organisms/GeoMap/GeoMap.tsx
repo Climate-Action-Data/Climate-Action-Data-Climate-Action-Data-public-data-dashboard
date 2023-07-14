@@ -22,7 +22,7 @@ const GeoMap = (props: GeoMapProps) => {
   const { width, height, subRegion, hasCountryData, onRegionChange, onCountryClick } = props
 
   const [hoveredRegion, setHoveredRegion] = useState(``)
-  const [selectedRegion, setselectedRegion] = useState<SubRegion>(DEFAULT_REGION)
+  const [selectedRegion, setselectedRegion] = useState<SubRegion>(subRegion ?? DEFAULT_REGION)
 
   useEffect(() => {
     if (subRegion) {
