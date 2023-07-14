@@ -16,32 +16,33 @@ import { mode } from '@chakra-ui/theme-tools'
 import { cardSection } from '@/styles/Section'
 import styles from './page.module.css'
 import '../i18n'
-const inter = Inter({ subsets: [`latin`] })
+/*eslint @typescript-eslint/quotes: off*/
+const inter = Inter({ subsets: ['latin'] })
 
 const theme = extendTheme({
   fontSizes: {
-    xs: "10px",
-    sm: "12px",
-    md: "14px",
-    lg: "16px",
-    xl: "18px",
-    "2xl": "22px",
-    "3xl": "28px",
-    "4xl": "36px",
-    "5xl": "48px",
-    "6xl": "64px",
+    xs: `10px`,
+    sm: `12px`,
+    md: `14px`,
+    lg: `16px`,
+    xl: `18px`,
+    '2xl': `22px`,
+    '3xl': `28px`,
+    '4xl': `36px`,
+    '5xl': `48px`,
+    '6xl': `64px`,
   },
   components: {
     Skeleton: {
       baseStyle: {
         _light: {
-          "--skeleton-start-color": "#717D81",
-          "--skeleton-end-color": "#949DA1"
+          '--skeleton-start-color': `#717D81`,
+          '--skeleton-end-color': `#949DA1`,
         },
         _dark: {
-          "--skeleton-start-color": "#717D81",
-          "--skeleton-end-color": "#949DA1"
-        }
+          '--skeleton-start-color': `#717D81`,
+          '--skeleton-end-color': `#949DA1`,
+        },
       },
     },
     Button: {
@@ -61,9 +62,9 @@ const theme = extendTheme({
     },
     Text: {
       baseStyle: {
-        fontSize: "14px"
-      }
-    }
+        fontSize: `14px`,
+      },
+    },
   },
   colors: {
     lightGray: {
@@ -126,11 +127,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
                 <Header />
                 <Menu />
                 <main className={styles.main}>{children}</main>
-              </ChakraProvider >
-            </CacheProvider >
-          </NoSSR >
-        </body >
-      </html >
-    </Provider >
+              </ChakraProvider>
+            </CacheProvider>
+          </NoSSR>
+        </body>
+      </html>
+    </Provider>
   )
 }

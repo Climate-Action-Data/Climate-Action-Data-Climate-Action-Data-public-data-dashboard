@@ -4,7 +4,7 @@ import headerBanner from './../../../assets/header.jpg'
 export const Header = (): React.JSX.Element => {
   return (
     <Box>
-      <Image src={headerBanner.src} />
+      <Image alt="CAD Banner" src={headerBanner.src} />
     </Box>
   )
 }
