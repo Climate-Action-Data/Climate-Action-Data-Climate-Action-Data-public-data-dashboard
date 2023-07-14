@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="css-hwbdeb"
+  >
+    <div
+      class="css-whmkqt"
+    >
+      <span
+        class="chakra-text css-of4sfu"
+      >
+        30
+        %
+      </span>
+      <p
+        class="chakra-text css-0"
+      >
+        VCS
+      </p>
+    </div>
+    <div
+      class="css-whmkqt"
+    >
+      <span
+        class="chakra-text css-1tv1yfd"
+      >
+        20
+        %
+      </span>
+      <p
+        class="chakra-text css-0"
+      >
+        GCC
+      </p>
+    </div>
+    <div
+      class="css-whmkqt"
+    >
+      <span
+        class="chakra-text css-o9gfvt"
+      >
+        10
+        %
+      </span>
+      <p
+        class="chakra-text css-0"
+      >
+        ECO
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -12,5 +12,12 @@
         "12m": "12m",
         "ytd": "YTD",
         "1m": "1m"
+    },
+    "carbonReduction": {
+        "activeProjects": "Active Projects",
+        "totalReduction": "Total Reduction (YTD)",
+        "annualReduction": "Annual Est. Reduction",
+        "sector": "Sector",
+        "standard": "Standard"
     }
 }

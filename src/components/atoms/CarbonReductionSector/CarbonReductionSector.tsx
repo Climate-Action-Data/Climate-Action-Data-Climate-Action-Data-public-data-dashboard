@@ -12,7 +12,7 @@ export const CarbonReductionSector = ({ colorChart, data }: CarbonReductionSecto
         <Flex height="150px" width="200px" padding={2}><SectorPieChart data={data} colorChart={colorChart} /></Flex>
         <Flex flexDirection={"column"} justifyContent={"space-evenly"} flex={1}>
             {data.map((sector, idx) => (
-                <Box><Text fontWeight="500" color={colorChart[idx]}>{sector.value}% {sector.label}</Text></Box>
+                <Box key={`${sector.label}-1`}><Text fontWeight="500" color={colorChart[idx]}>{sector.value}% {sector.label}</Text></Box>
             ))}
         </Flex>
     </Flex>

@@ -4,8 +4,8 @@ export interface CarbonReduction {
     activeProjects: number
     totalReduction: number
     annualEstReduction: number
-    sectors: { title: string, value: number }[]
-    standards: { title: string, value: number }[]
+    sectors: { label: string, value: number }[]
+    standards: Record<string, number>
 }
 
 interface DataState {
