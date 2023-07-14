@@ -6,6 +6,7 @@ exports[`renders correctly 1`] = `
     class="css-0"
   >
     <img
+      alt="CAD Banner"
       class="chakra-image css-0"
       src="/img.jpg"
     />
