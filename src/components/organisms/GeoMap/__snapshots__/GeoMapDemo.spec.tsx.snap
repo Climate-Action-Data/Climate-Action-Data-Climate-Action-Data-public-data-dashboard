@@ -10,7 +10,6 @@ exports[`GeoMapDemo component renders correctly 1`] = `
   >
     World
   </button>
-  <div />
   <svg
     className="geoMap"
     style={

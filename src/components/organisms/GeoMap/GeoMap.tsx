@@ -44,12 +44,11 @@ const GeoMap = (props: GeoMapProps) => {
 
   const handleClick = (country: Country) => {
     if (country.subRegion) {
-      setHoveredRegion(``)
-      onRegionChange?.(country.subRegion ?? DEFAULT_REGION)
-      setselectedRegion(country.subRegion ?? DEFAULT_REGION)
-
-      if (selectedRegion === subRegion) {
+      if (selectedRegion === country.subRegion) {
         onCountryClick?.(country)
+      } else {
+        onRegionChange?.(country.subRegion)
+        setselectedRegion(country.subRegion)
       }
     }
   }
