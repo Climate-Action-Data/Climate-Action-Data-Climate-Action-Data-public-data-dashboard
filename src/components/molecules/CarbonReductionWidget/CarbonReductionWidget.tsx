@@ -1,4 +1,7 @@
+import { CarbonReductionSector } from "@/components/atoms/CarbonReductionSector/CarbonReductionSector"
+import { CarbonReductionStandard } from "@/components/atoms/CarbonReductionStandard/CarbonReductionStandard"
 import { ImportantText } from "@/components/atoms/ImportantText/ImportantText"
+import { SectorPieChart } from "@/components/atoms/SectorPieChart/SectorPieChart"
 import { useActions, useAppState } from "@/overmind"
 import { Box, Flex, Text, Skeleton, Stack, Divider, Center, SkeletonCircle } from "@chakra-ui/react"
 import { FC, useEffect } from "react"
@@ -7,6 +10,9 @@ import { FC, useEffect } from "react"
 export const CarbonReductionWidget: FC = (): React.JSX.Element => {
     const { carbonReduction } = useAppState().analytics
     const { getCarbonReduction } = useActions().analytics
+
+    const colorChart = ["green.600", "green.700", "green.800", "lightGray.500"]
+
     useEffect(() => {
         getCarbonReduction()
     }, [])
@@ -65,7 +71,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
                 <Center>
                     <Box textAlign={"center"} width={"50%"}>
                         <ImportantText>{carbonReduction.activeProjects}</ImportantText>
-                        <Text>Active Projects</Text>
+                        <Text fontWeight="500">Active Projects</Text>
                     </Box>
                 </Center>
                 <Divider marginY={"20px"} />
@@ -80,25 +86,11 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
                     </Box>
                 </Flex>
                 <Divider marginY={"20px"} />
-                <Text textAlign={"center"}>Sector</Text>
-                <Flex>
-                    <SkeletonCircle marginRight={"10px"} size='160' />
-                    <Flex flexDirection={"column"} justifyContent={"space-evenly"} flex={1}>
-                        {carbonReduction.sectors.map(sector => (
-                            <Box><Text>{sector.value}% {sector.title}</Text></Box>
-                        ))}
-                    </Flex>
-                </Flex>
+                <Text as="h1" fontSize="lg" fontWeight="600" textAlign={"center"}>Sector</Text>
+                <CarbonReductionSector colorChart={colorChart} data={[{ value: 40, label: "Renewable Energy" }, { value: 24, label: "Waste Disposal" }, { value: 19, label: "Energy Efficiency" }, { value: 17, label: "Others" }]} />
                 <Divider marginY={"20px"} />
-                <Text textAlign={"center"}>Standard</Text>
-                <Flex alignItems={"center"}>
-                    {carbonReduction.standards.map(standard => (
-                        <Box textAlign={"center"} marginX={"5px"} flex={1}>
-                            <ImportantText>{standard.value}%</ImportantText>
-                            <Text>{standard.title}</Text>
-                        </Box>
-                    ))}
-                </Flex>
+                <Text as="h1" fontSize="lg" fontWeight="600" textAlign={"center"}>Standard</Text>
+                <CarbonReductionStandard vcs={74} gcc={15} eco={10} />
             </Stack>
         </Box >
     }
