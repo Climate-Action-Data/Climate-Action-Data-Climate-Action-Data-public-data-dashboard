@@ -1,6 +1,4 @@
-export type EffectResponse<T> = EffectResponseValid<T>
-
-export interface EffectResponseValid<T> {
+export interface EffectResponse<T> {
     data?: T
     error?: ErrorResponse
 }

@@ -9,7 +9,7 @@ export const TimeframeSearch = (): React.JSX.Element => {
     return (
         <Flex height={"40px"} alignItems={"center"}>
             <HStack spacing={4}>
-                {Timeframes.map((timeFrameName, idx) => (
+                {Object.values(Timeframes).map((timeFrameName, idx) => (
                     <Tag
                         size={"md"}
                         key={timeFrameName}
