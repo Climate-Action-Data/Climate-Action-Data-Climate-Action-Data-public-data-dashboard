@@ -10,7 +10,7 @@ const customJestConfig = {
     testEnvironment: 'jest-environment-jsdom',
     collectCoverage: true,
     moduleNameMapper: {
-        '^d3-color$': '<rootDir>/node_modules/.pnpm/d3-color@3.1.0/node_modules/d3-color/dist/d3-color.min.js',
+        // '^d3-color$': '<rootDir>/node_modules/.pnpm/d3-color@3.1.0/node_modules/d3-color/dist/d3-color.min.js',
         // 'd3-color': '<rootDir>/node_modules/d3-color/dist/d3-color.min.js',
     },
     transformIgnorePatterns: [
