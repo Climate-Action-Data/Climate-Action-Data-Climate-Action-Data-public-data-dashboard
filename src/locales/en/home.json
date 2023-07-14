@@ -1,4 +1,9 @@
 {
+  "appHeader": {
+    "title": "Connecting Carbon markets through open data.",
+    "findOutMore": "Find out more about CAD Trust",
+    "featureImageAltText": "header feature image"
+  },
   "regions": {
     "north-america": "North America",
     "south-america": "South America",
@@ -13,9 +18,11 @@
     "ytd": "YTD",
     "1m": "1m"
   },
-  "appHeader": {
-    "title": "Connecting Carbon markets through open data.",
-    "findOutMore": "Find out more about CAD Trust",
-    "featureImageAltText": "header feature image"
+  "carbonReduction": {
+    "activeProjects": "Active Projects",
+    "totalReduction": "Total Reduction (YTD)",
+    "annualReduction": "Annual Est. Reduction",
+    "sector": "Sector",
+    "standard": "Standard"
   }
 }
