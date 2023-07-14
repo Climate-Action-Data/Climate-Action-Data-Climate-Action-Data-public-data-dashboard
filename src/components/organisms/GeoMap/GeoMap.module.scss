@@ -1,5 +1,4 @@
-$dotAreaOpacity: 0.02;
-$dotRadius: 0.35;
+$dotAreaOpacity: 0;
 $normalColor: #888888;
 $noDataColor:   #dddddd;
 $hoverColor: #333333;
@@ -10,7 +9,6 @@ $hoverNoDataColor:   #333333;
 
     .geoMapDot {
         fill: $normalColor;
-        r: $dotRadius;
         cursor: pointer;
         transition: fill 0.4s;
         
@@ -32,7 +30,6 @@ $hoverNoDataColor:   #333333;
     
     .geoMapDotArea {
         fill: $normalColor;
-        r: $dotRadius * 2;
         opacity: $dotAreaOpacity;
         cursor: pointer;
         
