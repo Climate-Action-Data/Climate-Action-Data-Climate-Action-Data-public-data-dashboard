@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import _ from 'lodash'
 import classNames from 'classnames/bind'
 
-import { findCountry } from '../../../assets/geo-map/countries'
+import { findCountry } from './countries'
 
 import styles from './GeoMap.module.scss'
 import { Country, SubRegion } from '@/@types/geojson'
