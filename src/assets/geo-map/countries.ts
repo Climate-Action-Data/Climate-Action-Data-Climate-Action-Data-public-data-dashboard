@@ -2730,4 +2730,18 @@ const countries: Country[] = [
     subRegionCode: `202`,
   },
 ]
-export default countries
+
+const findCountry = (alpha3: string, subRegion?: SubRegion): Country => {
+  const country = countries.find((country) => country.alpha3 === alpha3)
+
+  if (!country) {
+    return {
+      alpha3,
+      subRegion,
+    }
+  }
+
+  return country
+}
+
+export { countries, findCountry }
