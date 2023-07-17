@@ -1,11 +1,23 @@
 {
     "regions": {
-        "north-america": "North America",
-        "south-america": "South America",
-        "europe": "Europe",
-        "africa": "Africa",
-        "asia": "Asia",
-        "anz": "ANZ"
+        "northern-europe": "Northern Europe",
+        "southern-europe": "Southern Europe",
+        "northern-africa": "Northern Africa",
+        "polynesia": "Polynesia",
+        "sub-saharan-africa": "Sub Saharan Africa",
+        "latin-america-and-the-caribbean": "Latin America and the Caribbean",
+        "western-asia": "Western Asia",
+        "australia-and-new-zealand": "Australia and New Zealand",
+        "western-europe": "Western Europe",
+        "eastern-europe": "Eastern Europe",
+        "northern-america": "Northern America",
+        "south-eastern-asia": "South Eastern Asia",
+        "southern-asia": "Southern Asia",
+        "eastern-asia": "Eastern Asia",
+        "melanesia": "Melanesia",
+        "micronesia": "Micronesia",
+        "central-asia": "Central Asia",
+        "world": "World"
     },
     "timeframes": {
         "max": "Max",

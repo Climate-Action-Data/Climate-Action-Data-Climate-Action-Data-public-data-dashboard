@@ -1,3 +1,4 @@
+import { SubRegion } from '@/@types/geojson'
 import { Context } from '..'
 
 interface SearchParams {
@@ -9,13 +10,26 @@ export const getCarbonReduction = async (context: Context, searchParams: SearchP
   const carbonData = await context.effects.analytics.getCarbonReduction()
   if (carbonData.data) {
     context.state.analytics.carbonReduction = carbonData
-  } else {
+  }
+}
+
+export const setSubRegion = (context: Context, subRegion: string) => {
+  if (context.state.analytics?.carbonReduction?.data) {
+    context.state.analytics.carbonReduction.data.carbonMapSelectedRegion = subRegion as SubRegion
+  }
+}
+
+export const setHoverSubRegion = (context: Context, subRegion: string) => {
+  if (context.state.analytics?.carbonReduction?.data) {
+    context.state.analytics.carbonReduction.data.carbonMapHoveredRegion = subRegion
   }
 }
 
 export const updateCarbonReduction = (context: Context) => {
   context.state.analytics.carbonReduction = {
     data: {
+      carbonMapData: [],
+      carbonMapHasCountryData: new Map<string, boolean>(),
       activeProjects: 172,
       totalReduction: 5.96,
       annualEstReduction: 23.1,
@@ -37,6 +51,8 @@ export const updateCarbonReduction = (context: Context) => {
 export const restoreCarbonReduction = (context: Context) => {
   context.state.analytics.carbonReduction = {
     data: {
+      carbonMapHasCountryData: new Map<string, boolean>(),
+      carbonMapData: [],
       activeProjects: 455,
       totalReduction: 7.96,
       annualEstReduction: 38.1,

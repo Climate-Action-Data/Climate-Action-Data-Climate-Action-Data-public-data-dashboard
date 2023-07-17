@@ -10,7 +10,7 @@ import NoSSR from './noSSR'
 import { CacheProvider } from '@chakra-ui/next-js'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import { Header } from '../components/organisms/Header/Header'
-import { brandPrimary } from '@/styles/Button'
+import { brandPrimary, lightGray, lightGrayRound } from '@/styles/Button'
 import { Menu } from '@/components/organisms/Menu/Menu'
 import { mode } from '@chakra-ui/theme-tools'
 import { cardSection } from '@/styles/Section'
@@ -48,6 +48,8 @@ const theme = extendTheme({
     Button: {
       variants: {
         brandPrimary,
+        lightGrayRound,
+        lightGray,
       },
     },
     Link: {
