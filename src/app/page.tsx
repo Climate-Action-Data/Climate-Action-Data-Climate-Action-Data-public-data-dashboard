@@ -3,9 +3,12 @@ import { CarbonReductionWidget } from '@/components/molecules/CarbonReductionWid
 import { RegionSearch } from '@/components/molecules/RegionSearch/RegionSearch'
 import { TimeframeSearch } from '@/components/molecules/TimeframeSearch/TimeframeSearch'
 import GeoMap from '@/components/organisms/GeoMap/GeoMap'
+import { useAppState } from '@/overmind'
 import { Flex, Container, Spacer } from '@chakra-ui/react'
 
 export default function Home(): React.JSX.Element {
+  const { carbonReduction } = useAppState().analytics
+
   return (
     <>
       <Flex width={`100%`}>

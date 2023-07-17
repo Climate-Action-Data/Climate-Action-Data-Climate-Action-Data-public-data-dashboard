@@ -9,6 +9,8 @@ const SLEEP = 500
 export const getCarbonReduction = async (): Promise<EffectResponse<CarbonMapData[]>> => {
   try {
     await new Promise((f) => setTimeout(f, SLEEP))
+    const carbonMapHasCountryData: Map<string, boolean> = generateHasCountryData(data)
+    console.dir(carbonMapHasCountryData)
     return {
       data,
       error: undefined,
