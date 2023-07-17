@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google'
 import { Provider } from 'overmind-react'
 import { config } from '@/overmind'
 
-const overmind = createOvermind(config)
 import './globals.css'
 import { createOvermind } from 'overmind'
 import { CacheProvider } from '@chakra-ui/next-js'
@@ -12,13 +11,17 @@ import { mode } from '@chakra-ui/theme-tools'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
 import NoSSR from './noSSR'
-import { Menu } from '@/components/organisms/Menu'
 
 import { brandPrimary, whiteSecondary } from '@/styles/Button'
 import { cardSection } from '@/styles/Section'
 import styles from './page.module.css'
 import '../i18n'
-import Header from '@/components/organisms/Header'
+
+import AppHeader from '@/components/organisms/AppHeader/AppHeader'
+import { Menu } from '@/components/organisms/Menu/Menu'
+
+const overmind = createOvermind(config)
+
 // eslint-disable-next-line @typescript-eslint/quotes
 const inter = Inter({ subsets: ['latin'] })
 
@@ -87,7 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
           <NoSSR>
             <CacheProvider>
               <ChakraProvider theme={theme}>
-                <Header />
+                <AppHeader />
                 <Menu />
                 <main className={styles.main}>{children}</main>
               </ChakraProvider>
