@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="css-0"
+  >
+    <div
+      class="backgroundImage css-8yy1is"
+    >
+      <div
+        class="backgroundGradient css-mppusk"
+      />
+      <div
+        class="headerContents css-k008qs"
+      >
+        <div
+          class="css-l0e623"
+        >
+          <p
+            class="chakra-text headerTitle css-1nlw1hn"
+          >
+            Connecting Carbon markets through open data.
+          </p>
+          <a
+            class="chakra-link css-spn4bz"
+            href="https://www.google.com"
+          >
+            Find out more about CAD Trust
+          </a>
+        </div>
+        <div
+          class="css-17xejub"
+        />
+        <div
+          class="css-k008qs"
+        >
+          <img
+            alt="header feature image"
+            class="chakra-image css-1egp19f"
+            src="/img.jpg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;
