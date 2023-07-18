@@ -2,7 +2,6 @@
 import React from 'react'
 import { Inter } from 'next/font/google'
 import { Provider } from 'overmind-react'
-import { config } from '@/overmind'
 
 import './globals.css'
 import { createOvermind } from 'overmind'
@@ -10,15 +9,16 @@ import { CacheProvider } from '@chakra-ui/next-js'
 import { mode } from '@chakra-ui/theme-tools'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
+import { config } from '@/overmind'
 import NoSSR from './noSSR'
-
+import './globals.css'
 import { brandPrimary, whiteSecondary } from '@/styles/Button'
 import { cardSection } from '@/styles/Section'
-import styles from './page.module.css'
 import '../i18n'
-
 import AppHeader from '@/components/organisms/AppHeader/AppHeader'
 import { Menu } from '@/components/organisms/Menu/Menu'
+
+import styles from './page.module.css'
 
 const overmind = createOvermind(config)
 
