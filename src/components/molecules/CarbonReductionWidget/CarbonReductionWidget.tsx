@@ -17,7 +17,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
 
   if (!carbonReduction?.data) {
     return (
-      <Box flex={1} minW={`400px`}>
+      <Box flex={1}>
         <Stack>
           <Center>
             <Box width={`50%`}>
@@ -67,7 +67,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
     )
   } else {
     return (
-      <Box minW={`400px`}>
+      <Box>
         <Stack>
           <Center>
             <Box textAlign={`center`} width={`50%`}>
