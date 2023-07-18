@@ -16,7 +16,7 @@ export default function Home(): React.JSX.Element {
             <TimeframeSearch />
             <GeoMap width="80vw" height="400px" />
           </Flex>
-          <Flex marginX={"24px"}>
+          <Flex marginX={`24px`}>
             <CarbonReductionWidget />
           </Flex>
         </Container>
