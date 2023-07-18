@@ -20,6 +20,9 @@ export default function Home(): React.JSX.Element {
             <GeoMap width="80vw" height="400px" />
           </Flex>
           <Flex marginX={`24px`}>
+            <Flex maxH="650px" justifyContent="center" alignItems="center" flex={3}>
+              <GeoMap width="90%" height="90%" subRegion={carbonReduction.carbonMapDataFilters.region} hasCountryData={carbonReduction.carbonMapHasCountryData}></GeoMap>
+            </Flex>
             <CarbonReductionWidget />
           </Flex>
         </Container>
