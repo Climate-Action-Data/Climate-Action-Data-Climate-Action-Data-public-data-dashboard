@@ -1,13 +1,13 @@
 import { FC } from 'react'
-import { Box, Flex, Image, Spacer, Text, useBreakpointValue } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 import { Link } from '@chakra-ui/next-js'
+import { Box, Flex, Image, Spacer, Text, useBreakpointValue } from '@chakra-ui/react'
 
 import headerBanner from '../../../assets/header.jpg'
 import headerFeatureLarge from '../../../assets/headerFeatureLarge.svg'
 import headerFeatureSmall from '../../../assets/headerFeatureSmall.svg'
 
 import styles from './Header.module.scss'
-import { useTranslation } from 'react-i18next'
 
 const AppHeader: FC = () => {
   const { t } = useTranslation(`home`)
