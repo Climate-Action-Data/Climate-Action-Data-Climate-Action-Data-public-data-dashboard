@@ -1,17 +1,21 @@
 import React from 'react'
-import Logo from './../../../assets/logo.png'
-import { Box, Flex, SlideFade, useDisclosure, Image, Center } from '@chakra-ui/react'
-import { Link } from '@chakra-ui/next-js'
-import { DarkModeSwitch } from '../../atoms/DarkModeSwitch/DarkModeSwitch'
+import { useTranslation } from 'react-i18next'
 import { usePathname } from 'next/navigation'
-import { BookmarkIcon } from '../../atoms/BookmarkIcon/BookmarkIcon'
-import { HelpIcon } from '../../atoms/HelpIcon/HelpIcon'
-import { HomeIcon } from '../../atoms/HomeIcon/HomeIcon'
-import { WebRedirectIcon } from '../../atoms/WebRedirectIcon/WebRedirectIcon'
+import { Box, Center, Flex, Image, SlideFade, useDisclosure } from '@chakra-ui/react'
+import { Link } from '@chakra-ui/next-js'
+
+import { DarkModeSwitch } from '@/components/atoms/DarkModeSwitch/DarkModeSwitch'
+import { BookmarkIcon } from '@/components/atoms/BookmarkIcon/BookmarkIcon'
+import { HelpIcon } from '@/components/atoms/HelpIcon/HelpIcon'
+import { HomeIcon } from '@/components/atoms/HomeIcon/HomeIcon'
+import { WebRedirectIcon } from '@/components/atoms/WebRedirectIcon/WebRedirectIcon'
+
+import Logo from './../../../assets/logo.png'
 
 export const Menu = (): React.JSX.Element => {
   const { isOpen } = useDisclosure()
   const currentPath = usePathname()
+  const { t } = useTranslation(`menu`)
 
   return (
     <Box className="menu">
@@ -20,7 +24,7 @@ export const Menu = (): React.JSX.Element => {
           {/* <Button position={`sticky`} top={0} colorScheme="gray" width={`56px`} height={`56px`} backgroundColor={isOpen ? `gray.200` : `gray.500`} onClick={onToggle}>
                         <HamburgerIcon color={`white`} />
                     </Button> */}
-          <Image marginX={`8px`} alt="Logo" height={`32px`} src={Logo.src} />
+          <Image marginX={`8px`} alt={t(`logo`)} height={`32px`} src={Logo.src} />
         </Flex>
         <Box>Public Data Dashboard</Box>
         <Flex alignItems={`center`}>
