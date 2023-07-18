@@ -7,8 +7,10 @@ import headerFeatureLarge from '../../../assets/headerFeatureLarge.svg'
 import headerFeatureSmall from '../../../assets/headerFeatureSmall.svg'
 
 import styles from './Header.module.scss'
+import { useTranslation } from 'react-i18next'
 
 const AppHeader: FC = () => {
+  const { t } = useTranslation(`home`)
   const headerFeatureImage = useBreakpointValue({
     base: { src: headerFeatureSmall.src, padding: `40% 20% 10% 10%` },
     sm: { src: headerFeatureLarge.src, padding: `8%` },
@@ -21,15 +23,15 @@ const AppHeader: FC = () => {
         <Flex className={styles.headerContents}>
           <Flex direction={`column`} gap={`20px`} alignSelf={[`top`, null, `center`]} padding={[`50px 20px`, null, `5%`]}>
             <Text fontSize={[`lg`, `xl`, `3xl`]} className={styles.headerTitle}>
-              Connecting Carbon markets through open data.
+              {t(`appHeader.title`)}
             </Text>
             <Link as={`button`} variant={`whiteSecondary`} href={`https://www.google.com`}>
-              Find out more about CAD Trust
+              {t(`appHeader.findOutMore`)}
             </Link>
           </Flex>
           <Spacer />
           <Flex>
-            <Image {...headerFeatureImage} height={`100%`} alt={`header feature image`} />
+            <Image {...headerFeatureImage} height={`100%`} alt={t(`appHeader.featureImageAltText`)} />
           </Flex>
         </Flex>
       </Flex>
