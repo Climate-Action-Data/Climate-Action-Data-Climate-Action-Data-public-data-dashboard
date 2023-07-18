@@ -35,22 +35,22 @@ export const Menu = (): React.JSX.Element => {
       <SlideFade in={isOpen} style={{ zIndex: 10 }}>
         <Box color={`white`} backgroundColor={`gray.400`} width={`56px`} height={`100vh`} position={`relative`}>
           <Flex>
-            <Button variant={`brandPrimary`} onClick={redirect}>
+            <Button variant={`brandPrimary`}>
               <Image alt="Home" src={HomeIcon.src} />
             </Button>
           </Flex>
           <Flex>
-            <Button variant={`brandPrimary`} onClick={redirect}>
+            <Button variant={`brandPrimary`}>
               <Image alt="Bookmark" src={BookmarkIcon.src} />
             </Button>
           </Flex>
           <Flex>
-            <Button variant={`brandPrimary`} onClick={redirect}>
+            <Button variant={`brandPrimary`}>
               <Image alt="Website" src={WebRedirectIcon.src} />
             </Button>
           </Flex>
           <Flex>
-            <Button variant={`brandPrimary`} onClick={redirect}>
+            <Button variant={`brandPrimary`}>
               <Image alt="Help" src={HelpIcon.src} />
             </Button>
           </Flex>
