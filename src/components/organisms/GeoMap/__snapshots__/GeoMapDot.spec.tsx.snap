@@ -9,6 +9,7 @@ exports[`GeoMapDot component renders correctly 1`] = `
     onClick={[Function]}
     onMouseLeave={[Function]}
     onMouseOver={[Function]}
+    r={0.7}
   />,
   <circle
     className="geoMapDotNoData"
@@ -17,6 +18,7 @@ exports[`GeoMapDot component renders correctly 1`] = `
     onClick={[Function]}
     onMouseLeave={[Function]}
     onMouseOver={[Function]}
+    r={0.35}
   />,
 ]
 `;
@@ -30,6 +32,7 @@ exports[`GeoMapDot component renders differently when currently selected region 
     onClick={[Function]}
     onMouseLeave={[Function]}
     onMouseOver={[Function]}
+    r={0.7}
   />,
   <circle
     className="geoMapDotNoData"
@@ -38,6 +41,7 @@ exports[`GeoMapDot component renders differently when currently selected region 
     onClick={[Function]}
     onMouseLeave={[Function]}
     onMouseOver={[Function]}
+    r={0.35}
   />,
 ]
 `;
