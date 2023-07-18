@@ -20,9 +20,6 @@ export default function Home(): React.JSX.Element {
             </Hide>
             <TimeframeSearch />
           </Flex>
-          <Flex marginX={`24px`}>
-            <CarbonReductionWidget />
-          </Flex>
           <Flex justifyContent="center" marginX={`24px`}>
             <Hide below="md">
               <Flex maxH="650px" justifyContent="center" alignItems="center" flex={3}>

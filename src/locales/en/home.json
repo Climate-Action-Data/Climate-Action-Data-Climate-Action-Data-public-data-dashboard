@@ -22,7 +22,9 @@
     "melanesia": "Melanesia",
     "micronesia": "Micronesia",
     "central-asia": "Central Asia",
-    "world": "World"
+    "world": "World",
+    "chooseRegion": "Choose a region",
+    "chooseCountry": "Choose a country"
 },
   "timeframes": {
     "max": "Max",
