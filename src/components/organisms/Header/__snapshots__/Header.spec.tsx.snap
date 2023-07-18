@@ -3,9 +3,13 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="css-10rc9h1"
+    class="css-0"
   >
-    My Text
+    <img
+      alt="CAD Banner"
+      class="chakra-image css-0"
+      src="/img.jpg"
+    />
   </div>
 </div>
 `;
