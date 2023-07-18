@@ -15,11 +15,11 @@ export const CarbonReductionStandard = ({ vcs, gcc, eco }: CarbonReductionStanda
         <Text>VCS</Text>
       </Box>
       <Box textAlign={`center`} marginX={`5px`} flex={1}>
-        <ImportantText color="green.700">{gcc}%</ImportantText>
+        <ImportantText props={{ color: `green.700` }}>{gcc}%</ImportantText>
         <Text>GCC</Text>
       </Box>
       <Box textAlign={`center`} marginX={`5px`} flex={1}>
-        <ImportantText color="green.800">{eco}%</ImportantText>
+        <ImportantText props={{ color: `green.800` }}>{eco}%</ImportantText>
         <Text>ECO</Text>
       </Box>
     </Flex>

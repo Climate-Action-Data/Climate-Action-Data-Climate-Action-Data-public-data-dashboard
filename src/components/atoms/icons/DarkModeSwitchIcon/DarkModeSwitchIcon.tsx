@@ -1,6 +1,7 @@
 import { Icon, StyleProps } from '@chakra-ui/react'
 
 export type DarkModeSwitchIconProps = StyleProps
+
 export const DarkModeSwitchIcon = (props: DarkModeSwitchIconProps) => {
   const actualProps = {
     ...props,

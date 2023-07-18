@@ -5,7 +5,15 @@ exports[`renders correctly 1`] = `
   <div
     class="css-10rc9h1"
   >
+<<<<<<<< HEAD:src/components/atoms/Tooltip/__snapshots__/Tooltip.spec.tsx.snap
     My Text
+========
+    <img
+      alt="CAD Banner"
+      class="chakra-image css-0"
+      src="/img.jpg"
+    />
+>>>>>>>> 58ab00e8e4a17acbb68c43f3740e370c7d2d6bee:src/components/organisms/Header/__snapshots__/Header.spec.tsx.snap
   </div>
 </div>
 `;

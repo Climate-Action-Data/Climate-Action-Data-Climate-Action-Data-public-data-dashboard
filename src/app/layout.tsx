@@ -2,7 +2,9 @@
 import React from 'react'
 import { Inter } from 'next/font/google'
 import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { ChakraProvider, Flex, extendTheme } from '@chakra-ui/react'
+import { brandPrimary, whiteSecondary, lightGray, lightGrayRound } from '@/styles/Button'
+import { Menu } from '@/components/organisms/Menu/Menu'
 import { mode } from '@chakra-ui/theme-tools'
 import { createOvermind } from 'overmind'
 import { Provider } from 'overmind-react'
@@ -10,17 +12,15 @@ import { Provider } from 'overmind-react'
 import './globals.css'
 import { config } from '@/overmind'
 import NoSSR from './noSSR'
-import { brandPrimary, whiteSecondary } from '@/styles/Button'
 import { cardSection } from '@/styles/Section'
-import { Menu } from '@/components/organisms/Menu/Menu'
 import AppHeader from '@/components/organisms/AppHeader/AppHeader'
 import '../i18n'
-
-import styles from './page.module.css'
 
 const overmind = createOvermind(config)
 
 // eslint-disable-next-line @typescript-eslint/quotes
+import '../i18n'
+/*eslint @typescript-eslint/quotes: off*/
 const inter = Inter({ subsets: ['latin'] })
 
 const theme = extendTheme({
@@ -53,6 +53,8 @@ const theme = extendTheme({
       variants: {
         brandPrimary,
         whiteSecondary,
+        lightGrayRound,
+        lightGray,
       },
     },
     Link: {
@@ -132,7 +134,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
               <ChakraProvider theme={theme}>
                 <AppHeader />
                 <Menu />
-                <main className={styles.main}>{children}</main>
+                <Flex padding={{ md: 6 }} minHeight="100vh" alignItems="center" justifyContent="space-between" flexDirection="column">
+                  {children}
+                </Flex>
               </ChakraProvider>
             </CacheProvider>
           </NoSSR>

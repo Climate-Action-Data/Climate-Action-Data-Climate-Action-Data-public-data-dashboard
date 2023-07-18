@@ -1,10 +1,11 @@
 import { ResponsivePie } from '@nivo/pie'
+import { Tooltip } from '../Tooltip/Tooltip'
+
 interface SectorPieChartProps {
   colorChart: string[]
   data: { value: number; label: string }[]
 }
 
-const colorChartDefault = [`green.600`, `green.700`, `green.800`, `lightGray.500`]
 export const SectorPieChart = ({ colorChart, data }: SectorPieChartProps): React.JSX.Element => {
   return (
     <ResponsivePie
@@ -12,13 +13,13 @@ export const SectorPieChart = ({ colorChart, data }: SectorPieChartProps): React
       margin={{ top: 5, right: 5, bottom: 5, left: 5 }}
       innerRadius={0.6}
       padAngle={0}
-      colors={colorChartDefault}
-      isInteractive={false}
+      colors={[`#24BD63`, `#1B8E4A`, `#125E32`, `#949DA1`]}
       cornerRadius={0}
-      activeOuterRadiusOffset={8}
+      activeOuterRadiusOffset={2}
       borderWidth={0}
       enableArcLinkLabels={false}
       enableArcLabels={false}
+      tooltip={(data) => <Tooltip>{data.datum.label}</Tooltip>}
     />
   )
 }
