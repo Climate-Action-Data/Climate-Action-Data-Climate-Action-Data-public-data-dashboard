@@ -1,6 +1,7 @@
 import { EffectResponse } from '@/@types/EffectResponse'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
+import { derived } from 'overmind'
 
 interface CarbonData {
   activeProjects: number
@@ -16,22 +17,59 @@ export interface CarbonMapData {
   timeRanges: Record<TimeframesData, CarbonData>
 }
 
+interface DataFilters {
+  region: SubRegion
+  country?: string
+  timeframe: TimeframesData
+}
+
 export interface CarbonReduction {
-  carbonMapData: CarbonMapData[]
+  carbonMapData?: EffectResponse<CarbonMapData[]>
   carbonMapHasCountryData: Map<string, boolean>
-  carbonMapSelectedRegion?: SubRegion
-  carbonMapHoveredRegion?: string
-  activeProjects: number
-  totalReduction: number
-  annualEstReduction: number
-  sectors: { title: string; value: number }[]
-  standards: { title: string; value: number }[]
+  carbonMapHoveredRegion: string
+  carbonMapHoveredCountry: string
+  carbonMapDataFilters: DataFilters
 }
 
 interface DataState {
-  carbonReduction?: EffectResponse<CarbonReduction>
+  carbonReduction: CarbonReduction
+  carbonMapDataFiltered: CarbonData | undefined
 }
 
 export const state: DataState = {
-  carbonReduction: undefined,
+  carbonReduction: {
+    carbonMapHasCountryData: new Map<string, boolean>(),
+    carbonMapDataFilters: { region: SubRegion.WORLD, timeframe: TimeframesData.MAX },
+    carbonMapHoveredRegion: ``,
+    carbonMapHoveredCountry: ``,
+  },
+  carbonMapDataFiltered: derived((state: DataState) => {
+    const result: CarbonData | undefined = {
+      activeProjects: 172,
+      totalReductions: 5.96,
+      estimatedReductions: 23.1,
+      unitMetric: `tn`,
+      sectors: [
+        { name: `Renewable Energy`, average: 35 },
+        { name: `Waste Disposal`, average: 31 },
+        { name: `Energy Efficiency`, average: 19 },
+        { name: `Others`, average: 15 },
+      ],
+      standards: [
+        { name: `vcs`, average: 74 },
+        { name: `gcc`, average: 15 },
+        { name: `eco`, average: 10 },
+      ],
+    }
+    if (state.carbonReduction.carbonMapData?.data) {
+      if (state.carbonReduction.carbonMapDataFilters.country) {
+        const mapData = state.carbonReduction.carbonMapData.data.find((country) => country.countryCode === state.carbonReduction.carbonMapDataFilters.country)
+        if (mapData?.timeRanges[state.carbonReduction.carbonMapDataFilters.timeframe]) {
+          return mapData?.timeRanges[state.carbonReduction.carbonMapDataFilters.timeframe]
+        }
+      } else {
+      }
+    }
+    return result
+  }),
 }
