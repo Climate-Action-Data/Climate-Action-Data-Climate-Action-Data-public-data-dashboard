@@ -9,7 +9,7 @@ export const RegionSearch = (): React.JSX.Element => {
   const { t: countryTranslate } = useTranslation(`countries`)
 
   const { carbonReduction } = useAppState().analytics
-  const { setSubRegion, setHoverSubRegion, setCountry } = useActions().analytics
+  const { setSubRegion, setHoverSubRegion, setCountry, setHoverCountry, clearLocationFilters } = useActions().analytics
   const { generateCountryByRegion } = useEffects().analytics
 
   const getSearchItems = (): {
@@ -21,7 +21,6 @@ export const RegionSearch = (): React.JSX.Element => {
         value: country,
         label: countryTranslate(`${country}`),
       }))
-      console.dir(test)
       return test
     } else {
       return Object.values(SubRegion).map((region) => ({
@@ -31,19 +30,23 @@ export const RegionSearch = (): React.JSX.Element => {
     }
   }
 
+  const getCountryPlaceholder: () => string = () => {
+    let placeholder = t(`regions.chooseCountry`)
+    if (carbonReduction.carbonMapHoveredCountry !== ``) {
+      if (carbonReduction.carbonMapHoveredCountry !== carbonReduction.carbonMapDataFilters?.country) {
+        placeholder = countryTranslate(`${carbonReduction.carbonMapHoveredCountry}`)
+      }
+    } else if (carbonReduction.carbonMapDataFilters?.country) {
+      placeholder = countryTranslate(`${carbonReduction.carbonMapDataFilters?.country}`)
+    }
+    return placeholder
+  }
+
   const regionTitle = () => {
     if (carbonReduction.carbonMapDataFilters?.region !== SubRegion.WORLD) {
       return (
         <Flex alignItems={`center`}>
-          <Button
-            variant="lightGrayRound"
-            marginRight={4}
-            data-testid="button-region-back"
-            onClick={() => {
-              setSubRegion(SubRegion.WORLD)
-              setCountry(``)
-            }}
-          >
+          <Button variant="lightGrayRound" marginRight={4} data-testid="button-region-back" onClick={() => clearLocationFilters()}>
             &lt;
           </Button>
           <Text fontWeight={`bold`}>{t(`regions.${carbonReduction.carbonMapDataFilters.region}`)}</Text>
@@ -63,9 +66,11 @@ export const RegionSearch = (): React.JSX.Element => {
       <Divider marginX={6} height={`70px`} orientation="vertical" />
       {carbonReduction.carbonMapDataFilters?.region !== SubRegion.WORLD ? (
         <AutoComplete
-          onItemClick={(region) => setCountry(region.value)}
+          onItemClick={(country) => setCountry(country.value)}
+          onItemHover={(country) => setHoverCountry(country.value)}
+          onDropDownLeave={() => setHoverCountry(``)}
           items={getSearchItems()}
-          placeholder={carbonReduction.carbonMapDataFilters?.country ? countryTranslate(`${carbonReduction.carbonMapDataFilters.country}`) : t(`regions.chooseCountry`)}
+          placeholder={getCountryPlaceholder()}
         />
       ) : (
         <AutoComplete

@@ -26,7 +26,8 @@ interface DataFilters {
 export interface CarbonReduction {
   carbonMapData?: EffectResponse<CarbonMapData[]>
   carbonMapHasCountryData: Map<string, boolean>
-  carbonMapHoveredRegion?: string
+  carbonMapHoveredRegion: string
+  carbonMapHoveredCountry: string
   carbonMapDataFilters: DataFilters
 }
 
@@ -39,6 +40,8 @@ export const state: DataState = {
   carbonReduction: {
     carbonMapHasCountryData: new Map<string, boolean>(),
     carbonMapDataFilters: { region: SubRegion.WORLD, timeframe: TimeframesData.MAX },
+    carbonMapHoveredRegion: ``,
+    carbonMapHoveredCountry: ``,
   },
   carbonMapDataFiltered: derived((state: DataState) => {
     const result: CarbonData | undefined = {

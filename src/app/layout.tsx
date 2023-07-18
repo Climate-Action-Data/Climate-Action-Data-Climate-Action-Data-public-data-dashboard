@@ -8,13 +8,12 @@ import './globals.css'
 import { createOvermind } from 'overmind'
 import NoSSR from './noSSR'
 import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { ChakraProvider, Flex, extendTheme } from '@chakra-ui/react'
 import { Header } from '../components/organisms/Header/Header'
 import { brandPrimary, lightGray, lightGrayRound } from '@/styles/Button'
 import { Menu } from '@/components/organisms/Menu/Menu'
 import { mode } from '@chakra-ui/theme-tools'
 import { cardSection } from '@/styles/Section'
-import styles from './page.module.css'
 import '../i18n'
 /*eslint @typescript-eslint/quotes: off*/
 const inter = Inter({ subsets: ['latin'] })
@@ -128,7 +127,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
               <ChakraProvider theme={theme}>
                 <Header />
                 <Menu />
-                <main className={styles.main}>{children}</main>
+                <Flex padding={{ md: 6 }} minHeight="100vh" alignItems="center" justifyContent="space-between" flexDirection="column">
+                  {children}
+                </Flex>
               </ChakraProvider>
             </CacheProvider>
           </NoSSR>
