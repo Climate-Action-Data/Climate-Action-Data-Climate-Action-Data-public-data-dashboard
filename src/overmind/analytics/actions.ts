@@ -9,7 +9,6 @@ interface SearchParams {
 
 export const getCarbonReduction = async (context: Context, searchParams: SearchParams = { region: null, timeframe: null }): Promise<void> => {
   const carbonData = await context.effects.analytics.getCarbonReduction()
-  console.dir(carbonData)
   if (carbonData.data) {
     context.state.analytics.carbonReduction.carbonMapData = carbonData
     context.state.analytics.carbonReduction.carbonMapHasCountryData = context.effects.analytics.generateHasCountryData(carbonData.data)

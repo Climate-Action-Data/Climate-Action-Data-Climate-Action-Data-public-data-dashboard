@@ -131,7 +131,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
               <ChakraProvider theme={theme}>
                 <AppHeader />
                 <Menu />
-                <main className={styles.main}>{children}</main>
+                <Flex padding={{ md: 6 }} minHeight="100vh" alignItems="center" justifyContent="space-between" flexDirection="column">
+                  {children}
+                </Flex>
               </ChakraProvider>
             </CacheProvider>
           </NoSSR>

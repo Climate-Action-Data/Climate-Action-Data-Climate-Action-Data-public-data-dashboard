@@ -19,6 +19,7 @@ export const SectorPieChart = ({ colorChart, data }: SectorPieChartProps): React
       borderWidth={0}
       enableArcLinkLabels={false}
       enableArcLabels={false}
+      tooltip={(data) => <Tooltip>{data.datum.label}</Tooltip>}
     />
   )
 }
