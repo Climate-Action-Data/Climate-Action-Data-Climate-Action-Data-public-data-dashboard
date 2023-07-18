@@ -20,13 +20,13 @@ exports[`renders correctly 1`] = `
           <p
             class="chakra-text headerTitle css-1nlw1hn"
           >
-            Connecting Carbon markets through open data.
+            appHeader.title
           </p>
           <a
             class="chakra-link css-spn4bz"
             href="https://www.google.com"
           >
-            Find out more about CAD Trust
+            appHeader.findOutMore
           </a>
         </div>
         <div
@@ -36,7 +36,7 @@ exports[`renders correctly 1`] = `
           class="css-k008qs"
         >
           <img
-            alt="header feature image"
+            alt="appHeader.featureImageAltText"
             class="chakra-image css-1egp19f"
             src="/img.jpg"
           />

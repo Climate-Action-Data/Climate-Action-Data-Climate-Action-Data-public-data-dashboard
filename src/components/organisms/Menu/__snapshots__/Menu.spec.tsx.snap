@@ -12,7 +12,7 @@ exports[`renders correctly 1`] = `
         class="css-70qvj9"
       >
         <img
-          alt="Logo"
+          alt="logo"
           class="chakra-image css-1tz19zq"
           src="/img.jpg"
         />
