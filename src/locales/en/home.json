@@ -12,5 +12,8 @@
         "12m": "12m",
         "ytd": "YTD",
         "1m": "1m"
+    },
+    "images": {
+        "bannerImage": "CAD Trust Banner"
     }
 }
