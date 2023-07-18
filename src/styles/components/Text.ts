@@ -6,6 +6,7 @@ export const Text = {
       display: `inline`,
     },
     statSuffix: {
+      paddingLeft: `8px`,
       fontSize: `xl`,
       fontWeight: `normal`,
       color: `charcoal.800`,

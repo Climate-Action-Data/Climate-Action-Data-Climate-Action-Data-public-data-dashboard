@@ -1,21 +1,47 @@
 import { extendTheme } from '@chakra-ui/react'
-
 import { mode } from '@chakra-ui/theme-tools'
-import { brandPrimary } from '@/styles/components/Button'
-import { cardSection } from '@/styles/components/Section'
-import { Text } from '../components/Text'
 
-export const theme = extendTheme({
+import { brandPrimary, lightGray, lightGrayRound, whiteSecondary } from '@/styles/components/Button'
+import { cardSection } from '@/styles/components/Section'
+
+const theme = extendTheme({
+  fontSizes: {
+    xs: `10px`,
+    sm: `12px`,
+    md: `14px`,
+    lg: `16px`,
+    xl: `18px`,
+    '2xl': `22px`,
+    '3xl': `28px`,
+    '4xl': `36px`,
+    '5xl': `48px`,
+    '6xl': `64px`,
+  },
   components: {
-    Text,
+    Skeleton: {
+      baseStyle: {
+        _light: {
+          '--skeleton-start-color': `#717D81`,
+          '--skeleton-end-color': `#949DA1`,
+        },
+        _dark: {
+          '--skeleton-start-color': `#717D81`,
+          '--skeleton-end-color': `#949DA1`,
+        },
+      },
+    },
     Button: {
       variants: {
         brandPrimary,
+        whiteSecondary,
+        lightGrayRound,
+        lightGray,
       },
     },
     Link: {
       variants: {
         brandPrimary,
+        whiteSecondary,
       },
     },
     Container: {
@@ -23,11 +49,29 @@ export const theme = extendTheme({
         cardSection,
       },
     },
+    Text: {
+      baseStyle: {
+        fontSize: `14px`,
+      },
+    },
   },
   colors: {
+    lightGray: {
+      main: `#00242C`,
+      50: `#F8FAFA`,
+      100: `#EDEFFE`,
+      200: `#DBDEE0`,
+      300: `#CACED0`,
+      400: `#B8BEC0`,
+      500: `#949DA1`,
+      600: `#717D81`,
+      700: `#4D5C62`,
+      800: `#3E4A4E`,
+      900: `#2E373B`,
+    },
     gray: {
       main: `#00242C`,
-      50: `#3E4A4E`,
+      50: `#`,
       100: `#3E4A4E`,
       200: `#3E4A4E`,
       300: `#2E373B`,
@@ -51,21 +95,6 @@ export const theme = extendTheme({
       800: `#125E32`,
       900: `#364D3F`,
     },
-    charcoal: {
-      100: `#F8FAFA`,
-      200: `#EDEFEF`,
-      300: `#DBDEE0`,
-      400: `#CACED0`,
-      500: `#B8BEC0`,
-      600: `#949DA1`,
-      700: `#717D81`,
-      800: `#4D5C62`,
-      900: `#3E4A4E`,
-      1000: `#2E373B`,
-      1100: `#1F2527`,
-      1200: `#171C1D`,
-      1300: `#0F1214`,
-    },
   },
   styles: {
     global: (props: any) => ({
@@ -74,5 +103,4 @@ export const theme = extendTheme({
       },
     }),
   },
-  fonts: {},
 })

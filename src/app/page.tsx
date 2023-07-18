@@ -3,6 +3,7 @@ import { CarbonReductionWidget } from '@/components/molecules/CarbonReductionWid
 import { RegionSearch } from '@/components/molecules/RegionSearch/RegionSearch'
 import { TimeframeSearch } from '@/components/molecules/TimeframeSearch/TimeframeSearch'
 import GeoMap from '@/components/organisms/GeoMap/GeoMap'
+import CreditsHistorySection from '@/components/organisms/CreditsHistorySection/CreditsHistorySection'
 import { Flex, Container, Spacer, Hide } from '@chakra-ui/react'
 import { useAppState } from '@/overmind'
 
@@ -28,6 +29,7 @@ export default function Home(): React.JSX.Element {
             </Hide>
             <CarbonReductionWidget />
           </Flex>
+          <CreditsHistorySection />
         </Container>
       </Flex>
     </>
