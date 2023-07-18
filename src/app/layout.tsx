@@ -2,14 +2,14 @@
 import React from 'react'
 import { Inter } from 'next/font/google'
 import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider, Flex, extendTheme } from '@chakra-ui/react'
-import { brandPrimary, whiteSecondary, lightGray, lightGrayRound } from '@/styles/Button'
+import { ChakraProvider, extendTheme, Flex } from '@chakra-ui/react'
+import { brandPrimary, lightGray, lightGrayRound, whiteSecondary } from '@/styles/components/Button'
+import { cardSection } from '@/styles/components/Section'
 import { Menu } from '@/components/organisms/Menu/Menu'
 import { mode } from '@chakra-ui/theme-tools'
 import { createOvermind } from 'overmind'
 import { Provider } from 'overmind-react'
 import { config } from '@/overmind'
-import { cardSection } from '@/styles/Section'
 import AppHeader from '@/components/organisms/AppHeader/AppHeader'
 import NoSSR from './noSSR'
 
@@ -17,7 +17,8 @@ import '../i18n'
 import './globals.css'
 
 const overmind = createOvermind(config)
-/*eslint @typescript-eslint/quotes: off*/
+
+// eslint-disable-next-line @typescript-eslint/quotes
 const inter = Inter({ subsets: ['latin'] })
 
 const theme = extendTheme({
