@@ -1,8 +1,7 @@
 import { render } from '@testing-library/react'
-import { ImportantText } from './ImportantText';
-import React from 'react';
+import { ImportantText } from './ImportantText'
 
-it('renders correctly', () => {
-    const { container } = render(<ImportantText>My Text</ImportantText>)
-    expect(container).toMatchSnapshot();
-});
+it(`renders correctly`, () => {
+  const { container } = render(<ImportantText>My Text</ImportantText>)
+  expect(container).toMatchSnapshot()
+})

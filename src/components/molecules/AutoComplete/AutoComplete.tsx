@@ -67,7 +67,7 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
               <Input onClick={toggleIsOpen} pr="2.5rem" placeholder={placeholder} ref={inputElement} onChange={(e) => setInputValue(e.target.value)}/>
               <InputRightElement width="2.5rem">
                 <Button onClick={toggleIsOpen} variant="lightGray" aria-label="toggle menu" h="1.75rem" size="sm">
-                <DropDownIcon />
+                  <DropDownIcon />
                 </Button>
               </InputRightElement>
             </InputGroup>
@@ -79,19 +79,19 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
               {inputItems.map((item, index) => (
                 item.value.toUpperCase().includes(inputValue.toUpperCase()) &&
                     (<ListItem
-                        px={2}
-                        py={1}
-                        borderBottom="1px solid rgba(0,0,0,0.01)"
-                        _hover={{ bg: `lightGray.200`, cursor: `pointer` }}
-                        onMouseEnter={() => {(onItemHover) ? onItemHover(item): undefined}}
-                        onClick={() => {setIsOpen(false);onItemClick(item)}}
-                        key={`${item.value}${index}`}
+                      px={2}
+                      py={1}
+                      borderBottom="1px solid rgba(0,0,0,0.01)"
+                      _hover={{ bg: `lightGray.200`, cursor: `pointer` }}
+                      onMouseEnter={() => {(onItemHover) ? onItemHover(item): undefined}}
+                      onClick={() => {setIsOpen(false);onItemClick(item)}}
+                      key={`${item.value}${index}`}
                     >
-                        <Box display="inline-flex" alignItems="center">
+                      <Box display="inline-flex" alignItems="center">
                         <Highlight styles={{ px:0.5,bg: highlightItemBg }} query={[inputValue || ``]}>
-                            {defaultItemRenderer(item)}
+                          {defaultItemRenderer(item)}
                         </Highlight>
-                        </Box>
+                      </Box>
                     </ListItem>)
 
               ))}

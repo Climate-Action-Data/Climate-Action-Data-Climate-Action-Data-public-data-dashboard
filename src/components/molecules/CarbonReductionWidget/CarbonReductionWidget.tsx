@@ -1,21 +1,25 @@
 import { CarbonReductionSector } from '@/components/atoms/CarbonReductionSector/CarbonReductionSector'
 import { CarbonReductionStandard } from '@/components/atoms/CarbonReductionStandard/CarbonReductionStandard'
 import { ImportantText } from '@/components/atoms/ImportantText/ImportantText'
-import { SectorPieChart } from '@/components/atoms/SectorPieChart/SectorPieChart'
 import { useActions, useAppState } from '@/overmind'
 import { Box, Flex, Text, Skeleton, Stack, Divider, Center, SkeletonCircle } from '@chakra-ui/react'
 import { FC, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+
 export const CarbonReductionWidget: FC = (): React.JSX.Element => {
-  const { carbonReduction } = useAppState().analytics
+  const { carbonReduction, carbonMapDataFiltered } = useAppState().analytics
   const { getCarbonReduction } = useActions().analytics
+  const { t } = useTranslation(`home`)
 
   const colorChart = [`green.600`, `green.700`, `green.800`, `lightGray.500`]
 
   useEffect(() => {
-    getCarbonReduction()
+    if (!carbonReduction.carbonMapData) {
+      getCarbonReduction()
+    }
   }, [])
 
-  if (!carbonReduction?.data) {
+  if (carbonMapDataFiltered === undefined) {
     return (
       <Box flex={1}>
         <Stack>
@@ -71,49 +75,45 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
         <Stack>
           <Center>
             <Box textAlign={`center`} width={`50%`}>
-              <ImportantText>{carbonReduction.data.activeProjects}</ImportantText>
-              <Text fontWeight="500">Active Projects</Text>
+              <ImportantText>{carbonMapDataFiltered.activeProjects}</ImportantText>
+              <Text fontWeight="500">{t(`carbonReduction.activeProjects`)}</Text>
             </Box>
           </Center>
           <Divider marginY={`20px`} />
           <Flex textAlign={`center`}>
             <Box marginRight={`5px`} flex={1}>
               <Box>
-                <ImportantText>{carbonReduction.data.totalReduction}</ImportantText>
+                <ImportantText>{carbonMapDataFiltered.totalReductions}</ImportantText>
                 <Text as="span" fontSize="sm">
                   M MtCO2
                 </Text>
               </Box>
+              <Text fontWeight="500">{t(`carbonReduction.totalReduction`)}</Text>
             </Box>
-            <Text fontWeight="500">Total Reduction (YTD)</Text>
             <Box marginLeft={`5px`} flex={1}>
               <Box>
-                <ImportantText color="green.700">{carbonReduction.data.annualEstReduction}</ImportantText>
+                <ImportantText props={{ color: `green.700` }}>{carbonMapDataFiltered.estimatedReductions}</ImportantText>
                 <Text as="span" fontSize="sm">
                   M MtCO2
                 </Text>
               </Box>
-              <Text fontWeight="500">Annual Est. Reduction</Text>
+              <Text fontWeight="500">{t(`carbonReduction.annualReduction`)}</Text>
             </Box>
           </Flex>
           <Divider marginY={`20px`} />
           <Text as="h1" fontSize="lg" fontWeight="600" textAlign={`center`}>
-            <SectorPieChart colorChart={colorChart} data={carbonReduction.data.sectors.map((sect) => ({ value: sect.value, label: sect.title }))} />
+            {t(`carbonReduction.sector`)}
           </Text>
-          <CarbonReductionSector
-            colorChart={colorChart}
-            data={[
-              { value: 40, label: `Renewable Energy` },
-              { value: 24, label: `Waste Disposal` },
-              { value: 19, label: `Energy Efficiency` },
-              { value: 17, label: `Others` },
-            ]}
-          />
+          <CarbonReductionSector colorChart={colorChart} data={carbonMapDataFiltered.sectors} />
           <Divider marginY={`20px`} />
           <Text as="h1" fontSize="lg" fontWeight="600" textAlign={`center`}>
-            Standard
+            {t(`carbonReduction.standard`)}
           </Text>
-          <CarbonReductionStandard vcs={74} gcc={15} eco={10} />
+          <CarbonReductionStandard
+            vcs={carbonMapDataFiltered.standards[0].average}
+            gcc={carbonMapDataFiltered.standards[0].average}
+            eco={carbonMapDataFiltered.standards[0].average}
+          />
         </Stack>
       </Box>
     )

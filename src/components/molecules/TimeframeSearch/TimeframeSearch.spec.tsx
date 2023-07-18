@@ -8,14 +8,14 @@ it(`renders correctly`, () => {
 })
 
 it(`renders with click on timeframe`, async () => {
-  const { container } = render(<TimeframeSearch />)
+  const { container } = await render(<TimeframeSearch />)
   await userEvent.click(screen.getByTestId(`button-timeframe-0`))
-  expect(container).toMatchSnapshot()
+  await expect(container).toMatchSnapshot()
 })
 
 it(`renders with click on going back`, async () => {
-  const { container } = render(<TimeframeSearch />)
+  const { container } = await render(<TimeframeSearch />)
   await userEvent.click(screen.getByTestId(`button-timeframe-0`))
   await userEvent.click(screen.getByTestId(`button-timeframe-close`))
-  expect(container).toMatchSnapshot()
+  await expect(container).toMatchSnapshot()
 })

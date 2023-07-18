@@ -1,12 +1,9 @@
-import { useEffect, useState } from 'react'
-
-import GeoMapDot from './GeoMapDot'
-
-import styles from './GeoMap.module.scss'
-import continentsPoints from '../../../assets/geo-map/continents-dots'
-import countriesContinentsMapping from '@/assets/geo-map/countries-continents-mapping'
+import { useActions, useAppState } from '@/overmind'
 import { Country, SubRegion } from '@/@types/geojson'
-
+import continentsPoints from '@/assets/geo-map/continents-dots'
+import countriesContinentsMapping from '@/assets/geo-map/countries-continents-mapping'
+import GeoMapDot from './GeoMapDot'
+import styles from './GeoMap.module.scss'
 const DEFAULT_REGION = SubRegion.WORLD
 
 interface GeoMapProps {
@@ -20,43 +17,38 @@ interface GeoMapProps {
 
 const GeoMap = (props: GeoMapProps) => {
   const { width, height, subRegion, hasCountryData, onRegionChange, onCountryClick } = props
-
-  const [hoveredRegion, setHoveredRegion] = useState(``)
-  const [selectedRegion, setselectedRegion] = useState<SubRegion>(subRegion ?? DEFAULT_REGION)
-
-  useEffect(() => {
-    if (subRegion) {
-      setselectedRegion(subRegion)
-    }
-  }, [subRegion])
-
+  const { carbonReduction } = useAppState().analytics
+  const { setSubRegion, setHoverSubRegion, setCountry, setHoverCountry } = useActions().analytics
+  const selectedRegion = carbonReduction.carbonMapDataFilters.region ?? DEFAULT_REGION
+  const hoveredRegion = carbonReduction.carbonMapHoveredRegion ?? DEFAULT_REGION
   const handleHoverChange = (country?: Country) => {
     if (country) {
       if (selectedRegion === DEFAULT_REGION) {
-        setHoveredRegion(country.subRegion ?? country.alpha3)
+        setHoverSubRegion(country.subRegion ?? country.alpha3)
       } else {
-        setHoveredRegion(country.alpha3)
+        setHoverCountry(country.alpha3)
       }
     } else {
-      setHoveredRegion(``)
+      setHoverSubRegion(``)
+      setHoverCountry(``)
     }
   }
 
   const handleClick = (country: Country) => {
     if (country.subRegion) {
-      if (selectedRegion === country.subRegion) {
+      setHoverSubRegion(``)
+      onRegionChange?.(country.subRegion ?? DEFAULT_REGION)
+      if (country.subRegion === subRegion) {
         onCountryClick?.(country)
+        setCountry(country.alpha3)
       } else {
-        onRegionChange?.(country.subRegion)
-        setselectedRegion(country.subRegion)
+        setSubRegion(country.subRegion ?? DEFAULT_REGION)
       }
     }
   }
 
-  const displayedRegion = subRegion ?? selectedRegion
-
+  const displayedRegion = selectedRegion
   const map = continentsPoints[displayedRegion]
-
   const viewBox = `0 0 ${map.gridWidth} ${map.gridHeight}`
 
   const mapStyle = {
@@ -79,7 +71,7 @@ const GeoMap = (props: GeoMapProps) => {
             y={y}
             countryAlpha3={countryAlpha3}
             subRegion={subRegion}
-            hoveredRegion={hoveredRegion}
+            hoveredRegion={carbonReduction.carbonMapHoveredCountry !== `` ? carbonReduction.carbonMapHoveredCountry : hoveredRegion}
             selectedRegion={displayedRegion}
             hasData={hasCountryData?.get(countryAlpha3)}
             onHoverChange={handleHoverChange}

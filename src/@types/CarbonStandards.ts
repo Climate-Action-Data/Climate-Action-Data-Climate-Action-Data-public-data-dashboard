@@ -1,5 +1,5 @@
 export enum CarbonStandards {
-    VCS = "vcs",
-    GCC = "gcc",
-    ECO = "eco"
+  VCS = `vcs`,
+  GCC = `gcc`,
+  ECO = `eco`,
 }
