@@ -1,4 +1,3 @@
-import { CarbonStandards } from '@/@types/CarbonStandards'
 import { CarbonReductionSector } from '@/components/atoms/CarbonReductionSector/CarbonReductionSector'
 import { CarbonReductionStandard } from '@/components/atoms/CarbonReductionStandard/CarbonReductionStandard'
 import { ImportantText } from '@/components/atoms/ImportantText/ImportantText'
@@ -8,17 +7,19 @@ import { FC, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
 export const CarbonReductionWidget: FC = (): React.JSX.Element => {
-  const { carbonReduction } = useAppState().analytics
+  const { carbonReduction, carbonMapDataFiltered } = useAppState().analytics
   const { getCarbonReduction } = useActions().analytics
   const { t } = useTranslation(`home`)
 
   const colorChart = [`green.600`, `green.700`, `green.800`, `lightGray.500`]
 
   useEffect(() => {
-    getCarbonReduction()
+    if (!carbonReduction.carbonMapData) {
+      getCarbonReduction()
+    }
   }, [])
 
-  if (!carbonReduction?.data) {
+  if (carbonMapDataFiltered === undefined) {
     return (
       <Box flex={1} minW={`400px`}>
         <Stack>
@@ -74,7 +75,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
         <Stack>
           <Center>
             <Box textAlign={`center`} width={`50%`}>
-              <ImportantText>{carbonReduction.data.activeProjects}</ImportantText>
+              <ImportantText>{carbonMapDataFiltered.activeProjects}</ImportantText>
               <Text fontWeight="500">{t(`carbonReduction.activeProjects`)}</Text>
             </Box>
           </Center>
@@ -82,7 +83,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
           <Flex textAlign={`center`}>
             <Box marginRight={`5px`} flex={1}>
               <Box>
-                <ImportantText>{carbonReduction.data.totalReduction}</ImportantText>
+                <ImportantText>{carbonMapDataFiltered.totalReductions}</ImportantText>
                 <Text as="span" fontSize="sm">
                   M MtCO2
                 </Text>
@@ -91,7 +92,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
             </Box>
             <Box marginLeft={`5px`} flex={1}>
               <Box>
-                <ImportantText props={{ color: `green.700` }}>{carbonReduction.data.annualEstReduction}</ImportantText>
+                <ImportantText props={{ color: `green.700` }}>{carbonMapDataFiltered.estimatedReductions}</ImportantText>
                 <Text as="span" fontSize="sm">
                   M MtCO2
                 </Text>
@@ -103,15 +104,15 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
           <Text as="h1" fontSize="lg" fontWeight="600" textAlign={`center`}>
             {t(`carbonReduction.sector`)}
           </Text>
-          <CarbonReductionSector colorChart={colorChart} data={carbonReduction.data.sectors} />
+          <CarbonReductionSector colorChart={colorChart} data={carbonMapDataFiltered.sectors} />
           <Divider marginY={`20px`} />
           <Text as="h1" fontSize="lg" fontWeight="600" textAlign={`center`}>
             {t(`carbonReduction.standard`)}
           </Text>
           <CarbonReductionStandard
-            vcs={carbonReduction.data.standards[CarbonStandards.VCS]}
-            gcc={carbonReduction.data.standards[CarbonStandards.GCC]}
-            eco={carbonReduction.data.standards[CarbonStandards.ECO]}
+            vcs={carbonMapDataFiltered.standards[0].average}
+            gcc={carbonMapDataFiltered.standards[0].average}
+            eco={carbonMapDataFiltered.standards[0].average}
           />
         </Stack>
       </Box>

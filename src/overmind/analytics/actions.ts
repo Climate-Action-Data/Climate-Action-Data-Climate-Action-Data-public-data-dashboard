@@ -8,65 +8,21 @@ interface SearchParams {
 
 export const getCarbonReduction = async (context: Context, searchParams: SearchParams = { region: null, timeframe: null }): Promise<void> => {
   const carbonData = await context.effects.analytics.getCarbonReduction()
+  console.dir(carbonData)
   if (carbonData.data) {
-    context.state.analytics.carbonReduction = carbonData
+    context.state.analytics.carbonReduction.carbonMapData = carbonData
+    context.state.analytics.carbonReduction.carbonMapHasCountryData = context.effects.analytics.generateHasCountryData(carbonData.data)
   }
 }
 
 export const setSubRegion = (context: Context, subRegion: string) => {
-  if (context.state.analytics?.carbonReduction?.data) {
-    context.state.analytics.carbonReduction.data.carbonMapSelectedRegion = subRegion as SubRegion
-  }
+  context.state.analytics.carbonReduction.carbonMapDataFilters.region = subRegion as SubRegion
+}
+
+export const setCountry = (context: Context, country: string) => {
+  context.state.analytics.carbonReduction.carbonMapDataFilters.country = country
 }
 
 export const setHoverSubRegion = (context: Context, subRegion: string) => {
-  if (context.state.analytics?.carbonReduction?.data) {
-    context.state.analytics.carbonReduction.data.carbonMapHoveredRegion = subRegion
-  }
-}
-
-export const updateCarbonReduction = (context: Context) => {
-  context.state.analytics.carbonReduction = {
-    data: {
-      carbonMapData: [],
-      carbonMapHasCountryData: new Map<string, boolean>(),
-      activeProjects: 172,
-      totalReduction: 5.96,
-      annualEstReduction: 23.1,
-      sectors: [
-        { label: `Renewable Energy`, value: 35 },
-        { label: `Waste Disposal`, value: 31 },
-        { label: `Energy Efficiency`, value: 19 },
-        { label: `Others`, value: 15 },
-      ],
-      standards: {
-        vcs: 74,
-        gcc: 15,
-        eco: 10,
-      },
-    },
-  }
-}
-
-export const restoreCarbonReduction = (context: Context) => {
-  context.state.analytics.carbonReduction = {
-    data: {
-      carbonMapHasCountryData: new Map<string, boolean>(),
-      carbonMapData: [],
-      activeProjects: 455,
-      totalReduction: 7.96,
-      annualEstReduction: 38.1,
-      sectors: [
-        { label: `Renewable Energy`, value: 40 },
-        { label: `Waste Disposal`, value: 24 },
-        { label: `Energy Efficiency`, value: 19 },
-        { label: `Others`, value: 17 },
-      ],
-      standards: {
-        vcs: 74,
-        gcc: 15,
-        eco: 10,
-      },
-    },
-  }
+  context.state.analytics.carbonReduction.carbonMapHoveredRegion = subRegion
 }

@@ -25,8 +25,8 @@ const GeoMap = (props: GeoMapProps) => {
   // const [hoveredRegion, setHoveredRegion] = useState(``)
   const { carbonReduction } = useAppState().analytics
   const { setSubRegion, setHoverSubRegion } = useActions().analytics
-  const selectedRegion = carbonReduction?.data?.carbonMapSelectedRegion ?? DEFAULT_REGION
-  const hoveredRegion = carbonReduction?.data?.carbonMapHoveredRegion ?? DEFAULT_REGION
+  const selectedRegion = carbonReduction.carbonMapDataFilters.region ?? DEFAULT_REGION
+  const hoveredRegion = carbonReduction.carbonMapHoveredRegion ?? DEFAULT_REGION
   const handleHoverChange = (country?: Country) => {
     if (country) {
       if (selectedRegion === DEFAULT_REGION) {
