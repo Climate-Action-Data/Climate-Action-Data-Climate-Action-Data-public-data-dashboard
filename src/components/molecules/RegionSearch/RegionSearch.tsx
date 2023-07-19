@@ -1,6 +1,6 @@
 import { SubRegion } from '@/@types/geojson'
 import { useActions, useAppState, useEffects } from '@/overmind'
-import { Flex, Text, Box, Divider, Button } from '@chakra-ui/react'
+import { Box, Button, Divider, Flex, Text } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { AutoComplete } from '../AutoComplete/AutoComplete'
 import { CarbonReduction } from '@/@types/State'
@@ -30,11 +30,10 @@ export const RegionSearch = (): React.JSX.Element => {
     label: string
   }[] => {
     if (carbonReduction.carbonMapDataFilters.region && carbonReduction.carbonMapDataFilters.region !== SubRegion.WORLD) {
-      const test = generateCountryByRegion(carbonReduction.carbonMapDataFilters.region).map((country) => ({
+      return generateCountryByRegion(carbonReduction.carbonMapDataFilters.region).map((country) => ({
         value: country,
         label: countryTranslate(`${country}`),
       }))
-      return test
     } else {
       return Object.values(SubRegion).map((region) => ({
         value: region,

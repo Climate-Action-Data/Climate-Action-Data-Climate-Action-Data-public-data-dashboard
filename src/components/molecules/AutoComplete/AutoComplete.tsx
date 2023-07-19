@@ -1,25 +1,24 @@
 /* eslint-disable prettier/prettier */
 import * as React from 'react'
+import { useEffect } from 'react'
 
 import {
-  FormLabel,
-  Stack,
   Box,
+  Button,
+  FormLabel,
+  Highlight,
+  Input,
+  InputGroup,
+  InputRightElement,
   List,
   ListItem,
-  Highlight,
-  Button,
-  Input,
-  PopoverTrigger,
   Popover,
   PopoverBody,
   PopoverContent,
-  InputGroup,
-  InputRightElement,
+  PopoverTrigger,
+  Stack,
 } from '@chakra-ui/react'
 import { DropDownIcon } from '@/components/atoms/DropDownIcon/DropDownIcon'
-import { useEffect } from 'react'
-// import { IconProps, CheckCircleIcon, ArrowDownIcon } from '@chakra-ui/icons'
 
 export interface Item {
   label: string
@@ -42,19 +41,21 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
   const [inputValue, setInputValue] = React.useState(``)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [inputItems, setInputItems] = React.useState<T[]>([])
-  const [ isOpen, setIsOpen ] = React.useState<boolean>(false)
+  const [isOpen, setIsOpen] = React.useState<boolean>(false)
 
-  useEffect(()=> {
+  useEffect(() => {
     setInputItems(items)
   }, [items])
 
   const toggleIsOpen = () => {
-    (isOpen) ? setIsOpen(false) : setIsOpen(true)
+    isOpen ? setIsOpen(false) : setIsOpen(true)
   }
+
   /* Default Items Renderer */
   function defaultItemRenderer<T extends Item>(selected: T) {
     return selected.label
   }
+
   const inputElement = React.useRef<HTMLInputElement | null>(null)
 
   return (
@@ -64,7 +65,7 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
         <PopoverTrigger>
           <Stack>
             <InputGroup size="md">
-              <Input data-testid="dropdown_input" onClick={toggleIsOpen} pr="2.5rem" placeholder={placeholder} ref={inputElement} onChange={(e) => setInputValue(e.target.value)}/>
+              <Input data-testid="dropdown_input" onClick={toggleIsOpen} pr="2.5rem" placeholder={placeholder} ref={inputElement} onChange={(e) => setInputValue(e.target.value)} />
               <InputRightElement width="2.5rem">
                 <Button data-testid="dropdown-button" onClick={toggleIsOpen} variant="lightGray" aria-label="toggle menu" h="1.75rem" size="sm">
                   <DropDownIcon />
@@ -73,28 +74,42 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
             </InputGroup>
           </Stack>
         </PopoverTrigger>
-        <PopoverContent data-testid="dropdown-body" onMouseLeave={() => {setIsOpen(false); return (onDropDownLeave) ? onDropDownLeave(): undefined}} maxHeight={`150px`} overflowY="scroll">
+        <PopoverContent
+         data-testid="dropdown-body" onMouseLeave={() => {
+            setIsOpen(false)
+            onDropDownLeave ? onDropDownLeave() : undefined
+          }}
+          maxHeight={`150px`}
+          overflowY="scroll"
+        >
           <PopoverBody>
             <List>
-              {inputItems.map((item, index) => (
-                item.value.toUpperCase().includes(inputValue.toUpperCase()) &&
-                    (<ListItem
+              {inputItems.map(
+                (item, index) =>
+                  item.value.toUpperCase().includes(inputValue.toUpperCase()) && (
+                    <ListItem
                       px={2}
                       py={1}
                       borderBottom="1px solid rgba(0,0,0,0.01)"
                       _hover={{ bg: `lightGray.200`, cursor: `pointer` }}
-                      onMouseEnter={() => (onItemHover) ? onItemHover(item): undefined}
-                      onClick={() => {setIsOpen(false);onItemClick(item)}}
-                      key={`${item.value}`}
+                      onMouseEnter={() => {
+                        onItemHover ? onItemHover(item) : undefined
+                      }}
+                      onClick={() => {
+                        setIsOpen(false)
+                        onItemClick(item)
+                      }}
+                      key={`${item.value}${index}`}
                       data-testid={`dropdown-item-${index}`}
                     >
                       <Box display="inline-flex" alignItems="center">
-                        <Highlight styles={{ px:0.5,bg: highlightItemBg }} query={[inputValue || ``]}>
+                        <Highlight styles={{ px: 0.5, bg: highlightItemBg }} query={[inputValue || ``]}>
                           {defaultItemRenderer(item)}
                         </Highlight>
                       </Box>
-                    </ListItem>)
-              ))}
+                    </ListItem>
+                  ),
+              )}
             </List>
           </PopoverBody>
         </PopoverContent>

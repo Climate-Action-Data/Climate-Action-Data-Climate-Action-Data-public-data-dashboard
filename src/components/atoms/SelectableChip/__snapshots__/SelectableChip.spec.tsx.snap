@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <span
+    class="className notSelected css-1qm7lvz"
+  >
+    <span
+      class="css-zvlevn"
+    >
+      label
+    </span>
+  </span>
+</div>
+`;

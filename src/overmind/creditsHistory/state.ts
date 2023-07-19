@@ -1,16 +1,6 @@
-import { EffectResponse } from '@/@types/EffectResponse'
-import { Serie } from '@nivo/line'
+import { CreditsHistoryDataState } from '@/@types/State'
 
-export interface CreditsHistory {
-  chartData: Serie[]
-  issued: number
-  retired: number
-}
-
-interface CreditsHistoryState {
-  creditsHistory?: EffectResponse<CreditsHistory>
-}
-
-export const state: CreditsHistoryState = {
-  creditsHistory: undefined,
+export const state: CreditsHistoryDataState = {
+  rawCreditsHistory: [],
+  filteredCreditsHistory: undefined,
 }

@@ -39,3 +39,29 @@ export interface PercentDataset {
   name: string
   average: number
 }
+
+export interface RawCountryCreditsHistory {
+  countryCode: string
+  timeRanges: {
+    year: number
+    month: number
+    issued: number
+    retired: number
+  }[]
+}
+
+export interface CreditsHistoryChartData {
+  id: string
+  data: { x: string; y: number }[]
+}
+
+export interface FilteredCreditsHistoryData {
+  chartData: CreditsHistoryChartData[]
+  issued: number
+  retired: number
+}
+
+export interface CreditsHistoryDataState {
+  rawCreditsHistory: RawCountryCreditsHistory[]
+  filteredCreditsHistory: FilteredCreditsHistoryData | undefined
+}

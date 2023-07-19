@@ -4,12 +4,12 @@ import { useAppState } from '@/overmind'
 
 const CreditsHistoryChart: FC = () => {
   const format = new Intl.DateTimeFormat(`en-SG`, { month: `short` }).format
-  const { creditsHistory: state } = useAppState()
+  const { filteredCreditsHistory } = useAppState().creditsHistory
 
-  return state.creditsHistory?.data ? (
+  return filteredCreditsHistory ? (
     <ResponsiveLine
       colors={[`#24BD63`, `#125E32`]}
-      data={state.creditsHistory.data.chartData}
+      data={filteredCreditsHistory.chartData}
       margin={{ top: 50, right: 50, bottom: 50, left: 50 }}
       xScale={{ type: `point` }}
       yScale={{

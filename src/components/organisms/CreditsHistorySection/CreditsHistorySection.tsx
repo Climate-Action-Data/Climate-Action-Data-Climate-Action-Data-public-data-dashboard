@@ -1,7 +1,6 @@
 import { FC, useEffect, useState } from 'react'
 import { Card, Grid, GridItem, HStack, Stack, StackDivider, useBreakpointValue, Wrap, WrapItem } from '@chakra-ui/react'
 
-import { Regions } from '@/@types/Region'
 import { useTranslation } from 'react-i18next'
 import { Timeframes } from '@/@types/Timeframe'
 import CreditsHistoryChart from '@/components/molecules/CreditsHistoryChart/CreditsHistoryChart'
@@ -9,6 +8,7 @@ import { useActions } from '@/overmind'
 import CreditsHistoryStat from '@/components/atoms/CreditsHistoryStat/CreditHistoryStat'
 import SubregionIndicator from '@/components/atoms/SubregionIndicator/SubregionIndicator'
 import SelectableChip from '@/components/atoms/SelectableChip/SelectableChip'
+import { SubRegion } from '@/@types/geojson'
 
 const CreditsHistorySection: FC = () => {
   const [region, setRegion] = useState<string | undefined>(undefined)
@@ -57,11 +57,11 @@ const CreditsHistorySection: FC = () => {
             <GridItem area={`continents-filter`} alignSelf={`center`} padding={`4px `}>
               <HStack padding={`4px 16px`} gap={`8px`} alignContent={`baseline`}>
                 <Wrap>
-                  {Regions.map(
-                    (regionName, idx) =>
-                      regionName != region && (
+                  {Object.values(SubRegion).map(
+                    (subregionName, idx) =>
+                      subregionName != region && (
                         <WrapItem key={idx}>
-                          <SelectableChip label={t(`regions.${regionName}`)} onClick={() => setRegion(regionName)} />
+                          <SelectableChip label={t(`regions.${subregionName}`)} onClick={() => setRegion(subregionName)} />
                         </WrapItem>
                       ),
                   )}
