@@ -9,15 +9,15 @@ exports[`renders correctly 1`] = `
       class="css-whmkqt"
     >
       <span
-        class="chakra-text css-of4sfu"
+        class="chakra-text css-1tzjjc2"
       >
-        30
+        50
         %
       </span>
       <p
         class="chakra-text css-0"
       >
-        VCS
+        test
       </p>
     </div>
     <div
@@ -26,28 +26,13 @@ exports[`renders correctly 1`] = `
       <span
         class="chakra-text css-1tv1yfd"
       >
-        20
+        50
         %
       </span>
       <p
         class="chakra-text css-0"
       >
-        GCC
-      </p>
-    </div>
-    <div
-      class="css-whmkqt"
-    >
-      <span
-        class="chakra-text css-o9gfvt"
-      >
-        10
-        %
-      </span>
-      <p
-        class="chakra-text css-0"
-      >
-        ECO
+        plop
       </p>
     </div>
   </div>

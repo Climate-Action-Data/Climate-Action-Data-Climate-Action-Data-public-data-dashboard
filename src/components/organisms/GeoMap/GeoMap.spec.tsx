@@ -1,12 +1,17 @@
 import renderer, { ReactTestRenderer, ReactTestRendererJSON } from 'react-test-renderer'
 import GeoMap from './GeoMap'
 import { SubRegion } from '@/@types/geojson'
+import { TestOvermindWrapper } from '@/components/atoms/TestOvermindWrapper/TestOvermindWrapper'
 
 describe(`GeoMap component`, () => {
   let component: ReactTestRenderer
 
   beforeAll(() => {
-    component = renderer.create(<GeoMap subRegion={SubRegion.AUSTRALIA_AND_NEW_ZEALAND} />)
+    component = renderer.create(
+      <TestOvermindWrapper>
+        <GeoMap subRegion={SubRegion.AUSTRALIA_AND_NEW_ZEALAND} />
+      </TestOvermindWrapper>,
+    )
   })
 
   it(`renders correctly`, () => {

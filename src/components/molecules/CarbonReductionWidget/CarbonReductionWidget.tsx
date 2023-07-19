@@ -2,9 +2,12 @@ import { CarbonReductionSector } from '@/components/atoms/CarbonReductionSector/
 import { CarbonReductionStandard } from '@/components/atoms/CarbonReductionStandard/CarbonReductionStandard'
 import { ImportantText } from '@/components/atoms/ImportantText/ImportantText'
 import { useActions, useAppState } from '@/overmind'
+import { convertToMtCO2 } from '@/utils/UnitConverter'
 import { Box, Flex, Text, Skeleton, Stack, Divider, Center, SkeletonCircle } from '@chakra-ui/react'
 import { FC, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+
+const DEFAULT_SECTOR_NUMBER = 4
 
 export const CarbonReductionWidget: FC = (): React.JSX.Element => {
   const { carbonReduction, carbonMapDataFiltered } = useAppState().analytics
@@ -19,7 +22,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
     }
   }, [])
 
-  if (carbonMapDataFiltered === undefined) {
+  if (carbonReduction.carbonMapData === undefined && carbonMapDataFiltered === undefined) {
     return (
       <Box flex={1}>
         <Stack>
@@ -70,52 +73,67 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
       </Box>
     )
   } else {
-    return (
-      <Box>
-        <Stack>
-          <Center>
-            <Box textAlign={`center`} width={`50%`}>
-              <ImportantText>{carbonMapDataFiltered.activeProjects}</ImportantText>
-              <Text fontWeight="500">{t(`carbonReduction.activeProjects`)}</Text>
-            </Box>
-          </Center>
-          <Divider marginY={`20px`} />
-          <Flex textAlign={`center`}>
-            <Box marginRight={`5px`} flex={1}>
-              <Box>
-                <ImportantText>{carbonMapDataFiltered.totalReductions}</ImportantText>
-                <Text as="span" fontSize="sm">
-                  M MtCO2
-                </Text>
+    if (carbonMapDataFiltered === undefined) {
+      return (
+        <Flex alignItems="center">
+          <Text color={`lightGray.600`}>Selected data is currently unavailable within the carbon registries.</Text>
+        </Flex>
+      )
+    } else {
+      const top4Percentage = [...carbonMapDataFiltered.sectors].sort((a, b) => b.average - a.average).slice(0, DEFAULT_SECTOR_NUMBER)
+
+      return (
+        <Box>
+          <Stack>
+            <Center>
+              <Box textAlign={`center`} width={`50%`}>
+                <ImportantText>{carbonMapDataFiltered.activeProjects}</ImportantText>
+                <Text fontWeight="500">{t(`carbonReduction.activeProjects`)}</Text>
               </Box>
-              <Text fontWeight="500">{t(`carbonReduction.totalReduction`)}</Text>
-            </Box>
-            <Box marginLeft={`5px`} flex={1}>
-              <Box>
-                <ImportantText props={{ color: `green.700` }}>{carbonMapDataFiltered.estimatedReductions}</ImportantText>
-                <Text as="span" fontSize="sm">
-                  M MtCO2
-                </Text>
+            </Center>
+            <Divider marginY={`20px`} />
+            <Flex textAlign={`center`}>
+              <Box marginRight={`5px`} flex={1}>
+                <Box>
+                  <ImportantText>{convertToMtCO2(carbonMapDataFiltered.totalReductions, true)}</ImportantText>
+                  <Text as="span" fontSize="sm">
+                    MtCO2
+                  </Text>
+                </Box>
+                <Text fontWeight="500">{t(`carbonReduction.totalReduction`)}</Text>
               </Box>
-              <Text fontWeight="500">{t(`carbonReduction.annualReduction`)}</Text>
-            </Box>
-          </Flex>
-          <Divider marginY={`20px`} />
-          <Text as="h1" fontSize="lg" fontWeight="600" textAlign={`center`}>
-            {t(`carbonReduction.sector`)}
-          </Text>
-          <CarbonReductionSector colorChart={colorChart} data={carbonMapDataFiltered.sectors} />
-          <Divider marginY={`20px`} />
-          <Text as="h1" fontSize="lg" fontWeight="600" textAlign={`center`}>
-            {t(`carbonReduction.standard`)}
-          </Text>
-          <CarbonReductionStandard
-            vcs={carbonMapDataFiltered.standards[0].average}
-            gcc={carbonMapDataFiltered.standards[0].average}
-            eco={carbonMapDataFiltered.standards[0].average}
-          />
-        </Stack>
-      </Box>
-    )
+              <Box marginLeft={`5px`} flex={1}>
+                <Box>
+                  <ImportantText color="green.700">{convertToMtCO2(carbonMapDataFiltered.estimatedReductions, true)}</ImportantText>
+                  <Text as="span" fontSize="sm">
+                    MtCO2
+                  </Text>
+                </Box>
+                <Text fontWeight="500">{t(`carbonReduction.annualReduction`)}</Text>
+              </Box>
+            </Flex>
+            <Divider marginY={`20px`} />
+            <Text as="h1" fontSize="lg" fontWeight="600" textAlign={`center`}>
+              {t(`carbonReduction.sector`)}
+            </Text>
+            {carbonMapDataFiltered.sectors.length > 0 ? (
+              <CarbonReductionSector colorChart={colorChart} data={top4Percentage} />
+            ) : (
+              <Text color={`lightGray.600`}>Selected data is currently unavailable within the carbon registries.</Text>
+            )}
+
+            <Divider marginY={`20px`} />
+            <Text as="h1" fontSize="lg" fontWeight="600" textAlign={`center`}>
+              {t(`carbonReduction.standard`)}
+            </Text>
+            {carbonMapDataFiltered.standards.length > 0 ? (
+              <CarbonReductionStandard data={carbonMapDataFiltered.standards} />
+            ) : (
+              <Text color={`lightGray.600`}>Selected data is currently unavailable within the carbon registries.</Text>
+            )}
+          </Stack>
+        </Box>
+      )
+    }
   }
 }

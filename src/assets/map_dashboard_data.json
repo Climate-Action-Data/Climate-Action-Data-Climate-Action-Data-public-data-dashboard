@@ -3,7 +3,7 @@
         "countryCode": "TUR",
         "timeRanges": {
             "max": {
-                "activeProjects": 0,
+                "activeProjects": 200,
                 "totalReductions": 0,
                 "estimatedReductions": 0,
                 "unitMetric": "tCO2e",
@@ -77,7 +77,7 @@
         "countryCode": "BRA",
         "timeRanges": {
             "max": {
-                "activeProjects": 0,
+                "activeProjects": 100,
                 "totalReductions": 0,
                 "estimatedReductions": 0,
                 "unitMetric": "tCO2e",
@@ -179,7 +179,24 @@
                 "totalReductions": 0,
                 "estimatedReductions": 0,
                 "unitMetric": "tCO2e",
-                "sectors": [],
+                "sectors": [
+                    {
+                        "name": "Agriculture; forestry and fishing",
+                        "average": 46
+                    },
+                    {
+                        "name": "Agriculture, forestry and other land uses (AFOLU)",
+                        "average": 36
+                    },
+                    {
+                        "name": "Electricity; gas, steam and air conditioning supply",
+                        "average": 13
+                    },
+                    {
+                        "name": "Others",
+                        "average": 5
+                    }
+                ],
                 "standards": []
             }
         }
@@ -192,7 +209,24 @@
                 "totalReductions": 0,
                 "estimatedReductions": 0,
                 "unitMetric": "tCO2e",
-                "sectors": [],
+                "sectors": [
+                    {
+                        "name": "Agriculture; forestry and fishing",
+                        "average": 46
+                    },
+                    {
+                        "name": "Agriculture, forestry and other land uses (AFOLU)",
+                        "average": 36
+                    },
+                    {
+                        "name": "Electricity; gas, steam and air conditioning supply",
+                        "average": 13
+                    },
+                    {
+                        "name": "Others",
+                        "average": 5
+                    }
+                ],
                 "standards": []
             },
             "twelveMonths": {
@@ -327,18 +361,18 @@
                 ]
             },
             "oneMonth": {
-                "activeProjects": 78,
-                "totalReductions": 140714016,
-                "estimatedReductions": 238757705,
+                "activeProjects": 28,
+                "totalReductions": 14071016,
+                "estimatedReductions": 23857705,
                 "unitMetric": "tCO2e",
                 "sectors": [
                     {
                         "name": "Agriculture; forestry and fishing",
-                        "average": 56
+                        "average": 46
                     },
                     {
                         "name": "Agriculture, forestry and other land uses (AFOLU)",
-                        "average": 26
+                        "average": 36
                     },
                     {
                         "name": "Electricity; gas, steam and air conditioning supply",

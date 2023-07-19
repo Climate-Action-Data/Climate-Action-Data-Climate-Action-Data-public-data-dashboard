@@ -1,27 +1,22 @@
 import { Flex, Box, Text } from '@chakra-ui/react'
 import { ImportantText } from '../ImportantText/ImportantText'
+import { PercentDataset } from '@/@types/State'
 
 interface CarbonReductionStandardProps {
-  vcs: number
-  gcc: number
-  eco: number
+  data: PercentDataset[]
 }
 
-export const CarbonReductionStandard = ({ vcs, gcc, eco }: CarbonReductionStandardProps): React.JSX.Element => {
+export const CarbonReductionStandard = (props: CarbonReductionStandardProps): React.JSX.Element => {
+  const { data } = props
+  const colorChart = [`green.600`, `green.700`, `green.800`]
   return (
     <Flex alignItems={`center`} marginBottom={4}>
-      <Box textAlign={`center`} marginX={`5px`} flex={1}>
-        <ImportantText>{vcs}%</ImportantText>
-        <Text>VCS</Text>
-      </Box>
-      <Box textAlign={`center`} marginX={`5px`} flex={1}>
-        <ImportantText color="green.700">{gcc}%</ImportantText>
-        <Text>GCC</Text>
-      </Box>
-      <Box textAlign={`center`} marginX={`5px`} flex={1}>
-        <ImportantText color="green.800">{eco}%</ImportantText>
-        <Text>ECO</Text>
-      </Box>
+      {data.map((standard, idx) => (
+        <Box key={`${standard.name}-${idx}`} textAlign={`center`} marginX={`5px`} flex={1}>
+          <ImportantText color={colorChart[idx] ? colorChart[idx] : colorChart[colorChart.length - 1]}>{standard.average}%</ImportantText>
+          <Text>{standard.name}</Text>
+        </Box>
+      ))}
     </Flex>
   )
 }

@@ -1,11 +1,16 @@
 import renderer, { ReactTestRenderer } from 'react-test-renderer'
 import GeoMapDemo from './GeoMapDemo'
+import { TestOvermindWrapper } from '@/components/atoms/TestOvermindWrapper/TestOvermindWrapper'
 
 describe(`GeoMapDemo component`, () => {
   let component: ReactTestRenderer
 
   beforeAll(() => {
-    component = renderer.create(<GeoMapDemo />)
+    component = renderer.create(
+      <TestOvermindWrapper>
+        <GeoMapDemo />
+      </TestOvermindWrapper>,
+    )
   })
 
   it(`renders correctly`, () => {
