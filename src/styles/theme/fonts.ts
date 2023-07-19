@@ -32,4 +32,4 @@ export const AeonikFono = localFont({
   ],
 })
 
-/* eslint-disable @typescript-eslint/quotes */
+/* eslint-enable @typescript-eslint/quotes */

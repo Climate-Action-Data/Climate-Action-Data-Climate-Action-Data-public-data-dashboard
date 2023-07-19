@@ -1,17 +1,18 @@
 import { FC, useEffect, useState } from 'react'
-import { Card, Grid, GridItem, HStack, Stack, StackDivider, Tag, useBreakpointValue, Wrap, WrapItem } from '@chakra-ui/react'
+import { Card, Grid, GridItem, HStack, Stack, StackDivider, useBreakpointValue, Wrap, WrapItem } from '@chakra-ui/react'
 
 import { Regions } from '@/@types/Region'
 import { useTranslation } from 'react-i18next'
 import { Timeframes } from '@/@types/Timeframe'
-import ContinentFilter from '@/components/molecules/ContinentFilter/ContinentFilter'
 import CreditsHistoryChart from '@/components/molecules/CreditsHistoryChart/CreditsHistoryChart'
 import { useActions } from '@/overmind'
 import CreditsHistoryStat from '@/components/atoms/CreditsHistoryStat/CreditHistoryStat'
-import { Aeonik } from '@/styles/theme/fonts'
+import SubregionIndicator from '@/components/atoms/SubregionIndicator/SubregionIndicator'
+import SelectableChip from '@/components/atoms/SelectableChip/SelectableChip'
 
 const CreditsHistorySection: FC = () => {
   const [region, setRegion] = useState<string | undefined>(undefined)
+  const [selectedTimeFrame, setSelectedTimeFrame] = useState<string | undefined>(undefined)
   const { creditsHistory: action } = useActions()
   const { t } = useTranslation(`home`)
   const statsLayout = useBreakpointValue({
@@ -51,22 +52,16 @@ const CreditsHistorySection: FC = () => {
             rowGap={`16px`}
           >
             <GridItem area={`title`} borderRight={`1px`} borderRightColor={`charcoal.500`} padding={`8px 16px `}>
-              <ContinentFilter region={region} clearRegion={() => setRegion(undefined)} />
+              <SubregionIndicator subregion={region} clearSubregion={() => setRegion(undefined)} />
             </GridItem>
-            <GridItem area={`continents-filter`} alignSelf={`center`}>
-              <HStack padding={`4px 16px`} gap={`8px`}>
+            <GridItem area={`continents-filter`} alignSelf={`center`} padding={`4px `}>
+              <HStack padding={`4px 16px`} gap={`8px`} alignContent={`baseline`}>
                 <Wrap>
                   {Regions.map(
                     (regionName, idx) =>
                       regionName != region && (
                         <WrapItem key={idx}>
-                          <Tag
-                            className={Aeonik.className}
-                            sx={{ color: `charcoal.800`, backgroundColor: `transparent`, cursor: `pointer`, borderRadius: `32px`, padding: `6px 12px` }}
-                            onClick={() => setRegion(regionName)}
-                          >
-                            {t(`regions.${regionName}`)}
-                          </Tag>
+                          <SelectableChip label={t(`regions.${regionName}`)} onClick={() => setRegion(regionName)} />
                         </WrapItem>
                       ),
                   )}
@@ -75,18 +70,14 @@ const CreditsHistorySection: FC = () => {
             </GridItem>
             <GridItem area={`date-range-filter`}>
               <HStack padding={`4px 16px`} gap={`8px`}>
-                {Object.values(Timeframes).map(
-                  (timeframe, idx) =>
-                    timeframe != region && (
-                      <Tag
-                        className={Aeonik.className}
-                        sx={{ color: `charcoal.800`, backgroundColor: `transparent`, cursor: `pointer`, borderRadius: `32px`, padding: `6px 12px` }}
-                        key={idx}
-                      >
-                        {timeframe.toUpperCase()}
-                      </Tag>
-                    ),
-                )}
+                {Object.values(Timeframes).map((timeframe, idx) => (
+                  <SelectableChip
+                    isSelected={selectedTimeFrame == timeframe}
+                    key={idx}
+                    label={timeframe.toUpperCase()}
+                    onClick={() => setSelectedTimeFrame(selectedTimeFrame == timeframe ? undefined : timeframe)}
+                  />
+                ))}
               </HStack>
             </GridItem>
           </Grid>
