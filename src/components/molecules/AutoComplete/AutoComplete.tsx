@@ -98,9 +98,6 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
           </PopoverBody>
         </PopoverContent>
       </Popover>
-      {/* -----------Section that renders the input element ----------------- */}
-
-      {/* ----------- End Section that renders the Menu Lists Component ----------------- */}
     </Stack>
   )
 }

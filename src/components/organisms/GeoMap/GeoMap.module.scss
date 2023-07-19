@@ -26,6 +26,10 @@ $hoverNoDataColor:   #24BD63;
             @extend .geoMapDot;
             fill: $noDataColor;
         }
+
+        &Active {
+            fill: $hoverColor;
+        }
     }
     
     .geoMapDotArea {

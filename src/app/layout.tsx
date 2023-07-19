@@ -8,18 +8,15 @@ import { Menu } from '@/components/organisms/Menu/Menu'
 import { mode } from '@chakra-ui/theme-tools'
 import { createOvermind } from 'overmind'
 import { Provider } from 'overmind-react'
-
-import './globals.css'
 import { config } from '@/overmind'
-import NoSSR from './noSSR'
 import { cardSection } from '@/styles/Section'
 import AppHeader from '@/components/organisms/AppHeader/AppHeader'
+import NoSSR from './noSSR'
+
 import '../i18n'
+import './globals.css'
 
 const overmind = createOvermind(config)
-
-// eslint-disable-next-line @typescript-eslint/quotes
-import '../i18n'
 /*eslint @typescript-eslint/quotes: off*/
 const inter = Inter({ subsets: ['latin'] })
 

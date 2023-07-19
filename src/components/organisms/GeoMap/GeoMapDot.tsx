@@ -23,7 +23,6 @@ const DEFAULT_RADIUS = 0.35
 const DEFAULT_AREA_RATIO = 2
 const GeoMapDot = (props: GeoMapPatternProps) => {
   const { x, y, countryAlpha3, subRegion, hoveredRegion, selectedRegion, hasData, onHoverChange, onClick } = props
-
   const countryDetails: Country = useMemo(() => findCountry(countryAlpha3, subRegion), [countryAlpha3])
 
   const handleMouseOver = () => {
@@ -50,6 +49,7 @@ const GeoMapDot = (props: GeoMapPatternProps) => {
 
   const dotClassName = cx({
     geoMapDot: !shouldDisplayHoverStyle && hasData,
+    geoMapDotActive: countryAlpha3 === selectedRegion,
     geoMapDotNoData: !shouldDisplayHoverStyle && !hasData,
     geoMapDotHover: shouldDisplayHoverStyle && hasData,
     geoMapDotHoverNoData: shouldDisplayHoverStyle && !hasData,

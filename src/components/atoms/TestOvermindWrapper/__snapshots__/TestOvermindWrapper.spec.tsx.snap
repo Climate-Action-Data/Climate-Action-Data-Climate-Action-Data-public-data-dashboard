@@ -2,10 +2,6 @@
 
 exports[`renders correctly 1`] = `
 <div>
-  <div
-    class="css-10rc9h1"
-  >
-    My Text
-  </div>
+  test
 </div>
 `;
