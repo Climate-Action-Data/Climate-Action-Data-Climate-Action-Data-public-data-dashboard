@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    types: [opened, synchronize, reopened]
-  workflow_dispatch:
 
 jobs:
   Checks:
@@ -23,6 +20,7 @@ jobs:
     name: SonarCloud
     runs-on: ubuntu-latest
     environment: Development
+    needs: Checks
     steps:
       - uses: actions/checkout@v3
         with:
@@ -33,4 +31,19 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           sonar_token: ${{ secrets.SONAR_TOKEN }}
+
+  Deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: Development
+    needs: Sonar-analysis
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+
+      - name: Deploy into bucket
+        uses: "./.github/workflows/templates/deploy"
+        with:
+          service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
 
