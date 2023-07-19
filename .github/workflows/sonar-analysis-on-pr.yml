@@ -1,0 +1,32 @@
+name: Sonar analysis on pull request
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+jobs:
+  Checks:
+    runs-on: ubuntu-latest
+    environment: Development
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Checks
+        uses: "./.github/workflows/templates/checks"
+
+  Sonar-analysis:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    environment: Development
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+
+      - name: SonarCloud Scan
+        uses: "./.github/workflows/templates/sonar-analysis"
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          sonar_token: ${{ secrets.SONAR_TOKEN }}
