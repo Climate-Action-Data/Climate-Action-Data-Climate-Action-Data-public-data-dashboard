@@ -8,6 +8,7 @@ import headerFeatureLarge from '../../../assets/headerFeatureLarge.svg'
 import headerFeatureSmall from '../../../assets/headerFeatureSmall.svg'
 
 import styles from './Header.module.scss'
+import { Aeonik, AeonikFono } from '@/styles/theme/fonts'
 
 const AppHeader: FC = () => {
   const { t } = useTranslation(`home`)
@@ -22,10 +23,10 @@ const AppHeader: FC = () => {
         <Box width={[`100vw`, `60vw`]} className={styles.backgroundGradient} />
         <Flex className={styles.headerContents}>
           <Flex direction={`column`} gap={`20px`} alignSelf={[`top`, null, `center`]} padding={[`50px 20px`, null, `5%`]}>
-            <Text fontSize={[`lg`, `xl`, `3xl`]} className={styles.headerTitle}>
+            <Text fontSize={[`lg`, `xl`, `3xl`]} className={`${AeonikFono.className} ${styles.headerTitle}`}>
               {t(`appHeader.title`)}
             </Text>
-            <Link as={`button`} variant={`whiteSecondary`} href={`https://www.google.com`}>
+            <Link as={`button`} className={Aeonik.className} variant={`whiteSecondary`} href={`https://www.google.com`}>
               {t(`appHeader.findOutMore`)}
             </Link>
           </Flex>

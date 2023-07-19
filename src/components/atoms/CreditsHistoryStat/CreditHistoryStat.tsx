@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { Stat, StatLabel, StatNumber, Text } from '@chakra-ui/react'
+import { AeonikFono } from '@/styles/theme/fonts'
 
 interface CreditHistoryStateProps {
   amount: number
@@ -14,12 +15,14 @@ const CreditsHistoryStat: FC<CreditHistoryStateProps> = ({ amount, label, textCo
   const suffix = matches?.pop()
   const compactAmount = matches?.pop()
   return (
-    <Stat textAlign={`center`}>
+    <Stat textAlign={`center`} className={AeonikFono.className}>
       <StatNumber>
-        <Text variant={`statValue`} color={textColor}>
+        <Text variant={`statValue`} color={textColor} fontSize={[`40px`, null, `64px`]}>
           {compactAmount}
         </Text>
-        <Text variant={`statSuffix`}>{suffix}</Text>
+        <Text variant={`statSuffix`} fontSize={[`16px`, null, `24px`]}>
+          {suffix}
+        </Text>
       </StatNumber>
       <StatLabel>{label}</StatLabel>
     </Stat>

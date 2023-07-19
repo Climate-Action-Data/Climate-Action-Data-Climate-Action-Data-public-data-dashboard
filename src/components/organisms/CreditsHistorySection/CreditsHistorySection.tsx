@@ -8,6 +8,7 @@ import ContinentFilter from '@/components/molecules/ContinentFilter/ContinentFil
 import CreditsHistoryChart from '@/components/molecules/CreditsHistoryChart/CreditsHistoryChart'
 import { useActions } from '@/overmind'
 import CreditsHistoryStat from '@/components/atoms/CreditsHistoryStat/CreditHistoryStat'
+import { Aeonik } from '@/styles/theme/fonts'
 
 const CreditsHistorySection: FC = () => {
   const [region, setRegion] = useState<string | undefined>(undefined)
@@ -55,20 +56,20 @@ const CreditsHistorySection: FC = () => {
             <GridItem area={`continents-filter`} alignSelf={`center`}>
               <HStack padding={`4px 16px`} gap={`8px`}>
                 <Wrap>
-                  {!region &&
-                    Regions.map(
-                      (regionName, idx) =>
-                        regionName != region && (
-                          <WrapItem key={idx}>
-                            <Tag
-                              sx={{ color: `charcoal.800`, backgroundColor: `transparent`, cursor: `pointer`, borderRadius: `32px`, padding: `6px 12px` }}
-                              onClick={() => setRegion(regionName)}
-                            >
-                              {t(`regions.${regionName}`)}
-                            </Tag>
-                          </WrapItem>
-                        ),
-                    )}
+                  {Regions.map(
+                    (regionName, idx) =>
+                      regionName != region && (
+                        <WrapItem key={idx}>
+                          <Tag
+                            className={Aeonik.className}
+                            sx={{ color: `charcoal.800`, backgroundColor: `transparent`, cursor: `pointer`, borderRadius: `32px`, padding: `6px 12px` }}
+                            onClick={() => setRegion(regionName)}
+                          >
+                            {t(`regions.${regionName}`)}
+                          </Tag>
+                        </WrapItem>
+                      ),
+                  )}
                 </Wrap>
               </HStack>
             </GridItem>
@@ -77,7 +78,11 @@ const CreditsHistorySection: FC = () => {
                 {Object.values(Timeframes).map(
                   (timeframe, idx) =>
                     timeframe != region && (
-                      <Tag sx={{ color: `charcoal.800`, backgroundColor: `transparent`, cursor: `pointer`, borderRadius: `32px`, padding: `6px 12px` }} key={idx}>
+                      <Tag
+                        className={Aeonik.className}
+                        sx={{ color: `charcoal.800`, backgroundColor: `transparent`, cursor: `pointer`, borderRadius: `32px`, padding: `6px 12px` }}
+                        key={idx}
+                      >
                         {timeframe.toUpperCase()}
                       </Tag>
                     ),
