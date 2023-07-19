@@ -2,7 +2,7 @@
 import React from 'react'
 import { Inter } from 'next/font/google'
 import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider, Flex, theme } from '@chakra-ui/react'
+import { ChakraProvider, Flex } from '@chakra-ui/react'
 import { createOvermind } from 'overmind'
 import { Provider } from 'overmind-react'
 import { config } from '@/overmind'
@@ -13,6 +13,7 @@ import { Menu } from '@/components/organisms/Menu/Menu'
 import '../i18n'
 
 import './globals.css'
+import { theme } from '@/styles/theme'
 
 const overmind = createOvermind(config, { devtools: `localhost:3001` })
 

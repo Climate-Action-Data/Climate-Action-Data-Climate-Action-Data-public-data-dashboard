@@ -1,4 +1,7 @@
 export const Text = {
+  baseStyle: {
+    fontSize: `14px`,
+  },
   variants: {
     statValue: {
       fontSize: `4xl`,
