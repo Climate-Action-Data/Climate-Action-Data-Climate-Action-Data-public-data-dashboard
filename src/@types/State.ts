@@ -62,6 +62,6 @@ export interface FilteredCreditsHistoryData {
 }
 
 export interface CreditsHistoryDataState {
-  rawCreditsHistory: RawCountryCreditsHistory[]
+  rawCreditsHistory?: EffectResponse<RawCountryCreditsHistory[]>
   filteredCreditsHistory: FilteredCreditsHistoryData | undefined
 }

@@ -4,7 +4,7 @@ import { Card, Grid, GridItem, HStack, Stack, StackDivider, useBreakpointValue, 
 import { useTranslation } from 'react-i18next'
 import { Timeframes } from '@/@types/Timeframe'
 import CreditsHistoryChart from '@/components/molecules/CreditsHistoryChart/CreditsHistoryChart'
-import { useActions } from '@/overmind'
+import { useActions, useAppState } from '@/overmind'
 import CreditsHistoryStat from '@/components/atoms/CreditsHistoryStat/CreditHistoryStat'
 import SubregionIndicator from '@/components/atoms/SubregionIndicator/SubregionIndicator'
 import SelectableChip from '@/components/atoms/SelectableChip/SelectableChip'
@@ -13,7 +13,8 @@ import { SubRegion } from '@/@types/geojson'
 const CreditsHistorySection: FC = () => {
   const [region, setRegion] = useState<string | undefined>(undefined)
   const [selectedTimeFrame, setSelectedTimeFrame] = useState<string | undefined>(undefined)
-  const { creditsHistory: action } = useActions()
+  const { getCreditsHistory } = useActions().creditsHistory
+  const { filteredCreditsHistory } = useAppState().creditsHistory
   const { t } = useTranslation(`home`)
   const statsLayout = useBreakpointValue({
     base: {
@@ -28,8 +29,10 @@ const CreditsHistorySection: FC = () => {
   })
 
   useEffect(() => {
-    action.getCreditsHistory()
-  })
+    if (!filteredCreditsHistory) {
+      getCreditsHistory()
+    }
+  }, [])
 
   return (
     <Card padding={`24px`} variant={`elevated`}>
@@ -86,8 +89,8 @@ const CreditsHistorySection: FC = () => {
           <Grid id={`issued-retired-chart-header`} {...statsLayout}>
             <GridItem area={`stats`}>
               <Stack direction={[`row`, null, `column`]} divider={<StackDivider borderBottomColor={`charcoal.500`} borderBottomWidth={`1px`} />}>
-                <CreditsHistoryStat amount={7960000} label={`Issued`} textColor={`green.600`} />
-                <CreditsHistoryStat amount={4650000} label={`Retired`} textColor={`green.800`} />
+                <CreditsHistoryStat amount={filteredCreditsHistory?.issued} label={`Issued`} textColor={`green.600`} />
+                <CreditsHistoryStat amount={filteredCreditsHistory?.retired} label={`Retired`} textColor={`green.800`} />
               </Stack>
             </GridItem>
             <GridItem area={`chart`} height={`300px`} minW={0}>

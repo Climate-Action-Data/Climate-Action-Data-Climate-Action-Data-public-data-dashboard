@@ -3,14 +3,14 @@ import { Stat, StatLabel, StatNumber, Text } from '@chakra-ui/react'
 import { AeonikFono } from '@/styles/theme/fonts'
 
 interface CreditHistoryStateProps {
-  amount: number
+  amount: number | undefined
   label: string
   textColor?: string
 }
 
 const CreditsHistoryStat: FC<CreditHistoryStateProps> = ({ amount, label, textColor }) => {
-  const formattedAmount = new Intl.NumberFormat(`en-SG`, { notation: `compact`, minimumSignificantDigits: 3 }).format(amount)
-  const regexp = /^(\d.?\d{0,2})(\w?)$/
+  const formattedAmount = new Intl.NumberFormat(`en-SG`, { notation: `compact`, maximumSignificantDigits: 3 }).format(amount ?? 0)
+  const regexp = /^(\d+.?\d*)(\w?)$/
   const matches = formattedAmount.match(regexp)
   const suffix = matches?.pop()
   const compactAmount = matches?.pop()
