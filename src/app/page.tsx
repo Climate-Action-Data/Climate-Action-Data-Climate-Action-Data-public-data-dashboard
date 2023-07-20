@@ -19,7 +19,6 @@ export default function Home(): React.JSX.Element {
               <Spacer />
             </Hide>
             <TimeframeSearch />
-            <GeoMap width="80vw" height="400px" />
           </Flex>
           <Flex justifyContent="center" marginX={`24px`}>
             <Hide below="md">
