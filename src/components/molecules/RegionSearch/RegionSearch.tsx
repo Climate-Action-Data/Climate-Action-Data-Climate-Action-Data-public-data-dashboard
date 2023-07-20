@@ -3,6 +3,19 @@ import { useActions, useAppState, useEffects } from '@/overmind'
 import { Flex, Text, Box, Divider, Button } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { AutoComplete } from '../AutoComplete/AutoComplete'
+import { CarbonReduction } from '@/@types/State'
+
+export const getCountryPlaceholder = (carbonReduction: CarbonReduction, t: any, countryTranslate: any): string => {
+  let placeholder: string = t(`regions.chooseCountry`)
+  if (carbonReduction.carbonMapHoveredCountry !== ``) {
+    if (carbonReduction.carbonMapHoveredCountry !== carbonReduction.carbonMapDataFilters?.country) {
+      placeholder = countryTranslate(`${carbonReduction.carbonMapHoveredCountry}`)
+    }
+  } else if (carbonReduction.carbonMapDataFilters?.country) {
+    placeholder = countryTranslate(`${carbonReduction.carbonMapDataFilters?.country}`)
+  }
+  return placeholder
+}
 
 export const RegionSearch = (): React.JSX.Element => {
   const { t } = useTranslation(`home`)
@@ -29,19 +42,6 @@ export const RegionSearch = (): React.JSX.Element => {
       }))
     }
   }
-
-  const getCountryPlaceholder: () => string = () => {
-    let placeholder = t(`regions.chooseCountry`)
-    if (carbonReduction.carbonMapHoveredCountry !== ``) {
-      if (carbonReduction.carbonMapHoveredCountry !== carbonReduction.carbonMapDataFilters?.country) {
-        placeholder = countryTranslate(`${carbonReduction.carbonMapHoveredCountry}`)
-      }
-    } else if (carbonReduction.carbonMapDataFilters?.country) {
-      placeholder = countryTranslate(`${carbonReduction.carbonMapDataFilters?.country}`)
-    }
-    return placeholder
-  }
-
   const regionTitle = () => {
     if (carbonReduction.carbonMapDataFilters?.region !== SubRegion.WORLD) {
       return (
@@ -70,7 +70,7 @@ export const RegionSearch = (): React.JSX.Element => {
           onItemHover={(country) => setHoverCountry(country.value)}
           onDropDownLeave={() => setHoverCountry(``)}
           items={getSearchItems()}
-          placeholder={getCountryPlaceholder()}
+          placeholder={getCountryPlaceholder(carbonReduction, t, countryTranslate)}
         />
       ) : (
         <AutoComplete

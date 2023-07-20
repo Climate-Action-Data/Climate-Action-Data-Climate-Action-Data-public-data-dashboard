@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/react'
-import { TimeframeSearch } from './TimeframeSearch'
 import userEvent from '@testing-library/user-event'
-import { TestOvermindWrapper } from '@/components/atoms/TestOvermindWrapper/TestOvermindWrapper'
+
+import { TimeframeSearch } from './TimeframeSearch'
+import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 
 it(`renders correctly`, () => {
   const { container } = render(

@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`CarbonReductionWidget renders loading state when carbonMapData is undefined 1`] = `
 <div>
   <div
     class="css-1rr4qq7"
+    data-testid="loading-indicator"
   >
     <div
       class="chakra-stack css-8g8ihq"
@@ -116,6 +117,202 @@ exports[`renders correctly 1`] = `
           <div
             class="chakra-skeleton css-1tjwkx3"
           />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CarbonReductionWidget renders the widget when carbonMapData and carbonMapDataFiltered are defined 1`] = `
+<div>
+  <div
+    class="css-0"
+  >
+    <div
+      class="chakra-stack css-8g8ihq"
+    >
+      <div
+        class="css-gmuwbf"
+      >
+        <div
+          class="css-i4e4a6"
+        >
+          <span
+            class="chakra-text css-of4sfu"
+          >
+            200
+          </span>
+          <p
+            class="chakra-text css-10rvbm3"
+          >
+            Active Projects
+          </p>
+        </div>
+      </div>
+      <hr
+        aria-orientation="horizontal"
+        class="chakra-divider css-1y9z5uc"
+      />
+      <div
+        class="css-xs3fld"
+      >
+        <div
+          class="css-1m1m74v"
+        >
+          <div
+            class="css-0"
+          >
+            <span
+              class="chakra-text css-of4sfu"
+            >
+              0
+            </span>
+            <span
+              class="chakra-text css-g5hezf"
+            >
+              MtCO2
+            </span>
+          </div>
+          <p
+            class="chakra-text css-10rvbm3"
+          >
+            Total Reduction (YTD)
+          </p>
+        </div>
+        <div
+          class="css-1mzk35w"
+        >
+          <div
+            class="css-0"
+          >
+            <span
+              class="chakra-text css-1tv1yfd"
+            >
+              0
+            </span>
+            <span
+              class="chakra-text css-g5hezf"
+            >
+              MtCO2
+            </span>
+          </div>
+          <p
+            class="chakra-text css-10rvbm3"
+          >
+            Annual Est. Reduction
+          </p>
+        </div>
+      </div>
+      <hr
+        aria-orientation="horizontal"
+        class="chakra-divider css-1y9z5uc"
+      />
+      <h1
+        class="chakra-text css-5dcnrg"
+      >
+        Sector (top 4)
+      </h1>
+      <div
+        class="css-k008qs"
+      >
+        <div
+          class="css-1775nv6"
+        >
+          <div
+            style="width: 100%; height: 100%;"
+          />
+        </div>
+        <div
+          class="css-51blsq"
+        >
+          <div
+            class="css-0"
+          >
+            <p
+              class="chakra-text css-1tjw2bj"
+            >
+              40
+              % 
+              Renewable Energy
+            </p>
+          </div>
+          <div
+            class="css-0"
+          >
+            <p
+              class="chakra-text css-1pv6nyr"
+            >
+              24
+              % 
+              Waste Disposal
+            </p>
+          </div>
+          <div
+            class="css-0"
+          >
+            <p
+              class="chakra-text css-ma7g46"
+            >
+              19
+              % 
+              Energy Efficiency
+            </p>
+          </div>
+          <div
+            class="css-0"
+          >
+            <p
+              class="chakra-text css-1ymmiij"
+            >
+              17
+              % 
+              Others
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr
+        aria-orientation="horizontal"
+        class="chakra-divider css-1y9z5uc"
+      />
+      <h1
+        class="chakra-text css-5dcnrg"
+      >
+        Standard
+      </h1>
+      <div
+        class="css-hwbdeb"
+      >
+        <div
+          class="css-whmkqt"
+        >
+          <span
+            class="chakra-text css-1tzjjc2"
+          >
+            50
+            %
+          </span>
+          <p
+            class="chakra-text css-0"
+          >
+            ECO
+          </p>
+        </div>
+        <div
+          class="css-whmkqt"
+        >
+          <span
+            class="chakra-text css-1tv1yfd"
+          >
+            50
+            %
+          </span>
+          <p
+            class="chakra-text css-0"
+          >
+            GCC
+          </p>
         </div>
       </div>
     </div>

@@ -6,7 +6,6 @@ import enMenu from './locales/en/menu.json'
 import enCountries from './locales/en/countries.json'
 
 i18next.use(initReactI18next).init({
-  debug: true,
   fallbackLng: `en`,
   resources: {
     en: {
