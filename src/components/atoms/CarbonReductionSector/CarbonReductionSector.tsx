@@ -10,7 +10,7 @@ export const CarbonReductionSector = ({ colorChart, data }: CarbonReductionSecto
   return (
     <Flex>
       <Flex height="150px" width="200px" padding={2}>
-        <SectorPieChart data={data.map((d) => ({ value: d.average, label: d.name }))} colorChart={colorChart} />
+        <SectorPieChart data={data.map((d) => ({ value: d.average, label: d.name }))} />
       </Flex>
       <Flex flexDirection={`column`} justifyContent={`space-evenly`} flex={1}>
         {data.map((sector, idx) => (
