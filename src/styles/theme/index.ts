@@ -3,7 +3,7 @@ import { mode } from '@chakra-ui/theme-tools'
 import { Text } from '@/styles/theme/components/Text'
 
 import { brandPrimary, lightGray, lightGrayRound, whiteSecondary } from '@/styles/theme/components/Button'
-import { cardSection } from '@/styles/theme/components/Section'
+import { cardSection, creditHistoryCardSection } from '@/styles/theme/components/Section'
 import { IconButton } from '@/styles/theme/components/IconButton'
 
 export const theme = extendTheme({
@@ -51,6 +51,7 @@ export const theme = extendTheme({
     Container: {
       variants: {
         cardSection,
+        creditHistoryCardSection,
       },
     },
   },

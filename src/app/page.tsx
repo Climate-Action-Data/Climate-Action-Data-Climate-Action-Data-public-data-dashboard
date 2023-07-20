@@ -1,11 +1,12 @@
 'use client'
+import { Container, Flex, Hide, Spacer } from '@chakra-ui/react'
+
+import { useAppState } from '@/overmind'
 import { CarbonReductionWidget } from '@/components/molecules/CarbonReductionWidget/CarbonReductionWidget'
 import { RegionSearch } from '@/components/molecules/RegionSearch/RegionSearch'
 import { TimeframeSearch } from '@/components/molecules/TimeframeSearch/TimeframeSearch'
 import GeoMap from '@/components/organisms/GeoMap/GeoMap'
 import CreditsHistorySection from '@/components/organisms/CreditsHistorySection/CreditsHistorySection'
-import { Flex, Container, Spacer, Hide } from '@chakra-ui/react'
-import { useAppState } from '@/overmind'
 
 export default function Home(): React.JSX.Element {
   const { carbonReduction } = useAppState().analytics
@@ -29,8 +30,10 @@ export default function Home(): React.JSX.Element {
             </Hide>
             <CarbonReductionWidget />
           </Flex>
-          <CreditsHistorySection />
         </Container>
+      </Flex>
+      <Flex width={`100%`}>
+        <CreditsHistorySection />
       </Flex>
     </>
   )

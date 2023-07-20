@@ -1,17 +1,19 @@
 import { FC, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Card, Center, Grid, GridItem, HStack, Skeleton, Stack, StackDivider, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
+import { format } from 'date-fns'
+import { Center, Container, Grid, GridItem, HStack, Skeleton, Stack, StackDivider, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
 
 import { Aeonik } from '@/styles/theme/fonts'
 import { useActions, useAppState } from '@/overmind'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
+import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
+
 import SubregionIndicator from '@/components/atoms/SubregionIndicator/SubregionIndicator'
 import SelectableChip from '@/components/atoms/SelectableChip/SelectableChip'
+import CreditsHistoryStat from '@/components/atoms/CreditsHistoryStat/CreditHistoryStat'
 import { AutoComplete } from '@/components/molecules/AutoComplete/AutoComplete'
 import CreditsHistoryChart from '@/components/molecules/CreditsHistoryChart/CreditsHistoryChart'
-import CreditsHistoryStat from '@/components/atoms/CreditsHistoryStat/CreditHistoryStat'
-import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
 
 const CreditsHistorySection: FC = () => {
   const { getCreditsHistory, setCountry, setSubRegion, setTimeframe } = useActions().creditsHistory
@@ -85,7 +87,7 @@ const CreditsHistorySection: FC = () => {
   }
 
   return (
-    <Card padding={`24px`} variant={`elevated`}>
+    <Container marginTop={`40px`} padding={`24px`} flex={1} variant={`creditHistoryCardSection`}>
       <Grid
         id={`issued-retired-chart`}
         width={`100%`}
@@ -160,11 +162,11 @@ const CreditsHistorySection: FC = () => {
                   </GridItem>
                 </Grid>
                 <Text className={Aeonik.className} color={`lightgrey.600`}>
-                  {t(`dataRepresentedAsOf`, { lastUpdated: rawCreditsHistory?.data?.lastUpdate })}
+                  {t(`dataRepresentedAsOf`, { lastUpdated: format(new Date(rawCreditsHistory?.data?.lastUpdate ?? ``), `d MMM y, HH:mm:ss`) })}
                 </Text>
               </VStack>
             ) : (
-              <Center className={Aeonik.className} height={`200px`} width={`100%`} color={`lightGray.600`} textAlign={`center`}>
+              <Center className={Aeonik.className} height={`300px`} width={`100%`} color={`lightGray.600`} textAlign={`center`}>
                 {t(`selectedDataNotAvailable`)}
               </Center>
             )
@@ -173,7 +175,7 @@ const CreditsHistorySection: FC = () => {
           )}
         </GridItem>
       </Grid>
-    </Card>
+    </Container>
   )
 }
 
