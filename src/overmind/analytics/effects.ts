@@ -1,5 +1,5 @@
 import { EffectResponse } from '@/@types/EffectResponse'
-import data from '@/assets/map_dashboard_data.json'
+import data from '@/assets/map_dashboard_data'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
 import countriesContinentsMap from '@/assets/geo-map/countries-continents-mapping'
