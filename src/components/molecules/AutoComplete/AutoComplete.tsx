@@ -75,7 +75,8 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
           </Stack>
         </PopoverTrigger>
         <PopoverContent
-         data-testid="dropdown-body" onMouseLeave={() => {
+          data-testid="dropdown-body"
+          onMouseLeave={() => {
             setIsOpen(false)
             onDropDownLeave ? onDropDownLeave() : undefined
           }}
