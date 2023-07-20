@@ -1,11 +1,12 @@
+import { FC, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+import { Box, Center, Divider, Flex, Skeleton, SkeletonCircle, Stack, Text } from '@chakra-ui/react'
+
 import { CarbonReductionSector } from '@/components/atoms/CarbonReductionSector/CarbonReductionSector'
 import { CarbonReductionStandard } from '@/components/atoms/CarbonReductionStandard/CarbonReductionStandard'
 import { ImportantText } from '@/components/atoms/ImportantText/ImportantText'
 import { useActions, useAppState, useEffects } from '@/overmind'
 import { convertToMtCO2 } from '@/utils/UnitConverter'
-import { Box, Flex, Text, Skeleton, Stack, Divider, Center, SkeletonCircle } from '@chakra-ui/react'
-import { FC, useEffect } from 'react'
-import { useTranslation } from 'react-i18next'
 
 const DEFAULT_SECTOR_NUMBER = 4
 
@@ -79,7 +80,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
     if (carbonMapDataFiltered === undefined) {
       return (
         <Flex alignItems="center">
-          <Text color={`lightGray.600`}>Selected data is currently unavailable within the carbon registries.</Text>
+          <Text color={`lightGray.600`}> {t(`selectedDataNotAvailable`)}</Text>
         </Flex>
       )
     } else {
@@ -122,7 +123,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
             {carbonMapDataFiltered.sectors.length > 0 ? (
               <CarbonReductionSector colorChart={colorChart} data={top4Percentage} />
             ) : (
-              <Text color={`lightGray.600`}>Selected data is currently unavailable within the carbon registries.</Text>
+              <Text color={`lightGray.600`}> {t(`selectedDataNotAvailable`)}</Text>
             )}
 
             <Divider marginY={`20px`} />
@@ -132,7 +133,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
             {carbonMapDataFiltered.standards.length > 0 ? (
               <CarbonReductionStandard data={carbonMapDataFiltered.standards} />
             ) : (
-              <Text color={`lightGray.600`}>Selected data is currently unavailable within the carbon registries.</Text>
+              <Text color={`lightGray.600`}> {t(`selectedDataNotAvailable`)}</Text>
             )}
           </Stack>
         </Box>

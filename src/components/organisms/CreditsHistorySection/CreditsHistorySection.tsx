@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Card, Center, Grid, GridItem, HStack, Stack, StackDivider, useBreakpointValue } from '@chakra-ui/react'
 
-import { useTranslation } from 'react-i18next'
 import { TimeframesData } from '@/@types/Timeframe'
 import { useActions, useAppState } from '@/overmind'
 import SubregionIndicator from '@/components/atoms/SubregionIndicator/SubregionIndicator'
