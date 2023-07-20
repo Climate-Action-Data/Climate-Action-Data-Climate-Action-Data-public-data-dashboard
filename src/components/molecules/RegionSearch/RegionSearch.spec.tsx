@@ -1,13 +1,13 @@
-import { render, fireEvent } from '@testing-library/react'
+import { fireEvent, render } from '@testing-library/react'
 
-import { RegionSearch, getCountryPlaceholder } from './RegionSearch'
+import { getCountryPlaceholder, RegionSearch } from './RegionSearch'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 import { MockData } from '@/test/TestOvermindMockData'
 
 describe(`RegionSearch`, () => {
   test(`renders the component with default state undefined`, () => {
     const { container } = render(
-      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FILTERED_UNDEFINED_MAP_DATA_UNDEFINED}>
+      <TestOvermindWrapper analytics={MockData.STATE_CARBON_FILTERED_UNDEFINED_MAP_DATA_UNDEFINED}>
         <RegionSearch />
       </TestOvermindWrapper>,
     )
@@ -16,7 +16,7 @@ describe(`RegionSearch`, () => {
 
   test(`renders the component with default state`, () => {
     const { container } = render(
-      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FULL}>
+      <TestOvermindWrapper analytics={MockData.STATE_CARBON_FULL}>
         <RegionSearch />
       </TestOvermindWrapper>,
     )
@@ -34,7 +34,7 @@ describe(`RegionSearch`, () => {
 
   test(`renders the component with a selected country & region`, () => {
     const { container } = render(
-      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
+      <TestOvermindWrapper analytics={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
         <RegionSearch />
       </TestOvermindWrapper>,
     )
@@ -43,7 +43,7 @@ describe(`RegionSearch`, () => {
 
   test(`renders the component with a selected country & region and clears`, () => {
     const { container, getByTestId } = render(
-      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
+      <TestOvermindWrapper analytics={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
         <RegionSearch />
       </TestOvermindWrapper>,
     )
@@ -53,7 +53,7 @@ describe(`RegionSearch`, () => {
 
   test(`renders the component with a selected country & region and clears`, () => {
     const { container, getByTestId } = render(
-      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
+      <TestOvermindWrapper analytics={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
         <RegionSearch />
       </TestOvermindWrapper>,
     )

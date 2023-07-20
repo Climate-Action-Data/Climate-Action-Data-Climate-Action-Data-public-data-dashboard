@@ -2,10 +2,11 @@ import { Overmind } from 'overmind'
 import { differenceInMonths, isBefore, startOfMonth } from 'date-fns'
 
 import { Context } from '@/overmind'
-import { DataFilters, FilteredCreditsHistoryData, IssuedRetiredDataCountry } from '@/@types/State'
+import { DataFilters, FilteredCreditsHistoryData, IssuedRetiredDataCountry, IssuedRetiredGraphData } from '@/@types/State'
 import { SubRegion } from '@/@types/geojson'
 import { TimeframesData } from '@/@types/Timeframe'
 import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
+import { EffectResponse } from '@/@types/EffectResponse'
 
 const appendChartDataAndStat = (result: FilteredCreditsHistoryData, formattedDateTime: Date, issued: number, retired: number) => {
   const index = result.chartData[0].data.findIndex((e) => e.x === formattedDateTime)
@@ -64,8 +65,7 @@ const generateFilteredCreditsHistory = (rawData: IssuedRetiredDataCountry[], dat
   return result
 }
 
-export const getCreditsHistory = async (context: Context): Promise<void> => {
-  const carbonCreditsHistory = await context.effects.creditsHistory.getCreditsHistory()
+export const getCreditsHistory = async (context: Context, carbonCreditsHistory: EffectResponse<IssuedRetiredGraphData>): Promise<void> => {
   const countriesData = carbonCreditsHistory.data?.countriesData
   if (countriesData) {
     context.state.creditsHistory.rawCreditsHistory = carbonCreditsHistory

@@ -4,7 +4,7 @@ import { format } from 'date-fns'
 import { Center, Container, Grid, GridItem, HStack, Skeleton, Stack, StackDivider, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
 
 import { Aeonik } from '@/styles/theme/fonts'
-import { useActions, useAppState } from '@/overmind'
+import { useActions, useAppState, useEffects } from '@/overmind'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
 import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
@@ -17,6 +17,7 @@ import CreditsHistoryChart from '@/components/molecules/CreditsHistoryChart/Cred
 
 const CreditsHistorySection: FC = () => {
   const { getCreditsHistory, setCountry, setSubRegion, setTimeframe } = useActions().creditsHistory
+  const { getCreditsHistory: getCreditsHistoryEffect } = useEffects().creditsHistory
   const { filteredCreditsHistory, dataFilters, rawCreditsHistory } = useAppState().creditsHistory
   const { t } = useTranslation(`home`)
   const { t: countryTranslate } = useTranslation(`countries`)
@@ -34,7 +35,7 @@ const CreditsHistorySection: FC = () => {
 
   useEffect(() => {
     if (!filteredCreditsHistory) {
-      getCreditsHistory()
+      getCreditsHistoryEffect().then((result) => getCreditsHistory(result))
     }
   }, [])
 
