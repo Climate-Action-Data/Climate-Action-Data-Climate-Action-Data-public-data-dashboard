@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`RegionSearch renders the component with a hovered country 1`] = `
 <div>
   <div
-    class="css-hajjsy"
+    class="css-1w96tn4"
   >
     <div
       class="css-0"
@@ -16,232 +16,270 @@ exports[`renders correctly 1`] = `
     </div>
     <hr
       aria-orientation="vertical"
-      class="chakra-divider css-8w54o2"
+      class="chakra-divider css-g2zlzj"
     />
     <div
-      class="chakra-stack css-1mlvmbj"
+      class="chakra-stack css-8g8ihq"
     >
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-0"
-        type="button"
+      <div
+        aria-controls="popover-content-:r5:"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        class="chakra-stack css-8g8ihq"
+        id="popover-trigger-:r5:"
       >
-        <span
-          class="css-1ehzxp"
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
         >
-          <span
-            class="css-zvlevn"
+          <input
+            class="chakra-input css-1luyivc"
+            data-testid="dropdown_input"
+            placeholder="Choose a region"
+          />
+          <div
+            class="chakra-input__right-element css-2cnd2z"
           >
-            regions.north-america
-          </span>
-        </span>
-      </button>
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-1"
-        type="button"
+            <button
+              aria-label="toggle menu"
+              class="chakra-button css-xsdlqf"
+              data-testid="dropdown-button"
+              type="button"
+            >
+              <svg
+                class="chakra-icon css-c0air1"
+                focusable="false"
+                viewBox="0 0 8 4"
+              >
+                <path
+                  d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="chakra-popover__popper css-0"
+        style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
       >
-        <span
-          class="css-1ehzxp"
+        <section
+          aria-describedby="popover-body-:r5:"
+          class="chakra-popover__content css-18u085x"
+          data-testid="dropdown-body"
+          id="popover-content-:r5:"
+          role="dialog"
+          style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+          tabindex="-1"
         >
-          <span
-            class="css-zvlevn"
+          <div
+            class="chakra-popover__body css-0"
+            id="popover-body-:r5:"
           >
-            regions.south-america
-          </span>
-        </span>
-      </button>
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-2"
-        type="button"
-      >
-        <span
-          class="css-1ehzxp"
-        >
-          <span
-            class="css-zvlevn"
-          >
-            regions.europe
-          </span>
-        </span>
-      </button>
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-3"
-        type="button"
-      >
-        <span
-          class="css-1ehzxp"
-        >
-          <span
-            class="css-zvlevn"
-          >
-            regions.africa
-          </span>
-        </span>
-      </button>
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-4"
-        type="button"
-      >
-        <span
-          class="css-1ehzxp"
-        >
-          <span
-            class="css-zvlevn"
-          >
-            regions.asia
-          </span>
-        </span>
-      </button>
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-5"
-        type="button"
-      >
-        <span
-          class="css-1ehzxp"
-        >
-          <span
-            class="css-zvlevn"
-          >
-            regions.anz
-          </span>
-        </span>
-      </button>
+            <ul
+              class="css-155za0w"
+              role="list"
+            >
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-0"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-1"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-2"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-3"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Africa
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-4"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Polynesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-5"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Sub Saharan Africa
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-6"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Latin America and the Caribbean
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-7"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-8"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Australia and New Zealand
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-9"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-10"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-11"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern America
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-12"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  South Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-13"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-14"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Melanesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-15"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Micronesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-16"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Central Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-17"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  World
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`renders with click on going back 1`] = `
+exports[`RegionSearch renders the component with a selected country & region 1`] = `
 <div>
   <div
-    class="css-hajjsy"
-  >
-    <div
-      class="css-0"
-    >
-      <p
-        class="chakra-text css-in3yi3"
-      >
-        Region
-      </p>
-    </div>
-    <hr
-      aria-orientation="vertical"
-      class="chakra-divider css-8w54o2"
-    />
-    <div
-      class="chakra-stack css-1mlvmbj"
-    >
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-0"
-        type="button"
-      >
-        <span
-          class="css-1ehzxp"
-        >
-          <span
-            class="css-zvlevn"
-          >
-            regions.north-america
-          </span>
-        </span>
-      </button>
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-1"
-        type="button"
-      >
-        <span
-          class="css-1ehzxp"
-        >
-          <span
-            class="css-zvlevn"
-          >
-            regions.south-america
-          </span>
-        </span>
-      </button>
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-2"
-        type="button"
-      >
-        <span
-          class="css-1ehzxp"
-        >
-          <span
-            class="css-zvlevn"
-          >
-            regions.europe
-          </span>
-        </span>
-      </button>
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-3"
-        type="button"
-      >
-        <span
-          class="css-1ehzxp"
-        >
-          <span
-            class="css-zvlevn"
-          >
-            regions.africa
-          </span>
-        </span>
-      </button>
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-4"
-        type="button"
-      >
-        <span
-          class="css-1ehzxp"
-        >
-          <span
-            class="css-zvlevn"
-          >
-            regions.asia
-          </span>
-        </span>
-      </button>
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-5"
-        type="button"
-      >
-        <span
-          class="css-1ehzxp"
-        >
-          <span
-            class="css-zvlevn"
-          >
-            regions.anz
-          </span>
-        </span>
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`renders with click on region 1`] = `
-<div>
-  <div
-    class="css-hajjsy"
+    class="css-1w96tn4"
   >
     <div
       class="css-70qvj9"
     >
       <button
-        class="chakra-button css-om5gvo"
+        class="chakra-button css-czglya"
         data-testid="button-region-back"
         type="button"
       >
@@ -250,91 +288,1680 @@ exports[`renders with click on region 1`] = `
       <p
         class="chakra-text css-in3yi3"
       >
-        north-america
+        Latin America and the Caribbean
       </p>
     </div>
     <hr
       aria-orientation="vertical"
-      class="chakra-divider css-8w54o2"
+      class="chakra-divider css-g2zlzj"
     />
     <div
-      class="chakra-stack css-1mlvmbj"
+      class="chakra-stack css-8g8ihq"
     >
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-1"
-        type="button"
+      <div
+        aria-controls="popover-content-:r7:"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        class="chakra-stack css-8g8ihq"
+        id="popover-trigger-:r7:"
       >
-        <span
-          class="css-1ehzxp"
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
         >
-          <span
-            class="css-zvlevn"
+          <input
+            class="chakra-input css-1luyivc"
+            data-testid="dropdown_input"
+            placeholder="France"
+          />
+          <div
+            class="chakra-input__right-element css-2cnd2z"
           >
-            regions.south-america
-          </span>
-        </span>
-      </button>
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-2"
-        type="button"
+            <button
+              aria-label="toggle menu"
+              class="chakra-button css-xsdlqf"
+              data-testid="dropdown-button"
+              type="button"
+            >
+              <svg
+                class="chakra-icon css-c0air1"
+                focusable="false"
+                viewBox="0 0 8 4"
+              >
+                <path
+                  d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="chakra-popover__popper css-0"
+        style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
       >
-        <span
-          class="css-1ehzxp"
+        <section
+          aria-describedby="popover-body-:r7:"
+          class="chakra-popover__content css-18u085x"
+          data-testid="dropdown-body"
+          id="popover-content-:r7:"
+          role="dialog"
+          style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+          tabindex="-1"
         >
-          <span
-            class="css-zvlevn"
+          <div
+            class="chakra-popover__body css-0"
+            id="popover-body-:r7:"
           >
-            regions.europe
-          </span>
-        </span>
-      </button>
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-3"
-        type="button"
+            <ul
+              class="css-155za0w"
+              role="list"
+            >
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-0"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Anguilla
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-1"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Antigua and Barbuda
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-2"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Argentina
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-3"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Aruba
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-4"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Bahamas
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-5"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Barbados
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-6"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Belize
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-7"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Bolivia (Plurinational State of)
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-8"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Bonaire, Sint Eustatius and Saba
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-9"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Bouvet Island
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-10"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Brazil
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-11"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Cayman Islands
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-12"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Chile
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-13"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Colombia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-14"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Costa Rica
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-15"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Cuba
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-16"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Curaçao
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-17"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Dominica
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-18"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Dominican Republic
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-19"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Ecuador
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-20"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  El Salvador
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-21"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Falkland Islands (Malvinas)
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-22"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  French Guiana
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-23"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Grenada
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-24"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Guadeloupe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-25"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Guatemala
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-26"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Guyana
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-27"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Haiti
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-28"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Honduras
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-29"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Jamaica
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-30"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Martinique
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-31"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Mexico
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-32"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Montserrat
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-33"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Nicaragua
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-34"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Panama
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-35"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Paraguay
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-36"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Peru
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-37"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Puerto Rico
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-38"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Saint Barthélemy
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-39"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Saint Kitts and Nevis
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-40"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Saint Lucia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-41"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Saint Martin (French part)
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-42"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Saint Vincent and the Grenadines
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-43"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Sint Maarten (Dutch part)
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-44"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  South Georgia and the South Sandwich Islands
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-45"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Suriname
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-46"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Trinidad and Tobago
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-47"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Turks and Caicos Islands
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-48"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Uruguay
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-49"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Venezuela (Bolivarian Republic of)
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-50"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Virgin Islands (British)
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-51"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Virgin Islands (U.S.)
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RegionSearch renders the component with a selected country & region and clears 1`] = `
+<div>
+  <div
+    class="css-1w96tn4"
+  >
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-in3yi3"
       >
-        <span
-          class="css-1ehzxp"
-        >
-          <span
-            class="css-zvlevn"
-          >
-            regions.africa
-          </span>
-        </span>
-      </button>
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-4"
-        type="button"
+        Region
+      </p>
+    </div>
+    <hr
+      aria-orientation="vertical"
+      class="chakra-divider css-g2zlzj"
+    />
+    <div
+      class="chakra-stack css-8g8ihq"
+    >
+      <div
+        aria-controls="popover-content-:r9:"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        class="chakra-stack css-8g8ihq"
+        id="popover-trigger-:r9:"
       >
-        <span
-          class="css-1ehzxp"
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
         >
-          <span
-            class="css-zvlevn"
+          <input
+            class="chakra-input css-1luyivc"
+            data-testid="dropdown_input"
+            placeholder="Choose a region"
+          />
+          <div
+            class="chakra-input__right-element css-2cnd2z"
           >
-            regions.asia
-          </span>
-        </span>
-      </button>
-      <button
-        class="chakra-button css-4xx2wk"
-        data-testid="button-region-5"
-        type="button"
+            <button
+              aria-label="toggle menu"
+              class="chakra-button css-xsdlqf"
+              data-testid="dropdown-button"
+              type="button"
+            >
+              <svg
+                class="chakra-icon css-c0air1"
+                focusable="false"
+                viewBox="0 0 8 4"
+              >
+                <path
+                  d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="chakra-popover__popper css-0"
+        style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
       >
-        <span
-          class="css-1ehzxp"
+        <section
+          aria-describedby="popover-body-:r9:"
+          class="chakra-popover__content css-18u085x"
+          data-testid="dropdown-body"
+          id="popover-content-:r9:"
+          role="dialog"
+          style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+          tabindex="-1"
         >
-          <span
-            class="css-zvlevn"
+          <div
+            class="chakra-popover__body css-0"
+            id="popover-body-:r9:"
           >
-            regions.anz
-          </span>
-        </span>
-      </button>
+            <ul
+              class="css-155za0w"
+              role="list"
+            >
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-0"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-1"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-2"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-3"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Africa
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-4"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Polynesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-5"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Sub Saharan Africa
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-6"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Latin America and the Caribbean
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-7"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-8"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Australia and New Zealand
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-9"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-10"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-11"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern America
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-12"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  South Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-13"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-14"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Melanesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-15"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Micronesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-16"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Central Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-17"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  World
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RegionSearch renders the component with a selected country & region and clears 2`] = `
+<div>
+  <div
+    class="css-1w96tn4"
+  >
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-in3yi3"
+      >
+        Region
+      </p>
+    </div>
+    <hr
+      aria-orientation="vertical"
+      class="chakra-divider css-g2zlzj"
+    />
+    <div
+      class="chakra-stack css-8g8ihq"
+    >
+      <div
+        aria-controls="popover-content-:rb:"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        class="chakra-stack css-8g8ihq"
+        id="popover-trigger-:rb:"
+      >
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            class="chakra-input css-1luyivc"
+            data-testid="dropdown_input"
+            placeholder="Choose a region"
+          />
+          <div
+            class="chakra-input__right-element css-2cnd2z"
+          >
+            <button
+              aria-label="toggle menu"
+              class="chakra-button css-xsdlqf"
+              data-testid="dropdown-button"
+              type="button"
+            >
+              <svg
+                class="chakra-icon css-c0air1"
+                focusable="false"
+                viewBox="0 0 8 4"
+              >
+                <path
+                  d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="chakra-popover__popper css-0"
+        style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+      >
+        <section
+          aria-describedby="popover-body-:rb:"
+          class="chakra-popover__content css-18u085x"
+          data-testid="dropdown-body"
+          id="popover-content-:rb:"
+          role="dialog"
+          style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+          tabindex="-1"
+        >
+          <div
+            class="chakra-popover__body css-0"
+            id="popover-body-:rb:"
+          >
+            <ul
+              class="css-155za0w"
+              role="list"
+            >
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-0"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-1"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-2"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-3"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Africa
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-4"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Polynesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-5"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Sub Saharan Africa
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-6"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Latin America and the Caribbean
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-7"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-8"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Australia and New Zealand
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-9"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-10"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-11"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern America
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-12"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  South Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-13"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-14"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Melanesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-15"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Micronesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-16"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Central Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-17"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  World
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RegionSearch renders the component with default state 1`] = `
+<div>
+  <div
+    class="css-1w96tn4"
+  >
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-in3yi3"
+      >
+        Region
+      </p>
+    </div>
+    <hr
+      aria-orientation="vertical"
+      class="chakra-divider css-g2zlzj"
+    />
+    <div
+      class="chakra-stack css-8g8ihq"
+    >
+      <div
+        aria-controls="popover-content-:r3:"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        class="chakra-stack css-8g8ihq"
+        id="popover-trigger-:r3:"
+      >
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            class="chakra-input css-1luyivc"
+            data-testid="dropdown_input"
+            placeholder="Choose a region"
+          />
+          <div
+            class="chakra-input__right-element css-2cnd2z"
+          >
+            <button
+              aria-label="toggle menu"
+              class="chakra-button css-xsdlqf"
+              data-testid="dropdown-button"
+              type="button"
+            >
+              <svg
+                class="chakra-icon css-c0air1"
+                focusable="false"
+                viewBox="0 0 8 4"
+              >
+                <path
+                  d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="chakra-popover__popper css-0"
+        style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+      >
+        <section
+          aria-describedby="popover-body-:r3:"
+          class="chakra-popover__content css-18u085x"
+          data-testid="dropdown-body"
+          id="popover-content-:r3:"
+          role="dialog"
+          style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+          tabindex="-1"
+        >
+          <div
+            class="chakra-popover__body css-0"
+            id="popover-body-:r3:"
+          >
+            <ul
+              class="css-155za0w"
+              role="list"
+            >
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-0"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-1"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-2"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-3"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Africa
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-4"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Polynesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-5"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Sub Saharan Africa
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-6"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Latin America and the Caribbean
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-7"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-8"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Australia and New Zealand
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-9"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-10"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-11"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern America
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-12"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  South Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-13"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-14"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Melanesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-15"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Micronesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-16"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Central Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-17"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  World
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RegionSearch renders the component with default state undefined 1`] = `
+<div>
+  <div
+    class="css-1w96tn4"
+  >
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-in3yi3"
+      >
+        Region
+      </p>
+    </div>
+    <hr
+      aria-orientation="vertical"
+      class="chakra-divider css-g2zlzj"
+    />
+    <div
+      class="chakra-stack css-8g8ihq"
+    >
+      <div
+        aria-controls="popover-content-:r1:"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        class="chakra-stack css-8g8ihq"
+        id="popover-trigger-:r1:"
+      >
+        <div
+          class="chakra-input__group css-bx0blc"
+          data-group="true"
+        >
+          <input
+            class="chakra-input css-1luyivc"
+            data-testid="dropdown_input"
+            placeholder="Choose a region"
+          />
+          <div
+            class="chakra-input__right-element css-2cnd2z"
+          >
+            <button
+              aria-label="toggle menu"
+              class="chakra-button css-xsdlqf"
+              data-testid="dropdown-button"
+              type="button"
+            >
+              <svg
+                class="chakra-icon css-c0air1"
+                focusable="false"
+                viewBox="0 0 8 4"
+              >
+                <path
+                  d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="chakra-popover__popper css-0"
+        style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+      >
+        <section
+          aria-describedby="popover-body-:r1:"
+          class="chakra-popover__content css-18u085x"
+          data-testid="dropdown-body"
+          id="popover-content-:r1:"
+          role="dialog"
+          style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+          tabindex="-1"
+        >
+          <div
+            class="chakra-popover__body css-0"
+            id="popover-body-:r1:"
+          >
+            <ul
+              class="css-155za0w"
+              role="list"
+            >
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-0"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-1"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-2"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-3"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Africa
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-4"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Polynesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-5"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Sub Saharan Africa
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-6"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Latin America and the Caribbean
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-7"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-8"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Australia and New Zealand
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-9"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-10"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Europe
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-11"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern America
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-12"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  South Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-13"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-14"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Melanesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-15"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Micronesia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-16"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Central Asia
+                </div>
+              </li>
+              <li
+                class="css-1lkne8t"
+                data-testid="dropdown-item-17"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  World
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </div>
   </div>
 </div>

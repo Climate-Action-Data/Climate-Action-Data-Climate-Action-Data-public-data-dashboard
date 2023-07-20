@@ -1,24 +1,102 @@
 import { EffectResponse } from '@/@types/EffectResponse'
-import { CarbonReduction } from './state'
+import data from '@/assets/map_dashboard_data'
+import { TimeframesData } from '@/@types/Timeframe'
+import { SubRegion } from '@/@types/geojson'
+import countriesContinentsMap from '@/assets/geo-map/countries-continents-mapping'
+import { CountryPeriodData, CountryData, Sector, Standard } from '@/@types/State'
+const SLEEP = 500
 
-const SLEEP = 5000
-
-export const getCarbonReduction = async (): Promise<EffectResponse<CarbonReduction>> => {
+export const getCarbonReduction = async (): Promise<EffectResponse<CountryData[]>> => {
   try {
     await new Promise((f) => setTimeout(f, SLEEP))
     return {
-      data: {
-        activeProjects: 455,
-        totalReduction: 7.96,
-        annualEstReduction: 38.1,
-        sectors: [
-          { title: `Renewable Energy`, value: 40 },
-          { title: `Waste Disposal`, value: 24 },
-        ],
-        standards: [{ title: `VCS`, value: 74 }],
-      },
+      data,
+      error: undefined,
     }
   } catch (error) {
+    console.log(error)
     return { error: { code: `200`, message: `could not fetch data` } }
   }
+}
+
+export const generateCountryByRegion = (region: Exclude<SubRegion, SubRegion.WORLD>) => {
+  const countryList: string[] = []
+  countriesContinentsMap.forEach((value, key) => {
+    if (value === region) {
+      countryList.push(key)
+    }
+  })
+  return countryList
+}
+
+export const generateHasCountryData = (countryData: CountryData[], timeframe: TimeframesData = TimeframesData.MAX) => {
+  const hasCountryData = new Map<string, boolean>()
+  countryData.forEach((country) => {
+    if (country.timeRanges[timeframe] && country.timeRanges[timeframe].activeProjects > 0) {
+      hasCountryData.set(country.countryCode, true)
+    } else {
+      hasCountryData.set(country.countryCode, false)
+    }
+  })
+  return hasCountryData
+}
+
+export const combineCountryData = (countryData: CountryData[], timeframe: TimeframesData = TimeframesData.MAX): CountryPeriodData => {
+  const combinedData: CountryPeriodData = {
+    activeProjects: 0,
+    totalReductions: 0,
+    estimatedReductions: 0,
+    unitMetric: ``,
+    sectors: [],
+    standards: [],
+  }
+  const sectorsToCombine: Sector[][] = []
+  const standardsToCombine: Standard[][] = []
+  countryData.forEach((country) => {
+    if (country.timeRanges[timeframe]) {
+      const currentData = country.timeRanges[timeframe]
+      combinedData.activeProjects += currentData.activeProjects
+      combinedData.totalReductions += currentData.totalReductions
+      combinedData.estimatedReductions += currentData.estimatedReductions
+      sectorsToCombine.push(currentData.sectors)
+      standardsToCombine.push(currentData.standards)
+    }
+  })
+  combinedData.sectors = combinePercentages(sectorsToCombine)
+  combinedData.standards = combinePercentages(standardsToCombine)
+  return combinedData
+}
+
+export const combineAverage = (averageSeries: number[]) => {
+  let sum = 0
+  averageSeries.forEach((num) => {
+    sum += num
+  })
+  return sum
+}
+
+const DEFAULT_NO_INDEX = -1
+
+export const combinePercentages = (percentageSeries: Sector[][] | Standard[][]) => {
+  const mergedDatasets: Sector[] | Standard[] = []
+
+  for (const dataset of percentageSeries) {
+    for (const entry of dataset) {
+      const index = mergedDatasets.findIndex((item) => item.name === entry.name)
+      if (index !== DEFAULT_NO_INDEX) {
+        mergedDatasets[index].average += entry.average
+      } else {
+        mergedDatasets.push({ name: entry.name, average: entry.average })
+      }
+    }
+  }
+  const totalAverage = mergedDatasets.reduce((sum, dataset) => sum + dataset.average, 0)
+  const combinedDataset: Sector[] | Standard[] = mergedDatasets.map((dataset) => {
+    // This is not a magic number as it is creating a percentage
+    // eslint-disable-next-line no-magic-numbers
+    const percentage = Number(((dataset.average / totalAverage) * 100).toFixed(2))
+    return { name: dataset.name, average: percentage }
+  })
+
+  return combinedDataset
 }
