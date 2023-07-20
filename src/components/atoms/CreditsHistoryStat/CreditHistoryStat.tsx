@@ -10,7 +10,7 @@ interface CreditHistoryStateProps {
 
 const CreditsHistoryStat: FC<CreditHistoryStateProps> = ({ amount, label, textColor }) => {
   const formattedAmount = new Intl.NumberFormat(`en-SG`, { notation: `compact`, maximumSignificantDigits: 3 }).format(amount ?? 0)
-  const regexp = /^(\d+.?\d*)(\w?)$/
+  const regexp = /^(\d*\.?\d*)(\w)$/
   const matches = formattedAmount.match(regexp)
   const suffix = matches?.pop()
   const compactAmount = matches?.pop()

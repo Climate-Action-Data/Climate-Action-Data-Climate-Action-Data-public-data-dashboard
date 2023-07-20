@@ -39,5 +39,8 @@
     "sector": "Sector (top 4)",
     "standard": "Standard"
   },
-  "selectedDataNotAvailable": "Selected data is currently unavailable within the carbon registries."
+  "selectedDataNotAvailable": "Selected data is currently unavailable within the carbon registries.",
+  "dataRepresentedAsOf": "Data represented as of {{lastUpdated}}",
+  "issued": "Issued",
+  "retired": "Retired"
 }

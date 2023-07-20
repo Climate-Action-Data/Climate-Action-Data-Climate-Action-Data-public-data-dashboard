@@ -2,20 +2,20 @@ import { FC, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Card, Center, Grid, GridItem, HStack, Skeleton, Stack, StackDivider, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
 
-import { TimeframesData } from '@/@types/Timeframe'
+import { Aeonik } from '@/styles/theme/fonts'
 import { useActions, useAppState } from '@/overmind'
+import { TimeframesData } from '@/@types/Timeframe'
+import { SubRegion } from '@/@types/geojson'
 import SubregionIndicator from '@/components/atoms/SubregionIndicator/SubregionIndicator'
 import SelectableChip from '@/components/atoms/SelectableChip/SelectableChip'
-import { SubRegion } from '@/@types/geojson'
 import { AutoComplete } from '@/components/molecules/AutoComplete/AutoComplete'
-import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
 import CreditsHistoryChart from '@/components/molecules/CreditsHistoryChart/CreditsHistoryChart'
 import CreditsHistoryStat from '@/components/atoms/CreditsHistoryStat/CreditHistoryStat'
-import { Aeonik } from '@/styles/theme/fonts'
+import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
 
 const CreditsHistorySection: FC = () => {
   const { getCreditsHistory, setCountry, setSubRegion, setTimeframe } = useActions().creditsHistory
-  const { filteredCreditsHistory, dataFilters } = useAppState().creditsHistory
+  const { filteredCreditsHistory, dataFilters, rawCreditsHistory } = useAppState().creditsHistory
   const { t } = useTranslation(`home`)
   const { t: countryTranslate } = useTranslation(`countries`)
   const statsLayout = useBreakpointValue({
@@ -86,93 +86,93 @@ const CreditsHistorySection: FC = () => {
 
   return (
     <Card padding={`24px`} variant={`elevated`}>
-      <VStack alignItems={`end`}>
-        <Grid
-          id={`issued-retired-chart`}
-          width={`100%`}
-          height={`min-content`}
-          templateAreas={`
+      <Grid
+        id={`issued-retired-chart`}
+        width={`100%`}
+        height={`min-content`}
+        templateAreas={`
           'filter'
           'data'
         `}
-        >
-          <GridItem area={`filter`}>
-            <Grid
-              id={`issued-retired-chart-header`}
-              templateAreas={`
+      >
+        <GridItem area={`filter`}>
+          <Grid
+            id={`issued-retired-chart-header`}
+            templateAreas={`
               'title continents-filter'
               'date-range-filter date-range-filter'
             `}
-              gridTemplateColumns={`auto 1fr`}
-              rowGap={`16px`}
-              alignItems={`center`}
-            >
-              <GridItem area={`title`} borderRight={`1px`} borderRightColor={`lightGray.400`} padding={`8px 16px `}>
-                <SubregionIndicator subregion={dataFilters?.region} clearSubregion={() => setSubRegion(SubRegion.WORLD)} />
-              </GridItem>
-              <GridItem area={`continents-filter`} alignSelf={`center`} padding={`4px `}>
-                <HStack padding={`4px 16px`} gap={`8px`} alignContent={`baseline`}>
-                  {dataFilters.region === SubRegion.WORLD ? (
-                    <AutoComplete
-                      onItemClick={(region) => setSubRegion(region.value)}
-                      onItemHover={(_) => undefined}
-                      onDropDownLeave={() => undefined}
-                      items={getSearchItems(dataFilters.region)}
-                      placeholder={t(`regions.chooseRegion`)}
-                    />
-                  ) : (
-                    <AutoComplete
-                      onItemClick={(country) => setCountry(country.value)}
-                      onItemHover={(_) => undefined}
-                      onDropDownLeave={() => undefined}
-                      items={getSearchItems(dataFilters.region)}
-                      placeholder={getCountryPlaceholder(dataFilters.country)}
-                    />
-                  )}
-                </HStack>
-              </GridItem>
-              <GridItem area={`date-range-filter`}>
-                <HStack padding={`4px 16px`} gap={`8px`}>
-                  {Object.values(TimeframesData).map((timeframe, idx) => (
-                    <SelectableChip
-                      isSelected={dataFilters.timeframe === timeframe}
-                      key={idx}
-                      label={t(`timeframes.${timeframe}`)}
-                      onClick={() => setTimeframe(dataFilters.timeframe === timeframe ? TimeframesData.MAX : timeframe)}
-                    />
-                  ))}
-                </HStack>
-              </GridItem>
-            </Grid>
-          </GridItem>
-          <GridItem area={`data`}>
-            {filteredCreditsHistory ? (
-              filteredCreditsHistory?.chartData[0].data?.length > 0 || filteredCreditsHistory?.chartData[1].data.length > 0 ? (
-                <Grid id={`issued-retired-chart-header`} {...statsLayout}>
+            gridTemplateColumns={`auto 1fr`}
+            rowGap={`16px`}
+            alignItems={`center`}
+          >
+            <GridItem area={`title`} borderRight={`1px`} borderRightColor={`lightGray.400`} padding={`8px 16px `}>
+              <SubregionIndicator subregion={dataFilters?.region} clearSubregion={() => setSubRegion(SubRegion.WORLD)} />
+            </GridItem>
+            <GridItem area={`continents-filter`} alignSelf={`center`} padding={`4px `}>
+              <HStack padding={`4px 16px`} gap={`8px`} alignContent={`baseline`}>
+                {dataFilters.region === SubRegion.WORLD ? (
+                  <AutoComplete
+                    onItemClick={(region) => setSubRegion(region.value)}
+                    onItemHover={(_) => undefined}
+                    onDropDownLeave={() => undefined}
+                    items={getSearchItems(dataFilters.region)}
+                    placeholder={t(`regions.chooseRegion`)}
+                  />
+                ) : (
+                  <AutoComplete
+                    onItemClick={(country) => setCountry(country.value)}
+                    onItemHover={(_) => undefined}
+                    onDropDownLeave={() => undefined}
+                    items={getSearchItems(dataFilters.region)}
+                    placeholder={getCountryPlaceholder(dataFilters.country)}
+                  />
+                )}
+              </HStack>
+            </GridItem>
+            <GridItem area={`date-range-filter`}>
+              <HStack padding={`4px 16px`} gap={`8px`}>
+                {Object.values(TimeframesData).map((timeframe, idx) => (
+                  <SelectableChip
+                    isSelected={dataFilters.timeframe === timeframe}
+                    key={idx}
+                    label={t(`timeframes.${timeframe}`)}
+                    onClick={() => setTimeframe(dataFilters.timeframe === timeframe ? TimeframesData.MAX : timeframe)}
+                  />
+                ))}
+              </HStack>
+            </GridItem>
+          </Grid>
+        </GridItem>
+        <GridItem area={`data`}>
+          {filteredCreditsHistory ? (
+            filteredCreditsHistory?.chartData[0].data?.length > 0 || filteredCreditsHistory?.chartData[1].data.length > 0 ? (
+              <VStack alignItems={`end`}>
+                <Grid id={`issued-retired-chart-header`} {...statsLayout} width={`100%`}>
                   <GridItem area={`stats`}>
                     <Stack direction={[`row`, null, `column`]} divider={<StackDivider borderBottomColor={`lightGray.400`} borderBottomWidth={`1px`} />}>
-                      <CreditsHistoryStat amount={filteredCreditsHistory?.issued} label={`Issued`} textColor={`green.600`} />
-                      <CreditsHistoryStat amount={filteredCreditsHistory?.retired} label={`Retired`} textColor={`green.800`} />
+                      <CreditsHistoryStat amount={filteredCreditsHistory?.issued} label={t(`issued`)} textColor={`green.600`} />
+                      <CreditsHistoryStat amount={filteredCreditsHistory?.retired} label={t(`retired`)} textColor={`green.800`} />
                     </Stack>
                   </GridItem>
                   <GridItem area={`chart`} height={`300px`} minW={0}>
                     <CreditsHistoryChart />
                   </GridItem>
                 </Grid>
-              ) : (
-                <Center className={Aeonik.className} height={`200px`} width={`100%`} color={`lightGray.600`} textAlign={`center`}>
-                  {t(`selectedDataNotAvailable`)}
-                </Center>
-              )
+                <Text className={Aeonik.className} color={`lightgrey.600`}>
+                  {t(`dataRepresentedAsOf`, { lastUpdated: rawCreditsHistory?.data?.lastUpdate })}
+                </Text>
+              </VStack>
             ) : (
-              <GenerateChartAndStatsSkeleton />
-            )}
-          </GridItem>
-        </Grid>
-        <Text className={Aeonik.className} color={`lightgrey.600`}>
-          Data represented as of 23 May 2023, 01:11:05
-        </Text>
-      </VStack>
+              <Center className={Aeonik.className} height={`200px`} width={`100%`} color={`lightGray.600`} textAlign={`center`}>
+                {t(`selectedDataNotAvailable`)}
+              </Center>
+            )
+          ) : (
+            <GenerateChartAndStatsSkeleton />
+          )}
+        </GridItem>
+      </Grid>
     </Card>
   )
 }
