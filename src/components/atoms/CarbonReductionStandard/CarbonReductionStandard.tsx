@@ -1,9 +1,9 @@
 import { Flex, Box, Text } from '@chakra-ui/react'
 import { ImportantText } from '../ImportantText/ImportantText'
-import { PercentDataset } from '@/@types/State'
+import { Standard } from '@/@types/State'
 
 interface CarbonReductionStandardProps {
-  data: PercentDataset[]
+  data: Standard[]
 }
 
 export const CarbonReductionStandard = (props: CarbonReductionStandardProps): React.JSX.Element => {

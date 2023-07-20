@@ -2,18 +2,18 @@ import { EffectResponse } from './EffectResponse'
 import { TimeframesData } from './Timeframe'
 import { SubRegion } from './geojson'
 
-export interface CarbonData {
+export interface CountryPeriodData {
   activeProjects: number
   totalReductions: number
   estimatedReductions: number
   unitMetric: string
-  sectors: PercentDataset[]
-  standards: PercentDataset[]
+  sectors: Sector[]
+  standards: Standard[]
 }
 
-export interface CarbonMapData {
+export interface CountryData {
   countryCode: string
-  timeRanges: Record<TimeframesData, CarbonData>
+  timeRanges: Record<TimeframesData, CountryPeriodData>
 }
 
 export interface DataFilters {
@@ -23,7 +23,7 @@ export interface DataFilters {
 }
 
 export interface CarbonReduction {
-  carbonMapData?: EffectResponse<CarbonMapData[]>
+  carbonMapData?: EffectResponse<CountryData[]>
   carbonMapHasCountryData: Map<string, boolean>
   carbonMapHoveredRegion: string
   carbonMapHoveredCountry: string
@@ -32,10 +32,15 @@ export interface CarbonReduction {
 
 export interface DataState {
   carbonReduction: CarbonReduction
-  carbonMapDataFiltered: CarbonData | undefined
+  carbonMapDataFiltered: CountryPeriodData | undefined
 }
 
-export interface PercentDataset {
+export interface Sector {
+  name: string
+  average: number
+}
+
+export interface Standard {
   name: string
   average: number
 }

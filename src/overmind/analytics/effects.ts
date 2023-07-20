@@ -3,10 +3,10 @@ import data from '@/assets/map_dashboard_data'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
 import countriesContinentsMap from '@/assets/geo-map/countries-continents-mapping'
-import { CarbonData, CarbonMapData, PercentDataset } from '@/@types/State'
+import { CountryPeriodData, CountryData, Sector, Standard } from '@/@types/State'
 const SLEEP = 500
 
-export const getCarbonReduction = async (): Promise<EffectResponse<CarbonMapData[]>> => {
+export const getCarbonReduction = async (): Promise<EffectResponse<CountryData[]>> => {
   try {
     await new Promise((f) => setTimeout(f, SLEEP))
     return {
@@ -29,7 +29,7 @@ export const generateCountryByRegion = (region: Exclude<SubRegion, SubRegion.WOR
   return countryList
 }
 
-export const generateHasCountryData = (countryData: CarbonMapData[], timeframe: TimeframesData = TimeframesData.MAX) => {
+export const generateHasCountryData = (countryData: CountryData[], timeframe: TimeframesData = TimeframesData.MAX) => {
   const hasCountryData = new Map<string, boolean>()
   countryData.forEach((country) => {
     if (country.timeRanges[timeframe] && country.timeRanges[timeframe].activeProjects > 0) {
@@ -41,8 +41,8 @@ export const generateHasCountryData = (countryData: CarbonMapData[], timeframe: 
   return hasCountryData
 }
 
-export const combineCountryData = (countryData: CarbonMapData[], timeframe: TimeframesData = TimeframesData.MAX): CarbonData => {
-  const combinedData: CarbonData = {
+export const combineCountryData = (countryData: CountryData[], timeframe: TimeframesData = TimeframesData.MAX): CountryPeriodData => {
+  const combinedData: CountryPeriodData = {
     activeProjects: 0,
     totalReductions: 0,
     estimatedReductions: 0,
@@ -50,8 +50,8 @@ export const combineCountryData = (countryData: CarbonMapData[], timeframe: Time
     sectors: [],
     standards: [],
   }
-  const sectorsToCombine: PercentDataset[][] = []
-  const standardsToCombine: PercentDataset[][] = []
+  const sectorsToCombine: Sector[][] = []
+  const standardsToCombine: Standard[][] = []
   countryData.forEach((country) => {
     if (country.timeRanges[timeframe]) {
       const currentData = country.timeRanges[timeframe]
@@ -77,8 +77,8 @@ export const combineAverage = (averageSeries: number[]) => {
 
 const DEFAULT_NO_INDEX = -1
 
-export const combinePercentages = (percentageSeries: PercentDataset[][]) => {
-  const mergedDatasets: PercentDataset[] = []
+export const combinePercentages = (percentageSeries: Sector[][] | Standard[][]) => {
+  const mergedDatasets: Sector[] | Standard[] = []
 
   for (const dataset of percentageSeries) {
     for (const entry of dataset) {
@@ -91,7 +91,7 @@ export const combinePercentages = (percentageSeries: PercentDataset[][]) => {
     }
   }
   const totalAverage = mergedDatasets.reduce((sum, dataset) => sum + dataset.average, 0)
-  const combinedDataset: PercentDataset[] = mergedDatasets.map((dataset) => {
+  const combinedDataset: Sector[] | Standard[] = mergedDatasets.map((dataset) => {
     // This is not a magic number as it is creating a percentage
     // eslint-disable-next-line no-magic-numbers
     const percentage = Number(((dataset.average / totalAverage) * 100).toFixed(2))

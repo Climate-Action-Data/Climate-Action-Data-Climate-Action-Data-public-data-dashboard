@@ -39,5 +39,4 @@ yarn.lock
 
 utils/dist
 utils/node_modules
-test-report.xml
 coverage
