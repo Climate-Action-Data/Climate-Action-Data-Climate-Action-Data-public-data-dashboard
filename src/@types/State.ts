@@ -44,3 +44,35 @@ export interface Standard {
   name: string
   average: number
 }
+
+export interface IssuedRetiredGraphData {
+  lastUpdate: string
+  countriesData: IssuedRetiredDataCountry[]
+}
+
+export interface IssuedRetiredDataCountry {
+  countryCode: string
+  timeRanges: {
+    year: number
+    month: number
+    issued: number
+    retired: number
+  }[]
+}
+
+export interface CreditsHistoryChartData {
+  id: string
+  data: { x: Date; y: number }[]
+}
+
+export interface FilteredCreditsHistoryData {
+  chartData: CreditsHistoryChartData[]
+  issued: number
+  retired: number
+}
+
+export interface CreditsHistoryDataState {
+  rawCreditsHistory?: EffectResponse<IssuedRetiredGraphData>
+  filteredCreditsHistory: FilteredCreditsHistoryData | undefined
+  dataFilters: DataFilters
+}
