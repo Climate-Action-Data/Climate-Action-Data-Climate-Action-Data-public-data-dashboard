@@ -1,21 +1,81 @@
-import { render, screen } from '@testing-library/react'
-import { RegionSearch } from './RegionSearch'
-import userEvent from '@testing-library/user-event'
+import { render, fireEvent } from '@testing-library/react'
 
-it(`renders correctly`, () => {
-  const { container } = render(<RegionSearch />)
-  expect(container).toMatchSnapshot()
-})
+import { RegionSearch, getCountryPlaceholder } from './RegionSearch'
+import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
+import { MockData } from '@/test/TestOvermindMockData'
 
-it(`renders with click on region`, async () => {
-  const { container } = render(<RegionSearch />)
-  await userEvent.click(screen.getByTestId(`button-region-0`))
-  expect(container).toMatchSnapshot()
-})
+describe(`RegionSearch`, () => {
+  test(`renders the component with default state undefined`, () => {
+    const { container } = render(
+      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FILTERED_UNDEFINED_MAP_DATA_UNDEFINED}>
+        <RegionSearch />
+      </TestOvermindWrapper>,
+    )
+    expect(container).toMatchSnapshot()
+  })
 
-it(`renders with click on going back`, async () => {
-  const { container } = render(<RegionSearch />)
-  await userEvent.click(screen.getByTestId(`button-region-0`))
-  await userEvent.click(screen.getByTestId(`button-region-back`))
-  expect(container).toMatchSnapshot()
+  test(`renders the component with default state`, () => {
+    const { container } = render(
+      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FULL}>
+        <RegionSearch />
+      </TestOvermindWrapper>,
+    )
+    expect(container).toMatchSnapshot()
+  })
+
+  test(`renders the component with a hovered country`, () => {
+    const { container } = render(
+      <TestOvermindWrapper>
+        <RegionSearch />
+      </TestOvermindWrapper>,
+    )
+    expect(container).toMatchSnapshot()
+  })
+
+  test(`renders the component with a selected country & region`, () => {
+    const { container } = render(
+      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
+        <RegionSearch />
+      </TestOvermindWrapper>,
+    )
+    expect(container).toMatchSnapshot()
+  })
+
+  test(`renders the component with a selected country & region and clears`, () => {
+    const { container, getByTestId } = render(
+      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
+        <RegionSearch />
+      </TestOvermindWrapper>,
+    )
+    fireEvent.click(getByTestId(`button-region-back`))
+    expect(container).toMatchSnapshot()
+  })
+
+  test(`renders the component with a selected country & region and clears`, () => {
+    const { container, getByTestId } = render(
+      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
+        <RegionSearch />
+      </TestOvermindWrapper>,
+    )
+    fireEvent.click(getByTestId(`button-region-back`))
+    expect(container).toMatchSnapshot()
+  })
+
+  it(`should return placeholder based on carbonMapHoveredCountry when it is empty`, () => {
+    const t = jest.fn()
+    const countryTranslate = jest.fn().mockReturnValue(`Colombia`)
+    const placeholder = getCountryPlaceholder(MockData.STATE_CARBON_FULL_REGION_COUNTRY_NO_HOVER.carbonReduction, t, countryTranslate)
+    expect(placeholder).toBe(`Colombia`)
+    expect(t).toHaveBeenCalled()
+    expect(countryTranslate).toHaveBeenCalled()
+  })
+
+  it(`should return placeholder based on carbonMapHoveredCountry when it is not empty and different from carbonMapDataFilters.country`, () => {
+    const t = jest.fn()
+    const countryTranslate = jest.fn().mockReturnValue(`Colombia`)
+    const placeholder = getCountryPlaceholder(MockData.STATE_CARBON_FULL_REGION_COUNTRY.carbonReduction, t, countryTranslate)
+    expect(placeholder).toBe(`Colombia`)
+    expect(t).toHaveBeenCalled()
+    expect(countryTranslate).toHaveBeenCalled()
+  })
 })

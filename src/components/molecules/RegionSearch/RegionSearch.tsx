@@ -1,19 +1,55 @@
-import { Regions } from '@/@types/Region'
-import { Flex, Text, Box, Divider, HStack, Tag, Button, TagLabel } from '@chakra-ui/react'
-import { useState } from 'react'
+import { SubRegion } from '@/@types/geojson'
+import { useActions, useAppState, useEffects } from '@/overmind'
+import { Flex, Text, Box, Divider, Button } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
+import { AutoComplete } from '../AutoComplete/AutoComplete'
+import { CarbonReduction } from '@/@types/State'
+
+export const getCountryPlaceholder = (carbonReduction: CarbonReduction, t: any, countryTranslate: any): string => {
+  let placeholder: string = t(`regions.chooseCountry`)
+  if (carbonReduction.carbonMapHoveredCountry !== ``) {
+    if (carbonReduction.carbonMapHoveredCountry !== carbonReduction.carbonMapDataFilters?.country) {
+      placeholder = countryTranslate(`${carbonReduction.carbonMapHoveredCountry}`)
+    }
+  } else if (carbonReduction.carbonMapDataFilters?.country) {
+    placeholder = countryTranslate(`${carbonReduction.carbonMapDataFilters?.country}`)
+  }
+  return placeholder
+}
 
 export const RegionSearch = (): React.JSX.Element => {
-  const [region, setRegion] = useState<string | undefined>(undefined)
   const { t } = useTranslation(`home`)
+  const { t: countryTranslate } = useTranslation(`countries`)
+
+  const { carbonReduction } = useAppState().analytics
+  const { setSubRegion, setHoverSubRegion, setCountry, setHoverCountry, clearLocationFilters } = useActions().analytics
+  const { generateCountryByRegion } = useEffects().analytics
+
+  const getSearchItems = (): {
+    value: string
+    label: string
+  }[] => {
+    if (carbonReduction.carbonMapDataFilters.region && carbonReduction.carbonMapDataFilters.region !== SubRegion.WORLD) {
+      const test = generateCountryByRegion(carbonReduction.carbonMapDataFilters.region).map((country) => ({
+        value: country,
+        label: countryTranslate(`${country}`),
+      }))
+      return test
+    } else {
+      return Object.values(SubRegion).map((region) => ({
+        value: region,
+        label: t(`regions.${region}`),
+      }))
+    }
+  }
   const regionTitle = () => {
-    if (region) {
+    if (carbonReduction.carbonMapDataFilters?.region !== SubRegion.WORLD) {
       return (
         <Flex alignItems={`center`}>
-          <Button data-testid="button-region-back" borderRadius="50%" backgroundColor="transparent" onClick={() => setRegion(undefined)}>
+          <Button variant="lightGrayRound" marginRight={4} data-testid="button-region-back" onClick={() => clearLocationFilters()}>
             &lt;
           </Button>
-          <Text fontWeight={`bold`}>{region}</Text>
+          <Text fontWeight={`bold`}>{t(`regions.${carbonReduction.carbonMapDataFilters.region}`)}</Text>
         </Flex>
       )
     } else {
@@ -25,21 +61,26 @@ export const RegionSearch = (): React.JSX.Element => {
     }
   }
   return (
-    <Flex height={`40px`} alignItems={`center`}>
+    <Flex height="auto" alignItems={`center`}>
       {regionTitle()}
-      <Divider marginX={6} height={`70%`} orientation="vertical" />
-      <HStack spacing={4}>
-        {Regions.map(
-          (regionName, idx) =>
-            regionName !== region && (
-              <Button data-testid={`button-region-${idx}`} key={regionName} variant={`unstyled`} onClick={() => setRegion(regionName)}>
-                <Tag size={`md`} borderRadius="full" variant="solid" colorScheme="gray">
-                  <TagLabel>{t(`regions.${regionName}`)}</TagLabel>
-                </Tag>
-              </Button>
-            ),
-        )}
-      </HStack>
+      <Divider marginX={6} height={`70px`} orientation="vertical" />
+      {carbonReduction.carbonMapDataFilters?.region !== SubRegion.WORLD ? (
+        <AutoComplete
+          onItemClick={(country) => setCountry(country.value)}
+          onItemHover={(country) => setHoverCountry(country.value)}
+          onDropDownLeave={() => setHoverCountry(``)}
+          items={getSearchItems()}
+          placeholder={getCountryPlaceholder(carbonReduction, t, countryTranslate)}
+        />
+      ) : (
+        <AutoComplete
+          onItemHover={(region) => setHoverSubRegion(region.value)}
+          onDropDownLeave={() => setHoverSubRegion(``)}
+          onItemClick={(region) => setSubRegion(region.value)}
+          items={getSearchItems()}
+          placeholder={carbonReduction?.carbonMapHoveredRegion !== `` ? t(`regions.${carbonReduction.carbonMapHoveredRegion}`) : t(`regions.chooseRegion`)}
+        />
+      )}
     </Flex>
   )
 }

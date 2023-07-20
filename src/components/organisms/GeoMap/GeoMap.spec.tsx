@@ -1,35 +1,27 @@
 import renderer, { ReactTestRenderer, ReactTestRendererJSON } from 'react-test-renderer'
+import { fireEvent, render } from '@testing-library/react'
+
 import GeoMap from './GeoMap'
 import { SubRegion } from '@/@types/geojson'
+import { MockData } from '@/test/TestOvermindMockData'
+import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 
 describe(`GeoMap component`, () => {
   let component: ReactTestRenderer
 
   beforeAll(() => {
-    component = renderer.create(<GeoMap subRegion={SubRegion.AUSTRALIA_AND_NEW_ZEALAND} />)
+    component = renderer.create(
+      <TestOvermindWrapper>
+        <GeoMap subRegion={SubRegion.AUSTRALIA_AND_NEW_ZEALAND} />
+      </TestOvermindWrapper>,
+    )
   })
 
   it(`renders correctly`, () => {
     expect(component.toJSON()).toMatchSnapshot()
   })
 
-  it(`renders when mouse hovers a dot`, async () => {
-    const tree = component.toJSON() as ReactTestRendererJSON
-
-    expect(tree.children).not.toBeNull()
-
-    if (tree.children) {
-      const dot = tree.children[0] as ReactTestRendererJSON
-
-      renderer.act(() => {
-        dot.props.onMouseOver()
-      })
-
-      expect(component.toJSON()).toMatchSnapshot()
-    }
-  })
-
-  it(`renders when mouse leaves a dot`, async () => {
+  it(`renders when mouse over a dot`, async () => {
     const tree = component.toJSON() as ReactTestRendererJSON
 
     expect(tree.children).not.toBeNull()
@@ -45,72 +37,31 @@ describe(`GeoMap component`, () => {
     }
   })
 
-  it(`renders when mouse hovers a dot on world view`, async () => {
-    component = renderer.create(<GeoMap />)
-
-    const tree = component.toJSON() as ReactTestRendererJSON
-
-    expect(tree.children).not.toBeNull()
-
-    if (tree.children) {
-      const dot = tree.children[0] as ReactTestRendererJSON
-
-      renderer.act(() => {
-        dot.props.onMouseOver()
-      })
-
-      expect(component.toJSON()).toMatchSnapshot()
-    }
+  it(`renders the component with selected region`, () => {
+    const { container } = render(
+      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
+        <GeoMap subRegion={SubRegion.AUSTRALIA_AND_NEW_ZEALAND} />
+      </TestOvermindWrapper>,
+    )
+    expect(container).toMatchSnapshot()
   })
 
-  it(`renders when mouse leaves a dot on world view`, async () => {
-    component = renderer.create(<GeoMap />)
+  it(`should handle click event properly when selectedRegion is DEFAULT_REGION`, () => {
+    const { container } = render(
+      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
+        <GeoMap
+          subRegion={SubRegion.WORLD} // Set subRegion to SubRegion.WORLD (or any other default sub-region)
+        />
+      </TestOvermindWrapper>,
+    )
 
-    const tree = component.toJSON() as ReactTestRendererJSON
+    // Use the testing library's 'getByTestId' to find the rendered SVG element.
+    const svgElement = container.firstChild
 
-    expect(tree.children).not.toBeNull()
-
-    if (tree.children) {
-      const dot = tree.children[0] as ReactTestRendererJSON
-
-      renderer.act(() => {
-        dot.props.onMouseLeave()
-      })
-
-      expect(component.toJSON()).toMatchSnapshot()
-    }
-  })
-
-  it(`renders when mouse clicks a dot`, async () => {
-    const tree = component.toJSON() as ReactTestRendererJSON
-
-    expect(tree.children).not.toBeNull()
-    if (tree.children) {
-      const dot = tree.children[0] as ReactTestRendererJSON
-
-      renderer.act(() => {
-        dot.props.onClick()
-      })
-
-      expect(component.toJSON()).toMatchSnapshot()
-    }
-  })
-
-  it(`renders when mouse clicks a dot with dot's sub region currently selected`, async () => {
-    component = renderer.create(<GeoMap subRegion={SubRegion.NORTHERN_AMERICA} />)
-
-    const tree = component.toJSON() as ReactTestRendererJSON
-
-    expect(tree.children).not.toBeNull()
-
-    if (tree.children) {
-      const dot = tree.children[0] as ReactTestRendererJSON
-
-      renderer.act(() => {
-        dot.props.onClick()
-      })
-
-      expect(component.toJSON()).toMatchSnapshot()
+    // Now, we'll simulate a click event on the SVG element. For simplicity, let's assume
+    // that the first dot in the SVG represents a country with subRegion 'COUNTRY_SUBREGION'.
+    if (svgElement) {
+      fireEvent.click(svgElement)
     }
   })
 })

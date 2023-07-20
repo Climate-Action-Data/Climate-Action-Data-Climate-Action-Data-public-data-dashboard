@@ -6,7 +6,7 @@ export const enum Region {
   OCEANIA = `oceania`,
 }
 
-export const enum SubRegion {
+export enum SubRegion {
   SOUTHERN_ASIA = `southern-asia`,
   NORTHERN_EUROPE = `northern-europe`,
   SOUTHERN_EUROPE = `southern-europe`,

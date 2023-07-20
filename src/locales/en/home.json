@@ -1,21 +1,42 @@
 {
-  "regions": {
-    "north-america": "North America",
-    "south-america": "South America",
-    "europe": "Europe",
-    "africa": "Africa",
-    "asia": "Asia",
-    "anz": "ANZ"
-  },
-  "timeframes": {
-    "max": "Max",
-    "12m": "12m",
-    "ytd": "YTD",
-    "1m": "1m"
-  },
   "appHeader": {
     "title": "Connecting Carbon markets through open data.",
     "findOutMore": "Find out more about CAD Trust",
     "featureImageAltText": "header feature image"
+  },
+  "regions": {
+    "northern-europe": "Northern Europe",
+    "southern-europe": "Southern Europe",
+    "northern-africa": "Northern Africa",
+    "polynesia": "Polynesia",
+    "sub-saharan-africa": "Sub Saharan Africa",
+    "latin-america-and-the-caribbean": "Latin America and the Caribbean",
+    "western-asia": "Western Asia",
+    "australia-and-new-zealand": "Australia and New Zealand",
+    "western-europe": "Western Europe",
+    "eastern-europe": "Eastern Europe",
+    "northern-america": "Northern America",
+    "south-eastern-asia": "South Eastern Asia",
+    "southern-asia": "Southern Asia",
+    "eastern-asia": "Eastern Asia",
+    "melanesia": "Melanesia",
+    "micronesia": "Micronesia",
+    "central-asia": "Central Asia",
+    "world": "World",
+    "chooseRegion": "Choose a region",
+    "chooseCountry": "Choose a country"
+},
+  "timeframes": {
+    "max": "Max",
+    "twelveMonths": "12m",
+    "sixMonths": "6m",
+    "oneMonth": "1m"
+  },
+  "carbonReduction": {
+    "activeProjects": "Active Projects",
+    "totalReduction": "Total Reduction (YTD)",
+    "annualReduction": "Annual Est. Reduction",
+    "sector": "Sector (top 4)",
+    "standard": "Standard"
   }
 }
