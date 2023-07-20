@@ -40,7 +40,12 @@ export interface PercentDataset {
   average: number
 }
 
-export interface RawCountryCreditsHistory {
+export interface IssuedRetiredGraphData {
+  lastUpdate: string
+  countriesData: IssuedRetiredDataCountry[]
+}
+
+export interface IssuedRetiredDataCountry {
   countryCode: string
   timeRanges: {
     year: number
@@ -52,7 +57,7 @@ export interface RawCountryCreditsHistory {
 
 export interface CreditsHistoryChartData {
   id: string
-  data: { x: string; y: number }[]
+  data: { x: Date; y: number }[]
 }
 
 export interface FilteredCreditsHistoryData {
@@ -62,6 +67,7 @@ export interface FilteredCreditsHistoryData {
 }
 
 export interface CreditsHistoryDataState {
-  rawCreditsHistory?: EffectResponse<RawCountryCreditsHistory[]>
+  rawCreditsHistory?: EffectResponse<IssuedRetiredGraphData>
   filteredCreditsHistory: FilteredCreditsHistoryData | undefined
+  dataFilters: DataFilters
 }

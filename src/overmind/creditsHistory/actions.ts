@@ -1,7 +1,29 @@
-import { Context } from '@/overmind'
-import { FilteredCreditsHistoryData, RawCountryCreditsHistory } from '@/@types/State'
+import { Overmind } from 'overmind'
+import { differenceInMonths, isBefore, startOfMonth } from 'date-fns'
 
-const generateFilteredCreditsHistory = (rawData: RawCountryCreditsHistory[]): FilteredCreditsHistoryData => {
+import { Context } from '@/overmind'
+import { DataFilters, FilteredCreditsHistoryData, IssuedRetiredDataCountry } from '@/@types/State'
+import { SubRegion } from '@/@types/geojson'
+import { TimeframesData } from '@/@types/Timeframe'
+import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
+
+const appendChartDataAndStat = (result: FilteredCreditsHistoryData, formattedDateTime: Date, issued: number, retired: number) => {
+  const index = result.chartData[0].data.findIndex((e) => e.x === formattedDateTime)
+  if (index < 0) {
+    result.chartData[0].data.push({ x: formattedDateTime, y: issued })
+    result.chartData[1].data.push({ x: formattedDateTime, y: retired })
+  } else {
+    result.chartData[0].data[index] = { x: formattedDateTime, y: result.chartData[0].data[index].y + issued }
+    result.chartData[1].data[index] = { x: formattedDateTime, y: result.chartData[1].data[index].y + retired }
+  }
+  result.issued += issued
+  result.retired += retired
+}
+
+const generateFilteredCreditsHistory = (rawData: IssuedRetiredDataCountry[], dataFilters: DataFilters): FilteredCreditsHistoryData => {
+  const today = startOfMonth(new Date())
+  const { country, region, timeframe } = dataFilters
+
   const result: FilteredCreditsHistoryData = {
     chartData: [
       {
@@ -16,28 +38,64 @@ const generateFilteredCreditsHistory = (rawData: RawCountryCreditsHistory[]): Fi
     issued: 0,
     retired: 0,
   }
+
   rawData.map((countryEntry) => {
-    countryEntry.timeRanges.map((timeRangeEntry) => {
-      const formattedDateTime = `${timeRangeEntry.year}-${timeRangeEntry.month}`
-      const index = result.chartData[0].data.findIndex((e) => e.x === formattedDateTime)
-      if (index < 0) {
-        result.chartData[0].data.push({ x: formattedDateTime, y: timeRangeEntry.issued })
-        result.chartData[1].data.push({ x: formattedDateTime, y: timeRangeEntry.retired })
-      } else {
-        result.chartData[0].data[index] = { x: formattedDateTime, y: result.chartData[0].data[index].y + timeRangeEntry.issued }
-        result.chartData[1].data[index] = { x: formattedDateTime, y: result.chartData[1].data[index].y + timeRangeEntry.retired }
-      }
-      result.issued += timeRangeEntry.issued
-      result.retired += timeRangeEntry.retired
-    })
+    if (region === SubRegion.WORLD || (country == undefined && generateCountryByRegion(region).includes(countryEntry.countryCode)) || countryEntry.countryCode == country) {
+      countryEntry.timeRanges.map((timeRangeEntry) => {
+        const { year, retired, issued, month } = timeRangeEntry
+        const formattedDateTime = new Date(year, month - 1)
+        if (
+          timeframe === TimeframesData.MAX ||
+          // eslint-disable-next-line no-magic-numbers
+          (timeframe === TimeframesData.ONE_YEAR && differenceInMonths(today, formattedDateTime) <= 12) ||
+          // eslint-disable-next-line no-magic-numbers
+          (timeframe === TimeframesData.SIX_MONTHS && differenceInMonths(today, formattedDateTime) <= 6) ||
+          (timeframe === TimeframesData.ONE_MONTH && differenceInMonths(today, formattedDateTime) <= 1)
+        ) {
+          appendChartDataAndStat(result, formattedDateTime, issued, retired)
+        }
+      })
+    }
   })
+  // eslint-disable-next-line no-magic-numbers
+  result.chartData[0].data.sort((a, b) => (isBefore(a.x, b.x) ? -1 : 1))
+  // eslint-disable-next-line no-magic-numbers
+  result.chartData[1].data.sort((a, b) => (isBefore(a.x, b.x) ? -1 : 1))
   return result
 }
 
 export const getCreditsHistory = async (context: Context): Promise<void> => {
   const carbonCreditsHistory = await context.effects.creditsHistory.getCreditsHistory()
-  if (carbonCreditsHistory.data) {
+  const countriesData = carbonCreditsHistory.data?.countriesData
+  if (countriesData) {
     context.state.creditsHistory.rawCreditsHistory = carbonCreditsHistory
-    context.state.creditsHistory.filteredCreditsHistory = generateFilteredCreditsHistory(carbonCreditsHistory.data)
+    context.state.creditsHistory.filteredCreditsHistory = generateFilteredCreditsHistory(countriesData, { region: SubRegion.WORLD, timeframe: TimeframesData.MAX })
+  }
+}
+
+export const setSubRegion = (context: Context, subRegion: string) => {
+  context.state.creditsHistory.dataFilters.region = subRegion as SubRegion
+  context.state.creditsHistory.dataFilters.country = undefined
+}
+
+export const setCountry = (context: Context, country: string) => {
+  context.state.creditsHistory.dataFilters.country = country
+}
+export const setTimeframe = (context: Context, timeframe: TimeframesData) => {
+  context.state.creditsHistory.dataFilters.timeframe = timeframe
+}
+
+export const onInitializeOvermind = async ({ state, actions }: Context, instance: Overmind<Context>) => {
+  try {
+    instance.addMutationListener((mutation: { path: string | string[] }) => {
+      if (mutation.path.includes(`creditsHistory.dataFilters`)) {
+        state.creditsHistory.filteredCreditsHistory = generateFilteredCreditsHistory(
+          state.creditsHistory.rawCreditsHistory?.data?.countriesData ?? [],
+          state.creditsHistory.dataFilters,
+        )
+      }
+    })
+  } catch (error: any) {
+    console.log(`Could not track data`)
   }
 }

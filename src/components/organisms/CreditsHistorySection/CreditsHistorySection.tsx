@@ -1,21 +1,22 @@
-import { FC, useEffect, useState } from 'react'
-import { Card, Grid, GridItem, HStack, Stack, StackDivider, useBreakpointValue, Wrap, WrapItem } from '@chakra-ui/react'
+import { FC, useEffect } from 'react'
+import { Card, Grid, GridItem, HStack, Stack, StackDivider, useBreakpointValue } from '@chakra-ui/react'
 
 import { useTranslation } from 'react-i18next'
-import { Timeframes } from '@/@types/Timeframe'
+import { TimeframesData } from '@/@types/Timeframe'
 import CreditsHistoryChart from '@/components/molecules/CreditsHistoryChart/CreditsHistoryChart'
 import { useActions, useAppState } from '@/overmind'
 import CreditsHistoryStat from '@/components/atoms/CreditsHistoryStat/CreditHistoryStat'
 import SubregionIndicator from '@/components/atoms/SubregionIndicator/SubregionIndicator'
 import SelectableChip from '@/components/atoms/SelectableChip/SelectableChip'
 import { SubRegion } from '@/@types/geojson'
+import { AutoComplete } from '@/components/molecules/AutoComplete/AutoComplete'
+import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
 
 const CreditsHistorySection: FC = () => {
-  const [region, setRegion] = useState<string | undefined>(undefined)
-  const [selectedTimeFrame, setSelectedTimeFrame] = useState<string | undefined>(undefined)
-  const { getCreditsHistory } = useActions().creditsHistory
-  const { filteredCreditsHistory } = useAppState().creditsHistory
+  const { getCreditsHistory, setCountry, setSubRegion, setTimeframe } = useActions().creditsHistory
+  const { filteredCreditsHistory, dataFilters } = useAppState().creditsHistory
   const { t } = useTranslation(`home`)
+  const { t: countryTranslate } = useTranslation(`countries`)
   const statsLayout = useBreakpointValue({
     base: {
       templateAreas: `'chart''stats'`,
@@ -33,6 +34,32 @@ const CreditsHistorySection: FC = () => {
       getCreditsHistory()
     }
   }, [])
+
+  const getSearchItems = (
+    subRegion: SubRegion,
+  ): {
+    value: string
+    label: string
+  }[] => {
+    if (subRegion !== SubRegion.WORLD) {
+      return generateCountryByRegion(subRegion).map((country) => ({
+        value: country,
+        label: countryTranslate(`${country}`),
+      }))
+    } else {
+      return Object.values(SubRegion).map((region) => ({
+        value: region,
+        label: t(`regions.${region}`),
+      }))
+    }
+  }
+
+  const getCountryPlaceholder = (country: string | undefined): string => {
+    if (country) {
+      return countryTranslate(`${country}`)
+    }
+    return t(`regions.chooseCountry`)
+  }
 
   return (
     <Card padding={`24px`} variant={`elevated`}>
@@ -53,32 +80,40 @@ const CreditsHistorySection: FC = () => {
             `}
             gridTemplateColumns={`auto 1fr`}
             rowGap={`16px`}
+            alignItems={`center`}
           >
             <GridItem area={`title`} borderRight={`1px`} borderRightColor={`charcoal.500`} padding={`8px 16px `}>
-              <SubregionIndicator subregion={region} clearSubregion={() => setRegion(undefined)} />
+              <SubregionIndicator subregion={dataFilters?.region} clearSubregion={() => setSubRegion(SubRegion.WORLD)} />
             </GridItem>
             <GridItem area={`continents-filter`} alignSelf={`center`} padding={`4px `}>
               <HStack padding={`4px 16px`} gap={`8px`} alignContent={`baseline`}>
-                <Wrap>
-                  {Object.values(SubRegion).map(
-                    (subregionName, idx) =>
-                      subregionName != region && (
-                        <WrapItem key={idx}>
-                          <SelectableChip label={t(`regions.${subregionName}`)} onClick={() => setRegion(subregionName)} />
-                        </WrapItem>
-                      ),
-                  )}
-                </Wrap>
+                {dataFilters.region === SubRegion.WORLD ? (
+                  <AutoComplete
+                    onItemClick={(region) => setSubRegion(region.value)}
+                    onItemHover={(_) => undefined}
+                    onDropDownLeave={() => undefined}
+                    items={getSearchItems(dataFilters.region)}
+                    placeholder={t(`regions.chooseRegion`)}
+                  />
+                ) : (
+                  <AutoComplete
+                    onItemClick={(country) => setCountry(country.value)}
+                    onItemHover={(_) => undefined}
+                    onDropDownLeave={() => undefined}
+                    items={getSearchItems(dataFilters.region)}
+                    placeholder={getCountryPlaceholder(dataFilters.country)}
+                  />
+                )}
               </HStack>
             </GridItem>
             <GridItem area={`date-range-filter`}>
               <HStack padding={`4px 16px`} gap={`8px`}>
-                {Object.values(Timeframes).map((timeframe, idx) => (
+                {Object.values(TimeframesData).map((timeframe, idx) => (
                   <SelectableChip
-                    isSelected={selectedTimeFrame == timeframe}
+                    isSelected={dataFilters.timeframe === timeframe}
                     key={idx}
-                    label={timeframe.toUpperCase()}
-                    onClick={() => setSelectedTimeFrame(selectedTimeFrame == timeframe ? undefined : timeframe)}
+                    label={t(`timeframes.${timeframe}`)}
+                    onClick={() => setTimeframe(dataFilters.timeframe === timeframe ? TimeframesData.MAX : timeframe)}
                   />
                 ))}
               </HStack>

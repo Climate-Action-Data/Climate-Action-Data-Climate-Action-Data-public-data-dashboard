@@ -1,8 +1,10 @@
-import { SubRegion } from '@/@types/geojson'
-import { useActions, useAppState, useEffects } from '@/overmind'
-import { Box, Button, Divider, Flex, Text } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
-import { AutoComplete } from '../AutoComplete/AutoComplete'
+import { Box, Button, Divider, Flex, Text } from '@chakra-ui/react'
+
+import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
+import { SubRegion } from '@/@types/geojson'
+import { useActions, useAppState } from '@/overmind'
+import { AutoComplete } from '@/components/molecules/AutoComplete/AutoComplete'
 import { CarbonReduction } from '@/@types/State'
 
 export const getCountryPlaceholder = (carbonReduction: CarbonReduction, t: any, countryTranslate: any): string => {
@@ -23,7 +25,6 @@ export const RegionSearch = (): React.JSX.Element => {
 
   const { carbonReduction } = useAppState().analytics
   const { setSubRegion, setHoverSubRegion, setCountry, setHoverCountry, clearLocationFilters } = useActions().analytics
-  const { generateCountryByRegion } = useEffects().analytics
 
   const getSearchItems = (): {
     value: string

@@ -1,9 +1,8 @@
 import { EffectResponse } from '@/@types/EffectResponse'
 import data from '@/assets/map_dashboard_data'
 import { TimeframesData } from '@/@types/Timeframe'
-import { SubRegion } from '@/@types/geojson'
-import countriesContinentsMap from '@/assets/geo-map/countries-continents-mapping'
 import { CarbonData, CarbonMapData, PercentDataset } from '@/@types/State'
+
 const SLEEP = 500
 
 export const getCarbonReduction = async (): Promise<EffectResponse<CarbonMapData[]>> => {
@@ -17,16 +16,6 @@ export const getCarbonReduction = async (): Promise<EffectResponse<CarbonMapData
     console.log(error)
     return { error: { code: `200`, message: `could not fetch data` } }
   }
-}
-
-export const generateCountryByRegion = (region: Exclude<SubRegion, SubRegion.WORLD>) => {
-  const countryList: string[] = []
-  countriesContinentsMap.forEach((value, key) => {
-    if (value === region) {
-      countryList.push(key)
-    }
-  })
-  return countryList
 }
 
 export const generateHasCountryData = (countryData: CarbonMapData[], timeframe: TimeframesData = TimeframesData.MAX) => {

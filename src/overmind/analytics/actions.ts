@@ -1,8 +1,10 @@
+import { Overmind } from 'overmind'
+
 import { SubRegion } from '@/@types/geojson'
-import { Context } from '..'
+import { Context } from '@/overmind'
 import { TimeframesData } from '@/@types/Timeframe'
 import { CarbonData, CarbonMapData } from '@/@types/State'
-import { Overmind } from 'overmind'
+import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
 import { EffectResponse } from '@/@types/EffectResponse'
 
 export const getCarbonReduction = async (context: Context, carbonData: EffectResponse<CarbonMapData[]>): Promise<void> => {
@@ -47,7 +49,7 @@ export const getCarbonMapDataFiltered = ({ state, effects }: Context) => {
         result = mapData.timeRanges[currentData.carbonMapDataFilters.timeframe]
       }
     } else if (currentData.carbonMapDataFilters.region !== SubRegion.WORLD) {
-      const countryList = effects.analytics.generateCountryByRegion(currentData.carbonMapDataFilters.region)
+      const countryList = generateCountryByRegion(currentData.carbonMapDataFilters.region)
       result = effects.analytics.combineCountryData(
         currentData.carbonMapData.data.filter((countryData) => countryList.includes(countryData.countryCode)),
         currentData.carbonMapDataFilters.timeframe,
