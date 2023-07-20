@@ -1,7 +1,7 @@
 import { CarbonReductionSector } from '@/components/atoms/CarbonReductionSector/CarbonReductionSector'
 import { CarbonReductionStandard } from '@/components/atoms/CarbonReductionStandard/CarbonReductionStandard'
 import { ImportantText } from '@/components/atoms/ImportantText/ImportantText'
-import { useActions, useAppState } from '@/overmind'
+import { useActions, useAppState, useEffects } from '@/overmind'
 import { convertToMtCO2 } from '@/utils/UnitConverter'
 import { Box, Flex, Text, Skeleton, Stack, Divider, Center, SkeletonCircle } from '@chakra-ui/react'
 import { FC, useEffect } from 'react'
@@ -12,19 +12,22 @@ const DEFAULT_SECTOR_NUMBER = 4
 export const CarbonReductionWidget: FC = (): React.JSX.Element => {
   const { carbonReduction, carbonMapDataFiltered } = useAppState().analytics
   const { getCarbonReduction } = useActions().analytics
+  const effects = useEffects().analytics
   const { t } = useTranslation(`home`)
 
   const colorChart = [`green.600`, `green.700`, `green.800`, `lightGray.500`]
 
   useEffect(() => {
     if (!carbonReduction.carbonMapData) {
-      getCarbonReduction()
+      effects.getCarbonReduction().then((carbonData) => {
+        getCarbonReduction(carbonData)
+      })
     }
   }, [])
 
   if (carbonReduction.carbonMapData === undefined && carbonMapDataFiltered === undefined) {
     return (
-      <Box flex={1}>
+      <Box data-testid="loading-indicator" flex={1}>
         <Stack>
           <Center>
             <Box width={`50%`}>

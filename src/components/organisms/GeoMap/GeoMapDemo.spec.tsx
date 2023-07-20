@@ -1,6 +1,7 @@
 import renderer, { ReactTestRenderer } from 'react-test-renderer'
+
 import GeoMapDemo from './GeoMapDemo'
-import { TestOvermindWrapper } from '@/components/atoms/TestOvermindWrapper/TestOvermindWrapper'
+import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 
 describe(`GeoMapDemo component`, () => {
   let component: ReactTestRenderer

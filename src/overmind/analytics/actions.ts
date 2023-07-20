@@ -1,16 +1,11 @@
 import { SubRegion } from '@/@types/geojson'
 import { Context } from '..'
 import { TimeframesData } from '@/@types/Timeframe'
-import { CarbonData } from '@/@types/State'
+import { CarbonData, CarbonMapData } from '@/@types/State'
 import { Overmind } from 'overmind'
+import { EffectResponse } from '@/@types/EffectResponse'
 
-interface SearchParams {
-  region: string | null
-  timeframe: string | null
-}
-
-export const getCarbonReduction = async (context: Context, searchParams: SearchParams = { region: null, timeframe: null }): Promise<void> => {
-  const carbonData = await context.effects.analytics.getCarbonReduction()
+export const getCarbonReduction = async (context: Context, carbonData: EffectResponse<CarbonMapData[]>): Promise<void> => {
   if (carbonData.data) {
     context.state.analytics.carbonReduction.carbonMapData = carbonData
     context.state.analytics.carbonReduction.carbonMapHasCountryData = context.effects.analytics.generateHasCountryData(carbonData.data)
@@ -36,6 +31,10 @@ export const setHoverCountry = (context: Context, country: string) => {
 
 export const setTimeframe = (context: Context, timeframe: TimeframesData) => {
   context.state.analytics.carbonReduction.carbonMapDataFilters.timeframe = timeframe
+}
+
+export const setTestingCarbonMapDataFiltered = (context: Context, carbonMapDataFiltered: CarbonData | undefined) => {
+  context.state.analytics.carbonMapDataFiltered = carbonMapDataFiltered
 }
 
 export const getCarbonMapDataFiltered = ({ state, effects }: Context) => {

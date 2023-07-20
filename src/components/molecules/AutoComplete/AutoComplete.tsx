@@ -64,16 +64,16 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
         <PopoverTrigger>
           <Stack>
             <InputGroup size="md">
-              <Input onClick={toggleIsOpen} pr="2.5rem" placeholder={placeholder} ref={inputElement} onChange={(e) => setInputValue(e.target.value)}/>
+              <Input data-testid="dropdown_input" onClick={toggleIsOpen} pr="2.5rem" placeholder={placeholder} ref={inputElement} onChange={(e) => setInputValue(e.target.value)}/>
               <InputRightElement width="2.5rem">
-                <Button onClick={toggleIsOpen} variant="lightGray" aria-label="toggle menu" h="1.75rem" size="sm">
+                <Button data-testid="dropdown-button" onClick={toggleIsOpen} variant="lightGray" aria-label="toggle menu" h="1.75rem" size="sm">
                   <DropDownIcon />
                 </Button>
               </InputRightElement>
             </InputGroup>
           </Stack>
         </PopoverTrigger>
-        <PopoverContent onMouseLeave={() => {setIsOpen(false); (onDropDownLeave) ? onDropDownLeave(): undefined}} maxHeight={`150px`} overflowY="scroll">
+        <PopoverContent data-testid="dropdown-body" onMouseLeave={() => {setIsOpen(false); (onDropDownLeave) ? onDropDownLeave(): undefined}} maxHeight={`150px`} overflowY="scroll">
           <PopoverBody>
             <List>
               {inputItems.map((item, index) => (
@@ -86,6 +86,7 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
                       onMouseEnter={() => {(onItemHover) ? onItemHover(item): undefined}}
                       onClick={() => {setIsOpen(false);onItemClick(item)}}
                       key={`${item.value}${index}`}
+                      data-testid={`dropdown-item-${index}`}
                     >
                       <Box display="inline-flex" alignItems="center">
                         <Highlight styles={{ px:0.5,bg: highlightItemBg }} query={[inputValue || ``]}>

@@ -11,6 +11,7 @@ const customJestConfig = {
     collectCoverage: true,
     moduleNameMapper: {
         '^d3-color$': '<rootDir>/node_modules/.pnpm/d3-color@3.1.0/node_modules/d3-color/dist/d3-color.min.js',
+        // '^@/overmind$': '<rootDir>/src/overmind',
         // 'd3-color': '<rootDir>/node_modules/d3-color/dist/d3-color.min.js',
     },
     setupFiles: ["<rootDir>/src/@types/SetupTest.ts", "<rootDir>/src/i18n.ts"],
