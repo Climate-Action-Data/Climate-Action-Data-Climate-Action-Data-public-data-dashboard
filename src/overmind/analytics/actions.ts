@@ -1,11 +1,11 @@
 import { SubRegion } from '@/@types/geojson'
 import { Context } from '..'
 import { TimeframesData } from '@/@types/Timeframe'
-import { CarbonData, CarbonMapData } from '@/@types/State'
+import { CountryPeriodData, CountryData } from '@/@types/State'
 import { Overmind } from 'overmind'
 import { EffectResponse } from '@/@types/EffectResponse'
 
-export const getCarbonReduction = async (context: Context, carbonData: EffectResponse<CarbonMapData[]>): Promise<void> => {
+export const getCarbonReduction = async (context: Context, carbonData: EffectResponse<CountryData[]>): Promise<void> => {
   if (carbonData.data) {
     context.state.analytics.carbonReduction.carbonMapData = carbonData
     context.state.analytics.carbonReduction.carbonMapHasCountryData = context.effects.analytics.generateHasCountryData(carbonData.data)
@@ -33,12 +33,12 @@ export const setTimeframe = (context: Context, timeframe: TimeframesData) => {
   context.state.analytics.carbonReduction.carbonMapDataFilters.timeframe = timeframe
 }
 
-export const setTestingCarbonMapDataFiltered = (context: Context, carbonMapDataFiltered: CarbonData | undefined) => {
+export const setTestingCarbonMapDataFiltered = (context: Context, carbonMapDataFiltered: CountryPeriodData | undefined) => {
   context.state.analytics.carbonMapDataFiltered = carbonMapDataFiltered
 }
 
 export const getCarbonMapDataFiltered = ({ state, effects }: Context) => {
-  let result: CarbonData | undefined = undefined
+  let result: CountryPeriodData | undefined = undefined
   const currentData = state.analytics.carbonReduction
   if (currentData.carbonMapData?.data) {
     if (currentData.carbonMapDataFilters.country && currentData.carbonMapData?.data) {

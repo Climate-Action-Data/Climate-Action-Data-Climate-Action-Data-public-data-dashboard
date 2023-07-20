@@ -1,8 +1,8 @@
-import { CarbonData, DataState } from '@/@types/State'
+import { CountryPeriodData, DataState } from '@/@types/State'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
 
-const CARBON_MAP_DATA_FILTERED: CarbonData = {
+const CARBON_MAP_DATA_FILTERED: CountryPeriodData = {
   activeProjects: 200,
   totalReductions: 201203,
   estimatedReductions: 201203,
