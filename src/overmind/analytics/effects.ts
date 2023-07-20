@@ -31,7 +31,7 @@ export const generateCountryByRegion = (region: Exclude<SubRegion, SubRegion.WOR
 
 export const generateHasCountryData = (countryData: CarbonMapData[], timeframe: TimeframesData = TimeframesData.MAX) => {
   const hasCountryData = new Map<string, boolean>()
-  countryData.map((country) => {
+  countryData.forEach((country) => {
     if (country.timeRanges[timeframe] && country.timeRanges[timeframe].activeProjects > 0) {
       hasCountryData.set(country.countryCode, true)
     } else {
@@ -52,7 +52,7 @@ export const combineCountryData = (countryData: CarbonMapData[], timeframe: Time
   }
   const sectorsToCombine: PercentDataset[][] = []
   const standardsToCombine: PercentDataset[][] = []
-  countryData.map((country) => {
+  countryData.forEach((country) => {
     if (country.timeRanges[timeframe]) {
       const currentData = country.timeRanges[timeframe]
       combinedData.activeProjects += currentData.activeProjects

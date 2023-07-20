@@ -14,22 +14,22 @@ it(`renders correctly`, () => {
 })
 
 it(`renders with click on timeframe`, async () => {
-  const { container } = await render(
+  const { container } = render(
     <TestOvermindWrapper>
       <TimeframeSearch />
     </TestOvermindWrapper>,
   )
   await userEvent.click(screen.getByTestId(`button-timeframe-1`))
-  await expect(container).toMatchSnapshot()
+  expect(container).toMatchSnapshot()
 })
 
 it(`renders with click on going back`, async () => {
-  const { container } = await render(
+  const { container } = render(
     <TestOvermindWrapper>
       <TimeframeSearch />
     </TestOvermindWrapper>,
   )
   await userEvent.click(screen.getByTestId(`button-timeframe-1`))
   await userEvent.click(screen.getByTestId(`button-timeframe-close`))
-  await expect(container).toMatchSnapshot()
+  expect(container).toMatchSnapshot()
 })

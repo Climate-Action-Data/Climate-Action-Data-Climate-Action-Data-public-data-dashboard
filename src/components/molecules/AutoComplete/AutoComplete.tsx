@@ -73,7 +73,7 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
             </InputGroup>
           </Stack>
         </PopoverTrigger>
-        <PopoverContent data-testid="dropdown-body" onMouseLeave={() => {setIsOpen(false); (onDropDownLeave) ? onDropDownLeave(): undefined}} maxHeight={`150px`} overflowY="scroll">
+        <PopoverContent data-testid="dropdown-body" onMouseLeave={() => {setIsOpen(false); return (onDropDownLeave) ? onDropDownLeave(): undefined}} maxHeight={`150px`} overflowY="scroll">
           <PopoverBody>
             <List>
               {inputItems.map((item, index) => (
@@ -83,9 +83,9 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
                       py={1}
                       borderBottom="1px solid rgba(0,0,0,0.01)"
                       _hover={{ bg: `lightGray.200`, cursor: `pointer` }}
-                      onMouseEnter={() => {(onItemHover) ? onItemHover(item): undefined}}
+                      onMouseEnter={() => (onItemHover) ? onItemHover(item): undefined}
                       onClick={() => {setIsOpen(false);onItemClick(item)}}
-                      key={`${item.value}${index}`}
+                      key={`${item.value}`}
                       data-testid={`dropdown-item-${index}`}
                     >
                       <Box display="inline-flex" alignItems="center">
