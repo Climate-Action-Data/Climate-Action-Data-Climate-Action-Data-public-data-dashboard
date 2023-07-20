@@ -416,21 +416,11 @@ exports[`CreditsHistorySection renders the widget when carbonMapData and credits
               class="chakra-stack css-1igwmid"
             >
               <button
-                aria-label="clear continent filter"
-                class="chakra-button css-17492fa"
+                class="chakra-button css-fzcdyy"
+                data-testid="button-region-back"
                 type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="chakra-icon css-n5gr1q"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                    fill="currentColor"
-                  />
-                </svg>
+                &lt;
               </button>
               <p
                 class="chakra-text className css-v7dfld"
@@ -1201,21 +1191,11 @@ exports[`CreditsHistorySection renders the widget when carbonMapData and credits
               class="chakra-stack css-1igwmid"
             >
               <button
-                aria-label="clear continent filter"
-                class="chakra-button css-17492fa"
+                class="chakra-button css-fzcdyy"
+                data-testid="button-region-back"
                 type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="chakra-icon css-n5gr1q"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                    fill="currentColor"
-                  />
-                </svg>
+                &lt;
               </button>
               <p
                 class="chakra-text className css-v7dfld"

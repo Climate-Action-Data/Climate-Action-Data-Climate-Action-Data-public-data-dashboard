@@ -1,8 +1,7 @@
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
-import { HStack, IconButton, Text } from '@chakra-ui/react'
+import { Button, HStack, Text } from '@chakra-ui/react'
 import { Open_Sans } from 'next/font/google'
-import { ChevronLeftIcon } from '@chakra-ui/icons'
 import { SubRegion } from '@/@types/geojson'
 
 /* eslint-disable @typescript-eslint/quotes */
@@ -26,7 +25,9 @@ const SubregionIndicator: FC<SubregionIndicatorProps> = ({ subregion, clearSubre
   return (
     <HStack>
       {subregion != SubRegion.WORLD && (
-        <IconButton icon={<ChevronLeftIcon boxSize={6} />} onClick={clearSubregion} aria-label={`clear continent filter`} variant={`lightGrayRound`} size={`xs`} />
+        <Button variant="lightGrayRound" marginRight={4} data-testid="button-region-back" onClick={clearSubregion}>
+          &lt;
+        </Button>
       )}
       <Text {...openSans} sx={{ maxLines: 1, wordWrap: `normal` }}>
         {subregion != SubRegion.WORLD ? t(`regions.${subregion}`) : t(`regions.world`)}
