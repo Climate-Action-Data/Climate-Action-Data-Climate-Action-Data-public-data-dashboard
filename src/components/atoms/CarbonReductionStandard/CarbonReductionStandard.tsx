@@ -12,7 +12,7 @@ export const CarbonReductionStandard = (props: CarbonReductionStandardProps): Re
   return (
     <Flex alignItems={`center`} marginBottom={4}>
       {data.map((standard, idx) => (
-        <Box key={`${standard.name}-${idx}`} textAlign={`center`} marginX={`5px`} flex={1}>
+        <Box key={`${standard.name}`} textAlign={`center`} marginX={`5px`} flex={1}>
           <ImportantText color={colorChart[idx] ? colorChart[idx] : colorChart[colorChart.length - 1]}>{standard.average}%</ImportantText>
           <Text>{standard.name}</Text>
         </Box>

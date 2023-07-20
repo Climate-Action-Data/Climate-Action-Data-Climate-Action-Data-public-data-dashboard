@@ -5,8 +5,8 @@ it(`renders correctly`, () => {
   const { container } = render(
     <CarbonReductionStandard
       data={[
-        { name: `test`, average: 50 },
-        { name: `plop`, average: 50 },
+        { name: `VCS`, average: 50 },
+        { name: `GCC`, average: 50 },
       ]}
     />,
   )

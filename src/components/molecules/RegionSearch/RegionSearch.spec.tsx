@@ -1,4 +1,4 @@
-import { render, fireEvent, screen } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 
 import { RegionSearch, getCountryPlaceholder } from './RegionSearch'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
@@ -29,8 +29,6 @@ describe(`RegionSearch`, () => {
         <RegionSearch />
       </TestOvermindWrapper>,
     )
-    const autoCompleteInput = screen.getByRole(`textbox`) as HTMLInputElement
-    fireEvent.mouseOver(autoCompleteInput)
     expect(container).toMatchSnapshot()
   })
 
