@@ -1,4 +1,4 @@
-import { CountryPeriodData, DataState, MapData } from '@/@types/State'
+import { CountryPeriodData, CreditsHistoryDataState, DataState, MapData } from '@/@types/State'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
 
@@ -275,6 +275,54 @@ const STATE_CARBON_FULL_REGION_COUNTRY_NO_HOVER: DataState = {
   carbonMapDataFiltered: CARBON_MAP_DATA_FILTERED,
 }
 
+const CREDIT_HISTORY_DATA: CreditsHistoryDataState = {
+  dataFilters: { region: SubRegion.LATIN_AMERICA_AND_THE_CARIBBEAN, timeframe: TimeframesData.MAX, country: `COL` },
+  rawCreditsHistory: { data: CREDIT_HISTORY_CHART_DATA },
+  filteredCreditsHistory: {
+    /* eslint-disable no-magic-numbers */
+    chartData: [
+      {
+        id: `issued`,
+        data: [
+          { x: new Date(2023, 3), y: 211306 },
+          { x: new Date(2023, 4), y: 30115653 },
+          { x: new Date(2023, 5), y: 110387057 },
+        ],
+      },
+      {
+        id: `retired`,
+        data: [
+          { x: new Date(2023, 3), y: 118885 },
+          { x: new Date(2023, 4), y: 26355689 },
+          { x: new Date(2023, 5), y: 25333735 },
+        ],
+      },
+    ],
+    /* eslint-enable no-magic-numbers */
+    issued: 140714016,
+    retired: 51808309,
+  },
+}
+
+const CREDIT_HISTORY_DATA_EMPTY_CHART: CreditsHistoryDataState = {
+  dataFilters: { region: SubRegion.LATIN_AMERICA_AND_THE_CARIBBEAN, timeframe: TimeframesData.MAX, country: `COL` },
+  rawCreditsHistory: { data: CREDIT_HISTORY_CHART_DATA },
+  filteredCreditsHistory: {
+    chartData: [
+      {
+        id: `issued`,
+        data: [],
+      },
+      {
+        id: `retired`,
+        data: [],
+      },
+    ],
+    issued: 0,
+    retired: 0,
+  },
+}
+
 export const MockData = {
   CARBON_MAP_DATA_FILTERED,
   CARBON_MAP_DATA,
@@ -283,4 +331,6 @@ export const MockData = {
   STATE_CARBON_FULL,
   STATE_CARBON_FULL_REGION_COUNTRY,
   STATE_CARBON_FULL_REGION_COUNTRY_NO_HOVER,
+  CREDIT_HISTORY_DATA,
+  CREDIT_HISTORY_DATA_EMPTY_CHART,
 }

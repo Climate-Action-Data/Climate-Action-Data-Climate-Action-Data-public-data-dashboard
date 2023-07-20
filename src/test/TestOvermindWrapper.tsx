@@ -1,31 +1,39 @@
+import { PropsWithChildren } from 'react'
 import { createOvermindMock } from 'overmind'
 import { Provider } from 'overmind-react'
+
 import { config } from '@/overmind'
-import { PropsWithChildren } from 'react'
 import { SubRegion } from '@/@types/geojson'
 import { TimeframesData } from '@/@types/Timeframe'
-import { DataState } from '@/@types/State'
+import { CreditsHistoryDataState, DataState } from '@/@types/State'
 
-// const overmind = createOvermind(config)
 interface TestOvermindWrapperProps extends PropsWithChildren {
-  stateData?: DataState
+  analytics?: DataState
+  creditsHistory?: CreditsHistoryDataState
 }
+
 export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
   const actualProps = {
     ...props,
-    stateData: props?.stateData ?? {
-      carbonReduction: {
-        carbonMapHasCountryData: new Map<string, boolean>(),
-        carbonMapDataFilters: { region: SubRegion.WORLD, timeframe: TimeframesData.MAX },
-        carbonMapHoveredRegion: ``,
-        carbonMapHoveredCountry: ``,
-      },
-      carbonMapDataFiltered: undefined,
+  }
+
+  const carbonMapData = props?.analytics ?? {
+    carbonReduction: {
+      carbonMapHasCountryData: new Map<string, boolean>(),
+      carbonMapDataFilters: { region: SubRegion.WORLD, timeframe: TimeframesData.MAX },
+      carbonMapHoveredRegion: ``,
+      carbonMapHoveredCountry: ``,
     },
+    carbonMapDataFiltered: undefined,
+  }
+  const creditHistoryData = props?.creditsHistory ?? {
+    filteredCreditsHistory: undefined,
+    dataFilters: { region: SubRegion.WORLD, timeframe: TimeframesData.MAX },
   }
 
   const overmind = createOvermindMock(config, (state) => {
-    state.analytics = actualProps.stateData
+    state.analytics = carbonMapData
+    state.creditsHistory = creditHistoryData
   })
 
   return <Provider value={overmind}>{actualProps.children}</Provider>
