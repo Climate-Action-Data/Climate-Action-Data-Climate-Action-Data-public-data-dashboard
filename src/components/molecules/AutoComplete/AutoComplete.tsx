@@ -94,7 +94,6 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
                         </Highlight>
                       </Box>
                     </ListItem>)
-
               ))}
             </List>
           </PopoverBody>

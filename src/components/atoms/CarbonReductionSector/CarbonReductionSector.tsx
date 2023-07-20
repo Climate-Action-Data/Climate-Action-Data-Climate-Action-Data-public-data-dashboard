@@ -5,6 +5,7 @@ interface CarbonReductionSectorProps {
   colorChart: string[]
   data: { average: number; name: string }[]
 }
+
 export const CarbonReductionSector = ({ colorChart, data }: CarbonReductionSectorProps): React.JSX.Element => {
   return (
     <Flex>
@@ -13,7 +14,7 @@ export const CarbonReductionSector = ({ colorChart, data }: CarbonReductionSecto
       </Flex>
       <Flex flexDirection={`column`} justifyContent={`space-evenly`} flex={1}>
         {data.map((sector, idx) => (
-          <Box key={`${sector.value}-${idx}`}>
+          <Box key={`${sector.name}-${idx}`}>
             <Text fontWeight="500" color={colorChart[idx]}>
               {sector.average}% {sector.name}
             </Text>
