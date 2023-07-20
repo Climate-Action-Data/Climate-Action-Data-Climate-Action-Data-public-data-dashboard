@@ -39,8 +39,9 @@ const generateFilteredCreditsHistory = (rawData: IssuedRetiredDataCountry[], dat
     issued: 0,
     retired: 0,
   }
+  console.log(rawData)
 
-  rawData.map((countryEntry) => {
+  rawData.forEach((countryEntry) => {
     if (region === SubRegion.WORLD || (country == undefined && generateCountryByRegion(region).includes(countryEntry.countryCode)) || countryEntry.countryCode == country) {
       countryEntry.timeRanges.map((timeRangeEntry) => {
         const { year, retired, issued, month } = timeRangeEntry
@@ -65,11 +66,13 @@ const generateFilteredCreditsHistory = (rawData: IssuedRetiredDataCountry[], dat
   return result
 }
 
-export const getCreditsHistory = async (context: Context, carbonCreditsHistory: EffectResponse<IssuedRetiredGraphData>): Promise<void> => {
-  const countriesData = carbonCreditsHistory.data?.countriesData
-  if (countriesData) {
+export const getCreditsHistory = (context: Context, carbonCreditsHistory: EffectResponse<IssuedRetiredGraphData>) => {
+  if (carbonCreditsHistory.data) {
     context.state.creditsHistory.rawCreditsHistory = carbonCreditsHistory
-    context.state.creditsHistory.filteredCreditsHistory = generateFilteredCreditsHistory(countriesData, { region: SubRegion.WORLD, timeframe: TimeframesData.MAX })
+    context.state.creditsHistory.filteredCreditsHistory = generateFilteredCreditsHistory(carbonCreditsHistory.data.countriesData, {
+      region: SubRegion.WORLD,
+      timeframe: TimeframesData.MAX,
+    })
   }
 }
 

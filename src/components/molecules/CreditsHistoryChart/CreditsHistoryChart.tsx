@@ -8,6 +8,7 @@ const CreditsHistoryChart: FC = () => {
   const { filteredCreditsHistory } = useAppState().creditsHistory
 
   const chartDataPoints = filteredCreditsHistory?.chartData
+  console.log(filteredCreditsHistory)
 
   if (chartDataPoints) {
     return (

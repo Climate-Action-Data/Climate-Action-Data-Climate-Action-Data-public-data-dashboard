@@ -1,6 +1,6 @@
 import { EffectResponse } from '@/@types/EffectResponse'
 import { IssuedRetiredGraphData } from '@/@types/State'
-import mockData from '../../assets/credit_history_data.json'
+import mockData from '../../assets/credit_history_data'
 
 const SLEEP = 2000
 

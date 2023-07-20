@@ -35,7 +35,9 @@ const CreditsHistorySection: FC = () => {
 
   useEffect(() => {
     if (!filteredCreditsHistory) {
-      getCreditsHistoryEffect().then((result) => getCreditsHistory(result))
+      getCreditsHistoryEffect().then((result) => {
+        getCreditsHistory(result)
+      })
     }
   }, [])
 
