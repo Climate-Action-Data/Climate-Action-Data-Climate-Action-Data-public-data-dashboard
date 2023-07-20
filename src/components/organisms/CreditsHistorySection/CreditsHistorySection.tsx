@@ -1,16 +1,17 @@
 import { FC, useEffect } from 'react'
-import { Card, Grid, GridItem, HStack, Stack, StackDivider, useBreakpointValue } from '@chakra-ui/react'
+import { Card, Center, Grid, GridItem, HStack, Stack, StackDivider, useBreakpointValue } from '@chakra-ui/react'
 
 import { useTranslation } from 'react-i18next'
 import { TimeframesData } from '@/@types/Timeframe'
-import CreditsHistoryChart from '@/components/molecules/CreditsHistoryChart/CreditsHistoryChart'
 import { useActions, useAppState } from '@/overmind'
-import CreditsHistoryStat from '@/components/atoms/CreditsHistoryStat/CreditHistoryStat'
 import SubregionIndicator from '@/components/atoms/SubregionIndicator/SubregionIndicator'
 import SelectableChip from '@/components/atoms/SelectableChip/SelectableChip'
 import { SubRegion } from '@/@types/geojson'
 import { AutoComplete } from '@/components/molecules/AutoComplete/AutoComplete'
 import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
+import CreditsHistoryChart from '@/components/molecules/CreditsHistoryChart/CreditsHistoryChart'
+import CreditsHistoryStat from '@/components/atoms/CreditsHistoryStat/CreditHistoryStat'
+import { Aeonik } from '@/styles/theme/fonts'
 
 const CreditsHistorySection: FC = () => {
   const { getCreditsHistory, setCountry, setSubRegion, setTimeframe } = useActions().creditsHistory
@@ -121,17 +122,29 @@ const CreditsHistorySection: FC = () => {
           </Grid>
         </GridItem>
         <GridItem area={`data`}>
-          <Grid id={`issued-retired-chart-header`} {...statsLayout}>
-            <GridItem area={`stats`}>
-              <Stack direction={[`row`, null, `column`]} divider={<StackDivider borderBottomColor={`charcoal.500`} borderBottomWidth={`1px`} />}>
-                <CreditsHistoryStat amount={filteredCreditsHistory?.issued} label={`Issued`} textColor={`green.600`} />
-                <CreditsHistoryStat amount={filteredCreditsHistory?.retired} label={`Retired`} textColor={`green.800`} />
-              </Stack>
-            </GridItem>
-            <GridItem area={`chart`} height={`300px`} minW={0}>
-              <CreditsHistoryChart />
-            </GridItem>
-          </Grid>
+          {filteredCreditsHistory ? (
+            filteredCreditsHistory?.chartData[0].data?.length > 0 || filteredCreditsHistory?.chartData[1].data.length > 0 ? (
+              <Grid id={`issued-retired-chart-header`} {...statsLayout}>
+                <GridItem area={`stats`}>
+                  <Stack direction={[`row`, null, `column`]} divider={<StackDivider borderBottomColor={`charcoal.500`} borderBottomWidth={`1px`} />}>
+                    <CreditsHistoryStat amount={filteredCreditsHistory?.issued} label={`Issued`} textColor={`green.600`} />
+                    <CreditsHistoryStat amount={filteredCreditsHistory?.retired} label={`Retired`} textColor={`green.800`} />
+                  </Stack>
+                </GridItem>
+                <GridItem area={`chart`} height={`300px`} minW={0}>
+                  <CreditsHistoryChart />
+                </GridItem>
+              </Grid>
+            ) : (
+              <Center className={Aeonik.className} height={`200px`} width={`100%`} color={`lightGray.600`} textAlign={`center`}>
+                {t(`selectedDataNotAvailable`)}
+              </Center>
+            )
+          ) : (
+            <Center height={`200px`} width={`100%`}>
+              Notloaded
+            </Center>
+          )}
         </GridItem>
       </Grid>
     </Card>
