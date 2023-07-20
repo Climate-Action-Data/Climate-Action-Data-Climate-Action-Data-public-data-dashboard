@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { HStack, IconButton, Text } from '@chakra-ui/react'
 import { Open_Sans } from 'next/font/google'
 import { ChevronLeftIcon } from '@chakra-ui/icons'
+import { SubRegion } from '@/@types/geojson'
 
 /* eslint-disable @typescript-eslint/quotes */
 const openSans = Open_Sans({
@@ -24,9 +25,11 @@ const SubregionIndicator: FC<SubregionIndicatorProps> = ({ subregion, clearSubre
   const { t } = useTranslation(`home`)
   return (
     <HStack>
-      {subregion && <IconButton icon={<ChevronLeftIcon boxSize={6} />} onClick={clearSubregion} aria-label={`clear continent filter`} variant={`lightGrayRound`} size={`xs`} />}
+      {subregion != SubRegion.WORLD && (
+        <IconButton icon={<ChevronLeftIcon boxSize={6} />} onClick={clearSubregion} aria-label={`clear continent filter`} variant={`lightGrayRound`} size={`xs`} />
+      )}
       <Text {...openSans} sx={{ maxLines: 1, wordWrap: `normal` }}>
-        {subregion ? t(`regions.${subregion}`) : `Region`}
+        {subregion != SubRegion.WORLD ? t(`regions.${subregion}`) : t(`regions.world`)}
       </Text>
     </HStack>
   )

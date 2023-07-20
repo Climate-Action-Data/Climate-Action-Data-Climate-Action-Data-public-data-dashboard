@@ -10,7 +10,7 @@ export const Text = {
     statSuffix: {
       paddingLeft: `8px`,
       fontWeight: `normal`,
-      color: `charcoal.800`,
+      color: `lightGray.700`,
       display: `inline`,
     },
   },

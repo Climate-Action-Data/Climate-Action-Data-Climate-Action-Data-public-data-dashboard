@@ -4,10 +4,10 @@ export const IconButton = {
       background: `transparent`,
       borderRadius: `50%`,
       _hover: {
-        background: `charcoal.200`,
+        background: `#EDEFEF`,
       },
       _active: {
-        background: `charcoal.300`,
+        background: `lightGray.200`,
       },
     },
   },
