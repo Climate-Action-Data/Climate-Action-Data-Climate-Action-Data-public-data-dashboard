@@ -1,4 +1,4 @@
-import { Flex, Box, Text } from '@chakra-ui/react'
+import { Flex, Box, Text, VStack } from '@chakra-ui/react'
 import { ImportantText } from '../ImportantText/ImportantText'
 import { Standard } from '@/@types/State'
 
@@ -10,12 +10,14 @@ export const CarbonReductionStandard = (props: CarbonReductionStandardProps): Re
   const { data } = props
   const colorChart = [`green.600`, `green.700`, `green.800`]
   return (
-    <Flex alignItems={`center`} marginBottom={4}>
+    <Flex alignItems={`start`} marginBottom={4}>
       {data.map((standard, idx) => (
-        <Box key={`${standard.name}`} textAlign={`center`} marginX={`5px`} flex={1}>
-          <ImportantText color={colorChart[idx] ? colorChart[idx] : colorChart[colorChart.length - 1]}>{standard.average}%</ImportantText>
+        <VStack key={`${standard.name}`} textAlign={`center`} marginX={`5px`} flex={1}>
+          <Box flex={1}>
+            <ImportantText color={colorChart[idx] ? colorChart[idx] : colorChart[colorChart.length - 1]}>{standard.average}%</ImportantText>
+          </Box>
           <Text>{standard.name}</Text>
-        </Box>
+        </VStack>
       ))}
     </Flex>
   )

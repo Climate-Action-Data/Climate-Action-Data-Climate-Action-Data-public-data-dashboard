@@ -10,6 +10,8 @@ export const getCountryPlaceholder = (carbonReduction: CarbonReduction, t: any, 
   if (carbonReduction.carbonMapHoveredCountry !== ``) {
     if (carbonReduction.carbonMapHoveredCountry !== carbonReduction.carbonMapDataFilters?.country) {
       placeholder = countryTranslate(`${carbonReduction.carbonMapHoveredCountry}`)
+    } else {
+      placeholder = countryTranslate(`${carbonReduction.carbonMapDataFilters?.country}`)
     }
   } else if (carbonReduction.carbonMapDataFilters?.country) {
     placeholder = countryTranslate(`${carbonReduction.carbonMapDataFilters?.country}`)
