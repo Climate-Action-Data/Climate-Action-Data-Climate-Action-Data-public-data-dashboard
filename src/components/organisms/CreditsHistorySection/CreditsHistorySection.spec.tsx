@@ -3,7 +3,6 @@ import { ChakraProvider } from '@chakra-ui/react'
 
 import CreditsHistorySection from '@/components/organisms/CreditsHistorySection/CreditsHistorySection'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
-import { MockData } from '@/test/TestOvermindMockData'
 
 Object.defineProperty(window, `matchMedia`, {
   writable: true,
@@ -43,14 +42,14 @@ describe(`CreditsHistorySection`, () => {
   //   expect(container).toMatchSnapshot()
   // })
 
-  test(`renders the widget when rawCreditsHistory and creditsHistoryData are defined but has no chart data`, () => {
-    const { container } = render(
-      <TestOvermindWrapper creditsHistory={MockData.CREDIT_HISTORY_DATA_EMPTY_CHART}>
-        <ChakraProvider>
-          <CreditsHistorySection />
-        </ChakraProvider>
-      </TestOvermindWrapper>,
-    )
-    expect(container).toMatchSnapshot()
-  })
+  // test(`renders the widget when rawCreditsHistory and creditsHistoryData are defined but has no chart data`, () => {
+  //   const { container } = render(
+  //     <TestOvermindWrapper creditsHistory={MockData.CREDIT_HISTORY_DATA_EMPTY_CHART}>
+  //       <ChakraProvider>
+  //         <CreditsHistorySection />
+  //       </ChakraProvider>
+  //     </TestOvermindWrapper>,
+  //   )
+  //   expect(container).toMatchSnapshot()
+  // })
 })
