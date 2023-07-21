@@ -3,21 +3,21 @@
 exports[`CreditsHistorySection renders loading state when creditsHistoryData is undefined 1`] = `
 <div>
   <div
-    class="chakra-container css-101z6i4"
+    class="chakra-container css-apa9e3"
   >
     <div
       class="css-ici0xu"
       id="issued-retired-chart"
     >
       <div
-        class="css-a6t5rc"
+        class="css-1ez8rph"
       >
         <div
           class="css-12rn99f"
           id="issued-retired-chart-header"
         >
           <div
-            class="css-12q1yrm"
+            class="css-a3yeag"
           >
             <div
               class="chakra-stack css-1igwmid"
@@ -32,7 +32,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
             </div>
           </div>
           <div
-            class="css-k44w5r"
+            class="css-1q2dfsb"
           >
             <div
               class="chakra-stack css-s7zwns"
@@ -52,16 +52,16 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                     data-group="true"
                   >
                     <input
-                      class="chakra-input css-x1lq49"
+                      class="chakra-input css-1luyivc"
                       data-testid="dropdown_input"
                       placeholder="Choose a region"
                     />
                     <div
-                      class="chakra-input__right-element css-1pgjczt"
+                      class="chakra-input__right-element css-2cnd2z"
                     >
                       <button
                         aria-label="toggle menu"
-                        class="chakra-button css-es0esp"
+                        class="chakra-button css-xsdlqf"
                         data-testid="dropdown-button"
                         type="button"
                       >
@@ -80,12 +80,12 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                   </div>
                 </div>
                 <div
-                  class="chakra-popover__popper css-1qq679y"
+                  class="chakra-popover__popper css-0"
                   style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
                 >
                   <section
                     aria-describedby="popover-body-:r1:"
-                    class="chakra-popover__content css-h4trp2"
+                    class="chakra-popover__content css-18u085x"
                     data-testid="dropdown-body"
                     id="popover-content-:r1:"
                     role="dialog"
@@ -93,7 +93,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                     tabindex="-1"
                   >
                     <div
-                      class="chakra-popover__body css-1ews2c8"
+                      class="chakra-popover__body css-0"
                       id="popover-body-:r1:"
                     >
                       <ul
@@ -101,7 +101,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                         role="list"
                       >
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-0"
                         >
                           <div
@@ -111,7 +111,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-1"
                         >
                           <div
@@ -121,7 +121,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-2"
                         >
                           <div
@@ -131,7 +131,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-3"
                         >
                           <div
@@ -141,7 +141,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-4"
                         >
                           <div
@@ -151,7 +151,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-5"
                         >
                           <div
@@ -161,7 +161,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-6"
                         >
                           <div
@@ -171,7 +171,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-7"
                         >
                           <div
@@ -181,7 +181,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-8"
                         >
                           <div
@@ -191,7 +191,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-9"
                         >
                           <div
@@ -201,7 +201,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-10"
                         >
                           <div
@@ -211,7 +211,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-11"
                         >
                           <div
@@ -221,7 +221,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-12"
                         >
                           <div
@@ -231,7 +231,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-13"
                         >
                           <div
@@ -241,7 +241,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-14"
                         >
                           <div
@@ -251,7 +251,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-15"
                         >
                           <div
@@ -261,7 +261,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-16"
                         >
                           <div
@@ -271,7 +271,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                           </div>
                         </li>
                         <li
-                          class="css-1ca3ht4"
+                          class="css-1lkne8t"
                           data-testid="dropdown-item-17"
                         >
                           <div
@@ -288,36 +288,36 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
             </div>
           </div>
           <div
-            class="css-1pbgu9n"
+            class="css-57dgik"
           >
             <div
               class="chakra-stack css-1xum4w9"
             >
               <span
-                class="css-rkp67"
+                class="css-ew0hq8"
               >
                 <span
-                  class="css-1ny2kle"
+                  class="css-zvlevn"
                   data-testid="button-timeframe-1"
                 >
                   12m
                 </span>
               </span>
               <span
-                class="css-rkp67"
+                class="css-ew0hq8"
               >
                 <span
-                  class="css-1ny2kle"
+                  class="css-zvlevn"
                   data-testid="button-timeframe-2"
                 >
                   6m
                 </span>
               </span>
               <span
-                class="css-rkp67"
+                class="css-ew0hq8"
               >
                 <span
-                  class="css-1ny2kle"
+                  class="css-zvlevn"
                   data-testid="button-timeframe-3"
                 >
                   1m
@@ -328,23 +328,23 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
         </div>
       </div>
       <div
-        class="css-itarp8"
+        class="css-14fqov2"
       >
         <div
-          class="css-usvo7w"
+          class="css-921g00"
           id="issued-retired-chart-header"
         >
           <div
-            class="css-81msik"
+            class="css-f5ds6o"
           >
             <div
-              class="chakra-stack css-12s2e4i"
+              class="chakra-stack css-c3wesr"
             >
               <div
-                class="chakra-stack css-187az2"
+                class="chakra-stack css-6uacnb"
               >
                 <div
-                  class="chakra-skeleton css-vg189d"
+                  class="chakra-skeleton css-10x8ef7"
                 />
                 <p
                   class="chakra-text css-0"
@@ -353,13 +353,13 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
                 </p>
               </div>
               <div
-                class="chakra-stack__divider css-17ry2tf"
+                class="chakra-stack__divider css-2if2sn"
               />
               <div
-                class="chakra-stack css-187az2"
+                class="chakra-stack css-6uacnb"
               >
                 <div
-                  class="chakra-skeleton css-vg189d"
+                  class="chakra-skeleton css-10x8ef7"
                 />
                 <p
                   class="chakra-text css-0"
@@ -370,19 +370,15 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
             </div>
           </div>
           <div
-            class="css-17tz4s6"
+            class="css-1r9qc8o"
           >
             <div
-              class="chakra-skeleton css-2trlzm"
+              class="chakra-skeleton css-4e2to2"
             />
           </div>
         </div>
       </div>
     </div>
   </div>
-  <span
-    hidden=""
-    id="__chakra_env"
-  />
 </div>
 `;
