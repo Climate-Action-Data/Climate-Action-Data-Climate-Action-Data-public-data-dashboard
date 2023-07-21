@@ -16,7 +16,7 @@ exports[`RegionSearch renders the component with a hovered country 1`] = `
     </div>
     <hr
       aria-orientation="vertical"
-      class="chakra-divider css-g2zlzj"
+      class="chakra-divider css-1pqprcw"
     />
     <div
       class="chakra-stack css-8g8ihq"
@@ -293,7 +293,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
     </div>
     <hr
       aria-orientation="vertical"
-      class="chakra-divider css-g2zlzj"
+      class="chakra-divider css-1pqprcw"
     />
     <div
       class="chakra-stack css-8g8ihq"
@@ -903,7 +903,7 @@ exports[`RegionSearch renders the component with a selected country & region and
     </div>
     <hr
       aria-orientation="vertical"
-      class="chakra-divider css-g2zlzj"
+      class="chakra-divider css-1pqprcw"
     />
     <div
       class="chakra-stack css-8g8ihq"
@@ -1173,7 +1173,7 @@ exports[`RegionSearch renders the component with a selected country & region and
     </div>
     <hr
       aria-orientation="vertical"
-      class="chakra-divider css-g2zlzj"
+      class="chakra-divider css-1pqprcw"
     />
     <div
       class="chakra-stack css-8g8ihq"
@@ -1443,7 +1443,7 @@ exports[`RegionSearch renders the component with default state 1`] = `
     </div>
     <hr
       aria-orientation="vertical"
-      class="chakra-divider css-g2zlzj"
+      class="chakra-divider css-1pqprcw"
     />
     <div
       class="chakra-stack css-8g8ihq"
@@ -1713,7 +1713,7 @@ exports[`RegionSearch renders the component with default state undefined 1`] = `
     </div>
     <hr
       aria-orientation="vertical"
-      class="chakra-divider css-g2zlzj"
+      class="chakra-divider css-1pqprcw"
     />
     <div
       class="chakra-stack css-8g8ihq"
