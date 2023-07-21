@@ -15,7 +15,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
   const effects = useEffects().analytics
   const { t } = useTranslation(`home`)
 
-  const colorChart = [`green.600`, `green.700`, `green.800`, `lightGray.500`]
+  const colorChart = [`green.800`, `green.700`, `green.600`, `lightGray.500`]
 
   useEffect(() => {
     if (!carbonReduction.carbonMapData) {
@@ -86,7 +86,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
       const top4Percentage = [...carbonMapDataFiltered.sectors].sort((a, b) => b.average - a.average).slice(0, DEFAULT_SECTOR_NUMBER)
 
       return (
-        <Box>
+        <Box width={{ md: `328px` }}>
           <Stack>
             <Center>
               <Box textAlign={`center`} width={`50%`}>
@@ -122,7 +122,9 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
             {carbonMapDataFiltered.sectors.length > 0 ? (
               <CarbonReductionSector colorChart={colorChart} data={top4Percentage} />
             ) : (
-              <Text color={`lightGray.600`}>Selected data is currently unavailable within the carbon registries.</Text>
+              <Text textAlign="center" color={`lightGray.600`}>
+                Selected data is currently unavailable within the carbon registries.
+              </Text>
             )}
 
             <Divider marginY={`20px`} />
@@ -132,7 +134,9 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
             {carbonMapDataFiltered.standards.length > 0 ? (
               <CarbonReductionStandard data={carbonMapDataFiltered.standards} />
             ) : (
-              <Text color={`lightGray.600`}>Selected data is currently unavailable within the carbon registries.</Text>
+              <Text textAlign="center" color={`lightGray.600`}>
+                Selected data is currently unavailable within the carbon registries.
+              </Text>
             )}
           </Stack>
         </Box>
