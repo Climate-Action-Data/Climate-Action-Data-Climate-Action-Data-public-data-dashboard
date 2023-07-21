@@ -39,3 +39,4 @@ yarn.lock
 
 utils/dist
 utils/node_modules
+.env
