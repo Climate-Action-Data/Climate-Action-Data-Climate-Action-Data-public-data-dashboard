@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <p
+    class="chakra-text css-0"
+  >
+    This is the Help page
+  </p>
+</div>
+`;
