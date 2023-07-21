@@ -1,9 +1,9 @@
 import { EffectResponse } from '@/@types/EffectResponse'
-// import data from '@/assets/map_dashboard_data'
+// import data from '../../test/mock-data/map_dashboard_data'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
 import countriesContinentsMap from '@/assets/geo-map/countries-continents-mapping'
-import { CountryPeriodData, CountryData, Sector, Standard, MapData } from '@/@types/State'
+import { CountryData, CountryPeriodData, Sector, Standard, MapData } from '@/@types/State'
 import axios from 'axios'
 import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
 // const SLEEP = 500
