@@ -52,10 +52,11 @@ const CreditsHistorySection: FC = () => {
     return (
       <Grid
         id={`issued-retired-chart-header`}
-        templateAreas={[`'chart''stats'`, null, `stats chart`]}
+        templateAreas={[`'chart''stats'`, null, `'stats chart'`]}
         gridTemplateRows={[`1fr`]}
         gridTemplateColumns={[`1fr`, null, `1fr 3fr`]}
         alignItems={`center`}
+        width={`100%`}
       >
         <GridItem area={`stats`} padding={`10px`}>
           <Stack direction={[`row`, null, `column`]} divider={<StackDivider borderBottomColor={`lightGray.400`} borderBottomWidth={`1px`} />}>
