@@ -65,7 +65,7 @@ export const RegionSearch = (): React.JSX.Element => {
   return (
     <Flex height="auto" alignItems={`center`}>
       {regionTitle()}
-      <Divider marginX={6} height={`70px`} orientation="vertical" />
+      <Divider marginX={[`0.75rem`, `1.5rem`]} height={`70px`} orientation="vertical" />
       {carbonReduction.carbonMapDataFilters?.region !== SubRegion.WORLD ? (
         <AutoComplete
           onItemClick={(country) => setCountry(country.value)}

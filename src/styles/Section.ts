@@ -8,4 +8,5 @@ export const cardSection = defineStyle({
   background: `#FFFFFF`,
   margin: `0 24px`,
   maxW: `unset`,
+  padding: [0, `1rem`],
 })

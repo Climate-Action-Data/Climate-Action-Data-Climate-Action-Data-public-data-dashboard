@@ -27,7 +27,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
 
   if (carbonReduction.carbonMapData === undefined && carbonMapDataFiltered === undefined) {
     return (
-      <Box data-testid="loading-indicator" flex={1}>
+      <Box width={{ md: `328px` }} data-testid="loading-indicator" flex={1}>
         <Stack>
           <Center>
             <Box width={`50%`}>
@@ -78,7 +78,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
   } else {
     if (carbonMapDataFiltered === undefined) {
       return (
-        <Flex alignItems="center">
+        <Flex width={{ md: `328px` }} alignItems="center">
           <Text color={`lightGray.600`}>Selected data is currently unavailable within the carbon registries.</Text>
         </Flex>
       )
