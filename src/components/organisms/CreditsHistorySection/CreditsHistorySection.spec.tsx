@@ -31,7 +31,7 @@ describe(`CreditsHistorySection`, () => {
     expect(container).toMatchSnapshot()
   })
 
-  test(`renders the widget when carbonMapData and creditsHistoryData are defined`, () => {
+  test(`renders the widget when rawCreditsHistory and creditsHistoryData are defined`, () => {
     const { container } = render(
       <TestOvermindWrapper creditsHistory={MockData.CREDIT_HISTORY_DATA}>
         <ChakraProvider>
@@ -41,7 +41,7 @@ describe(`CreditsHistorySection`, () => {
     )
     expect(container).toMatchSnapshot()
   })
-  test(`renders the widget when carbonMapData and creditsHistoryData are defined but has no chart data`, () => {
+  test(`renders the widget when rawCreditsHistory and creditsHistoryData are defined but has no chart data`, () => {
     const { container } = render(
       <TestOvermindWrapper creditsHistory={MockData.CREDIT_HISTORY_DATA_EMPTY_CHART}>
         <ChakraProvider>
