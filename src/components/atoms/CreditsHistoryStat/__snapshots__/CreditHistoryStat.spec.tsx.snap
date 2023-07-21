@@ -17,7 +17,7 @@ exports[`credit history stat renders correctly with large amount 1`] = `
         <p
           class="chakra-text css-19u5taq"
         >
-          M
+          MM
         </p>
       </dd>
       <dt
@@ -42,13 +42,11 @@ exports[`credit history stat renders correctly with small amount 1`] = `
         <p
           class="chakra-text css-1uovyuu"
         >
-          12
+          123
         </p>
         <p
           class="chakra-text css-19u5taq"
-        >
-          3
-        </p>
+        />
       </dd>
       <dt
         class="chakra-stat__label css-0"

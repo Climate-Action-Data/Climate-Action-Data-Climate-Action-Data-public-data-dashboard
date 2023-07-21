@@ -1,6 +1,8 @@
 import { FC } from 'react'
 import { Stat, StatLabel, StatNumber, Text } from '@chakra-ui/react'
+
 import { AeonikFono } from '@/styles/fonts'
+import { toCompactValueAndSuffix } from '@/utils/UnitConverter'
 
 interface CreditHistoryStateProps {
   amount: number | undefined
@@ -9,11 +11,8 @@ interface CreditHistoryStateProps {
 }
 
 const CreditsHistoryStat: FC<CreditHistoryStateProps> = ({ amount, label, textColor }) => {
-  const formattedAmount = new Intl.NumberFormat(`en-SG`, { notation: `compact`, maximumSignificantDigits: 3 }).format(amount ?? 0)
-  const regexp = /^(\d*\.?\d*)(\w)$/
-  const matches = formattedAmount.match(regexp)
-  const suffix = matches?.pop()
-  const compactAmount = matches?.pop()
+  const [compactAmount, suffix] = toCompactValueAndSuffix(amount ?? 0)
+
   return (
     <Stat textAlign={`center`} className={AeonikFono.className}>
       <StatNumber>
