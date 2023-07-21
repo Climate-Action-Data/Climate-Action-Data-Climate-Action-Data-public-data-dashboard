@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { format } from 'date-fns'
-import { Center, Container, Grid, GridItem, HStack, Skeleton, Stack, StackDivider, Tag, TagCloseButton, TagLabel, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
+import { Center, Container, Grid, GridItem, HStack, Skeleton, Stack, StackDivider, Tag, TagCloseButton, TagLabel, Text, VStack } from '@chakra-ui/react'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
 import { TimeframesData } from '@/@types/Timeframe'
@@ -20,17 +20,17 @@ const CreditsHistorySection: FC = () => {
   const { filteredCreditsHistory, dataFilters, rawCreditsHistory } = useAppState().creditsHistory
   const { t } = useTranslation(`home`)
   const { t: countryTranslate } = useTranslation(`countries`)
-  const statsLayout = useBreakpointValue({
-    base: {
-      templateAreas: `'chart''stats'`,
-      gridTemplateRows: `1fr`,
-    },
-    md: {
-      templateAreas: `'stats chart'`,
-      gridTemplateColumns: `1fr 3fr`,
-      alignItems: `center`,
-    },
-  })
+  // const statsLayout = useBreakpointValue({
+  //   base: {
+  //     templateAreas: `'chart''stats'`,
+  //     gridTemplateRows: `1fr`,
+  //   },
+  //   md: {
+  //     templateAreas: `'stats chart'`,
+  //     gridTemplateColumns: `1fr 3fr`,
+  //     alignItems: `center`,
+  //   },
+  // })
 
   useEffect(() => {
     if (!filteredCreditsHistory) {
@@ -61,7 +61,13 @@ const CreditsHistorySection: FC = () => {
 
   const GenerateChartAndStatsSkeleton = () => {
     return (
-      <Grid id={`issued-retired-chart-header`} {...statsLayout}>
+      <Grid
+        id={`issued-retired-chart-header`}
+        templateAreas={[`'chart''stats'`, null, `stats chart`]}
+        gridTemplateRows={[`1fr`]}
+        gridTemplateColumns={[`1fr`, null, `1fr 3fr`]}
+        alignItems={`center`}
+      >
         <GridItem area={`stats`} padding={`10px`}>
           <Stack direction={[`row`, null, `column`]} divider={<StackDivider borderBottomColor={`lightGray.400`} borderBottomWidth={`1px`} />}>
             <VStack width={[`50%`, null, `auto`]}>
@@ -162,7 +168,14 @@ const CreditsHistorySection: FC = () => {
           {filteredCreditsHistory ? (
             filteredCreditsHistory?.chartData[0].data?.length > 0 || filteredCreditsHistory?.chartData[1].data.length > 0 ? (
               <VStack alignItems={`end`}>
-                <Grid id={`issued-retired-chart-header`} {...statsLayout} width={`100%`}>
+                <Grid
+                  id={`issued-retired-chart-header`}
+                  templateAreas={[`'chart''stats'`, null, `'stats chart'`]}
+                  gridTemplateRows={[`1fr`]}
+                  gridTemplateColumns={[`1fr`, null, `1fr 3fr`]}
+                  alignItems={`center`}
+                  width={`100%`}
+                >
                   <GridItem area={`stats`}>
                     <Stack direction={[`row`, null, `column`]} divider={<StackDivider borderBottomColor={`lightGray.400`} borderBottomWidth={`1px`} />}>
                       <CreditsHistoryStat amount={filteredCreditsHistory?.issued} label={t(`issued`)} textColor={`green.600`} />

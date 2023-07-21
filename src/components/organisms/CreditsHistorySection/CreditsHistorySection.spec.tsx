@@ -1,5 +1,4 @@
 import { render } from '@testing-library/react'
-import { ChakraProvider } from '@chakra-ui/react'
 
 import CreditsHistorySection from '@/components/organisms/CreditsHistorySection/CreditsHistorySection'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
@@ -22,9 +21,7 @@ describe(`CreditsHistorySection`, () => {
   test(`renders loading state when creditsHistoryData is undefined`, () => {
     const { container } = render(
       <TestOvermindWrapper>
-        <ChakraProvider>
-          <CreditsHistorySection />
-        </ChakraProvider>
+        <CreditsHistorySection />
       </TestOvermindWrapper>,
     )
     expect(container).toMatchSnapshot()
