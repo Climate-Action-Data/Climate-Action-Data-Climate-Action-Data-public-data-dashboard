@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { format } from 'date-fns'
-import { Center, Container, Grid, GridItem, HStack, Skeleton, Stack, StackDivider, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
+import { Center, Container, Grid, GridItem, HStack, Skeleton, Stack, StackDivider, Tag, TagCloseButton, TagLabel, Text, useBreakpointValue, VStack } from '@chakra-ui/react'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
 import { TimeframesData } from '@/@types/Timeframe'
@@ -9,7 +9,6 @@ import { SubRegion } from '@/@types/geojson'
 import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
 
 import SubregionIndicator from '@/components/atoms/SubregionIndicator/SubregionIndicator'
-import SelectableChip from '@/components/atoms/SelectableChip/SelectableChip'
 import CreditsHistoryStat from '@/components/atoms/CreditsHistoryStat/CreditHistoryStat'
 import { AutoComplete } from '@/components/molecules/AutoComplete/AutoComplete'
 import CreditsHistoryChart from '@/components/molecules/CreditsHistoryChart/CreditsHistoryChart'
@@ -137,14 +136,24 @@ const CreditsHistorySection: FC = () => {
             </GridItem>
             <GridItem area={`date-range-filter`}>
               <HStack padding={`4px 16px`} gap={`8px`}>
-                {Object.values(TimeframesData).map((timeframe, idx) => (
-                  <SelectableChip
-                    isSelected={dataFilters.timeframe === timeframe}
-                    key={idx}
-                    label={t(`timeframes.${timeframe}`)}
-                    onClick={() => setTimeframe(dataFilters.timeframe === timeframe ? TimeframesData.MAX : timeframe)}
-                  />
-                ))}
+                {Object.values(TimeframesData).map(
+                  (timeframe, idx) =>
+                    timeframe !== TimeframesData.MAX && (
+                      <Tag
+                        size={`md`}
+                        key={idx}
+                        borderRadius="full"
+                        _hover={{ cursor: `pointer` }}
+                        variant={dataFilters.timeframe === timeframe ? `solid` : `outline`}
+                        colorScheme="gray"
+                      >
+                        <TagLabel data-testid={`button-timeframe-${idx}`} onClick={() => setTimeframe(timeframe)}>
+                          {t(`timeframes.${timeframe}`)}
+                        </TagLabel>
+                        {dataFilters.timeframe === timeframe && <TagCloseButton data-testid={`button-timeframe-close`} onClick={() => setTimeframe(TimeframesData.MAX)} />}
+                      </Tag>
+                    ),
+                )}
               </HStack>
             </GridItem>
           </Grid>
@@ -164,7 +173,7 @@ const CreditsHistorySection: FC = () => {
                     <CreditsHistoryChart />
                   </GridItem>
                 </Grid>
-                <Text className={Aeonik.className} color={`lightgrey.600`}>
+                <Text className={Aeonik.className} color={`lightGray.600`}>
                   {t(`dataRepresentedAsOf`, { lastUpdated: format(new Date(rawCreditsHistory?.data?.lastUpdate ?? ``), `d MMM y, HH:mm:ss`) })}
                 </Text>
               </VStack>
