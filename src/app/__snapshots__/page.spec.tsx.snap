@@ -9,7 +9,7 @@ exports[`renders correctly 1`] = `
       class="chakra-container css-8wzqif"
     >
       <div
-        class="css-hn5qoh"
+        class="css-1m7rfxm"
       >
         <div
           class="css-1w96tn4"
@@ -25,7 +25,7 @@ exports[`renders correctly 1`] = `
           </div>
           <hr
             aria-orientation="vertical"
-            class="chakra-divider css-g2zlzj"
+            class="chakra-divider css-1pqprcw"
           />
           <div
             class="chakra-stack css-8g8ihq"
@@ -319,7 +319,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="css-j27gfu"
+        class="css-12eoy68"
       >
         <div
           class="css-1tezxpq"
@@ -57261,7 +57261,7 @@ exports[`renders correctly 1`] = `
           </svg>
         </div>
         <div
-          class="css-1rr4qq7"
+          class="css-nk5dj7"
           data-testid="loading-indicator"
         >
           <div
