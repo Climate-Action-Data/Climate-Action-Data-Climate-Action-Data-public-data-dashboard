@@ -3,17 +3,21 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="css-hwbdeb"
+    class="css-nttwsh"
   >
     <div
-      class="css-whmkqt"
+      class="chakra-stack css-1ecqadq"
     >
-      <span
-        class="chakra-text css-1tzjjc2"
+      <div
+        class="css-1rr4qq7"
       >
-        50
-        %
-      </span>
+        <span
+          class="chakra-text css-1tzjjc2"
+        >
+          50
+          %
+        </span>
+      </div>
       <p
         class="chakra-text css-0"
       >
@@ -21,14 +25,18 @@ exports[`renders correctly 1`] = `
       </p>
     </div>
     <div
-      class="css-whmkqt"
+      class="chakra-stack css-1ecqadq"
     >
-      <span
-        class="chakra-text css-1tv1yfd"
+      <div
+        class="css-1rr4qq7"
       >
-        50
-        %
-      </span>
+        <span
+          class="chakra-text css-1tv1yfd"
+        >
+          50
+          %
+        </span>
+      </div>
       <p
         class="chakra-text css-0"
       >

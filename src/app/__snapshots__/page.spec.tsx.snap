@@ -9,7 +9,7 @@ exports[`renders correctly 1`] = `
       class="chakra-container css-8wzqif"
     >
       <div
-        class="css-hvozx9"
+        class="css-hn5qoh"
       >
         <div
           class="css-1w96tn4"
@@ -322,7 +322,7 @@ exports[`renders correctly 1`] = `
         class="css-j27gfu"
       >
         <div
-          class="css-1gpj4rz"
+          class="css-1tezxpq"
         >
           <svg
             class="geoMap"
