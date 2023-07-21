@@ -39,7 +39,6 @@ const generateFilteredCreditsHistory = (rawData: IssuedRetiredDataCountry[], dat
     issued: 0,
     retired: 0,
   }
-  console.log(rawData)
 
   rawData.forEach((countryEntry) => {
     if (region === SubRegion.WORLD || (country == undefined && generateCountryByRegion(region).includes(countryEntry.countryCode)) || countryEntry.countryCode == country) {

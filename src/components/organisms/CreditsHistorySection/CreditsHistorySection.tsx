@@ -20,17 +20,6 @@ const CreditsHistorySection: FC = () => {
   const { filteredCreditsHistory, dataFilters, rawCreditsHistory } = useAppState().creditsHistory
   const { t } = useTranslation(`home`)
   const { t: countryTranslate } = useTranslation(`countries`)
-  // const statsLayout = useBreakpointValue({
-  //   base: {
-  //     templateAreas: `'chart''stats'`,
-  //     gridTemplateRows: `1fr`,
-  //   },
-  //   md: {
-  //     templateAreas: `'stats chart'`,
-  //     gridTemplateColumns: `1fr 3fr`,
-  //     alignItems: `center`,
-  //   },
-  // })
 
   useEffect(() => {
     if (!filteredCreditsHistory) {
