@@ -16,6 +16,11 @@ export interface CountryData {
   timeRanges: Record<TimeframesData, CountryPeriodData>
 }
 
+export interface MapData {
+  lastUpdated: Date
+  countriesData: CountryData[]
+}
+
 export interface DataFilters {
   region: SubRegion
   country?: string
@@ -23,7 +28,7 @@ export interface DataFilters {
 }
 
 export interface CarbonReduction {
-  carbonMapData?: EffectResponse<CountryData[]>
+  carbonMapData?: EffectResponse<MapData>
   carbonMapHasCountryData: Map<string, boolean>
   carbonMapHoveredRegion: string
   carbonMapHoveredCountry: string

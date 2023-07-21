@@ -1,14 +1,14 @@
 import { SubRegion } from '@/@types/geojson'
 import { Context } from '..'
 import { TimeframesData } from '@/@types/Timeframe'
-import { CountryPeriodData, CountryData } from '@/@types/State'
+import { CountryPeriodData, MapData } from '@/@types/State'
 import { Overmind } from 'overmind'
 import { EffectResponse } from '@/@types/EffectResponse'
 
-export const getCarbonReduction = async (context: Context, carbonData: EffectResponse<CountryData[]>): Promise<void> => {
+export const getCarbonReduction = async (context: Context, carbonData: EffectResponse<MapData>): Promise<void> => {
   if (carbonData.data) {
     context.state.analytics.carbonReduction.carbonMapData = carbonData
-    context.state.analytics.carbonReduction.carbonMapHasCountryData = context.effects.analytics.generateHasCountryData(carbonData.data)
+    context.state.analytics.carbonReduction.carbonMapHasCountryData = context.effects.analytics.generateHasCountryData(carbonData.data.countriesData)
     context.actions.analytics.getCarbonMapDataFiltered()
   }
 }
@@ -42,18 +42,18 @@ export const getCarbonMapDataFiltered = ({ state, effects }: Context) => {
   const currentData = state.analytics.carbonReduction
   if (currentData.carbonMapData?.data) {
     if (currentData.carbonMapDataFilters.country && currentData.carbonMapData?.data) {
-      const mapData = currentData.carbonMapData.data.find((country) => country.countryCode === currentData.carbonMapDataFilters.country)
+      const mapData = currentData.carbonMapData.data.countriesData.find((country) => country.countryCode === currentData.carbonMapDataFilters.country)
       if (mapData?.timeRanges[currentData.carbonMapDataFilters.timeframe]) {
         result = mapData.timeRanges[currentData.carbonMapDataFilters.timeframe]
       }
     } else if (currentData.carbonMapDataFilters.region !== SubRegion.WORLD) {
       const countryList = effects.analytics.generateCountryByRegion(currentData.carbonMapDataFilters.region)
       result = effects.analytics.combineCountryData(
-        currentData.carbonMapData.data.filter((countryData) => countryList.includes(countryData.countryCode)),
+        currentData.carbonMapData.data.countriesData.filter((countryData) => countryList.includes(countryData.countryCode)),
         currentData.carbonMapDataFilters.timeframe,
       )
     } else {
-      result = effects.analytics.combineCountryData(currentData.carbonMapData.data, currentData.carbonMapDataFilters.timeframe)
+      result = effects.analytics.combineCountryData(currentData.carbonMapData.data.countriesData, currentData.carbonMapDataFilters.timeframe)
     }
   }
   state.analytics.carbonMapDataFiltered = result ? { ...result } : result

@@ -1,22 +1,34 @@
 import { EffectResponse } from '@/@types/EffectResponse'
-import data from '@/assets/map_dashboard_data'
+// import data from '@/assets/map_dashboard_data'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
 import countriesContinentsMap from '@/assets/geo-map/countries-continents-mapping'
-import { CountryPeriodData, CountryData, Sector, Standard } from '@/@types/State'
-const SLEEP = 500
+import { CountryPeriodData, CountryData, Sector, Standard, MapData } from '@/@types/State'
+import axios from 'axios'
+import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
+// const SLEEP = 500
 
-export const getCarbonReduction = async (): Promise<EffectResponse<CountryData[]>> => {
-  try {
-    await new Promise((f) => setTimeout(f, SLEEP))
-    return {
-      data,
-      error: undefined,
-    }
-  } catch (error) {
-    console.log(error)
-    return { error: { code: `200`, message: `could not fetch data` } }
-  }
+export const getCarbonReduction = async (): Promise<EffectResponse<MapData>> => {
+  return new Promise((resolve, reject) => {
+    let result: EffectResponse<MapData> = { error: { code: `400`, message: `could not fetch data` } }
+    axios
+      .get(`${defaultDomain}/widgets/map`, defaultHeaders)
+      .then((body) => {
+        console.dir(body.data)
+        if (body.data && body.data.lastUpdated && body.data.countriesData) {
+          const mapData = body.data as MapData
+
+          result = { data: mapData }
+        } else {
+          result = { error: { code: body.status.toString(), message: body.statusText } }
+        }
+        resolve(result)
+      })
+      .catch((error) => {
+        result = { error: { code: `400`, message: `could not fetch data` } }
+        reject(result)
+      })
+  })
 }
 
 export const generateCountryByRegion = (region: Exclude<SubRegion, SubRegion.WORLD>) => {
