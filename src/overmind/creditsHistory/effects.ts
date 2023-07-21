@@ -1,6 +1,6 @@
 import { EffectResponse } from '@/@types/EffectResponse'
 import { DataFilters, FilteredCreditsHistoryData, IssuedRetiredDataCountry, IssuedRetiredGraphData } from '@/@types/State'
-import mockData from '../../assets/credit_history_data'
+import mockData from '../../test/mock-data/credit_history_data'
 import { differenceInMonths, isBefore, startOfMonth } from 'date-fns'
 import { SubRegion } from '@/@types/geojson'
 import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
@@ -51,7 +51,7 @@ export const generateFilteredCreditsHistory = (rawData: IssuedRetiredDataCountry
 
   rawData.forEach((countryEntry) => {
     if (region === SubRegion.WORLD || (country == undefined && generateCountryByRegion(region).includes(countryEntry.countryCode)) || countryEntry.countryCode == country) {
-      countryEntry.timeRanges.map((timeRangeEntry) => {
+      countryEntry.timeRanges.forEach((timeRangeEntry) => {
         const { year, retired, issued, month } = timeRangeEntry
         const formattedDateTime = new Date(year, month - 1)
         if (

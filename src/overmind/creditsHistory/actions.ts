@@ -9,8 +9,8 @@ import { EffectResponse } from '@/@types/EffectResponse'
 export const getCreditsHistoryFiltered = ({ state, effects }: Context) => {
   if (state.creditsHistory.rawCreditsHistory?.data) {
     state.creditsHistory.filteredCreditsHistory = effects.creditsHistory.generateFilteredCreditsHistory(state.creditsHistory.rawCreditsHistory?.data.countriesData, {
-      region: SubRegion.WORLD,
-      timeframe: TimeframesData.MAX,
+      region: state.creditsHistory.dataFilters.region,
+      timeframe: state.creditsHistory.dataFilters.timeframe,
     })
   }
 }
