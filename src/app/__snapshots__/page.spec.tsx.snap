@@ -57677,37 +57677,31 @@ exports[`renders correctly 1`] = `
                 class="chakra-stack css-1xum4w9"
               >
                 <span
-                  class="className selected css-1eveppl"
+                  class="css-rkp67"
                 >
                   <span
                     class="css-1ny2kle"
-                  >
-                    Max
-                  </span>
-                </span>
-                <span
-                  class="className notSelected css-1eveppl"
-                >
-                  <span
-                    class="css-1ny2kle"
+                    data-testid="button-timeframe-1"
                   >
                     12m
                   </span>
                 </span>
                 <span
-                  class="className notSelected css-1eveppl"
+                  class="css-rkp67"
                 >
                   <span
                     class="css-1ny2kle"
+                    data-testid="button-timeframe-2"
                   >
                     6m
                   </span>
                 </span>
                 <span
-                  class="className notSelected css-1eveppl"
+                  class="css-rkp67"
                 >
                   <span
                     class="css-1ny2kle"
+                    data-testid="button-timeframe-3"
                   >
                     1m
                   </span>

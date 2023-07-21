@@ -1,5 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`credit history stat renders correctly with large amount 1`] = `
+<div>
+  <div
+    class="chakra-stat className css-1882jtg"
+  >
+    <dl>
+      <dd
+        class="chakra-stat__number css-fvxuh5"
+      >
+        <p
+          class="chakra-text css-1uovyuu"
+        >
+          123
+        </p>
+        <p
+          class="chakra-text css-19u5taq"
+        >
+          M
+        </p>
+      </dd>
+      <dt
+        class="chakra-stat__label css-0"
+      >
+        label
+      </dt>
+    </dl>
+  </div>
+</div>
+`;
+
+exports[`credit history stat renders correctly with small amount 1`] = `
+<div>
+  <div
+    class="chakra-stat className css-1882jtg"
+  >
+    <dl>
+      <dd
+        class="chakra-stat__number css-fvxuh5"
+      >
+        <p
+          class="chakra-text css-1uovyuu"
+        >
+          12
+        </p>
+        <p
+          class="chakra-text css-19u5taq"
+        >
+          3
+        </p>
+      </dd>
+      <dt
+        class="chakra-stat__label css-0"
+      >
+        label
+      </dt>
+    </dl>
+  </div>
+</div>
+`;
+
 exports[`renders correctly 1`] = `
 <div>
   <div
