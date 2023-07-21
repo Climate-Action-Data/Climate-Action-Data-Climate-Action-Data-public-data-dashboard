@@ -1,9 +1,10 @@
 import { extendTheme } from '@chakra-ui/react'
 import { mode } from '@chakra-ui/theme-tools'
 
-import { brandPrimary, whiteSecondary, lightGray, lightGrayRound } from '@/styles/Button'
-import { cardSection } from '@/styles/Section'
+import { brandPrimary, lightGray, lightGrayRound, whiteSecondary } from '@/styles/Button'
+import { cardSection, creditHistoryCardSection } from '@/styles/Section'
 import fontSizes from './FontSizes'
+import { Text } from './Text'
 
 const theme = extendTheme({
   fontSizes: fontSizes,
@@ -37,13 +38,10 @@ const theme = extendTheme({
     Container: {
       variants: {
         cardSection,
+        creditHistoryCardSection,
       },
     },
-    Text: {
-      baseStyle: {
-        fontSize: `14px`,
-      },
-    },
+    Text,
   },
   colors: {
     lightGray: {
