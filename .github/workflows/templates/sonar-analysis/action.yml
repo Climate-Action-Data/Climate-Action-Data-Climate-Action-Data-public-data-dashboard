@@ -16,6 +16,11 @@ runs:
       with:
         fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
 
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
     - name: Setup pnpm environment
       uses: pnpm/action-setup@v2
       with:
