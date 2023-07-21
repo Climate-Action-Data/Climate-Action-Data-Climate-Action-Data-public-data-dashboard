@@ -294,37 +294,31 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
               class="chakra-stack css-1xum4w9"
             >
               <span
-                class="className selected css-1eveppl"
+                class="css-rkp67"
               >
                 <span
                   class="css-1ny2kle"
-                >
-                  Max
-                </span>
-              </span>
-              <span
-                class="className notSelected css-1eveppl"
-              >
-                <span
-                  class="css-1ny2kle"
+                  data-testid="button-timeframe-1"
                 >
                   12m
                 </span>
               </span>
               <span
-                class="className notSelected css-1eveppl"
+                class="css-rkp67"
               >
                 <span
                   class="css-1ny2kle"
+                  data-testid="button-timeframe-2"
                 >
                   6m
                 </span>
               </span>
               <span
-                class="className notSelected css-1eveppl"
+                class="css-rkp67"
               >
                 <span
                   class="css-1ny2kle"
+                  data-testid="button-timeframe-3"
                 >
                   1m
                 </span>
@@ -393,7 +387,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
 </div>
 `;
 
-exports[`CreditsHistorySection renders the widget when carbonMapData and creditsHistoryData are defined 1`] = `
+exports[`CreditsHistorySection renders the widget when rawCreditsHistory and creditsHistoryData are defined 1`] = `
 <div>
   <div
     class="chakra-container css-101z6i4"
@@ -1034,37 +1028,31 @@ exports[`CreditsHistorySection renders the widget when carbonMapData and credits
               class="chakra-stack css-1xum4w9"
             >
               <span
-                class="className selected css-1eveppl"
+                class="css-rkp67"
               >
                 <span
                   class="css-1ny2kle"
-                >
-                  Max
-                </span>
-              </span>
-              <span
-                class="className notSelected css-1eveppl"
-              >
-                <span
-                  class="css-1ny2kle"
+                  data-testid="button-timeframe-1"
                 >
                   12m
                 </span>
               </span>
               <span
-                class="className notSelected css-1eveppl"
+                class="css-rkp67"
               >
                 <span
                   class="css-1ny2kle"
+                  data-testid="button-timeframe-2"
                 >
                   6m
                 </span>
               </span>
               <span
-                class="className notSelected css-1eveppl"
+                class="css-rkp67"
               >
                 <span
                   class="css-1ny2kle"
+                  data-testid="button-timeframe-3"
                 >
                   1m
                 </span>
@@ -1153,7 +1141,7 @@ exports[`CreditsHistorySection renders the widget when carbonMapData and credits
             </div>
           </div>
           <p
-            class="chakra-text className css-10xb65b"
+            class="chakra-text className css-1xi4xed"
           >
             Data represented as of 21 Jul 2023, 02:25:43
           </p>
@@ -1168,7 +1156,7 @@ exports[`CreditsHistorySection renders the widget when carbonMapData and credits
 </div>
 `;
 
-exports[`CreditsHistorySection renders the widget when carbonMapData and creditsHistoryData are defined but has no chart data 1`] = `
+exports[`CreditsHistorySection renders the widget when rawCreditsHistory and creditsHistoryData are defined but has no chart data 1`] = `
 <div>
   <div
     class="chakra-container css-101z6i4"
@@ -1809,37 +1797,31 @@ exports[`CreditsHistorySection renders the widget when carbonMapData and credits
               class="chakra-stack css-1xum4w9"
             >
               <span
-                class="className selected css-1eveppl"
+                class="css-rkp67"
               >
                 <span
                   class="css-1ny2kle"
-                >
-                  Max
-                </span>
-              </span>
-              <span
-                class="className notSelected css-1eveppl"
-              >
-                <span
-                  class="css-1ny2kle"
+                  data-testid="button-timeframe-1"
                 >
                   12m
                 </span>
               </span>
               <span
-                class="className notSelected css-1eveppl"
+                class="css-rkp67"
               >
                 <span
                   class="css-1ny2kle"
+                  data-testid="button-timeframe-2"
                 >
                   6m
                 </span>
               </span>
               <span
-                class="className notSelected css-1eveppl"
+                class="css-rkp67"
               >
                 <span
                   class="css-1ny2kle"
+                  data-testid="button-timeframe-3"
                 >
                   1m
                 </span>
