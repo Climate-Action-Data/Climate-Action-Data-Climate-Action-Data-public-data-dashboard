@@ -17,7 +17,7 @@ export interface CountryData {
 }
 
 export interface MapData {
-  lastUpdated: Date
+  lastUpdated: string
   countriesData: CountryData[]
 }
 

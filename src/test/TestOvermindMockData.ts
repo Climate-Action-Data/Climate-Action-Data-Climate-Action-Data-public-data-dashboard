@@ -1,4 +1,4 @@
-import { CountryPeriodData, DataState } from '@/@types/State'
+import { CountryPeriodData, DataState, MapData } from '@/@types/State'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
 
@@ -217,9 +217,13 @@ const CARBON_MAP_DATA = [
   },
 ]
 
+const MAP_DATA: MapData = {
+  lastUpdated: `2023-07-21T05:55:20.621Z`,
+  countriesData: CARBON_MAP_DATA,
+}
 const STATE_CARBON_FULL: DataState = {
   carbonReduction: {
-    carbonMapData: { data: CARBON_MAP_DATA },
+    carbonMapData: { data: MAP_DATA },
     carbonMapHasCountryData: new Map<string, boolean>(),
     carbonMapDataFilters: { region: SubRegion.WORLD, timeframe: TimeframesData.MAX },
     carbonMapHoveredRegion: ``,
@@ -240,7 +244,7 @@ const STATE_CARBON_FILTERED_UNDEFINED_MAP_DATA_UNDEFINED: DataState = {
 
 const STATE_CARBON_FILTERED_UNDEFINED: DataState = {
   carbonReduction: {
-    carbonMapData: { data: CARBON_MAP_DATA },
+    carbonMapData: { data: MAP_DATA },
     carbonMapHasCountryData: new Map<string, boolean>(),
     carbonMapDataFilters: { region: SubRegion.WORLD, timeframe: TimeframesData.MAX },
     carbonMapHoveredRegion: ``,
@@ -251,7 +255,7 @@ const STATE_CARBON_FILTERED_UNDEFINED: DataState = {
 
 const STATE_CARBON_FULL_REGION_COUNTRY: DataState = {
   carbonReduction: {
-    carbonMapData: { data: CARBON_MAP_DATA },
+    carbonMapData: { data: MAP_DATA },
     carbonMapHasCountryData: new Map<string, boolean>(),
     carbonMapDataFilters: { region: SubRegion.LATIN_AMERICA_AND_THE_CARIBBEAN, timeframe: TimeframesData.MAX, country: `COL` },
     carbonMapHoveredRegion: SubRegion.LATIN_AMERICA_AND_THE_CARIBBEAN,
@@ -262,7 +266,7 @@ const STATE_CARBON_FULL_REGION_COUNTRY: DataState = {
 
 const STATE_CARBON_FULL_REGION_COUNTRY_NO_HOVER: DataState = {
   carbonReduction: {
-    carbonMapData: { data: CARBON_MAP_DATA },
+    carbonMapData: { data: MAP_DATA },
     carbonMapHasCountryData: new Map<string, boolean>(),
     carbonMapDataFilters: { region: SubRegion.LATIN_AMERICA_AND_THE_CARIBBEAN, timeframe: TimeframesData.MAX, country: `COL` },
     carbonMapHoveredRegion: ``,
