@@ -3,10 +3,10 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="css-k008qs"
+    class="chakra-stack css-v2wsrc"
   >
     <div
-      class="css-1775nv6"
+      class="css-1ixfnwg"
     >
       <div
         style="width: 100%; height: 100%;"
@@ -16,48 +16,64 @@ exports[`renders correctly 1`] = `
       class="css-51blsq"
     >
       <div
-        class="css-0"
+        class="chakra-stack css-2zw9da"
       >
-        <p
-          class="chakra-text css-1tjw2bj"
+        <span
+          class="chakra-text css-1d41w57"
         >
           40
-          % 
+          %
+        </span>
+        <span
+          class="chakra-text css-14oyqah"
+        >
           Renewable Energy
-        </p>
+        </span>
       </div>
       <div
-        class="css-0"
+        class="chakra-stack css-2zw9da"
       >
-        <p
-          class="chakra-text css-1pv6nyr"
+        <span
+          class="chakra-text css-hgvpt4"
         >
           24
-          % 
+          %
+        </span>
+        <span
+          class="chakra-text css-1sdjgl0"
+        >
           Waste Disposal
-        </p>
+        </span>
       </div>
       <div
-        class="css-0"
+        class="chakra-stack css-2zw9da"
       >
-        <p
-          class="chakra-text css-ma7g46"
+        <span
+          class="chakra-text css-7oskx6"
         >
           19
-          % 
+          %
+        </span>
+        <span
+          class="chakra-text css-287kh4"
+        >
           Energy Efficiency
-        </p>
+        </span>
       </div>
       <div
-        class="css-0"
+        class="chakra-stack css-2zw9da"
       >
-        <p
-          class="chakra-text css-4206h5"
+        <span
+          class="chakra-text css-6nvuaw"
         >
           17
-          % 
+          %
+        </span>
+        <span
+          class="chakra-text css-1mxrjsb"
+        >
           Others
-        </p>
+        </span>
       </div>
     </div>
   </div>
