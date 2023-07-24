@@ -22,7 +22,7 @@ export const getCreditsHistory = async (): Promise<EffectResponse<IssuedRetiredG
         }
         resolve(result)
       })
-      .catch((_) => {
+      .catch((error) => {
         result = { error: { code: `400`, message: `could not fetch data` } }
         reject(result)
       })
