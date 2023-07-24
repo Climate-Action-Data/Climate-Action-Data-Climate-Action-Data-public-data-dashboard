@@ -1,16 +1,15 @@
+import axios from 'axios'
+
 import { EffectResponse } from '@/@types/EffectResponse'
-// import data from '../../test/mock-data/map_dashboard_data'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
 import countriesContinentsMap from '@/assets/geo-map/countries-continents-mapping'
-import { CountryData, CountryPeriodData, Sector, Standard, MapData } from '@/@types/State'
-import axios from 'axios'
+import { CountryData, CountryPeriodData, MapData, Sector, Standard } from '@/@types/State'
 import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
-// const SLEEP = 500
 
 export const getCarbonReduction = async (): Promise<EffectResponse<MapData>> => {
   return new Promise((resolve, reject) => {
-    let result: EffectResponse<MapData> = { error: { code: `400`, message: `could not fetch data` } }
+    let result: EffectResponse<MapData>
     axios
       .get(`${defaultDomain}/widgets/map`, defaultHeaders)
       .then((body) => {
@@ -24,7 +23,7 @@ export const getCarbonReduction = async (): Promise<EffectResponse<MapData>> => 
         }
         resolve(result)
       })
-      .catch((error) => {
+      .catch((_) => {
         result = { error: { code: `400`, message: `could not fetch data` } }
         reject(result)
       })

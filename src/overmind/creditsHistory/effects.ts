@@ -1,15 +1,16 @@
+import axios from 'axios'
+
 import { EffectResponse } from '@/@types/EffectResponse'
 import { DataFilters, FilteredCreditsHistoryData, IssuedRetiredDataCountry, IssuedRetiredGraphData } from '@/@types/State'
 import { differenceInMonths, isBefore, startOfMonth } from 'date-fns'
 import { SubRegion } from '@/@types/geojson'
 import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
 import { TimeframesData } from '@/@types/Timeframe'
-import axios from 'axios'
 import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
 
 export const getCreditsHistory = async (): Promise<EffectResponse<IssuedRetiredGraphData>> => {
   return new Promise((resolve, reject) => {
-    let result: EffectResponse<IssuedRetiredGraphData> = { error: { code: `400`, message: `could not fetch data` } }
+    let result: EffectResponse<IssuedRetiredGraphData>
     axios
       .get(`${defaultDomain}/widgets/issued-retired-graph`, defaultHeaders)
       .then((body) => {
@@ -22,7 +23,7 @@ export const getCreditsHistory = async (): Promise<EffectResponse<IssuedRetiredG
         }
         resolve(result)
       })
-      .catch((error) => {
+      .catch((_) => {
         result = { error: { code: `400`, message: `could not fetch data` } }
         reject(result)
       })
