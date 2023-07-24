@@ -287,30 +287,40 @@ exports[`renders correctly 1`] = `
           >
             <span
               class="css-ew0hq8"
+              data-testid="button-timeframe-0"
             >
               <span
                 class="css-zvlevn"
-                data-testid="button-timeframe-1"
+              >
+                Max
+              </span>
+            </span>
+            <span
+              class="css-ew0hq8"
+              data-testid="button-timeframe-1"
+            >
+              <span
+                class="css-zvlevn"
               >
                 12m
               </span>
             </span>
             <span
               class="css-ew0hq8"
+              data-testid="button-timeframe-2"
             >
               <span
                 class="css-zvlevn"
-                data-testid="button-timeframe-2"
               >
                 6m
               </span>
             </span>
             <span
               class="css-ew0hq8"
+              data-testid="button-timeframe-3"
             >
               <span
                 class="css-zvlevn"
-                data-testid="button-timeframe-3"
               >
                 1m
               </span>
