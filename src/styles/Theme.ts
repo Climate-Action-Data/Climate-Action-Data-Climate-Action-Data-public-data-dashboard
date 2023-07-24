@@ -4,6 +4,7 @@ import { mode } from '@chakra-ui/theme-tools'
 import { brandPrimary, whiteSecondary, lightGray, lightGrayRound } from '@/styles/Button'
 import { cardSection } from '@/styles/Section'
 import fontSizes from './FontSizes'
+import { ellipsis } from './Text'
 
 const theme = extendTheme({
   fontSizes: fontSizes,
@@ -42,6 +43,9 @@ const theme = extendTheme({
     Text: {
       baseStyle: {
         fontSize: `14px`,
+      },
+      variants: {
+        ellipsis,
       },
     },
   },

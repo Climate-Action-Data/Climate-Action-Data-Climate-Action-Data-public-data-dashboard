@@ -48,10 +48,12 @@ export const RegionSearch = (): React.JSX.Element => {
     if (carbonReduction.carbonMapDataFilters?.region !== SubRegion.WORLD) {
       return (
         <Flex alignItems={`center`}>
-          <Button variant="lightGrayRound" marginRight={4} data-testid="button-region-back" onClick={() => clearLocationFilters()}>
+          <Button variant="lightGrayRound" marginRight={[`4px`, 0]} data-testid="button-region-back" onClick={() => clearLocationFilters()}>
             &lt;
           </Button>
-          <Text fontWeight={`bold`}>{t(`regions.${carbonReduction.carbonMapDataFilters.region}`)}</Text>
+          <Text maxWidth={[`104px`, `unset`]} variant={`ellipsis`} fontWeight={`bold`}>
+            {t(`regions.${carbonReduction.carbonMapDataFilters.region}`)}
+          </Text>
         </Flex>
       )
     } else {

@@ -279,14 +279,14 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
       class="css-70qvj9"
     >
       <button
-        class="chakra-button css-czglya"
+        class="chakra-button css-8c7wx8"
         data-testid="button-region-back"
         type="button"
       >
         &lt;
       </button>
       <p
-        class="chakra-text css-in3yi3"
+        class="chakra-text css-392k6y"
       >
         Latin America and the Caribbean
       </p>
