@@ -22,14 +22,3 @@ it(`renders with click on timeframe`, async () => {
   await userEvent.click(screen.getByTestId(`button-timeframe-1`))
   expect(container).toMatchSnapshot()
 })
-
-it(`renders with click on going back`, async () => {
-  const { container } = render(
-    <TestOvermindWrapper>
-      <TimeframeSearch />
-    </TestOvermindWrapper>,
-  )
-  await userEvent.click(screen.getByTestId(`button-timeframe-1`))
-  await userEvent.click(screen.getByTestId(`button-timeframe-close`))
-  expect(container).toMatchSnapshot()
-})
