@@ -20,7 +20,8 @@ interface SubregionIndicatorProps {
   clearSubregion: () => void
 }
 
-const SubregionIndicator: FC<SubregionIndicatorProps> = ({ subregion, clearSubregion }) => {
+const SubregionIndicator: FC<SubregionIndicatorProps> = (props: SubregionIndicatorProps) => {
+  const { subregion, clearSubregion } = props
   const { t } = useTranslation(`home`)
   return (
     <HStack>

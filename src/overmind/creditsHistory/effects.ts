@@ -8,6 +8,9 @@ import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
 import { TimeframesData } from '@/@types/Timeframe'
 import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
 
+const SIX_MONTHS = 6
+const TWELVE_MONTHS = 12
+
 export const getCreditsHistory = async (): Promise<EffectResponse<IssuedRetiredGraphData>> => {
   return new Promise((resolve) => {
     let result: EffectResponse<IssuedRetiredGraphData>
@@ -70,9 +73,9 @@ export const generateFilteredCreditsHistory = (rawData: IssuedRetiredDataCountry
         if (
           timeframe === TimeframesData.MAX ||
           // eslint-disable-next-line no-magic-numbers
-          (timeframe === TimeframesData.ONE_YEAR && differenceInMonths(today, formattedDateTime) <= 12) ||
+          (timeframe === TimeframesData.ONE_YEAR && differenceInMonths(today, formattedDateTime) <= TWELVE_MONTHS) ||
           // eslint-disable-next-line no-magic-numbers
-          (timeframe === TimeframesData.SIX_MONTHS && differenceInMonths(today, formattedDateTime) <= 6) ||
+          (timeframe === TimeframesData.SIX_MONTHS && differenceInMonths(today, formattedDateTime) <= SIX_MONTHS) ||
           (timeframe === TimeframesData.ONE_MONTH && differenceInMonths(today, formattedDateTime) <= 1)
         ) {
           appendChartDataAndStat(result, formattedDateTime, issued, retired)

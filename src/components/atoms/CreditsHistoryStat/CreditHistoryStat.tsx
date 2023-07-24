@@ -10,7 +10,8 @@ interface CreditHistoryStateProps {
   textColor?: string
 }
 
-const CreditsHistoryStat: FC<CreditHistoryStateProps> = ({ amount, label, textColor }) => {
+const CreditsHistoryStat: FC<CreditHistoryStateProps> = (props: CreditHistoryStateProps) => {
+  const { amount, label, textColor } = props
   const [compactAmount, suffix] = toCompactValueAndSuffix(amount ?? 0)
 
   return (
