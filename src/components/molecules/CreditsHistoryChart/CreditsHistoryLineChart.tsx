@@ -35,6 +35,7 @@ const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
     format: ` >-.1s`,
     tickValues: 5,
   }
+
   return (
     <ResponsiveLine
       colors={[`#24BD63`, `#125E32`]}
@@ -61,4 +62,5 @@ const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
     />
   )
 }
+
 export default CreditHistoryLineChart
