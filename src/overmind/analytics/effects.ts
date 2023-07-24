@@ -8,7 +8,7 @@ import { CountryData, CountryPeriodData, MapData, Sector, Standard } from '@/@ty
 import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
 
 export const getCarbonReduction = async (): Promise<EffectResponse<MapData>> => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     let result: EffectResponse<MapData>
     axios
       .get(`${defaultDomain}/widgets/map`, defaultHeaders)
@@ -25,7 +25,7 @@ export const getCarbonReduction = async (): Promise<EffectResponse<MapData>> => 
       })
       .catch((_) => {
         result = { error: { code: `400`, message: `could not fetch data` } }
-        reject(result)
+        resolve(result)
       })
   })
 }

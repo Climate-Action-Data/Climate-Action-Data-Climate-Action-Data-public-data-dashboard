@@ -9,7 +9,7 @@ import { TimeframesData } from '@/@types/Timeframe'
 import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
 
 export const getCreditsHistory = async (): Promise<EffectResponse<IssuedRetiredGraphData>> => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     let result: EffectResponse<IssuedRetiredGraphData>
     axios
       .get(`${defaultDomain}/widgets/issued-retired-graph`, defaultHeaders)
@@ -25,7 +25,7 @@ export const getCreditsHistory = async (): Promise<EffectResponse<IssuedRetiredG
       })
       .catch((_) => {
         result = { error: { code: `400`, message: `could not fetch data` } }
-        reject(result)
+        resolve(result)
       })
   })
 }
