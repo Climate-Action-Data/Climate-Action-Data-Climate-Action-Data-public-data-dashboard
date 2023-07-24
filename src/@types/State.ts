@@ -51,7 +51,7 @@ export interface Standard {
 }
 
 export interface IssuedRetiredGraphData {
-  lastUpdate: string
+  lastUpdated: string
   countriesData: IssuedRetiredDataCountry[]
 }
 

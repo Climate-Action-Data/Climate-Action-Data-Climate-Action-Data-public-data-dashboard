@@ -40,7 +40,7 @@
     "standard": "Standard"
   },
   "selectedDataNotAvailable": "Selected data is currently unavailable within the carbon registries.",
-  "dataRepresentedAsOf": "Data represented as of {{lastUpdated}}",
+  "dataRepresentedAsOf": "Data represented as of",
   "issued": "Issued",
   "retired": "Retired"
 }

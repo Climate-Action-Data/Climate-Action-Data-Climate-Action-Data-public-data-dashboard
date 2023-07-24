@@ -17,7 +17,7 @@ describe(`CarbonReductionWidget`, () => {
 
   test(`renders the widget when carbonMapData and carbonMapDataFiltered are defined`, () => {
     const { container } = render(
-      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FULL}>
+      <TestOvermindWrapper analytics={MockData.STATE_CARBON_FULL}>
         <CarbonReductionWidget />
       </TestOvermindWrapper>,
     )

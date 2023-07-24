@@ -10,6 +10,7 @@ export const getCreditsHistoryFiltered = ({ state, effects }: Context) => {
   if (state.creditsHistory.rawCreditsHistory?.data) {
     state.creditsHistory.filteredCreditsHistory = effects.creditsHistory.generateFilteredCreditsHistory(state.creditsHistory.rawCreditsHistory?.data.countriesData, {
       region: state.creditsHistory.dataFilters.region,
+      country: state.creditsHistory.dataFilters.country,
       timeframe: state.creditsHistory.dataFilters.timeframe,
     })
   }

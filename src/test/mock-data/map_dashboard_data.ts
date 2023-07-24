@@ -1,4 +1,4 @@
-const countryData = [
+const MAP_DASHBOARD_MOCK_DATA = [
   {
     countryCode: `TUR`,
     timeRanges: {
@@ -435,4 +435,4 @@ const countryData = [
   },
 ]
 
-export default countryData
+export default MAP_DASHBOARD_MOCK_DATA
