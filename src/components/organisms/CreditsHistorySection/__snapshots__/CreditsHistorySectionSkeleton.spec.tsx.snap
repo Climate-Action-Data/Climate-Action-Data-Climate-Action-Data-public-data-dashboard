@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders loading state when creditsHistoryData is undefined 1`] = `
+<div>
+  <div
+    class="css-9ty7ec"
+    id="issued-retired-chart-header"
+  >
+    <div
+      class="css-f5ds6o"
+    >
+      <div
+        class="chakra-stack css-c3wesr"
+      >
+        <div
+          class="chakra-stack css-6uacnb"
+        >
+          <div
+            class="chakra-skeleton css-10x8ef7"
+          />
+          <p
+            class="chakra-text css-0"
+          >
+            Issued
+          </p>
+        </div>
+        <div
+          class="chakra-stack__divider css-2if2sn"
+        />
+        <div
+          class="chakra-stack css-6uacnb"
+        >
+          <div
+            class="chakra-skeleton css-10x8ef7"
+          />
+          <p
+            class="chakra-text css-0"
+          >
+            Retired
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-1r9qc8o"
+    >
+      <div
+        class="chakra-skeleton css-4e2to2"
+      />
+    </div>
+  </div>
+</div>
+`;

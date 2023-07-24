@@ -65,9 +65,14 @@ export interface IssuedRetiredDataCountry {
   }[]
 }
 
+interface NivoLineDataPoint {
+  x: Date
+  y: number
+}
+
 export interface CreditsHistoryChartData {
   id: string
-  data: { x: Date; y: number }[]
+  data: NivoLineDataPoint[]
 }
 
 export interface FilteredCreditsHistoryData {

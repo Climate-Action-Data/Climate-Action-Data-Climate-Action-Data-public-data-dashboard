@@ -26,7 +26,7 @@ export const getCreditsHistory = async (): Promise<EffectResponse<IssuedRetiredG
         }
         resolve(result)
       })
-      .catch((_) => {
+      .catch(() => {
         result = { error: { code: `400`, message: `could not fetch data` } }
         resolve(result)
       })
@@ -72,9 +72,7 @@ export const generateFilteredCreditsHistory = (rawData: IssuedRetiredDataCountry
         const formattedDateTime = new Date(year, month - 1)
         if (
           timeframe === TimeframesData.MAX ||
-          // eslint-disable-next-line no-magic-numbers
           (timeframe === TimeframesData.ONE_YEAR && differenceInMonths(today, formattedDateTime) <= TWELVE_MONTHS) ||
-          // eslint-disable-next-line no-magic-numbers
           (timeframe === TimeframesData.SIX_MONTHS && differenceInMonths(today, formattedDateTime) <= SIX_MONTHS) ||
           (timeframe === TimeframesData.ONE_MONTH && differenceInMonths(today, formattedDateTime) <= 1)
         ) {
