@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="css-12rn99f"
+    id="issued-retired-chart-header"
+  >
+    <div
+      class="css-a3yeag"
+    >
+      <div
+        class="chakra-stack css-1igwmid"
+      >
+        <p
+          class="chakra-text className css-v7dfld"
+          style="font-family: fontFamily;"
+          variable="variable"
+        >
+          World
+        </p>
+      </div>
+    </div>
+    <div
+      class="css-1q2dfsb"
+    >
+      <div
+        class="chakra-stack css-s7zwns"
+      >
+        <div
+          class="chakra-stack css-8g8ihq"
+        >
+          <div
+            aria-controls="popover-content-:r1:"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            class="chakra-stack css-8g8ihq"
+            id="popover-trigger-:r1:"
+          >
+            <div
+              class="chakra-input__group css-bx0blc"
+              data-group="true"
+            >
+              <input
+                class="chakra-input css-1luyivc"
+                data-testid="dropdown_input"
+                placeholder="Choose a region"
+              />
+              <div
+                class="chakra-input__right-element css-2cnd2z"
+              >
+                <button
+                  aria-label="toggle menu"
+                  class="chakra-button css-xsdlqf"
+                  data-testid="dropdown-button"
+                  type="button"
+                >
+                  <svg
+                    class="chakra-icon css-c0air1"
+                    focusable="false"
+                    viewBox="0 0 8 4"
+                  >
+                    <path
+                      d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="chakra-popover__popper css-0"
+            style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+          >
+            <section
+              aria-describedby="popover-body-:r1:"
+              class="chakra-popover__content css-18u085x"
+              data-testid="dropdown-body"
+              id="popover-content-:r1:"
+              role="dialog"
+              style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+              tabindex="-1"
+            >
+              <div
+                class="chakra-popover__body css-0"
+                id="popover-body-:r1:"
+              >
+                <ul
+                  class="css-155za0w"
+                  role="list"
+                />
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-57dgik"
+    >
+      <div
+        class="chakra-stack css-1xum4w9"
+      >
+        <span
+          class="css-ew0hq8"
+        >
+          <span
+            class="css-zvlevn"
+            data-testid="button-timeframe-1"
+          >
+            12m
+          </span>
+        </span>
+        <span
+          class="css-ew0hq8"
+        >
+          <span
+            class="css-zvlevn"
+            data-testid="button-timeframe-2"
+          >
+            6m
+          </span>
+        </span>
+        <span
+          class="css-ew0hq8"
+        >
+          <span
+            class="css-zvlevn"
+            data-testid="button-timeframe-3"
+          >
+            1m
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

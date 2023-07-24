@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="chakra-stack css-1unzjcy"
+  >
+    <div
+      class="css-9ty7ec"
+      id="issued-retired-chart-header"
+    >
+      <div
+        class="css-1tneayp"
+      >
+        <div
+          class="chakra-stack css-c3wesr"
+        >
+          <div
+            class="chakra-stat className css-1882jtg"
+          >
+            <dl>
+              <dd
+                class="chakra-stat__number css-fvxuh5"
+              >
+                <p
+                  class="chakra-text css-1330wir"
+                >
+                  0.00
+                </p>
+                <p
+                  class="chakra-text css-19u5taq"
+                />
+              </dd>
+              <dt
+                class="chakra-stat__label css-0"
+              >
+                Issued
+              </dt>
+            </dl>
+          </div>
+          <div
+            class="chakra-stack__divider css-2if2sn"
+          />
+          <div
+            class="chakra-stat className css-1882jtg"
+          >
+            <dl>
+              <dd
+                class="chakra-stat__number css-fvxuh5"
+              >
+                <p
+                  class="chakra-text css-3px91y"
+                >
+                  0.00
+                </p>
+                <p
+                  class="chakra-text css-19u5taq"
+                />
+              </dd>
+              <dt
+                class="chakra-stat__label css-0"
+              >
+                Retired
+              </dt>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-1r9qc8o"
+      />
+    </div>
+    <p
+      class="chakra-text className css-1xi4xed"
+    >
+      Data represented as of Invalid Date Invalid Date
+    </p>
+  </div>
+</div>
+`;

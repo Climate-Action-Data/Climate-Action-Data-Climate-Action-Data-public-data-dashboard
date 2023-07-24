@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreditsHistoryChart renders loading state when creditsHistoryData is undefined 1`] = `
+<div>
+  <div
+    style="width: 100%; height: 100%;"
+  />
+</div>
+`;

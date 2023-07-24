@@ -23,7 +23,7 @@ export const getCarbonReduction = async (): Promise<EffectResponse<MapData>> => 
         }
         resolve(result)
       })
-      .catch((_) => {
+      .catch(() => {
         result = { error: { code: `400`, message: `could not fetch data` } }
         resolve(result)
       })
