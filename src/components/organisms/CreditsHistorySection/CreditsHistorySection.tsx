@@ -175,6 +175,7 @@ const CreditsHistorySection: FC = () => {
                   </GridItem>
                   <GridItem area={`chart`} height={`300px`} minW={0}>
                     <CreditsHistoryChart />
+                    src/overmind/creditsHistory/effects.ts
                   </GridItem>
                 </Grid>
                 {rawCreditsHistory?.data?.lastUpdated}
