@@ -1,5 +1,5 @@
-const creditHistory = {
-  lastUpdate: `2023-07-20T18:25:43.511Z`,
+const CREDIT_HISTORY_MOCK_DATA = {
+  lastUpdated: `2023-07-20T18:25:43.511Z`,
   countriesData: [
     {
       countryCode: `AFG`,
@@ -743,4 +743,4 @@ const creditHistory = {
   ],
 }
 
-export default creditHistory
+export default CREDIT_HISTORY_MOCK_DATA

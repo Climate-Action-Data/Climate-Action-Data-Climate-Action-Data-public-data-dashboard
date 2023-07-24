@@ -1,6 +1,5 @@
 import { FC, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { format } from 'date-fns'
 import { Center, Container, Grid, GridItem, HStack, Skeleton, Stack, StackDivider, Tag, TagCloseButton, TagLabel, Text, VStack } from '@chakra-ui/react'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
@@ -76,6 +75,8 @@ const CreditsHistorySection: FC = () => {
       </Grid>
     )
   }
+
+  const lastUpdatedDate = new Date(rawCreditsHistory?.data?.lastUpdated ?? ``)
 
   const getCountryPlaceholder = (country: string | undefined): string => {
     if (country) {
@@ -176,8 +177,9 @@ const CreditsHistorySection: FC = () => {
                     <CreditsHistoryChart />
                   </GridItem>
                 </Grid>
+                {rawCreditsHistory?.data?.lastUpdated}
                 <Text className={Aeonik.className} color={`lightGray.600`}>
-                  {t(`dataRepresentedAsOf`, { lastUpdated: format(new Date(rawCreditsHistory?.data?.lastUpdate ?? ``), `d MMM y, HH:mm:ss`) })}
+                  {`${t(`dataRepresentedAsOf`)} ${lastUpdatedDate.toLocaleDateString()} ${lastUpdatedDate.toLocaleTimeString()}`}
                 </Text>
               </VStack>
             ) : (

@@ -1,20 +1,32 @@
 import { EffectResponse } from '@/@types/EffectResponse'
 import { DataFilters, FilteredCreditsHistoryData, IssuedRetiredDataCountry, IssuedRetiredGraphData } from '@/@types/State'
-import mockData from '../../test/mock-data/credit_history_data'
 import { differenceInMonths, isBefore, startOfMonth } from 'date-fns'
 import { SubRegion } from '@/@types/geojson'
 import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
 import { TimeframesData } from '@/@types/Timeframe'
-
-const SLEEP = 2000
+import axios from 'axios'
+import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
 
 export const getCreditsHistory = async (): Promise<EffectResponse<IssuedRetiredGraphData>> => {
-  try {
-    await new Promise((f) => setTimeout(f, SLEEP))
-    return { data: mockData }
-  } catch (error) {
-    return { error: { code: `200`, message: `could not fetch data` } }
-  }
+  return new Promise((resolve, reject) => {
+    let result: EffectResponse<IssuedRetiredGraphData> = { error: { code: `400`, message: `could not fetch data` } }
+    axios
+      .get(`${defaultDomain}/widgets/issued-retired-graph`, defaultHeaders)
+      .then((body) => {
+        if (body.data && body.data.lastUpdated && body.data.countriesData) {
+          const mapData = body.data as IssuedRetiredGraphData
+
+          result = { data: mapData }
+        } else {
+          result = { error: { code: body.status.toString(), message: body.statusText } }
+        }
+        resolve(result)
+      })
+      .catch((_) => {
+        result = { error: { code: `400`, message: `could not fetch data` } }
+        reject(result)
+      })
+  })
 }
 
 export const appendChartDataAndStat = (result: FilteredCreditsHistoryData, formattedDateTime: Date, issued: number, retired: number) => {

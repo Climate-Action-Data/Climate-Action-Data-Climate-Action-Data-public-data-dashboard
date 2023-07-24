@@ -39,7 +39,7 @@ describe(`GeoMap component`, () => {
 
   it(`renders the component with selected region`, () => {
     const { container } = render(
-      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
+      <TestOvermindWrapper analytics={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
         <GeoMap subRegion={SubRegion.AUSTRALIA_AND_NEW_ZEALAND} />
       </TestOvermindWrapper>,
     )
@@ -48,7 +48,7 @@ describe(`GeoMap component`, () => {
 
   it(`should handle click event properly when selectedRegion is DEFAULT_REGION`, () => {
     const { container } = render(
-      <TestOvermindWrapper stateData={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
+      <TestOvermindWrapper analytics={MockData.STATE_CARBON_FULL_REGION_COUNTRY}>
         <GeoMap
           subRegion={SubRegion.WORLD} // Set subRegion to SubRegion.WORLD (or any other default sub-region)
         />
