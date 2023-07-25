@@ -5,6 +5,10 @@ import { brandPrimary, lightGray, lightGrayRound, whiteSecondary } from '@/style
 import { cardSection, creditHistoryCardSection } from '@/styles/Section'
 import fontSizes from './FontSizes'
 import { Text } from './Text'
+// import { ellipsis } from './Text'
+import { paginationBar } from './PaginationBar'
+import { searchTable } from './SearchTable'
+import { menuWhite } from './Menu'
 
 const theme = extendTheme({
   fontSizes: fontSizes,
@@ -39,6 +43,12 @@ const theme = extendTheme({
       variants: {
         cardSection,
         creditHistoryCardSection,
+        paginationBar,
+      },
+    },
+    Menu: {
+      variants: {
+        menuWhite,
       },
     },
     Text,
@@ -83,12 +93,54 @@ const theme = extendTheme({
       800: `#125E32`,
       900: `#364D3F`,
     },
+    blue: {
+      main: `#0075FF`,
+      50: `#ebf8ff`,
+      100: `#bee3f8`,
+      200: `#90cdf4`,
+      300: `##46B1FD`,
+      400: `#4299e1`,
+      500: `#0075FF`,
+      600: `#005ECC`,
+      700: `#2a4365`,
+      800: `#1A365D`,
+      900: `#002F66`,
+    },
   },
   styles: {
     global: (props: any) => ({
       body: {
         bg: mode(`#F8FAFA`, `#000`)(props),
       },
+      '.fixed': {
+        position: `fixed`,
+        top: `240px`,
+        width: `100%`,
+        display: `inherit`,
+        tr: {
+          overflowX: `scroll`,
+          maxWidth: `calc(100vw - 552px)`,
+          display: `flex`,
+          th: {
+            display: `flex`,
+            alignItems: `end`,
+          },
+        },
+      },
+      '.hide-scrollbar': {
+        scrollbarWidth: `thin`,
+        scrollbarColor: `transparent transparent`,
+        '&::-webkit-scrollbar': {
+          width: `1px`,
+        },
+        '&::-webkit-scrollbar-track': {
+          background: `transparent`,
+        },
+        '&::-webkit-scrollbar-thumb': {
+          backgroundColor: `transparent`,
+        },
+      },
+      ...searchTable,
     }),
   },
 })

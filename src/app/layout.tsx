@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider, Flex } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'
 import { createOvermind } from 'overmind'
 import { Provider } from 'overmind-react'
 
@@ -14,9 +14,11 @@ import NoSSR from './noSSR'
 
 import '../i18n'
 import './globals.css'
+import { usePathname } from 'next/navigation'
 
 const overmind = createOvermind(config)
 export default function RootLayout({ children }: { children: React.ReactNode }): React.JSX.Element {
+  const currentPath = usePathname()
   return (
     <Provider value={overmind}>
       <html lang="en">
@@ -24,11 +26,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
           <NoSSR>
             <CacheProvider>
               <ChakraProvider theme={theme}>
-                <AppHeader />
+                {currentPath === `/` && <AppHeader />}
                 <Menu />
-                <Flex padding={{ md: 6 }} minHeight="100vh" alignItems="center" justifyContent="space-between" flexDirection="column">
-                  {children}
-                </Flex>
+                {children}
               </ChakraProvider>
             </CacheProvider>
           </NoSSR>
