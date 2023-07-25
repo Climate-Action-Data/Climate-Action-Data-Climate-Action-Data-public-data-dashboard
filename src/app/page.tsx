@@ -12,8 +12,8 @@ export default function Home(): React.JSX.Element {
   const { carbonReduction } = useAppState().analytics
 
   return (
-    <>
-      <Flex width={`100%`}>
+    <Flex direction={`column`} width={`100%`}>
+      <Flex>
         <Container marginTop={`40px`} flex={1} variant="cardSection">
           <Flex justifyContent="space-between" flexWrap="wrap" margin={`8px`} gap={`16px`} alignItems={`center`}>
             <RegionSearch />
@@ -32,9 +32,9 @@ export default function Home(): React.JSX.Element {
           </Flex>
         </Container>
       </Flex>
-      <Flex width={`100%`}>
+      <Flex>
         <CreditsHistorySection />
       </Flex>
-    </>
+    </Flex>
   )
 }
