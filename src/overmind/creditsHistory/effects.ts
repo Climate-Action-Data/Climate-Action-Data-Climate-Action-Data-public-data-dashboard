@@ -17,7 +17,7 @@ export const getCreditsHistory = async (): Promise<EffectResponse<IssuedRetiredG
     axios
       .get(`${defaultDomain}/widgets/issued-retired-graph`, defaultHeaders)
       .then((body) => {
-        if (body.data && body.data.lastUpdated && body.data.countriesData) {
+        if (body.data.lastUpdated && body.data.countriesData) {
           const mapData = body.data as IssuedRetiredGraphData
 
           result = { data: mapData }
