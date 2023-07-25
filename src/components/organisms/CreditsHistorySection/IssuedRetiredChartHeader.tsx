@@ -1,4 +1,4 @@
-import { Grid, GridItem, HStack, Tag, TagCloseButton, TagLabel } from '@chakra-ui/react'
+import { Grid, GridItem, HStack, Tag, TagLabel } from '@chakra-ui/react'
 import SubregionIndicator from '@/components/atoms/SubregionIndicator/SubregionIndicator'
 import { SubRegion } from '@/@types/geojson'
 import { AutoComplete } from '@/components/molecules/AutoComplete/AutoComplete'
@@ -63,24 +63,19 @@ const IssuedRetiredChartHeader: FC<IssuedRetiredChartHeaderProps> = (props) => {
       </GridItem>
       <GridItem area={`date-range-filter`}>
         <HStack padding={`4px 16px`} gap={`8px`}>
-          {Object.values(TimeframesData).map(
-            (timeframe, idx) =>
-              timeframe !== TimeframesData.MAX && (
-                <Tag
-                  size={`md`}
-                  key={`issued-retired-${timeframe}`}
-                  borderRadius="full"
-                  _hover={{ cursor: `pointer` }}
-                  variant={dataFilters.timeframe === timeframe ? `solid` : `outline`}
-                  colorScheme="gray"
-                >
-                  <TagLabel data-testid={`button-timeframe-${idx}`} onClick={() => setTimeframe(timeframe)}>
-                    {t(`timeframes.${timeframe}`)}
-                  </TagLabel>
-                  {dataFilters.timeframe === timeframe && <TagCloseButton data-testid={`button-timeframe-close`} onClick={() => setTimeframe(TimeframesData.MAX)} />}
-                </Tag>
-              ),
-          )}
+          {Object.values(TimeframesData).map((timeFrameName, idx) => (
+            <Tag
+              size={`md`}
+              key={`issued-retired-${timeFrameName}`}
+              borderRadius="full"
+              _hover={{ cursor: `pointer` }}
+              variant={dataFilters.timeframe === timeFrameName ? `solid` : `outline`}
+              colorScheme="gray"
+              onClick={() => setTimeframe(timeFrameName)}
+            >
+              <TagLabel data-testid={`button-timeframe-${idx}`}>{t(`timeframes.${timeFrameName}`)}</TagLabel>
+            </Tag>
+          ))}
         </HStack>
       </GridItem>
     </Grid>

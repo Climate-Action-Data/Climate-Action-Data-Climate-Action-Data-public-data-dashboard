@@ -11,9 +11,8 @@ export const getCarbonReduction = async (): Promise<EffectResponse<MapData>> => 
   return new Promise((resolve) => {
     let result: EffectResponse<MapData>
     axios
-      .get(`${defaultDomain}/widgets/map`, defaultHeaders)
+      .get(`${defaultDomain}/v1/widgets/map`, defaultHeaders)
       .then((body) => {
-        console.dir(body.data)
         if (body.data && body.data.lastUpdated && body.data.countriesData) {
           const mapData = body.data as MapData
 

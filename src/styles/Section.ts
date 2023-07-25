@@ -17,6 +17,6 @@ export const creditHistoryCardSection = defineStyle({
   minHeight: `min-content`,
   borderRadius: `12px`,
   background: `#FFFFFF`,
-  margin: `0 24px`,
+  margin: `24px`,
   maxW: `unset`,
 })
