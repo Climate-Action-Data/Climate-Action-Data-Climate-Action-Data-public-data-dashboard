@@ -10,6 +10,9 @@ const IssuedRetiredChartBody = () => {
   const { t } = useTranslation(`home`)
   const lastUpdatedDate = new Date(rawCreditsHistory?.data?.lastUpdated ?? ``)
 
+  const dataRepresentedAsOf = t(`dataRepresentedAsOf`)
+  const formattedDateTime = `${lastUpdatedDate.toLocaleDateString()} ${lastUpdatedDate.toLocaleTimeString()}`
+
   return (
     <VStack alignItems={`end`}>
       <Grid
@@ -31,7 +34,7 @@ const IssuedRetiredChartBody = () => {
         </GridItem>
       </Grid>
       <Text className={Aeonik.className} color={`lightGray.600`}>
-        {`${t(`dataRepresentedAsOf`)} ${lastUpdatedDate.toLocaleDateString()} ${lastUpdatedDate.toLocaleTimeString()}`}
+        {`${dataRepresentedAsOf} ${formattedDateTime}`}
       </Text>
     </VStack>
   )

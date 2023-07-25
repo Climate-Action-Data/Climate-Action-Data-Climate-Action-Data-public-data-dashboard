@@ -16,6 +16,7 @@ const CreditsHistorySection: FC = () => {
   const { filteredCreditsHistory, dataFilters } = useAppState().creditsHistory
   const { t } = useTranslation(`home`)
   const { t: countryTranslate } = useTranslation(`countries`)
+  let ChartBodyComponent
 
   useEffect(() => {
     if (!filteredCreditsHistory) {
@@ -44,6 +45,23 @@ const CreditsHistorySection: FC = () => {
     }
   }
 
+  if (filteredCreditsHistory) {
+    const issuedValues = filteredCreditsHistory?.chartData[0].data?.length
+    const retiredValues = filteredCreditsHistory?.chartData[1].data?.length
+
+    if (issuedValues > 0 || retiredValues > 0) {
+      ChartBodyComponent = <IssuedRetiredChartBody />
+    } else {
+      ChartBodyComponent = (
+        <Center className={Aeonik.className} height={`300px`} width={`100%`} color={`lightGray.600`} textAlign={`center`}>
+          {t(`selectedDataNotAvailable`)}
+        </Center>
+      )
+    }
+  } else {
+    ChartBodyComponent = <CreditsHistorySkeleton />
+  }
+
   const autocompleteItems = useMemo(() => getAutocompleteItems(dataFilters.region), [dataFilters.region])
 
   return (
@@ -60,19 +78,7 @@ const CreditsHistorySection: FC = () => {
         <GridItem area={`filter`}>
           <IssuedRetiredChartHeader autocompleteItems={autocompleteItems} />
         </GridItem>
-        <GridItem area={`data`}>
-          {filteredCreditsHistory ? (
-            filteredCreditsHistory?.chartData[0].data?.length > 0 || filteredCreditsHistory?.chartData[1].data.length > 0 ? (
-              <IssuedRetiredChartBody />
-            ) : (
-              <Center className={Aeonik.className} height={`300px`} width={`100%`} color={`lightGray.600`} textAlign={`center`}>
-                {t(`selectedDataNotAvailable`)}
-              </Center>
-            )
-          ) : (
-            <CreditsHistorySkeleton />
-          )}
-        </GridItem>
+        <GridItem area={`data`}>{ChartBodyComponent}</GridItem>
       </Grid>
     </Container>
   )

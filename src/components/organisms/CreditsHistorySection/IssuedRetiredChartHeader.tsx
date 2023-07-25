@@ -68,7 +68,7 @@ const IssuedRetiredChartHeader: FC<IssuedRetiredChartHeaderProps> = (props) => {
               timeframe !== TimeframesData.MAX && (
                 <Tag
                   size={`md`}
-                  key={idx}
+                  key={`issued-retired-${timeframe}`}
                   borderRadius="full"
                   _hover={{ cursor: `pointer` }}
                   variant={dataFilters.timeframe === timeframe ? `solid` : `outline`}
