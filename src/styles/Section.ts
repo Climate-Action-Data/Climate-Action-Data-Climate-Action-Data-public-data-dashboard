@@ -10,13 +10,3 @@ export const cardSection = defineStyle({
   maxW: `unset`,
   padding: [0, `1rem`],
 })
-
-export const creditHistoryCardSection = defineStyle({
-  color: `black`,
-  boxShadow: `2px 2px 8px 0px #0000001A;`,
-  minHeight: `min-content`,
-  borderRadius: `12px`,
-  background: `#FFFFFF`,
-  margin: `24px`,
-  maxW: `unset`,
-})

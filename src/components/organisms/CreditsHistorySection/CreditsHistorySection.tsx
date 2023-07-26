@@ -64,7 +64,7 @@ const CreditsHistorySection: FC = () => {
   const autocompleteItems = useMemo(() => getAutocompleteItems(dataFilters.region), [dataFilters.region])
 
   return (
-    <Container marginTop={`40px`} padding={`24px`} flex={1} variant={`creditHistoryCardSection`}>
+    <Container marginTop={`40px`} padding={`24px`} flex={1} variant={`cardSection`}>
       <Grid
         id={`issued-retired-chart`}
         width={`100%`}
