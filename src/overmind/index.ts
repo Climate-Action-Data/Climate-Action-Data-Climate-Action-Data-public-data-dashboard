@@ -5,11 +5,13 @@ import { namespaced } from 'overmind/config'
 import * as analytics from './analytics'
 import * as creditsHistory from './creditsHistory'
 import * as projectResult from './projectResult'
+import * as searchFilters from './searchFilters'
 
 export const config = namespaced({
   analytics,
   creditsHistory,
   projectResult,
+  searchFilters,
 })
 
 export type Context = IContext<typeof config>

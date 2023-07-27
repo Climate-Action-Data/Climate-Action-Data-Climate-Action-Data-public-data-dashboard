@@ -15,6 +15,7 @@ export const getCreditsHistoryFiltered = ({ state, effects }: Context) => {
     })
   }
 }
+
 export const getCreditsHistory = (context: Context, carbonCreditsHistory: EffectResponse<IssuedRetiredGraphData>) => {
   if (carbonCreditsHistory.data) {
     context.state.creditsHistory.rawCreditsHistory = carbonCreditsHistory
