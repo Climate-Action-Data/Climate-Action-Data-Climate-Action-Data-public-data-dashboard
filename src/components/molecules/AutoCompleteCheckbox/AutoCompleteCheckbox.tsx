@@ -32,12 +32,12 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
       }}
     >
       <PopoverTrigger>
-        <Button variant={noOfSelectedFilters !== 0 ? `dropdownSelected` : `dropdownUnselected`} width={`176px`}>
+        <Button variant={noOfSelectedFilters !== 0 ? `dropdownSelected` : `dropdownUnselected`}>
           <Flex fontFamily={`aeonik`} fontWeight={`normal`} fontSize={`16px`} alignItems={`center`} grow={1}>
             {label}
             <Box width={`8px`} />
             {noOfSelectedFilters !== 0 && <FilterCountIndicator count={noOfSelectedFilters} />}
-            <Spacer minWidth={`10px`} />
+            <Spacer />
             <DropDownIcon />
           </Flex>
         </Button>
