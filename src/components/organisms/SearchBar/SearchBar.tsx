@@ -1,8 +1,22 @@
 import { Box, Button, Flex, Spacer, Stack, StackDivider } from '@chakra-ui/react'
 import AutoCompleteCheckbox from '@/components/molecules/AutoCompleteCheckbox/AutoCompleteCheckbox'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
+import { FC, useEffect } from 'react'
+import { useActions, useAppState, useEffects } from '@/overmind'
 
-const SearchBar = () => {
+const SearchBar: FC = () => {
+  const { isEmpty, countries, methodologies, projectStatuses, sectors, standards } = useAppState().searchFilters
+  const { getGovernanceData } = useEffects().searchFilters
+  const { transformGovernanceDataToSearchFilterData } = useActions().searchFilters
+
+  useEffect(() => {
+    if (isEmpty) {
+      getGovernanceData().then((result) => {
+        transformGovernanceDataToSearchFilterData(result)
+      })
+    }
+  }, [])
+
   return (
     <Box
       sx={{
@@ -18,11 +32,12 @@ const SearchBar = () => {
     >
       <Stack direction={[`column`, null, null, `row`]}>
         <Stack direction={[`column`, null, null, `row`]} divider={<StackDivider borderColor={`#B8BEC0`} />} width={[`100%`]}>
-          <AutoCompleteCheckbox label={`Standard`} />
-          <AutoCompleteCheckbox label={`Methodology`} />
-          <AutoCompleteCheckbox label={`Energy`} />
-          <AutoCompleteCheckbox label={`Country`} />
-          <AutoCompleteCheckbox label={`Crediting Period`} />
+          <AutoCompleteCheckbox label={`Standard`} values={standards} />
+          <AutoCompleteCheckbox label={`Methodology`} values={methodologies} />
+          <AutoCompleteCheckbox label={`Status`} values={projectStatuses} />
+          <AutoCompleteCheckbox label={`Sector`} values={sectors} />
+          <AutoCompleteCheckbox label={`Country`} values={countries} />
+          <AutoCompleteCheckbox label={`Crediting Period`} values={[]} />
         </Stack>
         <Flex>
           <Spacer minWidth={`32px`} />
