@@ -3,10 +3,10 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="css-frpz03"
+    class="css-1w5qvdv"
   >
     <div
-      class="css-p1pigc"
+      class="css-13cl24c"
     >
       <div
         class="chakra-table__container css-1bi7isa"
@@ -626,7 +626,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="css-1nstqwe"
+        class="css-1w56yiz"
       >
         <button
           class="chakra-button css-hli6hn"
@@ -653,10 +653,10 @@ exports[`renders correctly 1`] = `
 exports[`renders correctly and click next page 1`] = `
 <div>
   <div
-    class="css-frpz03"
+    class="css-1w5qvdv"
   >
     <div
-      class="css-p1pigc"
+      class="css-13cl24c"
     >
       <div
         class="chakra-table__container css-1bi7isa"
@@ -5432,7 +5432,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </div>
       </div>
       <div
-        class="css-1nstqwe"
+        class="css-1w56yiz"
       >
         <button
           class="chakra-button css-hli6hn"
@@ -5459,10 +5459,10 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
 exports[`renders correctly on table data 1`] = `
 <div>
   <div
-    class="css-frpz03"
+    class="css-1w5qvdv"
   >
     <div
-      class="css-p1pigc"
+      class="css-13cl24c"
     >
       <div
         class="chakra-table__container css-1bi7isa"
@@ -10232,7 +10232,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </div>
       </div>
       <div
-        class="css-1nstqwe"
+        class="css-1w56yiz"
       >
         <button
           class="chakra-button css-hli6hn"
@@ -10259,10 +10259,10 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
 exports[`renders correctly on table data and next page 1`] = `
 <div>
   <div
-    class="css-frpz03"
+    class="css-1w5qvdv"
   >
     <div
-      class="css-p1pigc"
+      class="css-13cl24c"
     >
       <div
         class="chakra-table__container css-1bi7isa"
@@ -15032,7 +15032,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </div>
       </div>
       <div
-        class="css-1nstqwe"
+        class="css-1w56yiz"
       >
         <button
           class="chakra-button css-hli6hn"
@@ -15059,10 +15059,10 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
 exports[`renders correctly on table data and scroll page 1`] = `
 <div>
   <div
-    class="css-frpz03"
+    class="css-1w5qvdv"
   >
     <div
-      class="css-p1pigc"
+      class="css-13cl24c"
     >
       <div
         class="chakra-table__container css-1bi7isa"
@@ -19832,7 +19832,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </div>
       </div>
       <div
-        class="css-1nstqwe"
+        class="css-1w56yiz"
       >
         <button
           class="chakra-button css-hli6hn"
