@@ -53,12 +53,14 @@ export const lightGrayRound = defineStyle({
 export const lightGrayRound32 = defineStyle({
   background: `transparent`,
   color: `black`,
-  minH: `32px`,
-  maxH: `32px`,
-  minW: `32px`,
+  minH: [`24px`, `32px`],
+  maxH: [`24px`, `32px`],
+  minW: [`24px`, `32px`],
   fontWeight: 500,
-  maxW: `32px`,
+  maxW: [`24px`, `32px`],
   borderRadius: `50%`,
+  fontSize: [`md`, `md`],
+  padding: [`0`, `2px`],
   _hover: {
     background: `lightGray.100`,
   },

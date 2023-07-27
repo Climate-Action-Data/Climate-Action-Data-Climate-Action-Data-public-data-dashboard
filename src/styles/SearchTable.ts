@@ -18,7 +18,7 @@ export const searchTable = defineStyle({
         th: {
           h: `70px`,
           maxH: `70px`,
-          fontSize: `14px`,
+          fontSize: [`12px`, `14px`],
           lineHeight: `20px`,
           textTransform: `uppercase`,
           border: 0,
@@ -36,8 +36,8 @@ export const searchTable = defineStyle({
       cursor: `pointer`,
     },
     td: {
-      minW: `200px`,
-      maxW: `200px`,
+      minW: [`184px`, `200px`],
+      maxW: [`184px`, `200px`],
       textOverflow: `ellipsis`,
       overflow: `hidden`,
       whiteSpace: `nowrap`,
@@ -47,11 +47,16 @@ export const searchTable = defineStyle({
       h: `93px`,
       maxH: `93px`,
       color: `#4D5C62`,
+      padding: [`8px 12px`, `16px 24px`],
+      p: {
+        textOverflow: `ellipsis`,
+        overflow: `hidden`,
+      },
     },
     '#table': {
       th: {
-        minW: `200px`,
-        maxW: `200px`,
+        minW: [`184px`, `200px`],
+        maxW: [`184px`, `200px`],
         wordWrap: `break-word`,
         whiteSpace: `break-spaces`,
       },

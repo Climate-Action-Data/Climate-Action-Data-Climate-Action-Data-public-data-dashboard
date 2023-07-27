@@ -10,9 +10,8 @@ const formatDate = (date: string) => {
 }
 
 export const getProjectResults = async (from: number, take: number): Promise<EffectResponse<Project[]>> => {
-  return new Promise(async (resolve) => {
-    let result: EffectResponse<Project[]> = { error: { code: `400`, message: `not working` } }
-    await new Promise((f) => setTimeout(f, SLEEP))
+  await new Promise((f) => setTimeout(f, SLEEP))
+  return new Promise((resolve) => {
     const mappedData = projectData.map((project) => ({
       name: project.projectName,
       id: project.projectId,
@@ -29,7 +28,7 @@ export const getProjectResults = async (from: number, take: number): Promise<Eff
       annualRetired: project.annualRetired ?? undefined,
       annualAvailable: project.annualIssued && project.annualRetired ? project.annualIssued - project.annualRetired : undefined,
     }))
-    result = {
+    const result: EffectResponse<Project[]> = {
       data: mappedData.slice(from - 1, from - 1 + take),
     }
     resolve(result)

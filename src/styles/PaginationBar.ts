@@ -12,4 +12,5 @@ export const paginationBar = defineStyle({
   alignItems: `center`,
   justifyContent: `center`,
   backgroundColor: `white`,
+  padding: [0, `4px`],
 })
