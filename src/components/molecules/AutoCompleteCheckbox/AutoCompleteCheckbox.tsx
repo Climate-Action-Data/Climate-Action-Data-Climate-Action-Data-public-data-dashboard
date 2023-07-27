@@ -1,26 +1,42 @@
 import { FC, useState } from 'react'
-import { Button, Checkbox, Flex, Input, Popover, PopoverBody, PopoverContent, PopoverHeader, PopoverTrigger, Spacer, Stack, StackDivider, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Checkbox, Flex, Input, Popover, PopoverBody, PopoverContent, PopoverHeader, PopoverTrigger, Spacer, Stack, StackDivider, VStack } from '@chakra-ui/react'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import { DropDownIcon } from '@/components/atoms/DropDownIcon/DropDownIcon'
+import { FilterCountIndicator } from '@/components/atoms/FilterCountIndicator/FilterCountIndicator'
 
 interface AutoCompleteCheckboxProps {
   label: string
-  values: string[]
+  noOfSelectedFilters: number
+  options: string[]
+  selectedFilters: string[]
+  applyFilters: (values: string[]) => void
 }
 
 const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
-  const { label, values } = props
+  const { label, options, applyFilters, noOfSelectedFilters, selectedFilters } = props
   const [selectedValues, setSelectedValues] = useState<string[]>([])
+  const [searchInput, setSearchInput] = useState<string>(``)
 
-  const allChecked = selectedValues.length === values.length
-  const isIndeterminate = selectedValues.length !== 0 && selectedValues.length !== values.length
+  const allChecked = options.length != 0 && selectedValues.length === options.length
+  const isIndeterminate = selectedValues.length !== 0 && selectedValues.length !== options.length
 
   return (
-    <Popover gutter={0} isLazy placement="bottom-start" matchWidth>
+    <Popover
+      gutter={0}
+      isLazy
+      placement="bottom-start"
+      matchWidth
+      onClose={() => {
+        setSearchInput(``)
+        setSelectedValues([...selectedFilters])
+      }}
+    >
       <PopoverTrigger>
-        <Button backgroundColor={`white`} _hover={{ backgroundColor: `#EDEFEF` }} _active={{ backgroundColor: `#DBDEE0` }}>
+        <Button variant={noOfSelectedFilters !== 0 ? `dropdownSelected` : `dropdownUnselected`} width={`176px`}>
           <Flex fontFamily={`aeonik`} fontWeight={`normal`} fontSize={`16px`} alignItems={`center`} grow={1}>
             {label}
+            <Box width={`8px`} />
+            {noOfSelectedFilters !== 0 && <FilterCountIndicator count={noOfSelectedFilters} />}
             <Spacer minWidth={`10px`} />
             <DropDownIcon />
           </Flex>
@@ -30,56 +46,56 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
         <PopoverHeader border={0} boxShadow="md" padding={0}>
           <VStack divider={<StackDivider height={`1px`} borderColor={`#B8BEC0`} />} spacing={0}>
             <Flex width={`100%`} alignItems={`center`} padding={`8px`}>
+              <SearchIcon color={`lightGray.700`} paddingY={`auto`} marginRight={`8px`} />
               <Input
-                placeholder="Search"
-                border={`none`}
-                borderRadius={0}
-                padding={0}
-                height={`20px`}
-                fontFamily={`aeonik`}
-                fontSize={`14px`}
-                color={`lightGray.700`}
-                focusBorderColor={`transparent`}
-                _highlighted={{ border: `none` }}
-                _selected={{ border: `none` }}
+                placeholder={`Search`}
+                variant={`autoCompleteCheckboxTextInput`}
+                value={searchInput}
+                onChange={(event) => {
+                  setSearchInput(event.target.value)
+                }}
               />
-              <SearchIcon color={`lightGray.700`} paddingY={`auto`} />
             </Flex>
-            <Flex width={`100%`} marginTop={`4px`} alignItems={`center`} padding={`8px`}>
+            <Flex width={`100%`} marginTop={`4px`} alignItems={`center`} padding={`8px 0.75rem`}>
               <Checkbox
                 isIndeterminate={isIndeterminate}
                 isChecked={allChecked}
                 onChange={() => {
                   if (isIndeterminate || selectedValues.length === 0) {
-                    setSelectedValues(values)
+                    setSelectedValues([...options])
                   } else {
                     setSelectedValues([])
                   }
                 }}
               />
               <Spacer />
-              <Text>Apply</Text>
+              <Button onClick={() => applyFilters(selectedValues)} variant={`textLink`}>
+                Apply
+              </Button>
             </Flex>
           </VStack>
         </PopoverHeader>
         <PopoverBody maxHeight={`200px`} width={`100%`} overflowY={`scroll`}>
           <Stack spacing={5} direction="column">
-            {values &&
-              values.map((value, index) => (
-                <Checkbox
-                  key={`${label}-${index}`}
-                  isChecked={selectedValues.includes(value)}
-                  onChange={(event) => {
-                    if (event.target.checked) {
-                      setSelectedValues([...selectedValues, value])
-                    } else {
-                      setSelectedValues((prevState) => prevState.filter((selectedValue) => selectedValue !== value))
-                    }
-                  }}
-                >
-                  {value}
-                </Checkbox>
-              ))}
+            {options &&
+              options.map(
+                (value, index) =>
+                  value.toUpperCase().includes(searchInput.toUpperCase()) && (
+                    <Checkbox
+                      key={`${label}-${index}`}
+                      isChecked={selectedValues.includes(value)}
+                      onChange={(event) => {
+                        if (event.target.checked) {
+                          setSelectedValues([...selectedValues, value])
+                        } else {
+                          setSelectedValues((prevState) => prevState.filter((selectedValue) => selectedValue !== value))
+                        }
+                      }}
+                    >
+                      {value}
+                    </Checkbox>
+                  ),
+              )}
           </Stack>
         </PopoverBody>
       </PopoverContent>

@@ -5,7 +5,12 @@ import { FC, useEffect } from 'react'
 import { useActions, useAppState, useEffects } from '@/overmind'
 
 const SearchBar: FC = () => {
-  const { isEmpty, countries, methodologies, projectStatuses, sectors, standards } = useAppState().searchFilters
+  const {
+    allSearchFilterValues: { searchFilterValues, isEmpty },
+    selectedSearchFilterValues: { searchFilterValues: selectedSearchFilters },
+  } = useAppState().searchFilters
+
+  const { setCountriesFilter, setMethodologiesFilter, setProjectStatusesFilter, setSectorsFilter, setStandardsFilter } = useActions().searchFilters
   const { getGovernanceData } = useEffects().searchFilters
   const { transformGovernanceDataToSearchFilterData } = useActions().searchFilters
 
@@ -32,12 +37,42 @@ const SearchBar: FC = () => {
     >
       <Stack direction={[`column`, null, null, `row`]}>
         <Stack direction={[`column`, null, null, `row`]} divider={<StackDivider borderColor={`#B8BEC0`} />} width={[`100%`]}>
-          <AutoCompleteCheckbox label={`Standard`} values={standards} />
-          <AutoCompleteCheckbox label={`Methodology`} values={methodologies} />
-          <AutoCompleteCheckbox label={`Status`} values={projectStatuses} />
-          <AutoCompleteCheckbox label={`Sector`} values={sectors} />
-          <AutoCompleteCheckbox label={`Country`} values={countries} />
-          <AutoCompleteCheckbox label={`Crediting Period`} values={[]} />
+          <AutoCompleteCheckbox
+            label={`Standard`}
+            options={searchFilterValues.standards}
+            selectedFilters={selectedSearchFilters.standards}
+            noOfSelectedFilters={selectedSearchFilters.standards.length}
+            applyFilters={setStandardsFilter}
+          />
+          <AutoCompleteCheckbox
+            label={`Methodology`}
+            options={searchFilterValues.methodologies}
+            selectedFilters={selectedSearchFilters.methodologies}
+            noOfSelectedFilters={selectedSearchFilters.methodologies.length}
+            applyFilters={setMethodologiesFilter}
+          />
+          <AutoCompleteCheckbox
+            label={`Status`}
+            options={searchFilterValues.projectStatuses}
+            selectedFilters={selectedSearchFilters.projectStatuses}
+            noOfSelectedFilters={selectedSearchFilters.projectStatuses.length}
+            applyFilters={setProjectStatusesFilter}
+          />
+          <AutoCompleteCheckbox
+            label={`Sector`}
+            options={searchFilterValues.sectors}
+            selectedFilters={selectedSearchFilters.sectors}
+            noOfSelectedFilters={selectedSearchFilters.sectors.length}
+            applyFilters={setSectorsFilter}
+          />
+          <AutoCompleteCheckbox
+            label={`Country`}
+            options={searchFilterValues.countries}
+            selectedFilters={selectedSearchFilters.countries}
+            noOfSelectedFilters={selectedSearchFilters.countries.length}
+            applyFilters={setCountriesFilter}
+          />
+          {/*<AutoCompleteCheckbox label={`Crediting Period`} values={[]} />*/}
         </Stack>
         <Flex>
           <Spacer minWidth={`32px`} />
