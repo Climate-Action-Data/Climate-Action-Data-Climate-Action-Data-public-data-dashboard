@@ -3,7 +3,7 @@ import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
 import MAP_DASHBOARD_MOCK_DATA from '@/test/mock-data/map_dashboard_data'
 import CREDIT_HISTORY_MOCK_DATA from '@/test/mock-data/credit_history_data'
-import { projectData } from '@/assets/projects_data'
+import { projectData } from '@/test/mock-data/projects_data'
 import { lightFormat } from 'date-fns'
 
 const CARBON_MAP_DATA_FILTERED: CountryPeriodData = {

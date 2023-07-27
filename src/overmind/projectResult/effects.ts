@@ -1,6 +1,6 @@
 import { EffectResponse } from '@/@types/EffectResponse'
 import { Project } from '@/@types/Project'
-import { projectData } from '@/assets/projects_data'
+import { projectData } from '@/test/mock-data/projects_data'
 import { lightFormat } from 'date-fns'
 
 const SLEEP = 50
