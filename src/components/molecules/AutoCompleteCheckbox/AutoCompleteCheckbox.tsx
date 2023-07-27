@@ -32,12 +32,10 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
   }
 
   const topCheckboxOnChange = () => {
-    return () => {
-      if (isIndeterminate || selectedValues.length === 0) {
-        setSelectedValues([...options])
-      } else {
-        setSelectedValues([])
-      }
+    if (isIndeterminate || selectedValues.length === 0) {
+      setSelectedValues([...options])
+    } else {
+      setSelectedValues([])
     }
   }
 
@@ -67,10 +65,10 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
           <VStack divider={<StackDivider height={`1px`} borderColor={`#B8BEC0`} />} spacing={0}>
             <Flex width={`100%`} alignItems={`center`} padding={`8px`}>
               <SearchIcon color={`lightGray.700`} paddingY={`auto`} marginRight={`8px`} />
-              <Input placeholder={`Search`} variant={`autoCompleteCheckboxTextInput`} value={searchInput} onChange={(event) => onInputChange(event.target.value)} />
+              <Input placeholder={t(`searchFilter.search`)} variant={`autoCompleteCheckboxTextInput`} value={searchInput} onChange={(event) => onInputChange(event.target.value)} />
             </Flex>
             <Flex width={`100%`} marginTop={`4px`} alignItems={`center`} padding={`8px 0.75rem`}>
-              <Checkbox isIndeterminate={isIndeterminate} isChecked={allChecked} onChange={topCheckboxOnChange} />
+              <Checkbox isIndeterminate={isIndeterminate} data-testid={`AutoCompleteCheckbox-top-checkbox`} isChecked={allChecked} onChange={topCheckboxOnChange} />
               <Spacer />
               <Button onClick={() => applyFilters(selectedValues)} variant={`textLink`}>
                 {t(`searchFilter.apply`)}
@@ -86,6 +84,7 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
                   value.toUpperCase().includes(searchInput.toUpperCase()) && (
                     <Checkbox
                       key={`${label}-${index}`}
+                      name={value}
                       isChecked={selectedValues.includes(value)}
                       onChange={(event) => {
                         checkboxOnChange(event.target.checked, value)
