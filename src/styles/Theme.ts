@@ -4,17 +4,21 @@ import { mode } from '@chakra-ui/theme-tools'
 import {
   accentPrimary32,
   brandPrimary,
+  dropdownSelected,
+  dropdownUnselected,
   hoverOnly,
   lightGray,
   lightGrayRound,
   lightGrayRound32,
-  whiteSecondary
+  textLink,
+  whiteSecondary,
 } from '@/styles/Button'
 import { Aeonik, AeonikFono } from '@/styles/fonts'
 import { Checkbox } from '@/styles/Checkbox'
-import {cardSection, filterCardSection} from '@/styles/Section'
+import { cardSection, filterCardSection } from '@/styles/Section'
 import fontSizes from './FontSizes'
 import { Text } from './Text'
+import { Input } from '@/styles/Input'
 import { paginationBar } from './PaginationBar'
 import { searchTable } from './SearchTable'
 import { menuWhite } from './Menu'
@@ -48,6 +52,9 @@ const theme = extendTheme({
         lightGrayRound32,
         hoverOnly,
         accentPrimary32,
+        textLink,
+        dropdownUnselected,
+        dropdownSelected,
       },
     },
     Link: {
@@ -70,6 +77,7 @@ const theme = extendTheme({
     },
     Text,
     Checkbox,
+    Input,
   },
   colors: {
     lightGray: {

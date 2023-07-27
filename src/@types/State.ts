@@ -2,6 +2,7 @@ import { EffectResponse } from './EffectResponse'
 import { Project } from './Project'
 import { TimeframesData } from './Timeframe'
 import { SubRegion } from './geojson'
+import { SearchFilterValues } from '@/@types/SearchFilterValues'
 
 export interface CountryPeriodData {
   activeProjects: number
@@ -119,10 +120,6 @@ export interface GovernanceData {
 }
 
 export interface SearchFiltersStateData {
-  projectStatuses: string[]
-  standards: string[]
-  methodologies: string[]
-  sectors: string[]
-  countries: string[]
-  readonly isEmpty: boolean
+  allSearchFilterValues: { searchFilterValues: SearchFilterValues; readonly isEmpty: boolean }
+  selectedSearchFilterValues: { searchFilterValues: SearchFilterValues }
 }

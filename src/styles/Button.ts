@@ -108,3 +108,30 @@ export const accentPrimary32 = defineStyle({
     background: `gray.200`,
   },
 })
+
+export const textLink = defineStyle({
+  color: `#black`,
+  padding: 0,
+  borderRadius: 0,
+  fontSize: `14px`,
+  fontWeight: `normal`,
+  height: `min-content`,
+  _hover: {
+    color: `#005ECC`,
+  },
+  _active: {
+    color: `#002F66`,
+  },
+})
+
+export const dropdownUnselected = defineStyle({
+  backgroundColor: `white`,
+  _hover: { backgroundColor: `#EDEFEF` },
+  _active: { backgroundColor: `#DBDEE0` },
+})
+
+export const dropdownSelected = defineStyle({
+  backgroundColor: `#EAFDF2`,
+  _hover: { backgroundColor: `#D5FBE5` },
+  _active: { backgroundColor: `#EAFDF2` },
+})
