@@ -1,9 +1,10 @@
 import { FC, useState } from 'react'
 import { Box, Button, Checkbox, Flex, Input, Popover, PopoverBody, PopoverContent, PopoverHeader, PopoverTrigger, Spacer, Stack, StackDivider, VStack } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
+
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import { DropDownIcon } from '@/components/atoms/DropDownIcon/DropDownIcon'
 import { FilterCountIndicator } from '@/components/atoms/FilterCountIndicator/FilterCountIndicator'
-import { useTranslation } from 'react-i18next'
 
 interface AutoCompleteCheckboxProps {
   label: string
@@ -78,22 +79,21 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
         </PopoverHeader>
         <PopoverBody maxHeight={`200px`} width={`100%`} overflowY={`scroll`}>
           <Stack spacing={5} direction="column">
-            {options &&
-              options.map(
-                (value, index) =>
-                  value.toUpperCase().includes(searchInput.toUpperCase()) && (
-                    <Checkbox
-                      key={`${label}-${index}`}
-                      name={value}
-                      isChecked={selectedValues.includes(value)}
-                      onChange={(event) => {
-                        checkboxOnChange(event.target.checked, value)
-                      }}
-                    >
-                      {value}
-                    </Checkbox>
-                  ),
-              )}
+            {options?.map(
+              (value) =>
+                value.toUpperCase().includes(searchInput.toUpperCase()) && (
+                  <Checkbox
+                    key={`${label}-${value}`}
+                    name={value}
+                    isChecked={selectedValues.includes(value)}
+                    onChange={(event) => {
+                      checkboxOnChange(event.target.checked, value)
+                    }}
+                  >
+                    {value}
+                  </Checkbox>
+                ),
+            )}
           </Stack>
         </PopoverBody>
       </PopoverContent>
