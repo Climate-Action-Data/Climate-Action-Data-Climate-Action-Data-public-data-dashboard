@@ -27,6 +27,7 @@ describe(`AutoCompleteCheckbox`, () => {
 
   test(`should render AutoCompleteCheckbox with options 3`, async () => {
     const { findByText } = render(<AutoCompleteCheckbox label={tLabel} noOfSelectedFilters={1} options={[`option1`]} selectedFilters={[`option1`]} applyFilters={() => null} />)
+
     expect(findByText(1)).toBeDefined()
   })
 
