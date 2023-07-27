@@ -37,8 +37,27 @@ export const whiteSecondary = defineStyle({
 export const lightGrayRound = defineStyle({
   background: `transparent`,
   color: `black`,
-  minHeight: `26px`,
-  minWidth: `26px`,
+  minH: `26px`,
+  maxH: `26px`,
+  minW: `26px`,
+  maxW: `26px`,
+  borderRadius: `50%`,
+  _hover: {
+    background: `lightGray.100`,
+  },
+  _active: {
+    background: `lightGray.200`,
+  },
+})
+
+export const lightGrayRound32 = defineStyle({
+  background: `transparent`,
+  color: `black`,
+  minH: `32px`,
+  maxH: `32px`,
+  minW: `32px`,
+  fontWeight: 500,
+  maxW: `32px`,
   borderRadius: `50%`,
   _hover: {
     background: `lightGray.100`,
@@ -51,6 +70,21 @@ export const lightGrayRound = defineStyle({
 export const lightGray = defineStyle({
   background: `transparent`,
   color: `black`,
+  _hover: {
+    background: `lightGray.100`,
+  },
+  _active: {
+    background: `lightGray.200`,
+  },
+})
+export const hoverOnly = defineStyle({
+  background: `transparent`,
+  color: `gray.800`,
+  weight: `500`,
+  padding: `8px`,
+  display: `inline`,
+  lineHeight: `20px`,
+  borderRadius: `40px`,
   _hover: {
     background: `lightGray.100`,
   },

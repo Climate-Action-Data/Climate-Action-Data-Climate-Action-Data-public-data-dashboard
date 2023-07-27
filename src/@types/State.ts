@@ -1,4 +1,5 @@
 import { EffectResponse } from './EffectResponse'
+import { Project } from './Project'
 import { TimeframesData } from './Timeframe'
 import { SubRegion } from './geojson'
 
@@ -85,4 +86,7 @@ export interface CreditsHistoryDataState {
   rawCreditsHistory?: EffectResponse<IssuedRetiredGraphData>
   filteredCreditsHistory: FilteredCreditsHistoryData | undefined
   dataFilters: DataFilters
+}
+export interface ProjectResultState {
+  projectResults?: EffectResponse<Project[]>
 }

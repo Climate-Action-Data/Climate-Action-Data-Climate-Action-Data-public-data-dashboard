@@ -1,8 +1,10 @@
-import { CountryPeriodData, CreditsHistoryDataState, DataState, MapData } from '@/@types/State'
+import { CountryPeriodData, CreditsHistoryDataState, DataState, MapData, ProjectResultState } from '@/@types/State'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
 import MAP_DASHBOARD_MOCK_DATA from '@/test/mock-data/map_dashboard_data'
 import CREDIT_HISTORY_MOCK_DATA from '@/test/mock-data/credit_history_data'
+import { projectData } from '@/assets/projects_data'
+import { lightFormat } from 'date-fns'
 
 const CARBON_MAP_DATA_FILTERED: CountryPeriodData = {
   activeProjects: 200,
@@ -139,4 +141,33 @@ export const MockData = {
   CREDIT_HISTORY_CHART_DATA,
   CREDIT_HISTORY_DATA,
   CREDIT_HISTORY_DATA_EMPTY_CHART,
+}
+const formatDate = (date: string) => {
+  return lightFormat(new Date(date), `yyyy/MM/dd`)
+}
+
+export const PROJECT_SEARCH_RESULT_EMPTY: ProjectResultState = {}
+
+export const PROJECT_TEST_SAMPLE = 21
+export const PROJECT_SEARCH_RESULT: ProjectResultState = {
+  projectResults: {
+    data: projectData
+      .map((project) => ({
+        name: project.projectName,
+        id: project.projectId,
+        company: project.projectDeveloper,
+        standard: project.currentRegistry,
+        methodology: project.methodology,
+        sector: project.sector,
+        country: project.country ?? undefined,
+        status: project.projectStatus,
+        creditingPeriod:
+          project.creditingPeriodStart && project.creditingPeriodEnd ? `${formatDate(project.creditingPeriodStart)} - ${formatDate(project.creditingPeriodEnd)}` : undefined,
+        annualEst: project.annualEst ?? undefined,
+        annualIssued: project.annualIssued ?? undefined,
+        annualRetired: project.annualRetired ?? undefined,
+        annualAvailable: project.annualIssued && project.annualRetired ? project.annualIssued - project.annualRetired : undefined,
+      }))
+      .slice(0, PROJECT_TEST_SAMPLE),
+  },
 }

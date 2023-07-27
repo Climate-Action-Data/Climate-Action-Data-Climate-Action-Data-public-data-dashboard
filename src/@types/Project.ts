@@ -5,12 +5,11 @@ export interface Project {
   standard: string
   methodology: string
   sector: string
-  country: string
+  country: string | undefined
   status: string
-  creditingPeriod: string
-  annualEst: number
-  annualIssued: number
-  annualRetired: number
-  annualAvailable: number
-  correspondingAdjustment: string
+  creditingPeriod: string | undefined
+  annualEst: number | undefined
+  annualIssued: number | undefined
+  annualRetired: number | undefined
+  annualAvailable: number | undefined
 }

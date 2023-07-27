@@ -8,7 +8,6 @@ import { Provider } from 'overmind-react'
 import { config } from '@/overmind'
 import AppHeader from '@/components/organisms/AppHeader/AppHeader'
 import { Menu } from '@/components/organisms/Menu/Menu'
-import font from '@/styles/Font'
 import theme from '@/styles/Theme'
 import NoSSR from './noSSR'
 
@@ -22,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
   return (
     <Provider value={overmind}>
       <html lang="en">
-        <body className={font.className}>
+        <body>
           <NoSSR>
             <CacheProvider>
               <ChakraProvider theme={theme}>

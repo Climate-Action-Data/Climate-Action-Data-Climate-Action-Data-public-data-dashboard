@@ -33,3 +33,18 @@ export const setScroll = (toScroll: Element, fixedElement: Element, multiScrollC
     }
   }
 }
+export const changeHoverColor = (classNameToHover: string, classNameToAdd: string) => {
+  const formattedClassName = `.${classNameToHover}`
+
+  const elementsToChange = document.querySelectorAll(formattedClassName)
+  if (elementsToChange) {
+    elementsToChange.forEach((row) => {
+      row.classList.add(classNameToAdd)
+      row.addEventListener(`mouseleave`, () => {
+        elementsToChange.forEach((row) => {
+          row.classList.remove(classNameToAdd)
+        })
+      })
+    })
+  }
+}

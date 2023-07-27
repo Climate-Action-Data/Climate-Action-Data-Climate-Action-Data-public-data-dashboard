@@ -1157,7 +1157,7 @@ exports[`CreditsHistorySection renders the widget when rawCreditsHistory and cre
             </div>
           </div>
           <p
-            class="chakra-text className css-1xi4xed"
+            class="chakra-text css-1xi4xed"
           >
             Data represented as of 7/20/2023 6:25:43 PM
           </p>
@@ -1856,7 +1856,7 @@ exports[`CreditsHistorySection renders the widget when rawCreditsHistory and cre
         class="css-14fqov2"
       >
         <div
-          class="className css-yrn9ak"
+          class="css-yrn9ak"
         >
           Selected data is currently unavailable within the carbon registries.
         </div>

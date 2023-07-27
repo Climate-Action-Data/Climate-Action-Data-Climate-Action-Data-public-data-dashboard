@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="chakra-stack css-oyw8qb"
+  >
+    <svg
+      class="chakra-icon css-1c8lyk6"
+      data-testid="sortAsc"
+      focusable="false"
+      viewBox="0 0 8 4"
+    >
+      <path
+        d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+        fill="#currentColor"
+      />
+    </svg>
+    <svg
+      class="chakra-icon css-1c8lyk6"
+      data-testid="sortDesc"
+      focusable="false"
+      viewBox="0 0 8 4"
+    >
+      <path
+        d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+        fill="#currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`renders correctly and click asc 1`] = `
+<div>
+  <div
+    class="chakra-stack css-oyw8qb"
+  >
+    <svg
+      class="chakra-icon css-1c8lyk6"
+      data-testid="sortAsc"
+      focusable="false"
+      viewBox="0 0 8 4"
+    >
+      <path
+        d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+        fill="#currentColor"
+      />
+    </svg>
+    <svg
+      class="chakra-icon css-1c8lyk6"
+      data-testid="sortDesc"
+      focusable="false"
+      viewBox="0 0 8 4"
+    >
+      <path
+        d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+        fill="#currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`renders correctly and click dsc 1`] = `
+<div>
+  <div
+    class="chakra-stack css-oyw8qb"
+  >
+    <svg
+      class="chakra-icon css-1c8lyk6"
+      data-testid="sortAsc"
+      focusable="false"
+      viewBox="0 0 8 4"
+    >
+      <path
+        d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+        fill="#currentColor"
+      />
+    </svg>
+    <svg
+      class="chakra-icon css-1c8lyk6"
+      data-testid="sortDesc"
+      focusable="false"
+      viewBox="0 0 8 4"
+    >
+      <path
+        d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+        fill="#currentColor"
+      />
+    </svg>
+  </div>
+</div>
+`;

@@ -1,33 +1,32 @@
 'use client'
 import { NextPage } from 'next'
-import { useLayoutEffect } from 'react'
-import { Flex } from '@chakra-ui/react'
+import { useEffect, useLayoutEffect } from 'react'
+import { Container, Flex, Box, Button } from '@chakra-ui/react'
 import { shouldReposition, setScroll } from '@/utils/Stickify'
-import { Project } from '@/@types/Project'
 import { ProjectSearchHead } from '@/components/molecules/ProjectSearchHead/ProjectSearchHead'
 import { ProjectSearchBody } from '@/components/molecules/ProjectSearchBody/ProjectSearchBody'
+import { PaginationWidget } from '@/components/atoms/PaginationWidget/PaginationWidget'
+import { useActions, useEffects } from '@/overmind'
+import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 
-const testData: Project = {
-  name: `15 MW Bundled Solar Power Project`,
-  id: `S00985`,
-  company: `BYU Solar Private Limited`,
-  standard: `Global Carbon Council`,
-  methodology: `GCCM001`,
-  sector: `Energy`,
-  country: `India`,
-  status: `Open for public comments`,
-  creditingPeriod: `2023/05/10 - 2028/05/24`,
-  annualEst: 23621,
-  annualIssued: 1000000000,
-  annualRetired: 1000000000,
-  annualAvailable: 1000000000,
-  correspondingAdjustment: `Correspondingly Adjusted`,
-}
-
-const testDataNum = 2
-const maxData = new Array(testDataNum).fill(testData)
+const DEFAULT_PROJECT_TO_DISPLAY = 15
 
 const ProjectPage: NextPage = () => {
+  const { getProjectResults } = useEffects().projectResult
+  const { setProjectResults } = useActions().projectResult
+
+  useEffect(() => {
+    getProjectResults(1, DEFAULT_PROJECT_TO_DISPLAY).then((hasProjectResults) => {
+      setProjectResults(hasProjectResults)
+    })
+  }, [])
+
+  const getNewResults = (from: number) => {
+    getProjectResults(from, DEFAULT_PROJECT_TO_DISPLAY).then((hasProjectResults) => {
+      setProjectResults(hasProjectResults)
+    })
+  }
+
   useLayoutEffect(() => {
     const projectTable = document.querySelector(`#projectTable`)
     const projectTableReference = document.querySelector(`#projectTableReference`)
@@ -69,8 +68,17 @@ const ProjectPage: NextPage = () => {
 
   return (
     <Flex maxW={`100vw`}>
-      <ProjectSearchHead projects={maxData} />
-      <ProjectSearchBody projects={maxData} />
+      <ProjectSearchHead />
+      <ProjectSearchBody />
+      <Container variant={`paginationBar`}>
+        <PaginationWidget onPageChange={(currentPage, from) => getNewResults(from)} resultPerPage={DEFAULT_PROJECT_TO_DISPLAY} totalResults={89} />
+        <Box position="absolute" right="10px" float="right">
+          <Button variant="hoverOnly" display="flex" gap="4px" fontWeight="500px">
+            Export
+            <DownloadIcon />
+          </Button>
+        </Box>
+      </Container>
     </Flex>
   )
 }

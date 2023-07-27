@@ -5,7 +5,6 @@ import { Center, Container, Grid, GridItem } from '@chakra-ui/react'
 import { useActions, useAppState, useEffects } from '@/overmind'
 import { SubRegion } from '@/@types/geojson'
 import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
-import { Aeonik } from '@/styles/fonts'
 import IssuedRetiredChartHeader from '@/components/organisms/CreditsHistorySection/IssuedRetiredChartHeader'
 import IssuedRetiredChartBody from '@/components/organisms/CreditsHistorySection/IssuedRetiredChartBody'
 import CreditsHistorySkeleton from '@/components/organisms/CreditsHistorySection/CreditsHistorySectionSkeleton'
@@ -53,7 +52,7 @@ const CreditsHistorySection: FC = () => {
       ChartBodyComponent = <IssuedRetiredChartBody />
     } else {
       ChartBodyComponent = (
-        <Center className={Aeonik.className} height={`300px`} width={`100%`} color={`lightGray.600`} textAlign={`center`}>
+        <Center height={`300px`} width={`100%`} color={`lightGray.600`} textAlign={`center`}>
           {t(`selectedDataNotAvailable`)}
         </Center>
       )
