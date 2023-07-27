@@ -125,12 +125,14 @@ export const textLink = defineStyle({
 })
 
 export const dropdownUnselected = defineStyle({
+  width: [`100%`, null, null, `140px`, `176px`],
   backgroundColor: `white`,
   _hover: { backgroundColor: `#EDEFEF` },
   _active: { backgroundColor: `#DBDEE0` },
 })
 
 export const dropdownSelected = defineStyle({
+  width: [`100%`, null, null, `140px`, `176px`],
   backgroundColor: `#EAFDF2`,
   _hover: { backgroundColor: `#D5FBE5` },
   _active: { backgroundColor: `#EAFDF2` },
