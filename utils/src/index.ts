@@ -1,5 +1,3 @@
-'use strict'
-
 import prompt from 'prompt'
 import generateMapFilesAction from './generate-map-files'
 import generateContinentsFileAction from './generate-continents-file'

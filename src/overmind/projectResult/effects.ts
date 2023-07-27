@@ -1,13 +1,10 @@
+import { DateFormats } from '@/@types/DateFormats'
 import { EffectResponse } from '@/@types/EffectResponse'
 import { Project } from '@/@types/Project'
 import { projectData } from '@/test/mock-data/projects_data'
-import { lightFormat } from 'date-fns'
+import { formatDate } from '@/utils/DateFormat'
 
 const SLEEP = 50
-
-const formatDate = (date: string) => {
-  return lightFormat(new Date(date), `yyyy/MM/dd`)
-}
 
 export const getProjectResults = async (from: number, take: number): Promise<EffectResponse<Project[]>> => {
   await new Promise((f) => setTimeout(f, SLEEP))
@@ -22,7 +19,9 @@ export const getProjectResults = async (from: number, take: number): Promise<Eff
       country: project.country ?? undefined,
       status: project.projectStatus,
       creditingPeriod:
-        project.creditingPeriodStart && project.creditingPeriodEnd ? `${formatDate(project.creditingPeriodStart)} - ${formatDate(project.creditingPeriodEnd)}` : undefined,
+        project.creditingPeriodStart && project.creditingPeriodEnd
+          ? `${formatDate(project.creditingPeriodStart, DateFormats.YYYY_MM_DD)} - ${formatDate(project.creditingPeriodEnd, DateFormats.YYYY_MM_DD)}`
+          : undefined,
       annualEst: project.annualEst ?? undefined,
       annualIssued: project.annualIssued ?? undefined,
       annualRetired: project.annualRetired ?? undefined,

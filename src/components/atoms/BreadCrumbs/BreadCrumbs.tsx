@@ -15,11 +15,15 @@ interface BreadCrumbsItemProps extends BreadcrumbItemProps {
 const BreadCrumbsItem = (props: BreadCrumbsItemProps) => {
   const { title, link, isCurrentPage } = props
   return (
-    <BreadcrumbItem _hover={{ color: `blue.600` }} isCurrentPage={isCurrentPage} textDecoration={isCurrentPage ? `underline` : `none`}>
-      <Link href={link}>{title}</Link>
+    <BreadcrumbItem _hover={{ color: `blue.600` }} isCurrentPage={isCurrentPage}>
+      <Link textDecoration={isCurrentPage ? `underline` : `none`} href={link}>
+        {title}
+      </Link>
     </BreadcrumbItem>
   )
 }
+
+const DEFAULT_BREADCRUMB_SEPERATOR = `>`
 
 export const BreadCrumbs = (props: BreadCrumbsProps) => {
   const actualProps: BreadCrumbsProps = {
@@ -30,7 +34,7 @@ export const BreadCrumbs = (props: BreadCrumbsProps) => {
   const currentPath = usePathname()
 
   return (
-    <Breadcrumb separator=">">
+    <Breadcrumb separator={DEFAULT_BREADCRUMB_SEPERATOR}>
       {actualProps.showHome && (
         <BreadcrumbItem _hover={{ color: `blue.600` }}>
           <Link href="/">Home</Link>

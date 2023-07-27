@@ -10,6 +10,7 @@ import { useActions, useEffects } from '@/overmind'
 import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 
 const DEFAULT_PROJECT_TO_DISPLAY = 15
+export const ALLOWED_RENDER_TYPE = `ProjectTable`
 
 const ProjectPage: NextPage = () => {
   const { getProjectResults } = useEffects().projectResult
@@ -47,22 +48,27 @@ const ProjectPage: NextPage = () => {
           passive: true,
         },
       )
+
       multiScroll.addEventListener(`scroll`, () => {
         if (multiScroll?.parentNode?.querySelector(`:hover`) == multiScroll) {
           setScroll(tableReference, table)
         }
       })
+
       multiScroll.addEventListener(`touchmove`, () => {
         setScroll(tableReference, table)
       })
+
       tableReference.addEventListener(`scroll`, () => {
         if (tableReference?.parentNode?.querySelector(`:hover`) == tableReference) {
           setScroll(multiScroll, table, `#tableReference`)
         }
       })
+
       tableReference.addEventListener(`touchmove`, () => {
         setScroll(multiScroll, table, `#tableReference`)
       })
+
       scrollableHeader.addEventListener(`scroll`, () => {
         if (scrollableHeader?.parentNode?.querySelector(`:hover`) == scrollableHeader) {
           setScroll(multiScroll, multiScroll, `#scrollableHeader`)
@@ -73,8 +79,8 @@ const ProjectPage: NextPage = () => {
 
   return (
     <Flex maxW={`100vw`} paddingBottom="50px">
-      <ProjectSearchHead />
-      <ProjectSearchBody />
+      <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE} />
+      <ProjectSearchBody renderType={ALLOWED_RENDER_TYPE} />
       <Container variant={`paginationBar`}>
         <PaginationWidget onPageChange={(currentPage, from) => getNewResults(from)} resultPerPage={DEFAULT_PROJECT_TO_DISPLAY} totalResults={89} />
         <Box position={[`unset`, `absolute`]} right="10px" float="right">

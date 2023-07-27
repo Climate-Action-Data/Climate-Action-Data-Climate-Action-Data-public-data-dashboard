@@ -1,5 +1,3 @@
-'use strict'
-
 import { render } from '@testing-library/react'
 import { SortDownIcon } from './SortDownIcon'
 

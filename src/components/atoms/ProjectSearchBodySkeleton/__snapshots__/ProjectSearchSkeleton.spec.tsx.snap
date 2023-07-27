@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <table
+    class="chakra-table css-0"
+  >
+    <tbody
+      class="css-0"
+    >
+      <tr
+        class="css-mii0oe"
+      >
+        <td
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </td>
+        <td
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </td>
+        <td
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </td>
+        <td
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </td>
+        <td
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </td>
+        <td
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </td>
+        <td
+          class="css-0"
+          data-is-numeric="true"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </td>
+        <td
+          class="css-0"
+          data-is-numeric="true"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </td>
+        <td
+          class="css-0"
+          data-is-numeric="true"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </td>
+        <td
+          class="css-0"
+          data-is-numeric="true"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

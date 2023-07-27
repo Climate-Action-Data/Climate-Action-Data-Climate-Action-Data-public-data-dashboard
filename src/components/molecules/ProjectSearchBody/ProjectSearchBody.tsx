@@ -1,8 +1,9 @@
-import { Flex, TableContainer, Table, Thead, Tr, Th, Tbody, Td, Skeleton, Text, Box } from '@chakra-ui/react'
-import { useTranslation } from 'react-i18next'
+import { Flex, TableContainer, Table, Tr, Tbody, Td, Text } from '@chakra-ui/react'
 import { useAppState } from '@/overmind'
 import { changeHoverColor } from '@/utils/Stickify'
-import { ColumnSortFilter } from '@/components/atoms/ColumnSortFilter/ColumnSortFilter'
+import { ALLOWED_RENDER_TYPE } from '@/app/search/projects/page'
+import { ProjectSearchBodyHeader } from '@/components/atoms/ProjectSearchBodyHeader/ProjectSearchBodyHeader'
+import { ProjectSearchBodySkeleton } from '@/components/atoms/ProjectSearchBodySkeleton/ProjectSearchBodySkeleton'
 interface TableDataProps {
   data: string | number | undefined
 }
@@ -17,82 +18,21 @@ const TableData = (props: TableDataProps) => {
     return <Text color="lightGray.500">--</Text>
   }
 }
+interface ProjectSearchBodyProps {
+  renderType?: string
+}
 
-export const ProjectSearchBody = () => {
+export const ProjectSearchBody = (props: ProjectSearchBodyProps) => {
+  const { renderType } = props
   const { projectResults } = useAppState().projectResult
 
-  const { t } = useTranslation(`search`)
+  if (renderType !== ALLOWED_RENDER_TYPE) {
+    throw new Error(`This page should only be rendered in PageProject and is currently rendered in ${renderType}`)
+  }
 
   return (
     <Flex flexDirection="column" overflow="hidden">
-      <TableContainer id="tableReference" className="hide-scrollbar" minH="72px">
-        <Table variant="simple" className="searchTable">
-          <Thead zIndex={4} id="table" className="">
-            <Tr id="scrollableHeader">
-              <Th>
-                <Box>
-                  {t(`table.standard`)}
-                  <ColumnSortFilter />
-                </Box>
-              </Th>
-              <Th>
-                <Box>
-                  {t(`table.methodology`)}
-                  <ColumnSortFilter />
-                </Box>
-              </Th>
-              <Th>
-                <Box>
-                  {t(`table.sector`)}
-                  <ColumnSortFilter />
-                </Box>
-              </Th>
-              <Th>
-                <Box>
-                  {t(`table.country`)}
-                  <ColumnSortFilter />
-                </Box>
-              </Th>
-              <Th>
-                <Box>
-                  {t(`table.projectStatus`)}
-                  <ColumnSortFilter />
-                </Box>
-              </Th>
-              <Th minW="250px !important">
-                <Box>
-                  {t(`table.creditingPeriod`)}
-                  <ColumnSortFilter />
-                </Box>
-              </Th>
-              <Th isNumeric>
-                <Box>
-                  {t(`table.annualEstUnits`)}
-                  <ColumnSortFilter />
-                </Box>
-              </Th>
-              <Th isNumeric>
-                <Box>
-                  {t(`table.totalIssuedUnits`)}
-                  <ColumnSortFilter />
-                </Box>
-              </Th>
-              <Th isNumeric>
-                <Box>
-                  {t(`table.totalRetiredUnits`)}
-                  <ColumnSortFilter />
-                </Box>
-              </Th>
-              <Th isNumeric>
-                <Box>
-                  {t(`table.totalAvailableUnits`)}
-                  <ColumnSortFilter />
-                </Box>
-              </Th>
-            </Tr>
-          </Thead>
-        </Table>
-      </TableContainer>
+      <ProjectSearchBodyHeader />
       <TableContainer id="multiScroll">
         <Table variant="simple" className="searchTable">
           <Tbody data-testid="table-scroll">
@@ -132,38 +72,7 @@ export const ProjectSearchBody = () => {
                 </Tr>
               ))
             ) : (
-              <Tr height="92px">
-                <Td>
-                  <Skeleton height="20px" />
-                </Td>
-                <Td>
-                  <Skeleton height="20px" />
-                </Td>
-                <Td>
-                  <Skeleton height="20px" />
-                </Td>
-                <Td>
-                  <Skeleton height="20px" />
-                </Td>
-                <Td>
-                  <Skeleton height="20px" />
-                </Td>
-                <Td>
-                  <Skeleton height="20px" />
-                </Td>
-                <Td isNumeric>
-                  <Skeleton height="20px" />
-                </Td>
-                <Td isNumeric>
-                  <Skeleton height="20px" />
-                </Td>
-                <Td isNumeric>
-                  <Skeleton height="20px" />
-                </Td>
-                <Td isNumeric>
-                  <Skeleton height="20px" />
-                </Td>
-              </Tr>
+              <ProjectSearchBodySkeleton />
             )}
           </Tbody>
         </Table>

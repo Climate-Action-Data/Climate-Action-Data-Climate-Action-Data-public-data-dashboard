@@ -1,3 +1,4 @@
+import { ALLOWED_RENDER_TYPE } from '@/app/search/projects/page'
 import { BookmarkPlusIcon } from '@/components/atoms/BookmarkPlusIcon/BookmarkPlusIcon'
 import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 import { KebabMenuIcon } from '@/components/atoms/KebabMenuIcon/KebabMenuIcon'
@@ -7,9 +8,19 @@ import { useAppState } from '@/overmind'
 import { changeHoverColor } from '@/utils/Stickify'
 import { Stack, Skeleton, Flex, TableContainer, Table, Thead, Tr, Th, Tbody, Td, Text, Button, Box, Menu, MenuButton, MenuItem, MenuList, VStack } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
-export const ProjectSearchHead = () => {
+
+interface ProjectSearchHeadProps {
+  renderType?: string
+}
+
+export const ProjectSearchHead = (props: ProjectSearchHeadProps) => {
+  const { renderType } = props
   const { projectResults } = useAppState().projectResult
   const { t } = useTranslation(`search`)
+
+  if (renderType !== ALLOWED_RENDER_TYPE) {
+    throw new Error(`This page should only be rendered in PageProject and is currently rendered in ${renderType}`)
+  }
 
   return (
     <Flex flexDirection="column" w={[`184px`, `552px`]} minW={[`184px`, `552px`]}>
