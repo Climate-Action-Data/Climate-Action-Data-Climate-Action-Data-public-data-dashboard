@@ -38,7 +38,8 @@ export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
 
   const overmind = createOvermindMock(config, (state) => {
     state.analytics = carbonMapData
-    ;(state.creditsHistory = creditHistoryData), (state.projectResult = projectResult)
+    state.creditsHistory = creditHistoryData
+    state.projectResult = projectResult
   })
 
   return <Provider value={overmind}>{actualProps.children}</Provider>

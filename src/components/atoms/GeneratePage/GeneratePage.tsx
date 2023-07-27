@@ -14,7 +14,7 @@ export const GeneratePage = (props: GeneratePageProps) => {
   const defaultPagesToShow = 4
 
   const renderPageNumbers = () => {
-    const pageNumbers: JSX.Element[] = []
+    const pageNumbers: React.JSX.Element[] = []
 
     // We should display all the pages if there are 4 or fewer pages
     if (totalPages <= defaultPagesToShow) {

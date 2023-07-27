@@ -12,7 +12,7 @@ export const ProjectSearchHead = () => {
   const { t } = useTranslation(`search`)
 
   return (
-    <Flex flexDirection="column" w="552px" minW="552px">
+    <Flex flexDirection="column" w={[`184px`, `552px`]} minW={[`184px`, `552px`]}>
       <TableContainer minH="72px" id="projectTableReference">
         <Table variant="simple" className="searchTable">
           <Thead zIndex={3} minW="552px" id="projectTable">

@@ -1,7 +1,7 @@
 'use client'
 import { NextPage } from 'next'
 import { useEffect, useLayoutEffect } from 'react'
-import { Container, Flex, Box, Button } from '@chakra-ui/react'
+import { Container, Flex, Box, Button, Hide } from '@chakra-ui/react'
 import { shouldReposition, setScroll } from '@/utils/Stickify'
 import { ProjectSearchHead } from '@/components/molecules/ProjectSearchHead/ProjectSearchHead'
 import { ProjectSearchBody } from '@/components/molecules/ProjectSearchBody/ProjectSearchBody'
@@ -52,12 +52,17 @@ const ProjectPage: NextPage = () => {
           setScroll(tableReference, table)
         }
       })
+      multiScroll.addEventListener(`touchmove`, () => {
+        setScroll(tableReference, table)
+      })
       tableReference.addEventListener(`scroll`, () => {
         if (tableReference?.parentNode?.querySelector(`:hover`) == tableReference) {
           setScroll(multiScroll, table, `#tableReference`)
         }
       })
-
+      tableReference.addEventListener(`touchmove`, () => {
+        setScroll(multiScroll, table, `#tableReference`)
+      })
       scrollableHeader.addEventListener(`scroll`, () => {
         if (scrollableHeader?.parentNode?.querySelector(`:hover`) == scrollableHeader) {
           setScroll(multiScroll, multiScroll, `#scrollableHeader`)
@@ -67,14 +72,14 @@ const ProjectPage: NextPage = () => {
   })
 
   return (
-    <Flex maxW={`100vw`}>
+    <Flex maxW={`100vw`} paddingBottom="50px">
       <ProjectSearchHead />
       <ProjectSearchBody />
       <Container variant={`paginationBar`}>
         <PaginationWidget onPageChange={(currentPage, from) => getNewResults(from)} resultPerPage={DEFAULT_PROJECT_TO_DISPLAY} totalResults={89} />
-        <Box position="absolute" right="10px" float="right">
+        <Box position={[`unset`, `absolute`]} right="10px" float="right">
           <Button variant="hoverOnly" display="flex" gap="4px" fontWeight="500px">
-            Export
+            <Hide>Export</Hide>
             <DownloadIcon />
           </Button>
         </Box>

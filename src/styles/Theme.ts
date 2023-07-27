@@ -127,7 +127,7 @@ const theme = extendTheme({
         display: `inherit`,
         tr: {
           overflowX: `scroll`,
-          maxWidth: `calc(100vw - 552px)`,
+          maxWidth: [`calc(100vw - 184px)`, `calc(100vw - 552px)`],
           display: `flex`,
           th: {
             display: `flex`,
