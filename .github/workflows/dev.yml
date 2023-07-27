@@ -48,10 +48,10 @@ jobs:
           sonar_token: ${{ secrets.SONAR_TOKEN }}
 
   Deploy:
-    name: Sonar-analysis
+    name: Deploy
     runs-on: ubuntu-latest
     environment: Development
-    needs: Env
+    needs: Sonar-analysis
     steps:
       - uses: actions/checkout@v3
         with:
