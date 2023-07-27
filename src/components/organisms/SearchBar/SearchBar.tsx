@@ -1,8 +1,10 @@
+import { FC, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Box, Button, Flex, Spacer, Stack, StackDivider } from '@chakra-ui/react'
+
+import { useActions, useAppState, useEffects } from '@/overmind'
 import AutoCompleteCheckbox from '@/components/molecules/AutoCompleteCheckbox/AutoCompleteCheckbox'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
-import { FC, useEffect } from 'react'
-import { useActions, useAppState, useEffects } from '@/overmind'
 
 const SearchBar: FC = () => {
   const {
@@ -13,6 +15,8 @@ const SearchBar: FC = () => {
   const { setCountriesFilter, setMethodologiesFilter, setProjectStatusesFilter, setSectorsFilter, setStandardsFilter } = useActions().searchFilters
   const { getGovernanceData } = useEffects().searchFilters
   const { transformGovernanceDataToSearchFilterData } = useActions().searchFilters
+
+  const { t } = useTranslation(`home`)
 
   useEffect(() => {
     if (isEmpty) {
@@ -83,7 +87,7 @@ const SearchBar: FC = () => {
             _hover={{ backgroundColor: `#24BD63` }}
             _active={{ backgroundColor: `#1B8E4A` }}
           >
-            Search
+            {t(`searchFilter.search`)}
           </Button>
         </Flex>
       </Stack>
