@@ -1,7 +1,7 @@
 import { extendTheme } from '@chakra-ui/react'
 import { mode } from '@chakra-ui/theme-tools'
 
-import { brandPrimary, lightGray, lightGrayRound, whiteSecondary } from '@/styles/Button'
+import { brandPrimary, hoverOnly, lightGray, lightGrayRound, lightGrayRound32, whiteSecondary } from '@/styles/Button'
 import { cardSection, creditHistoryCardSection } from '@/styles/Section'
 import fontSizes from './FontSizes'
 import { Text } from './Text'
@@ -9,9 +9,15 @@ import { Text } from './Text'
 import { paginationBar } from './PaginationBar'
 import { searchTable } from './SearchTable'
 import { menuWhite } from './Menu'
+import { Aeonik, AeonikFono } from './fonts'
 
 const theme = extendTheme({
   fontSizes: fontSizes,
+  fonts: {
+    body: Aeonik.style.fontFamily,
+    heading: AeonikFono.style.fontFamily,
+    table: Aeonik.style.fontFamily,
+  },
   components: {
     Skeleton: {
       baseStyle: {
@@ -31,6 +37,8 @@ const theme = extendTheme({
         whiteSecondary,
         lightGrayRound,
         lightGray,
+        lightGrayRound32,
+        hoverOnly,
       },
     },
     Link: {

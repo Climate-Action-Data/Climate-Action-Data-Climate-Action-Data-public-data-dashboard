@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <button
+    class="chakra-button css-684slw"
+    type="button"
+  >
+    1
+  </button>
+  <button
+    class="chakra-button css-1mw60nx"
+    type="button"
+  >
+    2
+  </button>
+  <div
+    class="css-1rr4qq7"
+    data-testid="ellipsis"
+  >
+    ...
+  </div>
+  <button
+    class="chakra-button css-1qr028o"
+    data-testid="pagination-last-page"
+    type="button"
+  >
+    6
+  </button>
+</div>
+`;
+
+exports[`renders correctly and click down from max 1`] = `
+<div>
+  <button
+    class="chakra-button css-1qr028o"
+    type="button"
+  >
+    1
+  </button>
+  <div
+    class="css-1rr4qq7"
+  >
+    ...
+  </div>
+  <button
+    class="chakra-button css-1mw60nx"
+    type="button"
+  >
+    5
+  </button>
+  <button
+    class="chakra-button css-684slw"
+    type="button"
+  >
+    6
+  </button>
+</div>
+`;
+
+exports[`renders correctly and click first page 1`] = `
+<div>
+  <button
+    class="chakra-button css-1qr028o"
+    type="button"
+  >
+    1
+  </button>
+  <div
+    class="css-1rr4qq7"
+  >
+    ...
+  </div>
+  <button
+    class="chakra-button css-1mw60nx"
+    type="button"
+  >
+    5
+  </button>
+  <button
+    class="chakra-button css-684slw"
+    type="button"
+  >
+    6
+  </button>
+</div>
+`;
+
+exports[`renders correctly and click next 1`] = `
+<div>
+  <button
+    class="chakra-button css-684slw"
+    type="button"
+  >
+    1
+  </button>
+  <button
+    class="chakra-button css-1mw60nx"
+    type="button"
+  >
+    2
+  </button>
+  <div
+    class="css-1rr4qq7"
+    data-testid="ellipsis"
+  >
+    ...
+  </div>
+  <button
+    class="chakra-button css-1qr028o"
+    data-testid="pagination-last-page"
+    type="button"
+  >
+    6
+  </button>
+</div>
+`;
+
+exports[`renders correctly with xs pages 1`] = `
+<div>
+  <button
+    class="chakra-button css-684slw"
+    type="button"
+  >
+    1
+  </button>
+  <button
+    class="chakra-button css-1mw60nx"
+    type="button"
+  >
+    2
+  </button>
+</div>
+`;
+
+exports[`renders correctly with xs pages and click 1`] = `
+<div>
+  <button
+    class="chakra-button css-684slw"
+    type="button"
+  >
+    1
+  </button>
+  <button
+    class="chakra-button css-1mw60nx"
+    type="button"
+  >
+    2
+  </button>
+</div>
+`;

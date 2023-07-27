@@ -5,7 +5,6 @@ export const searchTable = defineStyle({
     backgroundColor: `white`,
     overflow: `unset`,
     thead: {
-      //   padding: `16px`,
       backgroundColor: `white`,
       verticalAlign: `bottom`,
       fontWeight: 500,
@@ -15,15 +14,26 @@ export const searchTable = defineStyle({
       border: `0px 0px 2px 0px`,
       borderBottom: `2px solid #4D5C62`,
       background: `linear-gradient(0deg, #FFFFFF, #FFFFFF);linear-gradient(0deg, #4D5C62, #4D5C62);`,
-      th: {
-        // backgroundColor: `white`,
-        fontFamily: `sans-serif`,
-        height: `72px`,
-        fontSize: `14px`,
-        lineHeight: `20px`,
-        textTransform: `uppercase`,
-        border: 0,
+      tr: {
+        th: {
+          h: `70px`,
+          maxH: `70px`,
+          fontSize: `14px`,
+          lineHeight: `20px`,
+          textTransform: `uppercase`,
+          border: 0,
+          div: {
+            lineHeight: `20px`,
+            gap: `4px`,
+            display: `flex`,
+            alignItems: `end`,
+          },
+        },
       },
+    },
+    '.hoverGreen': {
+      backgroundColor: `green.50`,
+      cursor: `pointer`,
     },
     td: {
       minW: `200px`,

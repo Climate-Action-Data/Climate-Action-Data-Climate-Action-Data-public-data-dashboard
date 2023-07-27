@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="css-huskxe"
+  >
+    <div
+      class="css-3dnq1l"
+    >
+      1
+       - 
+      15
+       of 
+      89
+    </div>
+    <div
+      class="css-i25ci7"
+    >
+      <button
+        class="chakra-button css-1skxxy0"
+        data-testid="pagination-page-down"
+        type="button"
+      >
+        &lt;
+      </button>
+      <button
+        class="chakra-button css-684slw"
+        type="button"
+      >
+        1
+      </button>
+      <button
+        class="chakra-button css-1mw60nx"
+        type="button"
+      >
+        2
+      </button>
+      <div
+        class="css-1rr4qq7"
+        data-testid="ellipsis"
+      >
+        ...
+      </div>
+      <button
+        class="chakra-button css-1qr028o"
+        data-testid="pagination-last-page"
+        type="button"
+      >
+        6
+      </button>
+      <button
+        class="chakra-button css-1skxxy0"
+        data-testid="pagination-page-up"
+        type="button"
+      >
+        &gt;
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly and click asc 1`] = `
+<div>
+  <div
+    class="css-huskxe"
+  >
+    <div
+      class="css-3dnq1l"
+    >
+      1
+       - 
+      15
+       of 
+      89
+    </div>
+    <div
+      class="css-i25ci7"
+    >
+      <button
+        class="chakra-button css-1skxxy0"
+        data-testid="pagination-page-down"
+        type="button"
+      >
+        &lt;
+      </button>
+      <button
+        class="chakra-button css-684slw"
+        type="button"
+      >
+        1
+      </button>
+      <button
+        class="chakra-button css-1mw60nx"
+        type="button"
+      >
+        2
+      </button>
+      <div
+        class="css-1rr4qq7"
+        data-testid="ellipsis"
+      >
+        ...
+      </div>
+      <button
+        class="chakra-button css-1qr028o"
+        data-testid="pagination-last-page"
+        type="button"
+      >
+        6
+      </button>
+      <button
+        class="chakra-button css-1skxxy0"
+        data-testid="pagination-page-up"
+        type="button"
+      >
+        &gt;
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly and click asc 2`] = `
+<div>
+  <div
+    class="css-huskxe"
+  >
+    <div
+      class="css-3dnq1l"
+    >
+      16
+       - 
+      30
+       of 
+      89
+    </div>
+    <div
+      class="css-i25ci7"
+    >
+      <button
+        class="chakra-button css-1skxxy0"
+        data-testid="pagination-page-down"
+        type="button"
+      >
+        &lt;
+      </button>
+      <button
+        class="chakra-button css-1mw60nx"
+        type="button"
+      >
+        1
+      </button>
+      <button
+        class="chakra-button css-684slw"
+        type="button"
+      >
+        2
+      </button>
+      <button
+        class="chakra-button css-1mw60nx"
+        type="button"
+      >
+        3
+      </button>
+      <div
+        class="css-1rr4qq7"
+        data-testid="ellipsis"
+      >
+        ...
+      </div>
+      <button
+        class="chakra-button css-1qr028o"
+        data-testid="pagination-last-page"
+        type="button"
+      >
+        6
+      </button>
+      <button
+        class="chakra-button css-1skxxy0"
+        data-testid="pagination-page-up"
+        type="button"
+      >
+        &gt;
+      </button>
+    </div>
+  </div>
+</div>
+`;

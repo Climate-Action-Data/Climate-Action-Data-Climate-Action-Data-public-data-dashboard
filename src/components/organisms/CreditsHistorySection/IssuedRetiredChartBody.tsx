@@ -1,7 +1,6 @@
 import { Grid, GridItem, Stack, StackDivider, Text, VStack } from '@chakra-ui/react'
 import CreditsHistoryStat from '@/components/atoms/CreditsHistoryStat/CreditHistoryStat'
 import CreditsHistoryChart from '@/components/molecules/CreditsHistoryChart/CreditsHistoryChart'
-import { Aeonik } from '@/styles/fonts'
 import { useAppState } from '@/overmind'
 import { useTranslation } from 'react-i18next'
 
@@ -33,9 +32,7 @@ const IssuedRetiredChartBody = () => {
           <CreditsHistoryChart />
         </GridItem>
       </Grid>
-      <Text className={Aeonik.className} color={`lightGray.600`}>
-        {`${dataRepresentedAsOf} ${formattedDateTime}`}
-      </Text>
+      <Text color={`lightGray.600`}>{`${dataRepresentedAsOf} ${formattedDateTime}`}</Text>
     </VStack>
   )
 }

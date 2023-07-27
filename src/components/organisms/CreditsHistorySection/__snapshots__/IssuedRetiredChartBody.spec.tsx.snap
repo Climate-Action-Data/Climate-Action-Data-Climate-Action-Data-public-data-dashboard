@@ -71,7 +71,7 @@ exports[`renders correctly 1`] = `
       />
     </div>
     <p
-      class="chakra-text className css-1xi4xed"
+      class="chakra-text css-1xi4xed"
     >
       Data represented as of Invalid Date Invalid Date
     </p>

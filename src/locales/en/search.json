@@ -13,5 +13,10 @@
         "totalRetiredUnits": "Total Retired Units",
         "totalAvailableUnits": "Total Available Units",
         "correspondingAdjustment": "Corresponding Adjustment"
+    },
+    "projectMenu": {
+        "viewProject": "View Project",
+        "exportProject": "Export Project",
+        "addToWatchlists": "Add to Watchlists"
     }
 }

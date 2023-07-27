@@ -24,6 +24,7 @@ const customJestConfig = {
         'src/assets',
         'src/styles',
         "<rootDir>/src/app/layout.tsx",
+        "<rootDir>/src/utils/Stickify.ts",
         "<rootDir>/src/i18n.ts",
         '<rootDir>/src/components/organisms/GeoMap/GeoMapDemo.tsx',
     ],
