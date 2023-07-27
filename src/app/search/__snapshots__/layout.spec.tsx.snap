@@ -33,11 +33,11 @@ exports[`renders correctly 1`] = `
             </span>
           </li>
           <li
-            class="chakra-breadcrumb__list-item css-1hwbz1m"
+            class="chakra-breadcrumb__list-item css-13pussk"
           >
             <a
-              class="chakra-link css-0"
-              href="/search/project"
+              class="chakra-link css-ytumd6"
+              href="/search/projects"
             >
               Projects
             </a>

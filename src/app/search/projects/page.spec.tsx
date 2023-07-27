@@ -26,9 +26,11 @@ it(`renders correctly on table data and next page`, () => {
       <Projects />
     </TestOvermindWrapper>,
   )
-  expect(container).toMatchSnapshot()
+
   const finalPage = screen.getByTestId(`pagination-last-page`)
   fireEvent.click(finalPage)
+
+  expect(container).toMatchSnapshot()
 })
 
 it(`renders correctly on table data and scroll page`, () => {
@@ -37,9 +39,12 @@ it(`renders correctly on table data and scroll page`, () => {
       <Projects />
     </TestOvermindWrapper>,
   )
+
   const scrollableContainer = screen.getByTestId(`table-scroll`)
+
   fireEvent.scroll(scrollableContainer, { target: { scrollBy: 600 } })
   console.dir(container)
+
   expect(container).toMatchSnapshot()
 })
 
@@ -49,7 +54,9 @@ it(`renders correctly and click next page`, () => {
       <Projects />
     </TestOvermindWrapper>,
   )
+
   const inputElement = screen.getByTestId(`pagination-page-up`)
   fireEvent.click(inputElement)
+
   expect(container).toMatchSnapshot()
 })

@@ -4,7 +4,8 @@ import { SubRegion } from '@/@types/geojson'
 import MAP_DASHBOARD_MOCK_DATA from '@/test/mock-data/map_dashboard_data'
 import CREDIT_HISTORY_MOCK_DATA from '@/test/mock-data/credit_history_data'
 import { projectData } from '@/test/mock-data/projects_data'
-import { lightFormat } from 'date-fns'
+import { formatDate } from '@/utils/DateFormat'
+import { DateFormats } from '@/@types/DateFormats'
 
 const CARBON_MAP_DATA_FILTERED: CountryPeriodData = {
   activeProjects: 200,
@@ -142,10 +143,6 @@ export const MockData = {
   CREDIT_HISTORY_DATA,
   CREDIT_HISTORY_DATA_EMPTY_CHART,
 }
-const formatDate = (date: string) => {
-  return lightFormat(new Date(date), `yyyy/MM/dd`)
-}
-
 export const PROJECT_SEARCH_RESULT_EMPTY: ProjectResultState = {}
 
 export const PROJECT_TEST_SAMPLE = 21
@@ -162,7 +159,9 @@ export const PROJECT_SEARCH_RESULT: ProjectResultState = {
         country: project.country ?? undefined,
         status: project.projectStatus,
         creditingPeriod:
-          project.creditingPeriodStart && project.creditingPeriodEnd ? `${formatDate(project.creditingPeriodStart)} - ${formatDate(project.creditingPeriodEnd)}` : undefined,
+          project.creditingPeriodStart && project.creditingPeriodEnd
+            ? `${formatDate(project.creditingPeriodStart, DateFormats.YYYY_MM_DD)} - ${formatDate(project.creditingPeriodEnd, DateFormats.YYYY_MM_DD)}`
+            : undefined,
         annualEst: project.annualEst ?? undefined,
         annualIssued: project.annualIssued ?? undefined,
         annualRetired: project.annualRetired ?? undefined,

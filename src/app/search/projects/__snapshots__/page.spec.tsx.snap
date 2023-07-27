@@ -14981,9 +14981,9 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         <div
           class="css-3dnq1l"
         >
-          1
+          76
            - 
-          15
+          89
            of 
           89
         </div>
@@ -14998,26 +14998,24 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             &lt;
           </button>
           <button
-            class="chakra-button css-684slw"
+            class="chakra-button css-1qr028o"
             type="button"
           >
             1
           </button>
-          <button
-            class="chakra-button css-1mw60nx"
-            type="button"
-          >
-            2
-          </button>
           <div
             class="css-1rr4qq7"
-            data-testid="ellipsis"
           >
             ...
           </div>
           <button
-            class="chakra-button css-1qr028o"
-            data-testid="pagination-last-page"
+            class="chakra-button css-1mw60nx"
+            type="button"
+          >
+            5
+          </button>
+          <button
+            class="chakra-button css-684slw"
             type="button"
           >
             6
