@@ -1,0 +1,49 @@
+name: env
+description: Build the environment file
+
+inputs:
+  next_public_api_key:
+    description: service account key
+    required: true
+  next_public_api_host:
+    description: project id
+    required: true
+
+
+runs:
+  using: "composite"
+  steps:
+
+    - name: 'Create the configuration folder'
+      shell: bash
+      run: |
+        mkdir ./configuration
+      working-directory: .
+
+    - name: 'Create the .env file'
+      shell: bash
+      env:
+        NEXT_PUBLIC_API_KEY: ${{ inputs.next_public_api_key }}
+        NEXT_PUBLIC_API_HOST: ${{ inputs.next_public_api_host }}
+      run: |
+        echo "
+        NEXT_PUBLIC_API_KEY=${{ env.NEXT_PUBLIC_API_KEY }}
+        NEXT_PUBLIC_API_HOST=${{ env.NEXT_PUBLIC_API_HOST }}" > .env.production
+      working-directory: ./configuration
+
+    - name: 'cat the .env file'
+      shell: bash
+      run: |
+        cat .env.production
+      working-directory: ./configuration
+
+    - name: 'Zip the configuration folder'
+      uses: montudor/action-zip@v1
+      with:
+        args: zip -qq -r configuration.zip ./configuration
+
+    - name: 'Upload configuration artifact'
+      uses: actions/upload-artifact@v3
+      with:
+        name: configuration
+        path: ./configuration.zip

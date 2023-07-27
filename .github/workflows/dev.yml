@@ -6,9 +6,24 @@ on:
       - main
 
 jobs:
+  Env:
+    runs-on: ubuntu-latest
+    environment: Development
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Build env file
+        uses: "./.github/workflows/templates/env"
+        with:
+          next_public_api_key: ${{ secrets.NEXT_PUBLIC_API_KEY }}
+          next_public_api_host: ${{ secrets.NEXT_PUBLIC_API_HOST }}
+
+
   Checks:
     runs-on: ubuntu-latest
     environment: Development
+    needs: Env
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
@@ -36,7 +51,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     environment: Development
-    needs: Sonar-analysis
+    needs: Env
     steps:
       - uses: actions/checkout@v3
         with:
