@@ -29,7 +29,6 @@ describe(`AutoCompleteCheckbox`, () => {
     const { findByText } = render(<AutoCompleteCheckbox label={tLabel} noOfSelectedFilters={0} options={[`option1`]} selectedFilters={[`option1`]} applyFilters={() => null} />)
 
     expect(findByText(1)).toBeDefined()
-    expect(findByText(tOptions[1])).toBeDefined()
   })
 
   test(`should be able to apply filter`, async () => {

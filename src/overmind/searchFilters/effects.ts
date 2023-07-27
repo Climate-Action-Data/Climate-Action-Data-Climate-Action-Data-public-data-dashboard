@@ -10,7 +10,6 @@ export const getGovernanceData = async (): Promise<EffectResponse<GovernanceResp
     axios
       .get(`${defaultDomain}/governance/map`, defaultHeaders)
       .then((body) => {
-        console.log(body.data)
         if (body.data.lastUpdated && body.data.governanceData) {
           const governanceResponseData = body.data as GovernanceResponseData
           result = { data: governanceResponseData }
