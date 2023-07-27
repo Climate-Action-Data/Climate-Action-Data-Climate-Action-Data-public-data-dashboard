@@ -8,16 +8,15 @@ interface GeneratePageProps {
   onPageClick: (page: number) => void
 }
 
+const DEFAULT_PAGES_TO_SHOW = 4
+
 export const GeneratePage = (props: GeneratePageProps) => {
   const { currentPage, totalPages, onPageClick } = props
-
-  const defaultPagesToShow = 4
-
   const renderPageNumbers = () => {
     const pageNumbers: React.JSX.Element[] = []
 
     // We should display all the pages if there are 4 or fewer pages
-    if (totalPages <= defaultPagesToShow) {
+    if (totalPages <= DEFAULT_PAGES_TO_SHOW) {
       for (let i = 1; i <= totalPages; i++) {
         pageNumbers.push(
           <Button variant="lightGrayRound32" key={i} fontWeight={currentPage === i ? `bold` : `500`} mx={1} onClick={() => onPageClick(i)}>
