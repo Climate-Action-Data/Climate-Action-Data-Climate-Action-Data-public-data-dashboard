@@ -1,4 +1,4 @@
-import { CountryPeriodData, CreditsHistoryDataState, DataState, MapData, ProjectResultState,SearchFiltersStateData } from '@/@types/State'
+import { CountryPeriodData, CreditsHistoryDataState, DataState, MapData, ProjectResultState, SearchFiltersStateData } from '@/@types/State'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
 import MAP_DASHBOARD_MOCK_DATA from '@/test/mock-data/map_dashboard_data'
