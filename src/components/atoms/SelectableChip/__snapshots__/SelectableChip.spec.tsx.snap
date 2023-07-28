@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Selectable Chip renders correctly for selected 1`] = `
+<div>
+  <span
+    class="css-1qm7lvz"
+    data-testid="test-id-label"
+  >
+    <span
+      class="css-zvlevn"
+    >
+      label
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Selectable Chip renders correctly for unselected 1`] = `
+<div>
+  <span
+    class="css-1qm7lvz"
+    data-testid="test-id-label"
+  >
+    <span
+      class="css-zvlevn"
+    >
+      label
+    </span>
+  </span>
+</div>
+`;
