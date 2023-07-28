@@ -23,6 +23,7 @@ import { paginationBar } from './PaginationBar'
 import { searchTable } from './SearchTable'
 import { menuWhite } from './Menu'
 import { statMain } from './Stat'
+import { tagTheme } from '@/styles/Tag'
 
 const theme = extendTheme({
   fontSizes: fontSizes,
@@ -88,6 +89,7 @@ const theme = extendTheme({
       },
     },
     Text,
+    Tag: tagTheme,
     Checkbox,
     Input,
   },

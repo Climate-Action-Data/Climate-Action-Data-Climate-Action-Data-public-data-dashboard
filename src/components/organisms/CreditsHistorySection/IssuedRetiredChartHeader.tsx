@@ -1,4 +1,4 @@
-import { Grid, GridItem, HStack, Tag, TagLabel } from '@chakra-ui/react'
+import { Grid, GridItem, HStack } from '@chakra-ui/react'
 import SubregionIndicator from '@/components/atoms/SubregionIndicator/SubregionIndicator'
 import { SubRegion } from '@/@types/geojson'
 import { AutoComplete } from '@/components/molecules/AutoComplete/AutoComplete'
@@ -6,6 +6,7 @@ import { TimeframesData } from '@/@types/Timeframe'
 import { useActions, useAppState } from '@/overmind'
 import { useTranslation } from 'react-i18next'
 import { FC } from 'react'
+import SelectableChip from '@/components/atoms/SelectableChip/SelectableChip'
 
 interface IssuedRetiredChartHeaderProps {
   autocompleteItems: { value: string; label: string }[]
@@ -64,17 +65,12 @@ const IssuedRetiredChartHeader: FC<IssuedRetiredChartHeaderProps> = (props) => {
       <GridItem area={`date-range-filter`}>
         <HStack padding={`4px 16px`} gap={`8px`}>
           {Object.values(TimeframesData).map((timeFrameName, idx) => (
-            <Tag
-              size={`md`}
+            <SelectableChip
+              label={t(`timeframes.${timeFrameName}`)}
               key={`issued-retired-${timeFrameName}`}
-              borderRadius="full"
-              _hover={{ cursor: `pointer` }}
-              variant={dataFilters.timeframe === timeFrameName ? `solid` : `outline`}
-              colorScheme="gray"
+              isSelected={dataFilters.timeframe === timeFrameName}
               onClick={() => setTimeframe(timeFrameName)}
-            >
-              <TagLabel data-testid={`button-timeframe-${idx}`}>{t(`timeframes.${timeFrameName}`)}</TagLabel>
-            </Tag>
+            />
           ))}
         </HStack>
       </GridItem>

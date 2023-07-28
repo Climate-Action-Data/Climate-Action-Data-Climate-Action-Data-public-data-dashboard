@@ -551,8 +551,8 @@ exports[`renders correctly 1`] = `
             class="chakra-stack css-1mlvmbj"
           >
             <span
-              class="css-ew0hq8"
-              data-testid="button-timeframe-0"
+              class="css-1qm7lvz"
+              data-testid="test-id-Max"
             >
               <span
                 class="css-zvlevn"
@@ -561,8 +561,8 @@ exports[`renders correctly 1`] = `
               </span>
             </span>
             <span
-              class="css-ew0hq8"
-              data-testid="button-timeframe-1"
+              class="css-1qm7lvz"
+              data-testid="test-id-12m"
             >
               <span
                 class="css-zvlevn"
@@ -571,8 +571,8 @@ exports[`renders correctly 1`] = `
               </span>
             </span>
             <span
-              class="css-ew0hq8"
-              data-testid="button-timeframe-2"
+              class="css-1qm7lvz"
+              data-testid="test-id-6m"
             >
               <span
                 class="css-zvlevn"
@@ -581,8 +581,8 @@ exports[`renders correctly 1`] = `
               </span>
             </span>
             <span
-              class="css-ew0hq8"
-              data-testid="button-timeframe-3"
+              class="css-1qm7lvz"
+              data-testid="test-id-1m"
             >
               <span
                 class="css-zvlevn"
@@ -57689,9 +57689,7 @@ exports[`renders correctly 1`] = `
                 class="chakra-stack css-1igwmid"
               >
                 <p
-                  class="chakra-text className css-v7dfld"
-                  style="font-family: fontFamily;"
-                  variable="variable"
+                  class="chakra-text css-1vemggd"
                 >
                   World
                 </p>
@@ -57960,41 +57958,41 @@ exports[`renders correctly 1`] = `
                 class="chakra-stack css-1xum4w9"
               >
                 <span
-                  class="css-ew0hq8"
+                  class="css-1qm7lvz"
+                  data-testid="test-id-Max"
                 >
                   <span
                     class="css-zvlevn"
-                    data-testid="button-timeframe-0"
                   >
                     Max
                   </span>
                 </span>
                 <span
-                  class="css-ew0hq8"
+                  class="css-1qm7lvz"
+                  data-testid="test-id-12m"
                 >
                   <span
                     class="css-zvlevn"
-                    data-testid="button-timeframe-1"
                   >
                     12m
                   </span>
                 </span>
                 <span
-                  class="css-ew0hq8"
+                  class="css-1qm7lvz"
+                  data-testid="test-id-6m"
                 >
                   <span
                     class="css-zvlevn"
-                    data-testid="button-timeframe-2"
                   >
                     6m
                   </span>
                 </span>
                 <span
-                  class="css-ew0hq8"
+                  class="css-1qm7lvz"
+                  data-testid="test-id-1m"
                 >
                   <span
                     class="css-zvlevn"
-                    data-testid="button-timeframe-3"
                   >
                     1m
                   </span>

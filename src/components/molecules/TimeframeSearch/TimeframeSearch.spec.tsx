@@ -19,6 +19,6 @@ it(`renders with click on timeframe`, async () => {
       <TimeframeSearch />
     </TestOvermindWrapper>,
   )
-  await userEvent.click(screen.getByTestId(`button-timeframe-1`))
+  await userEvent.click(screen.getByTestId(`test-id-1m`))
   expect(container).toMatchSnapshot()
 })
