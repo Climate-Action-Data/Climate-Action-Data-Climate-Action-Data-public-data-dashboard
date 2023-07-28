@@ -3,7 +3,7 @@
 exports[`credit history stat renders correctly with large amount 1`] = `
 <div>
   <div
-    class="chakra-stat className css-1882jtg"
+    class="chakra-stat css-13qepjb"
   >
     <dl>
       <dd
@@ -33,7 +33,7 @@ exports[`credit history stat renders correctly with large amount 1`] = `
 exports[`credit history stat renders correctly with small amount 1`] = `
 <div>
   <div
-    class="chakra-stat className css-1882jtg"
+    class="chakra-stat css-13qepjb"
   >
     <dl>
       <dd

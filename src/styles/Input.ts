@@ -10,7 +10,6 @@ export const Input = helpers.defineMultiStyleConfig({
         borderRadius: 0,
         padding: 0,
         height: `20px`,
-        fontFamily: `aeonik`,
         fontSize: `14px`,
         color: `lightGray.700`,
         focusBorderColor: `focusBorderColor`,

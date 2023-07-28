@@ -10,7 +10,7 @@ export const FilterCountIndicator: FC<FilterCountIndicatorProps> = (props) => {
 
   return (
     <Square size={`24px`} bg={`#364D3F`} color={`white`} borderRadius={`4px`}>
-      <Text fontFamily={`aeonikFono`} fontSize={`12px`}>
+      <Text fontFamily={`heading`} fontSize={`12px`}>
         {count}
       </Text>
     </Square>
