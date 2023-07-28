@@ -268,7 +268,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    class="css-14zyj6a"
+    class="css-1oqwk8b"
   >
     <div
       class="chakra-container css-l4j09f"
@@ -57655,6 +57655,14 @@ exports[`renders correctly 1`] = `
           </div>
         </div>
       </div>
+      <div
+        class="css-17xejub"
+      />
+      <p
+        class="chakra-text css-9zs3e7"
+      >
+        Data represented as of Invalid Date Invalid Date
+      </p>
     </div>
   </div>
   <div

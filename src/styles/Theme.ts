@@ -68,12 +68,12 @@ const theme = extendTheme({
       variants: {
         cardSection,
         paginationBar,
+        filterCardSection,
       },
     },
     Menu: {
       variants: {
         menuWhite,
-        filterCardSection,
       },
     },
     Text,
