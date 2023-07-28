@@ -23,16 +23,16 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
   const allChecked = options.length != 0 && selectedValues.length === options.length
   const isIndeterminate = selectedValues.length !== 0 && selectedValues.length !== options.length
 
-  const onClose = () => {
+  const handleOnClose = () => {
     setSearchInput(``)
     setSelectedValues([...selectedFilters])
   }
 
-  const onInputChange = (value: string) => {
+  const handleOnInputChange = (value: string) => {
     setSearchInput(value)
   }
 
-  const topCheckboxOnChange = () => {
+  const handleTopCheckboxOnChange = () => {
     if (isIndeterminate || selectedValues.length === 0) {
       setSelectedValues([...options])
     } else {
@@ -40,7 +40,7 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
     }
   }
 
-  const checkboxOnChange = (checked: boolean, value: string) => {
+  const handleCheckboxOnChange = (checked: boolean, value: string) => {
     if (checked) {
       setSelectedValues([...selectedValues, value])
     } else {
@@ -49,7 +49,7 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
   }
 
   return (
-    <Popover gutter={0} isLazy placement="bottom-start" matchWidth onClose={onClose}>
+    <Popover gutter={0} isLazy placement="bottom-start" matchWidth onClose={handleOnClose}>
       <PopoverTrigger>
         <Button variant={noOfSelectedFilters !== 0 ? `dropdownSelected` : `dropdownUnselected`}>
           <Flex fontWeight={`normal`} fontSize={`16px`} alignItems={`center`} grow={1}>
@@ -71,12 +71,12 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
                 variant={`autoCompleteCheckboxTextInput`}
                 value={searchInput}
                 onChange={(event) => {
-                  onInputChange(event.target.value)
+                  handleOnInputChange(event.target.value)
                 }}
               />
             </Flex>
             <Flex width={`100%`} marginTop={`4px`} alignItems={`center`} padding={`8px 0.75rem`}>
-              <Checkbox isIndeterminate={isIndeterminate} data-testid={`AutoCompleteCheckbox-top-checkbox`} isChecked={allChecked} onChange={topCheckboxOnChange} />
+              <Checkbox isIndeterminate={isIndeterminate} data-testid={`AutoCompleteCheckbox-top-checkbox`} isChecked={allChecked} onChange={handleTopCheckboxOnChange} />
               <Spacer />
               <Button onClick={() => applyFilters(selectedValues)} variant={`textLink`}>
                 {t(`apply`)}
@@ -94,7 +94,7 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
                     name={value}
                     isChecked={selectedValues.includes(value)}
                     onChange={(event) => {
-                      checkboxOnChange(event.target.checked, value)
+                      handleCheckboxOnChange(event.target.checked, value)
                     }}
                   >
                     {value}

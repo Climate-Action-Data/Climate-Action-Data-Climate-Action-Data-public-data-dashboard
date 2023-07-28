@@ -154,6 +154,7 @@ const theme = extendTheme({
           },
         },
       },
+      ' .hide-scrollbar::-webkit-scrollbar': { height: 0 },
       '.hide-scrollbar': {
         scrollbarWidth: `thin`,
         scrollbarColor: `transparent transparent`,
