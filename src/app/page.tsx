@@ -22,8 +22,8 @@ export default function Home(): React.JSX.Element {
       <Flex paddingX={`24px`} paddingTop={`24px`}>
         <SearchBar />
       </Flex>
-      <Flex padding={`24px`} minHeight="100vh" alignItems="center" justifyContent="space-between" flexDirection="column" width={`100%`}>
-        <Container marginTop={`20px`} flex={1} variant="cardSection">
+      <Flex padding={`24px`} minHeight="min-content" alignItems="center" justifyContent="space-between" flexDirection="column" width={`100%`}>
+        <Container marginTop={`20px`} variant="cardSection">
           <Flex justifyContent="space-between" flexWrap="wrap" margin={`8px`} gap={`16px`} alignItems={`center`}>
             <RegionSearch />
             <Hide below="md">
