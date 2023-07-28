@@ -3,7 +3,7 @@
 exports[`CarbonReductionWidget renders loading state when carbonMapData is undefined 1`] = `
 <div>
   <div
-    class="css-nk5dj7"
+    class="css-1g9cqw1"
     data-testid="loading-indicator"
   >
     <div
