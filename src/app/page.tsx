@@ -1,5 +1,5 @@
 'use client'
-import { Container, Flex, Hide, Spacer } from '@chakra-ui/react'
+import { Container, Flex, Hide, Spacer, Text } from '@chakra-ui/react'
 
 import { useAppState } from '@/overmind'
 import { CarbonReductionWidget } from '@/components/molecules/CarbonReductionWidget/CarbonReductionWidget'
@@ -8,16 +8,21 @@ import { TimeframeSearch } from '@/components/molecules/TimeframeSearch/Timefram
 import GeoMap from '@/components/organisms/GeoMap/GeoMap'
 import CreditsHistorySection from '@/components/organisms/CreditsHistorySection/CreditsHistorySection'
 import SearchBar from '@/components/organisms/SearchBar/SearchBar'
+import { useTranslation } from 'react-i18next'
 
 export default function Home(): React.JSX.Element {
   const { carbonReduction } = useAppState().analytics
+  const { t } = useTranslation(`home`)
+  const dataRepresentedAsOf = t(`dataRepresentedAsOf`)
+  const formattedDate = new Date(carbonReduction.carbonMapData?.data?.lastUpdated ?? ``)
+  const formattedDateTime = `${formattedDate.toLocaleDateString()} ${formattedDate.toLocaleTimeString()}`
 
   return (
     <>
       <Flex paddingX={`24px`} paddingTop={`24px`}>
         <SearchBar />
       </Flex>
-      <Flex padding={{ md: 6 }} minHeight="100vh" alignItems="center" justifyContent="space-between" flexDirection="column" width={`100%`}>
+      <Flex padding={`24px`} minHeight="100vh" alignItems="center" justifyContent="space-between" flexDirection="column" width={`100%`}>
         <Container marginTop={`20px`} flex={1} variant="cardSection">
           <Flex justifyContent="space-between" flexWrap="wrap" margin={`8px`} gap={`16px`} alignItems={`center`}>
             <RegionSearch />
@@ -34,6 +39,8 @@ export default function Home(): React.JSX.Element {
             </Hide>
             <CarbonReductionWidget />
           </Flex>
+          <Spacer />
+          <Text width="100%" paddingRight="5px" marginTop="40px" color={`lightGray.600`} textAlign={`right`}>{`${dataRepresentedAsOf} ${formattedDateTime}`}</Text>
         </Container>
       </Flex>
       <Flex>
