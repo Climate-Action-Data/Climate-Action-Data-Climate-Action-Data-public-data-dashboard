@@ -1,4 +1,4 @@
-import { CountryPeriodData, CreditsHistoryDataState, DataState, MapData, ProjectResultState } from '@/@types/State'
+import { CountryPeriodData, CreditsHistoryDataState, DataState, MapData, ProjectResultState,SearchFiltersStateData } from '@/@types/State'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
 import MAP_DASHBOARD_MOCK_DATA from '@/test/mock-data/map_dashboard_data'
@@ -64,7 +64,11 @@ const STATE_CARBON_FULL_REGION_COUNTRY: DataState = {
   carbonReduction: {
     carbonMapData: { data: MAP_DATA },
     carbonMapHasCountryData: new Map<string, boolean>(),
-    carbonMapDataFilters: { region: SubRegion.LATIN_AMERICA_AND_THE_CARIBBEAN, timeframe: TimeframesData.MAX, country: `COL` },
+    carbonMapDataFilters: {
+      region: SubRegion.LATIN_AMERICA_AND_THE_CARIBBEAN,
+      timeframe: TimeframesData.MAX,
+      country: `COL`,
+    },
     carbonMapHoveredRegion: SubRegion.LATIN_AMERICA_AND_THE_CARIBBEAN,
     carbonMapHoveredCountry: `FRA`,
   },
@@ -75,7 +79,11 @@ const STATE_CARBON_FULL_REGION_COUNTRY_NO_HOVER: DataState = {
   carbonReduction: {
     carbonMapData: { data: MAP_DATA },
     carbonMapHasCountryData: new Map<string, boolean>(),
-    carbonMapDataFilters: { region: SubRegion.LATIN_AMERICA_AND_THE_CARIBBEAN, timeframe: TimeframesData.MAX, country: `COL` },
+    carbonMapDataFilters: {
+      region: SubRegion.LATIN_AMERICA_AND_THE_CARIBBEAN,
+      timeframe: TimeframesData.MAX,
+      country: `COL`,
+    },
     carbonMapHoveredRegion: ``,
     carbonMapHoveredCountry: ``,
   },
@@ -132,8 +140,32 @@ const CREDIT_HISTORY_DATA_EMPTY_CHART: CreditsHistoryDataState = {
   },
 }
 
+const SearchOptions = [`option 1`, `option 2`, `option 2`]
+const SEARCH_FILTER_VALUES: SearchFiltersStateData = {
+  selectedSearchFilterValues: {
+    searchFilterValues: {
+      projectStatuses: SearchOptions,
+      sectors: SearchOptions,
+      methodologies: SearchOptions,
+      standards: SearchOptions,
+      countries: SearchOptions,
+    },
+  },
+  allSearchFilterValues: {
+    searchFilterValues: {
+      projectStatuses: SearchOptions,
+      sectors: SearchOptions,
+      methodologies: SearchOptions,
+      standards: SearchOptions,
+      countries: SearchOptions,
+    },
+    isEmpty: false,
+  },
+}
+
 export const MockData = {
   CARBON_MAP_DATA_FILTERED,
+  SEARCH_FILTER_VALUES,
   STATE_CARBON_FILTERED_UNDEFINED_MAP_DATA_UNDEFINED,
   STATE_CARBON_FILTERED_UNDEFINED,
   STATE_CARBON_FULL,

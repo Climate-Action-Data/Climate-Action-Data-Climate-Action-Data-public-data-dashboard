@@ -5,11 +5,12 @@ import { Provider } from 'overmind-react'
 import { config } from '@/overmind'
 import { SubRegion } from '@/@types/geojson'
 import { TimeframesData } from '@/@types/Timeframe'
-import { CreditsHistoryDataState, DataState, ProjectResultState } from '@/@types/State'
+import { CreditsHistoryDataState, DataState, ProjectResultState, SearchFiltersStateData } from '@/@types/State'
 
 interface TestOvermindWrapperProps extends PropsWithChildren {
   analytics?: DataState
   creditsHistory?: CreditsHistoryDataState
+  searchFilters?: SearchFiltersStateData
   projectResult?: ProjectResultState
 }
 
@@ -27,9 +28,32 @@ export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
     },
     carbonMapDataFiltered: undefined,
   }
+
   const creditHistoryData = props?.creditsHistory ?? {
     filteredCreditsHistory: undefined,
     dataFilters: { region: SubRegion.WORLD, timeframe: TimeframesData.MAX },
+  }
+
+  const searchFilters = props?.searchFilters ?? {
+    selectedSearchFilterValues: {
+      searchFilterValues: {
+        projectStatuses: [],
+        standards: [],
+        methodologies: [],
+        sectors: [],
+        countries: [],
+      },
+    },
+    allSearchFilterValues: {
+      searchFilterValues: {
+        projectStatuses: [],
+        standards: [],
+        methodologies: [],
+        sectors: [],
+        countries: [],
+      },
+      isEmpty: true,
+    },
   }
 
   const projectResult = props?.projectResult ?? {
@@ -39,6 +63,7 @@ export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
   const overmind = createOvermindMock(config, (state) => {
     state.analytics = carbonMapData
     state.creditsHistory = creditHistoryData
+    state.searchFilters = searchFilters
     state.projectResult = projectResult
   })
 
