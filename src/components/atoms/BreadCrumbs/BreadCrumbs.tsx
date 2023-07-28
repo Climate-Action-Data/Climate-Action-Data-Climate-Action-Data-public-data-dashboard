@@ -1,6 +1,7 @@
 import { Link } from '@chakra-ui/next-js'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbItemProps } from '@chakra-ui/react'
 import { usePathname } from 'next/navigation'
+import { useTranslation } from 'react-i18next'
 
 interface BreadCrumbsProps {
   showHome?: boolean
@@ -32,12 +33,12 @@ export const BreadCrumbs = (props: BreadCrumbsProps) => {
   }
 
   const currentPath = usePathname()
-
+  const { t } = useTranslation(`home`)
   return (
     <Breadcrumb separator={DEFAULT_BREADCRUMB_SEPERATOR}>
       {actualProps.showHome && (
         <BreadcrumbItem _hover={{ color: `blue.600` }}>
-          <Link href="/">Home</Link>
+          <Link href="/">{t(`homeBreadcrumb`)}</Link>
         </BreadcrumbItem>
       )}
       {actualProps.items.map((item) => (
