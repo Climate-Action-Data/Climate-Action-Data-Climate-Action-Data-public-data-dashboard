@@ -1,9 +1,10 @@
 import { SubRegion } from '@/@types/geojson'
 import { useActions, useAppState, useEffects } from '@/overmind'
-import { Box, Button, Divider, Flex, Text } from '@chakra-ui/react'
+import { Box, Divider, Flex, IconButton, Text } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { AutoComplete } from '../AutoComplete/AutoComplete'
 import { CarbonReduction } from '@/@types/State'
+import { ChevronLeftIcon } from '@/components/atoms/ChevronLeftIcon/ChevronLeftIcon'
 
 export const getCountryPlaceholder = (carbonReduction: CarbonReduction, t: any, countryTranslate: any): string => {
   let placeholder: string = t(`regions.chooseCountry`)
@@ -47,9 +48,14 @@ export const RegionSearch = (): React.JSX.Element => {
     if (carbonReduction.carbonMapDataFilters?.region !== SubRegion.WORLD) {
       return (
         <Flex alignItems={`center`}>
-          <Button variant="lightGrayRound" marginRight={[`4px`, 0]} data-testid="button-region-back" onClick={() => clearLocationFilters()}>
-            &lt;
-          </Button>
+          <IconButton
+            marginRight={`4px`}
+            variant="lightGrayRound"
+            aria-label={``}
+            icon={<ChevronLeftIcon />}
+            onClick={() => clearLocationFilters()}
+            data-testid="button-region-back"
+          />
           <Text maxWidth={[`104px`, `unset`]} variant={`ellipsis`} fontWeight="600">
             {t(`regions.${carbonReduction.carbonMapDataFilters.region}`)}
           </Text>

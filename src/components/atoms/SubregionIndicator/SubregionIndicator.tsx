@@ -1,19 +1,8 @@
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, HStack, Text } from '@chakra-ui/react'
-import { Open_Sans } from 'next/font/google'
+import { HStack, IconButton, Text } from '@chakra-ui/react'
 import { SubRegion } from '@/@types/geojson'
-
-/* eslint-disable @typescript-eslint/quotes */
-const openSans = Open_Sans({
-  subsets: ['latin'],
-  // eslint-disable-next-line @typescript-eslint/quotes
-  display: 'swap',
-  // eslint-disable-next-line @typescript-eslint/quotes
-  weight: '600',
-})
-
-/* eslint-enable @typescript-eslint/quotes */
+import { ChevronLeftIcon } from '@/components/atoms/ChevronLeftIcon/ChevronLeftIcon'
 
 interface SubregionIndicatorProps {
   subregion: string | undefined
@@ -25,12 +14,8 @@ const SubregionIndicator: FC<SubregionIndicatorProps> = (props: SubregionIndicat
   const { t } = useTranslation(`home`)
   return (
     <HStack>
-      {subregion != SubRegion.WORLD && (
-        <Button variant="lightGrayRound" marginRight={4} data-testid="button-region-back" onClick={clearSubregion}>
-          &lt;
-        </Button>
-      )}
-      <Text {...openSans} sx={{ maxLines: 1, wordWrap: `normal` }}>
+      {subregion != SubRegion.WORLD && <IconButton variant="lightGrayRound" aria-label={``} icon={<ChevronLeftIcon />} onClick={clearSubregion} data-testid="button-region-back" />}
+      <Text sx={{ maxLines: 1, wordWrap: `normal` }} fontWeight={`bold`}>
         {subregion != SubRegion.WORLD ? t(`regions.${subregion}`) : t(`regions.world`)}
       </Text>
     </HStack>

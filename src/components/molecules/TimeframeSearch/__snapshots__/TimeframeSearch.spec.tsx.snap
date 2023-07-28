@@ -9,8 +9,8 @@ exports[`renders correctly 1`] = `
       class="chakra-stack css-1mlvmbj"
     >
       <span
-        class="css-ew0hq8"
-        data-testid="button-timeframe-0"
+        class="css-1qm7lvz"
+        data-testid="test-id-Max"
       >
         <span
           class="css-zvlevn"
@@ -19,8 +19,8 @@ exports[`renders correctly 1`] = `
         </span>
       </span>
       <span
-        class="css-ew0hq8"
-        data-testid="button-timeframe-1"
+        class="css-1qm7lvz"
+        data-testid="test-id-12m"
       >
         <span
           class="css-zvlevn"
@@ -29,8 +29,8 @@ exports[`renders correctly 1`] = `
         </span>
       </span>
       <span
-        class="css-ew0hq8"
-        data-testid="button-timeframe-2"
+        class="css-1qm7lvz"
+        data-testid="test-id-6m"
       >
         <span
           class="css-zvlevn"
@@ -39,8 +39,8 @@ exports[`renders correctly 1`] = `
         </span>
       </span>
       <span
-        class="css-ew0hq8"
-        data-testid="button-timeframe-3"
+        class="css-1qm7lvz"
+        data-testid="test-id-1m"
       >
         <span
           class="css-zvlevn"
@@ -62,8 +62,8 @@ exports[`renders with click on timeframe 1`] = `
       class="chakra-stack css-1mlvmbj"
     >
       <span
-        class="css-ew0hq8"
-        data-testid="button-timeframe-0"
+        class="css-1qm7lvz"
+        data-testid="test-id-Max"
       >
         <span
           class="css-zvlevn"
@@ -72,8 +72,8 @@ exports[`renders with click on timeframe 1`] = `
         </span>
       </span>
       <span
-        class="css-ew0hq8"
-        data-testid="button-timeframe-1"
+        class="css-1qm7lvz"
+        data-testid="test-id-12m"
       >
         <span
           class="css-zvlevn"
@@ -82,8 +82,8 @@ exports[`renders with click on timeframe 1`] = `
         </span>
       </span>
       <span
-        class="css-ew0hq8"
-        data-testid="button-timeframe-2"
+        class="css-1qm7lvz"
+        data-testid="test-id-6m"
       >
         <span
           class="css-zvlevn"
@@ -92,8 +92,8 @@ exports[`renders with click on timeframe 1`] = `
         </span>
       </span>
       <span
-        class="css-ew0hq8"
-        data-testid="button-timeframe-3"
+        class="css-1qm7lvz"
+        data-testid="test-id-1m"
       >
         <span
           class="css-zvlevn"
