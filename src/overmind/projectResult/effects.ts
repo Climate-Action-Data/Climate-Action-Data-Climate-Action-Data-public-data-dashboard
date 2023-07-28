@@ -36,16 +36,16 @@ export const getProjectResults = async (from: number, take: number): Promise<Eff
     //   .then((body) => {
     //     if (body.data.lastUpdated && body.data.countriesData) {
     //       const mapData = body.data as IssuedRetiredGraphData
-
     //       result = { data: mapData }
     //     } else {
     //       result = { error: { code: body.status.toString(), message: body.statusText } }
     //     }
-    //     resolve(result)
     //   })
     //   .catch(() => {
     //     result = { error: { code: `400`, message: `could not fetch data` } }
-    //     resolve(result)
+    //   })
+    //   .finally(() => {
+    //         resolve(result)
     //   })
   })
 }

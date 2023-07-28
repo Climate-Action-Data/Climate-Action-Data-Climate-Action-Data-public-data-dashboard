@@ -15,15 +15,15 @@ export const getCarbonReduction = async (): Promise<EffectResponse<MapData>> => 
       .then((body) => {
         if (body.data && body.data.lastUpdated && body.data.countriesData) {
           const mapData = body.data as MapData
-
           result = { data: mapData }
         } else {
           result = { error: { code: body.status.toString(), message: body.statusText } }
         }
-        resolve(result)
       })
       .catch(() => {
         result = { error: { code: `400`, message: `could not fetch data` } }
+      })
+      .finally(() => {
         resolve(result)
       })
   })

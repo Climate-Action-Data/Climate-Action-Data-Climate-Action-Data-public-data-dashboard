@@ -16,10 +16,11 @@ export const getGovernanceData = async (): Promise<EffectResponse<GovernanceResp
         } else {
           result = { error: { code: body.status.toString(), message: body.statusText } }
         }
-        resolve(result)
       })
       .catch(() => {
         result = { error: { code: `400`, message: `could not fetch data` } }
+      })
+      .finally(() => {
         resolve(result)
       })
   })
