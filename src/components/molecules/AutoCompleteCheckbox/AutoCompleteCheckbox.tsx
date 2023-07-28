@@ -18,7 +18,7 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
   const { label, options, applyFilters, noOfSelectedFilters, selectedFilters } = props
   const [selectedValues, setSelectedValues] = useState<string[]>([])
   const [searchInput, setSearchInput] = useState<string>(``)
-  const { t } = useTranslation(`home`)
+  const { t } = useTranslation(`search`)
 
   const allChecked = options.length != 0 && selectedValues.length === options.length
   const isIndeterminate = selectedValues.length !== 0 && selectedValues.length !== options.length
@@ -52,7 +52,7 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
     <Popover gutter={0} isLazy placement="bottom-start" matchWidth onClose={onClose}>
       <PopoverTrigger>
         <Button variant={noOfSelectedFilters !== 0 ? `dropdownSelected` : `dropdownUnselected`}>
-          <Flex fontFamily={`aeonik`} fontWeight={`normal`} fontSize={`16px`} alignItems={`center`} grow={1}>
+          <Flex fontWeight={`normal`} fontSize={`16px`} alignItems={`center`} grow={1}>
             {label}
             <Box width={`8px`} />
             {noOfSelectedFilters !== 0 && <FilterCountIndicator count={noOfSelectedFilters} />}
@@ -66,13 +66,20 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
           <VStack divider={<StackDivider height={`1px`} borderColor={`#B8BEC0`} />} spacing={0}>
             <Flex width={`100%`} alignItems={`center`} padding={`8px`}>
               <SearchIcon color={`lightGray.700`} paddingY={`auto`} marginRight={`8px`} />
-              <Input placeholder={t(`searchFilter.search`)} variant={`autoCompleteCheckboxTextInput`} value={searchInput} onChange={(event) => onInputChange(event.target.value)} />
+              <Input
+                placeholder={t(`search`)}
+                variant={`autoCompleteCheckboxTextInput`}
+                value={searchInput}
+                onChange={(event) => {
+                  onInputChange(event.target.value)
+                }}
+              />
             </Flex>
             <Flex width={`100%`} marginTop={`4px`} alignItems={`center`} padding={`8px 0.75rem`}>
               <Checkbox isIndeterminate={isIndeterminate} data-testid={`AutoCompleteCheckbox-top-checkbox`} isChecked={allChecked} onChange={topCheckboxOnChange} />
               <Spacer />
               <Button onClick={() => applyFilters(selectedValues)} variant={`textLink`}>
-                {t(`searchFilter.apply`)}
+                {t(`apply`)}
               </Button>
             </Flex>
           </VStack>

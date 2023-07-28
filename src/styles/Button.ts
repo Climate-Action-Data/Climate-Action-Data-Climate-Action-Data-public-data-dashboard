@@ -101,6 +101,7 @@ export const accentPrimary32 = defineStyle({
   padding: `6px 14px`,
   borderRadius: `32px`,
   fontSize: `16px`,
+  fontWeight: `medium`,
   _hover: {
     background: `gray.200`,
   },

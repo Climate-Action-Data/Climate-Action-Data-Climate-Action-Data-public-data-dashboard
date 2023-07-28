@@ -11,7 +11,7 @@ exports[`AutoCompleteCheckbox should render AutoCompleteCheckbox with no data in
     type="button"
   >
     <div
-      class="css-6t88ve"
+      class="css-jmqhys"
     >
       search
       <div
@@ -58,7 +58,7 @@ exports[`AutoCompleteCheckbox should render AutoCompleteCheckbox with options 1`
     type="button"
   >
     <div
-      class="css-6t88ve"
+      class="css-jmqhys"
     >
       search
       <div

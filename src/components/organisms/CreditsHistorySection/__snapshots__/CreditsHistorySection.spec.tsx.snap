@@ -1094,7 +1094,7 @@ exports[`CreditsHistorySection renders the widget when rawCreditsHistory and cre
                 class="chakra-stack css-c3wesr"
               >
                 <div
-                  class="chakra-stat className css-1882jtg"
+                  class="chakra-stat css-13qepjb"
                 >
                   <dl>
                     <dd
@@ -1122,7 +1122,7 @@ exports[`CreditsHistorySection renders the widget when rawCreditsHistory and cre
                   class="chakra-stack__divider css-2if2sn"
                 />
                 <div
-                  class="chakra-stat className css-1882jtg"
+                  class="chakra-stat css-13qepjb"
                 >
                   <dl>
                     <dd

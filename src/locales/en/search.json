@@ -1,22 +1,23 @@
 {
-    "search": "Search",
-    "table": {
-        "projectDetails": "Project Details",
-        "standard": "Standard",
-        "methodology": "Methodology",
-        "sector": "Sector",
-        "country": "Country",
-        "projectStatus": "Project Status",
-        "creditingPeriod": "Crediting Period",
-        "annualEstUnits": "Annual Est. Units",
-        "totalIssuedUnits": "Total Issued Units",
-        "totalRetiredUnits": "Total Retired Units",
-        "totalAvailableUnits": "Total Available Units",
-        "correspondingAdjustment": "Corresponding Adjustment"
-    },
-    "projectMenu": {
-        "viewProject": "View Project",
-        "exportProject": "Export Project",
-        "addToWatchlists": "Add to Watchlists"
-    }
+  "search": "Search",
+  "apply": "Apply",
+  "table": {
+    "projectDetails": "Project Details",
+    "standard": "Standard",
+    "methodology": "Methodology",
+    "sector": "Sector",
+    "country": "Country",
+    "projectStatus": "Project Status",
+    "creditingPeriod": "Crediting Period",
+    "annualEstUnits": "Annual Est. Units",
+    "totalIssuedUnits": "Total Issued Units",
+    "totalRetiredUnits": "Total Retired Units",
+    "totalAvailableUnits": "Total Available Units",
+    "correspondingAdjustment": "Corresponding Adjustment"
+  },
+  "projectMenu": {
+    "viewProject": "View Project",
+    "exportProject": "Export Project",
+    "addToWatchlists": "Add to Watchlists"
+  }
 }

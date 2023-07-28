@@ -61,6 +61,7 @@ const theme = extendTheme({
       variants: {
         brandPrimary,
         whiteSecondary,
+        accentPrimary32,
       },
     },
     Container: {

@@ -1,6 +1,7 @@
 import { FC, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Box, Button, Flex, Spacer, Stack, StackDivider } from '@chakra-ui/react'
+import { Box, Flex, Spacer, Stack, StackDivider } from '@chakra-ui/react'
+import { Link } from '@chakra-ui/next-js'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
 import AutoCompleteCheckbox from '@/components/molecules/AutoCompleteCheckbox/AutoCompleteCheckbox'
@@ -15,8 +16,7 @@ const SearchBar: FC = () => {
   const { setCountriesFilter, setMethodologiesFilter, setProjectStatusesFilter, setSectorsFilter, setStandardsFilter } = useActions().searchFilters
   const { getGovernanceData } = useEffects().searchFilters
   const { transformGovernanceDataToSearchFilterData } = useActions().searchFilters
-
-  const { t } = useTranslation(`home`)
+  const { t } = useTranslation(`search`)
 
   useEffect(() => {
     if (isEmpty) {
@@ -76,19 +76,23 @@ const SearchBar: FC = () => {
             noOfSelectedFilters={selectedSearchFilters.countries.length}
             applyFilters={setCountriesFilter}
           />
-          {/*<AutoCompleteCheckbox label={`Crediting Period`} values={[]} />*/}
         </Stack>
         <Flex>
           <Spacer minWidth={`32px`} />
-          <Button
+          <Link
+            as={`button`}
             variant={`accentPrimary32`}
+            padding={`8px 16px`}
             width={`min-content`}
-            rightIcon={<SearchIcon width={6} height={6} />}
             _hover={{ backgroundColor: `#24BD63` }}
             _active={{ backgroundColor: `#1B8E4A` }}
+            href={`/search/projects`}
           >
-            {t(`searchFilter.search`)}
-          </Button>
+            <Flex alignItems={`center`}>
+              {t(`search`)}
+              <SearchIcon width={6} height={6} />
+            </Flex>
+          </Link>
         </Flex>
       </Stack>
     </Box>
