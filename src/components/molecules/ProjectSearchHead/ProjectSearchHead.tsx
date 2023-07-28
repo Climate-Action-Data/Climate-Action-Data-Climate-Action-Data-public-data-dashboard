@@ -1,13 +1,14 @@
-import { ALLOWED_RENDER_TYPE } from '@/app/search/projects/page'
+import { useAppState } from '@/overmind'
+import { useTranslation } from 'react-i18next'
+import { Stack, Skeleton, Flex, TableContainer, Table, Thead, Tr, Th, Tbody, Td, Text, Button, Box, Menu, MenuButton, MenuItem, MenuList, VStack } from '@chakra-ui/react'
+
+import { ALLOWED_RENDER_TYPE } from '@/@types/Project'
 import { BookmarkPlusIcon } from '@/components/atoms/BookmarkPlusIcon/BookmarkPlusIcon'
 import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 import { KebabMenuIcon } from '@/components/atoms/KebabMenuIcon/KebabMenuIcon'
 import { SortDownIcon } from '@/components/atoms/SortDownIcon/SortDownIcon'
 import { SortUpIcon } from '@/components/atoms/SortUpIcon/SortUpIcon'
-import { useAppState } from '@/overmind'
 import { changeHoverColor } from '@/utils/Stickify'
-import { Stack, Skeleton, Flex, TableContainer, Table, Thead, Tr, Th, Tbody, Td, Text, Button, Box, Menu, MenuButton, MenuItem, MenuList, VStack } from '@chakra-ui/react'
-import { useTranslation } from 'react-i18next'
 
 interface ProjectSearchHeadProps {
   renderType?: string

@@ -8,9 +8,9 @@ import { ProjectSearchBody } from '@/components/molecules/ProjectSearchBody/Proj
 import { PaginationWidget } from '@/components/atoms/PaginationWidget/PaginationWidget'
 import { useActions, useEffects } from '@/overmind'
 import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
+import { ALLOWED_RENDER_TYPE } from '@/@types/Project'
 
 const DEFAULT_PROJECT_TO_DISPLAY = 15
-export const ALLOWED_RENDER_TYPE = `ProjectTable`
 
 const ProjectPage: NextPage = () => {
   const { getProjectResults } = useEffects().projectResult

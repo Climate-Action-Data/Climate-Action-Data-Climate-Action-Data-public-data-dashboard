@@ -1,7 +1,8 @@
 import { Flex, TableContainer, Table, Tr, Tbody, Td, Text } from '@chakra-ui/react'
 import { useAppState } from '@/overmind'
+
 import { changeHoverColor } from '@/utils/Stickify'
-import { ALLOWED_RENDER_TYPE } from '@/app/search/projects/page'
+import { ALLOWED_RENDER_TYPE } from '@/@types/Project'
 import { ProjectSearchBodyHeader } from '@/components/atoms/ProjectSearchBodyHeader/ProjectSearchBodyHeader'
 import { ProjectSearchBodySkeleton } from '@/components/atoms/ProjectSearchBodySkeleton/ProjectSearchBodySkeleton'
 interface TableDataProps {

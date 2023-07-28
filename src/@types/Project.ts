@@ -13,3 +13,5 @@ export interface Project {
   annualRetired?: number
   annualAvailable?: number
 }
+
+export const ALLOWED_RENDER_TYPE = `ProjectTable`
