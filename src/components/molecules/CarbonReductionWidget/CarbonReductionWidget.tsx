@@ -27,7 +27,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
 
   if (carbonReduction.carbonMapData === undefined && carbonMapDataFiltered === undefined) {
     return (
-      <Box width={{ md: `328px` }} data-testid="loading-indicator" flex={1}>
+      <Box w={{ md: `328px` }} maxW={{ md: `328px` }} data-testid="loading-indicator" flex={1}>
         <Stack>
           <Center>
             <Box width={`50%`}>
