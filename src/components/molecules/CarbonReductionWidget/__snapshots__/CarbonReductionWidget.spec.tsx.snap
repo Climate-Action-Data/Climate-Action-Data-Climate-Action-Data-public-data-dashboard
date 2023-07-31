@@ -139,7 +139,7 @@ exports[`CarbonReductionWidget renders the widget when carbonMapData and carbonM
           class="css-i4e4a6"
         >
           <span
-            class="chakra-text css-of4sfu"
+            class="chakra-text css-1s7w14k"
           >
             200
           </span>
@@ -163,16 +163,16 @@ exports[`CarbonReductionWidget renders the widget when carbonMapData and carbonM
           <div
             class="css-0"
           >
-            <span
-              class="chakra-text css-of4sfu"
+            <p
+              class="chakra-text css-1s7w14k"
             >
               0
-            </span>
-            <span
+            </p>
+            <p
               class="chakra-text css-g5hezf"
             >
               MtCO2
-            </span>
+            </p>
           </div>
           <p
             class="chakra-text css-10rvbm3"
@@ -186,16 +186,16 @@ exports[`CarbonReductionWidget renders the widget when carbonMapData and carbonM
           <div
             class="css-0"
           >
-            <span
-              class="chakra-text css-1tv1yfd"
+            <p
+              class="chakra-text css-d3xmxd"
             >
               0
-            </span>
-            <span
+            </p>
+            <p
               class="chakra-text css-g5hezf"
             >
               MtCO2
-            </span>
+            </p>
           </div>
           <p
             class="chakra-text css-10rvbm3"
@@ -209,7 +209,7 @@ exports[`CarbonReductionWidget renders the widget when carbonMapData and carbonM
         class="chakra-divider css-1y9z5uc"
       />
       <h1
-        class="chakra-text css-5dcnrg"
+        class="chakra-text css-1e4o6cc"
       >
         Sector
       </h1>
@@ -293,7 +293,7 @@ exports[`CarbonReductionWidget renders the widget when carbonMapData and carbonM
         class="chakra-divider css-1y9z5uc"
       />
       <h1
-        class="chakra-text css-5dcnrg"
+        class="chakra-text css-1e4o6cc"
       >
         Standard
       </h1>
@@ -307,9 +307,13 @@ exports[`CarbonReductionWidget renders the widget when carbonMapData and carbonM
             class="css-1rr4qq7"
           >
             <span
-              class="chakra-text css-1tzjjc2"
+              class="chakra-text css-v36pij"
             >
               50
+            </span>
+            <span
+              class="chakra-text css-0"
+            >
               %
             </span>
           </div>
@@ -326,9 +330,13 @@ exports[`CarbonReductionWidget renders the widget when carbonMapData and carbonM
             class="css-1rr4qq7"
           >
             <span
-              class="chakra-text css-1tv1yfd"
+              class="chakra-text css-1ky7z58"
             >
               50
+            </span>
+            <span
+              class="chakra-text css-0"
+            >
               %
             </span>
           </div>

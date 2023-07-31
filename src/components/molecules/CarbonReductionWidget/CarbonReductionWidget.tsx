@@ -98,25 +98,23 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
             <Flex textAlign={`center`}>
               <Box marginRight={`5px`} flex={1}>
                 <Box>
-                  <ImportantText>{convertToMtCO2(carbonMapDataFiltered.totalReductions, true)}</ImportantText>
-                  <Text as="span" fontSize="sm">
-                    MtCO2
-                  </Text>
+                  <ImportantText as="p">{convertToMtCO2(carbonMapDataFiltered.totalReductions, true)}</ImportantText>
+                  <Text fontSize="sm">MtCO2</Text>
                 </Box>
                 <Text fontWeight="500">{t(`carbonReduction.totalReduction`)}</Text>
               </Box>
               <Box marginLeft={`5px`} flex={1}>
                 <Box>
-                  <ImportantText color="green.700">{convertToMtCO2(carbonMapDataFiltered.estimatedReductions, true)}</ImportantText>
-                  <Text as="span" fontSize="sm">
-                    MtCO2
-                  </Text>
+                  <ImportantText as="p" color="green.700">
+                    {convertToMtCO2(carbonMapDataFiltered.estimatedReductions, true)}
+                  </ImportantText>
+                  <Text fontSize="sm">MtCO2</Text>
                 </Box>
                 <Text fontWeight="500">{t(`carbonReduction.annualReduction`)}</Text>
               </Box>
             </Flex>
             <Divider marginY={`20px`} />
-            <Text as="h1" fontSize="lg" fontWeight="600" textAlign={`center`}>
+            <Text as="h1" fontSize="lg" fontWeight="500" textAlign={`center`}>
               {t(`carbonReduction.sector`)}
             </Text>
             {carbonMapDataFiltered.sectors.length > 0 ? (
@@ -128,7 +126,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
             )}
 
             <Divider marginY={`20px`} />
-            <Text as="h1" fontSize="lg" fontWeight="600" textAlign={`center`}>
+            <Text as="h1" fontSize="lg" fontWeight="500" textAlign={`center`}>
               {t(`carbonReduction.standard`)}
             </Text>
             {carbonMapDataFiltered.standards.length > 0 ? (

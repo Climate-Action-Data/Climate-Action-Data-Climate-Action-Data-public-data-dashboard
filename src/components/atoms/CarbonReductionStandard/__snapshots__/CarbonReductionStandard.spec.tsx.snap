@@ -12,9 +12,13 @@ exports[`renders correctly 1`] = `
         class="css-1rr4qq7"
       >
         <span
-          class="chakra-text css-1tzjjc2"
+          class="chakra-text css-v36pij"
         >
           50
+        </span>
+        <span
+          class="chakra-text css-0"
+        >
           %
         </span>
       </div>
@@ -31,9 +35,13 @@ exports[`renders correctly 1`] = `
         class="css-1rr4qq7"
       >
         <span
-          class="chakra-text css-1tv1yfd"
+          class="chakra-text css-1ky7z58"
         >
           50
+        </span>
+        <span
+          class="chakra-text css-0"
+        >
           %
         </span>
       </div>

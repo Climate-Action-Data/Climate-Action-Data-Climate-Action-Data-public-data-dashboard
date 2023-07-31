@@ -22,6 +22,7 @@ import { Input } from '@/styles/Input'
 import { paginationBar } from './PaginationBar'
 import { searchTable } from './SearchTable'
 import { menuWhite } from './Menu'
+import { statMain } from './Stat'
 
 const theme = extendTheme({
   fontSizes: fontSizes,
@@ -43,6 +44,11 @@ const theme = extendTheme({
         },
       },
     },
+    Divider: {
+      baseStyle: {
+        borderColor: `lightGray.400`,
+      },
+    },
     Button: {
       variants: {
         brandPrimary,
@@ -55,6 +61,11 @@ const theme = extendTheme({
         textLink,
         dropdownUnselected,
         dropdownSelected,
+      },
+    },
+    Stat: {
+      variants: {
+        statMain,
       },
     },
     Link: {

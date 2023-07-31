@@ -9,7 +9,7 @@ exports[`RegionSearch renders the component with a hovered country 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-in3yi3"
+        class="chakra-text css-35ezg3"
       >
         Region
       </p>
@@ -286,7 +286,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
         &lt;
       </button>
       <p
-        class="chakra-text css-392k6y"
+        class="chakra-text css-4175j6"
       >
         Latin America and the Caribbean
       </p>
@@ -896,7 +896,7 @@ exports[`RegionSearch renders the component with a selected country & region and
       class="css-0"
     >
       <p
-        class="chakra-text css-in3yi3"
+        class="chakra-text css-35ezg3"
       >
         Region
       </p>
@@ -1166,7 +1166,7 @@ exports[`RegionSearch renders the component with a selected country & region and
       class="css-0"
     >
       <p
-        class="chakra-text css-in3yi3"
+        class="chakra-text css-35ezg3"
       >
         Region
       </p>
@@ -1436,7 +1436,7 @@ exports[`RegionSearch renders the component with default state 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-in3yi3"
+        class="chakra-text css-35ezg3"
       >
         Region
       </p>
@@ -1706,7 +1706,7 @@ exports[`RegionSearch renders the component with default state undefined 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-in3yi3"
+        class="chakra-text css-35ezg3"
       >
         Region
       </p>

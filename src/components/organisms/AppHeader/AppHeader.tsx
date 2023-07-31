@@ -21,7 +21,7 @@ const AppHeader: FC = () => {
       <Flex backgroundImage={headerBanner.src} aspectRatio={[`1.5`, `2`, `3`, `4`, `5`]} className={styles.backgroundImage}>
         <Box width={[`100vw`, `60vw`]} className={styles.backgroundGradient} />
         <Flex className={styles.headerContents}>
-          <Flex direction={`column`} gap={`20px`} alignSelf={[`top`, null, `center`]} padding={[`50px 20px`, null, `5%`]}>
+          <Flex direction={`column`} gap={`20px`} alignSelf={[`top`, null, `center`]} padding={[`50px 20px`, null, `5%`]} paddingLeft={[`20px`, undefined, `142px`]}>
             <Text fontSize={[`lg`, `xl`, `3xl`]} className={styles.headerTitle}>
               {t(`appHeader.title`)}
             </Text>
