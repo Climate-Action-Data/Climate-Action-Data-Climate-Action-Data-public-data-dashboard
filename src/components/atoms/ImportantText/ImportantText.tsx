@@ -18,7 +18,7 @@ export const ImportantText = (props: ImportantTextProps): React.JSX.Element => {
   }
 
   return (
-    <Text fontFamily={actualProps.isNumeric ? AeonikFono.style.fontFamily : `inherit`} as="span" {...designProps}>
+    <Text fontFamily={actualProps.isNumeric ? AeonikFono.style.fontFamily : `inherit`} as="span" {...actualProps}>
       {props.children}
     </Text>
   )
