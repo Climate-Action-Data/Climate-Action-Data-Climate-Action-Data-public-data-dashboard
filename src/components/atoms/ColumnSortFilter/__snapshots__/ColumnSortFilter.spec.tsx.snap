@@ -3,10 +3,10 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="chakra-stack css-oyw8qb"
+    class="chakra-stack css-1yu3riu"
   >
     <svg
-      class="chakra-icon css-1c8lyk6"
+      class="chakra-icon css-18gm00e"
       data-testid="sortAsc"
       focusable="false"
       viewBox="0 0 8 4"
@@ -17,7 +17,7 @@ exports[`renders correctly 1`] = `
       />
     </svg>
     <svg
-      class="chakra-icon css-1c8lyk6"
+      class="chakra-icon css-18gm00e"
       data-testid="sortDesc"
       focusable="false"
       viewBox="0 0 8 4"
@@ -34,10 +34,10 @@ exports[`renders correctly 1`] = `
 exports[`renders correctly and click asc 1`] = `
 <div>
   <div
-    class="chakra-stack css-oyw8qb"
+    class="chakra-stack css-1yu3riu"
   >
     <svg
-      class="chakra-icon css-1c8lyk6"
+      class="chakra-icon css-18gm00e"
       data-testid="sortAsc"
       focusable="false"
       viewBox="0 0 8 4"
@@ -48,7 +48,7 @@ exports[`renders correctly and click asc 1`] = `
       />
     </svg>
     <svg
-      class="chakra-icon css-1c8lyk6"
+      class="chakra-icon css-18gm00e"
       data-testid="sortDesc"
       focusable="false"
       viewBox="0 0 8 4"
@@ -65,10 +65,10 @@ exports[`renders correctly and click asc 1`] = `
 exports[`renders correctly and click dsc 1`] = `
 <div>
   <div
-    class="chakra-stack css-oyw8qb"
+    class="chakra-stack css-1yu3riu"
   >
     <svg
-      class="chakra-icon css-1c8lyk6"
+      class="chakra-icon css-18gm00e"
       data-testid="sortAsc"
       focusable="false"
       viewBox="0 0 8 4"
@@ -79,7 +79,7 @@ exports[`renders correctly and click dsc 1`] = `
       />
     </svg>
     <svg
-      class="chakra-icon css-1c8lyk6"
+      class="chakra-icon css-18gm00e"
       data-testid="sortDesc"
       focusable="false"
       viewBox="0 0 8 4"

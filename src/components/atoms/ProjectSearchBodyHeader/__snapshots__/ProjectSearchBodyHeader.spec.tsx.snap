@@ -25,10 +25,10 @@ exports[`renders correctly 1`] = `
             >
               Standard
               <div
-                class="chakra-stack css-oyw8qb"
+                class="chakra-stack css-1yu3riu"
               >
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortAsc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -39,7 +39,7 @@ exports[`renders correctly 1`] = `
                   />
                 </svg>
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortDesc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -60,10 +60,10 @@ exports[`renders correctly 1`] = `
             >
               Methodology
               <div
-                class="chakra-stack css-oyw8qb"
+                class="chakra-stack css-1yu3riu"
               >
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortAsc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -74,7 +74,7 @@ exports[`renders correctly 1`] = `
                   />
                 </svg>
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortDesc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -95,10 +95,10 @@ exports[`renders correctly 1`] = `
             >
               Sector
               <div
-                class="chakra-stack css-oyw8qb"
+                class="chakra-stack css-1yu3riu"
               >
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortAsc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -109,7 +109,7 @@ exports[`renders correctly 1`] = `
                   />
                 </svg>
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortDesc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -130,10 +130,10 @@ exports[`renders correctly 1`] = `
             >
               Country
               <div
-                class="chakra-stack css-oyw8qb"
+                class="chakra-stack css-1yu3riu"
               >
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortAsc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -144,7 +144,7 @@ exports[`renders correctly 1`] = `
                   />
                 </svg>
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortDesc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -165,10 +165,10 @@ exports[`renders correctly 1`] = `
             >
               Project Status
               <div
-                class="chakra-stack css-oyw8qb"
+                class="chakra-stack css-1yu3riu"
               >
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortAsc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -179,7 +179,7 @@ exports[`renders correctly 1`] = `
                   />
                 </svg>
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortDesc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -200,10 +200,10 @@ exports[`renders correctly 1`] = `
             >
               Crediting Period
               <div
-                class="chakra-stack css-oyw8qb"
+                class="chakra-stack css-1yu3riu"
               >
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortAsc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -214,7 +214,7 @@ exports[`renders correctly 1`] = `
                   />
                 </svg>
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortDesc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -236,10 +236,10 @@ exports[`renders correctly 1`] = `
             >
               Annual Est. Units
               <div
-                class="chakra-stack css-oyw8qb"
+                class="chakra-stack css-1yu3riu"
               >
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortAsc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -250,7 +250,7 @@ exports[`renders correctly 1`] = `
                   />
                 </svg>
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortDesc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -272,10 +272,10 @@ exports[`renders correctly 1`] = `
             >
               Total Issued Units
               <div
-                class="chakra-stack css-oyw8qb"
+                class="chakra-stack css-1yu3riu"
               >
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortAsc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -286,7 +286,7 @@ exports[`renders correctly 1`] = `
                   />
                 </svg>
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortDesc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -308,10 +308,10 @@ exports[`renders correctly 1`] = `
             >
               Total Retired Units
               <div
-                class="chakra-stack css-oyw8qb"
+                class="chakra-stack css-1yu3riu"
               >
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortAsc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -322,7 +322,7 @@ exports[`renders correctly 1`] = `
                   />
                 </svg>
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortDesc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -344,10 +344,10 @@ exports[`renders correctly 1`] = `
             >
               Total Available Units
               <div
-                class="chakra-stack css-oyw8qb"
+                class="chakra-stack css-1yu3riu"
               >
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortAsc"
                   focusable="false"
                   viewBox="0 0 8 4"
@@ -358,7 +358,7 @@ exports[`renders correctly 1`] = `
                   />
                 </svg>
                 <svg
-                  class="chakra-icon css-1c8lyk6"
+                  class="chakra-icon css-18gm00e"
                   data-testid="sortDesc"
                   focusable="false"
                   viewBox="0 0 8 4"
