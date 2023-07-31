@@ -61,4 +61,6 @@ jobs:
         uses: "./.github/workflows/templates/deploy"
         with:
           service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+          bucket_name: ${{ vars.BUCKET_NAME }}
+
 
