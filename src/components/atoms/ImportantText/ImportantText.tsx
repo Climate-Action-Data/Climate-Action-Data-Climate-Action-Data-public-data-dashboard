@@ -12,7 +12,7 @@ export const ImportantText = (props: ImportantTextProps): React.JSX.Element => {
     fontSize: props?.fontSize ?? `40px`,
     color: props?.color ?? `green.600`,
   }
-  const designProps: Partial<ImportantTextProps> = actualProps
+  const designProps: Partial<ImportantTextProps> = { ...actualProps }
   if (designProps.isNumeric !== undefined) {
     delete designProps.isNumeric
   }
