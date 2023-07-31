@@ -12,6 +12,7 @@ const DEFAULT_PAGES_TO_SHOW = 4
 
 export const GeneratePage = (props: GeneratePageProps) => {
   const { currentPage, totalPages, onPageClick } = props
+
   const renderPageNumbers = () => {
     const pageNumbers: React.JSX.Element[] = []
 
@@ -19,7 +20,7 @@ export const GeneratePage = (props: GeneratePageProps) => {
     if (totalPages <= DEFAULT_PAGES_TO_SHOW) {
       for (let i = 1; i <= totalPages; i++) {
         pageNumbers.push(
-          <Button variant="lightGrayRound32" key={i} fontWeight={currentPage === i ? `bold` : `500`} mx={1} onClick={() => onPageClick(i)}>
+          <Button variant="lightGrayRound32" key={i} color={currentPage === i ? `gray.500` : `inherit`} mx={1} onClick={() => onPageClick(i)}>
             {i}
           </Button>,
         )
@@ -28,7 +29,7 @@ export const GeneratePage = (props: GeneratePageProps) => {
       // Display ellipsis if there are more than 4 pages and current page is not close to the start
       if (currentPage > 2) {
         pageNumbers.push(
-          <Button key={1} variant="lightGrayRound32" mx={1} onClick={() => onPageClick(1)}>
+          <Button key={1} variant="lightGrayRound32" color={`lightGray.500`} mx={1} onClick={() => onPageClick(1)}>
             1
           </Button>,
         )
@@ -45,7 +46,7 @@ export const GeneratePage = (props: GeneratePageProps) => {
       for (let i = currentPage - 1; i <= currentPage + 1; i++) {
         if (i > 0 && i <= totalPages) {
           pageNumbers.push(
-            <Button key={i} fontWeight={currentPage === i ? `bold` : `500`} variant="lightGrayRound32" mx={1} onClick={() => onPageClick(i)}>
+            <Button key={i} color={currentPage === i ? `gray.500` : `inherit`} variant="lightGrayRound32" mx={1} onClick={() => onPageClick(i)}>
               {i}
             </Button>,
           )
@@ -62,7 +63,7 @@ export const GeneratePage = (props: GeneratePageProps) => {
           )
         }
         pageNumbers.push(
-          <Button data-testid="pagination-last-page" key={totalPages} variant="lightGrayRound32" mx={1} onClick={() => onPageClick(totalPages)}>
+          <Button data-testid="pagination-last-page" color={`lightGray.500`} key={totalPages} variant="lightGrayRound32" mx={1} onClick={() => onPageClick(totalPages)}>
             {totalPages}
           </Button>,
         )

@@ -1,4 +1,5 @@
 import { defineStyle } from '@chakra-ui/react'
+import { Aeonik } from './fonts'
 
 export const searchTable = defineStyle({
   '.searchTable': {
@@ -19,14 +20,18 @@ export const searchTable = defineStyle({
           h: `70px`,
           maxH: `70px`,
           fontSize: [`12px`, `14px`],
+          fontWeight: 500,
           lineHeight: `20px`,
+          color: `lightGray.700`,
+          fontFamily: Aeonik.style.fontFamily,
           textTransform: `uppercase`,
           border: 0,
-          div: {
+          '>div': {
             lineHeight: `20px`,
             gap: `4px`,
             display: `flex`,
             alignItems: `end`,
+            whiteSpace: `pre-wrap`,
           },
         },
       },
@@ -34,6 +39,9 @@ export const searchTable = defineStyle({
     '.hoverGreen': {
       backgroundColor: `green.50`,
       cursor: `pointer`,
+    },
+    tr: {
+      border: `none`,
     },
     td: {
       minW: [`184px`, `200px`],
@@ -52,6 +60,11 @@ export const searchTable = defineStyle({
         textOverflow: `ellipsis`,
         overflow: `hidden`,
       },
+      borderColor: `lightGray.400`,
+    },
+
+    'td[data-is-numeric="true"]': {
+      paddingRight: `48px`,
     },
     '#table': {
       th: {

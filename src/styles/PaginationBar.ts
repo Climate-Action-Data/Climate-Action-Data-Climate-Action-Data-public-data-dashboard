@@ -13,4 +13,10 @@ export const paginationBar = defineStyle({
   justifyContent: `center`,
   backgroundColor: `white`,
   padding: [0, `4px`],
+  button: {
+    fontWeight: 500,
+  },
+  div: {
+    color: `lightGray.500`,
+  },
 })

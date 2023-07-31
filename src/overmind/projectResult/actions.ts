@@ -1,7 +1,7 @@
 import { Context } from '@/overmind'
-import { Project } from '@/@types/Project'
+import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
 import { EffectResponse } from '@/@types/EffectResponse'
 
-export const setProjectResults = (context: Context, projects: EffectResponse<Project[]>) => {
+export const setProjectResults = (context: Context, projects: EffectResponse<ProjectSearchResult[]>) => {
   context.state.projectResult.projectResults = projects
 }
