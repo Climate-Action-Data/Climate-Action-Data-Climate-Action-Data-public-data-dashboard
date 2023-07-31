@@ -9,3 +9,23 @@ exports[`renders correctly 1`] = `
   </span>
 </div>
 `;
+
+exports[`renders correctly as numbers 1`] = `
+<div>
+  <span
+    class="chakra-text css-1y4ssgr"
+  >
+    100
+  </span>
+</div>
+`;
+
+exports[`renders correctly as p 1`] = `
+<div>
+  <p
+    class="chakra-text css-1s7w14k"
+  >
+    My Text
+  </p>
+</div>
+`;
