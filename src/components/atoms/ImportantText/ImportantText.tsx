@@ -12,9 +12,13 @@ export const ImportantText = (props: ImportantTextProps): React.JSX.Element => {
     fontSize: props?.fontSize ?? `40px`,
     color: props?.color ?? `green.600`,
   }
+  const designProps: Partial<ImportantTextProps> = actualProps
+  if (designProps.isNumeric !== undefined) {
+    delete designProps.isNumeric
+  }
 
   return (
-    <Text fontFamily={actualProps.isNumeric ? AeonikFono.style.fontFamily : `inherit`} as="span" {...actualProps}>
+    <Text fontFamily={actualProps.isNumeric ? AeonikFono.style.fontFamily : `inherit`} as="span" {...designProps}>
       {props.children}
     </Text>
   )
