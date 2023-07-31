@@ -1,112 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AutoComplete should render the default item renderer 1`] = `
-<div>
-  <div
-    class="chakra-stack css-8g8ihq"
-  >
-    <div
-      aria-controls="popover-content-:rb:"
-      aria-expanded="true"
-      aria-haspopup="dialog"
-      class="chakra-stack css-8g8ihq"
-      id="popover-trigger-:rb:"
-    >
-      <div
-        class="chakra-input__group css-bx0blc"
-        data-group="true"
-      >
-        <input
-          class="chakra-input css-1luyivc"
-          data-testid="dropdown_input"
-          placeholder="Search"
-        />
-        <div
-          class="chakra-input__right-element css-2cnd2z"
-        >
-          <button
-            aria-label="toggle menu"
-            class="chakra-button css-smvcgw"
-            data-testid="dropdown-button"
-            type="button"
-          >
-            <svg
-              class="chakra-icon css-c0air1"
-              focusable="false"
-              viewBox="0 0 8 4"
-            >
-              <path
-                d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div
-      class="chakra-popover__popper css-0"
-      data-popper-escaped=""
-      data-popper-placement="bottom"
-      data-popper-reference-hidden=""
-      style="visibility: visible; position: absolute; inset: 0 auto auto 0; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px); width: 0px; --popper-transform-origin: top center;"
-    >
-      <section
-        aria-describedby="popover-body-:rb:"
-        class="chakra-popover__content css-1d7l81o"
-        data-testid="dropdown-body"
-        id="popover-content-:rb:"
-        role="dialog"
-        style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-        tabindex="-1"
-      >
-        <div
-          class="chakra-popover__body css-0"
-          id="popover-body-:rb:"
-        >
-          <ul
-            class="css-155za0w"
-            role="list"
-          >
-            <li
-              class="css-1lkne8t"
-              data-testid="dropdown-item-0"
-            >
-              <div
-                class="css-18biwo"
-              >
-                Apple
-              </div>
-            </li>
-            <li
-              class="css-1lkne8t"
-              data-testid="dropdown-item-1"
-            >
-              <div
-                class="css-18biwo"
-              >
-                Banana
-              </div>
-            </li>
-            <li
-              class="css-1lkne8t"
-              data-testid="dropdown-item-2"
-            >
-              <div
-                class="css-18biwo"
-              >
-                Orange
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`AutoComplete should toggle isOpen when input is clicked 1`] = `
+exports[`AutoComplete Body do handle mouseEnter and mouseLeave 1`] = `
 <div>
   <div
     class="chakra-stack css-8g8ihq"
@@ -209,7 +103,7 @@ exports[`AutoComplete should toggle isOpen when input is clicked 1`] = `
 </div>
 `;
 
-exports[`AutoComplete should toggle isOpen when input is clicked 2`] = `
+exports[`AutoComplete Should toggle isOpen when input is clicked twice 1`] = `
 <div>
   <div
     class="chakra-stack css-8g8ihq"
@@ -272,6 +166,112 @@ exports[`AutoComplete should toggle isOpen when input is clicked 2`] = `
         <div
           class="chakra-popover__body css-0"
           id="popover-body-:r9:"
+        >
+          <ul
+            class="css-155za0w"
+            role="list"
+          >
+            <li
+              class="css-1lkne8t"
+              data-testid="dropdown-item-0"
+            >
+              <div
+                class="css-18biwo"
+              >
+                Apple
+              </div>
+            </li>
+            <li
+              class="css-1lkne8t"
+              data-testid="dropdown-item-1"
+            >
+              <div
+                class="css-18biwo"
+              >
+                Banana
+              </div>
+            </li>
+            <li
+              class="css-1lkne8t"
+              data-testid="dropdown-item-2"
+            >
+              <div
+                class="css-18biwo"
+              >
+                Orange
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AutoComplete should render the default item renderer 1`] = `
+<div>
+  <div
+    class="chakra-stack css-8g8ihq"
+  >
+    <div
+      aria-controls="popover-content-:rb:"
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      class="chakra-stack css-8g8ihq"
+      id="popover-trigger-:rb:"
+    >
+      <div
+        class="chakra-input__group css-bx0blc"
+        data-group="true"
+      >
+        <input
+          class="chakra-input css-1luyivc"
+          data-testid="dropdown_input"
+          placeholder="Search"
+        />
+        <div
+          class="chakra-input__right-element css-2cnd2z"
+        >
+          <button
+            aria-label="toggle menu"
+            class="chakra-button css-smvcgw"
+            data-testid="dropdown-button"
+            type="button"
+          >
+            <svg
+              class="chakra-icon css-c0air1"
+              focusable="false"
+              viewBox="0 0 8 4"
+            >
+              <path
+                d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="chakra-popover__popper css-0"
+      data-popper-escaped=""
+      data-popper-placement="bottom"
+      data-popper-reference-hidden=""
+      style="visibility: visible; position: absolute; inset: 0 auto auto 0; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px); width: 0px; --popper-transform-origin: top center;"
+    >
+      <section
+        aria-describedby="popover-body-:rb:"
+        class="chakra-popover__content css-1d7l81o"
+        data-testid="dropdown-body"
+        id="popover-content-:rb:"
+        role="dialog"
+        style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+        tabindex="-1"
+      >
+        <div
+          class="chakra-popover__body css-0"
+          id="popover-body-:rb:"
         >
           <ul
             class="css-155za0w"
