@@ -30,7 +30,7 @@ export const ProjectSearchHead = (props: ProjectSearchHeadProps) => {
             <Tr>
               <Th>
                 <Box>
-                  Project
+                  {t(`table.projectDetails`)}
                   <ColumnSortFilter />
                 </Box>
               </Th>

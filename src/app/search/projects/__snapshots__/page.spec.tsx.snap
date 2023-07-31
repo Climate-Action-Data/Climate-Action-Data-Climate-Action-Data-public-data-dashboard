@@ -28,7 +28,7 @@ exports[`renders correctly 1`] = `
                 <div
                   class="css-0"
                 >
-                  Project
+                  Project Details
                   <div
                     class="chakra-stack css-1yu3riu"
                   >
@@ -702,7 +702,7 @@ exports[`renders correctly and click next page 1`] = `
                 <div
                   class="css-0"
                 >
-                  Project
+                  Project Details
                   <div
                     class="chakra-stack css-1yu3riu"
                   >
@@ -5707,7 +5707,7 @@ exports[`renders correctly on table data 1`] = `
                 <div
                   class="css-0"
                 >
-                  Project
+                  Project Details
                   <div
                     class="chakra-stack css-1yu3riu"
                   >
@@ -10706,7 +10706,7 @@ exports[`renders correctly on table data and next page 1`] = `
                 <div
                   class="css-0"
                 >
-                  Project
+                  Project Details
                   <div
                     class="chakra-stack css-1yu3riu"
                   >
@@ -15703,7 +15703,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                 <div
                   class="css-0"
                 >
-                  Project
+                  Project Details
                   <div
                     class="chakra-stack css-1yu3riu"
                   >
