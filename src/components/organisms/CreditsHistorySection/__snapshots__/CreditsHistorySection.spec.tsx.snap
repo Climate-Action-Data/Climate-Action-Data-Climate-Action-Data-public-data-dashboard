@@ -1094,19 +1094,19 @@ exports[`CreditsHistorySection renders the widget when rawCreditsHistory and cre
                 class="chakra-stack css-c3wesr"
               >
                 <div
-                  class="chakra-stat css-13qepjb"
+                  class="chakra-stat css-1882jtg"
                 >
                   <dl>
                     <dd
-                      class="chakra-stat__number css-fvxuh5"
+                      class="chakra-stat__number css-u3vx1n"
                     >
                       <p
-                        class="chakra-text css-1330wir"
+                        class="chakra-text css-0"
                       >
                         141
                       </p>
                       <p
-                        class="chakra-text css-19u5taq"
+                        class="chakra-text css-0"
                       >
                         MM
                       </p>
@@ -1122,19 +1122,19 @@ exports[`CreditsHistorySection renders the widget when rawCreditsHistory and cre
                   class="chakra-stack__divider css-2if2sn"
                 />
                 <div
-                  class="chakra-stat css-13qepjb"
+                  class="chakra-stat css-1882jtg"
                 >
                   <dl>
                     <dd
-                      class="chakra-stat__number css-fvxuh5"
+                      class="chakra-stat__number css-1e672z"
                     >
                       <p
-                        class="chakra-text css-3px91y"
+                        class="chakra-text css-0"
                       >
                         51.8
                       </p>
                       <p
-                        class="chakra-text css-19u5taq"
+                        class="chakra-text css-0"
                       >
                         MM
                       </p>
