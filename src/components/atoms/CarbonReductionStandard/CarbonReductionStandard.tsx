@@ -14,7 +14,10 @@ export const CarbonReductionStandard = (props: CarbonReductionStandardProps): Re
       {data.map((standard, idx) => (
         <VStack key={`${standard.name}`} textAlign={`center`} marginX={`5px`} flex={1}>
           <Box flex={1}>
-            <ImportantText color={colorChart[idx] ? colorChart[idx] : colorChart[colorChart.length - 1]}>{standard.average}%</ImportantText>
+            <ImportantText isNumeric color={colorChart[idx] ? colorChart[idx] : colorChart[colorChart.length - 1]}>
+              {standard.average}
+            </ImportantText>
+            <Text as={`span`}>%</Text>
           </Box>
           <Text>{standard.name}</Text>
         </VStack>

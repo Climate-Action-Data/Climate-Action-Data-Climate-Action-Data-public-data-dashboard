@@ -2,6 +2,7 @@ import { CreditsHistoryChartData } from '@/@types/State'
 import { ResponsiveLine } from '@nivo/line'
 import { ScaleSpec } from '@nivo/scales'
 import { AxisProps } from '@nivo/axes'
+import { Aeonik } from '@/styles/fonts'
 
 const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
   const format = new Intl.DateTimeFormat(`en-SG`, { month: `short`, year: `2-digit` }).format
@@ -59,6 +60,9 @@ const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
       useMesh={true}
       legends={[]}
       animate={false}
+      theme={{
+        fontFamily: Aeonik.style.fontFamily,
+      }}
     />
   )
 }

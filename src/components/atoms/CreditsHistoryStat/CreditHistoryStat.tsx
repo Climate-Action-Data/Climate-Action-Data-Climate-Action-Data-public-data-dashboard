@@ -14,14 +14,10 @@ const CreditsHistoryStat: FC<CreditHistoryStateProps> = (props: CreditHistorySta
   const [compactAmount, suffix] = toCompactValueAndSuffix(amount ?? 0)
 
   return (
-    <Stat textAlign={`center`} fontFamily={`heading`}>
-      <StatNumber>
-        <Text variant={`statValue`} color={textColor} fontSize={[`40px`, null, `64px`]}>
-          {compactAmount}
-        </Text>
-        <Text variant={`statSuffix`} fontSize={[`16px`, null, `24px`]}>
-          {suffix}
-        </Text>
+    <Stat variant="statMain" textAlign={`center`}>
+      <StatNumber color={textColor}>
+        <Text>{compactAmount}</Text>
+        <Text>{suffix}</Text>
       </StatNumber>
       <StatLabel>{label}</StatLabel>
     </Stat>
