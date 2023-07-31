@@ -52,4 +52,29 @@ describe(`AutoComplete`, () => {
 
     expect(onDropDownLeave).toHaveBeenCalled()
   })
+
+  test(`Body do handle mouseEnter and mouseLeave`, () => {
+    const { container } = render(<AutoComplete items={items} placeholder="Search" onItemClick={() => undefined} />)
+    const inputElement = screen.getByTestId(`dropdown-body`)
+    fireEvent.mouseEnter(inputElement) // Open dropdown
+    fireEvent.mouseLeave(inputElement) // Open dropdown
+    expect(container).toMatchSnapshot()
+  })
+
+  test(`Should toggle isOpen when input is clicked twice`, () => {
+    const { container } = render(<AutoComplete items={items} placeholder="Search" onItemClick={() => undefined} />)
+    const inputElement = screen.getByTestId(`dropdown_input`)
+    fireEvent.click(inputElement)
+    fireEvent.click(inputElement)
+    expect(container).toMatchSnapshot()
+  })
+
+  test(`should render the default item renderer`, () => {
+    const { container } = render(<AutoComplete items={items} placeholder="Search" onItemClick={() => undefined} />)
+    const inputElement = screen.getByPlaceholderText(`Search`)
+    fireEvent.click(inputElement)
+    const inputElement2 = screen.getByText(items[0].label)
+    fireEvent.mouseEnter(inputElement2)
+    expect(container).toMatchSnapshot()
+  })
 })
