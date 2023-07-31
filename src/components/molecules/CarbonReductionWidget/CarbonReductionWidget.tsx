@@ -79,7 +79,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
     if (carbonMapDataFiltered === undefined) {
       return (
         <Flex width={{ md: `328px` }} alignItems="center">
-          <Text color={`lightGray.600`}>Selected data is currently unavailable within the carbon registries.</Text>
+          <Text color={`lightGray.600`}>{t(`selectedDataNotAvailable`)}</Text>
         </Flex>
       )
     } else {
@@ -99,7 +99,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
               <Box marginRight={`5px`} flex={1}>
                 <Box>
                   <ImportantText as="p">{convertToMtCO2(carbonMapDataFiltered.totalReductions, true)}</ImportantText>
-                  <Text fontSize="sm">MtCO2</Text>
+                  <Text fontSize="sm">{t(`carbonReduction.MtCO2`)}</Text>
                 </Box>
                 <Text fontWeight="500">{t(`carbonReduction.totalReduction`)}</Text>
               </Box>
@@ -108,7 +108,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
                   <ImportantText as="p" color="green.700">
                     {convertToMtCO2(carbonMapDataFiltered.estimatedReductions, true)}
                   </ImportantText>
-                  <Text fontSize="sm">MtCO2</Text>
+                  <Text fontSize="sm">{t(`carbonReduction.MtCO2`)}</Text>
                 </Box>
                 <Text fontWeight="500">{t(`carbonReduction.annualReduction`)}</Text>
               </Box>
@@ -121,7 +121,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
               <CarbonReductionSector colorChart={colorChart} data={top4Percentage} />
             ) : (
               <Text textAlign="center" color={`lightGray.600`}>
-                Selected data is currently unavailable within the carbon registries.
+                {t(`selectedDataNotAvailable`)}
               </Text>
             )}
 
@@ -133,7 +133,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
               <CarbonReductionStandard data={carbonMapDataFiltered.standards} />
             ) : (
               <Text textAlign="center" color={`lightGray.600`}>
-                Selected data is currently unavailable within the carbon registries.
+                {t(`selectedDataNotAvailable`)}
               </Text>
             )}
           </Stack>
