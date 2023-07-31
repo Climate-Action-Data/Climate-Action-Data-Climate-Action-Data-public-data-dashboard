@@ -2,12 +2,16 @@
 import { Flex, Box, Button } from '@chakra-ui/react'
 import { useState } from 'react'
 import { GeneratePage } from '../GeneratePage/GeneratePage'
+import { ChevronLeftIcon } from '../ChevronLeftIcon/ChevronLeftIcon'
+import { ChevronRightIcon } from '../ChevronRightIcon/ChevronRightIcon'
 
 interface PaginationWidgetProps {
   totalResults: number
   resultPerPage: number
   onPageChange?: (currentPage: number, from: number) => void
 }
+
+const DEFAULT_FIRST_PAGE = 1
 
 export const PaginationWidget = (props: PaginationWidgetProps) => {
   const { totalResults, resultPerPage, onPageChange } = props
@@ -31,12 +35,24 @@ export const PaginationWidget = (props: PaginationWidgetProps) => {
         {startResult} - {endResult} of {totalResults}
       </Box>
       <Flex width="240px" alignItems="center" textAlign="center">
-        <Button data-testid="pagination-page-down" variant="lightGrayRound32" flex={1} onClick={() => changePage(currentPage > 1 ? currentPage - 1 : 1)}>
-          &lt;
+        <Button
+          data-testid="pagination-page-down"
+          color={currentPage === DEFAULT_FIRST_PAGE ? `lightGray.500` : `gray.500`}
+          variant="lightGrayRound32"
+          flex={1}
+          onClick={() => changePage(currentPage > 1 ? currentPage - 1 : 1)}
+        >
+          <ChevronLeftIcon />
         </Button>
         <GeneratePage data-testid="pagination-test" currentPage={currentPage} totalPages={totalPages} onPageClick={(page: number) => changePage(page)} />
-        <Button data-testid="pagination-page-up" variant="lightGrayRound32" flex={1} onClick={() => changePage(currentPage < totalPages ? currentPage + 1 : totalPages)}>
-          &gt;
+        <Button
+          data-testid="pagination-page-up"
+          color={currentPage === totalPages ? `lightGray.500` : `gray.500`}
+          variant="lightGrayRound32"
+          flex={1}
+          onClick={() => changePage(currentPage < totalPages ? currentPage + 1 : totalPages)}
+        >
+          <ChevronRightIcon />
         </Button>
       </Flex>
     </Flex>

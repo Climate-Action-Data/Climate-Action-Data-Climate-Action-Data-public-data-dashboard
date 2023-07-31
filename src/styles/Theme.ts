@@ -168,6 +168,10 @@ const theme = extendTheme({
           backgroundColor: `transparent`,
         },
       },
+      ':focus-visible, [data-focus-visible]': {
+        borderColor: `green.700 !important`,
+        boxShadow: `0 0 0 1px var(--chakra-colors-green-800) !important`,
+      },
       ...searchTable,
     }),
   },

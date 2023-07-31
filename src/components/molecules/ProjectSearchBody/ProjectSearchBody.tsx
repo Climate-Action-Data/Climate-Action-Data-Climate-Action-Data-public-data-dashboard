@@ -2,7 +2,7 @@ import { Flex, TableContainer, Table, Tr, Tbody, Td, Text } from '@chakra-ui/rea
 import { useAppState } from '@/overmind'
 
 import { changeHoverColor } from '@/utils/Stickify'
-import { ALLOWED_RENDER_TYPE } from '@/@types/Project'
+import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
 import { ProjectSearchBodyHeader } from '@/components/atoms/ProjectSearchBodyHeader/ProjectSearchBodyHeader'
 import { ProjectSearchBodySkeleton } from '@/components/atoms/ProjectSearchBodySkeleton/ProjectSearchBodySkeleton'
 interface TableDataProps {
@@ -40,34 +40,34 @@ export const ProjectSearchBody = (props: ProjectSearchBodyProps) => {
             {projectResults?.data ? (
               projectResults.data.map((project, idx) => (
                 <Tr onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)} className="project-row-${idx}" key={`project-body-row-${project.id}`} height="92px">
-                  <Td>
+                  <Td title={project.standard}>
                     <TableData data={project.standard} />
                   </Td>
-                  <Td>
+                  <Td title={project.methodology}>
                     <TableData data={project.methodology} />
                   </Td>
-                  <Td>
+                  <Td title={project.sector}>
                     <TableData data={project.sector} />
                   </Td>
-                  <Td>
+                  <Td title={project.country}>
                     <TableData data={project.country} />
                   </Td>
-                  <Td>
+                  <Td title={project.status}>
                     <TableData data={project.status} />
                   </Td>
-                  <Td minW="250px !important">
+                  <Td minW="250px !important" title={project.creditingPeriod}>
                     <TableData data={project.creditingPeriod} />
                   </Td>
-                  <Td isNumeric>
+                  <Td isNumeric title={project.annualEst?.toString()}>
                     <TableData data={project.annualEst} />
                   </Td>
-                  <Td isNumeric>
+                  <Td isNumeric title={project.annualIssued?.toString()}>
                     <TableData data={project.annualIssued} />
                   </Td>
-                  <Td isNumeric>
+                  <Td isNumeric title={project.annualRetired?.toString()}>
                     <TableData data={project.annualRetired} />
                   </Td>
-                  <Td isNumeric>
+                  <Td isNumeric title={project.annualAvailable?.toString()}>
                     <TableData data={project.annualAvailable} />
                   </Td>
                 </Tr>

@@ -1,14 +1,13 @@
 import { useAppState } from '@/overmind'
 import { useTranslation } from 'react-i18next'
-import { Stack, Skeleton, Flex, TableContainer, Table, Thead, Tr, Th, Tbody, Td, Text, Button, Box, Menu, MenuButton, MenuItem, MenuList, VStack } from '@chakra-ui/react'
+import { Stack, Skeleton, Flex, TableContainer, Table, Thead, Tr, Th, Tbody, Td, Text, Button, Box, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
 
-import { ALLOWED_RENDER_TYPE } from '@/@types/Project'
+import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
 import { BookmarkPlusIcon } from '@/components/atoms/BookmarkPlusIcon/BookmarkPlusIcon'
 import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 import { KebabMenuIcon } from '@/components/atoms/KebabMenuIcon/KebabMenuIcon'
-import { SortDownIcon } from '@/components/atoms/SortDownIcon/SortDownIcon'
-import { SortUpIcon } from '@/components/atoms/SortUpIcon/SortUpIcon'
 import { changeHoverColor } from '@/utils/Stickify'
+import { ColumnSortFilter } from '@/components/atoms/ColumnSortFilter/ColumnSortFilter'
 
 interface ProjectSearchHeadProps {
   renderType?: string
@@ -29,12 +28,11 @@ export const ProjectSearchHead = (props: ProjectSearchHeadProps) => {
         <Table variant="simple" className="searchTable">
           <Thead zIndex={3} minW="552px" id="projectTable">
             <Tr>
-              <Th lineHeight="20px" display="flex" alignItems="end" gap="8px">
-                Project
-                <VStack justifyContent="center" gap="2px" height="20px">
-                  <SortUpIcon _hover={{ cursor: `pointer` }} />
-                  <SortDownIcon _hover={{ cursor: `pointer` }} />
-                </VStack>
+              <Th>
+                <Box>
+                  Project
+                  <ColumnSortFilter />
+                </Box>
               </Th>
             </Tr>
           </Thead>
@@ -48,11 +46,11 @@ export const ProjectSearchHead = (props: ProjectSearchHeadProps) => {
                 <Tr onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)} className="project-row-${idx}" key={`project-row-${projectResults.id}`} height="92px">
                   <Td>
                     <Flex alignItems="center">
-                      <Box overflow="hidden" flex={1}>
+                      <Box title={projectResults.name} overflow="hidden" flex={1}>
                         <Text fontWeight={500}>{projectResults.name}</Text>
                         <Text fontSize="sm">{projectResults.id}</Text>
                         <Text textOverflow="ellipsis" color="lightGray.700" fontSize="sm">
-                          {projectResults.company}
+                          {projectResults.projectDeveloper}
                         </Text>
                       </Box>
                       <Menu variant="menuWhite">

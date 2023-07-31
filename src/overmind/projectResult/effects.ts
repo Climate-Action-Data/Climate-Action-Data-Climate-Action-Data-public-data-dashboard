@@ -1,18 +1,18 @@
 import { DateFormats } from '@/@types/DateFormats'
 import { EffectResponse } from '@/@types/EffectResponse'
-import { Project } from '@/@types/Project'
+import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
 import { projectData } from '@/test/mock-data/projects_data'
 import { formatDate } from '@/utils/DateFormat'
 
 const SLEEP = 50
 
-export const getProjectResults = async (from: number, take: number): Promise<EffectResponse<Project[]>> => {
+export const getProjectResults = async (from: number, take: number): Promise<EffectResponse<ProjectSearchResult[]>> => {
   await new Promise((f) => setTimeout(f, SLEEP))
   return new Promise((resolve) => {
     const mappedData = projectData.map((project) => ({
       name: project.projectName,
       id: project.projectId,
-      company: project.projectDeveloper,
+      projectDeveloper: project.projectDeveloper,
       standard: project.currentRegistry,
       methodology: project.methodology,
       sector: project.sector,
@@ -27,7 +27,7 @@ export const getProjectResults = async (from: number, take: number): Promise<Eff
       annualRetired: project.annualRetired ?? undefined,
       annualAvailable: project.annualIssued && project.annualRetired ? project.annualIssued - project.annualRetired : undefined,
     }))
-    const result: EffectResponse<Project[]> = {
+    const result: EffectResponse<ProjectSearchResult[]> = {
       data: mappedData.slice(from - 1, from - 1 + take),
     }
     resolve(result)

@@ -8,7 +8,7 @@ import { ProjectSearchBody } from '@/components/molecules/ProjectSearchBody/Proj
 import { PaginationWidget } from '@/components/atoms/PaginationWidget/PaginationWidget'
 import { useActions, useEffects } from '@/overmind'
 import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
-import { ALLOWED_RENDER_TYPE } from '@/@types/Project'
+import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
 
 const DEFAULT_PROJECT_TO_DISPLAY = 15
 
@@ -85,7 +85,7 @@ const ProjectPage: NextPage = () => {
         <PaginationWidget onPageChange={(currentPage, from) => getNewResults(from)} resultPerPage={DEFAULT_PROJECT_TO_DISPLAY} totalResults={89} />
         <Box position={[`unset`, `absolute`]} right="10px" float="right">
           <Button variant="hoverOnly" display="flex" gap="4px" fontWeight="500px">
-            <Hide>Export</Hide>
+            <Hide below="md">Export</Hide>
             <DownloadIcon />
           </Button>
         </Box>

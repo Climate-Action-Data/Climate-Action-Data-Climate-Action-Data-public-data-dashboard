@@ -1,7 +1,7 @@
-export interface Project {
+export interface ProjectSearchResult {
   name: string
   id: string
-  company: string
+  projectDeveloper: string
   standard: string
   methodology: string
   sector: string
