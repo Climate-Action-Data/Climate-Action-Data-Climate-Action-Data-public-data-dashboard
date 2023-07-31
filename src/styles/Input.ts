@@ -17,5 +17,15 @@ export const Input = helpers.defineMultiStyleConfig({
         _selected: { border: `none` },
       },
     },
+    soloDropdown: {
+      field: {
+        border: `1px solid`,
+        borderColor: `lightGray.200`,
+        color: `lightGray.700`,
+      },
+      element: {
+        fill: `lightGray.700`,
+      },
+    },
   },
 })
