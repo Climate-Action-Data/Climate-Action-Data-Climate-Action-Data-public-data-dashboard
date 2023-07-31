@@ -184,7 +184,7 @@ export const PROJECT_SEARCH_RESULT: ProjectResultState = {
       .map((project) => ({
         name: project.projectName,
         id: project.projectId,
-        company: project.projectDeveloper,
+        projectDeveloper: project.projectDeveloper,
         standard: project.currentRegistry,
         methodology: project.methodology,
         sector: project.sector,
