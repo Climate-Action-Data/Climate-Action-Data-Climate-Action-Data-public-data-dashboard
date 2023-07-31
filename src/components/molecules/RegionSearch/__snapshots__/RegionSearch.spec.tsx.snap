@@ -35,14 +35,14 @@ exports[`RegionSearch renders the component with a hovered country 1`] = `
           <input
             class="chakra-input css-1luyivc"
             data-testid="dropdown_input"
-            placeholder="Select region"
+            placeholder="Choose a region"
           />
           <div
             class="chakra-input__right-element css-2cnd2z"
           >
             <button
               aria-label="toggle menu"
-              class="chakra-button css-smvcgw"
+              class="chakra-button css-xsdlqf"
               data-testid="dropdown-button"
               type="button"
             >
@@ -66,7 +66,7 @@ exports[`RegionSearch renders the component with a hovered country 1`] = `
       >
         <section
           aria-describedby="popover-body-:r5:"
-          class="chakra-popover__content css-1d7l81o"
+          class="chakra-popover__content css-18u085x"
           data-testid="dropdown-body"
           id="popover-content-:r5:"
           role="dialog"
@@ -319,7 +319,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
           >
             <button
               aria-label="toggle menu"
-              class="chakra-button css-smvcgw"
+              class="chakra-button css-xsdlqf"
               data-testid="dropdown-button"
               type="button"
             >
@@ -343,7 +343,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
       >
         <section
           aria-describedby="popover-body-:r7:"
-          class="chakra-popover__content css-1d7l81o"
+          class="chakra-popover__content css-18u085x"
           data-testid="dropdown-body"
           id="popover-content-:r7:"
           role="dialog"
@@ -922,14 +922,14 @@ exports[`RegionSearch renders the component with a selected country & region and
           <input
             class="chakra-input css-1luyivc"
             data-testid="dropdown_input"
-            placeholder="Select region"
+            placeholder="Choose a region"
           />
           <div
             class="chakra-input__right-element css-2cnd2z"
           >
             <button
               aria-label="toggle menu"
-              class="chakra-button css-smvcgw"
+              class="chakra-button css-xsdlqf"
               data-testid="dropdown-button"
               type="button"
             >
@@ -953,7 +953,7 @@ exports[`RegionSearch renders the component with a selected country & region and
       >
         <section
           aria-describedby="popover-body-:r9:"
-          class="chakra-popover__content css-1d7l81o"
+          class="chakra-popover__content css-18u085x"
           data-testid="dropdown-body"
           id="popover-content-:r9:"
           role="dialog"
@@ -1192,14 +1192,14 @@ exports[`RegionSearch renders the component with a selected country & region and
           <input
             class="chakra-input css-1luyivc"
             data-testid="dropdown_input"
-            placeholder="Select region"
+            placeholder="Choose a region"
           />
           <div
             class="chakra-input__right-element css-2cnd2z"
           >
             <button
               aria-label="toggle menu"
-              class="chakra-button css-smvcgw"
+              class="chakra-button css-xsdlqf"
               data-testid="dropdown-button"
               type="button"
             >
@@ -1223,7 +1223,7 @@ exports[`RegionSearch renders the component with a selected country & region and
       >
         <section
           aria-describedby="popover-body-:rb:"
-          class="chakra-popover__content css-1d7l81o"
+          class="chakra-popover__content css-18u085x"
           data-testid="dropdown-body"
           id="popover-content-:rb:"
           role="dialog"
@@ -1462,14 +1462,14 @@ exports[`RegionSearch renders the component with default state 1`] = `
           <input
             class="chakra-input css-1luyivc"
             data-testid="dropdown_input"
-            placeholder="Select region"
+            placeholder="Choose a region"
           />
           <div
             class="chakra-input__right-element css-2cnd2z"
           >
             <button
               aria-label="toggle menu"
-              class="chakra-button css-smvcgw"
+              class="chakra-button css-xsdlqf"
               data-testid="dropdown-button"
               type="button"
             >
@@ -1493,7 +1493,7 @@ exports[`RegionSearch renders the component with default state 1`] = `
       >
         <section
           aria-describedby="popover-body-:r3:"
-          class="chakra-popover__content css-1d7l81o"
+          class="chakra-popover__content css-18u085x"
           data-testid="dropdown-body"
           id="popover-content-:r3:"
           role="dialog"
@@ -1732,14 +1732,14 @@ exports[`RegionSearch renders the component with default state undefined 1`] = `
           <input
             class="chakra-input css-1luyivc"
             data-testid="dropdown_input"
-            placeholder="Select region"
+            placeholder="Choose a region"
           />
           <div
             class="chakra-input__right-element css-2cnd2z"
           >
             <button
               aria-label="toggle menu"
-              class="chakra-button css-smvcgw"
+              class="chakra-button css-xsdlqf"
               data-testid="dropdown-button"
               type="button"
             >
@@ -1763,7 +1763,7 @@ exports[`RegionSearch renders the component with default state undefined 1`] = `
       >
         <section
           aria-describedby="popover-body-:r1:"
-          class="chakra-popover__content css-1d7l81o"
+          class="chakra-popover__content css-18u085x"
           data-testid="dropdown-body"
           id="popover-content-:r1:"
           role="dialog"
