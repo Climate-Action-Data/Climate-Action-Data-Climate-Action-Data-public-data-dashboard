@@ -26,7 +26,9 @@ export const Menu = (): React.JSX.Element => {
                     </Button> */}
           <Image marginX={`8px`} alt={t(`logo`)} height={`32px`} src={Logo.src} />
         </Flex>
-        <Box>Public Data Dashboard</Box>
+        <Box flex={1} textAlign="center">
+          Public Data Dashboard
+        </Box>
         <Flex alignItems={`center`}>
           {/* <Button alignSelf={`start`} colorScheme="gray" backgroundColor={`gray.500`} width={`56px`} height={`56px`}>
                         <BellIcon color={`white`} />

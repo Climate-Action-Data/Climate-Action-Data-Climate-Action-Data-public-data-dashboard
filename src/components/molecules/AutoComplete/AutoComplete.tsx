@@ -64,17 +64,17 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
         <PopoverTrigger>
           <Stack>
             <InputGroup size="md">
-              <Input data-testid="dropdown_input" onClick={toggleIsOpen} pr="2.5rem" placeholder={placeholder} ref={inputElement} onChange={(e) => setInputValue(e.target.value)}/>
+              <Input variant="soloDropdown" data-testid="dropdown_input" onClick={toggleIsOpen} pr="2.5rem" placeholder={placeholder} ref={inputElement} onChange={(e) => setInputValue(e.target.value)}/>
               <InputRightElement width="2.5rem">
-                <Button data-testid="dropdown-button" onClick={toggleIsOpen} variant="lightGray" aria-label="toggle menu" h="1.75rem" size="sm">
+                <Button data-testid="dropdown-button" color="lightGray.700" onClick={toggleIsOpen} variant="lightGray" aria-label="toggle menu" h="1.75rem" size="sm">
                   <DropDownIcon />
                 </Button>
               </InputRightElement>
             </InputGroup>
           </Stack>
         </PopoverTrigger>
-        <PopoverContent data-testid="dropdown-body" onMouseLeave={() => {setIsOpen(false); return (onDropDownLeave) ? onDropDownLeave(): undefined}} maxHeight={`150px`} overflowY="scroll">
-          <PopoverBody>
+        <PopoverContent border="1px solid" borderColor="lightGray.200" data-testid="dropdown-body" onMouseLeave={() => {setIsOpen(false); return (onDropDownLeave) ? onDropDownLeave(): undefined}} maxHeight={`150px`} overflowY="scroll">
+          <PopoverBody >
             <List>
               {inputItems.map((item, index) => (
                 item.value.toUpperCase().includes(inputValue.toUpperCase()) &&

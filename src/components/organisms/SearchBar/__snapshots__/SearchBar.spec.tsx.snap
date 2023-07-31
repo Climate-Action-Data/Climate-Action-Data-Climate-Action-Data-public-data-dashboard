@@ -54,14 +54,14 @@ exports[`renders correctly with loaded data 1`] = `
                     <input
                       class="chakra-input css-1luyivc"
                       data-testid="dropdown_input"
-                      placeholder="Choose a region"
+                      placeholder="Select region"
                     />
                     <div
                       class="chakra-input__right-element css-2cnd2z"
                     >
                       <button
                         aria-label="toggle menu"
-                        class="chakra-button css-xsdlqf"
+                        class="chakra-button css-smvcgw"
                         data-testid="dropdown-button"
                         type="button"
                       >
@@ -85,7 +85,7 @@ exports[`renders correctly with loaded data 1`] = `
                 >
                   <section
                     aria-describedby="popover-body-:r3:"
-                    class="chakra-popover__content css-18u085x"
+                    class="chakra-popover__content css-1d7l81o"
                     data-testid="dropdown-body"
                     id="popover-content-:r3:"
                     role="dialog"
@@ -447,14 +447,14 @@ exports[`renders correctly with no data 1`] = `
                     <input
                       class="chakra-input css-1luyivc"
                       data-testid="dropdown_input"
-                      placeholder="Choose a region"
+                      placeholder="Select region"
                     />
                     <div
                       class="chakra-input__right-element css-2cnd2z"
                     >
                       <button
                         aria-label="toggle menu"
-                        class="chakra-button css-xsdlqf"
+                        class="chakra-button css-smvcgw"
                         data-testid="dropdown-button"
                         type="button"
                       >
@@ -478,7 +478,7 @@ exports[`renders correctly with no data 1`] = `
                 >
                   <section
                     aria-describedby="popover-body-:r1:"
-                    class="chakra-popover__content css-18u085x"
+                    class="chakra-popover__content css-1d7l81o"
                     data-testid="dropdown-body"
                     id="popover-content-:r1:"
                     role="dialog"

@@ -23,8 +23,8 @@
     "micronesia": "Micronesia",
     "central-asia": "Central Asia",
     "world": "World",
-    "chooseRegion": "Choose a region",
-    "chooseCountry": "Choose a country"
+    "chooseRegion": "Select region",
+    "chooseCountry": "Select country"
   },
   "timeframes": {
     "max": "Max",
