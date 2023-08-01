@@ -1,6 +1,15 @@
 {
   "search": "Search",
   "apply": "Apply",
+  "clear": "Clear",
+  "searchBar": {
+    "projectDetails": "Project Details",
+    "standard": "Standard",
+    "methodology": "Methodology",
+    "sector": "Sector",
+    "country": "Country",
+    "projectStatus": "Project Status"
+  },
   "table": {
     "projectDetails": "Project Details",
     "standard": "Standard",

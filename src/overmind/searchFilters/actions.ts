@@ -1,6 +1,7 @@
 import { Context } from '@/overmind'
 import { EffectResponse } from '@/@types/EffectResponse'
 import { GovernanceResponseData } from '@/@types/State'
+import { FilterDates } from '@/@types/SearchFilterValues'
 
 export const transformGovernanceDataToSearchFilterData = (context: Context, governanceData: EffectResponse<GovernanceResponseData>) => {
   if (governanceData.data) {
@@ -32,6 +33,10 @@ export const setMethodologiesFilter = (context: Context, selectedFilters: string
 
 export const setProjectStatusesFilter = (context: Context, selectedFilters: string[]) => {
   context.state.searchFilters.selectedSearchFilterValues.searchFilterValues.projectStatuses = selectedFilters
+}
+
+export const setCreditingPeriodFilter = (context: Context, filterDates: FilterDates) => {
+  context.state.searchFilters.selectedSearchFilterValues.searchFilterValues.filterDates = filterDates
 }
 
 export const resetSearchFilters = (context: Context) => {

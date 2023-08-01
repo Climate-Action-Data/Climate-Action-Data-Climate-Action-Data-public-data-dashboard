@@ -1,0 +1,570 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatePicker Opens calender 1`] = `
+<div>
+  <div
+    class="chakra-stack css-17c76a6"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      label
+    </p>
+    <div
+      class="css-k008qs"
+    >
+      <div
+        class="css-1spdlhd"
+      >
+        <svg
+          class="chakra-icon css-12gq2k"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M5.3077 21.5567C4.80257 21.5567 4.375 21.3817 4.025 21.0317C3.675 20.6817 3.5 20.2542 3.5 19.749V6.36448C3.5 5.85935 3.675 5.43178 4.025 5.08178C4.375 4.73178 4.80257 4.55678 5.3077 4.55678H6.69233V3.21061C6.69233 2.99139 6.76573 2.80838 6.91253 2.66158C7.05931 2.5148 7.24232 2.44141 7.46155 2.44141C7.68077 2.44141 7.86378 2.5148 8.01058 2.66158C8.15736 2.80838 8.23075 2.99139 8.23075 3.21061V4.55678H15.8077V3.19138C15.8077 2.97856 15.8794 2.80036 16.023 2.65678C16.1666 2.5132 16.3448 2.44141 16.5576 2.44141C16.7704 2.44141 16.9486 2.5132 17.0922 2.65678C17.2358 2.80036 17.3076 2.97856 17.3076 3.19138V4.55678H18.6923C19.1974 4.55678 19.625 4.73178 19.975 5.08178C20.325 5.43178 20.5 5.85935 20.5 6.36448V19.749C20.5 20.2542 20.325 20.6817 19.975 21.0317C19.625 21.3817 19.1974 21.5567 18.6923 21.5567H5.3077ZM5.3077 20.0568H18.6923C18.7692 20.0568 18.8397 20.0247 18.9038 19.9606C18.9679 19.8965 19 19.826 19 19.749V10.3645H4.99997V19.749C4.99997 19.826 5.03202 19.8965 5.09612 19.9606C5.16024 20.0247 5.23077 20.0568 5.3077 20.0568ZM4.99997 8.86451H19V6.36448C19 6.28755 18.9679 6.21702 18.9038 6.15291C18.8397 6.08881 18.7692 6.05676 18.6923 6.05676H5.3077C5.23077 6.05676 5.16024 6.08881 5.09612 6.15291C5.03202 6.21702 4.99997 6.28755 4.99997 6.36448V8.86451ZM12 14.1337C11.7551 14.1337 11.5465 14.0475 11.374 13.875C11.2016 13.7026 11.1154 13.4939 11.1154 13.2491C11.1154 13.0042 11.2016 12.7956 11.374 12.6231C11.5465 12.4507 11.7551 12.3645 12 12.3645C12.2448 12.3645 12.4535 12.4507 12.6259 12.6231C12.7984 12.7956 12.8846 13.0042 12.8846 13.2491C12.8846 13.4939 12.7984 13.7026 12.6259 13.875C12.4535 14.0475 12.2448 14.1337 12 14.1337ZM7.99998 14.1337C7.75511 14.1337 7.54646 14.0475 7.37403 13.875C7.20159 13.7026 7.11538 13.4939 7.11538 13.2491C7.11538 13.0042 7.20159 12.7956 7.37403 12.6231C7.54646 12.4507 7.75511 12.3645 7.99998 12.3645C8.24484 12.3645 8.45349 12.4507 8.62593 12.6231C8.79836 12.7956 8.88458 13.0042 8.88458 13.2491C8.88458 13.4939 8.79836 13.7026 8.62593 13.875C8.45349 14.0475 8.24484 14.1337 7.99998 14.1337ZM16 14.1337C15.7551 14.1337 15.5465 14.0475 15.374 13.875C15.2016 13.7026 15.1154 13.4939 15.1154 13.2491C15.1154 13.0042 15.2016 12.7956 15.374 12.6231C15.5465 12.4507 15.7551 12.3645 16 12.3645C16.2448 12.3645 16.4535 12.4507 16.6259 12.6231C16.7984 12.7956 16.8846 13.0042 16.8846 13.2491C16.8846 13.4939 16.7984 13.7026 16.6259 13.875C16.4535 14.0475 16.2448 14.1337 16 14.1337ZM12 18.0568C11.7551 18.0568 11.5465 17.9705 11.374 17.7981C11.2016 17.6257 11.1154 17.417 11.1154 17.1722C11.1154 16.9273 11.2016 16.7186 11.374 16.5462C11.5465 16.3738 11.7551 16.2875 12 16.2875C12.2448 16.2875 12.4535 16.3738 12.6259 16.5462C12.7984 16.7186 12.8846 16.9273 12.8846 17.1722C12.8846 17.417 12.7984 17.6257 12.6259 17.7981C12.4535 17.9705 12.2448 18.0568 12 18.0568ZM7.99998 18.0568C7.75511 18.0568 7.54646 17.9705 7.37403 17.7981C7.20159 17.6257 7.11538 17.417 7.11538 17.1722C7.11538 16.9273 7.20159 16.7186 7.37403 16.5462C7.54646 16.3738 7.75511 16.2875 7.99998 16.2875C8.24484 16.2875 8.45349 16.3738 8.62593 16.5462C8.79836 16.7186 8.88458 16.9273 8.88458 17.1722C8.88458 17.417 8.79836 17.6257 8.62593 17.7981C8.45349 17.9705 8.24484 18.0568 7.99998 18.0568ZM16 18.0568C15.7551 18.0568 15.5465 17.9705 15.374 17.7981C15.2016 17.6257 15.1154 17.417 15.1154 17.1722C15.1154 16.9273 15.2016 16.7186 15.374 16.5462C15.5465 16.3738 15.7551 16.2875 16 16.2875C16.2448 16.2875 16.4535 16.3738 16.6259 16.5462C16.7984 16.7186 16.8846 16.9273 16.8846 17.1722C16.8846 17.417 16.7984 17.6257 16.6259 17.7981C16.4535 17.9705 16.2448 18.0568 16 18.0568Z"
+            fill="currentColor"
+          />
+        </svg>
+        <input
+          aria-controls="popover-content-:r5:"
+          aria-expanded="true"
+          aria-haspopup="dialog"
+          autocomplete="off"
+          class="chakra-input css-82bdb"
+          data-testid="date-picker"
+          id="popover-trigger-:r5:"
+          placeholder="yyyy/mm/dd"
+          value="2023-08-01"
+        />
+        <div
+          class="chakra-popover__popper css-0"
+          data-popper-escaped=""
+          data-popper-placement="bottom-start"
+          data-popper-reference-hidden=""
+          style="visibility: visible; min-width: max-content; inset: 0 auto auto 0; --popper-transform-origin: top left; position: absolute; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 8px);"
+        >
+          <section
+            aria-describedby="popover-body-:r5:"
+            class="chakra-popover__content css-1s0zov7"
+            id="popover-content-:r5:"
+            role="dialog"
+            style="transform-origin: var(--popper-transform-origin); opacity: 1; visibility: visible; transform: none;"
+            tabindex="-1"
+          >
+            <div
+              class="chakra-popover__body css-e0ktzx"
+              id="popover-body-:r5:"
+            >
+              <div
+                data-focus-guard="true"
+                style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                tabindex="0"
+              />
+              <div
+                data-focus-lock-disabled="false"
+              >
+                <div
+                  class="chakra-stack datepicker-calendar css-ptzc07"
+                >
+                  <div
+                    class="chakra-stack css-1lac2ww"
+                  >
+                    <div
+                      class="chakra-stack css-1igwmid"
+                    >
+                      <button
+                        aria-label="Go back 12 months"
+                        class="chakra-button css-ic9j78"
+                        type="button"
+                      >
+                        &lt;&lt;
+                      </button>
+                      <button
+                        aria-label="Go back 1 month"
+                        class="chakra-button css-ic9j78"
+                        type="button"
+                      >
+                        &lt;
+                      </button>
+                      <h2
+                        class="chakra-heading css-imk7us"
+                      >
+                        Aug
+                         
+                        2023
+                      </h2>
+                      <button
+                        aria-label="Go forward 1 month"
+                        class="chakra-button css-ic9j78"
+                        type="button"
+                      >
+                        &gt;
+                      </button>
+                      <button
+                        aria-label="Go forward 12 months"
+                        class="chakra-button css-ic9j78"
+                        type="button"
+                      >
+                        &gt;&gt;
+                      </button>
+                    </div>
+                    <hr
+                      aria-orientation="horizontal"
+                      class="chakra-divider css-1upb9tn"
+                    />
+                    <div
+                      class="css-1bdsnxv"
+                    >
+                      <div
+                        class="css-17vgcs5"
+                      >
+                        S
+                      </div>
+                      <div
+                        class="css-17vgcs5"
+                      >
+                        M
+                      </div>
+                      <div
+                        class="css-17vgcs5"
+                      >
+                        T
+                      </div>
+                      <div
+                        class="css-17vgcs5"
+                      >
+                        W
+                      </div>
+                      <div
+                        class="css-17vgcs5"
+                      >
+                        T
+                      </div>
+                      <div
+                        class="css-17vgcs5"
+                      >
+                        F
+                      </div>
+                      <div
+                        class="css-17vgcs5"
+                      >
+                        S
+                      </div>
+                      <button
+                        aria-label="Sun Jul 30 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        30
+                      </button>
+                      <button
+                        aria-label="Mon Jul 31 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        31
+                      </button>
+                      <button
+                        aria-label="Tue Aug 01 2023"
+                        aria-pressed="true"
+                        class="chakra-button css-1pa41ip"
+                        role="button"
+                        type="button"
+                      >
+                        1
+                      </button>
+                      <button
+                        aria-label="Wed Aug 02 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        2
+                      </button>
+                      <button
+                        aria-label="Thu Aug 03 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        3
+                      </button>
+                      <button
+                        aria-label="Fri Aug 04 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        4
+                      </button>
+                      <button
+                        aria-label="Sat Aug 05 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        5
+                      </button>
+                      <button
+                        aria-label="Sun Aug 06 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        6
+                      </button>
+                      <button
+                        aria-label="Mon Aug 07 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        7
+                      </button>
+                      <button
+                        aria-label="Tue Aug 08 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        8
+                      </button>
+                      <button
+                        aria-label="Wed Aug 09 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        9
+                      </button>
+                      <button
+                        aria-label="Thu Aug 10 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        10
+                      </button>
+                      <button
+                        aria-label="Fri Aug 11 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        11
+                      </button>
+                      <button
+                        aria-label="Sat Aug 12 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        12
+                      </button>
+                      <button
+                        aria-label="Sun Aug 13 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        13
+                      </button>
+                      <button
+                        aria-label="Mon Aug 14 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        14
+                      </button>
+                      <button
+                        aria-label="Tue Aug 15 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        15
+                      </button>
+                      <button
+                        aria-label="Wed Aug 16 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        16
+                      </button>
+                      <button
+                        aria-label="Thu Aug 17 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        17
+                      </button>
+                      <button
+                        aria-label="Fri Aug 18 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        18
+                      </button>
+                      <button
+                        aria-label="Sat Aug 19 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        19
+                      </button>
+                      <button
+                        aria-label="Sun Aug 20 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        20
+                      </button>
+                      <button
+                        aria-label="Mon Aug 21 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        21
+                      </button>
+                      <button
+                        aria-label="Tue Aug 22 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        22
+                      </button>
+                      <button
+                        aria-label="Wed Aug 23 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        23
+                      </button>
+                      <button
+                        aria-label="Thu Aug 24 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        24
+                      </button>
+                      <button
+                        aria-label="Fri Aug 25 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        25
+                      </button>
+                      <button
+                        aria-label="Sat Aug 26 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        26
+                      </button>
+                      <button
+                        aria-label="Sun Aug 27 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        27
+                      </button>
+                      <button
+                        aria-label="Mon Aug 28 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        28
+                      </button>
+                      <button
+                        aria-label="Tue Aug 29 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        29
+                      </button>
+                      <button
+                        aria-label="Wed Aug 30 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        30
+                      </button>
+                      <button
+                        aria-label="Thu Aug 31 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        31
+                      </button>
+                      <button
+                        aria-label="Fri Sep 01 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        1
+                      </button>
+                      <button
+                        aria-label="Sat Sep 02 2023"
+                        aria-pressed="false"
+                        class="chakra-button css-nx5jkx"
+                        role="button"
+                        type="button"
+                      >
+                        2
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-focus-guard="true"
+                style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+                tabindex="0"
+              />
+            </div>
+          </section>
+        </div>
+      </div>
+      <div
+        class="css-1yl4gnp"
+      >
+        <svg
+          class="chakra-icon css-1ebwuzl"
+          data-testid="clear-date"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12.0005 13.0543L6.92737 18.1274C6.78892 18.2658 6.61489 18.3367 6.40527 18.3399C6.19567 18.3431 6.01844 18.2723 5.87357 18.1274C5.72869 17.9825 5.65625 17.8069 5.65625 17.6005C5.65625 17.3941 5.72869 17.2184 5.87357 17.0736L10.9466 12.0005L5.87357 6.92738C5.73511 6.78893 5.66427 6.61489 5.66107 6.40527C5.65786 6.19568 5.72869 6.01844 5.87357 5.87358C6.01844 5.72869 6.19407 5.65625 6.40047 5.65625C6.60687 5.65625 6.78251 5.72869 6.92737 5.87358L12.0005 10.9467L17.0736 5.87358C17.212 5.73511 17.3861 5.66428 17.5957 5.66108C17.8053 5.65786 17.9825 5.72869 18.1274 5.87358C18.2723 6.01844 18.3447 6.19408 18.3447 6.40048C18.3447 6.60688 18.2723 6.78251 18.1274 6.92738L13.0543 12.0005L18.1274 17.0736C18.2658 17.212 18.3367 17.3861 18.3399 17.5957C18.3431 17.8053 18.2723 17.9825 18.1274 18.1274C17.9825 18.2723 17.8069 18.3447 17.6005 18.3447C17.3941 18.3447 17.2184 18.2723 17.0736 18.1274L12.0005 13.0543Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DatePicker renders correctly 1`] = `
+<div>
+  <div
+    class="chakra-stack css-17c76a6"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      label
+    </p>
+    <div
+      class="css-k008qs"
+    >
+      <div
+        class="css-1spdlhd"
+      >
+        <svg
+          class="chakra-icon css-12gq2k"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M5.3077 21.5567C4.80257 21.5567 4.375 21.3817 4.025 21.0317C3.675 20.6817 3.5 20.2542 3.5 19.749V6.36448C3.5 5.85935 3.675 5.43178 4.025 5.08178C4.375 4.73178 4.80257 4.55678 5.3077 4.55678H6.69233V3.21061C6.69233 2.99139 6.76573 2.80838 6.91253 2.66158C7.05931 2.5148 7.24232 2.44141 7.46155 2.44141C7.68077 2.44141 7.86378 2.5148 8.01058 2.66158C8.15736 2.80838 8.23075 2.99139 8.23075 3.21061V4.55678H15.8077V3.19138C15.8077 2.97856 15.8794 2.80036 16.023 2.65678C16.1666 2.5132 16.3448 2.44141 16.5576 2.44141C16.7704 2.44141 16.9486 2.5132 17.0922 2.65678C17.2358 2.80036 17.3076 2.97856 17.3076 3.19138V4.55678H18.6923C19.1974 4.55678 19.625 4.73178 19.975 5.08178C20.325 5.43178 20.5 5.85935 20.5 6.36448V19.749C20.5 20.2542 20.325 20.6817 19.975 21.0317C19.625 21.3817 19.1974 21.5567 18.6923 21.5567H5.3077ZM5.3077 20.0568H18.6923C18.7692 20.0568 18.8397 20.0247 18.9038 19.9606C18.9679 19.8965 19 19.826 19 19.749V10.3645H4.99997V19.749C4.99997 19.826 5.03202 19.8965 5.09612 19.9606C5.16024 20.0247 5.23077 20.0568 5.3077 20.0568ZM4.99997 8.86451H19V6.36448C19 6.28755 18.9679 6.21702 18.9038 6.15291C18.8397 6.08881 18.7692 6.05676 18.6923 6.05676H5.3077C5.23077 6.05676 5.16024 6.08881 5.09612 6.15291C5.03202 6.21702 4.99997 6.28755 4.99997 6.36448V8.86451ZM12 14.1337C11.7551 14.1337 11.5465 14.0475 11.374 13.875C11.2016 13.7026 11.1154 13.4939 11.1154 13.2491C11.1154 13.0042 11.2016 12.7956 11.374 12.6231C11.5465 12.4507 11.7551 12.3645 12 12.3645C12.2448 12.3645 12.4535 12.4507 12.6259 12.6231C12.7984 12.7956 12.8846 13.0042 12.8846 13.2491C12.8846 13.4939 12.7984 13.7026 12.6259 13.875C12.4535 14.0475 12.2448 14.1337 12 14.1337ZM7.99998 14.1337C7.75511 14.1337 7.54646 14.0475 7.37403 13.875C7.20159 13.7026 7.11538 13.4939 7.11538 13.2491C7.11538 13.0042 7.20159 12.7956 7.37403 12.6231C7.54646 12.4507 7.75511 12.3645 7.99998 12.3645C8.24484 12.3645 8.45349 12.4507 8.62593 12.6231C8.79836 12.7956 8.88458 13.0042 8.88458 13.2491C8.88458 13.4939 8.79836 13.7026 8.62593 13.875C8.45349 14.0475 8.24484 14.1337 7.99998 14.1337ZM16 14.1337C15.7551 14.1337 15.5465 14.0475 15.374 13.875C15.2016 13.7026 15.1154 13.4939 15.1154 13.2491C15.1154 13.0042 15.2016 12.7956 15.374 12.6231C15.5465 12.4507 15.7551 12.3645 16 12.3645C16.2448 12.3645 16.4535 12.4507 16.6259 12.6231C16.7984 12.7956 16.8846 13.0042 16.8846 13.2491C16.8846 13.4939 16.7984 13.7026 16.6259 13.875C16.4535 14.0475 16.2448 14.1337 16 14.1337ZM12 18.0568C11.7551 18.0568 11.5465 17.9705 11.374 17.7981C11.2016 17.6257 11.1154 17.417 11.1154 17.1722C11.1154 16.9273 11.2016 16.7186 11.374 16.5462C11.5465 16.3738 11.7551 16.2875 12 16.2875C12.2448 16.2875 12.4535 16.3738 12.6259 16.5462C12.7984 16.7186 12.8846 16.9273 12.8846 17.1722C12.8846 17.417 12.7984 17.6257 12.6259 17.7981C12.4535 17.9705 12.2448 18.0568 12 18.0568ZM7.99998 18.0568C7.75511 18.0568 7.54646 17.9705 7.37403 17.7981C7.20159 17.6257 7.11538 17.417 7.11538 17.1722C7.11538 16.9273 7.20159 16.7186 7.37403 16.5462C7.54646 16.3738 7.75511 16.2875 7.99998 16.2875C8.24484 16.2875 8.45349 16.3738 8.62593 16.5462C8.79836 16.7186 8.88458 16.9273 8.88458 17.1722C8.88458 17.417 8.79836 17.6257 8.62593 17.7981C8.45349 17.9705 8.24484 18.0568 7.99998 18.0568ZM16 18.0568C15.7551 18.0568 15.5465 17.9705 15.374 17.7981C15.2016 17.6257 15.1154 17.417 15.1154 17.1722C15.1154 16.9273 15.2016 16.7186 15.374 16.5462C15.5465 16.3738 15.7551 16.2875 16 16.2875C16.2448 16.2875 16.4535 16.3738 16.6259 16.5462C16.7984 16.7186 16.8846 16.9273 16.8846 17.1722C16.8846 17.417 16.7984 17.6257 16.6259 17.7981C16.4535 17.9705 16.2448 18.0568 16 18.0568Z"
+            fill="currentColor"
+          />
+        </svg>
+        <input
+          aria-controls="popover-content-:r2:"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          autocomplete="off"
+          class="chakra-input css-82bdb"
+          data-testid="date-picker"
+          id="popover-trigger-:r2:"
+          placeholder="yyyy/mm/dd"
+          value="2023-08-01"
+        />
+        <div
+          class="chakra-popover__popper css-0"
+          style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+        >
+          <section
+            class="chakra-popover__content css-1s0zov7"
+            id="popover-content-:r2:"
+            role="dialog"
+            style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+            tabindex="-1"
+          />
+        </div>
+      </div>
+      <div
+        class="css-1yl4gnp"
+      >
+        <svg
+          class="chakra-icon css-1ebwuzl"
+          data-testid="clear-date"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12.0005 13.0543L6.92737 18.1274C6.78892 18.2658 6.61489 18.3367 6.40527 18.3399C6.19567 18.3431 6.01844 18.2723 5.87357 18.1274C5.72869 17.9825 5.65625 17.8069 5.65625 17.6005C5.65625 17.3941 5.72869 17.2184 5.87357 17.0736L10.9466 12.0005L5.87357 6.92738C5.73511 6.78893 5.66427 6.61489 5.66107 6.40527C5.65786 6.19568 5.72869 6.01844 5.87357 5.87358C6.01844 5.72869 6.19407 5.65625 6.40047 5.65625C6.60687 5.65625 6.78251 5.72869 6.92737 5.87358L12.0005 10.9467L17.0736 5.87358C17.212 5.73511 17.3861 5.66428 17.5957 5.66108C17.8053 5.65786 17.9825 5.72869 18.1274 5.87358C18.2723 6.01844 18.3447 6.19408 18.3447 6.40048C18.3447 6.60688 18.2723 6.78251 18.1274 6.92738L13.0543 12.0005L18.1274 17.0736C18.2658 17.212 18.3367 17.3861 18.3399 17.5957C18.3431 17.8053 18.2723 17.9825 18.1274 18.1274C17.9825 18.2723 17.8069 18.3447 17.6005 18.3447C17.3941 18.3447 17.2184 18.2723 17.0736 18.1274L12.0005 13.0543Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -97,6 +97,9 @@ dependencies:
   case:
     specifier: ^1.6.3
     version: 1.6.3
+  chakra-dayzed-datepicker:
+    specifier: ^0.2.9
+    version: 0.2.9(@types/react@18.2.14)(react@18.2.0)
   classnames:
     specifier: ^2.3.2
     version: 2.3.2
@@ -109,6 +112,9 @@ dependencies:
   date-fns:
     specifier: ^2.30.0
     version: 2.30.0
+  dayzed:
+    specifier: ^3.2.3
+    version: 3.2.3(prop-types@15.8.1)(react@18.2.0)
   eslint:
     specifier: 8.44.0
     version: 8.44.0
@@ -2961,6 +2967,7 @@ packages:
 
   /@emotion/memoize@0.7.4:
     resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==}
+    requiresBuild: true
     dev: false
     optional: true
 
@@ -5848,6 +5855,18 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: false
 
+  /chakra-dayzed-datepicker@0.2.9(@types/react@18.2.14)(react@18.2.0):
+    resolution: {integrity: sha512-4CeOg1ftD48qCYKKS/qJtdHpUrLVOBC00vb43BrVGaBom04ZDn+NRzrrIEDOkVRUPHqd9R7AiyOW21ze8OzlUg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      react: 18.2.0
+      react-focus-lock: 2.9.5(@types/react@18.2.14)(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/react'
+    dev: false
+
   /chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
     engines: {node: '>=4'}
@@ -6256,6 +6275,18 @@ packages:
     engines: {node: '>=0.11'}
     dependencies:
       '@babel/runtime': 7.22.6
+    dev: false
+
+  /dayzed@3.2.3(prop-types@15.8.1)(react@18.2.0):
+    resolution: {integrity: sha512-qXTIKs+R6ydWwNo+X1wu3lUptyRSGoyY+ZzRcQSM0zUlaG+/Ei+bFjqbQm1T2oJ+WKNkTHURBcGsxnx9N+9kfA==}
+    peerDependencies:
+      prop-types: ^15
+      react: ^16.8 || ^17.0 || ^18.0
+    dependencies:
+      '@babel/runtime': 7.22.6
+      date-fns: 2.30.0
+      prop-types: 15.8.1
+      react: 18.2.0
     dev: false
 
   /debug@3.2.7:
