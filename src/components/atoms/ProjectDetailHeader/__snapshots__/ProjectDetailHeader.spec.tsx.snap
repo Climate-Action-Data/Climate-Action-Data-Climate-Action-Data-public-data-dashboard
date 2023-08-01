@@ -11,7 +11,7 @@ exports[`renders correctly 1`] = `
       <img
         alt="PLACEHOLDER"
         class="chakra-image css-kc0zs7"
-        src="http://placekitten.com/920/336"
+        src="https://placehold.co/920x336"
       />
       <div
         class="chakra-stack css-1ibnd6w"
