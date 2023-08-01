@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="css-0"
+  >
+    <p
+      class="chakra-text css-1xi4xed"
+    >
+      My Title
+    </p>
+    <p
+      class="chakra-text css-0"
+    >
+      My Content
+    </p>
+  </div>
+</div>
+`;

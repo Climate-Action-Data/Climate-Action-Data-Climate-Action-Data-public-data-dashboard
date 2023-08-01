@@ -111,7 +111,7 @@ export const accentPrimary32 = defineStyle({
 })
 
 export const textLink = defineStyle({
-  color: `#black`,
+  color: `black`,
   padding: 0,
   borderRadius: 0,
   fontSize: `14px`,
@@ -122,6 +122,16 @@ export const textLink = defineStyle({
   },
   _active: {
     color: `#002F66`,
+  },
+})
+
+export const blueLink = defineStyle({
+  color: `blue.500`,
+  _hover: {
+    color: `blue.600`,
+  },
+  _active: {
+    color: `blue.700`,
   },
 })
 
