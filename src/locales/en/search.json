@@ -5,10 +5,12 @@
   "searchBar": {
     "projectDetails": "Project Details",
     "standard": "Standard",
+    "status": "Status",
     "methodology": "Methodology",
     "sector": "Sector",
     "country": "Country",
-    "projectStatus": "Project Status"
+    "projectStatus": "Project Status",
+    "creditingPeriod": "Crediting Period"
   },
   "table": {
     "projectDetails": "Project Details",
