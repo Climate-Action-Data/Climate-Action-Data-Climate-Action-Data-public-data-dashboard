@@ -1,0 +1,32 @@
+{
+    "description": "Description",
+    "country": "Country",
+    "inRegion": "In-country Region",
+    "geographicIdentifier": "Geographic identifier",
+    "sectionHeaders": {
+      "projectDetails": "Project Details",
+      "verificationValidation": "Verification & Validation",
+      "issuancesRetirements": "Issuances & Retirements",
+      "documents": "Documents"
+    },
+    "detailsHeaders": {
+      "standard": "Standard",
+      "methodology": "Methodology",
+      "developer": "Project Developer",
+      "link": "Project Link",
+      "sector": "Sector",
+      "type": "Project Type",
+      "status": "Status",
+      "statusUpdated": "Status Updated On",
+      "availableUnits": "Total Available Units",
+      "issuances": "Total Issuances",
+      "retirememts": "Total Retirements",
+      "estimatedUnits": "Annual Estimated Units",
+      "creditingPeriod": "Crediting Period",
+      "unitMetric": "Unit Metric Measurement",
+      "ndcCoverage": "NDC Coverage",
+      "correspodinglyAdjusted": "Correspondingly Adjusted",
+      "tags": "Project Tags",
+      "coBenefits": "Co-Benefits"
+    }
+  }

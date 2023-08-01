@@ -6,6 +6,7 @@ import CREDIT_HISTORY_MOCK_DATA from '@/test/mock-data/credit_history_data'
 import { projectData } from '@/test/mock-data/projects_data'
 import { formatDate } from '@/utils/DateFormat'
 import { DateFormats } from '@/@types/DateFormats'
+import { projectDetail } from './mock-data/project_detail'
 
 const CARBON_MAP_DATA_FILTERED: CountryPeriodData = {
   activeProjects: 200,
@@ -202,3 +203,4 @@ export const PROJECT_SEARCH_RESULT: ProjectResultState = {
       .slice(0, PROJECT_TEST_SAMPLE),
   },
 }
+export const PROJECT_DETAIL: ProjectDetails = projectDetail

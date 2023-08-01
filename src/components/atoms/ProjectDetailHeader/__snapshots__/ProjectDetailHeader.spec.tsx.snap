@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="css-ffmerx"
+  >
+    <div
+      class="css-1s4k6i7"
+    >
+      <img
+        alt="PLACEHOLDER"
+        class="chakra-image css-kc0zs7"
+        src="http://placekitten.com/920/336"
+      />
+      <div
+        class="chakra-stack css-1ibnd6w"
+      >
+        <p
+          class="chakra-text css-1ezsviu"
+        >
+          S00123
+        </p>
+        <h2
+          class="chakra-heading css-1lr1hz5"
+        >
+          Project Title
+        </h2>
+        <p
+          class="chakra-text css-0"
+        >
+          France
+        </p>
+      </div>
+    </div>
+    <div
+      class="css-1rr4qq7"
+    >
+      <p
+        class="chakra-text css-1hfosol"
+      >
+        Description
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        Project Description
+      </p>
+    </div>
+  </div>
+</div>
+`;

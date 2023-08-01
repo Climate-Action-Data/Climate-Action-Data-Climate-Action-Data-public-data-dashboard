@@ -12,6 +12,7 @@ import {
   lightGrayRound32,
   textLink,
   whiteSecondary,
+  blueLink,
 } from '@/styles/Button'
 import { Aeonik, AeonikFono } from '@/styles/fonts'
 import { Checkbox } from '@/styles/Checkbox'
@@ -24,7 +25,6 @@ import { searchTable } from './SearchTable'
 import { menuWhite } from './Menu'
 import { statMain } from './Stat'
 import { tagTheme } from '@/styles/Tag'
-
 const theme = extendTheme({
   fontSizes: fontSizes,
   fonts: {
@@ -74,6 +74,7 @@ const theme = extendTheme({
         brandPrimary,
         whiteSecondary,
         accentPrimary32,
+        blueLink,
       },
     },
     Container: {
