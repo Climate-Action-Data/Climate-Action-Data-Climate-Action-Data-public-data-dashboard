@@ -61,3 +61,8 @@ type ProjectDetails = {
   issuances: Issuance[]
   documents: ProjectDocument[]
 }
+
+type ProjectCoordinates = {
+  latitude: number
+  longitude: number
+}

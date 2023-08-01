@@ -1,10 +1,12 @@
+import axios from 'axios'
+import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
+
 import { DateFormats } from '@/@types/DateFormats'
 import { EffectResponse } from '@/@types/EffectResponse'
 import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
 import { projectData } from '@/test/mock-data/projects_data'
 import { formatDate } from '@/utils/DateFormat'
-
-const SLEEP = 50
+const SLEEP = 3000
 
 export const getProjectResults = async (from: number, take: number): Promise<EffectResponse<ProjectSearchResult[]>> => {
   await new Promise((f) => setTimeout(f, SLEEP))
@@ -47,5 +49,31 @@ export const getProjectResults = async (from: number, take: number): Promise<Eff
     //   .finally(() => {
     //         resolve(result)
     //   })
+  })
+}
+
+// create a effect that takes a projectid params and logs it then returns the first element of projectData
+export const getProject = async (projectId: string): Promise<EffectResponse<ProjectDetails>> => {
+  await new Promise((f) => setTimeout(f, SLEEP))
+
+  return new Promise((resolve) => {
+    let result: EffectResponse<ProjectDetails>
+
+    axios
+      .get(`${defaultDomain}/v1/projects/${projectId}`, defaultHeaders)
+      .then((body) => {
+        if (body.data) {
+          const projectData = body.data as ProjectDetails
+          result = { data: projectData }
+        } else {
+          result = { error: { code: body.status.toString(), message: body.statusText } }
+        }
+      })
+      .catch(() => {
+        result = { error: { code: `400`, message: `could not fetch data` } }
+      })
+      .finally(() => {
+        resolve(result)
+      })
   })
 }

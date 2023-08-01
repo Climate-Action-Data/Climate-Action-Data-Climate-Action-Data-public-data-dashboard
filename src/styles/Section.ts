@@ -11,6 +11,17 @@ export const cardSection = defineStyle({
   padding: [0, `1rem`],
 })
 
+export const cardSectionNoMargin = defineStyle({
+  ...cardSection,
+  minHeight: `min-content`,
+  margin: `0`,
+})
+
+export const cardSectionNoMarginNoPadding = defineStyle({
+  ...cardSectionNoMargin,
+  padding: `0`,
+})
+
 export const filterCardSection = defineStyle({
   color: `black`,
   boxShadow: `2px 2px 8px 0px #0000001A;`,

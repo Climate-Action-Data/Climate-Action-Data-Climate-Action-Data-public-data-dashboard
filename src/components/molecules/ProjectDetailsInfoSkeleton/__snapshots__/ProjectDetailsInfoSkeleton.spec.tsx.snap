@@ -1,0 +1,331 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with no project 1`] = `
+<div>
+  <div
+    class="chakra-stack css-j7qwjs"
+  >
+    <div
+      class="css-s8hfc8"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Standard
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Methodology
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Developer
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Link
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Sector
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Type
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Status
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Status Updated On
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-k008qs"
+    >
+      <div
+        class="css-s8hfc8"
+      >
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Total Available Units
+          </p>
+          <div
+            class="css-0"
+          >
+            <div
+              class="chakra-skeleton css-1tjwkx3"
+            />
+          </div>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Total Issuances
+          </p>
+          <div
+            class="css-0"
+          >
+            <div
+              class="chakra-skeleton css-1tjwkx3"
+            />
+          </div>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Crediting Period
+          </p>
+          <div
+            class="css-0"
+          >
+            <div
+              class="chakra-skeleton css-1tjwkx3"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-s8hfc8"
+      >
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Total Retirements
+          </p>
+          <div
+            class="css-0"
+          >
+            <div
+              class="chakra-skeleton css-1tjwkx3"
+            />
+          </div>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Annual Estimated Units
+          </p>
+          <div
+            class="css-0"
+          >
+            <div
+              class="chakra-skeleton css-1tjwkx3"
+            />
+          </div>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Unit Metric Measurement
+          </p>
+          <div
+            class="css-0"
+          >
+            <div
+              class="chakra-skeleton css-1tjwkx3"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-s8hfc8"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          NDC Coverage
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Correspondingly Adjusted
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-s8hfc8"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Tags
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Co-Benefits
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -14,8 +14,8 @@ export const ProjectDetailHeader = (props: ProjectDetailHeaderProps) => {
 
   return (
     <Flex gap={6}>
-      <Box position="relative" h="336px" w="920px">
-        <Image borderRadius="8px" alt="PLACEHOLDER" src={`https://placehold.co/920x336`} h="336px" w="920px" objectFit={`contain`} />
+      <Box position="relative" h="336px" flex={1}>
+        <Image borderRadius="8px" alt="PLACEHOLDER" src={`https://placehold.co/920x336`} h="336px" w="100%" objectFit={`cover`} />
         <VStack
           background="linear-gradient(0deg, rgba(0, 0, 0, 0.8) 33.85%, rgba(17, 17, 17, 0) 100%)"
           borderRadius="8px"
@@ -34,7 +34,7 @@ export const ProjectDetailHeader = (props: ProjectDetailHeaderProps) => {
           <Text>{location}</Text>
         </VStack>
       </Box>
-      <Box flex={1}>
+      <Box maxW="448px">
         <Text fontSize="lg" fontWeight="medium">
           {t(`description`)}
         </Text>

@@ -6,11 +6,11 @@ exports[`renders correctly 1`] = `
     class="css-ffmerx"
   >
     <div
-      class="css-1s4k6i7"
+      class="css-1teq9s8"
     >
       <img
         alt="PLACEHOLDER"
-        class="chakra-image css-kc0zs7"
+        class="chakra-image css-19vnwa0"
         src="https://placehold.co/920x336"
       />
       <div
@@ -34,7 +34,7 @@ exports[`renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="css-1rr4qq7"
+      class="css-13n95wf"
     >
       <p
         class="chakra-text css-1hfosol"

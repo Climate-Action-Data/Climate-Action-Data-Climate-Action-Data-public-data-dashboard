@@ -4,7 +4,6 @@ const BILLION = 1e9
 const TRILLION = 1e12
 const TCO2_MTCO2_RATIO = 1000000
 const PRECISION_CONFIG = 3
-
 export const convertToMtCO2 = (tCO2e: number, toRound = false, decimals: number | undefined = undefined): number => {
   let MtCO2 = tCO2e / TCO2_MTCO2_RATIO
   if (toRound) {
@@ -42,4 +41,101 @@ export const toCompactValueAndSuffix = (n: number): [string, string] => {
   }
 
   return [`0`, ``]
+}
+
+const regex = new RegExp(`(\\d+° \\d+’ \\d+”)\\s*-\\s*(\\d+° \\d+’ \\d+”)\\s*([NSEW])`, `gm`)
+
+export const toCoordinates = (payload: any): ProjectCoordinates | undefined => {
+  let validPayload = payload
+  try {
+    const isParsed = JSON.parse(payload)
+    if (isParsed) {
+      validPayload = isParsed
+    }
+  } catch (e) {}
+
+  if (`object` === typeof validPayload) {
+    if (validPayload.hasOwnProperty(`longitude`) && validPayload.hasOwnProperty(`latitude`)) {
+      if (validPayload.longitude !== `` || validPayload.latitude !== ``) {
+        return { longitude: validPayload.longitude, latitude: validPayload.latitude }
+      } else {
+        return undefined
+      }
+    }
+  } else if (`string` === typeof payload && !regex.test(validPayload)) {
+    return extractCoordinatesFromString(payload)
+  } else if (regex.test(validPayload)) {
+    // IMPORTANT
+    regex.lastIndex = 0
+    const results: string[] = []
+    let match
+    while ((match = regex.exec(validPayload))) {
+      results.push(match[1])
+    }
+    if (results.length > 0) {
+      const coord = convertDmsToLongitudeLongitude(results[0], results[1])
+      if (coord) {
+        return coord
+      }
+    }
+  }
+  return undefined
+}
+
+const DEFAULT_MINUTE_DENOMINATOR = 60
+const DEFAULT_SECOND_DENOMINATOR = 3600
+const DEFAULT_SIGNINVERSER = -1
+
+export const dmsToDecimal = (dmsStr: string): number | undefined => {
+  const matches = dmsStr.match(/\d+/g)
+  if (!matches) {
+    return undefined
+  }
+
+  const [degrees, minutes, seconds] = matches.map(Number)
+  const decimalDegrees = degrees + minutes / DEFAULT_MINUTE_DENOMINATOR + seconds / DEFAULT_SECOND_DENOMINATOR
+  return decimalDegrees
+}
+
+export const convertDmsToLongitudeLongitude = (latitudeStr: string, longitudeStr: string): ProjectCoordinates | undefined => {
+  let result = undefined
+  let latitude = dmsToDecimal(latitudeStr)
+  let longitude = dmsToDecimal(longitudeStr)
+  if (latitude && longitude) {
+    if (latitudeStr.includes(`S`) || longitudeStr.includes(`W`)) {
+      latitude *= DEFAULT_SIGNINVERSER
+      longitude *= DEFAULT_SIGNINVERSER
+    }
+    result = { latitude, longitude }
+  }
+  return result
+}
+
+const extractCoordinatesFromString = (coordinates: string): ProjectCoordinates | undefined => {
+  const pattern = /(?<latitude>-?\d+(\.\d+)?)(?:°)?\s*(?<latitudeDirection>[NS])\s*(?<longitude>-?\d+(\.\d+)?)(?:°)?\s*(?<longitudeDirection>[EW])/i
+  const match = coordinates.match(pattern)
+
+  if (!match) {
+    return undefined
+  }
+
+  let latitude = parseFloat(match.groups?.latitude as string)
+  let longitude = parseFloat(match.groups?.longitude as string)
+
+  // Apply the correct sign based on the direction ('N' or 'S', 'E' or 'W')
+  if (match.groups?.latitudeDirection.toUpperCase() === `S`) {
+    latitude *= DEFAULT_SIGNINVERSER
+  }
+  if (match.groups?.longitudeDirection.toUpperCase() === `W`) {
+    longitude *= DEFAULT_SIGNINVERSER
+  }
+
+  return { latitude, longitude }
+}
+
+export const coordinatesToString = (coordinates: ProjectCoordinates | undefined): string => {
+  if (coordinates) {
+    return `${coordinates.latitude}, ${coordinates.longitude}`
+  }
+  return `--`
 }
