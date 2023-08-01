@@ -3,6 +3,7 @@ import { mode } from '@chakra-ui/theme-tools'
 
 import {
   accentPrimary32,
+  blueLink,
   brandPrimary,
   dropdownSelected,
   dropdownUnselected,
@@ -12,11 +13,10 @@ import {
   lightGrayRound32,
   textLink,
   whiteSecondary,
-  blueLink,
 } from '@/styles/Button'
 import { Aeonik, AeonikFono } from '@/styles/fonts'
 import { Checkbox } from '@/styles/Checkbox'
-import { cardSection, filterCardSection } from '@/styles/Section'
+import { cardSection, cardSectionNoMargin, cardSectionNoMarginNoPadding, filterCardSection } from '@/styles/Section'
 import fontSizes from './FontSizes'
 import { Text } from './Text'
 import { Input } from '@/styles/Input'
@@ -25,6 +25,7 @@ import { searchTable } from './SearchTable'
 import { menuWhite } from './Menu'
 import { statMain } from './Stat'
 import { tagTheme } from '@/styles/Tag'
+
 const theme = extendTheme({
   fontSizes: fontSizes,
   fonts: {
@@ -80,6 +81,8 @@ const theme = extendTheme({
     Container: {
       variants: {
         cardSection,
+        cardSectionNoMargin,
+        cardSectionNoMarginNoPadding,
         paginationBar,
         filterCardSection,
       },

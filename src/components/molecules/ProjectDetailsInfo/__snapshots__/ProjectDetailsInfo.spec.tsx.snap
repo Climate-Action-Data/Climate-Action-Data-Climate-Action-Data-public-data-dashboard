@@ -1,0 +1,617 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with no project 1`] = `
+<div>
+  <div
+    class="chakra-stack css-j7qwjs"
+  >
+    <div
+      class="css-s8hfc8"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Standard
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Methodology
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Developer
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Link
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Sector
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Type
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Status
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Status Updated On
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-k008qs"
+    >
+      <div
+        class="css-s8hfc8"
+      >
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Total Available Units
+          </p>
+          <div
+            class="css-0"
+          >
+            <div
+              class="chakra-skeleton css-1tjwkx3"
+            />
+          </div>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Total Issuances
+          </p>
+          <div
+            class="css-0"
+          >
+            <div
+              class="chakra-skeleton css-1tjwkx3"
+            />
+          </div>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Crediting Period
+          </p>
+          <div
+            class="css-0"
+          >
+            <div
+              class="chakra-skeleton css-1tjwkx3"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-s8hfc8"
+      >
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Total Retirements
+          </p>
+          <div
+            class="css-0"
+          >
+            <div
+              class="chakra-skeleton css-1tjwkx3"
+            />
+          </div>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Annual Estimated Units
+          </p>
+          <div
+            class="css-0"
+          >
+            <div
+              class="chakra-skeleton css-1tjwkx3"
+            />
+          </div>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Unit Metric Measurement
+          </p>
+          <div
+            class="css-0"
+          >
+            <div
+              class="chakra-skeleton css-1tjwkx3"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-s8hfc8"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          NDC Coverage
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Correspondingly Adjusted
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-s8hfc8"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Tags
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Co-Benefits
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-skeleton css-1tjwkx3"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with project 1`] = `
+<div>
+  <div
+    class="chakra-stack css-j7qwjs"
+  >
+    <div
+      class="css-s8hfc8"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Standard
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          EcoRegistry
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Methodology
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          AR-ACM0003: Afforestation and reforestation of lands except wetlands
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Developer
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Forestry Consulting Group S.A.S.
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Link
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          <a
+            class="chakra-link css-0"
+            href="https://www.ecoregistry.io/projects/79"
+            target="_blank"
+          >
+            https://www.ecoregistry.io/projects/79
+          </a>
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Sector
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Agriculture; forestry and fishing
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Type
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Reforestation and Revegetation
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Status
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          status
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Status Updated On
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          8/1/2023
+        </p>
+      </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-k008qs"
+    >
+      <div
+        class="css-s8hfc8"
+      >
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Total Available Units
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            0
+          </p>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Total Issuances
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            0
+          </p>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Crediting Period
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            2011-05-23T00:00:00.000Z
+             - 
+            2030-05-22T00:00:00.000Z
+          </p>
+        </div>
+      </div>
+      <div
+        class="css-s8hfc8"
+      >
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Total Retirements
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            0
+          </p>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Annual Estimated Units
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            127855
+          </p>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Unit Metric Measurement
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            tCO2e
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-s8hfc8"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          NDC Coverage
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Unknown
+        </p>
+      </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-s8hfc8"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Tags
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          More information in the project link. || Cercarbono Standard. || Sectors of project: Agriculture; forestry and fishing . || Methodologies of project: AR-ACM0003: Afforestation and reforestation of lands except wetlands . || Latest or current Validation Number: 1 . || Latest or current Verification Number: 1
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Co-Benefits
+        </p>
+        <p
+          class="chakra-text css-0"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
