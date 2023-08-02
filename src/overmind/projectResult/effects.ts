@@ -6,6 +6,7 @@ import { EffectResponse } from '@/@types/EffectResponse'
 import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
 import { projectData } from '@/test/mock-data/projects_data'
 import { formatDate } from '@/utils/DateFormat'
+
 const SLEEP = 3000
 
 export const getProjectResults = async (from: number, take: number): Promise<EffectResponse<ProjectSearchResult[]>> => {
