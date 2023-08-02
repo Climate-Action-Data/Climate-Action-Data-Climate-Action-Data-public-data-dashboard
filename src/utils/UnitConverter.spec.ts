@@ -1,4 +1,12 @@
-import { convertDmsToLongitudeLongitude, convertToMtCO2, convertTotCO2, coordinatesToString, toCompactValueAndSuffix, toCoordinates } from './UnitConverter'
+import {
+  convertDmsToLongitudeLongitude,
+  convertToMtCO2,
+  convertTotCO2,
+  coordinatesToString,
+  extractCoordinatesFromLongString,
+  toCompactValueAndSuffix,
+  toCoordinates,
+} from './UnitConverter'
 
 const STARTING_VALUE = 12345600
 const DECIMAL_VALUE = 2
@@ -120,6 +128,11 @@ describe(`Unit Convertion`, () => {
 
   it(`extract undefined from str with random`, () => {
     const result = toCoordinates(TEST_STRING_WORD)
+    expect(result).toBe(undefined)
+  })
+
+  it(`extract undefined from str with long info`, () => {
+    const result = extractCoordinatesFromLongString(TEST_STRING_WORD)
     expect(result).toBe(undefined)
   })
 

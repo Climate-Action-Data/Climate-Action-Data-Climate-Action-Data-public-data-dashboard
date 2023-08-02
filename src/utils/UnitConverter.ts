@@ -43,7 +43,7 @@ export const toCompactValueAndSuffix = (n: number): [string, string] => {
   return [`0`, ``]
 }
 
-const regex = new RegExp(`(\\d+° \\d+’ \\d+”)\\s*-\\s*(\\d+° \\d+’ \\d+”)\\s*([NSEW])`, `gm`)
+const REG_LONG_COORD = /(\d+° \d+’ \d+”)\s*-\s*(\d+° \d+’ \d+”)\s*([NSEW])/gm
 
 export const toCoordinates = (payload: any): ProjectCoordinates | undefined => {
   let validPayload = payload
@@ -54,29 +54,27 @@ export const toCoordinates = (payload: any): ProjectCoordinates | undefined => {
     }
   } catch (e) {}
 
-  if (`object` === typeof validPayload) {
-    if (validPayload.hasOwnProperty(`longitude`) && validPayload.hasOwnProperty(`latitude`)) {
-      if (validPayload.longitude !== `` || validPayload.latitude !== ``) {
-        return { longitude: validPayload.longitude, latitude: validPayload.latitude }
-      } else {
-        return undefined
-      }
-    }
-  } else if (`string` === typeof payload && !regex.test(validPayload)) {
+  if (`object` === typeof validPayload && validPayload?.longitude !== `` && validPayload?.latitude !== ``) {
+    return { longitude: validPayload.longitude, latitude: validPayload.latitude }
+  } else if (`string` === typeof payload && !REG_LONG_COORD.test(validPayload)) {
     return extractCoordinatesFromString(payload)
-  } else if (regex.test(validPayload)) {
-    // IMPORTANT
-    regex.lastIndex = 0
-    const results: string[] = []
-    let match
-    while ((match = regex.exec(validPayload))) {
-      results.push(match[1])
-    }
-    if (results.length > 0) {
-      const coord = convertDmsToLongitudeLongitude(results[0], results[1])
-      if (coord) {
-        return coord
-      }
+  } else if (REG_LONG_COORD.test(validPayload)) {
+    return extractCoordinatesFromLongString(validPayload)
+  }
+  return undefined
+}
+
+export const extractCoordinatesFromLongString = (payload: string): ProjectCoordinates | undefined => {
+  REG_LONG_COORD.lastIndex = 0
+  const results: string[] = []
+  let match
+  while ((match = REG_LONG_COORD.exec(payload))) {
+    results.push(match[1])
+  }
+  if (results.length > 0) {
+    const coord = convertDmsToLongitudeLongitude(results[0], results[1])
+    if (coord) {
+      return coord
     }
   }
   return undefined
@@ -85,9 +83,12 @@ export const toCoordinates = (payload: any): ProjectCoordinates | undefined => {
 const DEFAULT_MINUTE_DENOMINATOR = 60
 const DEFAULT_SECOND_DENOMINATOR = 3600
 const DEFAULT_SIGNINVERSER = -1
+const REG_STRING_DIGIT = /\d+/g
 
 export const dmsToDecimal = (dmsStr: string): number | undefined => {
-  const matches = dmsStr.match(/\d+/g)
+  REG_STRING_DIGIT.lastIndex = 0
+  const matches = dmsStr.match(REG_STRING_DIGIT)
+
   if (!matches) {
     return undefined
   }
@@ -101,6 +102,7 @@ export const convertDmsToLongitudeLongitude = (latitudeStr: string, longitudeStr
   let result = undefined
   let latitude = dmsToDecimal(latitudeStr)
   let longitude = dmsToDecimal(longitudeStr)
+
   if (latitude && longitude) {
     if (latitudeStr.includes(`S`) || longitudeStr.includes(`W`)) {
       latitude *= DEFAULT_SIGNINVERSER
@@ -108,12 +110,15 @@ export const convertDmsToLongitudeLongitude = (latitudeStr: string, longitudeStr
     }
     result = { latitude, longitude }
   }
+
   return result
 }
 
+const REG_STRING_COORD = /(?<latitude>-?\d+(\.\d+)?)(?:°)?\s*(?<latitudeDirection>[NS])\s*(?<longitude>-?\d+(\.\d+)?)(?:°)?\s*(?<longitudeDirection>[EW])/i
+
 const extractCoordinatesFromString = (coordinates: string): ProjectCoordinates | undefined => {
-  const pattern = /(?<latitude>-?\d+(\.\d+)?)(?:°)?\s*(?<latitudeDirection>[NS])\s*(?<longitude>-?\d+(\.\d+)?)(?:°)?\s*(?<longitudeDirection>[EW])/i
-  const match = coordinates.match(pattern)
+  REG_STRING_COORD.lastIndex = 0
+  const match = REG_STRING_COORD.exec(coordinates)
 
   if (!match) {
     return undefined
@@ -122,10 +127,10 @@ const extractCoordinatesFromString = (coordinates: string): ProjectCoordinates |
   let latitude = parseFloat(match.groups?.latitude as string)
   let longitude = parseFloat(match.groups?.longitude as string)
 
-  // Apply the correct sign based on the direction ('N' or 'S', 'E' or 'W')
   if (match.groups?.latitudeDirection.toUpperCase() === `S`) {
     latitude *= DEFAULT_SIGNINVERSER
   }
+
   if (match.groups?.longitudeDirection.toUpperCase() === `W`) {
     longitude *= DEFAULT_SIGNINVERSER
   }
