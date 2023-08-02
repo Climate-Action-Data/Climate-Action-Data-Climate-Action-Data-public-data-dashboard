@@ -1,0 +1,87 @@
+import { ChangeEvent, FC, useEffect, useState } from 'react'
+import { isValid, parse } from 'date-fns'
+import { Input, InputGroup, InputRightElement, Text, VStack } from '@chakra-ui/react'
+import { CalendarIcon } from '@/components/atoms/CalendarIcon/CalendarIcon'
+
+interface DateInputProp {
+  label: string
+  openDatePicker: () => void
+  value: Date | undefined
+  maxDate?: Date
+  minDate?: Date
+  onChange: (date: Date | undefined) => void
+}
+
+const DateInput: FC<DateInputProp> = (prop) => {
+  const { openDatePicker, label, value, minDate, maxDate, onChange } = prop
+
+  const [textInputValue, setTextInputValue] = useState<string>(``)
+  const [isInvalid, setIsInvalid] = useState<boolean>(false)
+
+  useEffect(() => {
+    if (value) {
+      setTextInputValue(value.toLocaleDateString(`en-sg`))
+    } else {
+      setTextInputValue(``)
+    }
+  }, [value])
+
+  const inputConfig = {
+    height: `28px`,
+    padding: 0,
+    _active: { boxShadow: `none` },
+    border: `none`,
+    borderRadius: 0,
+    borderBottom: `solid`,
+    borderBottomWidth: `1px`,
+    _placeholder: { color: `lightGray.600` },
+  }
+
+  const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value
+    setTextInputValue(value)
+  }
+
+  const handleOnBlur = () => {
+    if (textInputValue === ``) {
+      setIsInvalid(false)
+      onChange(undefined)
+      return
+    }
+
+    const parsedDate = parse(textInputValue, `dd/MM/yyyy`, new Date())
+
+    if (!isValid(parsedDate)) {
+      setIsInvalid(true)
+      return
+    }
+
+    if ((maxDate && parsedDate > maxDate) || (minDate && parsedDate < minDate)) {
+      setIsInvalid(true)
+      return
+    }
+    setIsInvalid(false)
+    onChange(parsedDate)
+  }
+
+  return (
+    <VStack alignItems={`start`}>
+      <Text>{label}</Text>
+      <InputGroup width={`143px`} alignItems={`top`}>
+        <InputRightElement boxSize={`24px`}>
+          <CalendarIcon color={`lightGray.600`} cursor={`pointer`} onClick={openDatePicker} data-testid={`datepicker-trigger`} />
+        </InputRightElement>
+        <Input
+          placeholder={`DD/MM/YYYY`}
+          borderBottomColor={isInvalid ? `red.500` : `lightGray.600`}
+          value={textInputValue}
+          onChange={handleOnChange}
+          onBlur={handleOnBlur}
+          sx={{ ...inputConfig }}
+        />
+      </InputGroup>
+    </VStack>
+  )
+}
+
+export default DateInput

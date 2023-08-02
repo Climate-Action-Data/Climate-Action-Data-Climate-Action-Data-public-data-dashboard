@@ -109,6 +109,9 @@ dependencies:
   date-fns:
     specifier: ^2.30.0
     version: 2.30.0
+  dayzed:
+    specifier: ^3.2.3
+    version: 3.2.3(prop-types@15.8.1)(react@18.2.0)
   eslint:
     specifier: 8.44.0
     version: 8.44.0
@@ -2961,6 +2964,7 @@ packages:
 
   /@emotion/memoize@0.7.4:
     resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==}
+    requiresBuild: true
     dev: false
     optional: true
 
@@ -6256,6 +6260,18 @@ packages:
     engines: {node: '>=0.11'}
     dependencies:
       '@babel/runtime': 7.22.6
+    dev: false
+
+  /dayzed@3.2.3(prop-types@15.8.1)(react@18.2.0):
+    resolution: {integrity: sha512-qXTIKs+R6ydWwNo+X1wu3lUptyRSGoyY+ZzRcQSM0zUlaG+/Ei+bFjqbQm1T2oJ+WKNkTHURBcGsxnx9N+9kfA==}
+    peerDependencies:
+      prop-types: ^15
+      react: ^16.8 || ^17.0 || ^18.0
+    dependencies:
+      '@babel/runtime': 7.22.6
+      date-fns: 2.30.0
+      prop-types: 15.8.1
+      react: 18.2.0
     dev: false
 
   /debug@3.2.7:

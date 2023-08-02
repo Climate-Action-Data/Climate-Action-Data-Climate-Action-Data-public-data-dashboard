@@ -1,6 +1,10 @@
 {
   "search": "Search",
   "apply": "Apply",
+  "clear": "Clear",
+  "ok": "OK",
+  "upTo": "Up to {{- date}}",
+  "andLater": "{{- date}} and later",
   "table": {
     "projectDetails": "Project Details",
     "standard": "Standard",

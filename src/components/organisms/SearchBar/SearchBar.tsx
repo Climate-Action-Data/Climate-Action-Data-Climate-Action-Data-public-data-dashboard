@@ -6,6 +6,7 @@ import { Link } from '@chakra-ui/next-js'
 import { useActions, useAppState, useEffects } from '@/overmind'
 import AutoCompleteCheckbox from '@/components/molecules/AutoCompleteCheckbox/AutoCompleteCheckbox'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
+import CreditingPeriodFilter from '@/components/molecules/CreditingPeriodFilter/CreditingPeriodFilter'
 
 const SearchBar: FC = () => {
   const {
@@ -76,6 +77,7 @@ const SearchBar: FC = () => {
             noOfSelectedFilters={selectedSearchFilters.countries.length}
             applyFilters={setCountriesFilter}
           />
+          <CreditingPeriodFilter label={`Crediting Period`} />
         </Stack>
         <Flex>
           <Spacer minWidth={`32px`} />

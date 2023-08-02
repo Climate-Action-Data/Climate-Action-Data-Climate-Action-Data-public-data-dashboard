@@ -61,7 +61,7 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
           </Flex>
         </Button>
       </PopoverTrigger>
-      <PopoverContent border={0} borderRadius={`4px`} width={[`100%`, null, null, `298px`]} backgroundColor={`white`} boxShadow={`xl`}>
+      <PopoverContent border={0} borderRadius={`8px`} width={[`100%`, null, null, `298px`]} backgroundColor={`white`} boxShadow={`xl`}>
         <PopoverHeader border={0} boxShadow="md" padding={0}>
           <VStack divider={<StackDivider height={`1px`} borderColor={`#B8BEC0`} />} spacing={0}>
             <Flex width={`100%`} alignItems={`center`} padding={`8px`}>
