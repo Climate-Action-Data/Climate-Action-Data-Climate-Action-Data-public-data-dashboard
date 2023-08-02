@@ -149,3 +149,33 @@ export const dropdownSelected = defineStyle({
   _hover: { backgroundColor: `#D5FBE5` },
   _active: { backgroundColor: `#EAFDF2` },
 })
+
+export const calendarNavigation = defineStyle({
+  borderRadius: `50%`,
+  backgroundColor: `transparent`,
+  boxSize: `48px`,
+})
+
+export const calendarAction = defineStyle({
+  color: `#00242C`,
+  padding: `10px 12px`,
+  borderRadius: 0,
+  fontSize: `14px`,
+  fontWeight: `normal`,
+  height: `min-content`,
+  _hover: {
+    color: `#005ECC`,
+  },
+  _active: {
+    color: `#002F66`,
+  },
+})
+
+export const calendarDate = defineStyle({
+  _hover: { color: `white`, backgroundColor: `lightGray.800` },
+  boxSize: `40px`,
+  fontSize: `16px`,
+  fontFamily: `body`,
+  fontWeight: `normal`,
+  borderRadius: `50%`,
+})

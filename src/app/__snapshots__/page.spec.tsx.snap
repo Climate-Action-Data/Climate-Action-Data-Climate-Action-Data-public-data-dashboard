@@ -49,7 +49,7 @@ exports[`renders correctly 1`] = `
             style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
           >
             <section
-              class="chakra-popover__content css-lra071"
+              class="chakra-popover__content css-gt8u74"
               id="popover-content-:r1:"
               role="dialog"
               style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
@@ -94,7 +94,7 @@ exports[`renders correctly 1`] = `
             style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
           >
             <section
-              class="chakra-popover__content css-lra071"
+              class="chakra-popover__content css-gt8u74"
               id="popover-content-:r3:"
               role="dialog"
               style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
@@ -139,7 +139,7 @@ exports[`renders correctly 1`] = `
             style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
           >
             <section
-              class="chakra-popover__content css-lra071"
+              class="chakra-popover__content css-gt8u74"
               id="popover-content-:r5:"
               role="dialog"
               style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
@@ -184,7 +184,7 @@ exports[`renders correctly 1`] = `
             style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
           >
             <section
-              class="chakra-popover__content css-lra071"
+              class="chakra-popover__content css-gt8u74"
               id="popover-content-:r7:"
               role="dialog"
               style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
@@ -229,8 +229,50 @@ exports[`renders correctly 1`] = `
             style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
           >
             <section
-              class="chakra-popover__content css-lra071"
+              class="chakra-popover__content css-gt8u74"
               id="popover-content-:r9:"
+              role="dialog"
+              style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+              tabindex="-1"
+            />
+          </div>
+          <div
+            class="chakra-stack__divider css-1mn8x5k"
+          />
+          <button
+            aria-controls="popover-content-:rb:"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            class="chakra-button css-4xx2wk"
+            id="popover-trigger-:rb:"
+            type="button"
+          >
+            <div
+              class="css-jmqhys"
+            >
+              Crediting Period
+              <div
+                class="css-17xejub"
+              />
+              <svg
+                class="chakra-icon css-c0air1"
+                focusable="false"
+                viewBox="0 0 8 4"
+              >
+                <path
+                  d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            class="chakra-popover__popper css-0"
+            style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+          >
+            <section
+              class="chakra-popover__content css-1j9y0nx"
+              id="popover-content-:rb:"
               role="dialog"
               style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
               tabindex="-1"
@@ -296,11 +338,11 @@ exports[`renders correctly 1`] = `
             class="chakra-stack css-8g8ihq"
           >
             <div
-              aria-controls="popover-content-:rb:"
+              aria-controls="popover-content-:rd:"
               aria-expanded="false"
               aria-haspopup="dialog"
               class="chakra-stack css-8g8ihq"
-              id="popover-trigger-:rb:"
+              id="popover-trigger-:rd:"
             >
               <div
                 class="chakra-input__group css-bx0blc"
@@ -339,17 +381,17 @@ exports[`renders correctly 1`] = `
               style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
             >
               <section
-                aria-describedby="popover-body-:rb:"
+                aria-describedby="popover-body-:rd:"
                 class="chakra-popover__content css-1d7l81o"
                 data-testid="dropdown-body"
-                id="popover-content-:rb:"
+                id="popover-content-:rd:"
                 role="dialog"
                 style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
                 tabindex="-1"
               >
                 <div
                   class="chakra-popover__body css-0"
-                  id="popover-body-:rb:"
+                  id="popover-body-:rd:"
                 >
                   <ul
                     class="css-155za0w"
@@ -57705,11 +57747,11 @@ exports[`renders correctly 1`] = `
                   class="chakra-stack css-8g8ihq"
                 >
                   <div
-                    aria-controls="popover-content-:rd:"
+                    aria-controls="popover-content-:rf:"
                     aria-expanded="false"
                     aria-haspopup="dialog"
                     class="chakra-stack css-8g8ihq"
-                    id="popover-trigger-:rd:"
+                    id="popover-trigger-:rf:"
                   >
                     <div
                       class="chakra-input__group css-bx0blc"
@@ -57748,17 +57790,17 @@ exports[`renders correctly 1`] = `
                     style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
                   >
                     <section
-                      aria-describedby="popover-body-:rd:"
+                      aria-describedby="popover-body-:rf:"
                       class="chakra-popover__content css-1d7l81o"
                       data-testid="dropdown-body"
-                      id="popover-content-:rd:"
+                      id="popover-content-:rf:"
                       role="dialog"
                       style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
                       tabindex="-1"
                     >
                       <div
                         class="chakra-popover__body css-0"
-                        id="popover-body-:rd:"
+                        id="popover-body-:rf:"
                       >
                         <ul
                           class="css-155za0w"

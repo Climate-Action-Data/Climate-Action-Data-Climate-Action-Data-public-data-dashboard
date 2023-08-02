@@ -9,7 +9,7 @@ export const SortDownIcon: FC<IconProps> = (props: IconProps) => {
   }
   return (
     <Icon viewBox="0 0 8 4" {...actualProps}>
-      <path d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z" fill="#currentColor" />
+      <path d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z" fill="currentColor" />
     </Icon>
   )
 }

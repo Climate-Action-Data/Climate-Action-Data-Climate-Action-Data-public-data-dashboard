@@ -9,7 +9,7 @@ export const SortUpIcon: FC<IconProps> = (props: IconProps) => {
   }
   return (
     <Icon viewBox="0 0 8 4" {...actualProps}>
-      <path d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z" fill="#currentColor" />
+      <path d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z" fill="currentColor" />
     </Icon>
   )
 }

@@ -9,7 +9,7 @@ exports[`renders correctly 1`] = `
   >
     <path
       d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
-      fill="#currentColor"
+      fill="currentColor"
     />
   </svg>
 </div>

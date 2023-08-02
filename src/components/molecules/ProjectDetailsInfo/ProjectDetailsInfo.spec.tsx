@@ -2,14 +2,30 @@ import { render } from '@testing-library/react'
 import { ProjectDetailsInfo } from './ProjectDetailsInfo'
 import { PROJECT_DETAIL } from '@/test/TestOvermindMockData'
 
-it(`renders correctly with no project`, () => {
-  const { container } = render(<ProjectDetailsInfo project={undefined} />)
-  expect(container).toMatchSnapshot()
-})
+describe(`ProjectDetailsInfo`, () => {
+  const tYear = 2023
+  const tMonth = 7
+  const tDay = 1
+  const tDate = new Date(tYear, tMonth, tDay)
 
-it(`renders correctly with project`, () => {
-  const { container } = render(<ProjectDetailsInfo project={PROJECT_DETAIL} />)
-  expect(container).toMatchSnapshot()
+  beforeAll(() => {
+    jest.useFakeTimers()
+    jest.setSystemTime(tDate)
+  })
+
+  afterAll(() => {
+    jest.useRealTimers()
+  })
+
+  it(`renders correctly with no project`, () => {
+    const { container } = render(<ProjectDetailsInfo project={undefined} />)
+    expect(container).toMatchSnapshot()
+  })
+
+  it(`renders correctly with project`, () => {
+    const { container } = render(<ProjectDetailsInfo project={PROJECT_DETAIL} />)
+    expect(container).toMatchSnapshot()
+  })
 })
 
 it(`renders correctly with project that had emptyBenefit`, () => {

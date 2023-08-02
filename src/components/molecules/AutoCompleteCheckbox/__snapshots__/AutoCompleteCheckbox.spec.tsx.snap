@@ -37,7 +37,7 @@ exports[`AutoCompleteCheckbox should render AutoCompleteCheckbox with no data in
     style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
   >
     <section
-      class="chakra-popover__content css-lra071"
+      class="chakra-popover__content css-gt8u74"
       id="popover-content-:r1:"
       role="dialog"
       style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
@@ -84,7 +84,7 @@ exports[`AutoCompleteCheckbox should render AutoCompleteCheckbox with options 1`
     style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
   >
     <section
-      class="chakra-popover__content css-lra071"
+      class="chakra-popover__content css-gt8u74"
       id="popover-content-:r3:"
       role="dialog"
       style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
