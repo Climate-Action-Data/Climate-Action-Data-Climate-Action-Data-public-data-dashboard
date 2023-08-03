@@ -611,7 +611,7 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
           class="css-0"
         >
           <div
-            class="chakra-stack css-1mlvmbj"
+            class="chakra-stack css-1odds5u"
           >
             <img
               alt="Decent Work and Economic Growth"
@@ -932,7 +932,7 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
           class="css-0"
         >
           <div
-            class="chakra-stack css-1mlvmbj"
+            class="chakra-stack css-1odds5u"
           />
         </div>
       </div>

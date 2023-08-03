@@ -42,6 +42,7 @@ export const ProjectSearchBody = (props: ProjectSearchBodyProps) => {
               projectResults.data.map((project, idx) => (
                 <Tr
                   onClick={() => router.push(`/project/${project.warehouseProjectId}`)}
+                  data-testid="table-row"
                   onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
                   className={`project-row-${idx}`}
                   key={`project-body-row-${project.id}`}

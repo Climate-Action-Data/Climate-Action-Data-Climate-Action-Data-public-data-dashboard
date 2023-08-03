@@ -1,4 +1,4 @@
-import { SimpleGrid, Skeleton, Text, Button, HStack } from '@chakra-ui/react'
+import { SimpleGrid, Skeleton, Text, Button, HStack, Hide } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
@@ -25,11 +25,13 @@ export const ProjectDetailsVerification = (props: ProjectDetailsVerificationProp
       </DetailWidget>
       <DetailWidget title={t(`verificationHeaders.verificationPeriod`)}>
         {validation.verifications.length > 0 && (
-          <HStack>
+          <HStack flexWrap="wrap">
             <Text>
               {formatDate(validation.verifications[0].startDate, DateFormats.YYYY_MM_DD)} - {formatDate(validation.verifications[0].endDate, DateFormats.YYYY_MM_DD)}
             </Text>
-            <Button variant="blackLink">{t(`viewHistory`)}</Button>
+            <Hide below="md">
+              <Button variant="blackLink">{t(`viewHistory`)}</Button>
+            </Hide>
           </HStack>
         )}
       </DetailWidget>

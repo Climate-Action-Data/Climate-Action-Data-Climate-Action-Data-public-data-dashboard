@@ -11,3 +11,8 @@ it(`renders correctly with validation`, () => {
   const { container } = render(<ProjectDetailsVerification validation={PROJECT_DETAIL.validation} />)
   expect(container).toMatchSnapshot()
 })
+
+it(`renders correctly with validation and no date`, () => {
+  const { container } = render(<ProjectDetailsVerification validation={{ ...PROJECT_DETAIL.validation, date: `` }} />)
+  expect(container).toMatchSnapshot()
+})

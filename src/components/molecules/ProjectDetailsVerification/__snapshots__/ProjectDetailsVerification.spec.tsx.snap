@@ -68,3 +68,64 @@ exports[`renders correctly with validation 1`] = `
   </div>
 </div>
 `;
+
+exports[`renders correctly with validation and no date 1`] = `
+<div>
+  <div
+    class="css-s8hfc8"
+  >
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Validation Body
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        Colombian Institute for Technical Standards and Certification (ICONTEC)
+      </p>
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Validation Status Updated On
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        --
+      </p>
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Verification Approach
+      </p>
+      <p
+        class="chakra-text css-0"
+      />
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Verification Period
+      </p>
+      <p
+        class="chakra-text css-0"
+      />
+    </div>
+  </div>
+</div>
+`;

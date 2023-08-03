@@ -54,7 +54,7 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
       <SimpleGrid columns={2} gap="24px">
         <DetailWidget title={t(`detailsHeaders.tags`)}>{project.tags}</DetailWidget>
         <DetailWidget asBox title={t(`detailsHeaders.coBenefits`)}>
-          <HStack gap="4px">
+          <HStack flexWrap="wrap" gap="4px">
             {project.coBenefits.map((benefit) => {
               const eWebGoal = extractEWebGoalFromString(benefit)
               if (eWebGoal) {

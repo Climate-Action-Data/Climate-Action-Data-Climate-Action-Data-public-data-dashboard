@@ -63,7 +63,7 @@ export const ProjectSearchHead = (props: ProjectSearchHeadProps) => {
                       <Menu variant="menuWhite">
                         <MenuButton as={Button} textAlign="center" iconSpacing={0} rightIcon={<KebabMenuIcon />} variant="lightGrayRound32"></MenuButton>
                         <MenuList>
-                          <MenuItem onClick={() => router.push(`/project/${projectResults.warehouseProjectId}`)} minH="48px">
+                          <MenuItem data-testid="view-project-details" onClick={() => router.push(`/project/${projectResults.warehouseProjectId}`)} minH="48px">
                             <Text flex={1} as="span">
                               {t(`projectMenu.viewProject`)}
                             </Text>

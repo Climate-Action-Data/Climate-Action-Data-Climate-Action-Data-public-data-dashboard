@@ -32,7 +32,7 @@ export default function Project({ params }: { params: { id: string } }) {
         <Container padding={[`12px`, `24px`]} flex={2} variant="cardSectionNoMargin">
           <ProjectDetailsInfo project={project} />
         </Container>
-        <Container minW="448px" maxW="448px" variant="cardSectionNoMarginNoPadding">
+        <Container minW={[`unset`, `448px`]} maxW="448px" variant="cardSectionNoMarginNoPadding">
           <GoogleMapWidget isLoading={project === undefined} coordinates={toCoordinates(project?.location.geoCoordinates) ?? project?.location.country} />
           <Container paddingX={6} paddingY={3}>
             <SimpleGrid columns={2} gap="24px">
@@ -44,7 +44,7 @@ export default function Project({ params }: { params: { id: string } }) {
         </Container>
       </CardSection>
       <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.verificationValidation`) }}>
-        <Container flex={2} variant="cardSectionNoMargin">
+        <Container padding={[`12px`, `24px`]} flex={2} variant="cardSectionNoMargin">
           <ProjectDetailsVerification validation={project?.validation} />
         </Container>
       </CardSection>
