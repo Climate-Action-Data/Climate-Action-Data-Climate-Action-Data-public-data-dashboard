@@ -1,7 +1,7 @@
 import { Calendar, GetDatePropsOptions } from 'dayzed'
 import { Box, Button, Text, Wrap, WrapItem } from '@chakra-ui/react'
 import { FC } from 'react'
-import { WEEKDAY_NAMES_SHORT } from '@/@types/Calendar'
+import { getWeekdayNames } from '@/@types/Calendar'
 
 interface CalendarBodyDatesProps {
   calendar: Calendar
@@ -11,10 +11,12 @@ interface CalendarBodyDatesProps {
 const CalendarBodyDates: FC<CalendarBodyDatesProps> = (props) => {
   const { calendar, getDateProps } = props
 
+  const weekDayNames = getWeekdayNames()
+
   return (
     <Box>
       <Wrap spacing={0}>
-        {WEEKDAY_NAMES_SHORT.map((weekday) => (
+        {weekDayNames.map((weekday) => (
           <WrapItem key={`${calendar.month}${calendar.year}${weekday}`} boxSize={`48px`} justifyContent={`center`}>
             <Text textAlign={`center`} fontFamily={`body`} fontWeight={`medium`} margin={`auto`}>
               {weekday[0]}

@@ -35,7 +35,7 @@ describe(`CreditingPeriodFilter`, () => {
 
   test(`renders a CreditingPeriodFilter with a pre-selected max date`, async () => {
     const mockData = MockData.SEARCH_FILTER_VALUES
-    mockData.selectedSearchFilterValues.searchFilterValues.filterDates = { maxDate: tDate }
+    mockData.selectedSearchFilterValues.searchFilterValues.creditingPeriod = { maxDate: tDate }
 
     const tLabel2 = `Up to ${format(tDate, `dd/MM/yyyy`)}`
 
@@ -53,7 +53,7 @@ describe(`CreditingPeriodFilter`, () => {
 
   test(`renders a CreditingPeriodFilter with a pre-selected min date and click on clear`, async () => {
     const mockData = MockData.SEARCH_FILTER_VALUES
-    mockData.selectedSearchFilterValues.searchFilterValues.filterDates = { minDate: tDate }
+    mockData.selectedSearchFilterValues.searchFilterValues.creditingPeriod = { minDate: tDate }
 
     const tLabel2 = `${format(tDate, `dd/MM/yyyy`)} and later`
 
@@ -71,7 +71,7 @@ describe(`CreditingPeriodFilter`, () => {
 
   test(`renders a CreditingPeriodFilter with a pre-selected min date and max date and click on apply`, async () => {
     const mockData = MockData.SEARCH_FILTER_VALUES
-    mockData.selectedSearchFilterValues.searchFilterValues.filterDates = { minDate: tDate, maxDate: tDate }
+    mockData.selectedSearchFilterValues.searchFilterValues.creditingPeriod = { minDate: tDate, maxDate: tDate }
 
     const tLabel2 = `${format(tDate, `dd/MM/yyyy`)} - ${format(tDate, `dd/MM/yyyy`)}`
 

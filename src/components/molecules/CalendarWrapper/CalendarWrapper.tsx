@@ -5,8 +5,7 @@ import { Box, Button, VStack } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import CalenderBody from '@/components/molecules/CalendarBody/CalendarBody'
 import { differenceInCalendarMonths } from 'date-fns'
-
-const MONTHS_IN_YEAR = 12
+import { MONTHS_IN_YEAR } from '@/@types/Calendar'
 
 interface CalendarWrapperProps {
   maxDate?: Date
@@ -52,7 +51,7 @@ const CalendarWrapper: FC<CalendarWrapperProps> = (props) => {
   return (
     <VStack>
       <Dayzed
-        onDateSelected={(selectedDate, event) => setSelectedDate(selectedDate.date)}
+        onDateSelected={(selectedDate) => setSelectedDate(selectedDate.date)}
         showOutsideDays
         offset={offset}
         maxDate={maxDate}
