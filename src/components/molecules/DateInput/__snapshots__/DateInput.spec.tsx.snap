@@ -31,8 +31,8 @@ exports[`DateInput renders a DateInput 1`] = `
       </div>
       <input
         class="chakra-input css-p5mn3g"
-        placeholder="DD/MM/YYYY"
-        value="01/08/2023"
+        placeholder="yyyy/MM/dd"
+        value="2023/08/01"
       />
     </div>
   </div>
@@ -70,8 +70,8 @@ exports[`DateInput renders a DateInput and type in a correct value 1`] = `
       </div>
       <input
         class="chakra-input css-p5mn3g"
-        placeholder="DD/MM/YYYY"
-        value="01/08/2023"
+        placeholder="yyyy/MM/dd"
+        value="2023/01/08"
       />
     </div>
   </div>
@@ -109,8 +109,8 @@ exports[`DateInput renders a DateInput and type in a value earlier than minDate 
       </div>
       <input
         class="chakra-input css-1eb9l0q"
-        placeholder="DD/MM/YYYY"
-        value="30/06/2023"
+        placeholder="yyyy/MM/dd"
+        value="2023/01/01"
       />
     </div>
   </div>
@@ -148,8 +148,8 @@ exports[`DateInput renders a DateInput and type in a value later than maxDate 1`
       </div>
       <input
         class="chakra-input css-1eb9l0q"
-        placeholder="DD/MM/YYYY"
-        value="02/09/2023"
+        placeholder="yyyy/MM/dd"
+        value="2024/01/01"
       />
     </div>
   </div>
@@ -187,7 +187,7 @@ exports[`DateInput renders a DateInput and type in a wrong value 1`] = `
       </div>
       <input
         class="chakra-input css-1eb9l0q"
-        placeholder="DD/MM/YYYY"
+        placeholder="yyyy/MM/dd"
         value="wrong"
       />
     </div>
@@ -226,7 +226,7 @@ exports[`DateInput renders a DateInput and type in a wrong value and clear it 1`
       </div>
       <input
         class="chakra-input css-p5mn3g"
-        placeholder="DD/MM/YYYY"
+        placeholder="yyyy/MM/dd"
         value=""
       />
     </div>
@@ -265,7 +265,7 @@ exports[`DateInput renders a DateInput with undefined value 1`] = `
       </div>
       <input
         class="chakra-input css-p5mn3g"
-        placeholder="DD/MM/YYYY"
+        placeholder="yyyy/MM/dd"
         value=""
       />
     </div>
