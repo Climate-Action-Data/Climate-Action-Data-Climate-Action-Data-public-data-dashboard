@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly with no project 1`] = `
+exports[`ProjectDetailsInfo renders correctly with no project 1`] = `
 <div>
   <div
     class="chakra-stack css-j7qwjs"
@@ -330,7 +330,7 @@ exports[`renders correctly with no project 1`] = `
 </div>
 `;
 
-exports[`renders correctly with project 1`] = `
+exports[`ProjectDetailsInfo renders correctly with project 1`] = `
 <div>
   <div
     class="chakra-stack css-j7qwjs"

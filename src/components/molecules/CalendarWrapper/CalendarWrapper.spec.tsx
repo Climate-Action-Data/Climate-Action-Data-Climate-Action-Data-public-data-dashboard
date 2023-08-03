@@ -19,7 +19,7 @@ describe(`CalendarWrapper`, () => {
   test(`renders a CalendarWrapper`, () => {
     const tApplySelectedDate = jest.fn()
 
-    const { container } = render(<CalendarWrapper applySelectedDate={tApplySelectedDate} />)
+    const { container } = render(<CalendarWrapper onApplySelectedDate={tApplySelectedDate} />)
 
     expect(container).toMatchSnapshot()
   })
@@ -27,7 +27,7 @@ describe(`CalendarWrapper`, () => {
   test(`renders a CalendarWrapper with a maximum date`, () => {
     const tApplySelectedDate = jest.fn()
 
-    const { container } = render(<CalendarWrapper applySelectedDate={tApplySelectedDate} preSelectedDate={tDate} maxDate={tDate} />)
+    const { container } = render(<CalendarWrapper onApplySelectedDate={tApplySelectedDate} preSelectedDate={tDate} maxDate={tDate} />)
 
     expect(container).toMatchSnapshot()
   })
@@ -35,7 +35,7 @@ describe(`CalendarWrapper`, () => {
   test(`renders a CalendarWrapper and select a date`, () => {
     const tApplySelectedDate = jest.fn()
 
-    const { container } = render(<CalendarWrapper applySelectedDate={tApplySelectedDate} />)
+    const { container } = render(<CalendarWrapper onApplySelectedDate={tApplySelectedDate} />)
     const tDay20 = screen.getByText(`20`)
 
     fireEvent.click(tDay20)
@@ -45,7 +45,7 @@ describe(`CalendarWrapper`, () => {
   test(`renders a CalendarWrapper with a preselectedDate`, () => {
     const tApplySelectedDate = jest.fn()
 
-    const { container } = render(<CalendarWrapper applySelectedDate={tApplySelectedDate} preSelectedDate={tDate} />)
+    const { container } = render(<CalendarWrapper onApplySelectedDate={tApplySelectedDate} preSelectedDate={tDate} />)
 
     expect(container).toMatchSnapshot()
   })
@@ -53,7 +53,7 @@ describe(`CalendarWrapper`, () => {
   test(`renders a CalendarWrapper and click on the actions`, async () => {
     const tApplySelectedDate = jest.fn()
 
-    render(<CalendarWrapper applySelectedDate={tApplySelectedDate} preSelectedDate={tDate} />)
+    render(<CalendarWrapper onApplySelectedDate={tApplySelectedDate} preSelectedDate={tDate} />)
 
     const tClearButton = screen.getByTestId(`calender-wrapper-clear`)
     const tOKButton = screen.getByTestId(`calender-wrapper-ok`)
@@ -67,7 +67,7 @@ describe(`CalendarWrapper`, () => {
   test(`renders a CalendarWrapper and click on the navigations`, () => {
     const tApplySelectedDate = jest.fn()
 
-    const { container } = render(<CalendarWrapper applySelectedDate={tApplySelectedDate} preSelectedDate={tDate} />)
+    const { container } = render(<CalendarWrapper onApplySelectedDate={tApplySelectedDate} preSelectedDate={tDate} />)
 
     const tPrevMonth = screen.getByLabelText(`before Aug`)
     const tNextMonth = screen.getByLabelText(`after Aug`)

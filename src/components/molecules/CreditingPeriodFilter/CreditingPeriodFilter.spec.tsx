@@ -4,6 +4,7 @@ import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 import userEvent from '@testing-library/user-event'
 import { MockData } from '@/test/TestOvermindMockData'
 import { format } from 'date-fns'
+import { DateFormats } from '@/@types/DateFormats'
 
 describe(`CreditingPeriodFilter`, () => {
   const tYear = 2023
@@ -37,7 +38,7 @@ describe(`CreditingPeriodFilter`, () => {
     const mockData = MockData.SEARCH_FILTER_VALUES
     mockData.selectedSearchFilterValues.searchFilterValues.creditingPeriod = { maxDate: tDate }
 
-    const tLabel2 = `Up to ${format(tDate, `dd/MM/yyyy`)}`
+    const tLabel2 = `Up to ${format(tDate, DateFormats.YYYY_MM_DD)}`
 
     const { container } = render(
       <TestOvermindWrapper searchFilters={mockData}>
@@ -55,7 +56,7 @@ describe(`CreditingPeriodFilter`, () => {
     const mockData = MockData.SEARCH_FILTER_VALUES
     mockData.selectedSearchFilterValues.searchFilterValues.creditingPeriod = { minDate: tDate }
 
-    const tLabel2 = `${format(tDate, `dd/MM/yyyy`)} and later`
+    const tLabel2 = `${format(tDate, DateFormats.YYYY_MM_DD)} and later`
 
     const { container } = render(
       <TestOvermindWrapper searchFilters={mockData}>
@@ -73,7 +74,7 @@ describe(`CreditingPeriodFilter`, () => {
     const mockData = MockData.SEARCH_FILTER_VALUES
     mockData.selectedSearchFilterValues.searchFilterValues.creditingPeriod = { minDate: tDate, maxDate: tDate }
 
-    const tLabel2 = `${format(tDate, `dd/MM/yyyy`)} - ${format(tDate, `dd/MM/yyyy`)}`
+    const tLabel2 = `${format(tDate, DateFormats.YYYY_MM_DD)} - ${format(tDate, DateFormats.YYYY_MM_DD)}`
 
     const { container } = render(
       <TestOvermindWrapper searchFilters={mockData}>
