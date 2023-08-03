@@ -530,7 +530,9 @@ exports[`PageDetails renders correctly 1`] = `
         <div
           class="chakra-container css-kzfr2u"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum ex vel blandit congue. Integer turpis lectus, porttitor sed tellus et, rhoncus suscipit lorem. Donec quis ante vitae mi commodo ultrices. Pellentesque accumsan magna enim, nec venenatis sapien vestibulum vitae.
+          <div
+            class="chakra-skeleton css-1p3r0co"
+          />
         </div>
       </div>
     </div>
