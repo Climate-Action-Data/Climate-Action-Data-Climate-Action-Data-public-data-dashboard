@@ -34,7 +34,7 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
         <DetailWidget title={t(`detailsHeaders.status`)}>{project.type}</DetailWidget>
         <DetailWidget title={t(`detailsHeaders.statusUpdated`)}>{project.type}</DetailWidget>
       </SimpleGrid>
-      <Flex>
+      <Flex flexWrap="wrap">
         <SimpleGrid columns={2} gap="24px">
           <DetailWidget title={t(`detailsHeaders.availableUnits`)}>{0}</DetailWidget>
           <DetailWidget title={t(`detailsHeaders.issuances`)}>{project.units.issued}</DetailWidget>

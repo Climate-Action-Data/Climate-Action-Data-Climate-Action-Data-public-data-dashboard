@@ -72,10 +72,10 @@ exports[`renders correctly 1`] = `
         </h2>
       </div>
       <div
-        class="css-16am3d6"
+        class="css-1mliti3"
       >
         <div
-          class="chakra-container css-kzfr2u"
+          class="chakra-container css-tqikoc"
         >
           <div
             class="chakra-stack css-j7qwjs"
@@ -406,10 +406,8 @@ exports[`renders correctly 1`] = `
         <div
           class="chakra-container css-1b7mn2k"
         >
-          <img
-            alt="PLACEHOLDER"
-            class="chakra-image css-1d662a6"
-            src="http://placekitten.com/448/448"
+          <div
+            class="chakra-skeleton css-t8wcef"
           />
           <div
             class="chakra-container css-bybdqv"
@@ -527,12 +525,12 @@ exports[`renders correctly 1`] = `
         </h2>
       </div>
       <div
-        class="css-16am3d6"
+        class="css-1mliti3"
       >
         <div
           class="chakra-container css-kzfr2u"
         >
-          Lorem ispum
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum ex vel blandit congue. Integer turpis lectus, porttitor sed tellus et, rhoncus suscipit lorem. Donec quis ante vitae mi commodo ultrices. Pellentesque accumsan magna enim, nec venenatis sapien vestibulum vitae.
         </div>
       </div>
     </div>
@@ -603,12 +601,12 @@ exports[`renders correctly 1`] = `
         </h2>
       </div>
       <div
-        class="css-16am3d6"
+        class="css-1mliti3"
       >
         <div
           class="chakra-container css-kzfr2u"
         >
-          Lorem ispum
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum ex vel blandit congue. Integer turpis lectus, porttitor sed tellus et, rhoncus suscipit lorem. Donec quis ante vitae mi commodo ultrices. Pellentesque accumsan magna enim, nec venenatis sapien vestibulum vitae.
         </div>
       </div>
     </div>
@@ -679,12 +677,12 @@ exports[`renders correctly 1`] = `
         </h2>
       </div>
       <div
-        class="css-16am3d6"
+        class="css-1mliti3"
       >
         <div
           class="chakra-container css-kzfr2u"
         >
-          Lorem ispum
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum ex vel blandit congue. Integer turpis lectus, porttitor sed tellus et, rhoncus suscipit lorem. Donec quis ante vitae mi commodo ultrices. Pellentesque accumsan magna enim, nec venenatis sapien vestibulum vitae.
         </div>
       </div>
     </div>

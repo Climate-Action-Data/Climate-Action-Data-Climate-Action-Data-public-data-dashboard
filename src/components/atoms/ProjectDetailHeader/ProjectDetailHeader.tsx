@@ -1,5 +1,6 @@
 import { Flex, Box, Image, Text, VStack, Heading } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
+import { LargeTextWithScroll } from '@/components/atoms/LargeTextWithScroll/LargeTextWithScroll'
 
 export interface ProjectDetailHeaderProps {
   id: string
@@ -13,7 +14,7 @@ export const ProjectDetailHeader = (props: ProjectDetailHeaderProps) => {
   const { t } = useTranslation(`projectDetails`)
 
   return (
-    <Flex gap={6}>
+    <Flex flexWrap="wrap" gap={6}>
       <Box position="relative" h="336px" flex={1}>
         <Image borderRadius="8px" alt="PLACEHOLDER" src={`https://placehold.co/920x336`} h="336px" w="100%" objectFit={`cover`} />
         <VStack
@@ -35,10 +36,10 @@ export const ProjectDetailHeader = (props: ProjectDetailHeaderProps) => {
         </VStack>
       </Box>
       <Box maxW="448px">
-        <Text fontSize="lg" fontWeight="medium">
+        <Text fontSize="lg" marginBottom="8px" fontWeight="medium">
           {t(`description`)}
         </Text>
-        <Text>{description}</Text>
+        <LargeTextWithScroll text={`${description}${description}`} />
       </Box>
     </Flex>
   )
