@@ -34,11 +34,10 @@ export const render = (status: Status, coordinates: google.maps.LatLngLiteral) =
 
 interface GoogleMapWidgetProps {
   coordinates?: ProjectCoordinates | string
-  onError?: (error: google.maps.LatLngLiteral) => void
 }
 
 export const GoogleMapWidget = (props: GoogleMapWidgetProps) => {
-  const { coordinates, onError } = props
+  const { coordinates } = props
   const { t } = useTranslation(`projectDetails`)
   const [mapCenter, setMapCenter] = useState<google.maps.LatLngLiteral>(DEFAULT_MAP_LOCATION)
 
@@ -50,7 +49,6 @@ export const GoogleMapWidget = (props: GoogleMapWidgetProps) => {
         })
         .catch(() => {
           setMapCenter(DEFAULT_MAP_LOCATION)
-          onError ? onError(DEFAULT_MAP_LOCATION) : undefined
         })
     }
   }, [coordinates])
