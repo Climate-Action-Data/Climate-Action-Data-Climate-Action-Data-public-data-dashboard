@@ -1,8 +1,10 @@
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
 import { Link } from '@chakra-ui/next-js'
-import { Stack, StackDivider, SimpleGrid, Flex } from '@chakra-ui/react'
+import { Stack, StackDivider, SimpleGrid, Flex, HStack } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { ProjectDetailsInfoSkeleton } from '../ProjectDetailsInfoSkeleton/ProjectDetailsInfoSkeleton'
+import { extractEWebGoalFromString } from '@/utils/TextConverter'
+import { EWebGoalIcon } from '@/components/atoms/EWebGoalIcon/EWebGoalIcon'
 
 interface ProjectDetailsInfoProps {
   project?: ProjectDetails
@@ -51,7 +53,16 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
       </SimpleGrid>
       <SimpleGrid columns={2} gap="24px">
         <DetailWidget title={t(`detailsHeaders.tags`)}>{project.tags}</DetailWidget>
-        <DetailWidget title={t(`detailsHeaders.coBenefits`)}>{project.coBenefits.join(`,`)}</DetailWidget>
+        <DetailWidget asBox title={t(`detailsHeaders.coBenefits`)}>
+          <HStack gap="4px">
+            {project.coBenefits.map((benefit) => {
+              const eWebGoal = extractEWebGoalFromString(benefit)
+              if (eWebGoal) {
+                return <EWebGoalIcon key={benefit} goal={eWebGoal} />
+              }
+            })}
+          </HStack>
+        </DetailWidget>
       </SimpleGrid>
     </Stack>
   )

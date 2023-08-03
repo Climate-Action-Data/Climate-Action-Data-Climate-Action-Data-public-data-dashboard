@@ -607,9 +607,13 @@ exports[`renders correctly with project 1`] = `
         >
           Co-Benefits
         </p>
-        <p
-          class="chakra-text css-0"
-        />
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-stack css-1mlvmbj"
+          />
+        </div>
       </div>
     </div>
   </div>
