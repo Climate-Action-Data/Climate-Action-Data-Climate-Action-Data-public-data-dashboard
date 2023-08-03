@@ -3,8 +3,6 @@ import { Link } from '@chakra-ui/next-js'
 import { Stack, StackDivider, SimpleGrid, Flex } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { ProjectDetailsInfoSkeleton } from '../ProjectDetailsInfoSkeleton/ProjectDetailsInfoSkeleton'
-import { formatDate } from '@/utils/DateFormat'
-import { DateFormats } from '@/@types/DateFormats'
 
 interface ProjectDetailsInfoProps {
   project?: ProjectDetails
