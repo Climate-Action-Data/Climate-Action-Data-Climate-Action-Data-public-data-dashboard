@@ -1,0 +1,51 @@
+name: Deployment to production
+run-name: Deploy ${{ github.event.release.name }} to production by @${{ github.actor }}
+
+on:
+  release:
+    types: [ released ]
+
+jobs:
+  Env:
+    runs-on: ubuntu-latest
+    environment: Production
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Build env file
+        uses: "./.github/workflows/templates/env"
+        with:
+          next_public_api_key: ${{ secrets.NEXT_PUBLIC_API_KEY }}
+          next_public_api_host: ${{ secrets.NEXT_PUBLIC_API_HOST }}
+          next_public_google_map_api_key: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAP_API_KEY }}
+
+
+  Checks:
+    runs-on: ubuntu-latest
+    environment: Production
+    needs: Env
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Checks
+        uses: "./.github/workflows/templates/checks"
+
+
+  Deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: Production
+    needs: Checks
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+
+      - name: Deploy into bucket
+        uses: "./.github/workflows/templates/deploy"
+        with:
+          service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+          bucket_name: ${{ vars.BUCKET_NAME }}
+
