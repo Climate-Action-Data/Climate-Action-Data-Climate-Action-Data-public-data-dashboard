@@ -45,6 +45,7 @@ describe(`DateInput`, () => {
 
     await user.type(screen.getByRole(`textbox`), `01/08/2023`)
     await user.tab()
+
     expect(tOnChange).toHaveBeenCalledTimes(1)
     expect(container).toMatchSnapshot()
   })
@@ -57,6 +58,7 @@ describe(`DateInput`, () => {
 
     await user.type(screen.getByRole(`textbox`), `wrong`)
     await user.tab()
+
     expect(tOnChange).toHaveBeenCalledTimes(0)
     expect(container).toMatchSnapshot()
   })
@@ -82,8 +84,9 @@ describe(`DateInput`, () => {
 
     const { container } = render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} openDatePicker={toOenDatePicker} minDate={tDate} />)
 
-    await user.type(screen.getByRole(`textbox`), `30/06/2023`)
+    await user.type(screen.getByRole(`textbox`), `2023/01/01`)
     await user.tab()
+
     expect(container).toMatchSnapshot()
   })
 
@@ -93,8 +96,9 @@ describe(`DateInput`, () => {
 
     const { container } = render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} openDatePicker={toOenDatePicker} maxDate={tDate} />)
 
-    await user.type(screen.getByRole(`textbox`), `02/09/2023`)
+    await user.type(screen.getByRole(`textbox`), `2024/01/01`)
     await user.tab()
+
     expect(container).toMatchSnapshot()
   })
   test(`renders a DateInput and click on the Calendar icon`, async () => {
@@ -104,6 +108,7 @@ describe(`DateInput`, () => {
     render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} openDatePicker={toOenDatePicker} maxDate={tDate} />)
 
     await user.click(screen.getByTestId(`datepicker-trigger`))
+
     expect(toOenDatePicker).toHaveBeenCalledTimes(1)
   })
 })
