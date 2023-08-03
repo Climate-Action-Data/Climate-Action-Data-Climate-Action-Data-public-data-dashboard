@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <img
-    alt="EWebGoal1"
+    alt="No Poverty"
     class="chakra-image css-1ngw63v"
     src="/img.jpg"
   />
