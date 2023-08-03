@@ -439,7 +439,7 @@ exports[`renders correctly with project 1`] = `
         <p
           class="chakra-text css-0"
         >
-          status
+          Reforestation and Revegetation
         </p>
       </div>
       <div
@@ -453,7 +453,7 @@ exports[`renders correctly with project 1`] = `
         <p
           class="chakra-text css-0"
         >
-          8/2/2023
+          Reforestation and Revegetation
         </p>
       </div>
     </div>

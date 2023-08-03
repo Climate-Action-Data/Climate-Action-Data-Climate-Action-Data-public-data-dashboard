@@ -29,8 +29,8 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
         </DetailWidget>
         <DetailWidget title={t(`detailsHeaders.sector`)}>{project.sector}</DetailWidget>
         <DetailWidget title={t(`detailsHeaders.type`)}>{project.type}</DetailWidget>
-        <DetailWidget title={t(`detailsHeaders.status`)}>status</DetailWidget>
-        <DetailWidget title={t(`detailsHeaders.statusUpdated`)}>{new Date().toLocaleDateString()}</DetailWidget>
+        <DetailWidget title={t(`detailsHeaders.status`)}>{project.type}</DetailWidget>
+        <DetailWidget title={t(`detailsHeaders.statusUpdated`)}>{project.type}</DetailWidget>
       </SimpleGrid>
       <Flex>
         <SimpleGrid columns={2} gap="24px">
