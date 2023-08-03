@@ -2,9 +2,8 @@
 
 exports[`renders correctly 1`] = `
 <div>
-  <div
-    class="css-1uillt7"
-    id="map"
-  />
+  <button>
+    Click Me
+  </button>
 </div>
 `;

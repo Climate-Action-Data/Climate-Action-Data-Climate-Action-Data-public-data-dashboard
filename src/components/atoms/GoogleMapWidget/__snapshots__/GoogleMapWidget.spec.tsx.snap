@@ -29,7 +29,12 @@ exports[`render renders correctly with loading status 1`] = `
   borderTopLeftRadius="8px"
   borderTopRightRadius="8px"
   height="448px"
-  width="448px"
+  width={
+    [
+      "unset",
+      "448px",
+    ]
+  }
 />
 `;
 

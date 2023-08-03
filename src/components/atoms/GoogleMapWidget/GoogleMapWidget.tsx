@@ -26,7 +26,7 @@ export const geoDecode = (coordinates: ProjectCoordinates | string) => {
 
 export const render = (status: Status, coordinates: google.maps.LatLngLiteral) => {
   if (status === Status.LOADING) {
-    return <Skeleton borderTopLeftRadius="8px" borderTopRightRadius="8px" width="448px" height="448px" />
+    return <Skeleton borderTopLeftRadius="8px" borderTopRightRadius="8px" width={[`unset`, `448px`]} height="448px" />
   } else {
     return <GoogleMap center={coordinates} zoom={coordinates !== DEFAULT_MAP_LOCATION ? DEFAULT_MAP_ZOOM_IN : DEFAULT_MAP_ZOOM} />
   }
@@ -58,12 +58,12 @@ export const GoogleMapWidget = (props: GoogleMapWidgetProps) => {
     return <Text>{t(`noApiKey`)}</Text>
   }
   if (isLoading) {
-    return <Skeleton borderTopLeftRadius="8px" borderTopRightRadius="8px" width="448px" height="448px" />
+    return <Skeleton borderTopLeftRadius="8px" borderTopRightRadius="8px" width={[`unset`, `448px`]} height="448px" />
   }
 
   if (!coordinates) {
     return (
-      <Box position="relative" w="448px" h="448px" minW="448px" minH="448px">
+      <Box position="relative" w={[`unset`, `448px`]} h="448px" minW={[`unset`, `448px`]} minH="448px">
         <Wrapper apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY} render={(status) => render(status, mapCenter)} />
         <Flex padding="120px" alignItems="center" textAlign="center" backgroundColor="#dbdee0cc" position="absolute" top={0} left={0} w="100%" h="100%">
           <Text fontSize="lg" color="lightGray.700">

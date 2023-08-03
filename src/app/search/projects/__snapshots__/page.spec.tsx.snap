@@ -815,6 +815,7 @@ exports[`renders correctly and click next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r9s:-menuitem-:r9t:"
                         role="menuitem"
                         tabindex="-1"
@@ -950,6 +951,7 @@ exports[`renders correctly and click next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:ra1:-menuitem-:ra2:"
                         role="menuitem"
                         tabindex="-1"
@@ -1085,6 +1087,7 @@ exports[`renders correctly and click next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:ra6:-menuitem-:ra7:"
                         role="menuitem"
                         tabindex="-1"
@@ -1220,6 +1223,7 @@ exports[`renders correctly and click next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rab:-menuitem-:rac:"
                         role="menuitem"
                         tabindex="-1"
@@ -1355,6 +1359,7 @@ exports[`renders correctly and click next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rag:-menuitem-:rah:"
                         role="menuitem"
                         tabindex="-1"
@@ -1490,6 +1495,7 @@ exports[`renders correctly and click next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:ral:-menuitem-:ram:"
                         role="menuitem"
                         tabindex="-1"
@@ -1625,6 +1631,7 @@ exports[`renders correctly and click next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:raq:-menuitem-:rar:"
                         role="menuitem"
                         tabindex="-1"
@@ -1760,6 +1767,7 @@ exports[`renders correctly and click next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rav:-menuitem-:rb0:"
                         role="menuitem"
                         tabindex="-1"
@@ -1895,6 +1903,7 @@ exports[`renders correctly and click next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rb4:-menuitem-:rb5:"
                         role="menuitem"
                         tabindex="-1"
@@ -2030,6 +2039,7 @@ exports[`renders correctly and click next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rb9:-menuitem-:rba:"
                         role="menuitem"
                         tabindex="-1"
@@ -2165,6 +2175,7 @@ exports[`renders correctly and click next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rbe:-menuitem-:rbf:"
                         role="menuitem"
                         tabindex="-1"
@@ -2300,6 +2311,7 @@ exports[`renders correctly and click next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rbj:-menuitem-:rbk:"
                         role="menuitem"
                         tabindex="-1"
@@ -2436,6 +2448,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rbo:-menuitem-:rbp:"
                         role="menuitem"
                         tabindex="-1"
@@ -2571,6 +2584,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rbt:-menuitem-:rbu:"
                         role="menuitem"
                         tabindex="-1"
@@ -2706,6 +2720,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rc2:-menuitem-:rc3:"
                         role="menuitem"
                         tabindex="-1"
@@ -2841,6 +2856,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rc7:-menuitem-:rc8:"
                         role="menuitem"
                         tabindex="-1"
@@ -2976,6 +2992,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rcc:-menuitem-:rcd:"
                         role="menuitem"
                         tabindex="-1"
@@ -3111,6 +3128,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rch:-menuitem-:rci:"
                         role="menuitem"
                         tabindex="-1"
@@ -3246,6 +3264,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rcm:-menuitem-:rcn:"
                         role="menuitem"
                         tabindex="-1"
@@ -3381,6 +3400,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rcr:-menuitem-:rcs:"
                         role="menuitem"
                         tabindex="-1"
@@ -3516,6 +3536,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rd0:-menuitem-:rd1:"
                         role="menuitem"
                         tabindex="-1"
@@ -3973,6 +3994,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
           >
             <tr
               class="project-row-0 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -4050,6 +4072,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-1 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -4127,6 +4150,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-2 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -4201,6 +4225,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-3 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -4275,6 +4300,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-4 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -4352,6 +4378,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-5 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -4429,6 +4456,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-6 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -4506,6 +4534,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-7 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -4583,6 +4612,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-8 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -4660,6 +4690,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-9 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -4740,6 +4771,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-10 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -4808,6 +4840,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-11 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -4885,6 +4918,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-12 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -4959,6 +4993,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-13 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -5036,6 +5071,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-14 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -5110,6 +5146,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-15 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -5187,6 +5224,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-16 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -5264,6 +5302,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-17 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -5338,6 +5377,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-18 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -5415,6 +5455,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-19 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -5492,6 +5533,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-20 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -5820,6 +5862,7 @@ exports[`renders correctly on table data 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r1:-menuitem-:r2:"
                         role="menuitem"
                         tabindex="-1"
@@ -5955,6 +5998,7 @@ exports[`renders correctly on table data 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r6:-menuitem-:r7:"
                         role="menuitem"
                         tabindex="-1"
@@ -6090,6 +6134,7 @@ exports[`renders correctly on table data 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rb:-menuitem-:rc:"
                         role="menuitem"
                         tabindex="-1"
@@ -6225,6 +6270,7 @@ exports[`renders correctly on table data 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rg:-menuitem-:rh:"
                         role="menuitem"
                         tabindex="-1"
@@ -6360,6 +6406,7 @@ exports[`renders correctly on table data 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rl:-menuitem-:rm:"
                         role="menuitem"
                         tabindex="-1"
@@ -6495,6 +6542,7 @@ exports[`renders correctly on table data 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rq:-menuitem-:rr:"
                         role="menuitem"
                         tabindex="-1"
@@ -6630,6 +6678,7 @@ exports[`renders correctly on table data 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:rv:-menuitem-:r10:"
                         role="menuitem"
                         tabindex="-1"
@@ -6765,6 +6814,7 @@ exports[`renders correctly on table data 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r14:-menuitem-:r15:"
                         role="menuitem"
                         tabindex="-1"
@@ -6900,6 +6950,7 @@ exports[`renders correctly on table data 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r19:-menuitem-:r1a:"
                         role="menuitem"
                         tabindex="-1"
@@ -7035,6 +7086,7 @@ exports[`renders correctly on table data 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r1e:-menuitem-:r1f:"
                         role="menuitem"
                         tabindex="-1"
@@ -7170,6 +7222,7 @@ exports[`renders correctly on table data 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r1j:-menuitem-:r1k:"
                         role="menuitem"
                         tabindex="-1"
@@ -7305,6 +7358,7 @@ exports[`renders correctly on table data 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r1o:-menuitem-:r1p:"
                         role="menuitem"
                         tabindex="-1"
@@ -7441,6 +7495,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r1t:-menuitem-:r1u:"
                         role="menuitem"
                         tabindex="-1"
@@ -7576,6 +7631,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r22:-menuitem-:r23:"
                         role="menuitem"
                         tabindex="-1"
@@ -7711,6 +7767,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r27:-menuitem-:r28:"
                         role="menuitem"
                         tabindex="-1"
@@ -7846,6 +7903,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r2c:-menuitem-:r2d:"
                         role="menuitem"
                         tabindex="-1"
@@ -7981,6 +8039,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r2h:-menuitem-:r2i:"
                         role="menuitem"
                         tabindex="-1"
@@ -8116,6 +8175,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r2m:-menuitem-:r2n:"
                         role="menuitem"
                         tabindex="-1"
@@ -8251,6 +8311,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r2r:-menuitem-:r2s:"
                         role="menuitem"
                         tabindex="-1"
@@ -8386,6 +8447,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r30:-menuitem-:r31:"
                         role="menuitem"
                         tabindex="-1"
@@ -8521,6 +8583,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r35:-menuitem-:r36:"
                         role="menuitem"
                         tabindex="-1"
@@ -8978,6 +9041,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
           >
             <tr
               class="project-row-0 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -9055,6 +9119,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-1 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -9132,6 +9197,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-2 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -9206,6 +9272,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-3 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -9280,6 +9347,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-4 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -9357,6 +9425,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-5 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -9434,6 +9503,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-6 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -9511,6 +9581,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-7 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -9588,6 +9659,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-8 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -9665,6 +9737,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-9 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -9745,6 +9818,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-10 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -9813,6 +9887,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-11 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -9890,6 +9965,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-12 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -9964,6 +10040,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-13 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -10041,6 +10118,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-14 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -10115,6 +10193,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-15 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -10192,6 +10271,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-16 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -10269,6 +10349,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-17 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -10343,6 +10424,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-18 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -10420,6 +10502,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-19 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -10497,6 +10580,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-20 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -10819,6 +10903,7 @@ exports[`renders correctly on table data and next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r3a:-menuitem-:r3b:"
                         role="menuitem"
                         tabindex="-1"
@@ -10954,6 +11039,7 @@ exports[`renders correctly on table data and next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r3f:-menuitem-:r3g:"
                         role="menuitem"
                         tabindex="-1"
@@ -11089,6 +11175,7 @@ exports[`renders correctly on table data and next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r3k:-menuitem-:r3l:"
                         role="menuitem"
                         tabindex="-1"
@@ -11224,6 +11311,7 @@ exports[`renders correctly on table data and next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r3p:-menuitem-:r3q:"
                         role="menuitem"
                         tabindex="-1"
@@ -11359,6 +11447,7 @@ exports[`renders correctly on table data and next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r3u:-menuitem-:r3v:"
                         role="menuitem"
                         tabindex="-1"
@@ -11494,6 +11583,7 @@ exports[`renders correctly on table data and next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r43:-menuitem-:r44:"
                         role="menuitem"
                         tabindex="-1"
@@ -11629,6 +11719,7 @@ exports[`renders correctly on table data and next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r48:-menuitem-:r49:"
                         role="menuitem"
                         tabindex="-1"
@@ -11764,6 +11855,7 @@ exports[`renders correctly on table data and next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r4d:-menuitem-:r4e:"
                         role="menuitem"
                         tabindex="-1"
@@ -11899,6 +11991,7 @@ exports[`renders correctly on table data and next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r4i:-menuitem-:r4j:"
                         role="menuitem"
                         tabindex="-1"
@@ -12034,6 +12127,7 @@ exports[`renders correctly on table data and next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r4n:-menuitem-:r4o:"
                         role="menuitem"
                         tabindex="-1"
@@ -12169,6 +12263,7 @@ exports[`renders correctly on table data and next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r4s:-menuitem-:r4t:"
                         role="menuitem"
                         tabindex="-1"
@@ -12304,6 +12399,7 @@ exports[`renders correctly on table data and next page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r51:-menuitem-:r52:"
                         role="menuitem"
                         tabindex="-1"
@@ -12440,6 +12536,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r56:-menuitem-:r57:"
                         role="menuitem"
                         tabindex="-1"
@@ -12575,6 +12672,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r5b:-menuitem-:r5c:"
                         role="menuitem"
                         tabindex="-1"
@@ -12710,6 +12808,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r5g:-menuitem-:r5h:"
                         role="menuitem"
                         tabindex="-1"
@@ -12845,6 +12944,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r5l:-menuitem-:r5m:"
                         role="menuitem"
                         tabindex="-1"
@@ -12980,6 +13080,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r5q:-menuitem-:r5r:"
                         role="menuitem"
                         tabindex="-1"
@@ -13115,6 +13216,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r5v:-menuitem-:r60:"
                         role="menuitem"
                         tabindex="-1"
@@ -13250,6 +13352,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r64:-menuitem-:r65:"
                         role="menuitem"
                         tabindex="-1"
@@ -13385,6 +13488,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r69:-menuitem-:r6a:"
                         role="menuitem"
                         tabindex="-1"
@@ -13520,6 +13624,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r6e:-menuitem-:r6f:"
                         role="menuitem"
                         tabindex="-1"
@@ -13977,6 +14082,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
           >
             <tr
               class="project-row-0 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -14054,6 +14160,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-1 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -14131,6 +14238,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-2 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -14205,6 +14313,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-3 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -14279,6 +14388,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-4 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -14356,6 +14466,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-5 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -14433,6 +14544,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-6 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -14510,6 +14622,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-7 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -14587,6 +14700,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-8 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -14664,6 +14778,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-9 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -14744,6 +14859,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-10 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -14812,6 +14928,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-11 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -14889,6 +15006,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-12 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -14963,6 +15081,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-13 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -15040,6 +15159,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-14 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -15114,6 +15234,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-15 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -15191,6 +15312,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-16 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -15268,6 +15390,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-17 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -15342,6 +15465,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-18 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -15419,6 +15543,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-19 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -15496,6 +15621,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-20 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -15816,6 +15942,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r6j:-menuitem-:r6k:"
                         role="menuitem"
                         tabindex="-1"
@@ -15951,6 +16078,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r6o:-menuitem-:r6p:"
                         role="menuitem"
                         tabindex="-1"
@@ -16086,6 +16214,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r6t:-menuitem-:r6u:"
                         role="menuitem"
                         tabindex="-1"
@@ -16221,6 +16350,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r72:-menuitem-:r73:"
                         role="menuitem"
                         tabindex="-1"
@@ -16356,6 +16486,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r77:-menuitem-:r78:"
                         role="menuitem"
                         tabindex="-1"
@@ -16491,6 +16622,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r7c:-menuitem-:r7d:"
                         role="menuitem"
                         tabindex="-1"
@@ -16626,6 +16758,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r7h:-menuitem-:r7i:"
                         role="menuitem"
                         tabindex="-1"
@@ -16761,6 +16894,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r7m:-menuitem-:r7n:"
                         role="menuitem"
                         tabindex="-1"
@@ -16896,6 +17030,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r7r:-menuitem-:r7s:"
                         role="menuitem"
                         tabindex="-1"
@@ -17031,6 +17166,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r80:-menuitem-:r81:"
                         role="menuitem"
                         tabindex="-1"
@@ -17166,6 +17302,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r85:-menuitem-:r86:"
                         role="menuitem"
                         tabindex="-1"
@@ -17301,6 +17438,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r8a:-menuitem-:r8b:"
                         role="menuitem"
                         tabindex="-1"
@@ -17437,6 +17575,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r8f:-menuitem-:r8g:"
                         role="menuitem"
                         tabindex="-1"
@@ -17572,6 +17711,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r8k:-menuitem-:r8l:"
                         role="menuitem"
                         tabindex="-1"
@@ -17707,6 +17847,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r8p:-menuitem-:r8q:"
                         role="menuitem"
                         tabindex="-1"
@@ -17842,6 +17983,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r8u:-menuitem-:r8v:"
                         role="menuitem"
                         tabindex="-1"
@@ -17977,6 +18119,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r93:-menuitem-:r94:"
                         role="menuitem"
                         tabindex="-1"
@@ -18112,6 +18255,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r98:-menuitem-:r99:"
                         role="menuitem"
                         tabindex="-1"
@@ -18247,6 +18391,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r9d:-menuitem-:r9e:"
                         role="menuitem"
                         tabindex="-1"
@@ -18382,6 +18527,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r9i:-menuitem-:r9j:"
                         role="menuitem"
                         tabindex="-1"
@@ -18517,6 +18663,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
                       <button
                         class="chakra-menu__menuitem css-1eocwdv"
                         data-index="0"
+                        data-testid="view-project-details"
                         id="menu-list-:r9n:-menuitem-:r9o:"
                         role="menuitem"
                         tabindex="-1"
@@ -18974,6 +19121,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
           >
             <tr
               class="project-row-0 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -19051,6 +19199,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-1 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -19128,6 +19277,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-2 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -19202,6 +19352,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-3 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -19276,6 +19427,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-4 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -19353,6 +19505,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-5 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -19430,6 +19583,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-6 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -19507,6 +19661,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-7 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -19584,6 +19739,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-8 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -19661,6 +19817,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-9 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -19741,6 +19898,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-10 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -19809,6 +19967,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-11 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -19886,6 +20045,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-12 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -19960,6 +20120,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-13 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -20037,6 +20198,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-14 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -20111,6 +20273,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-15 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -20188,6 +20351,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-16 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -20265,6 +20429,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-17 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -20339,6 +20504,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-18 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -20416,6 +20582,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-19 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"
@@ -20493,6 +20660,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             </tr>
             <tr
               class="project-row-20 css-mii0oe"
+              data-testid="table-row"
             >
               <td
                 class="css-0"

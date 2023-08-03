@@ -25,5 +25,5 @@ export const GoogleMap = (props: GoogleMapProps) => {
     }
   })
 
-  return <Box borderTopLeftRadius="8px" borderTopRightRadius="8px" h="448px" w="448px" ref={ref} id="map" />
+  return <Box borderTopLeftRadius="8px" borderTopRightRadius="8px" h="448px" w={[`unset`, `448px`]} ref={ref} id="map" />
 }

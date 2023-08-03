@@ -404,10 +404,10 @@ exports[`PageDetails renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="chakra-container css-1b7mn2k"
+          class="chakra-container css-11scci"
         >
           <div
-            class="chakra-skeleton css-t8wcef"
+            class="chakra-skeleton css-l30rjy"
           />
           <div
             class="chakra-container css-bybdqv"
@@ -528,7 +528,7 @@ exports[`PageDetails renders correctly 1`] = `
         class="css-1mliti3"
       >
         <div
-          class="chakra-container css-kzfr2u"
+          class="chakra-container css-tqikoc"
         >
           <div
             class="chakra-skeleton css-1p3r0co"
