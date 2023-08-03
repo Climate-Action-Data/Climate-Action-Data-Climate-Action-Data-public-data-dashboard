@@ -14,7 +14,7 @@ const SearchBar: FC = () => {
     selectedSearchFilterValues: { searchFilterValues: selectedSearchFilters },
   } = useAppState().searchFilters
 
-  const { setCountriesFilter, setMethodologiesFilter, setProjectStatusesFilter, setSectorsFilter, setStandardsFilter } = useActions().searchFilters
+  const { setCountriesFilter, setMethodologiesFilter, setSectorsFilter, setStandardsFilter } = useActions().searchFilters
   const { getGovernanceData } = useEffects().searchFilters
   const { transformGovernanceDataToSearchFilterData } = useActions().searchFilters
   const { t } = useTranslation(`search`)
@@ -55,13 +55,6 @@ const SearchBar: FC = () => {
             selectedFilters={selectedSearchFilters.methodologies}
             noOfSelectedFilters={selectedSearchFilters.methodologies.length}
             applyFilters={setMethodologiesFilter}
-          />
-          <AutoCompleteCheckbox
-            label={`Status`}
-            options={searchFilterValues.projectStatuses}
-            selectedFilters={selectedSearchFilters.projectStatuses}
-            noOfSelectedFilters={selectedSearchFilters.projectStatuses.length}
-            applyFilters={setProjectStatusesFilter}
           />
           <AutoCompleteCheckbox
             label={`Sector`}

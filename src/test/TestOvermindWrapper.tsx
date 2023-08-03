@@ -37,7 +37,6 @@ export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
   const searchFilters = props?.searchFilters ?? {
     selectedSearchFilterValues: {
       searchFilterValues: {
-        projectStatuses: [],
         standards: [],
         methodologies: [],
         sectors: [],
@@ -46,7 +45,6 @@ export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
     },
     allSearchFilterValues: {
       searchFilterValues: {
-        projectStatuses: [],
         standards: [],
         methodologies: [],
         sectors: [],

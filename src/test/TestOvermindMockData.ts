@@ -145,7 +145,6 @@ const SearchOptions = [`option 1`, `option 2`, `option 2`]
 const SEARCH_FILTER_VALUES: SearchFiltersStateData = {
   selectedSearchFilterValues: {
     searchFilterValues: {
-      projectStatuses: SearchOptions,
       sectors: SearchOptions,
       methodologies: SearchOptions,
       standards: SearchOptions,
@@ -154,7 +153,6 @@ const SEARCH_FILTER_VALUES: SearchFiltersStateData = {
   },
   allSearchFilterValues: {
     searchFilterValues: {
-      projectStatuses: SearchOptions,
       sectors: SearchOptions,
       methodologies: SearchOptions,
       standards: SearchOptions,
