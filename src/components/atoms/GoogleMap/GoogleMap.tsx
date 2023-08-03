@@ -1,6 +1,5 @@
 import { Box } from '@chakra-ui/react'
-import React from 'react'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 interface GoogleMapProps {
   center: google.maps.LatLngLiteral
@@ -9,7 +8,7 @@ interface GoogleMapProps {
 
 export const GoogleMap = (props: GoogleMapProps) => {
   const { center, zoom } = props
-  const ref = React.useRef<HTMLDivElement | null>(null)
+  const ref = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     if (ref.current) {
