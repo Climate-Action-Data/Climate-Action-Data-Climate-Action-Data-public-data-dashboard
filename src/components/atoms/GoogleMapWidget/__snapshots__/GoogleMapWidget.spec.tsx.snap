@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render renders correctly with bad status 1`] = `
+<GoogleMap
+  center={
+    {
+      "lat": 45.76342,
+      "lng": 4.834277,
+    }
+  }
+  zoom={10}
+/>
+`;
+
+exports[`render renders correctly with good status 1`] = `
+<GoogleMap
+  center={
+    {
+      "lat": 45.76342,
+      "lng": 4.834277,
+    }
+  }
+  zoom={10}
+/>
+`;
+
+exports[`render renders correctly with loading status 1`] = `
+<Skeleton
+  borderTopLeftRadius="8px"
+  borderTopRightRadius="8px"
+  height="448px"
+  width="448px"
+/>
+`;
+
+exports[`renders correctly with city 1`] = `<div />`;
+
+exports[`renders correctly with coordinates 1`] = `<div />`;
+
+exports[`renders correctly with country coord 1`] = `<div />`;
+
+exports[`renders correctly with undefined 1`] = `<div />`;
+
+exports[`renders correctly with undefined coord 1`] = `<div />`;
