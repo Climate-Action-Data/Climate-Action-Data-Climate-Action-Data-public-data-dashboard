@@ -4,6 +4,7 @@ import { GoogleMapWidget } from '@/components/atoms/GoogleMapWidget/GoogleMapWid
 import { ProjectDetailHeader } from '@/components/atoms/ProjectDetailHeader/ProjectDetailHeader'
 import { CardSection } from '@/components/molecules/CardSection/CardSection'
 import { ProjectDetailsInfo } from '@/components/molecules/ProjectDetailsInfo/ProjectDetailsInfo'
+import { ProjectDetailsVerification } from '@/components/molecules/ProjectDetailsVerification/ProjectDetailsVerification'
 import { useEffects } from '@/overmind'
 import { coordinatesToString, toCoordinates } from '@/utils/UnitConverter'
 import { Flex, Container, SimpleGrid } from '@chakra-ui/react'
@@ -44,7 +45,7 @@ export default function Project({ params }: { params: { id: string } }) {
       </CardSection>
       <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.verificationValidation`) }}>
         <Container flex={2} variant="cardSectionNoMargin">
-          <>{t(`lorem`)}</>
+          <ProjectDetailsVerification validation={project?.validation} />
         </Container>
       </CardSection>
       <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.issuancesRetirements`) }}>
