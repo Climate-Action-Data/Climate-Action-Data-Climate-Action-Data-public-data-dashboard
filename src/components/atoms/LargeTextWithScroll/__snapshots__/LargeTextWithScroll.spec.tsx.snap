@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with text 1`] = `
+<div>
+  <div
+    class="css-185sgvb"
+    data-testid="large-text-scroll"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      My Text
+    </p>
+    <div
+      class="css-1lnkscb"
+    >
+      <div
+        class="css-ood9u6"
+      >
+        Scroll to read more
+      </div>
+      <svg
+        class="chakra-icon css-sxms86"
+        focusable="false"
+        viewBox="0 0 12 13"
+      >
+        <path
+          d="M5.99953 12.6884L0.345703 7.0346L1.39953 5.98078L5.99953 10.5654L10.5995 5.98078L11.6534 7.0346L5.99953 12.6884ZM5.99953 6.70765L0.345703 1.05383L1.39953 0L5.99953 4.58463L10.5995 0L11.6534 1.05383L5.99953 6.70765Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with text 2`] = `
+<div>
+  <div
+    class="css-185sgvb"
+    data-testid="large-text-scroll"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      My Text
+    </p>
+    <div
+      class="css-1lnkscb"
+    >
+      <div
+        class="css-ood9u6"
+      >
+        Scroll to read more
+      </div>
+      <svg
+        class="chakra-icon css-sxms86"
+        focusable="false"
+        viewBox="0 0 12 13"
+      >
+        <path
+          d="M5.99953 12.6884L0.345703 7.0346L1.39953 5.98078L5.99953 10.5654L10.5995 5.98078L11.6534 7.0346L5.99953 12.6884ZM5.99953 6.70765L0.345703 1.05383L1.39953 0L5.99953 4.58463L10.5995 0L11.6534 1.05383L5.99953 6.70765Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;

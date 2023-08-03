@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="css-ffmerx"
+    class="css-wq87pz"
   >
     <div
       class="css-1teq9s8"
@@ -37,15 +37,19 @@ exports[`renders correctly 1`] = `
       class="css-13n95wf"
     >
       <p
-        class="chakra-text css-1hfosol"
+        class="chakra-text css-1vb39qn"
       >
         Description
       </p>
-      <p
-        class="chakra-text css-0"
+      <div
+        class="css-0"
       >
-        Project Description
-      </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Project DescriptionProject Description
+        </p>
+      </div>
     </div>
   </div>
 </div>
