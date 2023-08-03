@@ -18,6 +18,7 @@ import EWebGoal14 from '@/assets/web-goal/E-WEB-Goal-14.svg'
 import EWebGoal15 from '@/assets/web-goal/E-WEB-Goal-15.svg'
 import EWebGoal16 from '@/assets/web-goal/E-WEB-Goal-16.svg'
 import EWebGoal17 from '@/assets/web-goal/E-WEB-Goal-17.svg'
+import { useTranslation } from 'react-i18next'
 
 interface EWebGoalIconProps {
   goal: EWebGoal
@@ -25,41 +26,41 @@ interface EWebGoalIconProps {
 
 export const EWebGoalIcon = (props: EWebGoalIconProps) => {
   const { goal } = props
-
+  const { t } = useTranslation(`projectDetails`)
   switch (goal) {
     case EWebGoal.SDG1:
-      return <Image w="40px" h="40px" src={EWebGoal1.src} alt="EWebGoal1" />
+      return <Image w="40px" h="40px" src={EWebGoal1.src} alt={t(`coBenefits.SDG1`)} />
     case EWebGoal.SDG2:
-      return <Image w="40px" h="40px" src={EWebGoal2.src} alt="EWebGoal2" />
+      return <Image w="40px" h="40px" src={EWebGoal2.src} alt={t(`coBenefits.SDG2`)} />
     case EWebGoal.SDG3:
-      return <Image w="40px" h="40px" src={EWebGoal3.src} alt="EWebGoal3" />
+      return <Image w="40px" h="40px" src={EWebGoal3.src} alt={t(`coBenefits.SDG3`)} />
     case EWebGoal.SDG4:
-      return <Image w="40px" h="40px" src={EWebGoal4.src} alt="EWebGoal4" />
+      return <Image w="40px" h="40px" src={EWebGoal4.src} alt={t(`coBenefits.SDG4`)} />
     case EWebGoal.SDG5:
-      return <Image w="40px" h="40px" src={EWebGoal5.src} alt="EWebGoal5" />
+      return <Image w="40px" h="40px" src={EWebGoal5.src} alt={t(`coBenefits.SDG5`)} />
     case EWebGoal.SDG6:
-      return <Image w="40px" h="40px" src={EWebGoal6.src} alt="EWebGoal6" />
+      return <Image w="40px" h="40px" src={EWebGoal6.src} alt={t(`coBenefits.SDG6`)} />
     case EWebGoal.SDG7:
-      return <Image w="40px" h="40px" src={EWebGoal7.src} alt="EWebGoal7" />
+      return <Image w="40px" h="40px" src={EWebGoal7.src} alt={t(`coBenefits.SDG7`)} />
     case EWebGoal.SDG8:
-      return <Image w="40px" h="40px" src={EWebGoal8.src} alt="EWebGoal8" />
+      return <Image w="40px" h="40px" src={EWebGoal8.src} alt={t(`coBenefits.SDG8`)} />
     case EWebGoal.SDG9:
-      return <Image w="40px" h="40px" src={EWebGoal9.src} alt="EWebGoal9" />
+      return <Image w="40px" h="40px" src={EWebGoal9.src} alt={t(`coBenefits.SDG9`)} />
     case EWebGoal.SDG10:
-      return <Image w="40px" h="40px" src={EWebGoal10.src} alt="EWebGoal10" />
+      return <Image w="40px" h="40px" src={EWebGoal10.src} alt={t(`coBenefits.SDG10`)} />
     case EWebGoal.SDG11:
-      return <Image w="40px" h="40px" src={EWebGoal11.src} alt="EWebGoal11" />
+      return <Image w="40px" h="40px" src={EWebGoal11.src} alt={t(`coBenefits.SDG11`)} />
     case EWebGoal.SDG12:
-      return <Image w="40px" h="40px" src={EWebGoal12.src} alt="EWebGoal12" />
+      return <Image w="40px" h="40px" src={EWebGoal12.src} alt={t(`coBenefits.SDG12`)} />
     case EWebGoal.SDG13:
-      return <Image w="40px" h="40px" src={EWebGoal13.src} alt="EWebGoal13" />
+      return <Image w="40px" h="40px" src={EWebGoal13.src} alt={t(`coBenefits.SDG13`)} />
     case EWebGoal.SDG14:
-      return <Image w="40px" h="40px" src={EWebGoal14.src} alt="EWebGoal14" />
+      return <Image w="40px" h="40px" src={EWebGoal14.src} alt={t(`coBenefits.SDG14`)} />
     case EWebGoal.SDG15:
-      return <Image w="40px" h="40px" src={EWebGoal15.src} alt="EWebGoal15" />
+      return <Image w="40px" h="40px" src={EWebGoal15.src} alt={t(`coBenefits.SDG15`)} />
     case EWebGoal.SDG16:
-      return <Image w="40px" h="40px" src={EWebGoal16.src} alt="EWebGoal16" />
+      return <Image w="40px" h="40px" src={EWebGoal16.src} alt={t(`coBenefits.SDG16`)} />
     case EWebGoal.SDG17:
-      return <Image w="40px" h="40px" src={EWebGoal17.src} alt="EWebGoal17" />
+      return <Image w="40px" h="40px" src={EWebGoal17.src} alt={t(`coBenefits.SDG17`)} />
   }
 }
