@@ -27,9 +27,9 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
   const { t } = useTranslation(`search`)
 
   useEffect(() => {
-    setMinimumDate(selectedSearchFilterValues.searchFilterValues.filterDates?.minDate)
-    setMaximumDate(selectedSearchFilterValues.searchFilterValues.filterDates?.maxDate)
-  }, [selectedSearchFilterValues.searchFilterValues.filterDates])
+    setMinimumDate(selectedSearchFilterValues.searchFilterValues.creditingPeriod?.minDate)
+    setMaximumDate(selectedSearchFilterValues.searchFilterValues.creditingPeriod?.maxDate)
+  }, [selectedSearchFilterValues.searchFilterValues.creditingPeriod])
 
   const renderDateSelector = (stateValue: Date | undefined, action: Dispatch<SetStateAction<Date | undefined>>) => {
     return (

@@ -4,7 +4,7 @@ export interface SearchFilterValues {
   methodologies: string[]
   sectors: string[]
   countries: string[]
-  filterDates?: FilterDates
+  creditingPeriod?: FilterDates
 }
 
 export interface FilterDates {

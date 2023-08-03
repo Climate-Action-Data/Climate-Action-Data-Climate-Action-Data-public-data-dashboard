@@ -2,7 +2,7 @@ import { Calendar, RenderProps } from 'dayzed'
 import { FC } from 'react'
 import { Box, Flex } from '@chakra-ui/react'
 import CalendarNavigation from '@/components/molecules/CalendarNavigation/CalendarNavigation'
-import { MONTH_NAMES_SHORT } from '@/@types/Calendar'
+import { getMonthNames } from '@/@types/Calendar'
 import CalendarBodyDates from '@/components/molecules/CalendarBodyDates/CalendarBodyDates'
 
 interface CalendarBodyProps {
@@ -22,10 +22,12 @@ const CalenderBody: FC<CalendarBodyProps> = (props) => {
     previousYear,
   } = props
 
+  const monthNames = getMonthNames()
+
   const renderCalendarNavigation = (calendar: Calendar) => {
     return (
       <>
-        <CalendarNavigation navigateToPrev={previousMonth} navigateToNext={nextMonth} label={MONTH_NAMES_SHORT[calendar.month]} />
+        <CalendarNavigation navigateToPrev={previousMonth} navigateToNext={nextMonth} label={monthNames[calendar.month]} />
         <CalendarNavigation navigateToPrev={previousYear} navigateToNext={nextYear} label={calendar.year.toString()} />
       </>
     )

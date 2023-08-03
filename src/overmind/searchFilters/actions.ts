@@ -36,7 +36,7 @@ export const setProjectStatusesFilter = (context: Context, selectedFilters: stri
 }
 
 export const setCreditingPeriodFilter = (context: Context, filterDates: FilterDates) => {
-  context.state.searchFilters.selectedSearchFilterValues.searchFilterValues.filterDates = filterDates
+  context.state.searchFilters.selectedSearchFilterValues.searchFilterValues.creditingPeriod = filterDates
 }
 
 export const resetSearchFilters = (context: Context) => {
