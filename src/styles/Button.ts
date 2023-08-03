@@ -135,11 +135,26 @@ export const blueLink = defineStyle({
   },
 })
 
+export const blackLink = defineStyle({
+  background: `transparent`,
+  color: `gray.800`,
+  padding: `6px, 12px, 6px, 12px`,
+  borderRadius: `32px`,
+  weight: `500`,
+  textDecoration: `underline`,
+  _hover: {
+    background: `gray.50`,
+  },
+  _active: {
+    background: `lightGray.200`,
+  },
+})
+
 export const dropdownUnselected = defineStyle({
   width: [`100%`, null, null, `140px`, `176px`],
   backgroundColor: `white`,
   color: `lightGray.700`,
-  _hover: { backgroundColor: `#EDEFEF` },
+  _hover: { backgroundColor: `gray.50` },
   _active: { backgroundColor: `#DBDEE0` },
 })
 

@@ -3,6 +3,7 @@ import { mode } from '@chakra-ui/theme-tools'
 
 import {
   accentPrimary32,
+  blackLink,
   blueLink,
   brandPrimary,
   calendarAction,
@@ -64,6 +65,7 @@ const theme = extendTheme({
         hoverOnly,
         accentPrimary32,
         textLink,
+        blackLink,
         dropdownUnselected,
         dropdownSelected,
         calendarNavigation,
@@ -82,6 +84,7 @@ const theme = extendTheme({
         whiteSecondary,
         accentPrimary32,
         blueLink,
+        blackLink,
       },
     },
     Container: {
@@ -119,7 +122,7 @@ const theme = extendTheme({
     },
     gray: {
       main: `#00242C`,
-      50: `#`,
+      50: `#EDEFEF`,
       100: `#3E4A4E`,
       200: `#3E4A4E`,
       300: `#2E373B`,
