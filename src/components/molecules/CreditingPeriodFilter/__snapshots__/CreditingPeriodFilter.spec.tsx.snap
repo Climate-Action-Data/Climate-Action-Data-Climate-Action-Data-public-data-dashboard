@@ -83,7 +83,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter and open it 1`] =
                 </div>
                 <input
                   class="chakra-input css-p5mn3g"
-                  placeholder="DD/MM/YYYY"
+                  placeholder="yyyy/MM/dd"
                   value=""
                 />
               </div>
@@ -127,7 +127,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter and open it 1`] =
                 </div>
                 <input
                   class="chakra-input css-p5mn3g"
-                  placeholder="DD/MM/YYYY"
+                  placeholder="yyyy/MM/dd"
                   value=""
                 />
               </div>
@@ -241,7 +241,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter and open the date
                 </div>
                 <input
                   class="chakra-input css-p5mn3g"
-                  placeholder="DD/MM/YYYY"
+                  placeholder="yyyy/MM/dd"
                   value=""
                 />
               </div>
@@ -285,7 +285,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter and open the date
                 </div>
                 <input
                   class="chakra-input css-p5mn3g"
-                  placeholder="DD/MM/YYYY"
+                  placeholder="yyyy/MM/dd"
                   value=""
                 />
               </div>
@@ -329,7 +329,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
     <div
       class="css-jmqhys"
     >
-      Up to 01/08/2023
+      Up to 2023/08/01
       <div
         class="css-17xejub"
       />
@@ -399,7 +399,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
                 </div>
                 <input
                   class="chakra-input css-p5mn3g"
-                  placeholder="DD/MM/YYYY"
+                  placeholder="yyyy/MM/dd"
                   value=""
                 />
               </div>
@@ -443,8 +443,8 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
                 </div>
                 <input
                   class="chakra-input css-p5mn3g"
-                  placeholder="DD/MM/YYYY"
-                  value="01/08/2023"
+                  placeholder="yyyy/MM/dd"
+                  value="2023/08/01"
                 />
               </div>
             </div>
@@ -557,7 +557,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
                 </div>
                 <input
                   class="chakra-input css-p5mn3g"
-                  placeholder="DD/MM/YYYY"
+                  placeholder="yyyy/MM/dd"
                   value=""
                 />
               </div>
@@ -601,7 +601,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
                 </div>
                 <input
                   class="chakra-input css-p5mn3g"
-                  placeholder="DD/MM/YYYY"
+                  placeholder="yyyy/MM/dd"
                   value=""
                 />
               </div>
@@ -645,7 +645,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
     <div
       class="css-jmqhys"
     >
-      01/08/2023 - 01/08/2023
+      2023/08/01 - 2023/08/01
       <div
         class="css-17xejub"
       />
@@ -715,8 +715,8 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
                 </div>
                 <input
                   class="chakra-input css-p5mn3g"
-                  placeholder="DD/MM/YYYY"
-                  value="01/08/2023"
+                  placeholder="yyyy/MM/dd"
+                  value="2023/08/01"
                 />
               </div>
             </div>
@@ -759,8 +759,8 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
                 </div>
                 <input
                   class="chakra-input css-p5mn3g"
-                  placeholder="DD/MM/YYYY"
-                  value="01/08/2023"
+                  placeholder="yyyy/MM/dd"
+                  value="2023/08/01"
                 />
               </div>
             </div>

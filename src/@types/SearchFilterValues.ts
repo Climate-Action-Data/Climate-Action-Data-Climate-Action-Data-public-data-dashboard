@@ -3,10 +3,10 @@ export interface SearchFilterValues {
   methodologies: string[]
   sectors: string[]
   countries: string[]
-  creditingPeriod?: FilterDates
+  creditingPeriod?: DatesFilter
 }
 
-export interface FilterDates {
+export interface DatesFilter {
   minDate?: Date
   maxDate?: Date
 }

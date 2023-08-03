@@ -5,6 +5,13 @@
   "ok": "OK",
   "upTo": "Up to {{- date}}",
   "andLater": "{{- date}} and later",
+  "searchBar": {
+    "standard": "Standard",
+    "methodology": "Methodology",
+    "sector": "Sector",
+    "country": "Country",
+    "creditingPeriod": "Crediting Period"
+  },
   "table": {
     "projectDetails": "Project Details",
     "standard": "Standard",

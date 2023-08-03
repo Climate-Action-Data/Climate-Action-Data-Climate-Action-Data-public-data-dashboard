@@ -7,6 +7,7 @@ import DateInput from '@/components/molecules/DateInput/DateInput'
 import { useActions, useAppState } from '@/overmind'
 import { useTranslation } from 'react-i18next'
 import { format } from 'date-fns'
+import { DateFormats } from '@/@types/DateFormats'
 
 interface CreditingPeriodFilterProp {
   label: string
@@ -31,19 +32,44 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
     setMaximumDate(selectedSearchFilterValues.searchFilterValues.creditingPeriod?.maxDate)
   }, [selectedSearchFilterValues.searchFilterValues.creditingPeriod])
 
+  const getOnApplySelectedDate = (action: Dispatch<SetStateAction<Date | undefined>>, selectedDate: Date | undefined) => {
+    action(selectedDate)
+    setShowMinimumDateSelector(false)
+    setShowMaximumDateSelector(false)
+  }
+
   const renderDateSelector = (stateValue: Date | undefined, action: Dispatch<SetStateAction<Date | undefined>>) => {
     return (
       <CalendarWrapper
         preSelectedDate={stateValue}
         maxDate={latestDate}
         minDate={earliestDate}
-        applySelectedDate={(selectedDate) => {
-          action(selectedDate)
-          setShowMinimumDateSelector(false)
-          setShowMaximumDateSelector(false)
-        }}
+        onApplySelectedDate={(selectedDate) => getOnApplySelectedDate(action, selectedDate)}
       />
     )
+  }
+
+  const handleOnOpenDatePickerMinimumDate = () => {
+    setShowMinimumDateSelector(true)
+  }
+
+  const handleOnOpenDatePickerMaximumDate = () => {
+    setShowMaximumDateSelector(true)
+  }
+
+  const handleOnClearClick = () => {
+    setMinimumDate(undefined)
+    setMaximumDate(undefined)
+    setCreditingPeriodFilter({})
+  }
+
+  const handleOnApplyClick = () => {
+    setCreditingPeriodFilter({ maxDate: maximumDate, minDate: minimumDate })
+  }
+
+  const handleOnClose = () => {
+    setShowMinimumDateSelector(false)
+    setShowMaximumDateSelector(false)
   }
 
   const renderContent = () => {
@@ -56,7 +82,7 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
           <DateInput
             label={`Minimum Date`}
             value={minimumDate}
-            openDatePicker={() => setShowMinimumDateSelector(true)}
+            onOpenDatePicker={handleOnOpenDatePickerMinimumDate}
             maxDate={latestDate}
             minDate={earliestDate}
             onChange={setMinimumDate}
@@ -65,25 +91,17 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
           <DateInput
             label={`Maximum Date`}
             value={maximumDate}
-            openDatePicker={() => setShowMaximumDateSelector(true)}
+            onOpenDatePicker={handleOnOpenDatePickerMaximumDate}
             maxDate={latestDate}
             minDate={earliestDate}
             onChange={setMaximumDate}
           />
         </HStack>
         <HStack justify={`space-between`} width={`100%`} margin={`8px`}>
-          <Button
-            variant={`textLink`}
-            onClick={() => {
-              setMinimumDate(undefined)
-              setMaximumDate(undefined)
-              setCreditingPeriodFilter({})
-            }}
-            data-testid={`crediting-period-filter-clear`}
-          >
+          <Button variant={`textLink`} onClick={handleOnClearClick} data-testid={`crediting-period-filter-clear`}>
             {t(`clear`)}
           </Button>
-          <Button variant={`textLink`} onClick={() => setCreditingPeriodFilter({ maxDate: maximumDate, minDate: minimumDate })} data-testid={`crediting-period-filter-apply`}>
+          <Button variant={`textLink`} onClick={handleOnApplyClick} data-testid={`crediting-period-filter-apply`}>
             {t(`apply`)}
           </Button>
         </HStack>
@@ -93,21 +111,15 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
 
   const renderLabel = () => {
     if (minimumDate && maximumDate) {
-      return `${format(minimumDate, `dd/MM/yyyy`)} - ${format(maximumDate, `dd/MM/yyyy`)}`
+      return `${format(minimumDate, DateFormats.YYYY_MM_DD)} - ${format(maximumDate, DateFormats.YYYY_MM_DD)}`
     }
     if (minimumDate) {
-      return `${format(minimumDate, `dd/MM/yyyy`)} and later`
+      return `${format(minimumDate, DateFormats.YYYY_MM_DD)} and later`
     }
     if (maximumDate) {
-      return t(`upTo`, { date: format(maximumDate, `dd/MM/yyyy`) })
-      // return `Up to ${format(maximumDate, `dd/MM/yyyy`)}`
+      return t(`upTo`, { date: format(maximumDate, DateFormats.YYYY_MM_DD) })
     }
     return label
-  }
-
-  const handleOnClose = () => {
-    setShowMinimumDateSelector(false)
-    setShowMaximumDateSelector(false)
   }
 
   return (

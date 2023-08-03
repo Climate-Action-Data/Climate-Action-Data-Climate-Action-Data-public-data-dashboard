@@ -1,6 +1,6 @@
 import { Calendar, GetDatePropsOptions } from 'dayzed'
 import { Box, Button, Text, Wrap, WrapItem } from '@chakra-ui/react'
-import { FC } from 'react'
+import { FC, ReactElement } from 'react'
 import { getWeekdayNames } from '@/@types/Calendar'
 
 interface CalendarBodyDatesProps {
@@ -13,6 +13,36 @@ const CalendarBodyDates: FC<CalendarBodyDatesProps> = (props) => {
 
   const weekDayNames = getWeekdayNames()
 
+  const generateDateElements = () => {
+    const result: ReactElement[] = []
+
+    calendar.weeks.forEach((week, weekIndex) =>
+      week.forEach((dateObj, index) => {
+        const key = `${calendar.month}${calendar.year}${weekIndex}${index}`
+        if (!dateObj) {
+          result.push(<WrapItem key={key} width={`calc(100% / 7)`} />)
+        } else {
+          const { date, selected, selectable, today } = dateObj
+          let background = today ? `lightGray.200` : `transparent`
+          background = selected ? `lightGray.800` : background
+          background = !selectable ? `transparent` : background
+          result.push(
+            <WrapItem key={key} boxSize={`48px`} justifyContent={`center`}>
+              {selectable ? (
+                <Button variant={`calendarDate`} color={selected ? `white` : `black`} backgroundColor={background} {...getDateProps({ dateObj })}>
+                  {date.getDate()}
+                </Button>
+              ) : null}
+            </WrapItem>,
+          )
+        }
+      }),
+    )
+    return result
+  }
+
+  const dateElements = generateDateElements()
+
   return (
     <Box>
       <Wrap spacing={0}>
@@ -24,29 +54,7 @@ const CalendarBodyDates: FC<CalendarBodyDatesProps> = (props) => {
           </WrapItem>
         ))}
       </Wrap>
-      <Wrap spacing={0}>
-        {calendar.weeks.map((week, weekIndex) =>
-          week.map((dateObj, index) => {
-            const key = `${calendar.month}${calendar.year}${weekIndex}${index}`
-            if (!dateObj) {
-              return <WrapItem key={key} width={`calc(100% / 7)`}></WrapItem>
-            }
-            const { date, selected, selectable, today } = dateObj
-            let background = today ? `lightGray.200` : `transparent`
-            background = selected ? `lightGray.800` : background
-            background = !selectable ? `transparent` : background
-            return (
-              <WrapItem key={key} boxSize={`48px`} justifyContent={`center`}>
-                {selectable ? (
-                  <Button variant={`calendarDate`} color={selected ? `white` : `black`} backgroundColor={background} {...getDateProps({ dateObj })}>
-                    {date.getDate()}
-                  </Button>
-                ) : null}
-              </WrapItem>
-            )
-          }),
-        )}
-      </Wrap>
+      <Wrap spacing={0}>{dateElements}</Wrap>
     </Box>
   )
 }

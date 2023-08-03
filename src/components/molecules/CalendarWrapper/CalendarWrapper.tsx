@@ -1,9 +1,9 @@
 import { FC, useEffect, useState } from 'react'
-import Dayzed from 'dayzed'
+import Dayzed, { RenderProps } from 'dayzed'
 import { Box, Button, VStack } from '@chakra-ui/react'
 
 import { useTranslation } from 'react-i18next'
-import CalenderBody from '@/components/molecules/CalendarBody/CalendarBody'
+import CalendarBody from '@/components/molecules/CalendarBody/CalendarBody'
 import { differenceInCalendarMonths } from 'date-fns'
 import { MONTHS_IN_YEAR } from '@/@types/Calendar'
 
@@ -11,11 +11,11 @@ interface CalendarWrapperProps {
   maxDate?: Date
   minDate?: Date
   preSelectedDate?: Date
-  applySelectedDate: (date: Date | undefined) => void
+  onApplySelectedDate: (date: Date | undefined) => void
 }
 
 const CalendarWrapper: FC<CalendarWrapperProps> = (props) => {
-  const { applySelectedDate, preSelectedDate, maxDate, minDate } = props
+  const { onApplySelectedDate, preSelectedDate, maxDate, minDate } = props
 
   const [offset, setOffset] = useState(0)
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined)
@@ -35,31 +35,45 @@ const CalendarWrapper: FC<CalendarWrapperProps> = (props) => {
     }
   }, [preSelectedDate])
 
-  const handleNextMonth = () => setOffset((prevState) => prevState + 1)
-  const handlePreviousMonth = () => setOffset((prevState) => prevState - 1)
-  const handleNextYear = () => setOffset((prevState) => prevState + MONTHS_IN_YEAR)
-  const handlePreviousYear = () => setOffset((prevState) => prevState - MONTHS_IN_YEAR)
+  const handleOnNextMonth = () => setOffset((prevState) => prevState + 1)
+  const handleOnPreviousMonth = () => setOffset((prevState) => prevState - 1)
+  const handleOnNextYear = () => setOffset((prevState) => prevState + MONTHS_IN_YEAR)
+  const handleOnPreviousYear = () => setOffset((prevState) => prevState - MONTHS_IN_YEAR)
 
   const handleOnClearClick = () => {
-    applySelectedDate(undefined)
+    onApplySelectedDate(undefined)
   }
 
   const handleOnOKClick = () => {
-    applySelectedDate(selectedDate)
+    onApplySelectedDate(selectedDate)
+  }
+
+  const handleOnDateSelected = (selectedDate: Date) => {
+    setSelectedDate(selectedDate)
+  }
+
+  const onRender = (renderProps: RenderProps) => {
+    return (
+      <CalendarBody
+        renderProps={renderProps}
+        onNextMonth={handleOnNextMonth}
+        onPreviousMonth={handleOnPreviousMonth}
+        onNextYear={handleOnNextYear}
+        onPreviousYear={handleOnPreviousYear}
+      />
+    )
   }
 
   return (
     <VStack>
       <Dayzed
-        onDateSelected={(selectedDate) => setSelectedDate(selectedDate.date)}
+        onDateSelected={(selectedDate) => handleOnDateSelected(selectedDate.date)}
         showOutsideDays
         offset={offset}
         maxDate={maxDate}
         minDate={minDate}
         selected={selectedDate}
-        render={(renderProps) => (
-          <CalenderBody renderProps={renderProps} nextMonth={handleNextMonth} previousMonth={handlePreviousMonth} nextYear={handleNextYear} previousYear={handlePreviousYear} />
-        )}
+        render={onRender}
       />
       <Box alignSelf={`end`}>
         <Button variant={`calendarAction`} data-testid={`calender-wrapper-clear`} onClick={handleOnClearClick}>

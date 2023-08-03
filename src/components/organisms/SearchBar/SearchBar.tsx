@@ -43,34 +43,34 @@ const SearchBar: FC = () => {
       <Stack direction={[`column`, null, null, `row`]}>
         <Stack direction={[`column`, null, null, `row`]} divider={<StackDivider borderColor={`#B8BEC0`} />} width={[`100%`]}>
           <AutoCompleteCheckbox
-            label={`Standard`}
+            label={t(`searchBar.standard`)}
             options={searchFilterValues.standards}
             selectedFilters={selectedSearchFilters.standards}
             noOfSelectedFilters={selectedSearchFilters.standards.length}
             applyFilters={setStandardsFilter}
           />
           <AutoCompleteCheckbox
-            label={`Methodology`}
+            label={t(`searchBar.methodology`)}
             options={searchFilterValues.methodologies}
             selectedFilters={selectedSearchFilters.methodologies}
             noOfSelectedFilters={selectedSearchFilters.methodologies.length}
             applyFilters={setMethodologiesFilter}
           />
           <AutoCompleteCheckbox
-            label={`Sector`}
+            label={t(`searchBar.sector`)}
             options={searchFilterValues.sectors}
             selectedFilters={selectedSearchFilters.sectors}
             noOfSelectedFilters={selectedSearchFilters.sectors.length}
             applyFilters={setSectorsFilter}
           />
           <AutoCompleteCheckbox
-            label={`Country`}
+            label={t(`searchBar.country`)}
             options={searchFilterValues.countries}
             selectedFilters={selectedSearchFilters.countries}
             noOfSelectedFilters={selectedSearchFilters.countries.length}
             applyFilters={setCountriesFilter}
           />
-          <CreditingPeriodFilter label={`Crediting Period`} />
+          <CreditingPeriodFilter label={t(`searchBar.creditingPeriod`)} />
         </Stack>
         <Flex>
           <Spacer minWidth={`32px`} />

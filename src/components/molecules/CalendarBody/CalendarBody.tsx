@@ -7,19 +7,19 @@ import CalendarBodyDates from '@/components/molecules/CalendarBodyDates/Calendar
 
 interface CalendarBodyProps {
   renderProps: RenderProps
-  nextMonth: () => void
-  previousMonth: () => void
-  nextYear: () => void
-  previousYear: () => void
+  onNextMonth: () => void
+  onPreviousMonth: () => void
+  onNextYear: () => void
+  onPreviousYear: () => void
 }
 
-const CalenderBody: FC<CalendarBodyProps> = (props) => {
+const CalendarBody: FC<CalendarBodyProps> = (props) => {
   const {
     renderProps: { calendars, getDateProps },
-    nextMonth,
-    previousMonth,
-    nextYear,
-    previousYear,
+    onNextMonth,
+    onPreviousMonth,
+    onNextYear,
+    onPreviousYear,
   } = props
 
   const monthNames = getMonthNames()
@@ -27,8 +27,8 @@ const CalenderBody: FC<CalendarBodyProps> = (props) => {
   const renderCalendarNavigation = (calendar: Calendar) => {
     return (
       <>
-        <CalendarNavigation navigateToPrev={previousMonth} navigateToNext={nextMonth} label={monthNames[calendar.month]} />
-        <CalendarNavigation navigateToPrev={previousYear} navigateToNext={nextYear} label={calendar.year.toString()} />
+        <CalendarNavigation navigateToPrev={onPreviousMonth} navigateToNext={onNextMonth} label={monthNames[calendar.month]} />
+        <CalendarNavigation navigateToPrev={onPreviousYear} navigateToNext={onNextYear} label={calendar.year.toString()} />
       </>
     )
   }
@@ -49,4 +49,4 @@ const CalenderBody: FC<CalendarBodyProps> = (props) => {
   )
 }
 
-export default CalenderBody
+export default CalendarBody

@@ -1,11 +1,12 @@
 import { ChangeEvent, FC, useEffect, useState } from 'react'
-import { isValid, parse } from 'date-fns'
+import { format, isValid, parse } from 'date-fns'
 import { Input, InputGroup, InputRightElement, Text, VStack } from '@chakra-ui/react'
 import { CalendarIcon } from '@/components/atoms/CalendarIcon/CalendarIcon'
+import { DateFormats } from '@/@types/DateFormats'
 
 interface DateInputProp {
   label: string
-  openDatePicker: () => void
+  onOpenDatePicker: () => void
   value: Date | undefined
   maxDate?: Date
   minDate?: Date
@@ -13,14 +14,14 @@ interface DateInputProp {
 }
 
 const DateInput: FC<DateInputProp> = (prop) => {
-  const { openDatePicker, label, value, minDate, maxDate, onChange } = prop
+  const { onOpenDatePicker, label, value, minDate, maxDate, onChange } = prop
 
   const [textInputValue, setTextInputValue] = useState<string>(``)
   const [isInvalid, setIsInvalid] = useState<boolean>(false)
 
   useEffect(() => {
     if (value) {
-      setTextInputValue(value.toLocaleDateString(`en-sg`))
+      setTextInputValue(format(value, DateFormats.YYYY_MM_DD))
     } else {
       setTextInputValue(``)
     }
@@ -49,7 +50,7 @@ const DateInput: FC<DateInputProp> = (prop) => {
       return
     }
 
-    const parsedDate = parse(textInputValue, `dd/MM/yyyy`, new Date())
+    const parsedDate = parse(textInputValue, DateFormats.YYYY_MM_DD, new Date())
 
     if (!isValid(parsedDate)) {
       setIsInvalid(true)
@@ -69,10 +70,10 @@ const DateInput: FC<DateInputProp> = (prop) => {
       <Text>{label}</Text>
       <InputGroup width={`143px`} alignItems={`top`}>
         <InputRightElement boxSize={`24px`}>
-          <CalendarIcon color={`lightGray.600`} cursor={`pointer`} onClick={openDatePicker} data-testid={`datepicker-trigger`} />
+          <CalendarIcon color={`lightGray.600`} cursor={`pointer`} onClick={onOpenDatePicker} data-testid={`datepicker-trigger`} />
         </InputRightElement>
         <Input
-          placeholder={`DD/MM/YYYY`}
+          placeholder={DateFormats.YYYY_MM_DD}
           borderBottomColor={isInvalid ? `red.500` : `lightGray.600`}
           value={textInputValue}
           onChange={handleOnChange}
