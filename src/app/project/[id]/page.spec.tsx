@@ -4,9 +4,6 @@ import { PROJECT_DETAIL } from '@/test/TestOvermindMockData'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 
 describe(`PageDetails`, () => {
-  // mock process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
-  process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = `test`
-
   it(`renders correctly`, () => {
     const { container } = render(
       <TestOvermindWrapper>
