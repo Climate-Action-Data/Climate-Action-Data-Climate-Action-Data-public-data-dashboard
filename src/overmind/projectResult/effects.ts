@@ -15,6 +15,7 @@ export const getProjectResults = async (from: number, take: number): Promise<Eff
     const mappedData = projectData.map((project) => ({
       name: project.projectName,
       id: project.projectId,
+      warehouseProjectId: project.warehouseProjectId,
       projectDeveloper: project.projectDeveloper,
       standard: project.currentRegistry,
       methodology: project.methodology,

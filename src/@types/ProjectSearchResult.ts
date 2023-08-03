@@ -1,6 +1,7 @@
 export interface ProjectSearchResult {
   name: string
   id: string
+  warehouseProjectId: string
   projectDeveloper: string
   standard: string
   methodology: string

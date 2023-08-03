@@ -5,6 +5,7 @@ import { changeHoverColor } from '@/utils/Stickify'
 import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
 import { ProjectSearchBodyHeader } from '@/components/atoms/ProjectSearchBodyHeader/ProjectSearchBodyHeader'
 import { ProjectSearchBodySkeleton } from '@/components/atoms/ProjectSearchBodySkeleton/ProjectSearchBodySkeleton'
+import { useRouter } from 'next/navigation'
 interface TableDataProps {
   data: string | number | undefined
 }
@@ -26,7 +27,7 @@ interface ProjectSearchBodyProps {
 export const ProjectSearchBody = (props: ProjectSearchBodyProps) => {
   const { renderType } = props
   const { projectResults } = useAppState().projectResult
-
+  const router = useRouter()
   if (renderType !== ALLOWED_RENDER_TYPE) {
     throw new Error(`This page should only be rendered in PageProject and is currently rendered in ${renderType}`)
   }
@@ -39,7 +40,13 @@ export const ProjectSearchBody = (props: ProjectSearchBodyProps) => {
           <Tbody data-testid="table-scroll">
             {projectResults?.data ? (
               projectResults.data.map((project, idx) => (
-                <Tr onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)} className="project-row-${idx}" key={`project-body-row-${project.id}`} height="92px">
+                <Tr
+                  onClick={() => router.push(`/project/${project.warehouseProjectId}`)}
+                  onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
+                  className={`project-row-${idx}`}
+                  key={`project-body-row-${project.id}`}
+                  height="92px"
+                >
                   <Td title={project.standard}>
                     <TableData data={project.standard} />
                   </Td>
