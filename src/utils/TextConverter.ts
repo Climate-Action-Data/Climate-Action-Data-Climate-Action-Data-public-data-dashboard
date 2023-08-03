@@ -1,3 +1,5 @@
+import { EWebGoal } from '@/@types/EWebGoal'
+
 export const extractTitleFromUrl = (url: string) => {
   let str = ``
   try {
@@ -7,9 +9,14 @@ export const extractTitleFromUrl = (url: string) => {
 }
 
 export const capitalizeString = (str: string) => {
-  try {
+  if (str.length > 1) {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
-  } catch (error) {
-    return str
+  } else {
+    return str.toUpperCase()
   }
+}
+
+export const extractEWebGoalFromString = (str: string): EWebGoal | undefined => {
+  const goalValue = str.slice(0, str.indexOf(`-`)).trim().replace(` `, ``)
+  return Object.values(EWebGoal).find((goal) => goal === goalValue) as EWebGoal
 }

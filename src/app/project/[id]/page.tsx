@@ -19,7 +19,6 @@ export default function Project({ params }: { params: { id: string } }) {
     getProject(params.id).then((result) => {
       if (result.data) {
         setProject(result.data)
-        console.log(result.data)
       }
     })
   }, [])

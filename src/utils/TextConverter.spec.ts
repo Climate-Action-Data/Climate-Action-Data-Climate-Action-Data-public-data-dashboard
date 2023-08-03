@@ -1,4 +1,5 @@
-import { extractTitleFromUrl, capitalizeString } from './TextConverter'
+import { EWebGoal } from '@/@types/EWebGoal'
+import { extractTitleFromUrl, capitalizeString, extractEWebGoalFromString } from './TextConverter'
 
 const TEST_FULL_CAP = `LOREM`
 const TEST_CAP = `Lorem`
@@ -30,5 +31,22 @@ describe(`extractTitleFromUrl`, () => {
 
   test(`extract title from coid url to be default`, () => {
     expect(extractTitleFromUrl(URL_VOID)).toBe(DEFAULT)
+  })
+})
+const DEFAULT_EWEBGOAL = `SDG 1 - No Poverty`
+const DEFAULT_EWEBGOAL_FAKE = `SDG 19 - No Poverty`
+const DEFAULT_EWEBGOAL_RANDOM = `Muy random`
+
+describe(`extractEWebGoalFromString`, () => {
+  test(`extract ewebgoal from string`, () => {
+    expect(extractEWebGoalFromString(DEFAULT_EWEBGOAL)).toBe(EWebGoal.SDG1)
+  })
+
+  test(`extract ewebgoal from string to be undefined`, () => {
+    expect(extractEWebGoalFromString(DEFAULT_EWEBGOAL_FAKE)).toBeUndefined()
+  })
+
+  test(`extract ewebgoal from random string to be undefined`, () => {
+    expect(extractEWebGoalFromString(DEFAULT_EWEBGOAL_RANDOM)).toBeUndefined()
   })
 })
