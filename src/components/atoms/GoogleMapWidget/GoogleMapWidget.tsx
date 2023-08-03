@@ -1,4 +1,4 @@
-import { Text, Skeleton } from '@chakra-ui/react'
+import { Text, Skeleton, Box, Flex } from '@chakra-ui/react'
 import { Wrapper, Status } from '@googlemaps/react-wrapper'
 import { useEffect, useState } from 'react'
 import { GoogleMap } from '../GoogleMap/GoogleMap'
@@ -34,10 +34,11 @@ export const render = (status: Status, coordinates: google.maps.LatLngLiteral) =
 
 interface GoogleMapWidgetProps {
   coordinates?: ProjectCoordinates | string
+  isLoading?: boolean
 }
 
 export const GoogleMapWidget = (props: GoogleMapWidgetProps) => {
-  const { coordinates } = props
+  const { coordinates, isLoading } = props
   const { t } = useTranslation(`projectDetails`)
   const [mapCenter, setMapCenter] = useState<google.maps.LatLngLiteral>(DEFAULT_MAP_LOCATION)
 
@@ -56,8 +57,21 @@ export const GoogleMapWidget = (props: GoogleMapWidgetProps) => {
   if (!process?.env?.NEXT_PUBLIC_GOOGLE_MAP_API_KEY) {
     return <Text>{t(`noApiKey`)}</Text>
   }
-  if (!coordinates) {
+  if (isLoading) {
     return <Skeleton borderTopLeftRadius="8px" borderTopRightRadius="8px" width="448px" height="448px" />
+  }
+
+  if (!coordinates) {
+    return (
+      <Box position="relative" w="448px" h="448px" minW="448px" minH="448px">
+        <Wrapper apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY} render={(status) => render(status, mapCenter)} />
+        <Flex padding="120px" alignItems="center" textAlign="center" backgroundColor="#dbdee0cc" position="absolute" top={0} left={0} w="100%" h="100%">
+          <Text fontSize="lg" color="lightGray.700">
+            {t(`noCoordinates`)}
+          </Text>
+        </Flex>
+      </Box>
+    )
   }
   return <Wrapper apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY} render={(status) => render(status, mapCenter)} />
 }

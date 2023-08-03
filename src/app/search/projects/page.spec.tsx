@@ -3,6 +3,17 @@ import Projects from './page'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 import { PROJECT_SEARCH_RESULT } from '@/test/TestOvermindMockData'
 
+jest.mock(`next/navigation`, () => ({
+  useRouter() {
+    return {
+      route: `/`,
+      pathname: ``,
+      query: ``,
+      asPath: ``,
+    }
+  },
+}))
+
 it(`renders correctly`, () => {
   const { container } = render(
     <TestOvermindWrapper>

@@ -32,7 +32,7 @@ export default function Project({ params }: { params: { id: string } }) {
           <ProjectDetailsInfo project={project} />
         </Container>
         <Container minW="448px" maxW="448px" variant="cardSectionNoMarginNoPadding">
-          <GoogleMapWidget coordinates={toCoordinates(project?.location.geoCoordinates) ?? project?.location.country} />
+          <GoogleMapWidget isLoading={project === undefined} coordinates={toCoordinates(project?.location.geoCoordinates) ?? project?.location.country} />
           <Container paddingX={6} paddingY={3}>
             <SimpleGrid columns={2} gap="24px">
               <DetailWidget title={t(`country`)}>{project?.location.country}</DetailWidget>
