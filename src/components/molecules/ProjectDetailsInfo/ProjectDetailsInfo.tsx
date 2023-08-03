@@ -3,6 +3,8 @@ import { Link } from '@chakra-ui/next-js'
 import { Stack, StackDivider, SimpleGrid, Flex } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { ProjectDetailsInfoSkeleton } from '../ProjectDetailsInfoSkeleton/ProjectDetailsInfoSkeleton'
+import { formatDate } from '@/utils/DateFormat'
+import { DateFormats } from '@/@types/DateFormats'
 
 interface ProjectDetailsInfoProps {
   project?: ProjectDetails
@@ -30,9 +32,9 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
         <DetailWidget title={t(`detailsHeaders.sector`)}>{project.sector}</DetailWidget>
         <DetailWidget title={t(`detailsHeaders.type`)}>{project.type}</DetailWidget>
         <DetailWidget title={t(`detailsHeaders.status`)}>status</DetailWidget>
-        <DetailWidget title={t(`detailsHeaders.statusUpdated`)}>{new Date().toLocaleDateString()}</DetailWidget>
+        <DetailWidget title={t(`detailsHeaders.statusUpdated`)}>{formatDate(new Date().toLocaleDateString(), DateFormats.YYYY_MM_DD)}</DetailWidget>
       </SimpleGrid>
-      <Flex>
+      <Flex flexWrap="wrap">
         <SimpleGrid columns={2} gap="24px">
           <DetailWidget title={t(`detailsHeaders.availableUnits`)}>{0}</DetailWidget>
           <DetailWidget title={t(`detailsHeaders.issuances`)}>{project.units.issued}</DetailWidget>

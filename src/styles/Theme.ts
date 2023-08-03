@@ -155,6 +155,9 @@ const theme = extendTheme({
     global: (props: any) => ({
       body: {
         bg: mode(`#F8FAFA`, `#000`)(props),
+        pointerEvents: `auto`,
+        userSelect: `auto`,
+        color: `gray.700`,
       },
       '.fixed': {
         position: `fixed`,

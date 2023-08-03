@@ -69,7 +69,7 @@ exports[`renders correctly 1`] = `
       </h2>
     </div>
     <div
-      class="css-16am3d6"
+      class="css-1mliti3"
     >
       My Content
     </div>
@@ -146,7 +146,7 @@ exports[`renders correctly with colored icon 1`] = `
       </h2>
     </div>
     <div
-      class="css-16am3d6"
+      class="css-1mliti3"
     >
       My Content
     </div>
@@ -169,7 +169,7 @@ exports[`renders correctly with no icon 1`] = `
       </h2>
     </div>
     <div
-      class="css-16am3d6"
+      class="css-1mliti3"
     >
       My Content
     </div>
