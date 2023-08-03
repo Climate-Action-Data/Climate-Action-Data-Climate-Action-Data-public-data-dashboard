@@ -13,19 +13,23 @@ const CalendarBodyDates: FC<CalendarBodyDatesProps> = (props) => {
 
   const weekDayNames = getWeekdayNames()
 
+  const generateDateColor = (today: boolean, selected: boolean, selectable: boolean) => {
+    let background = today ? `lightGray.200` : `transparent`
+    background = selected ? `lightGray.800` : background
+    return !selectable ? `transparent` : background
+  }
+
   const generateDateElements = () => {
     const result: ReactElement[] = []
 
     calendar.weeks.forEach((week, weekIndex) =>
       week.forEach((dateObj, index) => {
         const key = `${calendar.month}${calendar.year}${weekIndex}${index}`
-        if (!dateObj) {
+        if (dateObj === ``) {
           result.push(<WrapItem key={key} width={`calc(100% / 7)`} />)
         } else {
           const { date, selected, selectable, today } = dateObj
-          let background = today ? `lightGray.200` : `transparent`
-          background = selected ? `lightGray.800` : background
-          background = !selectable ? `transparent` : background
+          const background = generateDateColor(today, selected, selectable)
           result.push(
             <WrapItem key={key} boxSize={`48px`} justifyContent={`center`}>
               {selectable ? (
