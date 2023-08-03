@@ -51,5 +51,5 @@
     "scroll": "Scroll to read more",
     "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum ex vel blandit congue. Integer turpis lectus, porttitor sed tellus et, rhoncus suscipit lorem. Donec quis ante vitae mi commodo ultrices. Pellentesque accumsan magna enim, nec venenatis sapien vestibulum vitae.",
     "noApiKey": "Could not load google maps api key",
-    "noCoordinates": "No coordinates found"
+    "noCoordinates": "This project location is currently unavailable within the carbon registries."
   }
