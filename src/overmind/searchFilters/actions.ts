@@ -10,7 +10,6 @@ export const transformGovernanceDataToSearchFilterData = (context: Context, gove
       sectors: governanceData.data.governanceData.projectSector,
       standards: governanceData.data.governanceData.registries,
       methodologies: governanceData.data.governanceData.methodology,
-      projectStatuses: governanceData.data.governanceData.projectStatusValues,
     }
   }
 }
@@ -31,10 +30,6 @@ export const setMethodologiesFilter = (context: Context, selectedFilters: string
   context.state.searchFilters.selectedSearchFilterValues.searchFilterValues.methodologies = selectedFilters
 }
 
-export const setProjectStatusesFilter = (context: Context, selectedFilters: string[]) => {
-  context.state.searchFilters.selectedSearchFilterValues.searchFilterValues.projectStatuses = selectedFilters
-}
-
 export const setCreditingPeriodFilter = (context: Context, filterDates: FilterDates) => {
   context.state.searchFilters.selectedSearchFilterValues.searchFilterValues.creditingPeriod = filterDates
 }
@@ -45,6 +40,5 @@ export const resetSearchFilters = (context: Context) => {
     sectors: [],
     standards: [],
     methodologies: [],
-    projectStatuses: [],
   }
 }
