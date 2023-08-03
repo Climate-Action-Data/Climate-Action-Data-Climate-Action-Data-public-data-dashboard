@@ -8,6 +8,7 @@ import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 import { KebabMenuIcon } from '@/components/atoms/KebabMenuIcon/KebabMenuIcon'
 import { changeHoverColor } from '@/utils/Stickify'
 import { ColumnSortFilter } from '@/components/atoms/ColumnSortFilter/ColumnSortFilter'
+import { useRouter } from 'next/navigation'
 
 interface ProjectSearchHeadProps {
   renderType?: string
@@ -16,6 +17,7 @@ interface ProjectSearchHeadProps {
 export const ProjectSearchHead = (props: ProjectSearchHeadProps) => {
   const { renderType } = props
   const { projectResults } = useAppState().projectResult
+  const router = useRouter()
   const { t } = useTranslation(`search`)
 
   if (renderType !== ALLOWED_RENDER_TYPE) {
@@ -43,7 +45,12 @@ export const ProjectSearchHead = (props: ProjectSearchHeadProps) => {
           <Tbody borderRight="1px solid #B8BEC0">
             {projectResults?.data ? (
               projectResults.data.map((projectResults, idx) => (
-                <Tr onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)} className="project-row-${idx}" key={`project-row-${projectResults.id}`} height="92px">
+                <Tr
+                  onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
+                  className={`project-row-${idx}`}
+                  key={`project-row-${projectResults.id}`}
+                  height="92px"
+                >
                   <Td>
                     <Flex alignItems="center">
                       <Box title={projectResults.name} overflow="hidden" flex={1}>
@@ -56,7 +63,7 @@ export const ProjectSearchHead = (props: ProjectSearchHeadProps) => {
                       <Menu variant="menuWhite">
                         <MenuButton as={Button} textAlign="center" iconSpacing={0} rightIcon={<KebabMenuIcon />} variant="lightGrayRound32"></MenuButton>
                         <MenuList>
-                          <MenuItem minH="48px">
+                          <MenuItem onClick={() => router.push(`/project/${projectResults.warehouseProjectId}`)} minH="48px">
                             <Text flex={1} as="span">
                               {t(`projectMenu.viewProject`)}
                             </Text>
