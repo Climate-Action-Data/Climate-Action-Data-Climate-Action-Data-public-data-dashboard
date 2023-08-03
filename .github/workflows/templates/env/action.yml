@@ -8,6 +8,9 @@ inputs:
   next_public_api_host:
     description: project id
     required: true
+  next_public_google_map_api_key: 
+    description: google map key
+    required: true
 
 
 runs:
@@ -25,10 +28,12 @@ runs:
       env:
         NEXT_PUBLIC_API_KEY: ${{ inputs.next_public_api_key }}
         NEXT_PUBLIC_API_HOST: ${{ inputs.next_public_api_host }}
+        NEXT_PUBLIC_GOOGLE_MAP_API_KEY: ${{ inputs.next_public_google_map_api_key }}
       run: |
         echo "
         NEXT_PUBLIC_API_KEY=${{ env.NEXT_PUBLIC_API_KEY }}
-        NEXT_PUBLIC_API_HOST=${{ env.NEXT_PUBLIC_API_HOST }}" > .env.production
+        NEXT_PUBLIC_API_HOST=${{ env.NEXT_PUBLIC_API_HOST }}
+        NEXT_PUBLIC_GOOGLE_MAP_API_KEY=${{ env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY }}" > .env.production
       working-directory: ./configuration
 
     - name: 'cat the .env file'
