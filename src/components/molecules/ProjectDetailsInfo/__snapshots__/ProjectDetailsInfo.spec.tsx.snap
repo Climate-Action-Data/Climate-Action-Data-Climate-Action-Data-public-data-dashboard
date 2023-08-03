@@ -612,7 +612,38 @@ exports[`renders correctly with project 1`] = `
         >
           <div
             class="chakra-stack css-1mlvmbj"
-          />
+          >
+            <img
+              alt="Decent Work and Economic Growth"
+              class="chakra-image css-1ngw63v"
+              src="/img.jpg"
+            />
+            <img
+              alt="Life on Land"
+              class="chakra-image css-1ngw63v"
+              src="/img.jpg"
+            />
+            <img
+              alt="Climate Action"
+              class="chakra-image css-1ngw63v"
+              src="/img.jpg"
+            />
+            <img
+              alt="Industry, Innovation and Infrastructure"
+              class="chakra-image css-1ngw63v"
+              src="/img.jpg"
+            />
+            <img
+              alt="Affordable and Clean Energy"
+              class="chakra-image css-1ngw63v"
+              src="/img.jpg"
+            />
+            <img
+              alt="Quality Education"
+              class="chakra-image css-1ngw63v"
+              src="/img.jpg"
+            />
+          </div>
         </div>
       </div>
     </div>

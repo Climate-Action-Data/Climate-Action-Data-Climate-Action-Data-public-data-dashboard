@@ -16,7 +16,14 @@ export const projectDetail: ProjectDetails = {
   link: `https://www.ecoregistry.io/projects/79`,
   tags: `More information in the project link. || Cercarbono Standard. || Sectors of project: Agriculture; forestry and fishing . || Methodologies of project: AR-ACM0003: Afforestation and reforestation of lands except wetlands . || Latest or current Validation Number: 1 . || Latest or current Verification Number: 1`,
   coveredByNdc: `Unknown`,
-  coBenefits: [],
+  coBenefits: [
+    `SDG 8 - Decent work and economic growth`,
+    `SDG 15 - Life on land`,
+    `SDG 13 - Climate action`,
+    `SDG 9 - Industry, innovation, and infrastructure`,
+    `SDG 7 - Affordable and clean energy`,
+    `SDG 4 - Quality education`,
+  ],
   creditingPeriodStart: `2011-05-23T00:00:00.000Z`,
   creditingPeriodEnd: `2030-05-22T00:00:00.000Z`,
   validation: {
