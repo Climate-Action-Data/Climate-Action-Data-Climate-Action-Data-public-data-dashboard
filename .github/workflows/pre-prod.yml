@@ -18,6 +18,7 @@ jobs:
         with:
           next_public_api_key: ${{ secrets.NEXT_PUBLIC_API_KEY }}
           next_public_api_host: ${{ secrets.NEXT_PUBLIC_API_HOST }}
+          next_public_google_map_api_key: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAP_API_KEY }}
 
 
   Checks:
