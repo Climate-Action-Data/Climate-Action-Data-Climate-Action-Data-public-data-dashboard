@@ -1,10 +1,10 @@
-type ProjectLocation = {
+export type ProjectLocation = {
   country: string
   region: string
   geoCoordinates: string
 }
 
-type Units = {
+export type Units = {
   estimated: number
   issued: number
   retired: number
@@ -14,7 +14,7 @@ type Units = {
   unitMetric: string
 }
 
-type Verification = {
+export type Verification = {
   approach: string
   startDate: string
   endDate: string
@@ -26,7 +26,7 @@ export type Validation = {
   verifications: Verification[]
 }
 
-type Issuance = {
+export type Issuance = {
   status: string
   vintage: number
   quantity: number
@@ -34,7 +34,7 @@ type Issuance = {
   date: string
 }
 
-type ProjectDocument = {
+export type ProjectDocument = {
   name: string
   updatedDate: string
 }
