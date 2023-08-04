@@ -135,12 +135,26 @@ export const blueLink = defineStyle({
   },
 })
 
+export const underlinedLink = defineStyle({
+  background: `transparent`,
+  color: `gray.100`,
+  fontWeight: `400`,
+  textDecoration: `underline`,
+  padding: `0`,
+  _hover: {
+    color: `blue.600`,
+  },
+  _active: {
+    color: `blue.700`,
+  },
+})
+
 export const blackLink = defineStyle({
   background: `transparent`,
   color: `gray.800`,
   padding: `6px, 12px, 6px, 12px`,
   borderRadius: `32px`,
-  weight: `500`,
+  fontWeight: `500`,
   textDecoration: `underline`,
   _hover: {
     background: `gray.50`,

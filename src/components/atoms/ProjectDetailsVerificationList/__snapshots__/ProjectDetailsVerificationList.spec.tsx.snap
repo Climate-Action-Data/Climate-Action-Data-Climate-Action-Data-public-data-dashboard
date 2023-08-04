@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectDetailsVerificationList renders correctly with empty array 1`] = `
+<div>
+  <p
+    class="chakra-text css-0"
+  >
+    noData
+  </p>
+</div>
+`;
+
+exports[`ProjectDetailsVerificationList renders correctly with full array 1`] = `
+<div>
+  <div
+    class="css-0"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      2019/12/04
+       - 
+      2023/12/31
+    </p>
+    <button
+      class="chakra-button css-4xx2wk"
+      data-testid="verification-expand"
+      type="button"
+    >
+      View More
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ProjectDetailsVerificationList renders correctly with full array and click 1`] = `
+<div>
+  <div
+    class="css-0"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      2019/12/04
+       - 
+      2023/12/31
+    </p>
+    <p
+      class="chakra-text css-0"
+    >
+      2019/12/04
+       - 
+      2023/12/31
+    </p>
+    <p
+      class="chakra-text css-0"
+    >
+      2019/12/04
+       - 
+      2023/12/31
+    </p>
+    <p
+      class="chakra-text css-0"
+    >
+      2019/12/04
+       - 
+      2023/12/31
+    </p>
+    <p
+      class="chakra-text css-0"
+    >
+      2019/12/04
+       - 
+      2023/12/31
+    </p>
+    <button
+      class="chakra-button css-4xx2wk"
+      data-testid="verification-expand"
+      type="button"
+    >
+      View Less
+    </button>
+  </div>
+</div>
+`;
