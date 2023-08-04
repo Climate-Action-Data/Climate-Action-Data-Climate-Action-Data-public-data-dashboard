@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
 import { formatDate } from '@/utils/DateFormat'
 import { DateFormats } from '@/@types/DateFormats'
+import { Validation } from '@/@types/ProjectDetails'
 
 interface ProjectDetailsVerificationProps {
   validation?: Validation
