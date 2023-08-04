@@ -438,7 +438,9 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
         </p>
         <p
           class="chakra-text css-0"
-        />
+        >
+          Registered
+        </p>
       </div>
       <div
         class="css-0"
@@ -451,7 +453,7 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
         <p
           class="chakra-text css-0"
         >
-          --
+          2021/04/15
         </p>
       </div>
     </div>
@@ -755,7 +757,9 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
         </p>
         <p
           class="chakra-text css-0"
-        />
+        >
+          Registered
+        </p>
       </div>
       <div
         class="css-0"
@@ -768,7 +772,7 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
         <p
           class="chakra-text css-0"
         >
-          --
+          2021/04/15
         </p>
       </div>
     </div>
