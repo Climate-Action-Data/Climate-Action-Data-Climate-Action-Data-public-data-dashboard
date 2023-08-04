@@ -1,4 +1,5 @@
 import { EWebGoal } from '@/@types/EWebGoal'
+import { ProjectType } from '@/@types/ProjectDetails'
 
 export const extractTitleFromUrl = (url: string) => {
   let str = ``
@@ -19,4 +20,19 @@ export const capitalizeString = (str: string) => {
 export const extractEWebGoalFromString = (str: string): EWebGoal | undefined => {
   const goalValue = str.slice(0, str.indexOf(`-`)).trim().replace(` `, ``)
   return Object.values(EWebGoal).find((goal) => goal === goalValue) as EWebGoal
+}
+
+export const sanitizeString = (str: string) => {
+  return str.replace(/[^a-zA-Z0-9]/g, ``).toLowerCase()
+}
+
+export const extractProjectTypeFromString = (str: string) => {
+  if (!str) {
+    return ProjectType.DEFAULT
+  }
+  const foundType = Object.values(ProjectType).find((type) => type === sanitizeString(str))
+  if (foundType) {
+    return foundType as ProjectType
+  }
+  return ProjectType.DEFAULT
 }

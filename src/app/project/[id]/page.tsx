@@ -1,4 +1,5 @@
 'use client'
+import { ProjectDetails } from '@/@types/ProjectDetails'
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
 import { GoogleMapWidget } from '@/components/atoms/GoogleMapWidget/GoogleMapWidget'
 import { ProjectDetailHeader } from '@/components/atoms/ProjectDetailHeader/ProjectDetailHeader'
@@ -27,7 +28,7 @@ export default function Project({ params }: { params: { id: string } }) {
 
   return (
     <Flex flexDirection={`column`} gap={6} paddingX={6} paddingY={3}>
-      {project && <ProjectDetailHeader id={project.id} location={project.location.country} title={project.name} description={project.description} />}
+      {project && <ProjectDetailHeader id={project.id} location={project.location.country} title={project.name} description={project.description} type={project.type} />}
       <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.projectDetails`) }}>
         <Container padding={[`12px`, `24px`]} flex={2} variant="cardSectionNoMargin">
           <ProjectDetailsInfo project={project} />

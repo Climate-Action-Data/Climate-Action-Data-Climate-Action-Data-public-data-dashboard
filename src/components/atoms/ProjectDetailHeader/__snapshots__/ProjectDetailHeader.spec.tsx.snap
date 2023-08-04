@@ -9,9 +9,8 @@ exports[`renders correctly 1`] = `
       class="css-1teq9s8"
     >
       <img
-        alt="PLACEHOLDER"
         class="chakra-image css-19vnwa0"
-        src="https://placehold.co/920x336"
+        src="/img.jpg"
       />
       <div
         class="chakra-stack css-1ibnd6w"

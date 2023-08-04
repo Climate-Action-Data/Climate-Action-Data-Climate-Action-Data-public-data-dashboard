@@ -438,9 +438,7 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
         </p>
         <p
           class="chakra-text css-0"
-        >
-          Reforestation and Revegetation
-        </p>
+        />
       </div>
       <div
         class="css-0"
@@ -453,7 +451,7 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
         <p
           class="chakra-text css-0"
         >
-          Reforestation and Revegetation
+          --
         </p>
       </div>
     </div>
@@ -505,9 +503,7 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
           <p
             class="chakra-text css-0"
           >
-            2011-05-23T00:00:00.000Z
-             - 
-            2030-05-22T00:00:00.000Z
+            2011/05/23 - 2030/05/22
           </p>
         </div>
       </div>
@@ -759,9 +755,7 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
         </p>
         <p
           class="chakra-text css-0"
-        >
-          Reforestation and Revegetation
-        </p>
+        />
       </div>
       <div
         class="css-0"
@@ -774,7 +768,7 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
         <p
           class="chakra-text css-0"
         >
-          Reforestation and Revegetation
+          --
         </p>
       </div>
     </div>
@@ -826,9 +820,7 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
           <p
             class="chakra-text css-0"
           >
-            2011-05-23T00:00:00.000Z
-             - 
-            2030-05-22T00:00:00.000Z
+            2011/05/23 - 2030/05/22
           </p>
         </div>
       </div>

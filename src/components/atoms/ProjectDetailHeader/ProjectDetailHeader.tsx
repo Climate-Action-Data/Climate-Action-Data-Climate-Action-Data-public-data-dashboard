@@ -1,22 +1,25 @@
-import { Flex, Box, Image, Text, VStack, Heading } from '@chakra-ui/react'
+import { Flex, Box, Text, VStack, Heading } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { LargeTextWithScroll } from '@/components/atoms/LargeTextWithScroll/LargeTextWithScroll'
+import { extractProjectTypeFromString } from '@/utils/TextConverter'
+import { ProjectTypeBanner } from '../ProjectTypeBanner/ProjectTypeBanner'
 
 export interface ProjectDetailHeaderProps {
   id: string
   title: string
   description: string
   location: string
+  type: string
 }
 
 export const ProjectDetailHeader = (props: ProjectDetailHeaderProps) => {
-  const { id, title, description, location } = props
+  const { id, title, description, location, type } = props
   const { t } = useTranslation(`projectDetails`)
 
   return (
     <Flex flexWrap="wrap" gap={6}>
       <Box position="relative" h="336px" flex={1}>
-        <Image borderRadius="8px" alt="PLACEHOLDER" src={`https://placehold.co/920x336`} h="336px" w="100%" objectFit={`cover`} />
+        <ProjectTypeBanner projectType={extractProjectTypeFromString(type)} projectTypeText={type} />
         <VStack
           background="linear-gradient(0deg, rgba(0, 0, 0, 0.8) 33.85%, rgba(17, 17, 17, 0) 100%)"
           borderRadius="8px"
