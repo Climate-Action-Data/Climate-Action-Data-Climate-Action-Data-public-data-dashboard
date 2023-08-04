@@ -7,6 +7,7 @@ import { projectData } from '@/test/mock-data/projects_data'
 import { formatDate } from '@/utils/DateFormat'
 import { DateFormats } from '@/@types/DateFormats'
 import { projectDetail } from './mock-data/project_detail'
+import { ProjectDetails } from '@/@types/ProjectDetails'
 
 const CARBON_MAP_DATA_FILTERED: CountryPeriodData = {
   activeProjects: 200,
