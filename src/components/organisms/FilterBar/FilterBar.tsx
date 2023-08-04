@@ -8,7 +8,7 @@ import AutoCompleteCheckbox from '@/components/molecules/AutoCompleteCheckbox/Au
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import CreditingPeriodFilter from '@/components/molecules/CreditingPeriodFilter/CreditingPeriodFilter'
 
-const SearchBar: FC = () => {
+const FilterBar: FC = () => {
   const {
     allSearchFilterValues: { searchFilterValues, isEmpty },
     selectedSearchFilterValues: { searchFilterValues: selectedSearchFilters },
@@ -82,10 +82,12 @@ const SearchBar: FC = () => {
             _hover={{ backgroundColor: `#24BD63` }}
             _active={{ backgroundColor: `#1B8E4A` }}
             href={`/search/projects`}
+            fontSize={`16px`}
+            fontWeight={`medium`}
           >
             <Flex alignItems={`center`}>
               {t(`search`)}
-              <SearchIcon width={6} height={6} />
+              <SearchIcon width={`16px`} height={`16px`} marginLeft={`4px`} />
             </Flex>
           </Link>
         </Flex>
@@ -94,4 +96,4 @@ const SearchBar: FC = () => {
   )
 }
 
-export default SearchBar
+export default FilterBar
