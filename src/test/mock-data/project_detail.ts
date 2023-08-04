@@ -1,3 +1,5 @@
+import { ProjectDetails } from '@/@types/ProjectDetails'
+
 export const projectDetail: ProjectDetails = {
   warehouseProjectId: `01d919c9-dc5a-489e-9826-c08b6850bbcb`,
   id: `79`,
@@ -16,6 +18,8 @@ export const projectDetail: ProjectDetails = {
   link: `https://www.ecoregistry.io/projects/79`,
   tags: `More information in the project link. || Cercarbono Standard. || Sectors of project: Agriculture; forestry and fishing . || Methodologies of project: AR-ACM0003: Afforestation and reforestation of lands except wetlands . || Latest or current Validation Number: 1 . || Latest or current Verification Number: 1`,
   coveredByNdc: `Unknown`,
+  status: `Registered`,
+  statusDate: `2021-04-15T00:52:54.825Z`,
   coBenefits: [
     `SDG 8 - Decent work and economic growth`,
     `SDG 15 - Life on land`,
