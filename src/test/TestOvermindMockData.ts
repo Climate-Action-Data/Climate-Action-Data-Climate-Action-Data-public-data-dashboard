@@ -4,8 +4,6 @@ import { SubRegion } from '@/@types/geojson'
 import MAP_DASHBOARD_MOCK_DATA from '@/test/mock-data/map_dashboard_data'
 import CREDIT_HISTORY_MOCK_DATA from '@/test/mock-data/credit_history_data'
 import { projectData } from '@/test/mock-data/projects_data'
-import { formatDate } from '@/utils/DateFormat'
-import { DateFormats } from '@/@types/DateFormats'
 import { projectDetail } from './mock-data/project_detail'
 import { ProjectDetails } from '@/@types/ProjectDetails'
 
@@ -180,27 +178,7 @@ export const PROJECT_SEARCH_RESULT_EMPTY: ProjectResultState = {}
 export const PROJECT_TEST_SAMPLE = 21
 export const PROJECT_SEARCH_RESULT: ProjectResultState = {
   projectResults: {
-    data: projectData
-      .map((project) => ({
-        name: project.projectName,
-        id: project.projectId,
-        warehouseProjectId: project.warehouseProjectId,
-        projectDeveloper: project.projectDeveloper,
-        standard: project.currentRegistry,
-        methodology: project.methodology,
-        sector: project.sector,
-        country: project.country ?? undefined,
-        status: project.projectStatus,
-        creditingPeriod:
-          project.creditingPeriodStart && project.creditingPeriodEnd
-            ? `${formatDate(project.creditingPeriodStart, DateFormats.YYYY_MM_DD)} - ${formatDate(project.creditingPeriodEnd, DateFormats.YYYY_MM_DD)}`
-            : undefined,
-        annualEst: project.annualEst ?? undefined,
-        annualIssued: project.annualIssued ?? undefined,
-        annualRetired: project.annualRetired ?? undefined,
-        annualAvailable: project.annualIssued && project.annualRetired ? project.annualIssued - project.annualRetired : undefined,
-      }))
-      .slice(0, PROJECT_TEST_SAMPLE),
+    data: projectData.slice(0, PROJECT_TEST_SAMPLE),
   },
 }
 export const PROJECT_DETAIL: ProjectDetails = projectDetail

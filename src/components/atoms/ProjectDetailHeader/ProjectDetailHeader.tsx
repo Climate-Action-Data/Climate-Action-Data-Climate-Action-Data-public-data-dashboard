@@ -1,4 +1,4 @@
-import { Flex, Box, Text, VStack, Heading } from '@chakra-ui/react'
+import { Box, Flex, Heading, Text, VStack } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { LargeTextWithScroll } from '@/components/atoms/LargeTextWithScroll/LargeTextWithScroll'
 import { extractProjectTypeFromString } from '@/utils/TextConverter'
@@ -21,7 +21,7 @@ export const ProjectDetailHeader = (props: ProjectDetailHeaderProps) => {
       <Box position="relative" h="336px" flex={1}>
         <ProjectTypeBanner projectType={extractProjectTypeFromString(type)} projectTypeText={type} />
         <VStack
-          background="linear-gradient(0deg, rgba(0, 0, 0, 0.8) 33.85%, rgba(17, 17, 17, 0) 100%)"
+          background={`linear-gradient(0deg, rgba(0, 0, 0, 0.8) 33.85%, rgba(17, 17, 17, 0) 100%)`}
           borderRadius="8px"
           width="100%"
           color="white"

@@ -3,10 +3,12 @@ import { Button, Container, Flex, Input, InputGroup, InputRightElement } from '@
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
+import { useRouter } from 'next/navigation'
 
 const SearchBar = () => {
-  const { t } = useTranslation(`search`)
   const [searchInput, setSearchInput] = useState(``)
+  const router = useRouter()
+  const { t } = useTranslation(`search`)
 
   const handleOnClear = () => {
     setSearchInput(``)
@@ -17,7 +19,9 @@ const SearchBar = () => {
   }
 
   const handleOnSearch = () => {
-    console.log(`searching for ${searchInput}`)
+    const searchParams = new URLSearchParams()
+    searchParams.append(`keyword`, searchInput)
+    router.push(`/search/projects?${searchParams}`)
   }
 
   return (
@@ -26,12 +30,12 @@ const SearchBar = () => {
         <InputGroup variant={`searchInput`}>
           {searchInput.length !== 0 && (
             <InputRightElement>
-              <CloseIcon onClick={handleOnClear} />
+              <CloseIcon onClick={handleOnClear} data-testid={`search-bar-clear`} />
             </InputRightElement>
           )}
           <Input placeholder={t(`searchProjectsByKeywordsPlaceholder`)} value={searchInput} onChange={handleInputOnChange} />
         </InputGroup>
-        <Button rightIcon={<SearchIcon width={`16px`} height={`16px`} />} variant={`accentPrimary32`} onClick={handleOnSearch} marginLeft={`8px`}>
+        <Button rightIcon={<SearchIcon width={`16px`} height={`16px`} />} variant={`accentPrimary32`} data-testid={`search-bar-search`} onClick={handleOnSearch} marginLeft={`8px`}>
           {t(`search`)}
         </Button>
       </Flex>
