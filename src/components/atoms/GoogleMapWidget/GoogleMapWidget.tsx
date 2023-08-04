@@ -1,8 +1,9 @@
 import { Text, Skeleton, Box, Flex } from '@chakra-ui/react'
 import { Wrapper, Status } from '@googlemaps/react-wrapper'
 import { useEffect, useState } from 'react'
-import { GoogleMap } from '../GoogleMap/GoogleMap'
+import { GoogleMap } from '@/components/atoms/GoogleMap/GoogleMap'
 import { useTranslation } from 'react-i18next'
+import { ProjectCoordinates } from '@/@types/ProjectDetails'
 
 const DEFAULT_MAP_LOCATION = { lat: 45.76342, lng: 4.834277 }
 const DEFAULT_MAP_ZOOM_IN = 10
