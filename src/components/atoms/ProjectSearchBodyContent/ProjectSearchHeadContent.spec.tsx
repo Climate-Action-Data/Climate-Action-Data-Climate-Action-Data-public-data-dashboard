@@ -13,6 +13,15 @@ it(`renders correctly`, () => {
   expect(container).toMatchSnapshot()
 })
 
+it(`renders correctly`, () => {
+  const { container } = render(
+    <TestRouter router={{}}>
+      <ProjectSearchBodyContent projectResults={PROJECT_SEARCH_RESULT.projectResults} />
+    </TestRouter>,
+  )
+  expect(container).toMatchSnapshot()
+})
+
 it(`renders correctly with hover`, () => {
   const { container } = render(
     <TestRouter router={{}}>

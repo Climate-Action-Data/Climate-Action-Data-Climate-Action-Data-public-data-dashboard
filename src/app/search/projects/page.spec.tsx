@@ -1,17 +1,13 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import Projects from './page'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 import { PROJECT_SEARCH_RESULT } from '@/test/TestOvermindMockData'
 
+const mockPush = jest.fn()
 jest.mock(`next/navigation`, () => ({
-  useRouter() {
-    return {
-      route: `/`,
-      pathname: ``,
-      query: ``,
-      asPath: ``,
-    }
-  },
+  ...jest.requireActual(`next/navigation`),
+  useRouter: () => ({ push: mockPush, query: { query: `testId` } }),
+  useSearchParams: () => ({ get: () => `testParams` }),
 }))
 
 it(`renders correctly`, () => {

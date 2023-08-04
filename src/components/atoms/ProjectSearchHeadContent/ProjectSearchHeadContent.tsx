@@ -1,5 +1,5 @@
 import { changeHoverColor } from '@/utils/Stickify'
-import { Table, Tbody, Tr, Td, Flex, Menu, MenuButton, Button, MenuList, MenuItem, Stack, Skeleton, Text, Box } from '@chakra-ui/react'
+import { Box, Button, Flex, Menu, MenuButton, MenuItem, MenuList, Skeleton, Stack, Table, Tbody, Td, Text, Tr } from '@chakra-ui/react'
 import { BookmarkPlusIcon } from '../BookmarkPlusIcon/BookmarkPlusIcon'
 import { DownloadIcon } from '../DownloadIcon/DownloadIcon'
 import { KebabMenuIcon } from '../KebabMenuIcon/KebabMenuIcon'
@@ -42,7 +42,7 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
               <Text fontWeight={500}>{projectResults.name}</Text>
               <Text fontSize="sm">{projectResults.id}</Text>
               <Text textOverflow="ellipsis" color="lightGray.700" fontSize="sm">
-                {projectResults.projectDeveloper}
+                {projectResults.developer}
               </Text>
             </Box>
             <Menu variant="menuWhite">

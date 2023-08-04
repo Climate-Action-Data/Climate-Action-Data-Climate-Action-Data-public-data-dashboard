@@ -1,29 +1,34 @@
 'use client'
-import { NextPage } from 'next'
 import { useEffect, useLayoutEffect } from 'react'
+import { NextPage } from 'next'
+import { useSearchParams } from 'next/navigation'
 import { Container, Flex, Box, Button, Hide } from '@chakra-ui/react'
+
 import { setScrollEventListeners } from '@/utils/Stickify'
+import { useActions, useEffects } from '@/overmind'
+import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
+
 import { ProjectSearchHead } from '@/components/molecules/ProjectSearchHead/ProjectSearchHead'
 import { ProjectSearchBody } from '@/components/molecules/ProjectSearchBody/ProjectSearchBody'
 import { PaginationWidget } from '@/components/atoms/PaginationWidget/PaginationWidget'
-import { useActions, useEffects } from '@/overmind'
 import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
-import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
 
 const DEFAULT_PROJECT_TO_DISPLAY = 15
 
 const ProjectPage: NextPage = () => {
   const { getProjectResults } = useEffects().projectResult
   const { setProjectResults } = useActions().projectResult
+  const searchParams = useSearchParams()
+  const pattern = searchParams.get(`keyword`) ?? ``
 
   useEffect(() => {
-    getProjectResults(1, DEFAULT_PROJECT_TO_DISPLAY).then((hasProjectResults) => {
+    getProjectResults(pattern).then((hasProjectResults) => {
       setProjectResults(hasProjectResults)
     })
-  }, [])
+  }, [pattern])
 
   const handlePageChange = (currentPage: number, from: number) => {
-    getProjectResults(from, DEFAULT_PROJECT_TO_DISPLAY).then((hasProjectResults) => {
+    getProjectResults(pattern, from).then((hasProjectResults) => {
       setProjectResults(hasProjectResults)
     })
   }

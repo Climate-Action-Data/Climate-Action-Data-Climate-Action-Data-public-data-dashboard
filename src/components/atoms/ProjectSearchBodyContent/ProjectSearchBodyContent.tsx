@@ -1,10 +1,13 @@
 import { changeHoverColor } from '@/utils/Stickify'
-import { Text, Tbody, Tr, Td, Table } from '@chakra-ui/react'
+import { Table, Tbody, Td, Text, Tr } from '@chakra-ui/react'
 import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
 import { EffectResponse } from '@/@types/EffectResponse'
 import { useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { ProjectSearchBodySkeleton } from '../ProjectSearchBodySkeleton/ProjectSearchBodySkeleton'
+import { formatDate } from '@/utils/DateFormat'
+import { DateFormats } from '@/@types/DateFormats'
+
 interface TableDataProps {
   data: string | number | undefined
 }
@@ -20,6 +23,19 @@ const TableData = (props: TableDataProps) => {
     return <Text color="lightGray.500">{t(`noData`)}</Text>
   }
 }
+
+const renderCreditingPeriod = (startDate: string | undefined, endDate: string | undefined) => {
+  if (startDate && endDate) {
+    return `${formatDate(startDate, DateFormats.YYYY_MM_DD)} - ${formatDate(endDate, DateFormats.YYYY_MM_DD)}`
+  }
+  if (startDate) {
+    return formatDate(startDate, DateFormats.YYYY_MM_DD)
+  }
+  if (endDate) {
+    return formatDate(endDate, DateFormats.YYYY_MM_DD)
+  }
+}
+
 interface ProjectSearchBodyContentProps {
   projectResults?: EffectResponse<ProjectSearchResult[]>
 }
@@ -53,8 +69,8 @@ export const ProjectSearchBodyContent = (props: ProjectSearchBodyContentProps) =
         <Td title={project.status}>
           <TableData data={project.status} />
         </Td>
-        <Td minW="250px !important" title={project.creditingPeriod}>
-          <TableData data={project.creditingPeriod} />
+        <Td minW="250px !important" title={`${project.creditingPeriodStart}-${project.creditingPeriodEnd}`}>
+          <TableData data={renderCreditingPeriod(project.creditingPeriodStart, project.creditingPeriodEnd)} />
         </Td>
         <Td isNumeric title={project.annualEst?.toString()}>
           <TableData data={project.annualEst} />

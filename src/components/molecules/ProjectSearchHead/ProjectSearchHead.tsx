@@ -1,9 +1,10 @@
 import { useAppState } from '@/overmind'
 import { useTranslation } from 'react-i18next'
-import { Flex, TableContainer, Table, Thead, Tr, Th, Box } from '@chakra-ui/react'
+import { Box, Flex, Table, TableContainer, Th, Thead, Tr } from '@chakra-ui/react'
 
 import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
 import { ColumnSortFilter } from '@/components/atoms/ColumnSortFilter/ColumnSortFilter'
+
 import { ProjectSearchHeadContent } from '@/components/atoms/ProjectSearchHeadContent/ProjectSearchHeadContent'
 
 interface ProjectSearchHeadProps {
