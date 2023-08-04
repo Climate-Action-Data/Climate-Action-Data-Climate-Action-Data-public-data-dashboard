@@ -1,3 +1,5 @@
+import { ProjectCoordinates } from '@/@types/ProjectDetails'
+
 const THOUSAND = 1e3
 const MILLION = 1e6
 const BILLION = 1e9
