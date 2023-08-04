@@ -7,8 +7,8 @@ import { RegionSearch } from '@/components/molecules/RegionSearch/RegionSearch'
 import { TimeframeSearch } from '@/components/molecules/TimeframeSearch/TimeframeSearch'
 import GeoMap from '@/components/organisms/GeoMap/GeoMap'
 import CreditsHistorySection from '@/components/organisms/CreditsHistorySection/CreditsHistorySection'
-import SearchBar from '@/components/organisms/SearchBar/SearchBar'
 import { useTranslation } from 'react-i18next'
+import FiltersAndSearch from '@/components/organisms/FiltersAndSearch/FiltersAndSearch'
 
 export default function Home(): React.JSX.Element {
   const { carbonReduction } = useAppState().analytics
@@ -20,7 +20,7 @@ export default function Home(): React.JSX.Element {
   return (
     <>
       <Flex paddingX={`24px`} paddingTop={`24px`}>
-        <SearchBar />
+        <FiltersAndSearch />
       </Flex>
       <Flex padding={`24px`} minHeight="min-content" alignItems="center" justifyContent="space-between" flexDirection="column" width={`100%`}>
         <Container marginTop={`20px`} variant="cardSection">
