@@ -20,7 +20,7 @@ type Verification = {
   endDate: string
 }
 
-type Validation = {
+export type Validation = {
   body: string
   date: string
   verifications: Verification[]
