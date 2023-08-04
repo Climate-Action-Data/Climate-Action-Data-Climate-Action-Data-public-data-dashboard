@@ -44,5 +44,6 @@
   "dataRepresentedAsOf": "Data represented as of",
   "issued": "Issued",
   "retired": "Retired",
-  "homeBreadcrumb": "Home"
+  "homeBreadcrumb": "Home",
+  "noData": "--"
 }

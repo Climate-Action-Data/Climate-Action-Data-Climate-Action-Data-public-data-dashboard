@@ -56,8 +56,6 @@ export const getProjectResults = async (from: number, take: number): Promise<Eff
 
 // create a effect that takes a projectid params and logs it then returns the first element of projectData
 export const getProject = async (projectId: string): Promise<EffectResponse<ProjectDetails>> => {
-  await new Promise((f) => setTimeout(f, SLEEP))
-
   return new Promise((resolve) => {
     let result: EffectResponse<ProjectDetails>
 

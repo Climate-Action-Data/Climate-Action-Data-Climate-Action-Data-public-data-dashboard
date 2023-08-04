@@ -51,7 +51,9 @@ exports[`renders correctly with validation 1`] = `
       </p>
       <p
         class="chakra-text css-0"
-      />
+      >
+        --
+      </p>
     </div>
     <div
       class="css-0"
@@ -63,7 +65,9 @@ exports[`renders correctly with validation 1`] = `
       </p>
       <p
         class="chakra-text css-0"
-      />
+      >
+        --
+      </p>
     </div>
   </div>
 </div>
@@ -112,7 +116,9 @@ exports[`renders correctly with validation and no date 1`] = `
       </p>
       <p
         class="chakra-text css-0"
-      />
+      >
+        --
+      </p>
     </div>
     <div
       class="css-0"
@@ -124,7 +130,9 @@ exports[`renders correctly with validation and no date 1`] = `
       </p>
       <p
         class="chakra-text css-0"
-      />
+      >
+        --
+      </p>
     </div>
   </div>
 </div>
