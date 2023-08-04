@@ -1,5 +1,6 @@
 import { EWebGoal } from '@/@types/EWebGoal'
-import { extractTitleFromUrl, capitalizeString, extractEWebGoalFromString } from './TextConverter'
+import { extractTitleFromUrl, capitalizeString, extractEWebGoalFromString, sanitizeString, extractProjectTypeFromString } from './TextConverter'
+import { ProjectType } from '@/@types/ProjectDetails'
 
 const TEST_FULL_CAP = `LOREM`
 const TEST_CAP = `Lorem`
@@ -48,5 +49,35 @@ describe(`extractEWebGoalFromString`, () => {
 
   test(`extract ewebgoal from random string to be undefined`, () => {
     expect(extractEWebGoalFromString(DEFAULT_EWEBGOAL_RANDOM)).toBeUndefined()
+  })
+})
+
+const DEFAULT_STRING = `energy`
+const DEFAULT_STRING_CAP = `Energy`
+const DEFAULT_STRING_CAP_SPECIAL = `Energy &`
+
+describe(`sanitizeString`, () => {
+  test(`sanitize string`, () => {
+    expect(sanitizeString(DEFAULT_STRING)).toBe(DEFAULT_STRING)
+  })
+
+  test(`sanitize string to be undefined`, () => {
+    expect(sanitizeString(DEFAULT_STRING_CAP)).toBe(DEFAULT_STRING)
+  })
+
+  test(`sanitize random string to be undefined`, () => {
+    expect(sanitizeString(DEFAULT_STRING_CAP_SPECIAL)).toBe(DEFAULT_STRING)
+  })
+})
+
+const DEFAULT_TYPE_STRING = `Improved Forest Management`
+
+describe(`extractProjectTypeFromString`, () => {
+  test(`extract project type from string`, () => {
+    expect(extractProjectTypeFromString(DEFAULT_TYPE_STRING)).toBe(ProjectType.IMPROVED_FOREST_MANAGEMENT)
+  })
+
+  test(`extract project type from string to be default`, () => {
+    expect(extractProjectTypeFromString(DEFAULT_STRING)).toBe(ProjectType.DEFAULT)
   })
 })

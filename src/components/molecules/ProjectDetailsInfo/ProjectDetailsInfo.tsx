@@ -5,6 +5,9 @@ import { useTranslation } from 'react-i18next'
 import { ProjectDetailsInfoSkeleton } from '../ProjectDetailsInfoSkeleton/ProjectDetailsInfoSkeleton'
 import { extractEWebGoalFromString } from '@/utils/TextConverter'
 import { EWebGoalIcon } from '@/components/atoms/EWebGoalIcon/EWebGoalIcon'
+import { formatDate } from '@/utils/DateFormat'
+import { DateFormats } from '@/@types/DateFormats'
+import { ProjectDetails } from '@/@types/ProjectDetails'
 
 interface ProjectDetailsInfoProps {
   project?: ProjectDetails
@@ -14,10 +17,21 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
   const { project } = props
 
   const { t } = useTranslation(`projectDetails`)
+  const { t: tHome } = useTranslation(`home`)
 
   if (!project) {
     return <ProjectDetailsInfoSkeleton />
   }
+
+  const renderCreditingPeriod = (start: string, end: string) => {
+    if (!start || !end) {
+      return tHome(`noData`)
+    }
+    const startDate = formatDate(start, DateFormats.YYYY_MM_DD)
+    const endDate = formatDate(end, DateFormats.YYYY_MM_DD)
+    return `${startDate} - ${endDate}`
+  }
+
   return (
     <Stack divider={<StackDivider />} spacing="24px">
       <SimpleGrid columns={2} gap="24px">
@@ -31,16 +45,14 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
         </DetailWidget>
         <DetailWidget title={t(`detailsHeaders.sector`)}>{project.sector}</DetailWidget>
         <DetailWidget title={t(`detailsHeaders.type`)}>{project.type}</DetailWidget>
-        <DetailWidget title={t(`detailsHeaders.status`)}>{project.type}</DetailWidget>
-        <DetailWidget title={t(`detailsHeaders.statusUpdated`)}>{project.type}</DetailWidget>
+        <DetailWidget title={t(`detailsHeaders.status`)}>{project.status}</DetailWidget>
+        <DetailWidget title={t(`detailsHeaders.statusUpdated`)}>{project.statusDate ? formatDate(project.statusDate, DateFormats.YYYY_MM_DD) : tHome(`noData`)}</DetailWidget>
       </SimpleGrid>
       <Flex flexWrap="wrap">
         <SimpleGrid columns={2} gap="24px">
           <DetailWidget title={t(`detailsHeaders.availableUnits`)}>{0}</DetailWidget>
           <DetailWidget title={t(`detailsHeaders.issuances`)}>{project.units.issued}</DetailWidget>
-          <DetailWidget title={t(`detailsHeaders.creditingPeriod`)}>
-            {project.units.creditingPeriodStart} - {project.units.creditingPeriodEnd}
-          </DetailWidget>
+          <DetailWidget title={t(`detailsHeaders.creditingPeriod`)}>{renderCreditingPeriod(project.units.creditingPeriodStart, project.units.creditingPeriodEnd)}</DetailWidget>
         </SimpleGrid>
         <SimpleGrid columns={2} gap="24px">
           <DetailWidget title={t(`detailsHeaders.retirememts`)}>{project.units.retired}</DetailWidget>
@@ -52,7 +64,7 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
         <DetailWidget title={t(`detailsHeaders.ndcCoverage`)}>{project.coveredByNdc}</DetailWidget>
       </SimpleGrid>
       <SimpleGrid columns={2} gap="24px">
-        <DetailWidget title={t(`detailsHeaders.tags`)}>{project.tags}</DetailWidget>
+        <DetailWidget title={t(`detailsHeaders.tags`)}>{project.tags ?? tHome(`noData`)}</DetailWidget>
         <DetailWidget asBox title={t(`detailsHeaders.coBenefits`)}>
           <HStack flexWrap="wrap" gap="4px">
             {project.coBenefits.map((benefit) => {

@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getImageAndText returns correct image and text for afforestationteforestation 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for agricultureforestryandotherlanduse 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for avoidedconversion 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for changeoffuelorrawmaterials 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for default 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for electricitygenerationfromsolarpv 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for energydemand 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for energyefficiencyimprovement 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for energygeneration 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for energyindustriesrenewable 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for ghgmanagement 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for hydropower 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for improvedforestmanagement 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for landfillgascapturecombustion 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for reddreducedemissionsfromdeforestationanddegradation 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for reducedemissionsfromdeforestationdegradation 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for reforestation 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for reforestationandrevegetation 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for renewableelectricityfromwind 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for solarelectricitysystems 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for solarpower 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
+
+exports[`getImageAndText returns correct image and text for windpower 1`] = `
+<div>
+  <img
+    class="chakra-image css-19vnwa0"
+    src="/img.jpg"
+  />
+</div>
+`;
