@@ -32,3 +32,15 @@ export const filterCardSection = defineStyle({
   maxW: `unset`,
   padding: [0, `1rem`],
 })
+
+export const searchBar = defineStyle({
+  color: `black`,
+  boxShadow: `2px 2px 8px 0px #0000001A;`,
+  minHeight: `min-content`,
+  borderRadius: `12px`,
+  background: `#FFFFFF`,
+  padding: `16px`,
+  marginX: `auto`,
+  width: [`100%`, null, null, `888px`],
+  height: `72px`,
+})

@@ -27,5 +27,19 @@ export const Input = helpers.defineMultiStyleConfig({
         fill: `lightGray.700`,
       },
     },
+    searchInput: {
+      field: {
+        fontFamily: `body`,
+        fontSize: `16px`,
+        border: `none`,
+        textOverflow: `ellipsis`,
+        _focusVisible: { border: `none`, boxShadow: `none!`, outline: `none!` },
+        _placeholder: { color: `lightGray.600` },
+      },
+      element: {
+        color: `lightGray.600`,
+        cursor: `pointer`,
+      },
+    },
   },
 })

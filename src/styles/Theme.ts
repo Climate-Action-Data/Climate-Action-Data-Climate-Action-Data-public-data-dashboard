@@ -21,7 +21,7 @@ import {
 } from '@/styles/Button'
 import { Aeonik, AeonikFono } from '@/styles/fonts'
 import { Checkbox } from '@/styles/Checkbox'
-import { cardSection, cardSectionNoMargin, cardSectionNoMarginNoPadding, filterCardSection } from '@/styles/Section'
+import { cardSection, cardSectionNoMargin, cardSectionNoMarginNoPadding, filterCardSection, searchBar } from '@/styles/Section'
 import fontSizes from './FontSizes'
 import { Text } from './Text'
 import { Input } from '@/styles/Input'
@@ -96,6 +96,7 @@ const theme = extendTheme({
         cardSectionNoMarginNoPadding,
         paginationBar,
         filterCardSection,
+        searchBar,
       },
     },
     Menu: {
