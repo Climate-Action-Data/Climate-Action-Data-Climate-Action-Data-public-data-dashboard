@@ -64,7 +64,7 @@ export type ProjectDetails = {
   documents: ProjectDocument[]
 }
 
-type ProjectCoordinates = {
+export type ProjectCoordinates = {
   latitude: number
   longitude: number
 }
