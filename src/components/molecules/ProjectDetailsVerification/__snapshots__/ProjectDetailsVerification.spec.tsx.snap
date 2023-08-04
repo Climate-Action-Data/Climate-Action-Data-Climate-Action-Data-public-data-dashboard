@@ -52,7 +52,11 @@ exports[`renders correctly with validation 1`] = `
       <p
         class="chakra-text css-0"
       >
-        --
+        <p
+          class="chakra-text css-0"
+        >
+          Details on website: https://www.ecoregistry.io/projects/151
+        </p>
       </p>
     </div>
     <div
@@ -66,7 +70,24 @@ exports[`renders correctly with validation 1`] = `
       <p
         class="chakra-text css-0"
       >
-        --
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-0"
+          >
+            2019/12/04
+             - 
+            2023/12/31
+          </p>
+          <button
+            class="chakra-button css-4xx2wk"
+            data-testid="verification-expand"
+            type="button"
+          >
+            View More
+          </button>
+        </div>
       </p>
     </div>
   </div>
@@ -117,7 +138,11 @@ exports[`renders correctly with validation and no date 1`] = `
       <p
         class="chakra-text css-0"
       >
-        --
+        <p
+          class="chakra-text css-0"
+        >
+          Details on website: https://www.ecoregistry.io/projects/151
+        </p>
       </p>
     </div>
     <div
@@ -131,7 +156,24 @@ exports[`renders correctly with validation and no date 1`] = `
       <p
         class="chakra-text css-0"
       >
-        --
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-0"
+          >
+            2019/12/04
+             - 
+            2023/12/31
+          </p>
+          <button
+            class="chakra-button css-4xx2wk"
+            data-testid="verification-expand"
+            type="button"
+          >
+            View More
+          </button>
+        </div>
       </p>
     </div>
   </div>

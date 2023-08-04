@@ -1,10 +1,11 @@
-import { SimpleGrid, Skeleton, Text, Button, HStack, Hide } from '@chakra-ui/react'
+import { SimpleGrid, Skeleton, Text } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
 import { formatDate } from '@/utils/DateFormat'
 import { DateFormats } from '@/@types/DateFormats'
 import { Validation } from '@/@types/ProjectDetails'
+import { ProjectDetailsVerificationList } from '@/components/atoms/ProjectDetailsVerificationList/ProjectDetailsVerificationList'
 
 interface ProjectDetailsVerificationProps {
   validation?: Validation
@@ -26,18 +27,7 @@ export const ProjectDetailsVerification = (props: ProjectDetailsVerificationProp
         {validation.verifications.length > 0 ? <Text>{validation.verifications[0].approach}</Text> : tHome(`noData`)}
       </DetailWidget>
       <DetailWidget title={t(`verificationHeaders.verificationPeriod`)}>
-        {validation.verifications.length > 0 ? (
-          <HStack flexWrap="wrap">
-            <Text>
-              {formatDate(validation.verifications[0].startDate, DateFormats.YYYY_MM_DD)} - {formatDate(validation.verifications[0].endDate, DateFormats.YYYY_MM_DD)}
-            </Text>
-            <Hide below="md">
-              <Button variant="blackLink">{t(`viewHistory`)}</Button>
-            </Hide>
-          </HStack>
-        ) : (
-          tHome(`noData`)
-        )}
+        <ProjectDetailsVerificationList verificationList={validation.verifications} />
       </DetailWidget>
     </SimpleGrid>
   )

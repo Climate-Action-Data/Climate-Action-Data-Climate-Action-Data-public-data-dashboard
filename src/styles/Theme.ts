@@ -16,6 +16,7 @@ import {
   lightGrayRound,
   lightGrayRound32,
   textLink,
+  underlinedLink,
   whiteSecondary,
 } from '@/styles/Button'
 import { Aeonik, AeonikFono } from '@/styles/fonts'
@@ -65,6 +66,7 @@ const theme = extendTheme({
         hoverOnly,
         accentPrimary32,
         textLink,
+        underlinedLink,
         blackLink,
         dropdownUnselected,
         dropdownSelected,
