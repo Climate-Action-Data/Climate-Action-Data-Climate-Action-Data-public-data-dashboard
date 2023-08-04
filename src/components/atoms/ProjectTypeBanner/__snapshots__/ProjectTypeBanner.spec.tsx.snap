@@ -3,6 +3,7 @@
 exports[`getImageAndText returns correct image and text for afforestationteforestation 1`] = `
 <div>
   <img
+    alt="afforestationteforestation"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -12,6 +13,7 @@ exports[`getImageAndText returns correct image and text for afforestationtefores
 exports[`getImageAndText returns correct image and text for agricultureforestryandotherlanduse 1`] = `
 <div>
   <img
+    alt="agricultureforestryandotherlanduse"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -21,6 +23,7 @@ exports[`getImageAndText returns correct image and text for agricultureforestrya
 exports[`getImageAndText returns correct image and text for avoidedconversion 1`] = `
 <div>
   <img
+    alt="avoidedconversion"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -30,6 +33,7 @@ exports[`getImageAndText returns correct image and text for avoidedconversion 1`
 exports[`getImageAndText returns correct image and text for changeoffuelorrawmaterials 1`] = `
 <div>
   <img
+    alt="changeoffuelorrawmaterials"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -39,6 +43,7 @@ exports[`getImageAndText returns correct image and text for changeoffuelorrawmat
 exports[`getImageAndText returns correct image and text for default 1`] = `
 <div>
   <img
+    alt="default"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -48,6 +53,7 @@ exports[`getImageAndText returns correct image and text for default 1`] = `
 exports[`getImageAndText returns correct image and text for electricitygenerationfromsolarpv 1`] = `
 <div>
   <img
+    alt="electricitygenerationfromsolarpv"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -57,6 +63,7 @@ exports[`getImageAndText returns correct image and text for electricitygeneratio
 exports[`getImageAndText returns correct image and text for energydemand 1`] = `
 <div>
   <img
+    alt="energydemand"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -66,6 +73,7 @@ exports[`getImageAndText returns correct image and text for energydemand 1`] = `
 exports[`getImageAndText returns correct image and text for energyefficiencyimprovement 1`] = `
 <div>
   <img
+    alt="energyefficiencyimprovement"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -75,6 +83,7 @@ exports[`getImageAndText returns correct image and text for energyefficiencyimpr
 exports[`getImageAndText returns correct image and text for energygeneration 1`] = `
 <div>
   <img
+    alt="energygeneration"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -84,6 +93,7 @@ exports[`getImageAndText returns correct image and text for energygeneration 1`]
 exports[`getImageAndText returns correct image and text for energyindustriesrenewable 1`] = `
 <div>
   <img
+    alt="energyindustriesrenewable"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -93,6 +103,7 @@ exports[`getImageAndText returns correct image and text for energyindustriesrene
 exports[`getImageAndText returns correct image and text for ghgmanagement 1`] = `
 <div>
   <img
+    alt="ghgmanagement"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -102,6 +113,7 @@ exports[`getImageAndText returns correct image and text for ghgmanagement 1`] = 
 exports[`getImageAndText returns correct image and text for hydropower 1`] = `
 <div>
   <img
+    alt="hydropower"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -111,6 +123,7 @@ exports[`getImageAndText returns correct image and text for hydropower 1`] = `
 exports[`getImageAndText returns correct image and text for improvedforestmanagement 1`] = `
 <div>
   <img
+    alt="improvedforestmanagement"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -120,6 +133,7 @@ exports[`getImageAndText returns correct image and text for improvedforestmanage
 exports[`getImageAndText returns correct image and text for landfillgascapturecombustion 1`] = `
 <div>
   <img
+    alt="landfillgascapturecombustion"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -129,6 +143,7 @@ exports[`getImageAndText returns correct image and text for landfillgascaptureco
 exports[`getImageAndText returns correct image and text for reddreducedemissionsfromdeforestationanddegradation 1`] = `
 <div>
   <img
+    alt="reddreducedemissionsfromdeforestationanddegradation"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -138,6 +153,7 @@ exports[`getImageAndText returns correct image and text for reddreducedemissions
 exports[`getImageAndText returns correct image and text for reducedemissionsfromdeforestationdegradation 1`] = `
 <div>
   <img
+    alt="reducedemissionsfromdeforestationdegradation"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -147,6 +163,7 @@ exports[`getImageAndText returns correct image and text for reducedemissionsfrom
 exports[`getImageAndText returns correct image and text for reforestation 1`] = `
 <div>
   <img
+    alt="reforestation"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -156,6 +173,7 @@ exports[`getImageAndText returns correct image and text for reforestation 1`] = 
 exports[`getImageAndText returns correct image and text for reforestationandrevegetation 1`] = `
 <div>
   <img
+    alt="reforestationandrevegetation"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -165,6 +183,7 @@ exports[`getImageAndText returns correct image and text for reforestationandreve
 exports[`getImageAndText returns correct image and text for renewableelectricityfromwind 1`] = `
 <div>
   <img
+    alt="renewableelectricityfromwind"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -174,6 +193,7 @@ exports[`getImageAndText returns correct image and text for renewableelectricity
 exports[`getImageAndText returns correct image and text for solarelectricitysystems 1`] = `
 <div>
   <img
+    alt="solarelectricitysystems"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -183,6 +203,7 @@ exports[`getImageAndText returns correct image and text for solarelectricitysyst
 exports[`getImageAndText returns correct image and text for solarpower 1`] = `
 <div>
   <img
+    alt="solarpower"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
@@ -192,6 +213,7 @@ exports[`getImageAndText returns correct image and text for solarpower 1`] = `
 exports[`getImageAndText returns correct image and text for windpower 1`] = `
 <div>
   <img
+    alt="windpower"
     class="chakra-image css-19vnwa0"
     src="/img.jpg"
   />
