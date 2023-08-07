@@ -32,6 +32,34 @@ export const getProjectResults = async (pattern: string, offset = 0, count = DEF
   })
 }
 
+export const getUnitsResults = async (pattern: string, offset = 0, count = DEFAULT_PROJECT_COUNT_TO_DISPLAY): Promise<EffectResponse<ProjectSearchResponse>> => {
+  return new Promise((resolve) => {
+    let result: EffectResponse<ProjectSearchResponse>
+
+    const searchParams = new URLSearchParams()
+    searchParams.append(ESearchParams.PATTERN, pattern)
+    searchParams.append(ESearchParams.COUNT, count.toString())
+    searchParams.append(ESearchParams.OFFSET, offset.toString())
+
+    axios
+      .get(`${defaultDomain}/v1/units/search?${searchParams}`, defaultHeaders)
+      .then((body) => {
+        if (body.data) {
+          const mapData = body.data as ProjectSearchResponse
+          result = { data: mapData }
+        } else {
+          result = { error: { code: body.status.toString(), message: body.statusText } }
+        }
+      })
+      .catch(() => {
+        result = { error: { code: `400`, message: `could not fetch data` } }
+      })
+      .finally(() => {
+        resolve(result)
+      })
+  })
+}
+
 export const getProject = async (projectId: string): Promise<EffectResponse<ProjectDetails>> => {
   return new Promise((resolve) => {
     let result: EffectResponse<ProjectDetails>

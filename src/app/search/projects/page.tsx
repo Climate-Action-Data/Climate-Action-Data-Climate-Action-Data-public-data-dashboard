@@ -5,8 +5,9 @@ import { useSearchParams } from 'next/navigation'
 import { Box, Button, Container, Flex, Hide } from '@chakra-ui/react'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
-import { ALLOWED_RENDER_TYPE, DEFAULT_PROJECT_COUNT_TO_DISPLAY, ESearchParams } from '@/@types/ProjectSearchResult'
 import { setScrollEventListeners } from '@/utils/Stickify'
+import { ALLOWED_RENDER_TYPE, DEFAULT_PROJECT_COUNT_TO_DISPLAY, ESearchParams } from '@/@types/ProjectSearchResult'
+
 import { ProjectSearchHead } from '@/components/molecules/ProjectSearchHead/ProjectSearchHead'
 import { ProjectSearchBody } from '@/components/molecules/ProjectSearchBody/ProjectSearchBody'
 import { PaginationWidget } from '@/components/atoms/PaginationWidget/PaginationWidget'

@@ -1,29 +1,32 @@
 'use client'
 import { NextPage } from 'next'
 import { useEffect, useLayoutEffect } from 'react'
-import { Container, Flex, Box, Button, Hide } from '@chakra-ui/react'
+import { Box, Button, Container, Flex, Hide } from '@chakra-ui/react'
+import { useSearchParams } from 'next/navigation'
+
+import { useActions, useEffects } from '@/overmind'
 import { setScrollEventListeners } from '@/utils/Stickify'
+import { ALLOWED_RENDER_TYPE, DEFAULT_PROJECT_COUNT_TO_DISPLAY, ESearchParams } from '@/@types/ProjectSearchResult'
+
 import { ProjectSearchHead } from '@/components/molecules/ProjectSearchHead/ProjectSearchHead'
 import { PaginationWidget } from '@/components/atoms/PaginationWidget/PaginationWidget'
-import { useActions, useEffects } from '@/overmind'
 import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
-import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
 import { UnitSearchBody } from '@/components/molecules/UnitSearchBody/UnitSearchBody'
 
-const DEFAULT_PROJECT_TO_DISPLAY = 15
-
 const UnitPage: NextPage = () => {
-  const { getProjectResults } = useEffects().projectResult
+  const { getUnitsResults } = useEffects().projectResult
   const { setProjectResults } = useActions().projectResult
+  const searchParams = useSearchParams()
+  const pattern = searchParams.get(ESearchParams.KEYWORD) ?? ``
 
   useEffect(() => {
-    getProjectResults(1, DEFAULT_PROJECT_TO_DISPLAY).then((hasProjectResults) => {
+    getUnitsResults(pattern).then((hasProjectResults) => {
       setProjectResults(hasProjectResults)
     })
   }, [])
 
   const handlePageChange = (currentPage: number, from: number) => {
-    getProjectResults(from, DEFAULT_PROJECT_TO_DISPLAY).then((hasProjectResults) => {
+    getUnitsResults(pattern, from).then((hasProjectResults) => {
       setProjectResults(hasProjectResults)
     })
   }
@@ -41,12 +44,13 @@ const UnitPage: NextPage = () => {
       setScrollEventListeners(table, tableReference, reference, projectTable, projectTableReference, multiScroll, scrollableHeader)
     }
   })
+
   return (
     <Flex maxW={`100vw`} paddingBottom="50px">
       <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.UNIT} />
       <UnitSearchBody renderType={ALLOWED_RENDER_TYPE.UNIT} />
       <Container variant={`paginationBar`}>
-        <PaginationWidget onPageChange={handlePageChange} resultPerPage={DEFAULT_PROJECT_TO_DISPLAY} totalResults={89} />
+        <PaginationWidget onPageChange={handlePageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={89} />
         <Box position={[`unset`, `absolute`]} right="10px" float="right">
           <Button variant="hoverOnly" display="flex" gap="4px" fontWeight="500px">
             <Hide below="md">Export</Hide>
