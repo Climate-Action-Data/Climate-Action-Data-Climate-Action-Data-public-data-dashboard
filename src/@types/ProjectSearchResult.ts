@@ -22,6 +22,15 @@ export interface ProjectSearchResponse {
   totalCount: number
 }
 
+export enum ESearchParams {
+  KEYWORD = `keyword`,
+  PATTERN = `pattern`,
+  COUNT = `count`,
+  OFFSET = `offset`,
+}
+
+export const DEFAULT_PROJECT_COUNT_TO_DISPLAY = 15
+
 export enum ALLOWED_RENDER_TYPE {
   PROJECT = `ProjectTable`,
   UNIT = `UnitTable`,

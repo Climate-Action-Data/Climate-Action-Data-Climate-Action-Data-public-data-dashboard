@@ -2,24 +2,22 @@
 import { useEffect, useLayoutEffect } from 'react'
 import { NextPage } from 'next'
 import { useSearchParams } from 'next/navigation'
-import { Container, Flex, Box, Button, Hide } from '@chakra-ui/react'
+import { Box, Button, Container, Flex, Hide } from '@chakra-ui/react'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
-import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
+import { ALLOWED_RENDER_TYPE, DEFAULT_PROJECT_COUNT_TO_DISPLAY, ESearchParams } from '@/@types/ProjectSearchResult'
 import { setScrollEventListeners } from '@/utils/Stickify'
 import { ProjectSearchHead } from '@/components/molecules/ProjectSearchHead/ProjectSearchHead'
 import { ProjectSearchBody } from '@/components/molecules/ProjectSearchBody/ProjectSearchBody'
 import { PaginationWidget } from '@/components/atoms/PaginationWidget/PaginationWidget'
 import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 
-const DEFAULT_PROJECT_TO_DISPLAY = 15
-
 const ProjectPage: NextPage = () => {
   const { getProjectResults } = useEffects().projectResult
   const { setProjectResults } = useActions().projectResult
   const { projectResults } = useAppState().projectResult
   const searchParams = useSearchParams()
-  const pattern = searchParams.get(`keyword`) ?? ``
+  const pattern = searchParams.get(ESearchParams.KEYWORD) ?? ``
 
   useEffect(() => {
     getProjectResults(pattern).then((hasProjectResults) => {
@@ -27,7 +25,7 @@ const ProjectPage: NextPage = () => {
     })
   }, [pattern])
 
-  const handlePageChange = (currentPage: number, from: number) => {
+  const handleOnPageChange = (currentPage: number, from: number) => {
     getProjectResults(pattern, from).then((hasProjectResults) => {
       setProjectResults(hasProjectResults)
     })
@@ -52,7 +50,7 @@ const ProjectPage: NextPage = () => {
       <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.PROJECT} />
       <ProjectSearchBody renderType={ALLOWED_RENDER_TYPE.PROJECT} />
       <Container variant={`paginationBar`}>
-        <PaginationWidget onPageChange={handlePageChange} resultPerPage={DEFAULT_PROJECT_TO_DISPLAY} totalResults={projectResults?.data?.totalCount ?? 0} />
+        <PaginationWidget onPageChange={handleOnPageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={projectResults?.data?.totalCount ?? 0} />
         <Box position={[`unset`, `absolute`]} right="10px" float="right">
           <Button variant="hoverOnly" display="flex" gap="4px" fontWeight="500px">
             <Hide below="md">Export</Hide>

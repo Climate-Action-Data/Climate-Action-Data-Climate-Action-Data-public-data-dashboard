@@ -1,19 +1,17 @@
 import axios from 'axios'
 import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
 import { EffectResponse } from '@/@types/EffectResponse'
-import { ProjectSearchResponse } from '@/@types/ProjectSearchResult'
+import { DEFAULT_PROJECT_COUNT_TO_DISPLAY, ESearchParams, ProjectSearchResponse } from '@/@types/ProjectSearchResult'
 import { ProjectDetails } from '@/@types/ProjectDetails'
 
-const DEFAULT_COUNT = 15
-
-export const getProjectResults = async (pattern: string, offset = 0, count = DEFAULT_COUNT): Promise<EffectResponse<ProjectSearchResponse>> => {
+export const getProjectResults = async (pattern: string, offset = 0, count = DEFAULT_PROJECT_COUNT_TO_DISPLAY): Promise<EffectResponse<ProjectSearchResponse>> => {
   return new Promise((resolve) => {
     let result: EffectResponse<ProjectSearchResponse>
 
     const searchParams = new URLSearchParams()
-    searchParams.append(`pattern`, pattern)
-    searchParams.append(`count`, count.toString())
-    searchParams.append(`offset`, offset.toString())
+    searchParams.append(ESearchParams.PATTERN, pattern)
+    searchParams.append(ESearchParams.COUNT, count.toString())
+    searchParams.append(ESearchParams.OFFSET, offset.toString())
 
     axios
       .get(`${defaultDomain}/v1/projects/search?${searchParams}`, defaultHeaders)
