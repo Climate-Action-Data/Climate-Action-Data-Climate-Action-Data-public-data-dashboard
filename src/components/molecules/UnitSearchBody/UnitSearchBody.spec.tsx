@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import { ProjectSearchBody } from './ProjectSearchBody'
+import { UnitSearchBody } from './UnitSearchBody'
 import { PROJECT_SEARCH_RESULT } from '@/test/TestOvermindMockData'
 import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
@@ -11,7 +11,7 @@ describe(`ProjectSearchBody`, () => {
     const { container } = render(
       <TestOvermindWrapper projectResult={undefined}>
         <TestRouter router={{ push }}>
-          <ProjectSearchBody renderType={ALLOWED_RENDER_TYPE.PROJECT} />
+          <UnitSearchBody renderType={ALLOWED_RENDER_TYPE.UNIT} />
         </TestRouter>
       </TestOvermindWrapper>,
     )
@@ -22,7 +22,7 @@ describe(`ProjectSearchBody`, () => {
     const { container } = render(
       <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>
         <TestRouter router={{ push }}>
-          <ProjectSearchBody renderType={ALLOWED_RENDER_TYPE.PROJECT} />
+          <UnitSearchBody renderType={ALLOWED_RENDER_TYPE.UNIT} />
         </TestRouter>
       </TestOvermindWrapper>,
     )
@@ -33,7 +33,7 @@ describe(`ProjectSearchBody`, () => {
     const { container } = render(
       <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>
         <TestRouter router={{ push }}>
-          <ProjectSearchBody renderType={ALLOWED_RENDER_TYPE.PROJECT} />
+          <UnitSearchBody renderType={ALLOWED_RENDER_TYPE.UNIT} />
         </TestRouter>
       </TestOvermindWrapper>,
     )
@@ -62,7 +62,7 @@ describe(`ProjectSearchBody`, () => {
       render(
         <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>
           <TestRouter router={{ push }}>
-            <ProjectSearchBody renderType={undefined} />
+            <UnitSearchBody renderType={undefined} />
           </TestRouter>
         </TestOvermindWrapper>,
       ),

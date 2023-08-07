@@ -1,0 +1,446 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="chakra-table__container hide-scrollbar css-1bi7isa"
+    id="tableReference"
+  >
+    <table
+      class="chakra-table searchTable css-0"
+    >
+      <thead
+        class=" css-hacnqc"
+        id="table"
+      >
+        <tr
+          class="css-0"
+          id="scrollableHeader"
+        >
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Unit Status
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Vintage
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+            data-is-numeric="true"
+          >
+            <div
+              class="css-0"
+            >
+              Annual Est. Units
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Issuance Date
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Retirement Date
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Standard
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Methodology
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Sector
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Country
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Corresponding Adjustment
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Marketplace
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Serial Number
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
+`;

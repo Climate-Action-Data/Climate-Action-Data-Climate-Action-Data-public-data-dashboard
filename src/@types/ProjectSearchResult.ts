@@ -15,4 +15,7 @@ export interface ProjectSearchResult {
   annualAvailable?: number
 }
 
-export const ALLOWED_RENDER_TYPE = `ProjectTable`
+export enum ALLOWED_RENDER_TYPE {
+  PROJECT = `ProjectTable`,
+  UNIT = `UnitTable`,
+}

@@ -2,14 +2,14 @@ import { Flex, TableContainer } from '@chakra-ui/react'
 import { useAppState } from '@/overmind'
 
 import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
-import { ProjectSearchBodyHeader } from '@/components/atoms/ProjectSearchBodyHeader/ProjectSearchBodyHeader'
+import { UnitSearchBodyHeader } from '@/components/atoms/UnitSearchBodyHeader/UnitSearchBodyHeader'
 import { ProjectSearchBodyContent } from '@/components/atoms/ProjectSearchBodyContent/ProjectSearchBodyContent'
 
-interface ProjectSearchBodyProps {
+interface UnitSearchBodyProps {
   renderType?: string
 }
 
-export const ProjectSearchBody = (props: ProjectSearchBodyProps) => {
+export const UnitSearchBody = (props: UnitSearchBodyProps) => {
   const { renderType } = props
   const { projectResults } = useAppState().projectResult
   if (!renderType || !Object.values(ALLOWED_RENDER_TYPE).find((val) => val === renderType)) {
@@ -18,8 +18,8 @@ export const ProjectSearchBody = (props: ProjectSearchBodyProps) => {
 
   return (
     <Flex flexDirection="column" overflow="hidden">
-      <ProjectSearchBodyHeader />
-      <TableContainer id="multiScroll">
+      <UnitSearchBodyHeader />
+      <TableContainer id="multiscroll">
         <ProjectSearchBodyContent projectResults={projectResults} />
       </TableContainer>
     </Flex>
