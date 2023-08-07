@@ -18,6 +18,7 @@ it(`renders correctly`, () => {
   )
   expect(container).toMatchSnapshot()
 })
+
 it(`renders correctly on table data`, () => {
   const { container } = render(
     <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>

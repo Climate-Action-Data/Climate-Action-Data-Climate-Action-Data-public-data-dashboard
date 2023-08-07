@@ -1,17 +1,13 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import Projects from './page'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 import { PROJECT_SEARCH_RESULT } from '@/test/TestOvermindMockData'
 
+const mockPush = jest.fn()
 jest.mock(`next/navigation`, () => ({
-  useRouter() {
-    return {
-      route: `/`,
-      pathname: ``,
-      query: ``,
-      asPath: ``,
-    }
-  },
+  ...jest.requireActual(`next/navigation`),
+  useRouter: () => ({ push: mockPush }),
+  useSearchParams: () => ({ get: () => `testParams` }),
 }))
 
 it(`renders correctly`, () => {
@@ -22,6 +18,7 @@ it(`renders correctly`, () => {
   )
   expect(container).toMatchSnapshot()
 })
+
 it(`renders correctly on table data`, () => {
   const { container } = render(
     <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>
