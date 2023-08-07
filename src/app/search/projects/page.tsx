@@ -22,7 +22,7 @@ const ProjectPage: NextPage = () => {
     })
   }, [])
 
-  const getNewResults = (from: number) => {
+  const handlePageChange = (currentPage: number, from: number) => {
     getProjectResults(from, DEFAULT_PROJECT_TO_DISPLAY).then((hasProjectResults) => {
       setProjectResults(hasProjectResults)
     })
@@ -47,7 +47,7 @@ const ProjectPage: NextPage = () => {
       <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.PROJECT} />
       <ProjectSearchBody renderType={ALLOWED_RENDER_TYPE.PROJECT} />
       <Container variant={`paginationBar`}>
-        <PaginationWidget onPageChange={(currentPage, from) => getNewResults(from)} resultPerPage={DEFAULT_PROJECT_TO_DISPLAY} totalResults={89} />
+        <PaginationWidget onPageChange={handlePageChange} resultPerPage={DEFAULT_PROJECT_TO_DISPLAY} totalResults={89} />
         <Box position={[`unset`, `absolute`]} right="10px" float="right">
           <Button variant="hoverOnly" display="flex" gap="4px" fontWeight="500px">
             <Hide below="md">Export</Hide>
