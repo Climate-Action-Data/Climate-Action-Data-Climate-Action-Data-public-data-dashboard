@@ -3,6 +3,50 @@
 exports[`PageDetails renders correctly 1`] = `
 <div>
   <div
+    class="css-nez7ks"
+  >
+    <div
+      class="css-1teq9s8"
+    >
+      <img
+        alt=""
+        class="chakra-image css-19vnwa0"
+        src="/img.jpg"
+      />
+      <div
+        class="chakra-stack css-1ibnd6w"
+      >
+        <p
+          class="chakra-text css-1ezsviu"
+        />
+        <h2
+          class="chakra-heading css-1lr1hz5"
+        />
+        <p
+          class="chakra-text css-0"
+        />
+      </div>
+    </div>
+    <div
+      class="css-13n95wf"
+    >
+      <p
+        class="chakra-text css-1vb39qn"
+      >
+        Description
+      </p>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-0"
+        >
+          undefined
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
     class="css-14fdyiq"
   >
     <div
