@@ -2,7 +2,7 @@
 import { NextPage } from 'next'
 import { useEffect, useLayoutEffect } from 'react'
 import { Container, Flex, Box, Button, Hide } from '@chakra-ui/react'
-import { shouldReposition, setScroll } from '@/utils/Stickify'
+import { setScrollEventListeners } from '@/utils/Stickify'
 import { ProjectSearchHead } from '@/components/molecules/ProjectSearchHead/ProjectSearchHead'
 import { ProjectSearchBody } from '@/components/molecules/ProjectSearchBody/ProjectSearchBody'
 import { PaginationWidget } from '@/components/atoms/PaginationWidget/PaginationWidget'
@@ -38,42 +38,7 @@ const ProjectPage: NextPage = () => {
     const multiScroll = document.querySelector(`#multiScroll`)
 
     if (table && tableReference && reference && projectTable && projectTableReference && multiScroll && scrollableHeader) {
-      document.addEventListener(
-        `scroll`,
-        () => {
-          shouldReposition(projectTable, projectTableReference, reference, multiScroll)
-          shouldReposition(table, tableReference, reference, multiScroll)
-        },
-        {
-          passive: true,
-        },
-      )
-
-      multiScroll.addEventListener(`scroll`, () => {
-        if (multiScroll?.parentNode?.querySelector(`:hover`) == multiScroll) {
-          setScroll(tableReference, table)
-        }
-      })
-
-      multiScroll.addEventListener(`touchmove`, () => {
-        setScroll(tableReference, table)
-      })
-
-      tableReference.addEventListener(`scroll`, () => {
-        if (tableReference?.parentNode?.querySelector(`:hover`) == tableReference) {
-          setScroll(multiScroll, table, `#tableReference`)
-        }
-      })
-
-      tableReference.addEventListener(`touchmove`, () => {
-        setScroll(multiScroll, table, `#tableReference`)
-      })
-
-      scrollableHeader.addEventListener(`scroll`, () => {
-        if (scrollableHeader?.parentNode?.querySelector(`:hover`) == scrollableHeader) {
-          setScroll(multiScroll, multiScroll, `#scrollableHeader`)
-        }
-      })
+      setScrollEventListeners(table, tableReference, reference, projectTable, projectTableReference, multiScroll, scrollableHeader)
     }
   })
 

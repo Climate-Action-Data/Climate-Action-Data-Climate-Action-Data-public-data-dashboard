@@ -19,7 +19,7 @@ export const UnitSearchBody = (props: UnitSearchBodyProps) => {
   return (
     <Flex flexDirection="column" overflow="hidden">
       <UnitSearchBodyHeader />
-      <TableContainer id="multiscroll">
+      <TableContainer id="multiScroll">
         <ProjectSearchBodyContent projectResults={projectResults} />
       </TableContainer>
     </Flex>

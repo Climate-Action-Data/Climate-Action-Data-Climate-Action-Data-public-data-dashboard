@@ -33,6 +33,7 @@ export const setScroll = (toScroll: Element, fixedElement: Element, multiScrollC
     }
   }
 }
+
 export const changeHoverColor = (classNameToHover: string, classNameToAdd: string) => {
   const formattedClassName = `.${classNameToHover}`
 
@@ -47,4 +48,51 @@ export const changeHoverColor = (classNameToHover: string, classNameToAdd: strin
       })
     })
   }
+}
+
+export const setScrollEventListeners = (
+  table: Element,
+  tableReference: Element,
+  reference: Element,
+  projectTable: Element,
+  projectTableReference: Element,
+  multiScroll: Element,
+  scrollableHeader: Element,
+) => {
+  document.addEventListener(
+    `scroll`,
+    () => {
+      shouldReposition(projectTable, projectTableReference, reference, multiScroll)
+      shouldReposition(table, tableReference, reference, multiScroll)
+    },
+    {
+      passive: true,
+    },
+  )
+
+  multiScroll.addEventListener(`scroll`, () => {
+    if (multiScroll?.parentNode?.querySelector(`:hover`) == multiScroll) {
+      setScroll(tableReference, table)
+    }
+  })
+
+  multiScroll.addEventListener(`touchmove`, () => {
+    setScroll(tableReference, table)
+  })
+
+  tableReference.addEventListener(`scroll`, () => {
+    if (tableReference?.parentNode?.querySelector(`:hover`) == tableReference) {
+      setScroll(multiScroll, table, `#tableReference`)
+    }
+  })
+
+  tableReference.addEventListener(`touchmove`, () => {
+    setScroll(multiScroll, table, `#tableReference`)
+  })
+
+  scrollableHeader.addEventListener(`scroll`, () => {
+    if (scrollableHeader?.parentNode?.querySelector(`:hover`) == scrollableHeader) {
+      setScroll(multiScroll, multiScroll, `#scrollableHeader`)
+    }
+  })
 }

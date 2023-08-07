@@ -447,7 +447,7 @@ exports[`ProjectSearchBody renders correctly with no projects 1`] = `
     </div>
     <div
       class="chakra-table__container css-zipzvv"
-      id="multiscroll"
+      id="multiScroll"
     >
       <table
         class="chakra-table searchTable css-0"
@@ -988,7 +988,7 @@ exports[`ProjectSearchBody renders correctly with projects 1`] = `
     </div>
     <div
       class="chakra-table__container css-zipzvv"
-      id="multiscroll"
+      id="multiScroll"
     >
       <table
         class="chakra-table searchTable css-0"
@@ -3068,7 +3068,7 @@ exports[`ProjectSearchBody renders correctly with projects and handles click 1`]
     </div>
     <div
       class="chakra-table__container css-zipzvv"
-      id="multiscroll"
+      id="multiScroll"
     >
       <table
         class="chakra-table searchTable css-0"
