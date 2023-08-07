@@ -15,7 +15,7 @@ export const ProjectSearchHead = (props: ProjectSearchHeadProps) => {
   const { projectResults } = useAppState().projectResult
   const { t } = useTranslation(`search`)
 
-  if (renderType !== ALLOWED_RENDER_TYPE) {
+  if (!renderType || !Object.values(ALLOWED_RENDER_TYPE).find((val) => val === renderType)) {
     throw new Error(`This page should only be rendered in PageProject and is currently rendered in ${renderType}`)
   }
 

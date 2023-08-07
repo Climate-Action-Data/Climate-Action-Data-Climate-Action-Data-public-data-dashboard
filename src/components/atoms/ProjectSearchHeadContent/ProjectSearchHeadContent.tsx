@@ -17,9 +17,24 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
   const router = useRouter()
   const { t } = useTranslation(`search`)
 
+  const handleClick = (projectId: string, event?: any) => {
+    if (event?.target) {
+      const target = event.target as HTMLElement
+      if (target instanceof HTMLTableCellElement || target instanceof HTMLParagraphElement) {
+        router.push(`/project/${projectId}`)
+      }
+    }
+  }
+
   const generateTableRow = (projectList: ProjectSearchResult[]) => {
     return projectList.map((projectResults, idx) => (
-      <Tr onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)} className={`project-row-${idx}`} key={`project-row-${projectResults.id}`} height="92px">
+      <Tr
+        onClick={(event) => handleClick(projectResults.warehouseProjectId, event)}
+        onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
+        className={`project-row-${idx}`}
+        key={`project-row-${projectResults.id}`}
+        height="92px"
+      >
         <Td>
           <Flex alignItems="center">
             <Box title={projectResults.name} overflow="hidden" flex={1}>

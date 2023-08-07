@@ -11,7 +11,7 @@ describe(`ProjectSearchHead`, () => {
     const { container } = render(
       <TestOvermindWrapper projectResult={undefined}>
         <TestRouter router={{ push }}>
-          <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE} />
+          <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.PROJECT} />
         </TestRouter>
       </TestOvermindWrapper>,
     )
@@ -22,7 +22,7 @@ describe(`ProjectSearchHead`, () => {
     const { container } = render(
       <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>
         <TestRouter router={{ push }}>
-          <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE} />
+          <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.PROJECT} />
         </TestRouter>
       </TestOvermindWrapper>,
     )
@@ -33,7 +33,7 @@ describe(`ProjectSearchHead`, () => {
     const { container } = render(
       <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>
         <TestRouter router={{ push }}>
-          <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE} />
+          <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.PROJECT} />
         </TestRouter>
       </TestOvermindWrapper>,
     )

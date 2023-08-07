@@ -4,15 +4,15 @@ import { useEffect, useLayoutEffect } from 'react'
 import { Container, Flex, Box, Button, Hide } from '@chakra-ui/react'
 import { shouldReposition, setScroll } from '@/utils/Stickify'
 import { ProjectSearchHead } from '@/components/molecules/ProjectSearchHead/ProjectSearchHead'
-import { ProjectSearchBody } from '@/components/molecules/ProjectSearchBody/ProjectSearchBody'
 import { PaginationWidget } from '@/components/atoms/PaginationWidget/PaginationWidget'
 import { useActions, useEffects } from '@/overmind'
 import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
+import { UnitSearchBody } from '@/components/molecules/UnitSearchBody/UnitSearchBody'
 
 const DEFAULT_PROJECT_TO_DISPLAY = 15
 
-const ProjectPage: NextPage = () => {
+const UnitPage: NextPage = () => {
   const { getProjectResults } = useEffects().projectResult
   const { setProjectResults } = useActions().projectResult
 
@@ -76,11 +76,10 @@ const ProjectPage: NextPage = () => {
       })
     }
   })
-
   return (
     <Flex maxW={`100vw`} paddingBottom="50px">
-      <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.PROJECT} />
-      <ProjectSearchBody renderType={ALLOWED_RENDER_TYPE.PROJECT} />
+      <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.UNIT} />
+      <UnitSearchBody renderType={ALLOWED_RENDER_TYPE.UNIT} />
       <Container variant={`paginationBar`}>
         <PaginationWidget onPageChange={(currentPage, from) => getNewResults(from)} resultPerPage={DEFAULT_PROJECT_TO_DISPLAY} totalResults={89} />
         <Box position={[`unset`, `absolute`]} right="10px" float="right">
@@ -94,4 +93,4 @@ const ProjectPage: NextPage = () => {
   )
 }
 
-export default ProjectPage
+export default UnitPage

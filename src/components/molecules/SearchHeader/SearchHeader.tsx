@@ -12,7 +12,7 @@ export const SearchHeader = () => {
   return (
     <Flex id="headerReference" position="sticky" top={`56px`} zIndex="docked" padding="16px 24px" minH="184px" color="white" backgroundColor="gray.900" width="100%">
       <VStack alignItems="start" flex={1}>
-        <BreadCrumbs items={[{ title: `Projects`, link: `/search/projects` }]} />
+        {currentPath && <BreadCrumbs items={[{ title: currentTitle, link: currentPath }]} />}
         <HStack w={`100%`} justifyContent={`space-between`}>
           <Box>
             <Heading>{currentTitle}</Heading>

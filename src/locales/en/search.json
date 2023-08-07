@@ -26,6 +26,14 @@
     "totalAvailableUnits": "Total Available Units",
     "correspondingAdjustment": "Corresponding Adjustment"
   },
+  "unitTable": {
+    "status": "Unit Status",
+    "vintage": "Vintage",
+    "issuanceDate": "Issuance Date",
+    "retirementDate": "Retirement Date",
+    "marketplace": "Marketplace",
+    "serialNumber": "Serial Number"
+  },
   "projectMenu": {
     "viewProject": "View Project",
     "exportProject": "Export Project",
