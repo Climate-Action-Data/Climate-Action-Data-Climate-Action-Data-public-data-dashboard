@@ -25,7 +25,7 @@ export const ProjectDetailsVerificationList = (props: ProjectDetailsVerification
     const verificationListToRender = []
     for (let i = 0; i < elementToRender; i++) {
       verificationListToRender.push(
-        <Text>
+        <Text key={`${verificationList[i].startDate}-${i}`}>
           {formatDate(verificationList[i].startDate, DateFormats.YYYY_MM_DD)} - {formatDate(verificationList[i].endDate, DateFormats.YYYY_MM_DD)}
         </Text>,
       )

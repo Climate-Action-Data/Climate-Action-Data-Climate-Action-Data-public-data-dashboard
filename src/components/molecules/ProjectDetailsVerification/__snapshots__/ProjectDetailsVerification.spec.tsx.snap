@@ -67,8 +67,8 @@ exports[`renders correctly with validation 1`] = `
       >
         Verification Period
       </p>
-      <p
-        class="chakra-text css-0"
+      <div
+        class="css-0"
       >
         <div
           class="css-0"
@@ -88,7 +88,7 @@ exports[`renders correctly with validation 1`] = `
             View More
           </button>
         </div>
-      </p>
+      </div>
     </div>
   </div>
 </div>
@@ -153,8 +153,8 @@ exports[`renders correctly with validation and no date 1`] = `
       >
         Verification Period
       </p>
-      <p
-        class="chakra-text css-0"
+      <div
+        class="css-0"
       >
         <div
           class="css-0"
@@ -174,7 +174,7 @@ exports[`renders correctly with validation and no date 1`] = `
             View More
           </button>
         </div>
-      </p>
+      </div>
     </div>
   </div>
 </div>
