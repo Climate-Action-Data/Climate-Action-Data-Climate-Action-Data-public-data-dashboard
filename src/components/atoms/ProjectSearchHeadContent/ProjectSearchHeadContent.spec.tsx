@@ -37,7 +37,7 @@ it(`renders correctly and click`, () => {
   )
   const rows = screen.getAllByTestId(`project-search-head-row-td`)
   expect(rows.length).toBeGreaterThan(0)
-  expect(push).toHaveBeenCalled()
   fireEvent.click(rows[0])
+  expect(push).toHaveBeenCalled()
   expect(container).toMatchSnapshot()
 })
