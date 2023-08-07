@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { ChangeEvent, useState } from 'react'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import { useRouter } from 'next/navigation'
+import { ESearchParams } from '@/@types/ProjectSearchResult'
 
 const SearchBar = () => {
   const [searchInput, setSearchInput] = useState(``)
@@ -20,7 +21,7 @@ const SearchBar = () => {
 
   const handleOnSearch = () => {
     const searchParams = new URLSearchParams()
-    searchParams.append(`keyword`, searchInput)
+    searchParams.append(ESearchParams.KEYWORD, searchInput)
     router.push(`/search/projects?${searchParams}`)
   }
 

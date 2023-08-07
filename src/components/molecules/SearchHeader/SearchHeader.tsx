@@ -6,6 +6,7 @@ import { Box, Button, Flex, Heading, HStack, Input, InputGroup, InputRightElemen
 import { extractTitleFromUrl } from '@/utils/TextConverter'
 
 import { BreadCrumbs } from '@/components/atoms/BreadCrumbs/BreadCrumbs'
+import { ESearchParams } from '@/@types/ProjectSearchResult'
 
 export const SearchHeader = () => {
   const [searchInput, setSearchInput] = useState(``)
@@ -14,7 +15,7 @@ export const SearchHeader = () => {
   const { t } = useTranslation(`search`)
   const searchParams = useSearchParams()
   const router = useRouter()
-  const pattern = searchParams.get(`keyword`) ?? ``
+  const pattern = searchParams.get(ESearchParams.KEYWORD) ?? ``
 
   useEffect(() => {
     setSearchInput(pattern)
@@ -22,7 +23,7 @@ export const SearchHeader = () => {
 
   const handleOnSearch = () => {
     const searchParams = new URLSearchParams()
-    searchParams.append(`keyword`, searchInput)
+    searchParams.append(ESearchParams.KEYWORD, searchInput)
     router.push(`/search/projects?${searchParams}`)
   }
 

@@ -42,6 +42,5 @@ export const searchBar = defineStyle({
   margin: 0,
   padding: `16px`,
   maxW: `unset`,
-
   height: `72px`,
 })
