@@ -1,6 +1,6 @@
 import { changeHoverColor } from '@/utils/Stickify'
 import { Table, Tbody, Td, Text, Tr } from '@chakra-ui/react'
-import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
+import { ProjectSearchResponse, ProjectSearchResult } from '@/@types/ProjectSearchResult'
 import { EffectResponse } from '@/@types/EffectResponse'
 import { useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
@@ -37,7 +37,7 @@ const renderCreditingPeriod = (startDate: string | undefined, endDate: string | 
 }
 
 interface ProjectSearchBodyContentProps {
-  projectResults?: EffectResponse<ProjectSearchResult[]>
+  projectResults?: EffectResponse<ProjectSearchResponse>
 }
 
 export const ProjectSearchBodyContent = (props: ProjectSearchBodyContentProps) => {
@@ -90,7 +90,7 @@ export const ProjectSearchBodyContent = (props: ProjectSearchBodyContentProps) =
 
   return (
     <Table variant="simple" className="searchTable">
-      <Tbody data-testid="table-scroll">{projectResults?.data ? generateTableRow(projectResults.data) : <ProjectSearchBodySkeleton />}</Tbody>
+      <Tbody data-testid="table-scroll">{projectResults?.data ? generateTableRow(projectResults.data.projects) : <ProjectSearchBodySkeleton />}</Tbody>
     </Table>
   )
 }

@@ -1,14 +1,14 @@
 import axios from 'axios'
 import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
 import { EffectResponse } from '@/@types/EffectResponse'
-import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
+import { ProjectSearchResponse } from '@/@types/ProjectSearchResult'
 import { ProjectDetails } from '@/@types/ProjectDetails'
 
 const DEFAULT_COUNT = 15
 
-export const getProjectResults = async (pattern: string, offset = 0, count = DEFAULT_COUNT): Promise<EffectResponse<ProjectSearchResult[]>> => {
+export const getProjectResults = async (pattern: string, offset = 0, count = DEFAULT_COUNT): Promise<EffectResponse<ProjectSearchResponse>> => {
   return new Promise((resolve) => {
-    let result: EffectResponse<ProjectSearchResult[]>
+    let result: EffectResponse<ProjectSearchResponse>
 
     const searchParams = new URLSearchParams()
     searchParams.append(`pattern`, pattern)
@@ -19,7 +19,7 @@ export const getProjectResults = async (pattern: string, offset = 0, count = DEF
       .get(`${defaultDomain}/v1/projects/search?${searchParams}`, defaultHeaders)
       .then((body) => {
         if (body.data) {
-          const mapData = body.data as ProjectSearchResult[]
+          const mapData = body.data as ProjectSearchResponse
           result = { data: mapData }
         } else {
           result = { error: { code: body.status.toString(), message: body.statusText } }

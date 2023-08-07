@@ -1,5 +1,5 @@
 'use client'
-import { Container, Flex, Hide, Spacer, Text } from '@chakra-ui/react'
+import { Box, Container, Flex, Hide, Spacer, Text } from '@chakra-ui/react'
 
 import { useAppState } from '@/overmind'
 import { CarbonReductionWidget } from '@/components/molecules/CarbonReductionWidget/CarbonReductionWidget'
@@ -19,9 +19,9 @@ export default function Home(): React.JSX.Element {
 
   return (
     <>
-      <Flex paddingX={`24px`} paddingTop={`24px`}>
+      <Box paddingX={`24px`} paddingTop={`24px`}>
         <FiltersAndSearch />
-      </Flex>
+      </Box>
       <Flex padding={`24px`} minHeight="min-content" alignItems="center" justifyContent="space-between" flexDirection="column" width={`100%`}>
         <Container marginTop={`20px`} variant="cardSection">
           <Flex justifyContent="space-between" flexWrap="wrap" margin={`8px`} gap={`16px`} alignItems={`center`}>

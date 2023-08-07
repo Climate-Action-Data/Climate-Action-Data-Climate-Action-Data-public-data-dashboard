@@ -17,6 +17,11 @@ export interface ProjectSearchResult {
   coveredByNdc: string
 }
 
+export interface ProjectSearchResponse {
+  projects: ProjectSearchResult[]
+  totalCount: number
+}
+
 export enum ALLOWED_RENDER_TYPE {
   PROJECT = `ProjectTable`,
   UNIT = `UnitTable`,
