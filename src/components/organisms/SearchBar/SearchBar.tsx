@@ -1,7 +1,7 @@
 import { CloseIcon } from '@/components/atoms/CloseIcon/CloseIcon'
 import { Button, Container, Flex, Input, InputGroup, InputRightElement } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import { useRouter } from 'next/navigation'
 
@@ -14,7 +14,7 @@ const SearchBar = () => {
     setSearchInput(``)
   }
 
-  const handleInputOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchInput(event.target.value)
   }
 
@@ -25,7 +25,7 @@ const SearchBar = () => {
   }
 
   return (
-    <Container variant={`searchBar`}>
+    <Container variant={`searchBar`} width={[`100%`, null, null, `888px`]}>
       <Flex>
         <InputGroup variant={`searchInput`}>
           {searchInput.length !== 0 && (

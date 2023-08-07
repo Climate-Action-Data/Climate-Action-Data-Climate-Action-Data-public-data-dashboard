@@ -3,13 +3,13 @@ import { Box, Button, Flex, Menu, MenuButton, MenuItem, MenuList, Skeleton, Stac
 import { BookmarkPlusIcon } from '../BookmarkPlusIcon/BookmarkPlusIcon'
 import { DownloadIcon } from '../DownloadIcon/DownloadIcon'
 import { KebabMenuIcon } from '../KebabMenuIcon/KebabMenuIcon'
-import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
+import { ProjectSearchResponse, ProjectSearchResult } from '@/@types/ProjectSearchResult'
 import { EffectResponse } from '@/@types/EffectResponse'
 import { useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 
 interface ProjectSearchHeadContentProps {
-  projectResults?: EffectResponse<ProjectSearchResult[]>
+  projectResults?: EffectResponse<ProjectSearchResponse>
 }
 
 export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) => {
@@ -77,7 +77,7 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
     <Table variant="simple" className="searchTable">
       <Tbody borderRight="1px solid #B8BEC0">
         {projectResults?.data ? (
-          generateTableRow(projectResults.data)
+          generateTableRow(projectResults.data.projects)
         ) : (
           <Tr height="92px">
             <Td>

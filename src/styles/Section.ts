@@ -39,8 +39,9 @@ export const searchBar = defineStyle({
   minHeight: `min-content`,
   borderRadius: `12px`,
   background: `#FFFFFF`,
+  margin: 0,
   padding: `16px`,
-  marginX: `auto`,
-  width: [`100%`, null, null, `888px`],
+  maxW: `unset`,
+
   height: `72px`,
 })

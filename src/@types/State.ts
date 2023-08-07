@@ -1,5 +1,5 @@
 import { EffectResponse } from './EffectResponse'
-import { ProjectSearchResult } from './ProjectSearchResult'
+import { ProjectSearchResponse } from './ProjectSearchResult'
 import { TimeframesData } from './Timeframe'
 import { SubRegion } from './geojson'
 import { SearchFilterValues } from '@/@types/SearchFilterValues'
@@ -88,8 +88,9 @@ export interface CreditsHistoryDataState {
   filteredCreditsHistory: FilteredCreditsHistoryData | undefined
   dataFilters: DataFilters
 }
+
 export interface ProjectResultState {
-  projectResults?: EffectResponse<ProjectSearchResult[]>
+  projectResults?: EffectResponse<ProjectSearchResponse>
 }
 
 export interface GovernanceResponseData {
