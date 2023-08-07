@@ -26,7 +26,7 @@ export const ProjectDetailsVerification = (props: ProjectDetailsVerificationProp
       <DetailWidget title={t(`verificationHeaders.verificationApproach`)}>
         {validation.verifications.length > 0 ? <Text>{validation.verifications[0].approach}</Text> : tHome(`noData`)}
       </DetailWidget>
-      <DetailWidget title={t(`verificationHeaders.verificationPeriod`)}>
+      <DetailWidget asBox title={t(`verificationHeaders.verificationPeriod`)}>
         <ProjectDetailsVerificationList verificationList={validation.verifications} />
       </DetailWidget>
     </SimpleGrid>
