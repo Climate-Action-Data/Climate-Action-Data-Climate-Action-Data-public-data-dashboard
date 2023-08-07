@@ -1,4 +1,4 @@
-import { CountryPeriodData, CreditsHistoryDataState, DataState, MapData, ProjectResultState, SearchFiltersStateData } from '@/@types/State'
+import { CountryPeriodData, CreditsHistoryDataState, DataState, MapData, ProjectResultState, SearchFiltersStateData, UnitResultState } from '@/@types/State'
 import { TimeframesData } from '@/@types/Timeframe'
 import { SubRegion } from '@/@types/geojson'
 import MAP_DASHBOARD_MOCK_DATA from '@/test/mock-data/map_dashboard_data'
@@ -8,6 +8,7 @@ import { formatDate } from '@/utils/DateFormat'
 import { DateFormats } from '@/@types/DateFormats'
 import { projectDetail } from './mock-data/project_detail'
 import { ProjectDetails } from '@/@types/ProjectDetails'
+import { unitsData } from './mock-data/units_data'
 
 const CARBON_MAP_DATA_FILTERED: CountryPeriodData = {
   activeProjects: 200,
@@ -204,3 +205,9 @@ export const PROJECT_SEARCH_RESULT: ProjectResultState = {
   },
 }
 export const PROJECT_DETAIL: ProjectDetails = projectDetail
+
+export const UNIT_SEARCH_RESULT: UnitResultState = {
+  unitResults: {
+    data: unitsData,
+  },
+}

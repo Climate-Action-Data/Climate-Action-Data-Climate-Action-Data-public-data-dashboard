@@ -3,7 +3,7 @@ import { useAppState } from '@/overmind'
 
 import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
 import { UnitSearchBodyHeader } from '@/components/atoms/UnitSearchBodyHeader/UnitSearchBodyHeader'
-import { ProjectSearchBodyContent } from '@/components/atoms/ProjectSearchBodyContent/ProjectSearchBodyContent'
+import { UnitSearchBodyContent } from '@/components/atoms/UnitSearchBodyContent/UnitSearchBodyContent'
 
 interface UnitSearchBodyProps {
   renderType?: string
@@ -11,16 +11,16 @@ interface UnitSearchBodyProps {
 
 export const UnitSearchBody = (props: UnitSearchBodyProps) => {
   const { renderType } = props
-  const { projectResults } = useAppState().projectResult
+  const { unitResults } = useAppState().unitResult
   if (!renderType || !Object.values(ALLOWED_RENDER_TYPE).find((val) => val === renderType)) {
-    throw new Error(`This page should only be rendered in PageProject and is currently rendered in ${renderType}`)
+    throw new Error(`This page should only be rendered in UnitProject and is currently rendered in ${renderType}`)
   }
 
   return (
     <Flex flexDirection="column" overflow="hidden">
       <UnitSearchBodyHeader />
       <TableContainer id="multiScroll">
-        <ProjectSearchBodyContent projectResults={projectResults} />
+        <UnitSearchBodyContent unitResults={unitResults} />
       </TableContainer>
     </Flex>
   )

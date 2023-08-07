@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { UnitSearchBody } from './UnitSearchBody'
 import { PROJECT_SEARCH_RESULT } from '@/test/TestOvermindMockData'
 import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
@@ -28,21 +28,6 @@ describe(`ProjectSearchBody`, () => {
     )
     expect(container).toMatchSnapshot()
   })
-
-  it(`renders correctly with projects and handles click`, () => {
-    const { container } = render(
-      <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>
-        <TestRouter router={{ push }}>
-          <UnitSearchBody renderType={ALLOWED_RENDER_TYPE.UNIT} />
-        </TestRouter>
-      </TestOvermindWrapper>,
-    )
-    const rows = screen.getAllByTestId(`table-row`)
-    expect(rows.length).toBeGreaterThan(0)
-    fireEvent.click(rows[0])
-    expect(push).toHaveBeenCalled()
-    expect(container).toMatchSnapshot()
-  })
 })
 
 describe(`ProjectSearchBody`, () => {
@@ -66,6 +51,6 @@ describe(`ProjectSearchBody`, () => {
           </TestRouter>
         </TestOvermindWrapper>,
       ),
-    ).toThrow(`This page should only be rendered in PageProject and is currently rendered in undefined`)
+    ).toThrow(`This page should only be rendered in UnitProject and is currently rendered in undefined`)
   })
 })

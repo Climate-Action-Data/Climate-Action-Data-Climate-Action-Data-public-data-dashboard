@@ -13,18 +13,18 @@ import { UnitSearchBody } from '@/components/molecules/UnitSearchBody/UnitSearch
 const DEFAULT_PROJECT_TO_DISPLAY = 15
 
 const UnitPage: NextPage = () => {
-  const { getProjectResults } = useEffects().projectResult
-  const { setProjectResults } = useActions().projectResult
+  const { getUnitResults } = useEffects().unitResult
+  const { setUnitResults } = useActions().unitResult
 
   useEffect(() => {
-    getProjectResults(1, DEFAULT_PROJECT_TO_DISPLAY).then((hasProjectResults) => {
-      setProjectResults(hasProjectResults)
+    getUnitResults(1, DEFAULT_PROJECT_TO_DISPLAY).then((hasUnitResults) => {
+      setUnitResults(hasUnitResults)
     })
   }, [])
 
   const handlePageChange = (currentPage: number, from: number) => {
-    getProjectResults(from, DEFAULT_PROJECT_TO_DISPLAY).then((hasProjectResults) => {
-      setProjectResults(hasProjectResults)
+    getUnitResults(from, DEFAULT_PROJECT_TO_DISPLAY).then((hasUnitResults) => {
+      setUnitResults(hasUnitResults)
     })
   }
 

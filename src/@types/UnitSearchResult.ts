@@ -1,6 +1,6 @@
 export interface UnitSearchResult {
   id: string
-  warehouseProjectId: string
+  warehouseUnitId: string
   projectDeveloper: string
   projectId: string
   projectName: string
@@ -15,4 +15,5 @@ export interface UnitSearchResult {
   correspondingAdjustment?: string
   marketplace?: string
   serialNumber?: string
+  vintage?: number
 }

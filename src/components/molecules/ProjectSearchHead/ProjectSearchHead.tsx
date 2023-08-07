@@ -5,6 +5,7 @@ import { Flex, TableContainer, Table, Thead, Tr, Th, Box } from '@chakra-ui/reac
 import { ALLOWED_RENDER_TYPE } from '@/@types/ProjectSearchResult'
 import { ColumnSortFilter } from '@/components/atoms/ColumnSortFilter/ColumnSortFilter'
 import { ProjectSearchHeadContent } from '@/components/atoms/ProjectSearchHeadContent/ProjectSearchHeadContent'
+import { UnitSearchHeadContent } from '@/components/atoms/UnitSearchHeadContent/UnitSearchHeadContent'
 
 interface ProjectSearchHeadProps {
   renderType?: string
@@ -13,6 +14,7 @@ interface ProjectSearchHeadProps {
 export const ProjectSearchHead = (props: ProjectSearchHeadProps) => {
   const { renderType } = props
   const { projectResults } = useAppState().projectResult
+  const { unitResults } = useAppState().unitResult
   const { t } = useTranslation(`search`)
 
   if (!renderType || !Object.values(ALLOWED_RENDER_TYPE).find((val) => val === renderType)) {
@@ -35,7 +37,7 @@ export const ProjectSearchHead = (props: ProjectSearchHeadProps) => {
           </Thead>
         </Table>
       </TableContainer>
-      <ProjectSearchHeadContent projectResults={projectResults} />
+      {renderType === ALLOWED_RENDER_TYPE.PROJECT ? <ProjectSearchHeadContent projectResults={projectResults} /> : <UnitSearchHeadContent unitResults={unitResults} />}
     </Flex>
   )
 }
