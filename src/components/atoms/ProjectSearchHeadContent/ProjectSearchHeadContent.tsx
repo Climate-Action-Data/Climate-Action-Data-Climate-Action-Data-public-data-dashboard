@@ -31,11 +31,12 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
       <Tr
         onClick={(event) => handleClick(projectResults.warehouseProjectId, event)}
         onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
+        data-testid="project-search-head-row"
         className={`project-row-${idx}`}
         key={`project-row-${projectResults.id}`}
         height="92px"
       >
-        <Td>
+        <Td data-testid="project-search-head-row-td">
           <Flex alignItems="center">
             <Box title={projectResults.name} overflow="hidden" flex={1}>
               <Text fontWeight={500}>{projectResults.name}</Text>

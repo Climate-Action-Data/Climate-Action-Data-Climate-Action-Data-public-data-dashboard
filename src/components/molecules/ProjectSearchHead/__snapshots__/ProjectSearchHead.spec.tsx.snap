@@ -165,9 +165,11 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
       >
         <tr
           class="project-row-0 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -301,9 +303,11 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
         </tr>
         <tr
           class="project-row-1 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -437,9 +441,11 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
         </tr>
         <tr
           class="project-row-2 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -573,9 +579,11 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
         </tr>
         <tr
           class="project-row-3 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -709,9 +717,11 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
         </tr>
         <tr
           class="project-row-4 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -845,9 +855,11 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
         </tr>
         <tr
           class="project-row-5 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -981,9 +993,11 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
         </tr>
         <tr
           class="project-row-6 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -1117,9 +1131,11 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
         </tr>
         <tr
           class="project-row-7 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -1253,9 +1269,11 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
         </tr>
         <tr
           class="project-row-8 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -1389,9 +1407,11 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
         </tr>
         <tr
           class="project-row-9 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -1525,9 +1545,11 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
         </tr>
         <tr
           class="project-row-10 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -1661,9 +1683,11 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
         </tr>
         <tr
           class="project-row-11 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -1797,9 +1821,11 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
         </tr>
         <tr
           class="project-row-12 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -1934,9 +1960,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-13 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -2070,9 +2098,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-14 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -2206,9 +2236,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-15 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -2342,9 +2374,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-16 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -2478,9 +2512,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-17 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -2614,9 +2650,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-18 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -2750,9 +2788,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-19 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -2886,9 +2926,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-20 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -3092,9 +3134,11 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
       >
         <tr
           class="project-row-0 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -3228,9 +3272,11 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
         </tr>
         <tr
           class="project-row-1 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -3364,9 +3410,11 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
         </tr>
         <tr
           class="project-row-2 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -3500,9 +3548,11 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
         </tr>
         <tr
           class="project-row-3 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -3636,9 +3686,11 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
         </tr>
         <tr
           class="project-row-4 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -3772,9 +3824,11 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
         </tr>
         <tr
           class="project-row-5 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -3908,9 +3962,11 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
         </tr>
         <tr
           class="project-row-6 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -4044,9 +4100,11 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
         </tr>
         <tr
           class="project-row-7 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -4180,9 +4238,11 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
         </tr>
         <tr
           class="project-row-8 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -4316,9 +4376,11 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
         </tr>
         <tr
           class="project-row-9 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -4452,9 +4514,11 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
         </tr>
         <tr
           class="project-row-10 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -4588,9 +4652,11 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
         </tr>
         <tr
           class="project-row-11 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -4724,9 +4790,11 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
         </tr>
         <tr
           class="project-row-12 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -4861,9 +4929,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-13 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -4997,9 +5067,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-14 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -5133,9 +5205,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-15 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -5269,9 +5343,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-16 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -5405,9 +5481,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-17 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -5541,9 +5619,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-18 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -5677,9 +5757,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-19 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
@@ -5813,9 +5895,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         </tr>
         <tr
           class="project-row-20 css-mii0oe"
+          data-testid="project-search-head-row"
         >
           <td
             class="css-0"
+            data-testid="project-search-head-row-td"
           >
             <div
               class="css-70qvj9"
