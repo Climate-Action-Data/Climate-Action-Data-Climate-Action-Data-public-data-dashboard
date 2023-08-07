@@ -1,0 +1,868 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <table
+    class="chakra-table searchTable css-0"
+  >
+    <tbody
+      class="css-1kfska2"
+    >
+      <tr
+        class="project-row-0 css-mii0oe"
+        data-testid="project-search-head-row"
+      >
+        <td
+          class="css-0"
+          data-testid="project-search-head-row-td"
+        >
+          <div
+            class="css-70qvj9"
+          >
+            <div
+              class="css-c4alqz"
+              title="PROYECTO ASOCIATIVO PROGRAMÁTICO ZONA ANDINA Y COSTA ATLÁNTICA - FCG"
+            >
+              <p
+                class="chakra-text css-10rvbm3"
+              >
+                PROYECTO ASOCIATIVO PROGRAMÁTICO ZONA ANDINA Y COSTA ATLÁNTICA - FCG
+              </p>
+              <p
+                class="chakra-text css-g5hezf"
+              >
+                29
+              </p>
+              <p
+                class="chakra-text css-nufbzj"
+              >
+                Forestry Consulting Group S.A.S.
+              </p>
+            </div>
+            <button
+              aria-controls="menu-list-:r1:"
+              aria-expanded="false"
+              aria-haspopup="menu"
+              class="chakra-button chakra-menu__menu-button css-o0w9ox"
+              id="menu-button-:r1:"
+              type="button"
+            >
+              <span
+                class="css-xl71ch"
+              />
+              <span
+                class="chakra-button__icon css-8j1iht"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-icon css-n059si"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              class="css-0"
+              style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+            >
+              <div
+                aria-orientation="vertical"
+                class="chakra-menu__menu-list css-sjt5nk"
+                id="menu-list-:r1:"
+                role="menu"
+                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+                tabindex="-1"
+              >
+                <button
+                  class="chakra-menu__menuitem css-1eocwdv"
+                  data-index="0"
+                  data-testid="view-project-details"
+                  id="menu-list-:r1:-menuitem-:r2:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    View Project
+                  </span>
+                </button>
+                <button
+                  class="chakra-menu__menuitem css-1imebkc"
+                  data-index="1"
+                  id="menu-list-:r1:-menuitem-:r3:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    Export Project
+                  </span>
+                  <svg
+                    class="chakra-icon css-n059si"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 15.3255C11.8795 15.3255 11.7673 15.3063 11.6634 15.2679C11.5596 15.2294 11.4609 15.1634 11.3673 15.0698L8.2577 11.9602C8.11925 11.8217 8.04842 11.6477 8.04522 11.4381C8.04201 11.2285 8.11283 11.0513 8.2577 10.9064C8.40257 10.7615 8.58077 10.6865 8.7923 10.6814C9.00383 10.6763 9.18204 10.7461 9.32692 10.891L11.25 12.8141V5.16404C11.25 4.95122 11.3218 4.77302 11.4654 4.62944C11.609 4.48585 11.7872 4.41406 12 4.41406C12.2128 4.41406 12.391 4.48585 12.5346 4.62944C12.6782 4.77302 12.7499 4.95122 12.7499 5.16404V12.8141L14.673 10.891C14.8115 10.7525 14.9881 10.6843 15.2028 10.6862C15.4176 10.6881 15.5974 10.7615 15.7422 10.9064C15.8871 11.0513 15.9595 11.2269 15.9595 11.4333C15.9595 11.6397 15.8871 11.8153 15.7422 11.9602L12.6327 15.0698C12.5391 15.1634 12.4403 15.2294 12.3365 15.2679C12.2327 15.3063 12.1205 15.3255 12 15.3255ZM6.3077 19.5871C5.80257 19.5871 5.375 19.4121 5.025 19.0621C4.675 18.7121 4.5 18.2845 4.5 17.7794V15.8371C4.5 15.6243 4.5718 15.4461 4.7154 15.3025C4.85898 15.1589 5.03718 15.0871 5.25 15.0871C5.46282 15.0871 5.64102 15.1589 5.7846 15.3025C5.92818 15.4461 5.99997 15.6243 5.99997 15.8371V17.7794C5.99997 17.8563 6.03202 17.9268 6.09612 17.991C6.16024 18.0551 6.23077 18.0871 6.3077 18.0871H17.6922C17.7692 18.0871 17.8397 18.0551 17.9038 17.991C17.9679 17.9268 18 17.8563 18 17.7794V15.8371C18 15.6243 18.0718 15.4461 18.2154 15.3025C18.3589 15.1589 18.5371 15.0871 18.75 15.0871C18.9628 15.0871 19.141 15.1589 19.2845 15.3025C19.4281 15.4461 19.5 15.6243 19.5 15.8371V17.7794C19.5 18.2845 19.325 18.7121 18.975 19.0621C18.625 19.4121 18.1974 19.5871 17.6922 19.5871H6.3077Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="chakra-menu__menuitem css-1imebkc"
+                  data-index="2"
+                  id="menu-list-:r1:-menuitem-:r4:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    Add to Watchlists
+                  </span>
+                  <svg
+                    class="chakra-icon css-n059si"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5.76537 20.065C5.46411 20.192 5.1779 20.1678 4.90675 19.9925C4.63558 19.8172 4.5 19.5619 4.5 19.2266V5.66512C4.5 5.15999 4.675 4.73242 5.025 4.38242C5.375 4.03242 5.80257 3.85742 6.3077 3.85742H12V5.3574H6.3077C6.23077 5.3574 6.16024 5.38945 6.09613 5.45355C6.03202 5.51766 5.99997 5.58819 5.99997 5.66512V18.3074L11 16.1574L16 18.3074V11.3574H17.5V19.2266C17.5 19.5619 17.3644 19.8172 17.0932 19.9925C16.8221 20.1678 16.5358 20.192 16.2346 20.065L11 17.8189L5.76537 20.065ZM16.7496 9.3574C16.537 9.3574 16.3589 9.28552 16.2154 9.14177C16.0718 8.99802 16 8.81991 16 8.60742V7.3574H14.75C14.5375 7.3574 14.3594 7.28549 14.2156 7.14167C14.0718 6.99787 14 6.81967 14 6.60707C14 6.39449 14.0718 6.21641 14.2156 6.07282C14.3594 5.92922 14.5375 5.85742 14.75 5.85742H16V4.60742C16 4.39492 16.0719 4.2168 16.2157 4.07305C16.3595 3.9293 16.5377 3.85742 16.7503 3.85742C16.9629 3.85742 17.141 3.9293 17.2845 4.07305C17.4282 4.2168 17.5 4.39492 17.5 4.60742V5.85742H18.75C18.9625 5.85742 19.1406 5.92933 19.2843 6.07315C19.4281 6.21696 19.5 6.39516 19.5 6.60775C19.5 6.82035 19.4281 6.99844 19.2843 7.14202C19.1406 7.28561 18.9625 7.3574 18.75 7.3574H17.5V8.60742C17.5 8.81991 17.428 8.99802 17.2842 9.14177C17.1404 9.28552 16.9622 9.3574 16.7496 9.3574Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="project-row-1 css-mii0oe"
+        data-testid="project-search-head-row"
+      >
+        <td
+          class="css-0"
+          data-testid="project-search-head-row-td"
+        >
+          <div
+            class="css-70qvj9"
+          >
+            <div
+              class="css-c4alqz"
+              title="Proyecto de Mitigación Forestal Bonanza Verde"
+            >
+              <p
+                class="chakra-text css-10rvbm3"
+              >
+                Proyecto de Mitigación Forestal Bonanza Verde
+              </p>
+              <p
+                class="chakra-text css-g5hezf"
+              >
+                12
+              </p>
+              <p
+                class="chakra-text css-nufbzj"
+              >
+                South Pole Carbon Asset Management 
+              </p>
+            </div>
+            <button
+              aria-controls="menu-list-:r6:"
+              aria-expanded="false"
+              aria-haspopup="menu"
+              class="chakra-button chakra-menu__menu-button css-o0w9ox"
+              id="menu-button-:r6:"
+              type="button"
+            >
+              <span
+                class="css-xl71ch"
+              />
+              <span
+                class="chakra-button__icon css-8j1iht"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-icon css-n059si"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              class="css-0"
+              style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+            >
+              <div
+                aria-orientation="vertical"
+                class="chakra-menu__menu-list css-sjt5nk"
+                id="menu-list-:r6:"
+                role="menu"
+                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+                tabindex="-1"
+              >
+                <button
+                  class="chakra-menu__menuitem css-1eocwdv"
+                  data-index="0"
+                  data-testid="view-project-details"
+                  id="menu-list-:r6:-menuitem-:r7:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    View Project
+                  </span>
+                </button>
+                <button
+                  class="chakra-menu__menuitem css-1imebkc"
+                  data-index="1"
+                  id="menu-list-:r6:-menuitem-:r8:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    Export Project
+                  </span>
+                  <svg
+                    class="chakra-icon css-n059si"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 15.3255C11.8795 15.3255 11.7673 15.3063 11.6634 15.2679C11.5596 15.2294 11.4609 15.1634 11.3673 15.0698L8.2577 11.9602C8.11925 11.8217 8.04842 11.6477 8.04522 11.4381C8.04201 11.2285 8.11283 11.0513 8.2577 10.9064C8.40257 10.7615 8.58077 10.6865 8.7923 10.6814C9.00383 10.6763 9.18204 10.7461 9.32692 10.891L11.25 12.8141V5.16404C11.25 4.95122 11.3218 4.77302 11.4654 4.62944C11.609 4.48585 11.7872 4.41406 12 4.41406C12.2128 4.41406 12.391 4.48585 12.5346 4.62944C12.6782 4.77302 12.7499 4.95122 12.7499 5.16404V12.8141L14.673 10.891C14.8115 10.7525 14.9881 10.6843 15.2028 10.6862C15.4176 10.6881 15.5974 10.7615 15.7422 10.9064C15.8871 11.0513 15.9595 11.2269 15.9595 11.4333C15.9595 11.6397 15.8871 11.8153 15.7422 11.9602L12.6327 15.0698C12.5391 15.1634 12.4403 15.2294 12.3365 15.2679C12.2327 15.3063 12.1205 15.3255 12 15.3255ZM6.3077 19.5871C5.80257 19.5871 5.375 19.4121 5.025 19.0621C4.675 18.7121 4.5 18.2845 4.5 17.7794V15.8371C4.5 15.6243 4.5718 15.4461 4.7154 15.3025C4.85898 15.1589 5.03718 15.0871 5.25 15.0871C5.46282 15.0871 5.64102 15.1589 5.7846 15.3025C5.92818 15.4461 5.99997 15.6243 5.99997 15.8371V17.7794C5.99997 17.8563 6.03202 17.9268 6.09612 17.991C6.16024 18.0551 6.23077 18.0871 6.3077 18.0871H17.6922C17.7692 18.0871 17.8397 18.0551 17.9038 17.991C17.9679 17.9268 18 17.8563 18 17.7794V15.8371C18 15.6243 18.0718 15.4461 18.2154 15.3025C18.3589 15.1589 18.5371 15.0871 18.75 15.0871C18.9628 15.0871 19.141 15.1589 19.2845 15.3025C19.4281 15.4461 19.5 15.6243 19.5 15.8371V17.7794C19.5 18.2845 19.325 18.7121 18.975 19.0621C18.625 19.4121 18.1974 19.5871 17.6922 19.5871H6.3077Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="chakra-menu__menuitem css-1imebkc"
+                  data-index="2"
+                  id="menu-list-:r6:-menuitem-:r9:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    Add to Watchlists
+                  </span>
+                  <svg
+                    class="chakra-icon css-n059si"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5.76537 20.065C5.46411 20.192 5.1779 20.1678 4.90675 19.9925C4.63558 19.8172 4.5 19.5619 4.5 19.2266V5.66512C4.5 5.15999 4.675 4.73242 5.025 4.38242C5.375 4.03242 5.80257 3.85742 6.3077 3.85742H12V5.3574H6.3077C6.23077 5.3574 6.16024 5.38945 6.09613 5.45355C6.03202 5.51766 5.99997 5.58819 5.99997 5.66512V18.3074L11 16.1574L16 18.3074V11.3574H17.5V19.2266C17.5 19.5619 17.3644 19.8172 17.0932 19.9925C16.8221 20.1678 16.5358 20.192 16.2346 20.065L11 17.8189L5.76537 20.065ZM16.7496 9.3574C16.537 9.3574 16.3589 9.28552 16.2154 9.14177C16.0718 8.99802 16 8.81991 16 8.60742V7.3574H14.75C14.5375 7.3574 14.3594 7.28549 14.2156 7.14167C14.0718 6.99787 14 6.81967 14 6.60707C14 6.39449 14.0718 6.21641 14.2156 6.07282C14.3594 5.92922 14.5375 5.85742 14.75 5.85742H16V4.60742C16 4.39492 16.0719 4.2168 16.2157 4.07305C16.3595 3.9293 16.5377 3.85742 16.7503 3.85742C16.9629 3.85742 17.141 3.9293 17.2845 4.07305C17.4282 4.2168 17.5 4.39492 17.5 4.60742V5.85742H18.75C18.9625 5.85742 19.1406 5.92933 19.2843 6.07315C19.4281 6.21696 19.5 6.39516 19.5 6.60775C19.5 6.82035 19.4281 6.99844 19.2843 7.14202C19.1406 7.28561 18.9625 7.3574 18.75 7.3574H17.5V8.60742C17.5 8.81991 17.428 8.99802 17.2842 9.14177C17.1404 9.28552 16.9622 9.3574 16.7496 9.3574Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`renders correctly and click 1`] = `
+<div>
+  <table
+    class="chakra-table searchTable css-0"
+  >
+    <tbody
+      class="css-1kfska2"
+    >
+      <tr
+        class="project-row-0 css-mii0oe"
+        data-testid="project-search-head-row"
+      >
+        <td
+          class="css-0"
+          data-testid="project-search-head-row-td"
+        >
+          <div
+            class="css-70qvj9"
+          >
+            <div
+              class="css-c4alqz"
+              title="PROYECTO ASOCIATIVO PROGRAMÁTICO ZONA ANDINA Y COSTA ATLÁNTICA - FCG"
+            >
+              <p
+                class="chakra-text css-10rvbm3"
+              >
+                PROYECTO ASOCIATIVO PROGRAMÁTICO ZONA ANDINA Y COSTA ATLÁNTICA - FCG
+              </p>
+              <p
+                class="chakra-text css-g5hezf"
+              >
+                29
+              </p>
+              <p
+                class="chakra-text css-nufbzj"
+              >
+                Forestry Consulting Group S.A.S.
+              </p>
+            </div>
+            <button
+              aria-controls="menu-list-:rb:"
+              aria-expanded="false"
+              aria-haspopup="menu"
+              class="chakra-button chakra-menu__menu-button css-o0w9ox"
+              id="menu-button-:rb:"
+              type="button"
+            >
+              <span
+                class="css-xl71ch"
+              />
+              <span
+                class="chakra-button__icon css-8j1iht"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-icon css-n059si"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              class="css-0"
+              style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+            >
+              <div
+                aria-orientation="vertical"
+                class="chakra-menu__menu-list css-sjt5nk"
+                id="menu-list-:rb:"
+                role="menu"
+                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+                tabindex="-1"
+              >
+                <button
+                  class="chakra-menu__menuitem css-1eocwdv"
+                  data-index="0"
+                  data-testid="view-project-details"
+                  id="menu-list-:rb:-menuitem-:rc:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    View Project
+                  </span>
+                </button>
+                <button
+                  class="chakra-menu__menuitem css-1imebkc"
+                  data-index="1"
+                  id="menu-list-:rb:-menuitem-:rd:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    Export Project
+                  </span>
+                  <svg
+                    class="chakra-icon css-n059si"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 15.3255C11.8795 15.3255 11.7673 15.3063 11.6634 15.2679C11.5596 15.2294 11.4609 15.1634 11.3673 15.0698L8.2577 11.9602C8.11925 11.8217 8.04842 11.6477 8.04522 11.4381C8.04201 11.2285 8.11283 11.0513 8.2577 10.9064C8.40257 10.7615 8.58077 10.6865 8.7923 10.6814C9.00383 10.6763 9.18204 10.7461 9.32692 10.891L11.25 12.8141V5.16404C11.25 4.95122 11.3218 4.77302 11.4654 4.62944C11.609 4.48585 11.7872 4.41406 12 4.41406C12.2128 4.41406 12.391 4.48585 12.5346 4.62944C12.6782 4.77302 12.7499 4.95122 12.7499 5.16404V12.8141L14.673 10.891C14.8115 10.7525 14.9881 10.6843 15.2028 10.6862C15.4176 10.6881 15.5974 10.7615 15.7422 10.9064C15.8871 11.0513 15.9595 11.2269 15.9595 11.4333C15.9595 11.6397 15.8871 11.8153 15.7422 11.9602L12.6327 15.0698C12.5391 15.1634 12.4403 15.2294 12.3365 15.2679C12.2327 15.3063 12.1205 15.3255 12 15.3255ZM6.3077 19.5871C5.80257 19.5871 5.375 19.4121 5.025 19.0621C4.675 18.7121 4.5 18.2845 4.5 17.7794V15.8371C4.5 15.6243 4.5718 15.4461 4.7154 15.3025C4.85898 15.1589 5.03718 15.0871 5.25 15.0871C5.46282 15.0871 5.64102 15.1589 5.7846 15.3025C5.92818 15.4461 5.99997 15.6243 5.99997 15.8371V17.7794C5.99997 17.8563 6.03202 17.9268 6.09612 17.991C6.16024 18.0551 6.23077 18.0871 6.3077 18.0871H17.6922C17.7692 18.0871 17.8397 18.0551 17.9038 17.991C17.9679 17.9268 18 17.8563 18 17.7794V15.8371C18 15.6243 18.0718 15.4461 18.2154 15.3025C18.3589 15.1589 18.5371 15.0871 18.75 15.0871C18.9628 15.0871 19.141 15.1589 19.2845 15.3025C19.4281 15.4461 19.5 15.6243 19.5 15.8371V17.7794C19.5 18.2845 19.325 18.7121 18.975 19.0621C18.625 19.4121 18.1974 19.5871 17.6922 19.5871H6.3077Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="chakra-menu__menuitem css-1imebkc"
+                  data-index="2"
+                  id="menu-list-:rb:-menuitem-:re:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    Add to Watchlists
+                  </span>
+                  <svg
+                    class="chakra-icon css-n059si"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5.76537 20.065C5.46411 20.192 5.1779 20.1678 4.90675 19.9925C4.63558 19.8172 4.5 19.5619 4.5 19.2266V5.66512C4.5 5.15999 4.675 4.73242 5.025 4.38242C5.375 4.03242 5.80257 3.85742 6.3077 3.85742H12V5.3574H6.3077C6.23077 5.3574 6.16024 5.38945 6.09613 5.45355C6.03202 5.51766 5.99997 5.58819 5.99997 5.66512V18.3074L11 16.1574L16 18.3074V11.3574H17.5V19.2266C17.5 19.5619 17.3644 19.8172 17.0932 19.9925C16.8221 20.1678 16.5358 20.192 16.2346 20.065L11 17.8189L5.76537 20.065ZM16.7496 9.3574C16.537 9.3574 16.3589 9.28552 16.2154 9.14177C16.0718 8.99802 16 8.81991 16 8.60742V7.3574H14.75C14.5375 7.3574 14.3594 7.28549 14.2156 7.14167C14.0718 6.99787 14 6.81967 14 6.60707C14 6.39449 14.0718 6.21641 14.2156 6.07282C14.3594 5.92922 14.5375 5.85742 14.75 5.85742H16V4.60742C16 4.39492 16.0719 4.2168 16.2157 4.07305C16.3595 3.9293 16.5377 3.85742 16.7503 3.85742C16.9629 3.85742 17.141 3.9293 17.2845 4.07305C17.4282 4.2168 17.5 4.39492 17.5 4.60742V5.85742H18.75C18.9625 5.85742 19.1406 5.92933 19.2843 6.07315C19.4281 6.21696 19.5 6.39516 19.5 6.60775C19.5 6.82035 19.4281 6.99844 19.2843 7.14202C19.1406 7.28561 18.9625 7.3574 18.75 7.3574H17.5V8.60742C17.5 8.81991 17.428 8.99802 17.2842 9.14177C17.1404 9.28552 16.9622 9.3574 16.7496 9.3574Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="project-row-1 css-mii0oe"
+        data-testid="project-search-head-row"
+      >
+        <td
+          class="css-0"
+          data-testid="project-search-head-row-td"
+        >
+          <div
+            class="css-70qvj9"
+          >
+            <div
+              class="css-c4alqz"
+              title="Proyecto de Mitigación Forestal Bonanza Verde"
+            >
+              <p
+                class="chakra-text css-10rvbm3"
+              >
+                Proyecto de Mitigación Forestal Bonanza Verde
+              </p>
+              <p
+                class="chakra-text css-g5hezf"
+              >
+                12
+              </p>
+              <p
+                class="chakra-text css-nufbzj"
+              >
+                South Pole Carbon Asset Management 
+              </p>
+            </div>
+            <button
+              aria-controls="menu-list-:rg:"
+              aria-expanded="false"
+              aria-haspopup="menu"
+              class="chakra-button chakra-menu__menu-button css-o0w9ox"
+              id="menu-button-:rg:"
+              type="button"
+            >
+              <span
+                class="css-xl71ch"
+              />
+              <span
+                class="chakra-button__icon css-8j1iht"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-icon css-n059si"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              class="css-0"
+              style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+            >
+              <div
+                aria-orientation="vertical"
+                class="chakra-menu__menu-list css-sjt5nk"
+                id="menu-list-:rg:"
+                role="menu"
+                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+                tabindex="-1"
+              >
+                <button
+                  class="chakra-menu__menuitem css-1eocwdv"
+                  data-index="0"
+                  data-testid="view-project-details"
+                  id="menu-list-:rg:-menuitem-:rh:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    View Project
+                  </span>
+                </button>
+                <button
+                  class="chakra-menu__menuitem css-1imebkc"
+                  data-index="1"
+                  id="menu-list-:rg:-menuitem-:ri:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    Export Project
+                  </span>
+                  <svg
+                    class="chakra-icon css-n059si"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 15.3255C11.8795 15.3255 11.7673 15.3063 11.6634 15.2679C11.5596 15.2294 11.4609 15.1634 11.3673 15.0698L8.2577 11.9602C8.11925 11.8217 8.04842 11.6477 8.04522 11.4381C8.04201 11.2285 8.11283 11.0513 8.2577 10.9064C8.40257 10.7615 8.58077 10.6865 8.7923 10.6814C9.00383 10.6763 9.18204 10.7461 9.32692 10.891L11.25 12.8141V5.16404C11.25 4.95122 11.3218 4.77302 11.4654 4.62944C11.609 4.48585 11.7872 4.41406 12 4.41406C12.2128 4.41406 12.391 4.48585 12.5346 4.62944C12.6782 4.77302 12.7499 4.95122 12.7499 5.16404V12.8141L14.673 10.891C14.8115 10.7525 14.9881 10.6843 15.2028 10.6862C15.4176 10.6881 15.5974 10.7615 15.7422 10.9064C15.8871 11.0513 15.9595 11.2269 15.9595 11.4333C15.9595 11.6397 15.8871 11.8153 15.7422 11.9602L12.6327 15.0698C12.5391 15.1634 12.4403 15.2294 12.3365 15.2679C12.2327 15.3063 12.1205 15.3255 12 15.3255ZM6.3077 19.5871C5.80257 19.5871 5.375 19.4121 5.025 19.0621C4.675 18.7121 4.5 18.2845 4.5 17.7794V15.8371C4.5 15.6243 4.5718 15.4461 4.7154 15.3025C4.85898 15.1589 5.03718 15.0871 5.25 15.0871C5.46282 15.0871 5.64102 15.1589 5.7846 15.3025C5.92818 15.4461 5.99997 15.6243 5.99997 15.8371V17.7794C5.99997 17.8563 6.03202 17.9268 6.09612 17.991C6.16024 18.0551 6.23077 18.0871 6.3077 18.0871H17.6922C17.7692 18.0871 17.8397 18.0551 17.9038 17.991C17.9679 17.9268 18 17.8563 18 17.7794V15.8371C18 15.6243 18.0718 15.4461 18.2154 15.3025C18.3589 15.1589 18.5371 15.0871 18.75 15.0871C18.9628 15.0871 19.141 15.1589 19.2845 15.3025C19.4281 15.4461 19.5 15.6243 19.5 15.8371V17.7794C19.5 18.2845 19.325 18.7121 18.975 19.0621C18.625 19.4121 18.1974 19.5871 17.6922 19.5871H6.3077Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="chakra-menu__menuitem css-1imebkc"
+                  data-index="2"
+                  id="menu-list-:rg:-menuitem-:rj:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    Add to Watchlists
+                  </span>
+                  <svg
+                    class="chakra-icon css-n059si"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5.76537 20.065C5.46411 20.192 5.1779 20.1678 4.90675 19.9925C4.63558 19.8172 4.5 19.5619 4.5 19.2266V5.66512C4.5 5.15999 4.675 4.73242 5.025 4.38242C5.375 4.03242 5.80257 3.85742 6.3077 3.85742H12V5.3574H6.3077C6.23077 5.3574 6.16024 5.38945 6.09613 5.45355C6.03202 5.51766 5.99997 5.58819 5.99997 5.66512V18.3074L11 16.1574L16 18.3074V11.3574H17.5V19.2266C17.5 19.5619 17.3644 19.8172 17.0932 19.9925C16.8221 20.1678 16.5358 20.192 16.2346 20.065L11 17.8189L5.76537 20.065ZM16.7496 9.3574C16.537 9.3574 16.3589 9.28552 16.2154 9.14177C16.0718 8.99802 16 8.81991 16 8.60742V7.3574H14.75C14.5375 7.3574 14.3594 7.28549 14.2156 7.14167C14.0718 6.99787 14 6.81967 14 6.60707C14 6.39449 14.0718 6.21641 14.2156 6.07282C14.3594 5.92922 14.5375 5.85742 14.75 5.85742H16V4.60742C16 4.39492 16.0719 4.2168 16.2157 4.07305C16.3595 3.9293 16.5377 3.85742 16.7503 3.85742C16.9629 3.85742 17.141 3.9293 17.2845 4.07305C17.4282 4.2168 17.5 4.39492 17.5 4.60742V5.85742H18.75C18.9625 5.85742 19.1406 5.92933 19.2843 6.07315C19.4281 6.21696 19.5 6.39516 19.5 6.60775C19.5 6.82035 19.4281 6.99844 19.2843 7.14202C19.1406 7.28561 18.9625 7.3574 18.75 7.3574H17.5V8.60742C17.5 8.81991 17.428 8.99802 17.2842 9.14177C17.1404 9.28552 16.9622 9.3574 16.7496 9.3574Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`renders correctly and click 2`] = `
+<div>
+  <table
+    class="chakra-table searchTable css-0"
+  >
+    <tbody
+      class="css-1kfska2"
+    >
+      <tr
+        class="project-row-0 css-mii0oe"
+        data-testid="project-search-head-row"
+      >
+        <td
+          class="css-0"
+          data-testid="project-search-head-row-td"
+        >
+          <div
+            class="css-70qvj9"
+          >
+            <div
+              class="css-c4alqz"
+              title="PROYECTO ASOCIATIVO PROGRAMÁTICO ZONA ANDINA Y COSTA ATLÁNTICA - FCG"
+            >
+              <p
+                class="chakra-text css-10rvbm3"
+              >
+                PROYECTO ASOCIATIVO PROGRAMÁTICO ZONA ANDINA Y COSTA ATLÁNTICA - FCG
+              </p>
+              <p
+                class="chakra-text css-g5hezf"
+              >
+                29
+              </p>
+              <p
+                class="chakra-text css-nufbzj"
+              >
+                Forestry Consulting Group S.A.S.
+              </p>
+            </div>
+            <button
+              aria-controls="menu-list-:rl:"
+              aria-expanded="false"
+              aria-haspopup="menu"
+              class="chakra-button chakra-menu__menu-button css-o0w9ox"
+              id="menu-button-:rl:"
+              type="button"
+            >
+              <span
+                class="css-xl71ch"
+              />
+              <span
+                class="chakra-button__icon css-8j1iht"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-icon css-n059si"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              class="css-0"
+              style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+            >
+              <div
+                aria-orientation="vertical"
+                class="chakra-menu__menu-list css-sjt5nk"
+                id="menu-list-:rl:"
+                role="menu"
+                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+                tabindex="-1"
+              >
+                <button
+                  class="chakra-menu__menuitem css-1eocwdv"
+                  data-index="0"
+                  data-testid="view-project-details"
+                  id="menu-list-:rl:-menuitem-:rm:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    View Project
+                  </span>
+                </button>
+                <button
+                  class="chakra-menu__menuitem css-1imebkc"
+                  data-index="1"
+                  id="menu-list-:rl:-menuitem-:rn:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    Export Project
+                  </span>
+                  <svg
+                    class="chakra-icon css-n059si"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 15.3255C11.8795 15.3255 11.7673 15.3063 11.6634 15.2679C11.5596 15.2294 11.4609 15.1634 11.3673 15.0698L8.2577 11.9602C8.11925 11.8217 8.04842 11.6477 8.04522 11.4381C8.04201 11.2285 8.11283 11.0513 8.2577 10.9064C8.40257 10.7615 8.58077 10.6865 8.7923 10.6814C9.00383 10.6763 9.18204 10.7461 9.32692 10.891L11.25 12.8141V5.16404C11.25 4.95122 11.3218 4.77302 11.4654 4.62944C11.609 4.48585 11.7872 4.41406 12 4.41406C12.2128 4.41406 12.391 4.48585 12.5346 4.62944C12.6782 4.77302 12.7499 4.95122 12.7499 5.16404V12.8141L14.673 10.891C14.8115 10.7525 14.9881 10.6843 15.2028 10.6862C15.4176 10.6881 15.5974 10.7615 15.7422 10.9064C15.8871 11.0513 15.9595 11.2269 15.9595 11.4333C15.9595 11.6397 15.8871 11.8153 15.7422 11.9602L12.6327 15.0698C12.5391 15.1634 12.4403 15.2294 12.3365 15.2679C12.2327 15.3063 12.1205 15.3255 12 15.3255ZM6.3077 19.5871C5.80257 19.5871 5.375 19.4121 5.025 19.0621C4.675 18.7121 4.5 18.2845 4.5 17.7794V15.8371C4.5 15.6243 4.5718 15.4461 4.7154 15.3025C4.85898 15.1589 5.03718 15.0871 5.25 15.0871C5.46282 15.0871 5.64102 15.1589 5.7846 15.3025C5.92818 15.4461 5.99997 15.6243 5.99997 15.8371V17.7794C5.99997 17.8563 6.03202 17.9268 6.09612 17.991C6.16024 18.0551 6.23077 18.0871 6.3077 18.0871H17.6922C17.7692 18.0871 17.8397 18.0551 17.9038 17.991C17.9679 17.9268 18 17.8563 18 17.7794V15.8371C18 15.6243 18.0718 15.4461 18.2154 15.3025C18.3589 15.1589 18.5371 15.0871 18.75 15.0871C18.9628 15.0871 19.141 15.1589 19.2845 15.3025C19.4281 15.4461 19.5 15.6243 19.5 15.8371V17.7794C19.5 18.2845 19.325 18.7121 18.975 19.0621C18.625 19.4121 18.1974 19.5871 17.6922 19.5871H6.3077Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="chakra-menu__menuitem css-1imebkc"
+                  data-index="2"
+                  id="menu-list-:rl:-menuitem-:ro:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    Add to Watchlists
+                  </span>
+                  <svg
+                    class="chakra-icon css-n059si"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5.76537 20.065C5.46411 20.192 5.1779 20.1678 4.90675 19.9925C4.63558 19.8172 4.5 19.5619 4.5 19.2266V5.66512C4.5 5.15999 4.675 4.73242 5.025 4.38242C5.375 4.03242 5.80257 3.85742 6.3077 3.85742H12V5.3574H6.3077C6.23077 5.3574 6.16024 5.38945 6.09613 5.45355C6.03202 5.51766 5.99997 5.58819 5.99997 5.66512V18.3074L11 16.1574L16 18.3074V11.3574H17.5V19.2266C17.5 19.5619 17.3644 19.8172 17.0932 19.9925C16.8221 20.1678 16.5358 20.192 16.2346 20.065L11 17.8189L5.76537 20.065ZM16.7496 9.3574C16.537 9.3574 16.3589 9.28552 16.2154 9.14177C16.0718 8.99802 16 8.81991 16 8.60742V7.3574H14.75C14.5375 7.3574 14.3594 7.28549 14.2156 7.14167C14.0718 6.99787 14 6.81967 14 6.60707C14 6.39449 14.0718 6.21641 14.2156 6.07282C14.3594 5.92922 14.5375 5.85742 14.75 5.85742H16V4.60742C16 4.39492 16.0719 4.2168 16.2157 4.07305C16.3595 3.9293 16.5377 3.85742 16.7503 3.85742C16.9629 3.85742 17.141 3.9293 17.2845 4.07305C17.4282 4.2168 17.5 4.39492 17.5 4.60742V5.85742H18.75C18.9625 5.85742 19.1406 5.92933 19.2843 6.07315C19.4281 6.21696 19.5 6.39516 19.5 6.60775C19.5 6.82035 19.4281 6.99844 19.2843 7.14202C19.1406 7.28561 18.9625 7.3574 18.75 7.3574H17.5V8.60742C17.5 8.81991 17.428 8.99802 17.2842 9.14177C17.1404 9.28552 16.9622 9.3574 16.7496 9.3574Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="project-row-1 css-mii0oe"
+        data-testid="project-search-head-row"
+      >
+        <td
+          class="css-0"
+          data-testid="project-search-head-row-td"
+        >
+          <div
+            class="css-70qvj9"
+          >
+            <div
+              class="css-c4alqz"
+              title="Proyecto de Mitigación Forestal Bonanza Verde"
+            >
+              <p
+                class="chakra-text css-10rvbm3"
+              >
+                Proyecto de Mitigación Forestal Bonanza Verde
+              </p>
+              <p
+                class="chakra-text css-g5hezf"
+              >
+                12
+              </p>
+              <p
+                class="chakra-text css-nufbzj"
+              >
+                South Pole Carbon Asset Management 
+              </p>
+            </div>
+            <button
+              aria-controls="menu-list-:rq:"
+              aria-expanded="false"
+              aria-haspopup="menu"
+              class="chakra-button chakra-menu__menu-button css-o0w9ox"
+              id="menu-button-:rq:"
+              type="button"
+            >
+              <span
+                class="css-xl71ch"
+              />
+              <span
+                class="chakra-button__icon css-8j1iht"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-icon css-n059si"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              class="css-0"
+              style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+            >
+              <div
+                aria-orientation="vertical"
+                class="chakra-menu__menu-list css-sjt5nk"
+                id="menu-list-:rq:"
+                role="menu"
+                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+                tabindex="-1"
+              >
+                <button
+                  class="chakra-menu__menuitem css-1eocwdv"
+                  data-index="0"
+                  data-testid="view-project-details"
+                  id="menu-list-:rq:-menuitem-:rr:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    View Project
+                  </span>
+                </button>
+                <button
+                  class="chakra-menu__menuitem css-1imebkc"
+                  data-index="1"
+                  id="menu-list-:rq:-menuitem-:rs:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    Export Project
+                  </span>
+                  <svg
+                    class="chakra-icon css-n059si"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 15.3255C11.8795 15.3255 11.7673 15.3063 11.6634 15.2679C11.5596 15.2294 11.4609 15.1634 11.3673 15.0698L8.2577 11.9602C8.11925 11.8217 8.04842 11.6477 8.04522 11.4381C8.04201 11.2285 8.11283 11.0513 8.2577 10.9064C8.40257 10.7615 8.58077 10.6865 8.7923 10.6814C9.00383 10.6763 9.18204 10.7461 9.32692 10.891L11.25 12.8141V5.16404C11.25 4.95122 11.3218 4.77302 11.4654 4.62944C11.609 4.48585 11.7872 4.41406 12 4.41406C12.2128 4.41406 12.391 4.48585 12.5346 4.62944C12.6782 4.77302 12.7499 4.95122 12.7499 5.16404V12.8141L14.673 10.891C14.8115 10.7525 14.9881 10.6843 15.2028 10.6862C15.4176 10.6881 15.5974 10.7615 15.7422 10.9064C15.8871 11.0513 15.9595 11.2269 15.9595 11.4333C15.9595 11.6397 15.8871 11.8153 15.7422 11.9602L12.6327 15.0698C12.5391 15.1634 12.4403 15.2294 12.3365 15.2679C12.2327 15.3063 12.1205 15.3255 12 15.3255ZM6.3077 19.5871C5.80257 19.5871 5.375 19.4121 5.025 19.0621C4.675 18.7121 4.5 18.2845 4.5 17.7794V15.8371C4.5 15.6243 4.5718 15.4461 4.7154 15.3025C4.85898 15.1589 5.03718 15.0871 5.25 15.0871C5.46282 15.0871 5.64102 15.1589 5.7846 15.3025C5.92818 15.4461 5.99997 15.6243 5.99997 15.8371V17.7794C5.99997 17.8563 6.03202 17.9268 6.09612 17.991C6.16024 18.0551 6.23077 18.0871 6.3077 18.0871H17.6922C17.7692 18.0871 17.8397 18.0551 17.9038 17.991C17.9679 17.9268 18 17.8563 18 17.7794V15.8371C18 15.6243 18.0718 15.4461 18.2154 15.3025C18.3589 15.1589 18.5371 15.0871 18.75 15.0871C18.9628 15.0871 19.141 15.1589 19.2845 15.3025C19.4281 15.4461 19.5 15.6243 19.5 15.8371V17.7794C19.5 18.2845 19.325 18.7121 18.975 19.0621C18.625 19.4121 18.1974 19.5871 17.6922 19.5871H6.3077Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="chakra-menu__menuitem css-1imebkc"
+                  data-index="2"
+                  id="menu-list-:rq:-menuitem-:rt:"
+                  role="menuitem"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="chakra-text css-1rr4qq7"
+                  >
+                    Add to Watchlists
+                  </span>
+                  <svg
+                    class="chakra-icon css-n059si"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M5.76537 20.065C5.46411 20.192 5.1779 20.1678 4.90675 19.9925C4.63558 19.8172 4.5 19.5619 4.5 19.2266V5.66512C4.5 5.15999 4.675 4.73242 5.025 4.38242C5.375 4.03242 5.80257 3.85742 6.3077 3.85742H12V5.3574H6.3077C6.23077 5.3574 6.16024 5.38945 6.09613 5.45355C6.03202 5.51766 5.99997 5.58819 5.99997 5.66512V18.3074L11 16.1574L16 18.3074V11.3574H17.5V19.2266C17.5 19.5619 17.3644 19.8172 17.0932 19.9925C16.8221 20.1678 16.5358 20.192 16.2346 20.065L11 17.8189L5.76537 20.065ZM16.7496 9.3574C16.537 9.3574 16.3589 9.28552 16.2154 9.14177C16.0718 8.99802 16 8.81991 16 8.60742V7.3574H14.75C14.5375 7.3574 14.3594 7.28549 14.2156 7.14167C14.0718 6.99787 14 6.81967 14 6.60707C14 6.39449 14.0718 6.21641 14.2156 6.07282C14.3594 5.92922 14.5375 5.85742 14.75 5.85742H16V4.60742C16 4.39492 16.0719 4.2168 16.2157 4.07305C16.3595 3.9293 16.5377 3.85742 16.7503 3.85742C16.9629 3.85742 17.141 3.9293 17.2845 4.07305C17.4282 4.2168 17.5 4.39492 17.5 4.60742V5.85742H18.75C18.9625 5.85742 19.1406 5.92933 19.2843 6.07315C19.4281 6.21696 19.5 6.39516 19.5 6.60775C19.5 6.82035 19.4281 6.99844 19.2843 7.14202C19.1406 7.28561 18.9625 7.3574 18.75 7.3574H17.5V8.60742C17.5 8.81991 17.428 8.99802 17.2842 9.14177C17.1404 9.28552 16.9622 9.3574 16.7496 9.3574Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

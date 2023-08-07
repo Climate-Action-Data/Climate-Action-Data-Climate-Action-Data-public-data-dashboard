@@ -1,0 +1,353 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <table
+    class="chakra-table searchTable css-0"
+  >
+    <tbody
+      class="css-0"
+      data-testid="table-scroll"
+    >
+      <tr
+        class="project-row-0 css-mii0oe"
+        data-testid="unit-table-row"
+      >
+        <td
+          class="css-0"
+          title="Held"
+        >
+          Held
+        </td>
+        <td
+          class="css-0"
+          title="2020"
+        >
+          2020
+        </td>
+        <td
+          class="css-0"
+          data-is-numeric="true"
+          title="129,037"
+        >
+          129,037
+        </td>
+        <td
+          class="css-0"
+          title="2023/04/14"
+        >
+          2023/04/14
+        </td>
+        <td
+          class="css-0"
+          title="2023/08/03"
+        >
+          2023/08/03
+        </td>
+        <td
+          class="css-0"
+          title="EcoRegistry"
+        >
+          EcoRegistry
+        </td>
+        <td
+          class="css-0"
+          title="AR-ACM0003: Afforestation and reforestation of lands except wetlands"
+        >
+          AR-ACM0003: Afforestation and reforestation of lands except wetlands
+        </td>
+        <td
+          class="css-0"
+          title="Agriculture; forestry and fishing"
+        >
+          Agriculture; forestry and fishing
+        </td>
+        <td
+          class="css-0"
+          title="Colombia"
+        >
+          Colombia
+        </td>
+        <td
+          class="css-0"
+          title="Not Started"
+        >
+          Not Started
+        </td>
+        <td
+          class="css-rl3ocm"
+        >
+          <p
+            class="chakra-text css-132cox5"
+          >
+            --
+          </p>
+        </td>
+        <td
+          class="css-rl3ocm"
+          title="CDC_29_7_1_321_14_CO_1_3_2020_BF_1-CDC_29_7_1_321_14_CO_1_3_2020_BF_4936"
+        >
+          CDC_29_7_1_321_14_CO_1_3_2020_BF_1-CDC_29_7_1_321_14_CO_1_3_2020_BF_4936
+        </td>
+      </tr>
+      <tr
+        class="project-row-1 css-mii0oe"
+        data-testid="unit-table-row"
+      >
+        <td
+          class="css-0"
+          title="Retired"
+        >
+          Retired
+        </td>
+        <td
+          class="css-0"
+          title="2019"
+        >
+          2019
+        </td>
+        <td
+          class="css-0"
+          data-is-numeric="true"
+          title="20,394"
+        >
+          20,394
+        </td>
+        <td
+          class="css-0"
+          title="2019/12/16"
+        >
+          2019/12/16
+        </td>
+        <td
+          class="css-0"
+          title="2023/05/20"
+        >
+          2023/05/20
+        </td>
+        <td
+          class="css-0"
+          title="EcoRegistry"
+        >
+          EcoRegistry
+        </td>
+        <td
+          class="css-0"
+          title="AR-ACM0003: Afforestation and reforestation of lands except wetlands"
+        >
+          AR-ACM0003: Afforestation and reforestation of lands except wetlands
+        </td>
+        <td
+          class="css-0"
+          title="Agriculture; forestry and fishing"
+        >
+          Agriculture; forestry and fishing
+        </td>
+        <td
+          class="css-0"
+          title="Colombia"
+        >
+          Colombia
+        </td>
+        <td
+          class="css-0"
+          title="Not Started"
+        >
+          Not Started
+        </td>
+        <td
+          class="css-rl3ocm"
+        >
+          <p
+            class="chakra-text css-132cox5"
+          >
+            --
+          </p>
+        </td>
+        <td
+          class="css-rl3ocm"
+          title="CDC_12_2_1_322_14_CO_1_1_2019_1-CDC_12_2_1_322_14_CO_1_1_2019_233"
+        >
+          CDC_12_2_1_322_14_CO_1_1_2019_1-CDC_12_2_1_322_14_CO_1_1_2019_233
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`renders correctly with hover 1`] = `
+<div>
+  <table
+    class="chakra-table searchTable css-0"
+  >
+    <tbody
+      class="css-0"
+      data-testid="table-scroll"
+    >
+      <tr
+        class="project-row-0 css-mii0oe hoverGreen"
+        data-testid="unit-table-row"
+      >
+        <td
+          class="css-0"
+          title="Held"
+        >
+          Held
+        </td>
+        <td
+          class="css-0"
+          title="2020"
+        >
+          2020
+        </td>
+        <td
+          class="css-0"
+          data-is-numeric="true"
+          title="129,037"
+        >
+          129,037
+        </td>
+        <td
+          class="css-0"
+          title="2023/04/14"
+        >
+          2023/04/14
+        </td>
+        <td
+          class="css-0"
+          title="2023/08/03"
+        >
+          2023/08/03
+        </td>
+        <td
+          class="css-0"
+          title="EcoRegistry"
+        >
+          EcoRegistry
+        </td>
+        <td
+          class="css-0"
+          title="AR-ACM0003: Afforestation and reforestation of lands except wetlands"
+        >
+          AR-ACM0003: Afforestation and reforestation of lands except wetlands
+        </td>
+        <td
+          class="css-0"
+          title="Agriculture; forestry and fishing"
+        >
+          Agriculture; forestry and fishing
+        </td>
+        <td
+          class="css-0"
+          title="Colombia"
+        >
+          Colombia
+        </td>
+        <td
+          class="css-0"
+          title="Not Started"
+        >
+          Not Started
+        </td>
+        <td
+          class="css-rl3ocm"
+        >
+          <p
+            class="chakra-text css-132cox5"
+          >
+            --
+          </p>
+        </td>
+        <td
+          class="css-rl3ocm"
+          title="CDC_29_7_1_321_14_CO_1_3_2020_BF_1-CDC_29_7_1_321_14_CO_1_3_2020_BF_4936"
+        >
+          CDC_29_7_1_321_14_CO_1_3_2020_BF_1-CDC_29_7_1_321_14_CO_1_3_2020_BF_4936
+        </td>
+      </tr>
+      <tr
+        class="project-row-1 css-mii0oe"
+        data-testid="unit-table-row"
+      >
+        <td
+          class="css-0"
+          title="Retired"
+        >
+          Retired
+        </td>
+        <td
+          class="css-0"
+          title="2019"
+        >
+          2019
+        </td>
+        <td
+          class="css-0"
+          data-is-numeric="true"
+          title="20,394"
+        >
+          20,394
+        </td>
+        <td
+          class="css-0"
+          title="2019/12/16"
+        >
+          2019/12/16
+        </td>
+        <td
+          class="css-0"
+          title="2023/05/20"
+        >
+          2023/05/20
+        </td>
+        <td
+          class="css-0"
+          title="EcoRegistry"
+        >
+          EcoRegistry
+        </td>
+        <td
+          class="css-0"
+          title="AR-ACM0003: Afforestation and reforestation of lands except wetlands"
+        >
+          AR-ACM0003: Afforestation and reforestation of lands except wetlands
+        </td>
+        <td
+          class="css-0"
+          title="Agriculture; forestry and fishing"
+        >
+          Agriculture; forestry and fishing
+        </td>
+        <td
+          class="css-0"
+          title="Colombia"
+        >
+          Colombia
+        </td>
+        <td
+          class="css-0"
+          title="Not Started"
+        >
+          Not Started
+        </td>
+        <td
+          class="css-rl3ocm"
+        >
+          <p
+            class="chakra-text css-132cox5"
+          >
+            --
+          </p>
+        </td>
+        <td
+          class="css-rl3ocm"
+          title="CDC_12_2_1_322_14_CO_1_1_2019_1-CDC_12_2_1_322_14_CO_1_1_2019_233"
+        >
+          CDC_12_2_1_322_14_CO_1_1_2019_1-CDC_12_2_1_322_14_CO_1_1_2019_233
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
