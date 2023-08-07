@@ -178,7 +178,7 @@ export const PROJECT_SEARCH_RESULT_EMPTY: ProjectResultState = {}
 export const PROJECT_TEST_SAMPLE = 21
 export const PROJECT_SEARCH_RESULT: ProjectResultState = {
   projectResults: {
-    data: { projects: projectData.slice(0, PROJECT_TEST_SAMPLE), totalCount: 3 },
+    data: { projects: projectData.slice(0, PROJECT_TEST_SAMPLE), totalCount: 99 },
   },
 }
 export const PROJECT_DETAIL: ProjectDetails = projectDetail

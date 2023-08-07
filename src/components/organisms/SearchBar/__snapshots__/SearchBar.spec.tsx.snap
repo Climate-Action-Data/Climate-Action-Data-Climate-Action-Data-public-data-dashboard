@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="chakra-container css-0"
+    class="chakra-container css-10oehrs"
   >
     <div
       class="css-k008qs"
@@ -48,7 +48,7 @@ exports[`renders correctly 1`] = `
 exports[`renders correctly with no params, add a search value and submits a search 1`] = `
 <div>
   <div
-    class="chakra-container css-0"
+    class="chakra-container css-10oehrs"
   >
     <div
       class="css-k008qs"

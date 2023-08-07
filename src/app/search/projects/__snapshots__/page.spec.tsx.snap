@@ -579,9 +579,9 @@ exports[`renders correctly 1`] = `
         >
           1
            - 
-          15
+          0
            of 
-          89
+          0
         </div>
         <div
           class="css-i25ci7"
@@ -601,31 +601,6 @@ exports[`renders correctly 1`] = `
                 fill="currentColor"
               />
             </svg>
-          </button>
-          <button
-            class="chakra-button css-6iqjvk"
-            type="button"
-          >
-            1
-          </button>
-          <button
-            class="chakra-button css-1hwtise"
-            type="button"
-          >
-            2
-          </button>
-          <div
-            class="css-1rr4qq7"
-            data-testid="ellipsis"
-          >
-            ...
-          </div>
-          <button
-            class="chakra-button css-1ki210r"
-            data-testid="pagination-last-page"
-            type="button"
-          >
-            6
           </button>
           <button
             class="chakra-button css-mvi99n"
@@ -10737,7 +10712,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
            - 
           30
            of 
-          89
+          99
         </div>
         <div
           class="css-i25ci7"
@@ -10787,7 +10762,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             data-testid="pagination-last-page"
             type="button"
           >
-            6
+            7
           </button>
           <button
             class="chakra-button css-mvi99n"
@@ -15822,7 +15797,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
            - 
           15
            of 
-          89
+          99
         </div>
         <div
           class="css-i25ci7"
@@ -15866,7 +15841,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             data-testid="pagination-last-page"
             type="button"
           >
-            6
+            7
           </button>
           <button
             class="chakra-button css-mvi99n"
@@ -20897,11 +20872,11 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
         <div
           class="css-3dnq1l"
         >
-          76
+          91
            - 
-          89
+          99
            of 
-          89
+          99
         </div>
         <div
           class="css-i25ci7"
@@ -20937,13 +20912,13 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             class="chakra-button css-1hwtise"
             type="button"
           >
-            5
+            6
           </button>
           <button
             class="chakra-button css-6iqjvk"
             type="button"
           >
-            6
+            7
           </button>
           <button
             class="chakra-button css-14dzaj5"
@@ -25978,7 +25953,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
            - 
           15
            of 
-          89
+          99
         </div>
         <div
           class="css-i25ci7"
@@ -26022,7 +25997,7 @@ One hundred and forty-one (141) private landowners in the Colombian Orinoquia wh
             data-testid="pagination-last-page"
             type="button"
           >
-            6
+            7
           </button>
           <button
             class="chakra-button css-mvi99n"
