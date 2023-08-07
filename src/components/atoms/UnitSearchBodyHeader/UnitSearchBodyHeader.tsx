@@ -5,7 +5,7 @@ import { ColumnSortFilter } from '@/components/atoms/ColumnSortFilter/ColumnSort
 
 export const UnitSearchBodyHeader = () => {
   const { t } = useTranslation(`search`)
-  // BEGIN-NOSCAN
+
   return (
     <TableContainer id="tableReference" className="hide-scrollbar" minH="72px">
       <Table variant="simple" className="searchTable">
@@ -88,5 +88,4 @@ export const UnitSearchBodyHeader = () => {
       </Table>
     </TableContainer>
   )
-  // END-NOSCAN
 }
