@@ -3,264 +3,85 @@
 exports[`PageDetails renders correctly 1`] = `
 <div>
   <div
-    class="css-nez7ks"
+    class="css-0"
   >
     <div
-      class="css-1teq9s8"
+      class="css-14fdyiq"
     >
-      <img
-        alt=""
-        class="chakra-image css-19vnwa0"
-        src="/img.jpg"
-      />
-      <div
-        class="chakra-stack css-1ibnd6w"
-      >
-        <p
-          class="chakra-text css-1ezsviu"
-        />
-        <h2
-          class="chakra-heading css-1lr1hz5"
-        />
-        <p
-          class="chakra-text css-0"
-        />
-      </div>
-    </div>
-    <div
-      class="css-13n95wf"
-    >
-      <p
-        class="chakra-text css-1vb39qn"
-      >
-        Description
-      </p>
       <div
         class="css-0"
       >
-        <p
-          class="chakra-text css-0"
-        >
-          undefined
-        </p>
-      </div>
-    </div>
-  </div>
-  <div
-    class="css-14fdyiq"
-  >
-    <div
-      class="css-0"
-    >
-      <div
-        class="chakra-stack css-qlxuh7"
-      >
-        <svg
-          class="chakra-icon css-g7llvd"
-          focusable="false"
-          viewBox="0 0 40 16"
-        >
-          <circle
-            cx="1.42857"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="1.42857"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="13.8094"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="13.8094"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="26.1903"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="26.1903"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="38.5716"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="38.5716"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-        </svg>
-        <h2
-          class="chakra-heading css-16o2lp8"
-        >
-          Project Details
-        </h2>
-      </div>
-      <div
-        class="css-1mliti3"
-      >
         <div
-          class="chakra-container css-tqikoc"
+          class="chakra-stack css-qlxuh7"
+        >
+          <svg
+            class="chakra-icon css-g7llvd"
+            focusable="false"
+            viewBox="0 0 40 16"
+          >
+            <circle
+              cx="1.42857"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="1.42857"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="13.8094"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="13.8094"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="26.1903"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="26.1903"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="38.5716"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="38.5716"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+          </svg>
+          <h2
+            class="chakra-heading css-16o2lp8"
+          >
+            Project Details
+          </h2>
+        </div>
+        <div
+          class="css-1mliti3"
         >
           <div
-            class="chakra-stack css-j7qwjs"
+            class="chakra-container css-tqikoc"
           >
             <div
-              class="css-s8hfc8"
-            >
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1xi4xed"
-                >
-                  Standard
-                </p>
-                <div
-                  class="css-0"
-                >
-                  <div
-                    class="chakra-skeleton css-1tjwkx3"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1xi4xed"
-                >
-                  Methodology
-                </p>
-                <div
-                  class="css-0"
-                >
-                  <div
-                    class="chakra-skeleton css-1tjwkx3"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1xi4xed"
-                >
-                  Project Developer
-                </p>
-                <div
-                  class="css-0"
-                >
-                  <div
-                    class="chakra-skeleton css-1tjwkx3"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1xi4xed"
-                >
-                  Project Link
-                </p>
-                <div
-                  class="css-0"
-                >
-                  <div
-                    class="chakra-skeleton css-1tjwkx3"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1xi4xed"
-                >
-                  Sector
-                </p>
-                <div
-                  class="css-0"
-                >
-                  <div
-                    class="chakra-skeleton css-1tjwkx3"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1xi4xed"
-                >
-                  Project Type
-                </p>
-                <div
-                  class="css-0"
-                >
-                  <div
-                    class="chakra-skeleton css-1tjwkx3"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1xi4xed"
-                >
-                  Status
-                </p>
-                <div
-                  class="css-0"
-                >
-                  <div
-                    class="chakra-skeleton css-1tjwkx3"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1xi4xed"
-                >
-                  Status Updated On
-                </p>
-                <div
-                  class="css-0"
-                >
-                  <div
-                    class="chakra-skeleton css-1tjwkx3"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="chakra-stack__divider css-1g2u1yc"
-            />
-            <div
-              class="css-k008qs"
+              class="chakra-stack css-j7qwjs"
             >
               <div
                 class="css-s8hfc8"
@@ -271,7 +92,7 @@ exports[`PageDetails renders correctly 1`] = `
                   <p
                     class="chakra-text css-1xi4xed"
                   >
-                    Total Available Units
+                    Standard
                   </p>
                   <div
                     class="css-0"
@@ -287,7 +108,7 @@ exports[`PageDetails renders correctly 1`] = `
                   <p
                     class="chakra-text css-1xi4xed"
                   >
-                    Total Issuances
+                    Methodology
                   </p>
                   <div
                     class="css-0"
@@ -303,7 +124,87 @@ exports[`PageDetails renders correctly 1`] = `
                   <p
                     class="chakra-text css-1xi4xed"
                   >
-                    Crediting Period
+                    Project Developer
+                  </p>
+                  <div
+                    class="css-0"
+                  >
+                    <div
+                      class="chakra-skeleton css-1tjwkx3"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="css-0"
+                >
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    Project Link
+                  </p>
+                  <div
+                    class="css-0"
+                  >
+                    <div
+                      class="chakra-skeleton css-1tjwkx3"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="css-0"
+                >
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    Sector
+                  </p>
+                  <div
+                    class="css-0"
+                  >
+                    <div
+                      class="chakra-skeleton css-1tjwkx3"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="css-0"
+                >
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    Project Type
+                  </p>
+                  <div
+                    class="css-0"
+                  >
+                    <div
+                      class="chakra-skeleton css-1tjwkx3"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="css-0"
+                >
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    Status
+                  </p>
+                  <div
+                    class="css-0"
+                  >
+                    <div
+                      class="chakra-skeleton css-1tjwkx3"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="css-0"
+                >
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    Status Updated On
                   </p>
                   <div
                     class="css-0"
@@ -314,6 +215,120 @@ exports[`PageDetails renders correctly 1`] = `
                   </div>
                 </div>
               </div>
+              <div
+                class="chakra-stack__divider css-1g2u1yc"
+              />
+              <div
+                class="css-k008qs"
+              >
+                <div
+                  class="css-s8hfc8"
+                >
+                  <div
+                    class="css-0"
+                  >
+                    <p
+                      class="chakra-text css-1xi4xed"
+                    >
+                      Total Available Units
+                    </p>
+                    <div
+                      class="css-0"
+                    >
+                      <div
+                        class="chakra-skeleton css-1tjwkx3"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="css-0"
+                  >
+                    <p
+                      class="chakra-text css-1xi4xed"
+                    >
+                      Total Issuances
+                    </p>
+                    <div
+                      class="css-0"
+                    >
+                      <div
+                        class="chakra-skeleton css-1tjwkx3"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="css-0"
+                  >
+                    <p
+                      class="chakra-text css-1xi4xed"
+                    >
+                      Crediting Period
+                    </p>
+                    <div
+                      class="css-0"
+                    >
+                      <div
+                        class="chakra-skeleton css-1tjwkx3"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="css-s8hfc8"
+                >
+                  <div
+                    class="css-0"
+                  >
+                    <p
+                      class="chakra-text css-1xi4xed"
+                    >
+                      Total Retirements
+                    </p>
+                    <div
+                      class="css-0"
+                    >
+                      <div
+                        class="chakra-skeleton css-1tjwkx3"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="css-0"
+                  >
+                    <p
+                      class="chakra-text css-1xi4xed"
+                    >
+                      Annual Estimated Units
+                    </p>
+                    <div
+                      class="css-0"
+                    >
+                      <div
+                        class="chakra-skeleton css-1tjwkx3"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="css-0"
+                  >
+                    <p
+                      class="chakra-text css-1xi4xed"
+                    >
+                      Unit Metric Measurement
+                    </p>
+                    <div
+                      class="css-0"
+                    >
+                      <div
+                        class="chakra-skeleton css-1tjwkx3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="chakra-stack__divider css-1g2u1yc"
+              />
               <div
                 class="css-s8hfc8"
               >
@@ -323,7 +338,7 @@ exports[`PageDetails renders correctly 1`] = `
                   <p
                     class="chakra-text css-1xi4xed"
                   >
-                    Total Retirements
+                    NDC Coverage
                   </p>
                   <div
                     class="css-0"
@@ -339,7 +354,30 @@ exports[`PageDetails renders correctly 1`] = `
                   <p
                     class="chakra-text css-1xi4xed"
                   >
-                    Annual Estimated Units
+                    Correspondingly Adjusted
+                  </p>
+                  <div
+                    class="css-0"
+                  >
+                    <div
+                      class="chakra-skeleton css-1tjwkx3"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="chakra-stack__divider css-1g2u1yc"
+              />
+              <div
+                class="css-s8hfc8"
+              >
+                <div
+                  class="css-0"
+                >
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    Project Tags
                   </p>
                   <div
                     class="css-0"
@@ -355,7 +393,7 @@ exports[`PageDetails renders correctly 1`] = `
                   <p
                     class="chakra-text css-1xi4xed"
                   >
-                    Unit Metric Measurement
+                    Co-Benefits
                   </p>
                   <div
                     class="css-0"
@@ -364,371 +402,293 @@ exports[`PageDetails renders correctly 1`] = `
                       class="chakra-skeleton css-1tjwkx3"
                     />
                   </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="chakra-stack__divider css-1g2u1yc"
-            />
-            <div
-              class="css-s8hfc8"
-            >
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1xi4xed"
-                >
-                  NDC Coverage
-                </p>
-                <div
-                  class="css-0"
-                >
-                  <div
-                    class="chakra-skeleton css-1tjwkx3"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1xi4xed"
-                >
-                  Correspondingly Adjusted
-                </p>
-                <div
-                  class="css-0"
-                >
-                  <div
-                    class="chakra-skeleton css-1tjwkx3"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="chakra-stack__divider css-1g2u1yc"
-            />
-            <div
-              class="css-s8hfc8"
-            >
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1xi4xed"
-                >
-                  Project Tags
-                </p>
-                <div
-                  class="css-0"
-                >
-                  <div
-                    class="chakra-skeleton css-1tjwkx3"
-                  />
-                </div>
-              </div>
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1xi4xed"
-                >
-                  Co-Benefits
-                </p>
-                <div
-                  class="css-0"
-                >
-                  <div
-                    class="chakra-skeleton css-1tjwkx3"
-                  />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="chakra-container css-11scci"
-        >
           <div
-            class="chakra-skeleton css-l30rjy"
-          />
-          <div
-            class="chakra-container css-bybdqv"
+            class="chakra-container css-11scci"
           >
             <div
-              class="css-s8hfc8"
+              class="chakra-skeleton css-l30rjy"
+            />
+            <div
+              class="chakra-container css-bybdqv"
             >
               <div
-                class="css-0"
+                class="css-s8hfc8"
               >
-                <p
-                  class="chakra-text css-1xi4xed"
+                <div
+                  class="css-0"
                 >
-                  Country
-                </p>
-                <p
-                  class="chakra-text css-0"
-                />
-              </div>
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1xi4xed"
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    Country
+                  </p>
+                  <p
+                    class="chakra-text css-0"
+                  />
+                </div>
+                <div
+                  class="css-0"
                 >
-                  In-country Region
-                </p>
-                <p
-                  class="chakra-text css-0"
-                />
-              </div>
-              <div
-                class="css-0"
-              >
-                <p
-                  class="chakra-text css-1xi4xed"
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    In-country Region
+                  </p>
+                  <p
+                    class="chakra-text css-0"
+                  />
+                </div>
+                <div
+                  class="css-0"
                 >
-                  Geographic identifier
-                </p>
-                <p
-                  class="chakra-text css-0"
-                >
-                  --
-                </p>
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    Geographic identifier
+                  </p>
+                  <p
+                    class="chakra-text css-0"
+                  >
+                    --
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="css-0"
-    >
       <div
-        class="chakra-stack css-qlxuh7"
-      >
-        <svg
-          class="chakra-icon css-g7llvd"
-          focusable="false"
-          viewBox="0 0 40 16"
-        >
-          <circle
-            cx="1.42857"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="1.42857"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="13.8094"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="13.8094"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="26.1903"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="26.1903"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="38.5716"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="38.5716"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-        </svg>
-        <h2
-          class="chakra-heading css-16o2lp8"
-        >
-          Verification & Validation
-        </h2>
-      </div>
-      <div
-        class="css-1mliti3"
+        class="css-0"
       >
         <div
-          class="chakra-container css-tqikoc"
+          class="chakra-stack css-qlxuh7"
+        >
+          <svg
+            class="chakra-icon css-g7llvd"
+            focusable="false"
+            viewBox="0 0 40 16"
+          >
+            <circle
+              cx="1.42857"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="1.42857"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="13.8094"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="13.8094"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="26.1903"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="26.1903"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="38.5716"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="38.5716"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+          </svg>
+          <h2
+            class="chakra-heading css-16o2lp8"
+          >
+            Verification & Validation
+          </h2>
+        </div>
+        <div
+          class="css-1mliti3"
         >
           <div
-            class="chakra-skeleton css-1p3r0co"
-          />
+            class="chakra-container css-tqikoc"
+          >
+            <div
+              class="chakra-skeleton css-1p3r0co"
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      class="css-0"
-    >
       <div
-        class="chakra-stack css-qlxuh7"
-      >
-        <svg
-          class="chakra-icon css-g7llvd"
-          focusable="false"
-          viewBox="0 0 40 16"
-        >
-          <circle
-            cx="1.42857"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="1.42857"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="13.8094"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="13.8094"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="26.1903"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="26.1903"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="38.5716"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="38.5716"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-        </svg>
-        <h2
-          class="chakra-heading css-16o2lp8"
-        >
-          Issuances & Retirements
-        </h2>
-      </div>
-      <div
-        class="css-1mliti3"
+        class="css-0"
       >
         <div
-          class="chakra-container css-kzfr2u"
+          class="chakra-stack css-qlxuh7"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum ex vel blandit congue. Integer turpis lectus, porttitor sed tellus et, rhoncus suscipit lorem. Donec quis ante vitae mi commodo ultrices. Pellentesque accumsan magna enim, nec venenatis sapien vestibulum vitae.
+          <svg
+            class="chakra-icon css-g7llvd"
+            focusable="false"
+            viewBox="0 0 40 16"
+          >
+            <circle
+              cx="1.42857"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="1.42857"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="13.8094"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="13.8094"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="26.1903"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="26.1903"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="38.5716"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="38.5716"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+          </svg>
+          <h2
+            class="chakra-heading css-16o2lp8"
+          >
+            Issuances & Retirements
+          </h2>
+        </div>
+        <div
+          class="css-1mliti3"
+        >
+          <div
+            class="chakra-container css-kzfr2u"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum ex vel blandit congue. Integer turpis lectus, porttitor sed tellus et, rhoncus suscipit lorem. Donec quis ante vitae mi commodo ultrices. Pellentesque accumsan magna enim, nec venenatis sapien vestibulum vitae.
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      class="css-0"
-    >
       <div
-        class="chakra-stack css-qlxuh7"
-      >
-        <svg
-          class="chakra-icon css-g7llvd"
-          focusable="false"
-          viewBox="0 0 40 16"
-        >
-          <circle
-            cx="1.42857"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="1.42857"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="13.8094"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="13.8094"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="26.1903"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="26.1903"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="38.5716"
-            cy="1.42857"
-            fill="currentFill"
-            r="1.42857"
-          />
-          <circle
-            cx="38.5716"
-            cy="13.8097"
-            fill="currentFill"
-            r="1.42857"
-          />
-        </svg>
-        <h2
-          class="chakra-heading css-16o2lp8"
-        >
-          Documents
-        </h2>
-      </div>
-      <div
-        class="css-1mliti3"
+        class="css-0"
       >
         <div
-          class="chakra-container css-kzfr2u"
+          class="chakra-stack css-qlxuh7"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum ex vel blandit congue. Integer turpis lectus, porttitor sed tellus et, rhoncus suscipit lorem. Donec quis ante vitae mi commodo ultrices. Pellentesque accumsan magna enim, nec venenatis sapien vestibulum vitae.
+          <svg
+            class="chakra-icon css-g7llvd"
+            focusable="false"
+            viewBox="0 0 40 16"
+          >
+            <circle
+              cx="1.42857"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="1.42857"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="13.8094"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="13.8094"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="26.1903"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="26.1903"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="38.5716"
+              cy="1.42857"
+              fill="currentFill"
+              r="1.42857"
+            />
+            <circle
+              cx="38.5716"
+              cy="13.8097"
+              fill="currentFill"
+              r="1.42857"
+            />
+          </svg>
+          <h2
+            class="chakra-heading css-16o2lp8"
+          >
+            Documents
+          </h2>
+        </div>
+        <div
+          class="css-1mliti3"
+        >
+          <div
+            class="chakra-container css-kzfr2u"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum ex vel blandit congue. Integer turpis lectus, porttitor sed tellus et, rhoncus suscipit lorem. Donec quis ante vitae mi commodo ultrices. Pellentesque accumsan magna enim, nec venenatis sapien vestibulum vitae.
+          </div>
         </div>
       </div>
     </div>

@@ -3,67 +3,53 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="css-1mlna27"
-    id="headerReference"
+    class="css-wq87pz"
   >
     <div
-      class="chakra-stack css-ryi8m5"
+      class="css-1teq9s8"
     >
-      <nav
-        aria-label="breadcrumb"
-        class="chakra-breadcrumb css-11etsof"
+      <img
+        alt="type"
+        class="chakra-image css-19vnwa0"
+        src="/img.jpg"
+      />
+      <div
+        class="chakra-stack css-1ibnd6w"
       >
-        <ol
-          class="chakra-breadcrumb__list css-70qvj9"
+        <p
+          class="chakra-text css-1ezsviu"
         >
-          <li
-            class="chakra-breadcrumb__list-item css-13pussk"
-          >
-            <a
-              class="chakra-link css-0"
-              href="/"
-            >
-              Home
-            </a>
-            <span
-              class="css-t4q1nq"
-              role="presentation"
-            >
-              &gt;
-            </span>
-          </li>
-          <li
-            class="chakra-breadcrumb__list-item css-13pussk"
-            link="/search/projects"
-            title="Projects"
-          >
-            <a
-              class="chakra-link css-ytumd6"
-              href="/search/projects"
-            >
-              Projects
-            </a>
-            <span
-              class="css-t4q1nq"
-              role="presentation"
-            >
-              &gt;
-            </span>
-          </li>
-          <li
-            class="chakra-breadcrumb__list-item css-13pussk"
-            link="/project/S00123"
-            title="Project Title"
-          >
-            <a
-              class="chakra-link css-ytumd6"
-              href="/project/S00123"
-            >
-              Project Title
-            </a>
-          </li>
-        </ol>
-      </nav>
+          S00123
+        </p>
+        <h2
+          class="chakra-heading css-1lr1hz5"
+        >
+          Project Title
+        </h2>
+        <p
+          class="chakra-text css-0"
+        >
+          France
+        </p>
+      </div>
+    </div>
+    <div
+      class="css-13n95wf"
+    >
+      <p
+        class="chakra-text css-1vb39qn"
+      >
+        Description
+      </p>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-0"
+        >
+          Project DescriptionProject Description
+        </p>
+      </div>
     </div>
   </div>
 </div>

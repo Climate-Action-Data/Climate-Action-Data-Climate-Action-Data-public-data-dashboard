@@ -16,5 +16,5 @@ export type Unit = {
   issuanceDate: string
   vintage: number
   tags: string
-  retirementNote: string
+  retirementNote?: string
 }

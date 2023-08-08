@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RetirementPage renders correctly 1`] = `
+<div>
+  This is the placeholder for the retirement page
+   - 
+</div>
+`;

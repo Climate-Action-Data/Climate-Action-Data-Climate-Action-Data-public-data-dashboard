@@ -1,3 +1,4 @@
+import { generateRandomString } from '@/utils/GenerationHelpers'
 import { MenuItem, MenuList, Text } from '@chakra-ui/react'
 
 export interface MenuItemProps {
@@ -17,7 +18,7 @@ export const MenuContent = (props: MenuContentProps) => {
   const generateMenuItems = () => {
     return menuItems.map((item) => {
       return (
-        <MenuItem key={`menu-item-${item.dataTestId}`} data-testid={item.dataTestId} onClick={item.onClick} minH="48px">
+        <MenuItem key={`menu-item-${generateRandomString()}`} data-testid={item.dataTestId} onClick={item.onClick} minH="48px">
           <Text flex={1} as="span">
             {item.text}
           </Text>
