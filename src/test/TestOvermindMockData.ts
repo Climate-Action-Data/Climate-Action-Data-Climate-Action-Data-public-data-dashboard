@@ -162,6 +162,7 @@ const SEARCH_FILTER_VALUES: SearchFiltersStateData = {
     },
     isEmpty: false,
   },
+  keywordSearch: ``,
 }
 
 export const MockData = {
