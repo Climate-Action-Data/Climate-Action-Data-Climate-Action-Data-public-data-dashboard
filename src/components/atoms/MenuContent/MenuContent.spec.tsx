@@ -1,9 +1,3 @@
-// const menuList: MenuItemProps[] = [
-//     { dataTestId: `view-project-details`, onClick: () => router.push(`/project/${projectWarehouseId}`), text: t(`projectMenu.viewProject`) },
-//     { dataTestId: `export-project`, icon: <DownloadIcon />, text: t(`projectMenu.exportProject`) },
-//     { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`) },
-//   ]
-
 import { fireEvent, render, screen } from '@testing-library/react'
 import { MenuContent, MenuItemProps } from './MenuContent'
 import { DownloadIcon } from '../DownloadIcon/DownloadIcon'
