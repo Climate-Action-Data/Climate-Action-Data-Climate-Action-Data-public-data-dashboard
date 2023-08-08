@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="css-1mlna27"
+    class="css-yftuit"
     id="headerReference"
   >
     <div
@@ -64,6 +64,118 @@ exports[`renders correctly 1`] = `
           </li>
         </ol>
       </nav>
+      <div
+        class="chakra-stack css-oyxd8e"
+      >
+        <div
+          class="chakra-stack css-t5wsh3"
+        >
+          <svg
+            class="chakra-icon css-1y0d4t"
+            focusable="false"
+            viewBox="0 0 16 16"
+          >
+            <ellipse
+              cx="8"
+              cy="8"
+              fill="currentColor"
+              rx="3"
+              ry="3"
+            />
+          </svg>
+          <a
+            class="chakra-link css-ytumd6"
+            href="#projectDetails"
+          >
+            <p
+              class="chakra-text css-1m5qkpx"
+            >
+              Project Details
+            </p>
+          </a>
+        </div>
+        <div
+          class="chakra-stack css-t5wsh3"
+        >
+          <svg
+            class="chakra-icon css-uvbeem"
+            focusable="false"
+            viewBox="0 0 16 16"
+          >
+            <ellipse
+              cx="8"
+              cy="8"
+              fill="currentColor"
+              rx="3"
+              ry="3"
+            />
+          </svg>
+          <a
+            class="chakra-link css-ytumd6"
+            href="#verificationValidation"
+          >
+            <p
+              class="chakra-text css-v7udgb"
+            >
+              Verification & Validation
+            </p>
+          </a>
+        </div>
+        <div
+          class="chakra-stack css-t5wsh3"
+        >
+          <svg
+            class="chakra-icon css-uvbeem"
+            focusable="false"
+            viewBox="0 0 16 16"
+          >
+            <ellipse
+              cx="8"
+              cy="8"
+              fill="currentColor"
+              rx="3"
+              ry="3"
+            />
+          </svg>
+          <a
+            class="chakra-link css-ytumd6"
+            href="#issuancesRetirements"
+          >
+            <p
+              class="chakra-text css-v7udgb"
+            >
+              Issuances & Retirements
+            </p>
+          </a>
+        </div>
+        <div
+          class="chakra-stack css-t5wsh3"
+        >
+          <svg
+            class="chakra-icon css-uvbeem"
+            focusable="false"
+            viewBox="0 0 16 16"
+          >
+            <ellipse
+              cx="8"
+              cy="8"
+              fill="currentColor"
+              rx="3"
+              ry="3"
+            />
+          </svg>
+          <a
+            class="chakra-link css-ytumd6"
+            href="#documents"
+          >
+            <p
+              class="chakra-text css-v7udgb"
+            >
+              Documents
+            </p>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

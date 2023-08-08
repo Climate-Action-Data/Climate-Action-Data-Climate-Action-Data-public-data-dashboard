@@ -3,7 +3,8 @@
 exports[`PageDetails renders correctly 1`] = `
 <div>
   <div
-    class="css-nez7ks"
+    class="css-11f75hz"
+    id="projectDetails"
   >
     <div
       class="css-1teq9s8"
@@ -504,6 +505,7 @@ exports[`PageDetails renders correctly 1`] = `
     </div>
     <div
       class="css-0"
+      id="verificationValidation"
     >
       <div
         class="chakra-stack css-qlxuh7"
@@ -582,6 +584,7 @@ exports[`PageDetails renders correctly 1`] = `
     </div>
     <div
       class="css-0"
+      id="issuancesRetirements"
     >
       <div
         class="chakra-stack css-qlxuh7"
@@ -658,6 +661,7 @@ exports[`PageDetails renders correctly 1`] = `
     </div>
     <div
       class="css-0"
+      id="documents"
     >
       <div
         class="chakra-stack css-qlxuh7"

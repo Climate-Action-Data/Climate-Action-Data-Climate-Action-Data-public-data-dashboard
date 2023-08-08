@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <svg
+    class="chakra-icon css-1hyqtbe"
+    focusable="false"
+    viewBox="0 0 16 16"
+  >
+    <ellipse
+      cx="8"
+      cy="8"
+      fill="currentColor"
+      rx="3"
+      ry="3"
+    />
+  </svg>
+</div>
+`;

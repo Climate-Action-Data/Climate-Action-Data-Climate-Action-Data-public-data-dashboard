@@ -1,5 +1,5 @@
 'use client'
-import { ProjectDetails } from '@/@types/ProjectDetails'
+import { AnchorSection, ProjectDetails } from '@/@types/ProjectDetails'
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
 import { GoogleMapWidget } from '@/components/atoms/GoogleMapWidget/GoogleMapWidget'
 import { ProjectDetailHeader } from '@/components/atoms/ProjectDetailHeader/ProjectDetailHeader'
@@ -11,9 +11,9 @@ import { coordinatesToString, toCoordinates } from '@/utils/UnitConverter'
 import { Flex, Container, SimpleGrid, Box, Heading, VStack, Text } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ProjectTypeBanner } from '../../../components/atoms/ProjectTypeBanner/ProjectTypeBanner'
-import { LargeTextWithScroll } from '../../../components/atoms/LargeTextWithScroll/LargeTextWithScroll'
-import { extractProjectTypeFromString } from '../../../utils/TextConverter'
+import { ProjectTypeBanner } from '@/components/atoms/ProjectTypeBanner/ProjectTypeBanner'
+import { LargeTextWithScroll } from '@/components/atoms/LargeTextWithScroll/LargeTextWithScroll'
+import { extractProjectTypeFromString } from '@/utils/TextConverter'
 
 export default function Project({ params }: { params: { id: string } }) {
   const [project, setProject] = useState<ProjectDetails | undefined>(undefined)
@@ -36,7 +36,7 @@ export default function Project({ params }: { params: { id: string } }) {
           <ProjectDetailHeader id={project.warehouseProjectId} title={project.name} />
         </>
       )}
-      <Flex flexWrap="wrap" gap={6} paddingX={6} paddingY={16}>
+      <Flex id={AnchorSection.PROJECT_DETAILS} flexWrap="wrap" gap={6} padding={`16px 24px`} scrollMarginTop={`172px`}>
         <Box position="relative" h="336px" flex={1}>
           <ProjectTypeBanner projectType={extractProjectTypeFromString(project?.type)} projectTypeText={project?.type ?? ``} />
           <VStack
@@ -80,17 +80,17 @@ export default function Project({ params }: { params: { id: string } }) {
             </Container>
           </Container>
         </CardSection>
-        <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.verificationValidation`) }}>
+        <CardSection id={AnchorSection.VERIFICATION_VALIDATION} displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.verificationValidation`) }}>
           <Container padding={[`12px`, `24px`]} flex={2} variant="cardSectionNoMargin">
             <ProjectDetailsVerification validation={project?.validation} />
           </Container>
         </CardSection>
-        <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.issuancesRetirements`) }}>
+        <CardSection id={AnchorSection.ISSUANCES_RETIREMENTS} displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.issuancesRetirements`) }}>
           <Container flex={2} variant="cardSectionNoMargin">
             <>{t(`lorem`)}</>
           </Container>
         </CardSection>
-        <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.documents`) }}>
+        <CardSection id={AnchorSection.DOCUMENTS} displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.documents`) }}>
           <Container flex={2} variant="cardSectionNoMargin">
             <>{t(`lorem`)}</>
           </Container>
