@@ -19,53 +19,56 @@ export const UnitSearchBodyContent = (props: UnitSearchBodyContentProps) => {
   const { t } = useTranslation(`home`)
 
   const generateTableRow = (unitList: UnitSearchResult[]) => {
-    return unitList.map((unit, idx) => (
-      <Tr
-        onClick={() => router.push(`${generateUnitUrl(`${unit?.status}`)}${unit.warehouseUnitId}`)}
-        data-testid="unit-table-row"
-        onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
-        className={`project-row-${idx}`}
-        key={`project-body-row-${unit.warehouseUnitId}`}
-        height="92px"
-      >
-        <Td title={unit.status}>
-          <TableData data={unit.status} />
-        </Td>
-        <Td title={unit.vintage?.toString()}>
-          <TableData data={unit.vintage?.toString()} />
-        </Td>
-        <Td isNumeric title={unit.annualEst?.toLocaleString()}>
-          <TableData data={unit.annualEst?.toLocaleString()} />
-        </Td>
-        <Td title={unit?.issuanceDate ? formatDate(unit.issuanceDate, DateFormats.YYYY_MM_DD) : t(`noData`)}>
-          <TableData data={unit?.issuanceDate ? formatDate(unit.issuanceDate, DateFormats.YYYY_MM_DD) : t(`noData`)} />
-        </Td>
-        <Td title={unit?.retirementDate ? formatDate(unit.retirementDate, DateFormats.YYYY_MM_DD) : t(`noData`)}>
-          <TableData data={unit?.retirementDate ? formatDate(unit.retirementDate, DateFormats.YYYY_MM_DD) : t(`noData`)} />
-        </Td>
-        <Td title={unit.projectStandard}>
-          <TableData data={unit.projectStandard} />
-        </Td>
-        <Td title={unit.projectMethodology}>
-          <TableData data={unit.projectMethodology} />
-        </Td>
-        <Td title={unit.projectSector}>
-          <TableData data={unit.projectSector} />
-        </Td>
-        <Td title={unit.projectCountry}>
-          <TableData data={unit.projectCountry} />
-        </Td>
-        <Td title={unit.correspondingAdjustment}>
-          <TableData data={unit.correspondingAdjustment} />
-        </Td>
-        <Td minW="250px !important" title={unit.marketplace}>
-          <TableData data={unit.marketplace} />
-        </Td>
-        <Td minW="250px !important" title={unit.serialNumber}>
-          <TableData data={unit.serialNumber} />
-        </Td>
-      </Tr>
-    ))
+    return unitList.map((unit, idx) => {
+      const generatedUrl = generateUnitUrl(`${unit?.status}`)
+      return (
+        <Tr
+          onClick={() => router.push(`${generatedUrl}${unit.warehouseUnitId}`)}
+          data-testid="unit-table-row"
+          onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
+          className={`project-row-${idx}`}
+          key={`project-body-row-${unit.warehouseUnitId}`}
+          height="92px"
+        >
+          <Td title={unit.status}>
+            <TableData data={unit.status} />
+          </Td>
+          <Td title={unit.vintage?.toString()}>
+            <TableData data={unit.vintage?.toString()} />
+          </Td>
+          <Td isNumeric title={unit.annualEst?.toLocaleString()}>
+            <TableData data={unit.annualEst?.toLocaleString()} />
+          </Td>
+          <Td title={unit?.issuanceDate ? formatDate(unit.issuanceDate, DateFormats.YYYY_MM_DD) : t(`noData`)}>
+            <TableData data={unit?.issuanceDate ? formatDate(unit.issuanceDate, DateFormats.YYYY_MM_DD) : t(`noData`)} />
+          </Td>
+          <Td title={unit?.retirementDate ? formatDate(unit.retirementDate, DateFormats.YYYY_MM_DD) : t(`noData`)}>
+            <TableData data={unit?.retirementDate ? formatDate(unit.retirementDate, DateFormats.YYYY_MM_DD) : t(`noData`)} />
+          </Td>
+          <Td title={unit.projectStandard}>
+            <TableData data={unit.projectStandard} />
+          </Td>
+          <Td title={unit.projectMethodology}>
+            <TableData data={unit.projectMethodology} />
+          </Td>
+          <Td title={unit.projectSector}>
+            <TableData data={unit.projectSector} />
+          </Td>
+          <Td title={unit.projectCountry}>
+            <TableData data={unit.projectCountry} />
+          </Td>
+          <Td title={unit.correspondingAdjustment}>
+            <TableData data={unit.correspondingAdjustment} />
+          </Td>
+          <Td minW="250px !important" title={unit.marketplace}>
+            <TableData data={unit.marketplace} />
+          </Td>
+          <Td minW="250px !important" title={unit.serialNumber}>
+            <TableData data={unit.serialNumber} />
+          </Td>
+        </Tr>
+      )
+    })
   }
 
   return (
