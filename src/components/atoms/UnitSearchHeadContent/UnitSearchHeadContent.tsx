@@ -22,13 +22,13 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
     if (event?.target) {
       const target = event.target as HTMLElement
       if (target instanceof HTMLTableCellElement || target instanceof HTMLParagraphElement) {
-        router.push(`${generateUnitUrl(unitStatus ?? ``)}${unitId}`)
+        router.push(`${generateUnitUrl(`${unitStatus}`)}${unitId}`)
       }
     }
   }
   const generateMenuList = (unitWarehouseId: string, projectWarehouseId: string, unitStatus: string) => {
     const menuList: MenuItemProps[] = [
-      { dataTestId: `view-unit-details`, onClick: () => router.push(`${generateUnitUrl(unitStatus ?? ``)}${unitWarehouseId}`), text: t(`projectMenu.viewUnit`) },
+      { dataTestId: `view-unit-details`, onClick: () => router.push(`${generateUnitUrl(`${unitStatus}`)}${unitWarehouseId}`), text: t(`projectMenu.viewUnit`) },
       { dataTestId: `view-project-details`, onClick: () => router.push(`/project?id=${projectWarehouseId}`), text: t(`projectMenu.viewProject`) },
       { dataTestId: `export-project`, icon: <DownloadIcon />, text: t(`projectMenu.exportProject`) },
       { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`) },
