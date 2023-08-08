@@ -1,12 +1,12 @@
-import FilterBar from '@/components/organisms/FilterBar/FilterBar'
+import ProjectFilterBar from '@/components/organisms/ProjectFilterBar/ProjectFilterBar'
 import { Button, VStack } from '@chakra-ui/react'
 import { MatchWordIcon } from '@/components/atoms/MatchWordIcon/MatchWordIcon'
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
 import { FilterIcon } from '@/components/atoms/FilterIcon/FilterIcon'
-import SearchBar from '@/components/organisms/SearchBar/SearchBar'
+import ProjectSearchBar from '@/components/organisms/ProjectSearchBar/ProjectSearchBar'
 
-const FiltersAndSearch = () => {
+const ProjectFilterAndSearch = () => {
   const { t } = useTranslation(`search`)
   const [showFilters, setShowFilters] = useState(true)
 
@@ -17,7 +17,7 @@ const FiltersAndSearch = () => {
   const renderFilterBar = () => {
     return (
       <>
-        <FilterBar />
+        <ProjectFilterBar />
         <Button rightIcon={<MatchWordIcon />} variant={`linkText`} fontWeight={`medium`} padding={0} height={`min-content`} onClick={handleOnClick}>
           {t(`searchProjectsByKeywords`)}
         </Button>
@@ -27,7 +27,7 @@ const FiltersAndSearch = () => {
   const renderSearchBar = () => {
     return (
       <>
-        <SearchBar />
+        <ProjectSearchBar />
         <Button rightIcon={<FilterIcon />} variant={`linkText`} fontWeight={`medium`} padding={0} height={`min-content`} onClick={handleOnClick}>
           {t(`searchProjectsByFilters`)}
         </Button>
@@ -43,4 +43,4 @@ const FiltersAndSearch = () => {
   )
 }
 
-export default FiltersAndSearch
+export default ProjectFilterAndSearch

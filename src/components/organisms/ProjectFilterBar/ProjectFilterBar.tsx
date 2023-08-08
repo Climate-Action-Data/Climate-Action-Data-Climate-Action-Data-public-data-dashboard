@@ -8,7 +8,7 @@ import AutoCompleteCheckbox from '@/components/molecules/AutoCompleteCheckbox/Au
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import CreditingPeriodFilter from '@/components/molecules/CreditingPeriodFilter/CreditingPeriodFilter'
 
-const FilterBar: FC = () => {
+const ProjectFilterBar: FC = () => {
   const {
     allSearchFilterValues: { searchFilterValues, isEmpty },
     selectedSearchFilterValues: { searchFilterValues: selectedSearchFilters },
@@ -96,4 +96,4 @@ const FilterBar: FC = () => {
   )
 }
 
-export default FilterBar
+export default ProjectFilterBar
