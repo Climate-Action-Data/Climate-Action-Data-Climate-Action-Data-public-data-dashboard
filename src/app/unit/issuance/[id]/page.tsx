@@ -39,7 +39,6 @@ export default function IssuancePage({ params }: { params: { id: string } }) {
         </CardSection>
         <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.originalIssuanceDetails`) }}>
           <Container padding={[`12px`, `24px`]} flex={2} variant="cardSectionNoMargin">
-            {/* <ProjectDetailsVerification validation={project?.validation} /> */}
             {t(`placeholderIssuance`)} - {unit?.warehouseUnitId}
           </Container>
         </CardSection>
