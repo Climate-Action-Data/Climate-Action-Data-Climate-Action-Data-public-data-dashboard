@@ -21,7 +21,7 @@ export const UnitSearchBodyContent = (props: UnitSearchBodyContentProps) => {
   const generateTableRow = (unitList: UnitSearchResult[]) => {
     return unitList.map((unit, idx) => (
       <Tr
-        onClick={() => router.push(`${generateUnitUrl(unit?.status ?? ``)}${unit.warehouseUnitId}`)}
+        onClick={() => router.push(`${generateUnitUrl(`${unit?.status}`)}${unit.warehouseUnitId}`)}
         data-testid="unit-table-row"
         onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
         className={`project-row-${idx}`}
