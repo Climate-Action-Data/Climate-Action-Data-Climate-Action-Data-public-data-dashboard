@@ -1,10 +1,12 @@
-import ProjectFilterBar from '@/components/organisms/ProjectFilterBar/ProjectFilterBar'
-import { Button, VStack } from '@chakra-ui/react'
-import { MatchWordIcon } from '@/components/atoms/MatchWordIcon/MatchWordIcon'
-import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { VStack } from '@chakra-ui/react'
+
+import ProjectFilterBar from '@/components/organisms/ProjectFilterBar/ProjectFilterBar'
+import { MatchWordIcon } from '@/components/atoms/MatchWordIcon/MatchWordIcon'
 import { FilterIcon } from '@/components/atoms/FilterIcon/FilterIcon'
 import ProjectSearchBar from '@/components/organisms/ProjectSearchBar/ProjectSearchBar'
+import FilterAndSearchTrigger from '@/components/atoms/FilterAndSearchTrigger/FilterAndSearchTrigger'
 
 const ProjectFilterAndSearch = () => {
   const { t } = useTranslation(`search`)
@@ -18,9 +20,7 @@ const ProjectFilterAndSearch = () => {
     return (
       <>
         <ProjectFilterBar />
-        <Button rightIcon={<MatchWordIcon />} variant={`linkText`} fontWeight={`medium`} padding={0} height={`min-content`} onClick={handleOnClick}>
-          {t(`searchProjectsByKeywords`)}
-        </Button>
+        <FilterAndSearchTrigger icon={<MatchWordIcon />} label={t(`searchProjectsByKeywords`)} handleOnClick={handleOnClick} />
       </>
     )
   }
@@ -28,9 +28,7 @@ const ProjectFilterAndSearch = () => {
     return (
       <>
         <ProjectSearchBar />
-        <Button rightIcon={<FilterIcon />} variant={`linkText`} fontWeight={`medium`} padding={0} height={`min-content`} onClick={handleOnClick}>
-          {t(`searchProjectsByFilters`)}
-        </Button>
+        <FilterAndSearchTrigger icon={<FilterIcon />} label={t(`searchProjectsByFilters`)} handleOnClick={handleOnClick} />
       </>
     )
   }
