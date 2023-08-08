@@ -16,7 +16,7 @@ export const ProjectDetailHeader = (props: ProjectDetailHeaderProps) => {
       <VStack alignItems="start" flex={1}>
         <BreadCrumbs
           items={[
-            { title: `${t(`projectsBreadCrumb`)}`, link: `/search/projects` },
+            { title: t(`projectsBreadCrumb`), link: `/search/projects` },
             { title: `${title}`, link: `/project/${id}` },
           ]}
           color="lightGray.700"
