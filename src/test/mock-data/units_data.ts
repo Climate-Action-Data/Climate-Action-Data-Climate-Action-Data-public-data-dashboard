@@ -28,8 +28,6 @@ export const unitsData = [
     projectSector: `Agriculture; forestry and fishing`,
     projectCountry: `Colombia`,
     status: `Retired`,
-    issuanceDate: `2019-12-16T02:50:47.000Z`,
-    retirementDate: `2023-05-20 00:03:05+00`,
     annualEst: 20394,
     vintage: 2019,
     correspondingAdjustment: `Not Started`,

@@ -52,6 +52,7 @@ export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
       },
       isEmpty: true,
     },
+    keywordSearch: ``,
   }
 
   const projectResult = props?.projectResult ?? {

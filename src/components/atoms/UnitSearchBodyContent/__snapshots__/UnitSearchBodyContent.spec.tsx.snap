@@ -115,15 +115,15 @@ exports[`renders correctly 1`] = `
         </td>
         <td
           class="css-0"
-          title="2019/12/16"
+          title="--"
         >
-          2019/12/16
+          --
         </td>
         <td
           class="css-0"
-          title="2023/05/20"
+          title="--"
         >
-          2023/05/20
+          --
         </td>
         <td
           class="css-0"
@@ -291,15 +291,15 @@ exports[`renders correctly with hover 1`] = `
         </td>
         <td
           class="css-0"
-          title="2019/12/16"
+          title="--"
         >
-          2019/12/16
+          --
         </td>
         <td
           class="css-0"
-          title="2023/05/20"
+          title="--"
         >
-          2023/05/20
+          --
         </td>
         <td
           class="css-0"
