@@ -96,6 +96,7 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
                     onChange={(event) => {
                       handleCheckboxOnChange(event.target.checked, value)
                     }}
+                    textAlign={`start`}
                   >
                     {value}
                   </Checkbox>
