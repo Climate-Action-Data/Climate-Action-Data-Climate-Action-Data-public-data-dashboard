@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react'
 import CreditingPeriodFilter from '@/components/molecules/CreditingPeriodFilter/CreditingPeriodFilter'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 import userEvent from '@testing-library/user-event'
-import { MockData } from '@/test/TestOvermindMockData'
 import { format } from 'date-fns'
 import { DateFormats } from '@/@types/DateFormats'
 
@@ -24,9 +23,10 @@ describe(`CreditingPeriodFilter`, () => {
   })
 
   test(`renders a CreditingPeriodFilter and open it`, async () => {
+    const tOnDateChange = jest.fn()
     const { container } = render(
       <TestOvermindWrapper>
-        <CreditingPeriodFilter label={tLabel} />
+        <CreditingPeriodFilter label={tLabel} onDateChange={tOnDateChange} />
       </TestOvermindWrapper>,
     )
 
@@ -35,14 +35,13 @@ describe(`CreditingPeriodFilter`, () => {
   })
 
   test(`renders a CreditingPeriodFilter with a pre-selected max date`, async () => {
-    const mockData = MockData.SEARCH_FILTER_VALUES
-    mockData.selectedSearchFilterValues.searchFilterValues.creditingPeriod = { maxDate: tDate }
+    const tOnDateChange = jest.fn()
 
     const tLabel2 = `Up to ${format(tDate, DateFormats.YYYY_MM_DD)}`
 
     const { container } = render(
-      <TestOvermindWrapper searchFilters={mockData}>
-        <CreditingPeriodFilter label={tLabel} />
+      <TestOvermindWrapper>
+        <CreditingPeriodFilter label={tLabel} onDateChange={tOnDateChange} dateFilter={{ maxDate: tDate }} />
       </TestOvermindWrapper>,
     )
 
@@ -53,14 +52,13 @@ describe(`CreditingPeriodFilter`, () => {
   })
 
   test(`renders a CreditingPeriodFilter with a pre-selected min date and click on clear`, async () => {
-    const mockData = MockData.SEARCH_FILTER_VALUES
-    mockData.selectedSearchFilterValues.searchFilterValues.creditingPeriod = { minDate: tDate }
+    const tOnDateChange = jest.fn()
 
     const tLabel2 = `${format(tDate, DateFormats.YYYY_MM_DD)} and later`
 
     const { container } = render(
-      <TestOvermindWrapper searchFilters={mockData}>
-        <CreditingPeriodFilter label={tLabel} />
+      <TestOvermindWrapper>
+        <CreditingPeriodFilter label={tLabel} onDateChange={tOnDateChange} dateFilter={{ minDate: tDate }} />
       </TestOvermindWrapper>,
     )
 
@@ -71,14 +69,13 @@ describe(`CreditingPeriodFilter`, () => {
   })
 
   test(`renders a CreditingPeriodFilter with a pre-selected min date and max date and click on apply`, async () => {
-    const mockData = MockData.SEARCH_FILTER_VALUES
-    mockData.selectedSearchFilterValues.searchFilterValues.creditingPeriod = { minDate: tDate, maxDate: tDate }
+    const tOnDateChange = jest.fn()
 
     const tLabel2 = `${format(tDate, DateFormats.YYYY_MM_DD)} - ${format(tDate, DateFormats.YYYY_MM_DD)}`
 
     const { container } = render(
-      <TestOvermindWrapper searchFilters={mockData}>
-        <CreditingPeriodFilter label={tLabel} />
+      <TestOvermindWrapper>
+        <CreditingPeriodFilter label={tLabel} onDateChange={tOnDateChange} dateFilter={{ minDate: tDate, maxDate: tDate }} />
       </TestOvermindWrapper>,
     )
 
@@ -89,9 +86,10 @@ describe(`CreditingPeriodFilter`, () => {
   })
 
   test(`renders a CreditingPeriodFilter and open the date selectors and click on clear on the calendar`, async () => {
+    const tOnDateChange = jest.fn()
     const { container } = render(
       <TestOvermindWrapper>
-        <CreditingPeriodFilter label={tLabel} />
+        <CreditingPeriodFilter label={tLabel} onDateChange={tOnDateChange} />
       </TestOvermindWrapper>,
     )
 

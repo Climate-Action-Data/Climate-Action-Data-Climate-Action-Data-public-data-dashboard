@@ -36,7 +36,11 @@ const CalendarBodyDates: FC<CalendarBodyDatesProps> = (props) => {
                 <Button variant={`calendarDate`} color={selected ? `white` : `black`} backgroundColor={background} {...getDateProps({ dateObj })}>
                   {date.getDate()}
                 </Button>
-              ) : null}
+              ) : (
+                <Button variant={`calendarDate`} color={selected ? `white` : `black`} isDisabled backgroundColor={background} {...getDateProps({ dateObj })}>
+                  {date.getDate()}
+                </Button>
+              )}
             </WrapItem>,
           )
         }

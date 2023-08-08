@@ -108,7 +108,8 @@ exports[`DateInput renders a DateInput and type in a value earlier than minDate 
         </svg>
       </div>
       <input
-        class="chakra-input css-1eb9l0q"
+        aria-invalid="true"
+        class="chakra-input css-p5mn3g"
         placeholder="yyyy/MM/dd"
         value="2023/01/01"
       />
@@ -147,7 +148,8 @@ exports[`DateInput renders a DateInput and type in a value later than maxDate 1`
         </svg>
       </div>
       <input
-        class="chakra-input css-1eb9l0q"
+        aria-invalid="true"
+        class="chakra-input css-p5mn3g"
         placeholder="yyyy/MM/dd"
         value="2024/01/01"
       />
@@ -186,7 +188,8 @@ exports[`DateInput renders a DateInput and type in a wrong value 1`] = `
         </svg>
       </div>
       <input
-        class="chakra-input css-1eb9l0q"
+        aria-invalid="true"
+        class="chakra-input css-p5mn3g"
         placeholder="yyyy/MM/dd"
         value="wrong"
       />

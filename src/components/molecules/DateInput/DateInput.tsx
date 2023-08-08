@@ -56,7 +56,6 @@ const DateInput: FC<DateInputProp> = (prop) => {
       setIsInvalid(true)
       return
     }
-
     if ((maxDate && parsedDate > maxDate) || (minDate && parsedDate < minDate)) {
       setIsInvalid(true)
       return
@@ -74,10 +73,13 @@ const DateInput: FC<DateInputProp> = (prop) => {
         </InputRightElement>
         <Input
           placeholder={DateFormats.YYYY_MM_DD}
-          borderBottomColor={isInvalid ? `red.500` : `lightGray.600`}
+          borderBottomColor={`lightGray.600`}
           value={textInputValue}
           onChange={handleOnChange}
           onBlur={handleOnBlur}
+          onEnded={handleOnBlur}
+          isInvalid={isInvalid}
+          errorBorderColor={`red`}
           sx={{ ...inputConfig }}
         />
       </InputGroup>
