@@ -4,21 +4,21 @@ import { Dispatch, FC, SetStateAction, useEffect, useState } from 'react'
 import CalendarWrapper from '@/components/molecules/CalendarWrapper/CalendarWrapper'
 import { MinusIcon } from '@/components/atoms/MinusIcon/MinusIcon'
 import DateInput from '@/components/molecules/DateInput/DateInput'
-import { useActions, useAppState } from '@/overmind'
 import { useTranslation } from 'react-i18next'
 import { format } from 'date-fns'
 import { DateFormats } from '@/@types/DateFormats'
+import { DatesFilter } from '@/@types/ProjectSearchFilterValues'
 
 interface CreditingPeriodFilterProp {
   label: string
   earliestDate?: Date
   latestDate?: Date
+  dateFilter?: DatesFilter
+  onDateChange: (payload: DatesFilter) => void
 }
 
 const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
-  const { label, earliestDate, latestDate } = prop
-  const { setCreditingPeriodFilter } = useActions().searchFilters
-  const { selectedSearchFilterValues } = useAppState().searchFilters
+  const { label, earliestDate, latestDate, onDateChange, dateFilter } = prop
 
   const [minimumDate, setMinimumDate] = useState<Date | undefined>()
   const [maximumDate, setMaximumDate] = useState<Date | undefined>()
@@ -28,9 +28,9 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
   const { t } = useTranslation(`search`)
 
   useEffect(() => {
-    setMinimumDate(selectedSearchFilterValues.searchFilterValues.creditingPeriod?.minDate)
-    setMaximumDate(selectedSearchFilterValues.searchFilterValues.creditingPeriod?.maxDate)
-  }, [selectedSearchFilterValues.searchFilterValues.creditingPeriod])
+    setMinimumDate(dateFilter?.minDate)
+    setMaximumDate(dateFilter?.maxDate)
+  }, [dateFilter])
 
   const getOnApplySelectedDate = (action: Dispatch<SetStateAction<Date | undefined>>, selectedDate: Date | undefined) => {
     action(selectedDate)
@@ -42,8 +42,8 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
     return (
       <CalendarWrapper
         preSelectedDate={stateValue}
-        maxDate={latestDate}
-        minDate={earliestDate}
+        maxDate={latestDate ?? maximumDate}
+        minDate={earliestDate ?? minimumDate}
         onApplySelectedDate={(selectedDate) => getOnApplySelectedDate(action, selectedDate)}
       />
     )
@@ -60,16 +60,34 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
   const handleOnClearClick = () => {
     setMinimumDate(undefined)
     setMaximumDate(undefined)
-    setCreditingPeriodFilter({})
+    onDateChange({})
   }
 
   const handleOnApplyClick = () => {
-    setCreditingPeriodFilter({ maxDate: maximumDate, minDate: minimumDate })
+    if (minimumDate && maximumDate) {
+      if (minimumDate <= maximumDate) {
+        onDateChange({ maxDate: maximumDate, minDate: minimumDate })
+      }
+    }
+    if (minimumDate) {
+      onDateChange({ minDate: minimumDate })
+    }
+    if (maximumDate) {
+      onDateChange({ maxDate: maximumDate })
+    }
   }
 
   const handleOnClose = () => {
     setShowMinimumDateSelector(false)
     setShowMaximumDateSelector(false)
+  }
+
+  const handleMinDateOnChange = (date: Date | undefined) => {
+    setMinimumDate(date)
+  }
+
+  const handleMaxDateOnChange = (date: Date | undefined) => {
+    setMaximumDate(date)
   }
 
   const renderContent = () => {
@@ -83,9 +101,9 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
             label={`Minimum Date`}
             value={minimumDate}
             onOpenDatePicker={handleOnOpenDatePickerMinimumDate}
-            maxDate={latestDate}
+            maxDate={latestDate ?? maximumDate}
             minDate={earliestDate}
-            onChange={setMinimumDate}
+            onChange={handleMinDateOnChange}
           />
           <MinusIcon />
           <DateInput
@@ -93,8 +111,8 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
             value={maximumDate}
             onOpenDatePicker={handleOnOpenDatePickerMaximumDate}
             maxDate={latestDate}
-            minDate={earliestDate}
-            onChange={setMaximumDate}
+            minDate={earliestDate ?? minimumDate}
+            onChange={handleMaxDateOnChange}
           />
         </HStack>
         <HStack justify={`space-between`} width={`100%`} margin={`8px`}>
