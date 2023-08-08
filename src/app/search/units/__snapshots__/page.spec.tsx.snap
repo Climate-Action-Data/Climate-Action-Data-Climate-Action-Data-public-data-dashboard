@@ -805,17 +805,16 @@ exports[`renders correctly and click next page 1`] = `
           class="css-1kfska2"
         >
           <tr
-            class="project-row-0 css-mii0oe"
-            data-testid="project-search-head-row"
+            class="css-mii0oe"
           >
             <td
               class="css-0"
-              data-testid="project-search-head-row-td"
             >
               <div
                 class="css-70qvj9"
               >
                 <div
+<<<<<<< HEAD
                   class="css-c4alqz"
                   title="Bosques Solares de los Llanos 1"
                 >
@@ -1351,6 +1350,22 @@ exports[`renders correctly and click next page 1`] = `
                         />
                       </svg>
                     </button>
+=======
+                  class="css-1rr4qq7"
+                >
+                  <div
+                    class="chakra-stack css-8g8ihq"
+                  >
+                    <div
+                      class="chakra-skeleton css-1tjwkx3"
+                    />
+                    <div
+                      class="chakra-skeleton css-1d14lpv"
+                    />
+                    <div
+                      class="chakra-skeleton css-1d14lpv"
+                    />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
                   </div>
                 </div>
               </div>
@@ -1814,17 +1829,18 @@ exports[`renders correctly and click next page 1`] = `
             data-testid="table-scroll"
           >
             <tr
-              class="project-row-0 css-mii0oe"
-              data-testid="table-row"
+              class="css-mii0oe"
             >
               <td
                 class="css-0"
-                title="EcoRegistry"
               >
-                EcoRegistry
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
+<<<<<<< HEAD
                 title="ACM0002: Grid-connected electricity generation from renewable sources / ACM0006: Electricity and heat generation from biomass "
               >
                 ACM0002: Grid-connected electricity generation from renewable sources / ACM0006: Electricity and heat generation from biomass 
@@ -1895,25 +1911,31 @@ exports[`renders correctly and click next page 1`] = `
               <td
                 class="css-0"
                 title="AR-ACM0003: Afforestation and reforestation of lands except wetlands"
+=======
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               >
-                AR-ACM0003: Afforestation and reforestation of lands except wetlands
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
-                title="Agriculture; forestry and fishing"
               >
-                Agriculture; forestry and fishing
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
-                title="Colombia"
               >
-                Colombia
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
-                title="Authorized"
               >
+<<<<<<< HEAD
                 Authorized
               </td>
               <td
@@ -2059,34 +2081,71 @@ exports[`renders correctly and click next page 1`] = `
                 title="2017-11-01T00:00:00.000Z-2027-10-31T00:00:00.000Z"
               >
                 2017/11/01 - 2027/10/31
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+              </td>
+              <td
+                class="css-0"
+              >
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
+<<<<<<< HEAD
                 title="357571"
               >
                 357,571
+=======
+              >
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
                 title="172795"
               >
+<<<<<<< HEAD
                 172,795
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
                 title="0"
               >
+<<<<<<< HEAD
                 0
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
                 title="172795"
               >
+<<<<<<< HEAD
                 172,795
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
             </tr>
           </tbody>
@@ -2269,17 +2328,16 @@ exports[`renders correctly on table data 1`] = `
           class="css-1kfska2"
         >
           <tr
-            class="project-row-0 css-mii0oe"
-            data-testid="project-search-head-row"
+            class="css-mii0oe"
           >
             <td
               class="css-0"
-              data-testid="project-search-head-row-td"
             >
               <div
                 class="css-70qvj9"
               >
                 <div
+<<<<<<< HEAD
                   class="css-c4alqz"
                   title="Bosques Solares de los Llanos 1"
                 >
@@ -2815,6 +2873,22 @@ exports[`renders correctly on table data 1`] = `
                         />
                       </svg>
                     </button>
+=======
+                  class="css-1rr4qq7"
+                >
+                  <div
+                    class="chakra-stack css-8g8ihq"
+                  >
+                    <div
+                      class="chakra-skeleton css-1tjwkx3"
+                    />
+                    <div
+                      class="chakra-skeleton css-1d14lpv"
+                    />
+                    <div
+                      class="chakra-skeleton css-1d14lpv"
+                    />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
                   </div>
                 </div>
               </div>
@@ -3278,17 +3352,18 @@ exports[`renders correctly on table data 1`] = `
             data-testid="table-scroll"
           >
             <tr
-              class="project-row-0 css-mii0oe"
-              data-testid="table-row"
+              class="css-mii0oe"
             >
               <td
                 class="css-0"
-                title="EcoRegistry"
               >
-                EcoRegistry
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
+<<<<<<< HEAD
                 title="ACM0002: Grid-connected electricity generation from renewable sources / ACM0006: Electricity and heat generation from biomass "
               >
                 ACM0002: Grid-connected electricity generation from renewable sources / ACM0006: Electricity and heat generation from biomass 
@@ -3359,25 +3434,31 @@ exports[`renders correctly on table data 1`] = `
               <td
                 class="css-0"
                 title="AR-ACM0003: Afforestation and reforestation of lands except wetlands"
+=======
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               >
-                AR-ACM0003: Afforestation and reforestation of lands except wetlands
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
-                title="Agriculture; forestry and fishing"
               >
-                Agriculture; forestry and fishing
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
-                title="Colombia"
               >
-                Colombia
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
-                title="Authorized"
               >
+<<<<<<< HEAD
                 Authorized
               </td>
               <td
@@ -3523,34 +3604,71 @@ exports[`renders correctly on table data 1`] = `
                 title="2017-11-01T00:00:00.000Z-2027-10-31T00:00:00.000Z"
               >
                 2017/11/01 - 2027/10/31
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+              </td>
+              <td
+                class="css-0"
+              >
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
+<<<<<<< HEAD
                 title="357571"
               >
                 357,571
+=======
+              >
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
                 title="172795"
               >
+<<<<<<< HEAD
                 172,795
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
                 title="0"
               >
+<<<<<<< HEAD
                 0
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
                 title="172795"
               >
+<<<<<<< HEAD
                 172,795
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
             </tr>
           </tbody>
@@ -3727,17 +3845,16 @@ exports[`renders correctly on table data and next page 1`] = `
           class="css-1kfska2"
         >
           <tr
-            class="project-row-0 css-mii0oe"
-            data-testid="project-search-head-row"
+            class="css-mii0oe"
           >
             <td
               class="css-0"
-              data-testid="project-search-head-row-td"
             >
               <div
                 class="css-70qvj9"
               >
                 <div
+<<<<<<< HEAD
                   class="css-c4alqz"
                   title="Bosques Solares de los Llanos 1"
                 >
@@ -4273,6 +4390,22 @@ exports[`renders correctly on table data and next page 1`] = `
                         />
                       </svg>
                     </button>
+=======
+                  class="css-1rr4qq7"
+                >
+                  <div
+                    class="chakra-stack css-8g8ihq"
+                  >
+                    <div
+                      class="chakra-skeleton css-1tjwkx3"
+                    />
+                    <div
+                      class="chakra-skeleton css-1d14lpv"
+                    />
+                    <div
+                      class="chakra-skeleton css-1d14lpv"
+                    />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
                   </div>
                 </div>
               </div>
@@ -4736,17 +4869,18 @@ exports[`renders correctly on table data and next page 1`] = `
             data-testid="table-scroll"
           >
             <tr
-              class="project-row-0 css-mii0oe"
-              data-testid="table-row"
+              class="css-mii0oe"
             >
               <td
                 class="css-0"
-                title="EcoRegistry"
               >
-                EcoRegistry
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
+<<<<<<< HEAD
                 title="ACM0002: Grid-connected electricity generation from renewable sources / ACM0006: Electricity and heat generation from biomass "
               >
                 ACM0002: Grid-connected electricity generation from renewable sources / ACM0006: Electricity and heat generation from biomass 
@@ -4817,25 +4951,31 @@ exports[`renders correctly on table data and next page 1`] = `
               <td
                 class="css-0"
                 title="AR-ACM0003: Afforestation and reforestation of lands except wetlands"
+=======
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               >
-                AR-ACM0003: Afforestation and reforestation of lands except wetlands
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
-                title="Agriculture; forestry and fishing"
               >
-                Agriculture; forestry and fishing
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
-                title="Colombia"
               >
-                Colombia
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
-                title="Authorized"
               >
+<<<<<<< HEAD
                 Authorized
               </td>
               <td
@@ -4981,34 +5121,71 @@ exports[`renders correctly on table data and next page 1`] = `
                 title="2017-11-01T00:00:00.000Z-2027-10-31T00:00:00.000Z"
               >
                 2017/11/01 - 2027/10/31
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+              </td>
+              <td
+                class="css-0"
+              >
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
+<<<<<<< HEAD
                 title="357571"
               >
                 357,571
+=======
+              >
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
                 title="172795"
               >
+<<<<<<< HEAD
                 172,795
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
                 title="0"
               >
+<<<<<<< HEAD
                 0
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
                 title="172795"
               >
+<<<<<<< HEAD
                 172,795
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
             </tr>
           </tbody>
@@ -5183,17 +5360,16 @@ exports[`renders correctly on table data and scroll page 1`] = `
           class="css-1kfska2"
         >
           <tr
-            class="project-row-0 css-mii0oe"
-            data-testid="project-search-head-row"
+            class="css-mii0oe"
           >
             <td
               class="css-0"
-              data-testid="project-search-head-row-td"
             >
               <div
                 class="css-70qvj9"
               >
                 <div
+<<<<<<< HEAD
                   class="css-c4alqz"
                   title="Bosques Solares de los Llanos 1"
                 >
@@ -5729,6 +5905,22 @@ exports[`renders correctly on table data and scroll page 1`] = `
                         />
                       </svg>
                     </button>
+=======
+                  class="css-1rr4qq7"
+                >
+                  <div
+                    class="chakra-stack css-8g8ihq"
+                  >
+                    <div
+                      class="chakra-skeleton css-1tjwkx3"
+                    />
+                    <div
+                      class="chakra-skeleton css-1d14lpv"
+                    />
+                    <div
+                      class="chakra-skeleton css-1d14lpv"
+                    />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
                   </div>
                 </div>
               </div>
@@ -6192,17 +6384,18 @@ exports[`renders correctly on table data and scroll page 1`] = `
             data-testid="table-scroll"
           >
             <tr
-              class="project-row-0 css-mii0oe"
-              data-testid="table-row"
+              class="css-mii0oe"
             >
               <td
                 class="css-0"
-                title="EcoRegistry"
               >
-                EcoRegistry
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
+<<<<<<< HEAD
                 title="ACM0002: Grid-connected electricity generation from renewable sources / ACM0006: Electricity and heat generation from biomass "
               >
                 ACM0002: Grid-connected electricity generation from renewable sources / ACM0006: Electricity and heat generation from biomass 
@@ -6273,25 +6466,31 @@ exports[`renders correctly on table data and scroll page 1`] = `
               <td
                 class="css-0"
                 title="AR-ACM0003: Afforestation and reforestation of lands except wetlands"
+=======
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               >
-                AR-ACM0003: Afforestation and reforestation of lands except wetlands
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
-                title="Agriculture; forestry and fishing"
               >
-                Agriculture; forestry and fishing
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
-                title="Colombia"
               >
-                Colombia
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
               </td>
               <td
                 class="css-0"
-                title="Authorized"
               >
+<<<<<<< HEAD
                 Authorized
               </td>
               <td
@@ -6437,34 +6636,71 @@ exports[`renders correctly on table data and scroll page 1`] = `
                 title="2017-11-01T00:00:00.000Z-2027-10-31T00:00:00.000Z"
               >
                 2017/11/01 - 2027/10/31
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+              </td>
+              <td
+                class="css-0"
+              >
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
+<<<<<<< HEAD
                 title="357571"
               >
                 357,571
+=======
+              >
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
                 title="172795"
               >
+<<<<<<< HEAD
                 172,795
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
                 title="0"
               >
+<<<<<<< HEAD
                 0
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
               <td
                 class="css-0"
                 data-is-numeric="true"
                 title="172795"
               >
+<<<<<<< HEAD
                 172,795
+=======
+                <div
+                  class="chakra-skeleton css-1tjwkx3"
+                />
+>>>>>>> 77bc9a560f7d82454469ccf056b8f6a4bd097d41
               </td>
             </tr>
           </tbody>

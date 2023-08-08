@@ -98,6 +98,10 @@ export interface UnitResultState {
   unitResults?: EffectResponse<UnitSearchResult[]>
 }
 
+export interface UnitResultState {
+  unitResults?: EffectResponse<UnitSearchResult[]>
+}
+
 export interface GovernanceResponseData {
   lastUpdated: string
   governanceData: GovernanceData
