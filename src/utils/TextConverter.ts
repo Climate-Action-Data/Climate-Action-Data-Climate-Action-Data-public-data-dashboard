@@ -26,7 +26,7 @@ export const sanitizeString = (str: string) => {
   return str.replace(/[^a-zA-Z0-9]/g, ``).toLowerCase()
 }
 
-export const extractProjectTypeFromString = (str: string) => {
+export const extractProjectTypeFromString = (str: string | undefined) => {
   if (!str) {
     return ProjectType.DEFAULT
   }
