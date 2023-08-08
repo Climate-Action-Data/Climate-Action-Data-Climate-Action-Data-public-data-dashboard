@@ -21,7 +21,7 @@ describe(`MenuContent`, () => {
         <MenuContent menuItems={[]} />
       </Menu>,
     )
-    expect(baseElement).toBeTruthy()
+    expect(baseElement).toMatchSnapshot()
   })
 
   it(`should render successfully with array`, () => {
@@ -31,7 +31,7 @@ describe(`MenuContent`, () => {
         <MenuContent menuItems={menuList} />
       </Menu>,
     )
-    expect(baseElement).toBeTruthy()
+    expect(baseElement).toMatchSnapshot()
   })
 
   it(`should render successfully with array and handle click`, () => {
@@ -44,6 +44,6 @@ describe(`MenuContent`, () => {
     const button = screen.getByTestId(`view-project-details`)
     fireEvent.click(button)
     expect(mockClick).toHaveBeenCalled()
-    expect(baseElement).toBeTruthy()
+    expect(baseElement).toMatchSnapshot()
   })
 })

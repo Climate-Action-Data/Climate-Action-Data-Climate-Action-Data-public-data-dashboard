@@ -7,6 +7,8 @@ import { projectData } from '@/test/mock-data/projects_data'
 import { projectDetail } from './mock-data/project_detail'
 import { ProjectDetails } from '@/@types/ProjectDetails'
 import { unitsData } from './mock-data/units_data'
+import { Unit } from '@/@types/Unit'
+import { unitDetail } from './mock-data/unit_detail'
 
 const CARBON_MAP_DATA_FILTERED: CountryPeriodData = {
   activeProjects: 200,
@@ -183,6 +185,7 @@ export const PROJECT_SEARCH_RESULT: ProjectResultState = {
   },
 }
 export const PROJECT_DETAIL: ProjectDetails = projectDetail
+export const UNIT_DETAIL: Unit = unitDetail
 
 export const UNIT_SEARCH_RESULT: UnitResultState = {
   unitResults: {

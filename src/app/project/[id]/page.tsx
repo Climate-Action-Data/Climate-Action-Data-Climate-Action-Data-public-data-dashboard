@@ -2,18 +2,16 @@
 import { ProjectDetails } from '@/@types/ProjectDetails'
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
 import { GoogleMapWidget } from '@/components/atoms/GoogleMapWidget/GoogleMapWidget'
+import { ProjectBreadcrumb } from '@/components/atoms/ProjectBreadcrumb/ProjectBreadcrumb'
 import { ProjectDetailHeader } from '@/components/atoms/ProjectDetailHeader/ProjectDetailHeader'
 import { CardSection } from '@/components/molecules/CardSection/CardSection'
 import { ProjectDetailsInfo } from '@/components/molecules/ProjectDetailsInfo/ProjectDetailsInfo'
 import { ProjectDetailsVerification } from '@/components/molecules/ProjectDetailsVerification/ProjectDetailsVerification'
 import { useEffects } from '@/overmind'
 import { coordinatesToString, toCoordinates } from '@/utils/UnitConverter'
-import { Flex, Container, SimpleGrid, Box, Heading, VStack, Text } from '@chakra-ui/react'
+import { Flex, Container, SimpleGrid, Box } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ProjectTypeBanner } from '../../../components/atoms/ProjectTypeBanner/ProjectTypeBanner'
-import { LargeTextWithScroll } from '../../../components/atoms/LargeTextWithScroll/LargeTextWithScroll'
-import { extractProjectTypeFromString } from '../../../utils/TextConverter'
 
 export default function Project({ params }: { params: { id: string } }) {
   const [project, setProject] = useState<ProjectDetails | undefined>(undefined)
@@ -30,41 +28,10 @@ export default function Project({ params }: { params: { id: string } }) {
   }, [])
 
   return (
-    <>
-      {project && (
-        <>
-          <ProjectDetailHeader id={project.warehouseProjectId} title={project.name} />
-        </>
-      )}
-      <Flex flexWrap="wrap" gap={6} paddingX={6} paddingY={16}>
-        <Box position="relative" h="336px" flex={1}>
-          <ProjectTypeBanner projectType={extractProjectTypeFromString(project?.type)} projectTypeText={project?.type ?? ``} />
-          <VStack
-            background="linear-gradient(0deg, rgba(0, 0, 0, 0.8) 33.85%, rgba(17, 17, 17, 0) 100%)"
-            borderRadius="8px"
-            width="100%"
-            color="white"
-            alignItems="flex-start"
-            gap="8px"
-            padding={6}
-            bottom={0}
-            position="absolute"
-          >
-            <Text fontSize="lg">{project?.id}</Text>
-            <Heading textTransform="uppercase" fontSize={[`16px`, `32px`]}>
-              {project?.name}
-            </Heading>
-            <Text>{project?.location.country}</Text>
-          </VStack>
-        </Box>
-        <Box maxW="448px">
-          <Text fontSize="lg" marginBottom="8px" fontWeight="medium">
-            {t(`description`)}
-          </Text>
-          <LargeTextWithScroll text={`${project?.description}`} />
-        </Box>
-      </Flex>
+    <Box>
+      {project?.warehouseProjectId && project?.name && <ProjectBreadcrumb id={project?.warehouseProjectId} title={project?.name} />}
       <Flex flexDirection={`column`} gap={6} paddingX={6} paddingY={3}>
+        {project && <ProjectDetailHeader id={project.id} location={project.location.country} title={project.name} description={project.description} type={project.type} />}
         <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.projectDetails`) }}>
           <Container padding={[`12px`, `24px`]} flex={2} variant="cardSectionNoMargin">
             <ProjectDetailsInfo project={project} />
@@ -96,6 +63,6 @@ export default function Project({ params }: { params: { id: string } }) {
           </Container>
         </CardSection>
       </Flex>
-    </>
+    </Box>
   )
 }
