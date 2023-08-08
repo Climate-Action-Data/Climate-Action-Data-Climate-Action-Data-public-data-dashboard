@@ -9,43 +9,6 @@ exports[`renders correctly 1`] = `
     <div
       class="chakra-stack css-ryi8m5"
     >
-      <nav
-        aria-label="breadcrumb"
-        class="chakra-breadcrumb css-ha5bzq"
-      >
-        <ol
-          class="chakra-breadcrumb__list css-70qvj9"
-        >
-          <li
-            class="chakra-breadcrumb__list-item css-13pussk"
-          >
-            <a
-              class="chakra-link css-0"
-              href="/"
-            >
-              Home
-            </a>
-            <span
-              class="css-t4q1nq"
-              role="presentation"
-            >
-              &gt;
-            </span>
-          </li>
-          <li
-            class="chakra-breadcrumb__list-item css-13pussk"
-            link="/search/projects"
-            title="Projects"
-          >
-            <a
-              class="chakra-link css-ytumd6"
-              href="/search/projects"
-            >
-              Projects
-            </a>
-          </li>
-        </ol>
-      </nav>
       <div
         class="chakra-stack css-1jjq5p5"
       >
