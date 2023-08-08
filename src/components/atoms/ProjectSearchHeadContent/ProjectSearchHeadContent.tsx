@@ -43,7 +43,7 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
         onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
         data-testid="project-search-head-row"
         className={`project-row-${idx}`}
-        key={`project-row-${projectResults.id}`}
+        key={`project-row-${projectResults.warehouseProjectId}`}
         height="92px"
       >
         <Td data-testid="project-search-head-row-td">

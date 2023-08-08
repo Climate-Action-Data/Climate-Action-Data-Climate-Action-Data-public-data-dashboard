@@ -34,7 +34,7 @@ export const ProjectSearchBodyContent = (props: ProjectSearchBodyContentProps) =
         data-testid="table-row"
         onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
         className={`project-row-${idx}`}
-        key={`project-body-row-${project.id}`}
+        key={`project-body-row-${project.warehouseProjectId}`}
         height="92px"
       >
         <Td title={project.standard}>
