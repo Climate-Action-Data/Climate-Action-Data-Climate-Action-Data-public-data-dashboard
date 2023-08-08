@@ -52,12 +52,12 @@ exports[`renders correctly 1`] = `
           </li>
           <li
             class="chakra-breadcrumb__list-item css-13pussk"
-            link="/project/a442a765-50f4-43dc-aa38-24e08d88c821"
+            link="/project?id=a442a765-50f4-43dc-aa38-24e08d88c821"
             title="Proyecto de Mitigación Forestal Bonanza Verde"
           >
             <a
               class="chakra-link css-ytumd6"
-              href="/project/a442a765-50f4-43dc-aa38-24e08d88c821"
+              href="/project?id=a442a765-50f4-43dc-aa38-24e08d88c821"
             >
               Proyecto de Mitigación Forestal Bonanza Verde
             </a>

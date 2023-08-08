@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { SearchHeader } from '@/components/molecules/SearchHeader/SearchHeader'
 import userEvent from '@testing-library/user-event'
+import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 
 const mockPush = jest.fn()
 jest.mock(`next/navigation`, () => ({
@@ -10,12 +11,20 @@ jest.mock(`next/navigation`, () => ({
 }))
 
 it(`renders correctly`, () => {
-  const { container } = render(<SearchHeader />)
+  const { container } = render(
+    <TestOvermindWrapper>
+      <SearchHeader />
+    </TestOvermindWrapper>,
+  )
   expect(container).toMatchSnapshot()
 })
 
 it(`renders correctly and clear the search values`, async () => {
-  const { container } = render(<SearchHeader />)
+  const { container } = render(
+    <TestOvermindWrapper>
+      <SearchHeader />
+    </TestOvermindWrapper>,
+  )
   await userEvent.clear(screen.getByRole(`textbox`))
   expect(container).toMatchSnapshot()
 })
@@ -27,7 +36,11 @@ jest.mock(`next/navigation`, () => ({
 }))
 
 it(`renders correctly with no params, add a search value and submits a search`, async () => {
-  const { container } = render(<SearchHeader />)
+  const { container } = render(
+    <TestOvermindWrapper>
+      <SearchHeader />
+    </TestOvermindWrapper>,
+  )
   await userEvent.type(screen.getByRole(`textbox`), `hello`)
   await userEvent.click(screen.getByTestId(`search-header-button`))
   expect(mockPush).toBeCalledTimes(1)

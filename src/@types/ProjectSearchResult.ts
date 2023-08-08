@@ -27,6 +27,7 @@ export enum ESearchParams {
   PATTERN = `pattern`,
   COUNT = `count`,
   OFFSET = `offset`,
+  ID = `id`,
 }
 
 export const DEFAULT_PROJECT_COUNT_TO_DISPLAY = 15

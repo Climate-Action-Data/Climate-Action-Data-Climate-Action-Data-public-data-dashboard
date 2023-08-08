@@ -1,23 +1,27 @@
 'use client'
 import { ProjectType } from '@/@types/ProjectDetails'
+import { ESearchParams } from '@/@types/ProjectSearchResult'
 import { Unit } from '@/@types/Unit'
 import { ProjectDetailHeader } from '@/components/atoms/ProjectDetailHeader/ProjectDetailHeader'
 import { CardSection } from '@/components/molecules/CardSection/CardSection'
 import { RetirementDetails } from '@/components/molecules/RetirementDetails/RetirementDetails'
 import { useEffects } from '@/overmind'
 import { Box, Container, Flex } from '@chakra-ui/react'
+import { NextPage } from 'next'
+import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-export default function IssuancePage({ params }: { params: { id: string } }) {
+const IssuancePage: NextPage = () => {
   const [unit, setUnit] = useState<Unit | undefined>(undefined)
   const { t } = useTranslation(`unitDetails`)
   const { t: tHome } = useTranslation(`home`)
-
+  const searchParams = useSearchParams()
+  const id = searchParams.get(ESearchParams.ID) ?? ``
   const { getUnit } = useEffects().unitResult
 
   useEffect(() => {
-    getUnit(params.id).then((result) => {
+    getUnit(id).then((result) => {
       if (result.data) {
         setUnit(result.data)
       }
@@ -46,3 +50,5 @@ export default function IssuancePage({ params }: { params: { id: string } }) {
     </>
   )
 }
+
+export default IssuancePage

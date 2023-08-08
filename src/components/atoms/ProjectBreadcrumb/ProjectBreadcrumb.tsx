@@ -17,7 +17,7 @@ export const ProjectBreadcrumb = (props: ProjectBreadcrumbProps) => {
         <BreadCrumbs
           items={[
             { title: t(`projectsBreadCrumb`), link: `/search/projects` },
-            { title: `${title}`, link: `/project/${id}` },
+            { title: `${title}`, link: `/project?id=${id}` },
           ]}
           color="lightGray.700"
         />

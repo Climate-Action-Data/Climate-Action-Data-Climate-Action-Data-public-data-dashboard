@@ -7,23 +7,34 @@ import { extractTitleFromUrl } from '@/utils/TextConverter'
 
 import { BreadCrumbs } from '@/components/atoms/BreadCrumbs/BreadCrumbs'
 import { ESearchParams } from '@/@types/ProjectSearchResult'
+import { useActions, useAppState } from '@/overmind'
 
 export const SearchHeader = () => {
   const [searchInput, setSearchInput] = useState(``)
+  const { keywordSearch } = useAppState().searchFilters
+  const { setKeywordSearch } = useActions().searchFilters
   const currentPath = usePathname()
   const currentTitle = extractTitleFromUrl(currentPath)
   const { t } = useTranslation(`search`)
   const searchParams = useSearchParams()
   const router = useRouter()
-  const pattern = searchParams.get(ESearchParams.KEYWORD) ?? ``
-
+  const pattern = searchParams.get(ESearchParams.KEYWORD) ?? keywordSearch
+  //TODO: refactor search to use state and not url params
   useEffect(() => {
-    setSearchInput(pattern)
+    if (pattern) {
+      setSearchInput(pattern)
+      if (searchParams.get(ESearchParams.KEYWORD) !== keywordSearch) {
+        const searchParams = new URLSearchParams()
+        searchParams.append(ESearchParams.KEYWORD, keywordSearch)
+        router.push(`/search/projects?${searchParams}`)
+      }
+    }
   }, [])
 
   const handleOnSearch = () => {
     const searchParams = new URLSearchParams()
     searchParams.append(ESearchParams.KEYWORD, searchInput)
+    setKeywordSearch(searchParams.get(ESearchParams.KEYWORD) ?? ``)
     router.push(`/search/projects?${searchParams}`)
   }
 
