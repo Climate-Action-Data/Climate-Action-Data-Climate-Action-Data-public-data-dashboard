@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableData renders correctly with number data 1`] = `
+<div>
+  1
+</div>
+`;
+
+exports[`TableData renders correctly with string data 1`] = `
+<div>
+  hello
+</div>
+`;
+
+exports[`TableData renders correctly with undefined data 1`] = `
+<div>
+  <p
+    class="chakra-text css-132cox5"
+  >
+    --
+  </p>
+</div>
+`;

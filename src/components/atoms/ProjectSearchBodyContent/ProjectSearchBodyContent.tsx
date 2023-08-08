@@ -1,29 +1,12 @@
 import { changeHoverColor } from '@/utils/Stickify'
-import { Table, Tbody, Td, Text, Tr } from '@chakra-ui/react'
+import { Table, Tbody, Td, Tr } from '@chakra-ui/react'
 import { ProjectSearchResponse, ProjectSearchResult } from '@/@types/ProjectSearchResult'
 import { EffectResponse } from '@/@types/EffectResponse'
 import { useRouter } from 'next/navigation'
-import { useTranslation } from 'react-i18next'
 import { ProjectSearchBodySkeleton } from '../ProjectSearchBodySkeleton/ProjectSearchBodySkeleton'
 import { formatDate } from '@/utils/DateFormat'
 import { DateFormats } from '@/@types/DateFormats'
-
-interface TableDataProps {
-  data: string | number | undefined
-}
-
-const TableData = (props: TableDataProps) => {
-  const { t } = useTranslation(`home`)
-  if (props.data !== undefined && typeof props.data === `number`) {
-    return <>{props.data.toLocaleString()}</>
-  }
-  if (props.data !== undefined) {
-    return <>{props.data}</>
-  } else {
-    return <Text color="lightGray.500">{t(`noData`)}</Text>
-  }
-}
-
+import { TableData } from '../TableData/TableData'
 const renderCreditingPeriod = (startDate: string | undefined, endDate: string | undefined) => {
   if (startDate && endDate) {
     return `${formatDate(startDate, DateFormats.YYYY_MM_DD)} - ${formatDate(endDate, DateFormats.YYYY_MM_DD)}`
@@ -90,7 +73,7 @@ export const ProjectSearchBodyContent = (props: ProjectSearchBodyContentProps) =
 
   return (
     <Table variant="simple" className="searchTable">
-      <Tbody data-testid="table-scroll">{projectResults?.data ? generateTableRow(projectResults.data.projects) : <ProjectSearchBodySkeleton />}</Tbody>
+      <Tbody data-testid="table-scroll">{projectResults?.data?.projects ? generateTableRow(projectResults.data.projects) : <ProjectSearchBodySkeleton />}</Tbody>
     </Table>
   )
 }

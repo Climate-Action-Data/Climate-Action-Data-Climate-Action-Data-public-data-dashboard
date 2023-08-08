@@ -1,5 +1,5 @@
 import { changeHoverColor } from '@/utils/Stickify'
-import { Text, Tbody, Tr, Td, Table } from '@chakra-ui/react'
+import { Tbody, Tr, Td, Table } from '@chakra-ui/react'
 import { EffectResponse } from '@/@types/EffectResponse'
 import { useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
@@ -7,21 +7,7 @@ import { ProjectSearchBodySkeleton } from '../ProjectSearchBodySkeleton/ProjectS
 import { UnitSearchResult } from '@/@types/UnitSearchResult'
 import { formatDate } from '@/utils/DateFormat'
 import { DateFormats } from '@/@types/DateFormats'
-interface TableDataProps {
-  data: string | number | undefined
-}
-
-const TableData = (props: TableDataProps) => {
-  const { t } = useTranslation(`home`)
-  if (props.data !== undefined && typeof props.data === `number`) {
-    return <>{props.data.toLocaleString()}</>
-  }
-  if (props.data !== undefined) {
-    return <>{props.data}</>
-  } else {
-    return <Text color="lightGray.500">{t(`noData`)}</Text>
-  }
-}
+import { TableData } from '../TableData/TableData'
 interface UnitSearchBodyContentProps {
   unitResults?: EffectResponse<UnitSearchResult[]>
 }

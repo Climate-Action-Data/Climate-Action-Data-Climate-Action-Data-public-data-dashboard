@@ -1,5 +1,6 @@
 import { changeHoverColor } from '@/utils/Stickify'
-import { Table, Tbody, Tr, Td, Flex, Menu, MenuButton, Button, MenuList, MenuItem, Stack, Skeleton, Text, Box } from '@chakra-ui/react'
+import { Table, Tbody, Tr, Td, Flex, Menu, MenuButton, Button, Stack, Skeleton, Text, Box } from '@chakra-ui/react'
+import { MenuContent, MenuItemProps } from '@/components/atoms/MenuContent/MenuContent'
 import { BookmarkPlusIcon } from '../BookmarkPlusIcon/BookmarkPlusIcon'
 import { DownloadIcon } from '../DownloadIcon/DownloadIcon'
 import { KebabMenuIcon } from '../KebabMenuIcon/KebabMenuIcon'
@@ -11,7 +12,6 @@ import { UnitSearchResult } from '@/@types/UnitSearchResult'
 interface UnitSearchHeadContentProps {
   unitResults?: EffectResponse<UnitSearchResult[]>
 }
-
 export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
   const { unitResults } = props
   const router = useRouter()
@@ -24,6 +24,15 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
         router.push(`/unit/${unitId}`)
       }
     }
+  }
+  const generateMenuList = (unitWarehouseId: string, projectWarehouseId: string) => {
+    const menuList: MenuItemProps[] = [
+      { dataTestId: `view-unit-details`, onClick: () => router.push(`/unit/${unitWarehouseId}`), text: t(`projectMenu.viewUnit`) },
+      { dataTestId: `view-project-details`, onClick: () => router.push(`/unit/${projectWarehouseId}`), text: t(`projectMenu.viewProject`) },
+      { dataTestId: `export-project`, icon: <DownloadIcon />, text: t(`projectMenu.exportProject`) },
+      { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`) },
+    ]
+    return menuList
   }
 
   const generateTableRow = (unitList: UnitSearchResult[]) => {
@@ -47,25 +56,7 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
             </Box>
             <Menu variant="menuWhite">
               <MenuButton as={Button} textAlign="center" iconSpacing={0} rightIcon={<KebabMenuIcon />} variant="lightGrayRound32"></MenuButton>
-              <MenuList>
-                <MenuItem data-testid="view-project-details" onClick={() => router.push(`/unit/${unitResults.warehouseUnitId}`)} minH="48px">
-                  <Text flex={1} as="span">
-                    {t(`projectMenu.viewProject`)}
-                  </Text>
-                </MenuItem>
-                <MenuItem display="flex" minH="40px">
-                  <Text flex={1} as="span">
-                    {t(`projectMenu.exportProject`)}
-                  </Text>
-                  <DownloadIcon />
-                </MenuItem>
-                <MenuItem display="flex" minH="40px">
-                  <Text flex={1} as="span">
-                    {t(`projectMenu.addToWatchlists`)}
-                  </Text>
-                  <BookmarkPlusIcon />
-                </MenuItem>
-              </MenuList>
+              <MenuContent menuItems={generateMenuList(unitResults.warehouseUnitId, unitResults.projectId)} />
             </Menu>
           </Flex>
         </Td>

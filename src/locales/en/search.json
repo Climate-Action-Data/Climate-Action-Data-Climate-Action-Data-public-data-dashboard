@@ -39,6 +39,7 @@
   },
   "projectMenu": {
     "viewProject": "View Project",
+    "viewUnit": "View Units",
     "exportProject": "Export Project",
     "addToWatchlists": "Add to Watchlists"
   }

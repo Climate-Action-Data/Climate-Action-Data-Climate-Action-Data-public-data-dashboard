@@ -14,20 +14,20 @@ import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 import { UnitSearchBody } from '@/components/molecules/UnitSearchBody/UnitSearchBody'
 
 const UnitPage: NextPage = () => {
-  const { getUnitsResults } = useEffects().projectResult
-  const { setProjectResults } = useActions().projectResult
+  const { getUnitResults } = useEffects().unitResult
+  const { setUnitResults } = useActions().unitResult
   const searchParams = useSearchParams()
   const pattern = searchParams.get(ESearchParams.KEYWORD) ?? ``
 
   useEffect(() => {
-    getUnitsResults(pattern).then((hasProjectResults) => {
-      setProjectResults(hasProjectResults)
+    getUnitResults(pattern).then((hasProjectResults) => {
+      setUnitResults(hasProjectResults)
     })
   }, [])
 
   const handlePageChange = (currentPage: number, from: number) => {
-    getUnitsResults(pattern, from).then((hasProjectResults) => {
-      setProjectResults(hasProjectResults)
+    getUnitResults(pattern, from).then((hasProjectResults) => {
+      setUnitResults(hasProjectResults)
     })
   }
 
