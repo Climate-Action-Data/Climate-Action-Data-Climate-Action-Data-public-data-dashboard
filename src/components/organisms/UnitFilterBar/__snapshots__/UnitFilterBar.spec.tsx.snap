@@ -22,7 +22,7 @@ exports[`renders correctly with loaded data 1`] = `
           <div
             class="css-jmqhys"
           >
-            Standard
+            Unit Status
             <div
               class="css-1gq8co7"
             />
@@ -76,7 +76,7 @@ exports[`renders correctly with loaded data 1`] = `
           <div
             class="css-jmqhys"
           >
-            Methodology
+            Standard
             <div
               class="css-1gq8co7"
             />
@@ -238,7 +238,7 @@ exports[`renders correctly with loaded data 1`] = `
           <div
             class="css-jmqhys"
           >
-            Crediting Period
+            Vintage Year
             <div
               class="css-17xejub"
             />
@@ -321,7 +321,7 @@ exports[`renders correctly with no data 1`] = `
           <div
             class="css-jmqhys"
           >
-            Standard
+            Unit Status
             <div
               class="css-1gq8co7"
             />
@@ -366,7 +366,7 @@ exports[`renders correctly with no data 1`] = `
           <div
             class="css-jmqhys"
           >
-            Methodology
+            Standard
             <div
               class="css-1gq8co7"
             />
@@ -501,7 +501,7 @@ exports[`renders correctly with no data 1`] = `
           <div
             class="css-jmqhys"
           >
-            Crediting Period
+            Vintage Year
             <div
               class="css-17xejub"
             />

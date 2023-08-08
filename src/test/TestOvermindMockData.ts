@@ -145,19 +145,28 @@ const CREDIT_HISTORY_DATA_EMPTY_CHART: CreditsHistoryDataState = {
 
 const SearchOptions = [`option 1`, `option 2`, `option 2`]
 const SEARCH_FILTER_VALUES: SearchFiltersStateData = {
-  selectedSearchFilterValues: {
+  selectedProjectSearchFilterValues: {
     searchFilterValues: {
       sectors: SearchOptions,
       methodologies: SearchOptions,
-      standards: SearchOptions,
+      projectStatus: SearchOptions,
+      countries: SearchOptions,
+    },
+  },
+  selectedUnitSearchFilterValues: {
+    searchFilterValues: {
+      sectors: SearchOptions,
+      unitStatus: SearchOptions,
+      projectStatus: SearchOptions,
       countries: SearchOptions,
     },
   },
   allSearchFilterValues: {
     searchFilterValues: {
+      unitStatus: SearchOptions,
       sectors: SearchOptions,
       methodologies: SearchOptions,
-      standards: SearchOptions,
+      projectStatus: SearchOptions,
       countries: SearchOptions,
     },
     isEmpty: false,

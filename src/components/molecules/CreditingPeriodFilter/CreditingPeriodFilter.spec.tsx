@@ -26,7 +26,7 @@ describe(`CreditingPeriodFilter`, () => {
     const tOnDateChange = jest.fn()
     const { container } = render(
       <TestOvermindWrapper>
-        <CreditingPeriodFilter label={tLabel} onDateChange={tOnDateChange} />
+        <CreditingPeriodFilter label={tLabel} applyFilters={tOnDateChange} />
       </TestOvermindWrapper>,
     )
 
@@ -41,7 +41,7 @@ describe(`CreditingPeriodFilter`, () => {
 
     const { container } = render(
       <TestOvermindWrapper>
-        <CreditingPeriodFilter label={tLabel} onDateChange={tOnDateChange} dateFilter={{ maxDate: tDate }} />
+        <CreditingPeriodFilter label={tLabel} applyFilters={tOnDateChange} dateFilter={{ maxDate: tDate }} />
       </TestOvermindWrapper>,
     )
 
@@ -58,7 +58,7 @@ describe(`CreditingPeriodFilter`, () => {
 
     const { container } = render(
       <TestOvermindWrapper>
-        <CreditingPeriodFilter label={tLabel} onDateChange={tOnDateChange} dateFilter={{ minDate: tDate }} />
+        <CreditingPeriodFilter label={tLabel} applyFilters={tOnDateChange} dateFilter={{ minDate: tDate }} />
       </TestOvermindWrapper>,
     )
 
@@ -75,7 +75,7 @@ describe(`CreditingPeriodFilter`, () => {
 
     const { container } = render(
       <TestOvermindWrapper>
-        <CreditingPeriodFilter label={tLabel} onDateChange={tOnDateChange} dateFilter={{ minDate: tDate, maxDate: tDate }} />
+        <CreditingPeriodFilter label={tLabel} applyFilters={tOnDateChange} dateFilter={{ minDate: tDate, maxDate: tDate }} />
       </TestOvermindWrapper>,
     )
 
@@ -89,7 +89,7 @@ describe(`CreditingPeriodFilter`, () => {
     const tOnDateChange = jest.fn()
     const { container } = render(
       <TestOvermindWrapper>
-        <CreditingPeriodFilter label={tLabel} onDateChange={tOnDateChange} />
+        <CreditingPeriodFilter label={tLabel} applyFilters={tOnDateChange} />
       </TestOvermindWrapper>,
     )
 

@@ -1,31 +1,24 @@
 import { ChangeEvent, FC, useEffect, useState } from 'react'
-import { format, isValid, parse } from 'date-fns'
-import { Input, InputGroup, InputRightElement, Text, VStack } from '@chakra-ui/react'
-import { CalendarIcon } from '@/components/atoms/CalendarIcon/CalendarIcon'
+import { Input, InputGroup, Text, VStack } from '@chakra-ui/react'
 import { DateFormats } from '@/@types/DateFormats'
-import { DATE_INPUT_REGEX } from '@/@types/Regex'
+import { YEAR_INPUT_REGEX } from '@/@types/Regex'
 
-interface DateInputProp {
+interface YearInputProp {
   label: string
-  onOpenDatePicker: () => void
-  value: Date | undefined
-  maxDate?: Date
-  minDate?: Date
-  onChange: (date: Date | undefined) => void
+  value: number | undefined
+  maxYear?: number
+  minYear?: number
+  onChange: (year: number | undefined) => void
 }
 
-const DateInput: FC<DateInputProp> = (prop) => {
-  const { onOpenDatePicker, label, value, minDate, maxDate, onChange } = prop
+const YearInput: FC<YearInputProp> = (prop) => {
+  const { label, value, maxYear, minYear, onChange } = prop
 
   const [textInputValue, setTextInputValue] = useState<string>(``)
   const [isInvalid, setIsInvalid] = useState<boolean>(false)
 
   useEffect(() => {
-    if (value) {
-      setTextInputValue(format(value, DateFormats.YYYY_MM_DD))
-    } else {
-      setTextInputValue(``)
-    }
+    setTextInputValue(value?.toString() ?? ``)
   }, [value])
 
   const inputConfig = {
@@ -41,7 +34,14 @@ const DateInput: FC<DateInputProp> = (prop) => {
 
   const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value
-    DATE_INPUT_REGEX.test(value) && setTextInputValue(value)
+    if (value === ``) {
+      setTextInputValue(value)
+      return
+    }
+    if (YEAR_INPUT_REGEX.test(value)) {
+      setTextInputValue(value)
+      return
+    }
   }
 
   const handleOnBlur = () => {
@@ -51,29 +51,25 @@ const DateInput: FC<DateInputProp> = (prop) => {
       return
     }
 
-    const parsedDate = parse(textInputValue, DateFormats.YYYY_MM_DD, new Date())
-
-    if (!isValid(parsedDate)) {
+    if (!YEAR_INPUT_REGEX.test(textInputValue)) {
       setIsInvalid(true)
       return
     }
-    if ((maxDate && parsedDate > maxDate) || (minDate && parsedDate < minDate)) {
+    const yearNumber = parseInt(textInputValue)
+    if ((maxYear && yearNumber > maxYear) || (minYear && yearNumber < minYear)) {
       setIsInvalid(true)
       return
     }
     setIsInvalid(false)
-    onChange(parsedDate)
+    onChange(yearNumber)
   }
 
   return (
     <VStack alignItems={`start`}>
       <Text>{label}</Text>
       <InputGroup width={`143px`} alignItems={`top`}>
-        <InputRightElement boxSize={`24px`}>
-          <CalendarIcon color={`lightGray.600`} cursor={`pointer`} onClick={onOpenDatePicker} data-testid={`datepicker-trigger`} />
-        </InputRightElement>
         <Input
-          placeholder={DateFormats.YYYY_MM_DD}
+          placeholder={DateFormats.YYYY}
           borderBottomColor={`lightGray.600`}
           value={textInputValue}
           onChange={handleOnChange}
@@ -88,4 +84,4 @@ const DateInput: FC<DateInputProp> = (prop) => {
   )
 }
 
-export default DateInput
+export default YearInput
