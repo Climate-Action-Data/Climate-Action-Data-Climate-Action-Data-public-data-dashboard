@@ -3,17 +3,22 @@
   "searchProjectsByKeywords": "Search projects by keywords",
   "searchProjectsByKeywordsPlaceholder": "Search for projects by keyword/project name/ID/developer",
   "searchProjectsByFilters": "Search projects by filters",
+  "searchUnitsByKeywords": "Search units by keywords",
+  "searchUnitsByKeywordsPlaceholder": "Search for units by keyword/project name/ID/developer",
+  "searchUnitsByFilters": "Search units by filters",
   "apply": "Apply",
   "clear": "Clear",
   "ok": "OK",
   "upTo": "Up to {{- date}}",
   "andLater": "{{- date}} and later",
-  "searchBar": {
+  "filterBar": {
     "standard": "Standard",
+    "unitStatus": "Unit Status",
     "methodology": "Methodology",
     "sector": "Sector",
     "country": "Country",
-    "creditingPeriod": "Crediting Period"
+    "creditingPeriod": "Crediting Period",
+    "vintageYear": "Vintage Year"
   },
   "table": {
     "projectDetails": "Project Details",

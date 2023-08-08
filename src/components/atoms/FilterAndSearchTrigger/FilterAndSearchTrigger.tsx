@@ -10,7 +10,7 @@ interface IFilterAndSearchTriggerProps {
 const FilterAndSearchTrigger: FC<IFilterAndSearchTriggerProps> = (props) => {
   const { handleOnClick, icon, label } = props
   return (
-    <Button rightIcon={icon} variant={`linkText`} fontWeight={`medium`} padding={0} height={`min-content`} onClick={handleOnClick}>
+    <Button rightIcon={icon} variant={`linkText`} fontWeight={`medium`} padding={0} height={`min-content`} data-testid={`filter-and-search-trigger`} onClick={handleOnClick}>
       {label}
     </Button>
   )

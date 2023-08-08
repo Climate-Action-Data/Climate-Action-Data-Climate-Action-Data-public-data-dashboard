@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YearInput renders a DateInput and type in a value later than maxDate 1`] = `
+<div>
+  <div
+    class="chakra-stack css-m3jj3s"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      YearInput
+    </p>
+    <div
+      class="chakra-input__group css-1yb751z"
+      data-group="true"
+    >
+      <input
+        aria-invalid="true"
+        class="chakra-input css-p5mn3g"
+        placeholder="yyyy"
+        value="2024"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`YearInput renders a YearInput 1`] = `
+<div>
+  <div
+    class="chakra-stack css-m3jj3s"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      YearInput
+    </p>
+    <div
+      class="chakra-input__group css-1yb751z"
+      data-group="true"
+    >
+      <input
+        class="chakra-input css-p5mn3g"
+        placeholder="yyyy"
+        value="2023"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`YearInput renders a YearInput and type in a correct value 1`] = `
+<div>
+  <div
+    class="chakra-stack css-m3jj3s"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      YearInput
+    </p>
+    <div
+      class="chakra-input__group css-1yb751z"
+      data-group="true"
+    >
+      <input
+        class="chakra-input css-p5mn3g"
+        placeholder="yyyy"
+        value="2023"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`YearInput renders a YearInput and type in a value earlier than minYear 1`] = `
+<div>
+  <div
+    class="chakra-stack css-m3jj3s"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      YearInput
+    </p>
+    <div
+      class="chakra-input__group css-1yb751z"
+      data-group="true"
+    >
+      <input
+        aria-invalid="true"
+        class="chakra-input css-p5mn3g"
+        placeholder="yyyy"
+        value="2022"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`YearInput renders a YearInput and type in a wrong value 1`] = `
+<div>
+  <div
+    class="chakra-stack css-m3jj3s"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      YearInput
+    </p>
+    <div
+      class="chakra-input__group css-1yb751z"
+      data-group="true"
+    >
+      <input
+        class="chakra-input css-p5mn3g"
+        placeholder="yyyy"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`YearInput renders a YearInput with undefined value 1`] = `
+<div>
+  <div
+    class="chakra-stack css-m3jj3s"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      YearInput
+    </p>
+    <div
+      class="chakra-input__group css-1yb751z"
+      data-group="true"
+    >
+      <input
+        class="chakra-input css-p5mn3g"
+        placeholder="yyyy"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;

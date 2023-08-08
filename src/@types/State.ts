@@ -3,7 +3,7 @@ import { ProjectSearchResponse } from './ProjectSearchResult'
 import { TimeframesData } from './Timeframe'
 import { UnitSearchResult } from './UnitSearchResult'
 import { SubRegion } from './geojson'
-import { SearchFilterValues } from '@/@types/SearchFilterValues'
+import { AllSearchFilterValues, ProjectSearchFilterValues, UnitSearchFilterValues } from '@/@types/ProjectSearchFilterValues'
 
 export interface CountryPeriodData {
   activeProjects: number
@@ -130,7 +130,8 @@ export interface GovernanceData {
 }
 
 export interface SearchFiltersStateData {
-  allSearchFilterValues: { searchFilterValues: SearchFilterValues; readonly isEmpty: boolean }
-  selectedSearchFilterValues: { searchFilterValues: SearchFilterValues }
+  allSearchFilterValues: { searchFilterValues: AllSearchFilterValues; readonly isEmpty: boolean }
+  selectedProjectSearchFilterValues: { searchFilterValues: ProjectSearchFilterValues }
+  selectedUnitSearchFilterValues: { searchFilterValues: UnitSearchFilterValues }
   keywordSearch: string
 }

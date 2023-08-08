@@ -14,11 +14,11 @@ interface CreditingPeriodFilterProp {
   earliestDate?: Date
   latestDate?: Date
   dateFilter?: DatesFilter
-  onDateChange: (payload: DatesFilter) => void
+  applyFilters: (payload: DatesFilter) => void
 }
 
 const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
-  const { label, earliestDate, latestDate, onDateChange, dateFilter } = prop
+  const { label, earliestDate, latestDate, applyFilters, dateFilter } = prop
 
   const [minimumDate, setMinimumDate] = useState<Date | undefined>()
   const [maximumDate, setMaximumDate] = useState<Date | undefined>()
@@ -60,20 +60,20 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
   const handleOnClearClick = () => {
     setMinimumDate(undefined)
     setMaximumDate(undefined)
-    onDateChange({})
+    applyFilters({})
   }
 
   const handleOnApplyClick = () => {
     if (minimumDate && maximumDate) {
       if (minimumDate <= maximumDate) {
-        onDateChange({ maxDate: maximumDate, minDate: minimumDate })
+        applyFilters({ maxDate: maximumDate, minDate: minimumDate })
       }
     }
     if (minimumDate) {
-      onDateChange({ minDate: minimumDate })
+      applyFilters({ minDate: minimumDate })
     }
     if (maximumDate) {
-      onDateChange({ maxDate: maximumDate })
+      applyFilters({ maxDate: maximumDate })
     }
   }
 
@@ -128,14 +128,14 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
   }
 
   const renderLabel = () => {
-    if (minimumDate && maximumDate) {
-      return `${format(minimumDate, DateFormats.YYYY_MM_DD)} - ${format(maximumDate, DateFormats.YYYY_MM_DD)}`
+    if (dateFilter?.minDate && dateFilter?.maxDate) {
+      return `${format(dateFilter.minDate, DateFormats.YYYY_MM_DD)} - ${format(dateFilter.maxDate, DateFormats.YYYY_MM_DD)}`
     }
-    if (minimumDate) {
-      return `${format(minimumDate, DateFormats.YYYY_MM_DD)} and later`
+    if (dateFilter?.minDate) {
+      return t(`andLater`, { date: format(dateFilter.minDate, DateFormats.YYYY_MM_DD) })
     }
-    if (maximumDate) {
-      return t(`upTo`, { date: format(maximumDate, DateFormats.YYYY_MM_DD) })
+    if (dateFilter?.maxDate) {
+      return t(`upTo`, { date: format(dateFilter.maxDate, DateFormats.YYYY_MM_DD) })
     }
     return label
   }

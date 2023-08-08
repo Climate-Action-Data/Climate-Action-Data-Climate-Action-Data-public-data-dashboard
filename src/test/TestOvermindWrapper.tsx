@@ -34,10 +34,18 @@ export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
     dataFilters: { region: SubRegion.WORLD, timeframe: TimeframesData.MAX },
   }
 
-  const searchFilters = props?.searchFilters ?? {
-    selectedSearchFilterValues: {
+  const searchFilters: SearchFiltersStateData = props?.searchFilters ?? {
+    selectedUnitSearchFilterValues: {
       searchFilterValues: {
-        standards: [],
+        projectStatus: [],
+        sectors: [],
+        countries: [],
+        unitStatus: [],
+      },
+    },
+    selectedProjectSearchFilterValues: {
+      searchFilterValues: {
+        projectStatus: [],
         methodologies: [],
         sectors: [],
         countries: [],
@@ -45,10 +53,11 @@ export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
     },
     allSearchFilterValues: {
       searchFilterValues: {
-        standards: [],
+        projectStatus: [],
         methodologies: [],
         sectors: [],
         countries: [],
+        unitStatus: [],
       },
       isEmpty: true,
     },

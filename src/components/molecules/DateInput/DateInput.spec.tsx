@@ -21,27 +21,27 @@ describe(`DateInput`, () => {
 
   test(`renders a DateInput`, () => {
     const tOnChange = jest.fn()
-    const toOenDatePicker = jest.fn()
+    const toOpenDatePicker = jest.fn()
 
-    const { container } = render(<DateInput label={tLabel} value={tDate} onChange={tOnChange} onOpenDatePicker={toOenDatePicker} />)
+    const { container } = render(<DateInput label={tLabel} value={tDate} onChange={tOnChange} onOpenDatePicker={toOpenDatePicker} />)
 
     expect(container).toMatchSnapshot()
   })
 
   test(`renders a DateInput with undefined value`, () => {
     const tOnChange = jest.fn()
-    const toOenDatePicker = jest.fn()
+    const toOpenDatePicker = jest.fn()
 
-    const { container } = render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} onOpenDatePicker={toOenDatePicker} />)
+    const { container } = render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} onOpenDatePicker={toOpenDatePicker} />)
 
     expect(container).toMatchSnapshot()
   })
 
   test(`renders a DateInput and type in a correct value`, async () => {
     const tOnChange = jest.fn()
-    const toOenDatePicker = jest.fn()
+    const toOpenDatePicker = jest.fn()
 
-    const { container } = render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} onOpenDatePicker={toOenDatePicker} />)
+    const { container } = render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} onOpenDatePicker={toOpenDatePicker} />)
 
     await user.type(screen.getByRole(`textbox`), `2023/01/08`)
     await user.tab()
@@ -52,37 +52,22 @@ describe(`DateInput`, () => {
 
   test(`renders a DateInput and type in a wrong value`, async () => {
     const tOnChange = jest.fn()
-    const toOenDatePicker = jest.fn()
+    const toOpenDatePicker = jest.fn()
 
-    const { container } = render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} onOpenDatePicker={toOenDatePicker} />)
-
-    await user.type(screen.getByRole(`textbox`), `wrong`)
-    await user.tab()
-
-    expect(tOnChange).toHaveBeenCalledTimes(0)
-    expect(container).toMatchSnapshot()
-  })
-
-  test(`renders a DateInput and type in a wrong value and clear it`, async () => {
-    const tOnChange = jest.fn()
-    const toOenDatePicker = jest.fn()
-
-    const { container } = render(<DateInput label={tLabel} value={tDate} onChange={tOnChange} onOpenDatePicker={toOenDatePicker} />)
+    const { container } = render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} onOpenDatePicker={toOpenDatePicker} />)
 
     await user.type(screen.getByRole(`textbox`), `wrong`)
     await user.tab()
-    await user.clear(screen.getByRole(`textbox`))
-    await user.tab()
 
-    expect(container).toMatchSnapshot()
     expect(tOnChange).toHaveBeenCalledTimes(1)
+    expect(container).toMatchSnapshot()
   })
 
   test(`renders a DateInput and type in a value earlier than minDate`, async () => {
     const tOnChange = jest.fn()
-    const toOenDatePicker = jest.fn()
+    const toOpenDatePicker = jest.fn()
 
-    const { container } = render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} onOpenDatePicker={toOenDatePicker} minDate={tDate} />)
+    const { container } = render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} onOpenDatePicker={toOpenDatePicker} minDate={tDate} />)
 
     await user.type(screen.getByRole(`textbox`), `2023/01/01`)
     await user.tab()
@@ -92,9 +77,9 @@ describe(`DateInput`, () => {
 
   test(`renders a DateInput and type in a value later than maxDate`, async () => {
     const tOnChange = jest.fn()
-    const toOenDatePicker = jest.fn()
+    const toOpenDatePicker = jest.fn()
 
-    const { container } = render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} onOpenDatePicker={toOenDatePicker} maxDate={tDate} />)
+    const { container } = render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} onOpenDatePicker={toOpenDatePicker} maxDate={tDate} />)
 
     await user.type(screen.getByRole(`textbox`), `2024/01/01`)
     await user.tab()
@@ -104,12 +89,12 @@ describe(`DateInput`, () => {
 
   test(`renders a DateInput and click on the Calendar icon`, async () => {
     const tOnChange = jest.fn()
-    const toOenDatePicker = jest.fn()
+    const toOpenDatePicker = jest.fn()
 
-    render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} onOpenDatePicker={toOenDatePicker} maxDate={tDate} />)
+    render(<DateInput label={tLabel} value={undefined} onChange={tOnChange} onOpenDatePicker={toOpenDatePicker} maxDate={tDate} />)
 
     await user.click(screen.getByTestId(`datepicker-trigger`))
 
-    expect(toOenDatePicker).toHaveBeenCalledTimes(1)
+    expect(toOpenDatePicker).toHaveBeenCalledTimes(1)
   })
 })

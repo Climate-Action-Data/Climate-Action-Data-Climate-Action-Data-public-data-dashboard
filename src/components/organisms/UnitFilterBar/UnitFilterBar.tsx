@@ -6,18 +6,17 @@ import { Link } from '@chakra-ui/next-js'
 import { useActions, useAppState, useEffects } from '@/overmind'
 import AutoCompleteCheckbox from '@/components/molecules/AutoCompleteCheckbox/AutoCompleteCheckbox'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
-import CreditingPeriodFilter from '@/components/molecules/CreditingPeriodFilter/CreditingPeriodFilter'
-import { KYOTO_PROTOCOL_START_DATE } from '@/@types/CarbonStandards'
-import { DatesFilter } from '@/@types/ProjectSearchFilterValues'
+import VintageYearFilter from '@/components/molecules/VintageYearFilter/VintageYearFilter'
+import { KYOTO_PROTOCOL_START_YEAR } from '@/@types/CarbonStandards'
+import { YearsFilter } from '@/@types/ProjectSearchFilterValues'
 
-const ProjectFilterBar: FC = () => {
+const UnitFilterBar: FC = () => {
   const {
     allSearchFilterValues: { searchFilterValues, isEmpty },
-    selectedProjectSearchFilterValues: { searchFilterValues: selectedSearchFilters },
+    selectedUnitSearchFilterValues: { searchFilterValues: selectedSearchFilters },
   } = useAppState().searchFilters
 
-  const { setProjectCountriesFilter, setProjectMethodologiesFilter, setProjectSectorsFilter, setProjectStandardsFilter, setProjectCreditingPeriodFilter } =
-    useActions().searchFilters
+  const { setUnitCountriesFilter, setUnitStandardsFilter, setUnitSectorFilter, setUnitStatusFilter, setUnitVintageYearFilter } = useActions().searchFilters
   const { getGovernanceData } = useEffects().searchFilters
   const { transformGovernanceDataToSearchFilterData } = useActions().searchFilters
   const { t } = useTranslation(`search`)
@@ -30,24 +29,24 @@ const ProjectFilterBar: FC = () => {
     }
   }, [])
 
-  const handleProjectStatusFilter = (value: string[]) => {
-    setProjectStandardsFilter(value)
+  const handleSetUnitStatusFilter = (value: string[]) => {
+    setUnitStatusFilter(value)
   }
 
-  const handleSetProjectMethodologiesFilter = (value: string[]) => {
-    setProjectMethodologiesFilter(value)
+  const handleSetUnitsStandardsFilter = (value: string[]) => {
+    setUnitStandardsFilter(value)
   }
 
-  const handleSetProjectSectorsFilter = (value: string[]) => {
-    setProjectSectorsFilter(value)
+  const handleSetUnitSectorFilter = (value: string[]) => {
+    setUnitSectorFilter(value)
   }
 
-  const handleSetProjectCountriesFilter = (value: string[]) => {
-    setProjectCountriesFilter(value)
+  const handleSetUnitCountriesFilter = (value: string[]) => {
+    setUnitCountriesFilter(value)
   }
 
-  const handleSetProjectCreditingPeriodFilter = (value: DatesFilter) => {
-    setProjectCreditingPeriodFilter(value)
+  const handleSetUnitVintageYearFilter = (value: YearsFilter) => {
+    setUnitVintageYearFilter(value)
   }
 
   return (
@@ -66,38 +65,39 @@ const ProjectFilterBar: FC = () => {
       <Stack direction={[`column`, null, null, `row`]}>
         <Stack direction={[`column`, null, null, `row`]} divider={<StackDivider borderColor={`#B8BEC0`} />} width={[`100%`]}>
           <AutoCompleteCheckbox
+            label={t(`filterBar.unitStatus`)}
+            options={searchFilterValues.unitStatus}
+            selectedFilters={selectedSearchFilters.unitStatus}
+            noOfSelectedFilters={selectedSearchFilters.unitStatus.length}
+            applyFilters={handleSetUnitStatusFilter}
+          />
+          <AutoCompleteCheckbox
             label={t(`filterBar.standard`)}
             options={searchFilterValues.projectStatus}
             selectedFilters={selectedSearchFilters.projectStatus}
             noOfSelectedFilters={selectedSearchFilters.projectStatus.length}
-            applyFilters={handleProjectStatusFilter}
+            applyFilters={handleSetUnitsStandardsFilter}
           />
-          <AutoCompleteCheckbox
-            label={t(`filterBar.methodology`)}
-            options={searchFilterValues.methodologies}
-            selectedFilters={selectedSearchFilters.methodologies}
-            noOfSelectedFilters={selectedSearchFilters.methodologies.length}
-            applyFilters={handleSetProjectMethodologiesFilter}
-          />
+
           <AutoCompleteCheckbox
             label={t(`filterBar.sector`)}
             options={searchFilterValues.sectors}
             selectedFilters={selectedSearchFilters.sectors}
             noOfSelectedFilters={selectedSearchFilters.sectors.length}
-            applyFilters={handleSetProjectSectorsFilter}
+            applyFilters={handleSetUnitSectorFilter}
           />
           <AutoCompleteCheckbox
             label={t(`filterBar.country`)}
             options={searchFilterValues.countries}
             selectedFilters={selectedSearchFilters.countries}
             noOfSelectedFilters={selectedSearchFilters.countries.length}
-            applyFilters={handleSetProjectCountriesFilter}
+            applyFilters={handleSetUnitCountriesFilter}
           />
-          <CreditingPeriodFilter
-            label={t(`filterBar.creditingPeriod`)}
-            dateFilter={selectedSearchFilters.creditingPeriod}
-            earliestDate={KYOTO_PROTOCOL_START_DATE}
-            applyFilters={handleSetProjectCreditingPeriodFilter}
+          <VintageYearFilter
+            label={t(`filterBar.vintageYear`)}
+            yearFilter={selectedSearchFilters.vintageYear}
+            earliestYear={KYOTO_PROTOCOL_START_YEAR}
+            onYearChange={handleSetUnitVintageYearFilter}
           />
         </Stack>
         <Flex>
@@ -124,4 +124,4 @@ const ProjectFilterBar: FC = () => {
   )
 }
 
-export default ProjectFilterBar
+export default UnitFilterBar
