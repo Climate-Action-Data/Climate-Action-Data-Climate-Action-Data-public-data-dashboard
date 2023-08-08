@@ -23,7 +23,7 @@ export const SearchHeader = () => {
   useEffect(() => {
     if (pattern) {
       setSearchInput(pattern)
-      if (searchParams.get(ESearchParams.KEYWORD) !== keywordSearch) {
+      if (searchParams.get(ESearchParams.KEYWORD) !== keywordSearch && keywordSearch !== ``) {
         const searchParams = new URLSearchParams()
         searchParams.append(ESearchParams.KEYWORD, keywordSearch)
         router.push(`/search/projects?${searchParams}`)
