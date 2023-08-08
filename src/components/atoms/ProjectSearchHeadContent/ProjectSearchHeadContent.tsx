@@ -22,14 +22,14 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
     if (event?.target) {
       const target = event.target as HTMLElement
       if (target instanceof HTMLTableCellElement || target instanceof HTMLParagraphElement) {
-        router.push(`/project/${projectId}`)
+        router.push(`/project?id=${projectId}`)
       }
     }
   }
 
   const generateMenuList = (projectWarehouseId: string) => {
     const menuList: MenuItemProps[] = [
-      { dataTestId: `view-project-details`, onClick: () => router.push(`/project/${projectWarehouseId}`), text: t(`projectMenu.viewProject`) },
+      { dataTestId: `view-project-details`, onClick: () => router.push(`/project?id=${projectWarehouseId}`), text: t(`projectMenu.viewProject`) },
       { dataTestId: `export-project`, icon: <DownloadIcon />, text: t(`projectMenu.exportProject`) },
       { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`) },
     ]

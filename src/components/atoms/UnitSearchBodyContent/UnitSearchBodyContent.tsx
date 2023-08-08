@@ -8,6 +8,7 @@ import { UnitSearchResult } from '@/@types/UnitSearchResult'
 import { formatDate } from '@/utils/DateFormat'
 import { DateFormats } from '@/@types/DateFormats'
 import { TableData } from '../TableData/TableData'
+import { generateUnitUrl } from '@/utils/RequestHelpers'
 interface UnitSearchBodyContentProps {
   unitResults?: EffectResponse<UnitSearchResult[]>
 }
@@ -20,7 +21,7 @@ export const UnitSearchBodyContent = (props: UnitSearchBodyContentProps) => {
   const generateTableRow = (unitList: UnitSearchResult[]) => {
     return unitList.map((unit, idx) => (
       <Tr
-        onClick={() => router.push(`/unit/${unit.warehouseUnitId}`)}
+        onClick={() => router.push(`${generateUnitUrl(unit?.status ?? ``)}${unit.warehouseUnitId}`)}
         data-testid="unit-table-row"
         onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
         className={`project-row-${idx}`}

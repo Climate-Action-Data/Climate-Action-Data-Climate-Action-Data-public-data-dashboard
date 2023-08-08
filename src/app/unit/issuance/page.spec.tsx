@@ -1,13 +1,19 @@
 import { render } from '@testing-library/react'
 import IssuancePage from './page'
-import { UNIT_DETAIL } from '@/test/TestOvermindMockData'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
+
+const mockPush = jest.fn()
+jest.mock(`next/navigation`, () => ({
+  ...jest.requireActual(`next/navigation`),
+  useRouter: () => ({ push: mockPush, query: { query: `id` } }),
+  useSearchParams: () => ({ get: () => `id` }),
+}))
 
 describe(`IssuancePage`, () => {
   it(`renders correctly`, () => {
     const { container } = render(
       <TestOvermindWrapper>
-        <IssuancePage params={{ id: UNIT_DETAIL.warehouseUnitId }} />
+        <IssuancePage />
       </TestOvermindWrapper>,
     )
     expect(container).toMatchSnapshot()

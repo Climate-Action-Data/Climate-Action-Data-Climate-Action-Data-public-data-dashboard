@@ -8,6 +8,7 @@ import { EffectResponse } from '@/@types/EffectResponse'
 import { useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { UnitSearchResult } from '@/@types/UnitSearchResult'
+import { generateUnitUrl } from '@/utils/RequestHelpers'
 
 interface UnitSearchHeadContentProps {
   unitResults?: EffectResponse<UnitSearchResult[]>
@@ -17,18 +18,18 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
   const router = useRouter()
   const { t } = useTranslation(`search`)
 
-  const handleClick = (unitId: string, event?: any) => {
+  const handleClick = (unitId: string, unitStatus: string, event?: any) => {
     if (event?.target) {
       const target = event.target as HTMLElement
       if (target instanceof HTMLTableCellElement || target instanceof HTMLParagraphElement) {
-        router.push(`/unit/${unitId}`)
+        router.push(`${generateUnitUrl(unitStatus ?? ``)}${unitId}`)
       }
     }
   }
-  const generateMenuList = (unitWarehouseId: string, projectWarehouseId: string) => {
+  const generateMenuList = (unitWarehouseId: string, projectWarehouseId: string, unitStatus: string) => {
     const menuList: MenuItemProps[] = [
-      { dataTestId: `view-unit-details`, onClick: () => router.push(`/unit/${unitWarehouseId}`), text: t(`projectMenu.viewUnit`) },
-      { dataTestId: `view-project-details`, onClick: () => router.push(`/unit/${projectWarehouseId}`), text: t(`projectMenu.viewProject`) },
+      { dataTestId: `view-unit-details`, onClick: () => router.push(`${generateUnitUrl(unitStatus ?? ``)}${unitWarehouseId}`), text: t(`projectMenu.viewUnit`) },
+      { dataTestId: `view-project-details`, onClick: () => router.push(`/project?id=${projectWarehouseId}`), text: t(`projectMenu.viewProject`) },
       { dataTestId: `export-project`, icon: <DownloadIcon />, text: t(`projectMenu.exportProject`) },
       { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`) },
     ]
@@ -38,7 +39,7 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
   const generateTableRow = (unitList: UnitSearchResult[]) => {
     return unitList.map((unitResults, idx) => (
       <Tr
-        onClick={(event) => handleClick(unitResults.warehouseUnitId, event)}
+        onClick={(event) => handleClick(unitResults.warehouseUnitId, unitResults.status, event)}
         onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
         data-testid="project-search-head-row"
         className={`project-row-${idx}`}
@@ -56,7 +57,7 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
             </Box>
             <Menu variant="menuWhite">
               <MenuButton as={Button} textAlign="center" iconSpacing={0} rightIcon={<KebabMenuIcon />} variant="lightGrayRound32"></MenuButton>
-              <MenuContent menuItems={generateMenuList(unitResults.warehouseUnitId, unitResults.projectId)} />
+              <MenuContent menuItems={generateMenuList(unitResults.warehouseUnitId, unitResults.projectId, unitResults.status)} />
             </Menu>
           </Flex>
         </Td>

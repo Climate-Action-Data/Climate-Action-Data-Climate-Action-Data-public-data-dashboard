@@ -25,4 +25,5 @@ export const state: SearchFiltersStateData = {
       countries: [],
     },
   },
+  keywordSearch: ``,
 }

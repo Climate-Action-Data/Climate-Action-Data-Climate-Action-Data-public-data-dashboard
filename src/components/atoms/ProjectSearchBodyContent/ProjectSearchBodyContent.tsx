@@ -30,7 +30,7 @@ export const ProjectSearchBodyContent = (props: ProjectSearchBodyContentProps) =
   const generateTableRow = (projectList: ProjectSearchResult[]) => {
     return projectList.map((project, idx) => (
       <Tr
-        onClick={() => router.push(`/project/${project.warehouseProjectId}`)}
+        onClick={() => router.push(`/project?id=${project.warehouseProjectId}`)}
         data-testid="table-row"
         onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
         className={`project-row-${idx}`}

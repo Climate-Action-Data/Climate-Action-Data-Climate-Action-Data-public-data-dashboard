@@ -132,4 +132,5 @@ export interface GovernanceData {
 export interface SearchFiltersStateData {
   allSearchFilterValues: { searchFilterValues: SearchFilterValues; readonly isEmpty: boolean }
   selectedSearchFilterValues: { searchFilterValues: SearchFilterValues }
+  keywordSearch: string
 }

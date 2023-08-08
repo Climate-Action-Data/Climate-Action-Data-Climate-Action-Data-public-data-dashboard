@@ -5,6 +5,12 @@ export type UnitProject = {
   name: string
 }
 
+export enum UnitStatus {
+  RETIRED = `Retired`,
+  HELD = `Held`,
+  BUFFER = `Buffer`,
+}
+
 export type Unit = {
   warehouseUnitId: string
   project: UnitProject

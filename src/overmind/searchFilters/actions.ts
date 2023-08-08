@@ -34,6 +34,10 @@ export const setCreditingPeriodFilter = (context: Context, filterDates: DatesFil
   context.state.searchFilters.selectedSearchFilterValues.searchFilterValues.creditingPeriod = filterDates
 }
 
+export const setKeywordSearch = (context: Context, keywordSearch: string) => {
+  context.state.searchFilters.keywordSearch = keywordSearch
+}
+
 export const resetSearchFilters = (context: Context) => {
   context.state.searchFilters.selectedSearchFilterValues.searchFilterValues = {
     countries: [],

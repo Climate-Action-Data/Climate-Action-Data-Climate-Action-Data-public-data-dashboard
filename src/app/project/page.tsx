@@ -1,5 +1,6 @@
 'use client'
 import { ProjectDetails } from '@/@types/ProjectDetails'
+import { ESearchParams } from '@/@types/ProjectSearchResult'
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
 import { GoogleMapWidget } from '@/components/atoms/GoogleMapWidget/GoogleMapWidget'
 import { ProjectBreadcrumb } from '@/components/atoms/ProjectBreadcrumb/ProjectBreadcrumb'
@@ -10,22 +11,25 @@ import { ProjectDetailsVerification } from '@/components/molecules/ProjectDetail
 import { useEffects } from '@/overmind'
 import { coordinatesToString, toCoordinates } from '@/utils/UnitConverter'
 import { Flex, Container, SimpleGrid, Box } from '@chakra-ui/react'
+import { NextPage } from 'next'
+import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-export default function Project({ params }: { params: { id: string } }) {
+const ProjectPage: NextPage = () => {
   const [project, setProject] = useState<ProjectDetails | undefined>(undefined)
   const { t } = useTranslation(`projectDetails`)
-
+  const searchParams = useSearchParams()
+  const id = searchParams.get(ESearchParams.ID) ?? ``
   const { getProject } = useEffects().projectResult
 
   useEffect(() => {
-    getProject(params.id).then((result) => {
+    getProject(id).then((result) => {
       if (result.data) {
         setProject(result.data)
       }
     })
-  }, [])
+  }, [id])
 
   return (
     <Box>
@@ -66,3 +70,5 @@ export default function Project({ params }: { params: { id: string } }) {
     </Box>
   )
 }
+
+export default ProjectPage
