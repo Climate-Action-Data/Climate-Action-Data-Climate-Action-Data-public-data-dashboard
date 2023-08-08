@@ -6,7 +6,7 @@ import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import { useRouter } from 'next/navigation'
 import { ESearchParams } from '@/@types/ProjectSearchResult'
 
-const SearchBar = () => {
+const ProjectSearchBar = () => {
   const [searchInput, setSearchInput] = useState(``)
   const router = useRouter()
   const { t } = useTranslation(`search`)
@@ -44,4 +44,4 @@ const SearchBar = () => {
   )
 }
 
-export default SearchBar
+export default ProjectSearchBar
