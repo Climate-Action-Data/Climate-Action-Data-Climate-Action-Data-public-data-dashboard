@@ -10,7 +10,9 @@ import {
   calendarDate,
   calendarNavigation,
   dropdownSelected,
+  dropdownSelectedDark,
   dropdownUnselected,
+  dropdownUnselectedDark,
   hoverOnly,
   hoverOnlyNoBold,
   lightGray,
@@ -24,13 +26,14 @@ import { Aeonik, AeonikFono } from '@/styles/fonts'
 import { Checkbox } from '@/styles/Checkbox'
 import { cardSection, cardSectionNoMargin, cardSectionNoMarginNoPadding, filterCardSection, searchBar } from '@/styles/Section'
 import fontSizes from './FontSizes'
-import { Text, headingAeonik } from './Text'
+import { headingAeonik, Text } from './Text'
 import { Input } from '@/styles/Input'
 import { paginationBar } from './PaginationBar'
 import { searchTable, searchTableSmall } from './SearchTable'
 import { menuWhite } from './Menu'
 import { statMain } from './Stat'
 import { tagTheme } from '@/styles/Tag'
+import { homeFilterAndSearchWrapper, resultsPageFilterAndSearchWrapper } from '@/styles/Container'
 
 const theme = extendTheme({
   fontSizes: fontSizes,
@@ -72,6 +75,8 @@ const theme = extendTheme({
         blackLink,
         dropdownUnselected,
         dropdownSelected,
+        dropdownUnselectedDark,
+        dropdownSelectedDark,
         calendarNavigation,
         calendarAction,
         calendarDate,
@@ -102,6 +107,8 @@ const theme = extendTheme({
         paginationBar,
         filterCardSection,
         searchBar,
+        homeFilterAndSearchWrapper,
+        resultsPageFilterAndSearchWrapper,
       },
     },
     Menu: {

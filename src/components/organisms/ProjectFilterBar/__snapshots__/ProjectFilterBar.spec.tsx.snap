@@ -3,7 +3,7 @@
 exports[`renders correctly with loaded data 1`] = `
 <div>
   <div
-    class="css-1mjj88o"
+    class="chakra-container css-0"
   >
     <div
       class="chakra-stack css-18mjik"
@@ -27,7 +27,7 @@ exports[`renders correctly with loaded data 1`] = `
               class="css-1gq8co7"
             />
             <div
-              class="css-1vzx6oo"
+              class="css-zmlf4"
             >
               <p
                 class="chakra-text css-11iqvn7"
@@ -81,7 +81,7 @@ exports[`renders correctly with loaded data 1`] = `
               class="css-1gq8co7"
             />
             <div
-              class="css-1vzx6oo"
+              class="css-zmlf4"
             >
               <p
                 class="chakra-text css-11iqvn7"
@@ -135,7 +135,7 @@ exports[`renders correctly with loaded data 1`] = `
               class="css-1gq8co7"
             />
             <div
-              class="css-1vzx6oo"
+              class="css-zmlf4"
             >
               <p
                 class="chakra-text css-11iqvn7"
@@ -189,7 +189,7 @@ exports[`renders correctly with loaded data 1`] = `
               class="css-1gq8co7"
             />
             <div
-              class="css-1vzx6oo"
+              class="css-zmlf4"
             >
               <p
                 class="chakra-text css-11iqvn7"
@@ -278,7 +278,7 @@ exports[`renders correctly with loaded data 1`] = `
           class="css-1lkwiwl"
         />
         <a
-          class="chakra-link css-183olx0"
+          class="chakra-link css-1vx4e4n"
           href="/search/projects"
         >
           <div
@@ -306,7 +306,7 @@ exports[`renders correctly with loaded data 1`] = `
 exports[`renders correctly with no data 1`] = `
 <div>
   <div
-    class="css-1mjj88o"
+    class="chakra-container css-0"
   >
     <div
       class="chakra-stack css-18mjik"
@@ -545,7 +545,7 @@ exports[`renders correctly with no data 1`] = `
           class="css-1lkwiwl"
         />
         <a
-          class="chakra-link css-183olx0"
+          class="chakra-link css-1vx4e4n"
           href="/search/projects"
         >
           <div

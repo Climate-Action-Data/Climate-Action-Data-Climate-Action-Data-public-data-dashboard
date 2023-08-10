@@ -8,6 +8,8 @@ import { extractTitleFromUrl } from '@/utils/TextConverter'
 import { BreadCrumbs } from '@/components/atoms/BreadCrumbs/BreadCrumbs'
 import { ESearchParams } from '@/@types/ProjectSearchResult'
 import { useActions, useAppState } from '@/overmind'
+import UnitFilterBar from '@/components/organisms/UnitFilterBar/UnitFilterBar'
+import ProjectFilterBar from '@/components/organisms/ProjectFilterBar/ProjectFilterBar'
 
 export const SearchHeader = () => {
   const [searchInput, setSearchInput] = useState(``)
@@ -42,6 +44,14 @@ export const SearchHeader = () => {
     setSearchInput(event.target.value)
   }
 
+  const generateFilterBar = () => {
+    if (currentPath === `/search/projects`) {
+      return <ProjectFilterBar isResultsPage />
+    } else if (currentPath === `/search/units`) {
+      return <UnitFilterBar isResultsPage />
+    }
+  }
+
   return (
     <Flex id="headerReference" position="sticky" top={`56px`} zIndex="docked" padding="16px 24px" minH="184px" color="white" backgroundColor="gray.900" width="100%">
       <VStack alignItems="start" flex={1}>
@@ -61,6 +71,7 @@ export const SearchHeader = () => {
             </InputGroup>
           </Box>
         </HStack>
+        {generateFilterBar()}
       </VStack>
     </Flex>
   )

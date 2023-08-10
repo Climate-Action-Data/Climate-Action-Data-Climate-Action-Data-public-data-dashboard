@@ -12,10 +12,11 @@ interface VintageYearFilterProp {
   latestYear?: number
   yearFilter?: YearsFilter
   onYearChange: (payload: YearsFilter) => void
+  isResultsPage?: boolean
 }
 
 const VintageYearFilter: FC<VintageYearFilterProp> = (prop) => {
-  const { label, earliestYear, latestYear, onYearChange, yearFilter } = prop
+  const { label, earliestYear, latestYear, onYearChange, yearFilter, isResultsPage } = prop
 
   const [minimumYear, setMinimumYear] = useState<number | undefined>()
   const [maximumYear, setMaximumYear] = useState<number | undefined>()
@@ -66,10 +67,17 @@ const VintageYearFilter: FC<VintageYearFilterProp> = (prop) => {
     return label
   }
 
+  const generateVariant = () => {
+    if (isResultsPage) {
+      return yearFilter?.minYear || yearFilter?.maxYear ? `dropdownSelectedDark` : `dropdownUnselectedDark`
+    }
+    return yearFilter?.minYear || yearFilter?.maxYear ? `dropdownSelected` : `dropdownUnselected`
+  }
+
   return (
     <Popover gutter={0} isLazy placement={`bottom`} matchWidth>
       <PopoverTrigger>
-        <Button variant={`dropdownUnselected`}>
+        <Button variant={generateVariant()}>
           <Flex fontWeight={`normal`} fontSize={`16px`} alignItems={`center`} grow={1}>
             {renderLabel()}
             <Spacer />
@@ -77,7 +85,16 @@ const VintageYearFilter: FC<VintageYearFilterProp> = (prop) => {
           </Flex>
         </Button>
       </PopoverTrigger>
-      <PopoverContent zIndex={401} border={0} borderRadius={`8px`} width={[`100%`, null, null, `min-content`]} height={`min-content`} backgroundColor={`white`} boxShadow={`xl`}>
+      <PopoverContent
+        zIndex={401}
+        border={0}
+        borderRadius={`8px`}
+        width={[`100%`, null, null, `min-content`]}
+        height={`min-content`}
+        color={`green.900`}
+        backgroundColor={`white`}
+        boxShadow={`xl`}
+      >
         <PopoverBody width={`100%`}>
           <VStack>
             <HStack width={`100%`} justify={`center`} alignItems={`end`}>
