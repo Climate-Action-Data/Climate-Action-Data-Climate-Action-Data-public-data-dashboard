@@ -26,12 +26,20 @@ export type Validation = {
   verifications: Verification[]
 }
 
-export type Issuance = {
+type IssuanceUnit = {
+  id: string
   status: string
+  quantity: number
+  date: string
+}
+
+export type Issuance = {
   vintage: number
   quantity: number
   availableUnits: number
   date: string
+  id: string
+  units: IssuanceUnit[]
 }
 
 export type ProjectDocument = {
