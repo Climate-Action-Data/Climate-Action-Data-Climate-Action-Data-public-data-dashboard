@@ -88,5 +88,13 @@ export const searchTableSmall = defineStyle({
       minW: [`100px`, `120px`],
       maxW: [`100px`, `120px`],
     },
+    tbody: {
+      tr: {
+        _hover: {
+          backgroundColor: `green.50`,
+          cursor: `pointer`,
+        },
+      },
+    },
   },
 })
