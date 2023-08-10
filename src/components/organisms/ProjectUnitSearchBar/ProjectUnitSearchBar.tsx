@@ -1,7 +1,7 @@
 import { CloseIcon } from '@/components/atoms/CloseIcon/CloseIcon'
 import { Button, Container, Flex, Input, InputGroup, InputRightElement } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
-import { ChangeEvent, FC, useState } from 'react'
+import React, { ChangeEvent, FC, useState } from 'react'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import { useRouter } from 'next/navigation'
 import { ESearchParams } from '@/@types/ProjectSearchResult'
@@ -34,6 +34,12 @@ const ProjectUnitSearchBar: FC<ProjectUnitSearchBarProp> = (props) => {
     }
   }
 
+  const handleOnKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === `Enter`) {
+      handleOnSearch()
+    }
+  }
+
   return (
     <Container variant={`searchBar`} width={[`100%`, null, null, `888px`]}>
       <Flex>
@@ -47,6 +53,7 @@ const ProjectUnitSearchBar: FC<ProjectUnitSearchBarProp> = (props) => {
             placeholder={isProjectSearch ? t(`searchProjectsByKeywordsPlaceholder`) : t(`searchUnitsByKeywordsPlaceholder`)}
             value={searchInput}
             onChange={handleInputOnChange}
+            onKeyDown={handleOnKeyDown}
           />
         </InputGroup>
         <Button rightIcon={<SearchIcon width={`16px`} height={`16px`} />} variant={`accentPrimary32`} data-testid={`search-bar-search`} onClick={handleOnSearch} marginLeft={`8px`}>
