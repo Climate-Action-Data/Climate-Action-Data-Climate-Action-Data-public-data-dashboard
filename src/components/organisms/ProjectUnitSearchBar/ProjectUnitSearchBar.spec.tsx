@@ -24,6 +24,14 @@ it(`renders correctly for project search with no params, add a search value and 
   await userEvent.type(screen.getByRole(`textbox`), `hello`)
   await userEvent.click(screen.getByTestId(`search-bar-clear`))
   await userEvent.click(screen.getByTestId(`search-bar-search`))
-  expect(mockPush).toBeCalledTimes(1)
+  expect(mockPush).toHaveBeenCalledWith(`/search/projects?keyword=`)
+  expect(container).toMatchSnapshot()
+})
+
+it(`renders correctly and perform a search on enter`, async () => {
+  const { container } = render(<ProjectUnitSearchBar isProjectSearch={false} />)
+  await userEvent.type(screen.getByRole(`textbox`), `hello`)
+  await userEvent.keyboard(`{enter}`)
+  expect(mockPush).toHaveBeenCalledWith(`/search/units?keyword=hello`)
   expect(container).toMatchSnapshot()
 })
