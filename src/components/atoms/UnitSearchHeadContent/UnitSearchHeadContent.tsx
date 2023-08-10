@@ -50,16 +50,16 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
       >
         <Td data-testid="project-search-head-row-td">
           <Flex alignItems="center">
-            <Box title={unitResults.projectName} overflow="hidden" flex={1}>
-              <Text fontWeight={500}>{unitResults.projectName}</Text>
-              <Text fontSize="sm">{unitResults.projectId}</Text>
+            <Box title={unitResults?.project?.name} overflow="hidden" flex={1}>
+              <Text fontWeight={500}>{unitResults?.project?.name}</Text>
+              <Text fontSize="sm">{unitResults?.project?.id}</Text>
               <Text textOverflow="ellipsis" color="lightGray.700" fontSize="sm">
-                {unitResults.projectDeveloper}
+                {unitResults?.project?.developer}
               </Text>
             </Box>
             <Menu variant="menuWhite">
               <MenuButton as={Button} textAlign="center" iconSpacing={0} rightIcon={<KebabMenuIcon />} variant="lightGrayRound32"></MenuButton>
-              <MenuContent menuItems={generateMenuList(unitResults.warehouseUnitId, unitResults.projectId, unitResults.status)} />
+              <MenuContent menuItems={generateMenuList(unitResults.warehouseUnitId, unitResults?.project?.id, unitResults.status)} />
             </Menu>
           </Flex>
         </Td>
