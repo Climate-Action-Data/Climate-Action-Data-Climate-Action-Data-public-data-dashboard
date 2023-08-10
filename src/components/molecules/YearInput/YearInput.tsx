@@ -37,10 +37,12 @@ const YearInput: FC<YearInputProp> = (prop) => {
     if (value === ``) {
       setTextInputValue(value)
     }
-    if (value.match(YEAR_INPUT_REGEX)) {
+
+    console.log(YEAR_INPUT_REGEX.test(value))
+    console.log(value)
+    console.log(YEAR_INPUT_REGEX.test(value))
+    if (YEAR_INPUT_REGEX.test(value)) {
       setTextInputValue(value)
-    } else {
-      setTextInputValue((prevState) => prevState)
     }
   }
 
@@ -50,7 +52,7 @@ const YearInput: FC<YearInputProp> = (prop) => {
       onChange(undefined)
     }
 
-    if (!textInputValue.match(YEAR_INPUT_REGEX)) {
+    if (!YEAR_INPUT_REGEX.exec(textInputValue)) {
       setIsInvalid(true)
     }
 
@@ -73,7 +75,6 @@ const YearInput: FC<YearInputProp> = (prop) => {
           value={textInputValue}
           onChange={handleOnChange}
           onBlur={handleOnBlur}
-          onEnded={handleOnBlur}
           isInvalid={isInvalid}
           errorBorderColor={`red`}
           sx={{ ...inputConfig }}
