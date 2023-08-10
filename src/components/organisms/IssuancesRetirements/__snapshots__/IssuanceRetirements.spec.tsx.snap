@@ -39,10 +39,10 @@ exports[`RetirementDetails renders correctly project issuances 1`] = `
     </div>
   </div>
   <div
-    class="chakra-container css-1e55nrh"
+    class="chakra-container css-8hlr3i"
   >
     <div
-      class="css-ejqwgx"
+      class="css-gsocru"
     >
       <div
         class="css-h9i6sp"
@@ -295,6 +295,7 @@ exports[`RetirementDetails renders correctly project issuances 1`] = `
         </table>
       </div>
     </div>
+    click to select
   </div>
 </div>
 `;
