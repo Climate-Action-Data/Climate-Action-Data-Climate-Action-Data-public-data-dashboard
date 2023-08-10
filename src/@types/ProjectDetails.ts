@@ -36,7 +36,7 @@ export type IssuanceUnit = {
 
 export type Issuance = {
   id: string
-  status: string
+  status?: string
   vintage: number
   quantity: number
   availableUnits: number
