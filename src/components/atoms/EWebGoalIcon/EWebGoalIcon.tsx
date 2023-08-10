@@ -69,5 +69,5 @@ export const EWebGoalIcon = (props: EWebGoalIconProps) => {
 
   const [image, altText] = getImageAndText(goal)
 
-  return <Image w="40px" h="40px" src={image} alt={altText} />
+  return <Image w="72px" h="72px" src={image} alt={altText} />
 }

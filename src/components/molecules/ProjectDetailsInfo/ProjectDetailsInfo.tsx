@@ -3,11 +3,12 @@ import { Link } from '@chakra-ui/next-js'
 import { Stack, StackDivider, SimpleGrid, Flex, HStack } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { ProjectDetailsInfoSkeleton } from '../ProjectDetailsInfoSkeleton/ProjectDetailsInfoSkeleton'
-import { extractEWebGoalFromString } from '@/utils/TextConverter'
+import { extractEWebGoalFromString, extractTagItemsFromTag } from '@/utils/TextConverter'
 import { EWebGoalIcon } from '@/components/atoms/EWebGoalIcon/EWebGoalIcon'
 import { formatDate } from '@/utils/DateFormat'
 import { DateFormats } from '@/@types/DateFormats'
 import { ProjectDetails } from '@/@types/ProjectDetails'
+import { ExpandableList } from '@/components/atoms/ExpandableList/ExpandableList'
 
 interface ProjectDetailsInfoProps {
   project?: ProjectDetails
@@ -64,8 +65,10 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
         <DetailWidget title={t(`detailsHeaders.ndcCoverage`)}>{project.coveredByNdc}</DetailWidget>
       </SimpleGrid>
       <SimpleGrid columns={2} gap="24px">
-        <DetailWidget title={t(`detailsHeaders.tags`)}>{project.tags ?? tHome(`noData`)}</DetailWidget>
-        <DetailWidget asBox title={t(`detailsHeaders.coBenefits`)}>
+        <DetailWidget title={t(`detailsHeaders.tags`)}>
+          <ExpandableList items={extractTagItemsFromTag(project?.tags)} />
+        </DetailWidget>
+        <DetailWidget minW={[`100%`, `607px`]} asBox title={t(`detailsHeaders.coBenefits`)}>
           <HStack flexWrap="wrap" gap="4px">
             {project.coBenefits.map((benefit) => {
               const eWebGoal = extractEWebGoalFromString(benefit)
