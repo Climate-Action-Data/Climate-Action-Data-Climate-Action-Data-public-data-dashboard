@@ -74,7 +74,7 @@ export const UnitSearchBodyContent = (props: UnitSearchBodyContentProps) => {
 
   return (
     <Table variant="simple" className="searchTable">
-      <Tbody data-testid="table-scroll">{unitResults?.data ? generateTableRow(unitResults.data.projects) : <ProjectSearchBodySkeleton />}</Tbody>
+      <Tbody data-testid="table-scroll">{unitResults?.data?.units !== undefined ? generateTableRow(unitResults.data.units) : <ProjectSearchBodySkeleton />}</Tbody>
     </Table>
   )
 }

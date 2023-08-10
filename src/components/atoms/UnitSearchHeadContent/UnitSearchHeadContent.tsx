@@ -79,8 +79,8 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
   return (
     <Table variant="simple" className="searchTable">
       <Tbody borderRight="1px solid #B8BEC0">
-        {unitResults?.data?.projects !== undefined ? (
-          generateTableRow(unitResults.data.projects)
+        {unitResults?.data?.units !== undefined ? (
+          generateTableRow(unitResults.data.units)
         ) : (
           <Tr height="92px">
             <Td>

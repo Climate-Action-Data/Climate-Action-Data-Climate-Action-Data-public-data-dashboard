@@ -11,7 +11,7 @@ export interface UnitProject {
 }
 
 export interface UnitSearchResponse {
-  projects: UnitSearchResult[]
+  units: UnitSearchResult[]
   totalCount: number
 }
 

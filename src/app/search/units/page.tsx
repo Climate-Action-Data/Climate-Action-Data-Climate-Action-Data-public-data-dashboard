@@ -22,7 +22,6 @@ const UnitPage: NextPage = () => {
 
   useEffect(() => {
     getUnitResults(pattern).then((hasProjectResults) => {
-      console.log(JSON.stringify(hasProjectResults))
       setUnitResults(hasProjectResults)
     })
   }, [])
