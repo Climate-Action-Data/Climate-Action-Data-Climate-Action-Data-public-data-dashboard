@@ -80,7 +80,7 @@ export const projectDetail: ProjectDetails = {
       units: [
         {
           id: `1fca9e88-62a2-46ed-bc25-050309ab8927`,
-          status: `Held`,
+          status: `Retired`,
           quantity: 191,
           date: `2020-03-04T00:00:00.000Z`,
         },
