@@ -28,7 +28,7 @@ export type Validation = {
 
 export type IssuanceUnit = {
   id: string
-  status: string
+  status?: string
   quantity: number
   date: string
   retirementsNotes?: string
