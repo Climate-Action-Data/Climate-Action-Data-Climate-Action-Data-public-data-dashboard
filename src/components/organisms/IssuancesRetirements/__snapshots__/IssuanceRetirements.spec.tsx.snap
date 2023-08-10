@@ -295,7 +295,6 @@ exports[`RetirementDetails renders correctly project issuances 1`] = `
         </table>
       </div>
     </div>
-    click to select
   </div>
 </div>
 `;
