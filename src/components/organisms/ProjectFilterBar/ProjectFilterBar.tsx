@@ -1,15 +1,14 @@
 import { FC, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, Spacer, Stack, StackDivider } from '@chakra-ui/react'
-import { Link } from '@chakra-ui/next-js'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
 import AutoCompleteCheckbox from '@/components/molecules/AutoCompleteCheckbox/AutoCompleteCheckbox'
-import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import CreditingPeriodFilter from '@/components/molecules/CreditingPeriodFilter/CreditingPeriodFilter'
 import { KYOTO_PROTOCOL_START_DATE } from '@/@types/CarbonStandards'
 import { DatesFilter } from '@/@types/ProjectSearchFilterValues'
 import FilterBarWrapper from '@/components/molecules/FilterBarWarpper/FilterBarWrapper'
+import SearchButton from '@/components/atoms/SearchButton/SearchButton'
 
 const ProjectFilterBar: FC = () => {
   const {
@@ -92,22 +91,7 @@ const ProjectFilterBar: FC = () => {
         </Stack>
         <Flex>
           <Spacer minWidth={`32px`} />
-          <Link
-            as={`button`}
-            variant={`accentPrimary32`}
-            padding={`8px 16px`}
-            width={`min-content`}
-            _hover={{ backgroundColor: `#24BD63` }}
-            _active={{ backgroundColor: `#1B8E4A` }}
-            href={`/search/projects`}
-            fontSize={`16px`}
-            fontWeight={`medium`}
-          >
-            <Flex alignItems={`center`}>
-              {t(`search`)}
-              <SearchIcon width={`16px`} height={`16px`} marginLeft={`4px`} />
-            </Flex>
-          </Link>
+          <SearchButton href={`/search/projects`} />
         </Flex>
       </Stack>
     </FilterBarWrapper>
