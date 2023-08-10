@@ -41,5 +41,17 @@ export const Input = helpers.defineMultiStyleConfig({
         cursor: `pointer`,
       },
     },
+    yearInput: {
+      field: {
+        height: `28px`,
+        padding: 0,
+        _active: { boxShadow: `none` },
+        border: `none`,
+        borderRadius: 0,
+        borderBottom: `solid`,
+        borderBottomWidth: `1px`,
+        _placeholder: { color: `lightGray.600` },
+      },
+    },
   },
 })

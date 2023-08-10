@@ -1,6 +1,5 @@
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
-import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { fireEvent, render, screen } from '@testing-library/react'
 import UnitFilterAndSearch from '@/components/organisms/UnitFilterAndSearch/UnitFilterAndSearch'
 
 const mockPush = jest.fn()
@@ -19,15 +18,15 @@ it(`UnitFilterBar renders correctly`, () => {
   expect(container).toMatchSnapshot()
 })
 
-it(`UnitFilterBar renders correctly and the filter-and-search-trigger was clicked`, async () => {
-  const { container } = render(
+it(`UnitFilterBar renders correctly and the filter-and-search-trigger was clicked`, () => {
+  render(
     <TestOvermindWrapper>
       <UnitFilterAndSearch />
     </TestOvermindWrapper>,
   )
 
-  await userEvent.click(screen.getByTestId(`filter-and-search-trigger`))
-  await userEvent.click(screen.getByTestId(`filter-and-search-trigger`))
+  fireEvent.click(screen.getByTestId(`filter-and-search-trigger`))
+  fireEvent.click(screen.getByTestId(`filter-and-search-trigger`))
 
-  expect(container).toMatchSnapshot()
+  expect(screen.getByText(`Search units by keywords`)).toBeDefined()
 })

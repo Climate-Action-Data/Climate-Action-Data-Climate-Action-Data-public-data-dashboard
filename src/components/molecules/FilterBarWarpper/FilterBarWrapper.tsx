@@ -6,7 +6,7 @@ const FilterBarWrapper: FC<PropsWithChildren> = (props) => {
   return (
     <Box
       sx={{
-        color: `black`,
+        color: `lightGray.700`,
         boxShadow: `2px 2px 8px 0px #0000001A;`,
         minHeight: `min-content`,
         borderRadius: `12px`,

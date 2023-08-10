@@ -45,5 +45,7 @@
   "issued": "Issued",
   "retired": "Retired",
   "homeBreadcrumb": "Home",
-  "noData": "--"
+  "noData": "--",
+  "projectView": "Project View",
+  "unitView": "Unit View"
 }

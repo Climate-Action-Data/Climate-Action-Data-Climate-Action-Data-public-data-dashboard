@@ -1,5 +1,5 @@
 'use client'
-import { Box, Container, Flex, Hide, Spacer, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react'
+import { Box, Container, Flex, Hide, Spacer, Text } from '@chakra-ui/react'
 
 import { useAppState } from '@/overmind'
 import { CarbonReductionWidget } from '@/components/molecules/CarbonReductionWidget/CarbonReductionWidget'
@@ -10,7 +10,7 @@ import CreditsHistorySection from '@/components/organisms/CreditsHistorySection/
 import { useTranslation } from 'react-i18next'
 import ProjectFilterAndSearch from '@/components/organisms/ProjectFilterAndSearch/ProjectFilterAndSearch'
 import UnitFilterAndSearch from '@/components/organisms/UnitFilterAndSearch/UnitFilterAndSearch'
-import HeaderTab from '@/components/atoms/HeaderTab/HeaderTab'
+import SearchAndFilter from '@/components/molecules/SearchAndFilter/SearchAndFilter'
 
 export default function Home(): React.JSX.Element {
   const { carbonReduction } = useAppState().analytics
@@ -19,23 +19,21 @@ export default function Home(): React.JSX.Element {
   const formattedDate = new Date(carbonReduction.carbonMapData?.data?.lastUpdated ?? ``)
   const formattedDateTime = `${formattedDate.toLocaleDateString()} ${formattedDate.toLocaleTimeString()}`
 
+  const tabs = [
+    {
+      title: t(`projectView`),
+      content: <ProjectFilterAndSearch />,
+    },
+    {
+      title: t(`unitView`),
+      content: <UnitFilterAndSearch />,
+    },
+  ]
+
   return (
     <>
       <Box paddingX={`24px`} paddingTop={`24px`}>
-        <Tabs variant={`unstyled`} align={`center`}>
-          <TabList>
-            <HeaderTab>Project View</HeaderTab>
-            <HeaderTab>Unit View</HeaderTab>
-          </TabList>
-          <TabPanels>
-            <TabPanel>
-              <ProjectFilterAndSearch />
-            </TabPanel>
-            <TabPanel>
-              <UnitFilterAndSearch />
-            </TabPanel>
-          </TabPanels>
-        </Tabs>
+        <SearchAndFilter tabs={tabs} />
       </Box>
       <Flex padding={`24px`} minHeight="min-content" alignItems="center" justifyContent="space-between" flexDirection="column" width={`100%`}>
         <Container marginTop={`20px`} variant="cardSection">
