@@ -9,6 +9,7 @@ import { KYOTO_PROTOCOL_START_DATE } from '@/@types/CarbonStandards'
 import { DatesFilter } from '@/@types/ProjectSearchFilterValues'
 import FilterBarWrapper from '@/components/molecules/FilterBarWarpper/FilterBarWrapper'
 import SearchButton from '@/components/atoms/SearchButton/SearchButton'
+import { useRouter } from 'next/navigation'
 
 interface ProjectFilterBarProps {
   isResultsPage?: boolean
@@ -26,6 +27,7 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
   const { getGovernanceData } = useEffects().searchFilters
   const { transformGovernanceDataToSearchFilterData } = useActions().searchFilters
   const { t } = useTranslation(`search`)
+  const router = useRouter()
 
   useEffect(() => {
     if (isEmpty) {
@@ -53,6 +55,10 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
 
   const handleSetProjectCreditingPeriodFilter = (value: DatesFilter) => {
     setProjectCreditingPeriodFilter(value)
+  }
+
+  const handleOnClick = () => {
+    router.push(`/filter/projects`)
   }
 
   return (
@@ -101,7 +107,7 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
         </Stack>
         <Flex>
           <Spacer minWidth={`32px`} />
-          <SearchButton href={`/search/projects`} isResultsPage={isResultsPage} />
+          <SearchButton href={`/search/projects`} isResultsPage={isResultsPage} onClick={handleOnClick} />
         </Flex>
       </Stack>
     </FilterBarWrapper>

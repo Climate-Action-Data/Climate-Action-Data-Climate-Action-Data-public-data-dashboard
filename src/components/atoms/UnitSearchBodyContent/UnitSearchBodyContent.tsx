@@ -1,16 +1,17 @@
 import { changeHoverColor } from '@/utils/Stickify'
-import { Tbody, Tr, Td, Table } from '@chakra-ui/react'
+import { Table, Tbody, Td, Tr } from '@chakra-ui/react'
 import { EffectResponse } from '@/@types/EffectResponse'
 import { useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { ProjectSearchBodySkeleton } from '../ProjectSearchBodySkeleton/ProjectSearchBodySkeleton'
-import { UnitSearchResult } from '@/@types/UnitSearchResult'
+import { UnitSearchResponse, UnitSearchResult } from '@/@types/UnitSearchResult'
 import { formatDate } from '@/utils/DateFormat'
 import { DateFormats } from '@/@types/DateFormats'
 import { TableData } from '../TableData/TableData'
 import { generateUnitUrl } from '@/utils/RequestHelpers'
+
 interface UnitSearchBodyContentProps {
-  unitResults?: EffectResponse<UnitSearchResult[]>
+  unitResults?: EffectResponse<UnitSearchResponse>
 }
 
 export const UnitSearchBodyContent = (props: UnitSearchBodyContentProps) => {
@@ -73,7 +74,7 @@ export const UnitSearchBodyContent = (props: UnitSearchBodyContentProps) => {
 
   return (
     <Table variant="simple" className="searchTable">
-      <Tbody data-testid="table-scroll">{unitResults?.data ? generateTableRow(unitResults.data) : <ProjectSearchBodySkeleton />}</Tbody>
+      <Tbody data-testid="table-scroll">{unitResults?.data ? generateTableRow(unitResults.data.projects) : <ProjectSearchBodySkeleton />}</Tbody>
     </Table>
   )
 }

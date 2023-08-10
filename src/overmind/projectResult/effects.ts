@@ -3,8 +3,9 @@ import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
 import { EffectResponse } from '@/@types/EffectResponse'
 import { DEFAULT_PROJECT_COUNT_TO_DISPLAY, ESearchParams, ProjectSearchResponse } from '@/@types/ProjectSearchResult'
 import { ProjectDetails } from '@/@types/ProjectDetails'
+import { ProjectSearchFilterValues } from '@/@types/ProjectSearchFilterValues'
 
-export const getProjectResults = async (pattern: string, offset = 0, count = DEFAULT_PROJECT_COUNT_TO_DISPLAY): Promise<EffectResponse<ProjectSearchResponse>> => {
+export const getProjectSearchResults = async (pattern: string, offset = 0, count = DEFAULT_PROJECT_COUNT_TO_DISPLAY): Promise<EffectResponse<ProjectSearchResponse>> => {
   return new Promise((resolve) => {
     let result: EffectResponse<ProjectSearchResponse>
 
@@ -17,8 +18,46 @@ export const getProjectResults = async (pattern: string, offset = 0, count = DEF
       .get(`${defaultDomain}/v1/projects/search?${searchParams}`, defaultHeaders)
       .then((body) => {
         if (body.data) {
-          const mapData = body.data as ProjectSearchResponse
-          result = { data: mapData }
+          const ProjectSearchData = body.data as ProjectSearchResponse
+          result = { data: ProjectSearchData }
+        } else {
+          result = { error: { code: body.status.toString(), message: body.statusText } }
+        }
+      })
+      .catch(() => {
+        result = { error: { code: `400`, message: `could not fetch data` } }
+      })
+      .finally(() => {
+        resolve(result)
+      })
+  })
+}
+
+export const getProjectFilterResults = async (
+  filters: ProjectSearchFilterValues,
+  offset = 0,
+  count = DEFAULT_PROJECT_COUNT_TO_DISPLAY,
+): Promise<EffectResponse<ProjectSearchResponse>> => {
+  return new Promise((resolve) => {
+    let result: EffectResponse<ProjectSearchResponse>
+
+    axios
+      .post(
+        `${defaultDomain}/v1/projects/filter`,
+        {
+          standards: filters.projectStatus,
+          methodologies: filters.methodologies,
+          sectors: filters.sectors,
+          countries: filters.countries,
+          creditingPeriodStart: filters.creditingPeriod?.minDate?.toDateString(),
+          creditingPeriodEnd: filters.creditingPeriod?.maxDate?.toDateString(),
+        },
+        defaultHeaders,
+      )
+      .then((body) => {
+        if (body.data) {
+          const ProjectSearchData = body.data as ProjectSearchResponse
+          result = { data: ProjectSearchData }
         } else {
           result = { error: { code: body.status.toString(), message: body.statusText } }
         }

@@ -14,20 +14,20 @@ import { PaginationWidget } from '@/components/atoms/PaginationWidget/Pagination
 import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 
 const ProjectPage: NextPage = () => {
-  const { getProjectResults } = useEffects().projectResult
+  const { getProjectSearchResults } = useEffects().projectResult
   const { setProjectResults } = useActions().projectResult
   const { projectResults } = useAppState().projectResult
   const searchParams = useSearchParams()
   const pattern = searchParams.get(ESearchParams.KEYWORD) ?? ``
 
   useEffect(() => {
-    getProjectResults(pattern).then((hasProjectResults) => {
+    getProjectSearchResults(pattern).then((hasProjectResults) => {
       setProjectResults(hasProjectResults)
     })
   }, [pattern])
 
   const handleOnPageChange = (currentPage: number, from: number) => {
-    getProjectResults(pattern, from).then((hasProjectResults) => {
+    getProjectSearchResults(pattern, from).then((hasProjectResults) => {
       setProjectResults(hasProjectResults)
     })
   }

@@ -10,6 +10,11 @@ export interface UnitProject {
   type: string
 }
 
+export interface UnitSearchResponse {
+  projects: UnitSearchResult[]
+  totalCount: number
+}
+
 export interface UnitSearchResult {
   id: string
   warehouseUnitId: string

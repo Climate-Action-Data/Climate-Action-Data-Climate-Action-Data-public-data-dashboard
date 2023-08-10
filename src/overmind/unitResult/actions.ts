@@ -1,7 +1,7 @@
 import { Context } from '@/overmind'
 import { EffectResponse } from '@/@types/EffectResponse'
-import { UnitSearchResult } from '@/@types/UnitSearchResult'
+import { UnitSearchResponse } from '@/@types/UnitSearchResult'
 
-export const setUnitResults = (context: Context, units: EffectResponse<UnitSearchResult[]>) => {
+export const setUnitResults = (context: Context, units: EffectResponse<UnitSearchResponse>) => {
   context.state.unitResult.unitResults = units
 }

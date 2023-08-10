@@ -1,16 +1,16 @@
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from '@chakra-ui/next-js'
-import { Flex } from '@chakra-ui/react'
+import { Button, Flex } from '@chakra-ui/react'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 
 interface SearchButtonProps {
   href: string
   isResultsPage?: boolean
+  onClick: () => void
 }
 
 const SearchButton: FC<SearchButtonProps> = (props) => {
-  const { href, isResultsPage } = props
+  const { isResultsPage, onClick } = props
   const { t } = useTranslation(`search`)
 
   const generateLabel = () => {
@@ -25,20 +25,23 @@ const SearchButton: FC<SearchButtonProps> = (props) => {
     )
   }
 
+  const handleOnClick = () => {
+    onClick()
+  }
+
   return (
-    <Link
-      as={`button`}
+    <Button
       variant={`accentPrimary32`}
       padding={`8px 16px`}
       width={`max-content`}
       _hover={{ backgroundColor: `#24BD63` }}
       _active={{ backgroundColor: `#1B8E4A` }}
-      href={href}
+      onClick={handleOnClick}
       fontSize={`16px`}
       fontWeight={`medium`}
     >
       <Flex alignItems={`center`}>{generateLabel()}</Flex>
-    </Link>
+    </Button>
   )
 }
 export default SearchButton

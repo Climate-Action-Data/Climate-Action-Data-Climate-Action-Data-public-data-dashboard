@@ -4,7 +4,7 @@ import { useEffect, useLayoutEffect } from 'react'
 import { Box, Button, Container, Flex, Hide } from '@chakra-ui/react'
 import { useSearchParams } from 'next/navigation'
 
-import { useActions, useEffects } from '@/overmind'
+import { useActions, useAppState, useEffects } from '@/overmind'
 import { setScrollEventListeners } from '@/utils/Stickify'
 import { ALLOWED_RENDER_TYPE, DEFAULT_PROJECT_COUNT_TO_DISPLAY, ESearchParams } from '@/@types/ProjectSearchResult'
 
@@ -16,11 +16,13 @@ import { UnitSearchBody } from '@/components/molecules/UnitSearchBody/UnitSearch
 const UnitPage: NextPage = () => {
   const { getUnitResults } = useEffects().unitResult
   const { setUnitResults } = useActions().unitResult
+  const { unitResults } = useAppState().unitResult
   const searchParams = useSearchParams()
   const pattern = searchParams.get(ESearchParams.KEYWORD) ?? ``
 
   useEffect(() => {
     getUnitResults(pattern).then((hasProjectResults) => {
+      console.log(JSON.stringify(hasProjectResults))
       setUnitResults(hasProjectResults)
     })
   }, [])
@@ -50,7 +52,7 @@ const UnitPage: NextPage = () => {
       <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.UNIT} />
       <UnitSearchBody renderType={ALLOWED_RENDER_TYPE.UNIT} />
       <Container variant={`paginationBar`}>
-        <PaginationWidget onPageChange={handlePageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={89} />
+        <PaginationWidget onPageChange={handlePageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={unitResults?.data?.totalCount ?? 0} />
         <Box position={[`unset`, `absolute`]} right="10px" float="right">
           <Button variant="hoverOnly" display="flex" gap="4px" fontWeight="500px">
             <Hide below="md">Export</Hide>
