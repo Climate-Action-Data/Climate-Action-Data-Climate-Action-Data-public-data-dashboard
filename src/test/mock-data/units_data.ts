@@ -1,14 +1,20 @@
-export const unitsData = [
+import { UnitSearchResult } from '@/@types/UnitSearchResult'
+
+export const unitsData: UnitSearchResult[] = [
   {
     id: `2393`,
     warehouseUnitId: `009ea808-f867-4a7b-bedf-4011b1db9c46`,
-    projectDeveloper: `Forestry Consulting Group S.A.S.`,
-    projectId: `29`,
-    projectName: `PROYECTO ASOCIATIVO PROGRAMÁTICO ZONA ANDINA Y COSTA ATLÁNTICA - FCG`,
-    projectStandard: `EcoRegistry`,
-    projectMethodology: `AR-ACM0003: Afforestation and reforestation of lands except wetlands`,
-    projectSector: `Agriculture; forestry and fishing`,
-    projectCountry: `Colombia`,
+    project: {
+      developer: `Forestry Consulting Group S.A.S.`,
+      id: `29`,
+      name: `PROYECTO ASOCIATIVO PROGRAMÁTICO ZONA ANDINA Y COSTA ATLÁNTICA - FCG`,
+      standard: `EcoRegistry`,
+      methodology: `AR-ACM0003: Afforestation and reforestation of lands except wetlands`,
+      sector: `Agriculture; forestry and fishing`,
+      country: `Colombia`,
+      type: `Reforestation and Revegetation`,
+      warehouseProjectId: `707339c9-56c8-4323-b883-2e8faaa8c340`,
+    },
     status: `Held`,
     issuanceDate: `2023-04-14T16:06:13.000Z`,
     retirementDate: `2023-08-03 07:05:23+00`,
@@ -20,13 +26,17 @@ export const unitsData = [
   {
     id: `239`,
     warehouseUnitId: `021ca0a5-e13f-4ac5-a8d8-ac96d75c7e69`,
-    projectDeveloper: `South Pole Carbon Asset Management `,
-    projectId: `12`,
-    projectName: `Proyecto de Mitigación Forestal Bonanza Verde`,
-    projectStandard: `EcoRegistry`,
-    projectMethodology: `AR-ACM0003: Afforestation and reforestation of lands except wetlands`,
-    projectSector: `Agriculture; forestry and fishing`,
-    projectCountry: `Colombia`,
+    project: {
+      developer: `South Pole Carbon Asset Management `,
+      id: `12`,
+      name: `Proyecto de Mitigación Forestal Bonanza Verde`,
+      standard: `EcoRegistry`,
+      methodology: `AR-ACM0003: Afforestation and reforestation of lands except wetlands`,
+      sector: `Agriculture; forestry and fishing`,
+      country: `Colombia`,
+      type: `Reforestation and Revegetation`,
+      warehouseProjectId: `a442a765-50f4-43dc-aa38-24e08d88c821`,
+    },
     status: `Retired`,
     annualEst: 20394,
     vintage: 2019,

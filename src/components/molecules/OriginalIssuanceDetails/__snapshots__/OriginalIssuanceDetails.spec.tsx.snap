@@ -24,7 +24,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       <p
         class="chakra-text css-0"
       >
-        --
+        South Pole Carbon Asset Management 
       </p>
     </div>
     <div
@@ -38,7 +38,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       <p
         class="chakra-text css-0"
       >
-        --
+        136cadbc-83a5-4c43-a172-baf7770796fc
       </p>
     </div>
     <div
@@ -66,7 +66,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       <p
         class="chakra-text css-0"
       >
-        --
+        1102
       </p>
     </div>
     <div
@@ -94,7 +94,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       <p
         class="chakra-text css-0"
       >
-        --
+        2019-12-16T02:50:47.000Z
       </p>
     </div>
   </div>
