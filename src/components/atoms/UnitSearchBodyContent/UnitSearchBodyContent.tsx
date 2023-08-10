@@ -45,20 +45,20 @@ export const UnitSearchBodyContent = (props: UnitSearchBodyContentProps) => {
           <Td title={unit?.retirementDate ? formatDate(unit.retirementDate, DateFormats.YYYY_MM_DD) : t(`noData`)}>
             <TableData data={unit?.retirementDate ? formatDate(unit.retirementDate, DateFormats.YYYY_MM_DD) : t(`noData`)} />
           </Td>
-          <Td title={unit.projectStandard}>
-            <TableData data={unit.projectStandard} />
+          <Td title={unit?.project?.standard}>
+            <TableData data={unit?.project?.standard} />
           </Td>
-          <Td title={unit.projectMethodology}>
-            <TableData data={unit.projectMethodology} />
+          <Td title={unit?.project?.methodology}>
+            <TableData data={unit?.project?.methodology} />
           </Td>
-          <Td title={unit.projectSector}>
-            <TableData data={unit.projectSector} />
+          <Td title={unit?.project?.sector}>
+            <TableData data={unit?.project?.sector} />
           </Td>
-          <Td title={unit.projectCountry}>
-            <TableData data={unit.projectCountry} />
+          <Td title={unit?.project?.country}>
+            <TableData data={unit?.project?.country} />
           </Td>
-          <Td title={unit.correspondingAdjustment}>
-            <TableData data={unit.correspondingAdjustment} />
+          <Td title={unit?.correspondingAdjustment}>
+            <TableData data={unit?.correspondingAdjustment} />
           </Td>
           <Td minW="250px !important" title={unit.marketplace}>
             <TableData data={unit.marketplace} />
