@@ -9,6 +9,7 @@ import { KYOTO_PROTOCOL_START_YEAR } from '@/@types/CarbonStandards'
 import { YearsFilter } from '@/@types/ProjectSearchFilterValues'
 import FilterBarWrapper from '@/components/molecules/FilterBarWarpper/FilterBarWrapper'
 import SearchButton from '@/components/atoms/SearchButton/SearchButton'
+import { useRouter } from 'next/navigation'
 
 interface UnitFilterBarProps {
   isResultsPage?: boolean
@@ -25,6 +26,7 @@ const UnitFilterBar: FC<UnitFilterBarProps> = (props) => {
   const { getGovernanceData } = useEffects().searchFilters
   const { transformGovernanceDataToSearchFilterData } = useActions().searchFilters
   const { t } = useTranslation(`search`)
+  const router = useRouter()
 
   useEffect(() => {
     if (isEmpty) {
@@ -52,6 +54,10 @@ const UnitFilterBar: FC<UnitFilterBarProps> = (props) => {
 
   const handleSetUnitVintageYearFilter = (value: YearsFilter) => {
     setUnitVintageYearFilter(value)
+  }
+
+  const handleOnClick = () => {
+    router.push(`/filter/units`)
   }
 
   return (
@@ -100,7 +106,7 @@ const UnitFilterBar: FC<UnitFilterBarProps> = (props) => {
         </Stack>
         <Flex>
           <Spacer minWidth={`32px`} />
-          <SearchButton href={`/search/units`} isResultsPage={isResultsPage} />
+          <SearchButton href={`/search/units`} isResultsPage={isResultsPage} onClick={handleOnClick} />
         </Flex>
       </Stack>
     </FilterBarWrapper>

@@ -1,5 +1,5 @@
 import { changeHoverColor } from '@/utils/Stickify'
-import { Table, Tbody, Tr, Td, Flex, Menu, MenuButton, Button, Stack, Skeleton, Text, Box } from '@chakra-ui/react'
+import { Box, Button, Flex, Menu, MenuButton, Skeleton, Stack, Table, Tbody, Td, Text, Tr } from '@chakra-ui/react'
 import { MenuContent, MenuItemProps } from '@/components/atoms/MenuContent/MenuContent'
 import { BookmarkPlusIcon } from '../BookmarkPlusIcon/BookmarkPlusIcon'
 import { DownloadIcon } from '../DownloadIcon/DownloadIcon'
@@ -7,12 +7,13 @@ import { KebabMenuIcon } from '../KebabMenuIcon/KebabMenuIcon'
 import { EffectResponse } from '@/@types/EffectResponse'
 import { useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
-import { UnitSearchResult } from '@/@types/UnitSearchResult'
+import { UnitSearchResponse, UnitSearchResult } from '@/@types/UnitSearchResult'
 import { generateUnitUrl } from '@/utils/RequestHelpers'
 
 interface UnitSearchHeadContentProps {
-  unitResults?: EffectResponse<UnitSearchResult[]>
+  unitResults?: EffectResponse<UnitSearchResponse>
 }
+
 export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
   const { unitResults } = props
   const router = useRouter()
@@ -30,8 +31,16 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
   const generateMenuList = (unitWarehouseId: string, projectWarehouseId: string, unitStatus: string) => {
     const generatedUrl = generateUnitUrl(`${unitStatus}`)
     const menuList: MenuItemProps[] = [
-      { dataTestId: `view-unit-details`, onClick: () => router.push(`${generatedUrl}${unitWarehouseId}`), text: t(`projectMenu.viewUnit`) },
-      { dataTestId: `view-project-details`, onClick: () => router.push(`/project?id=${projectWarehouseId}`), text: t(`projectMenu.viewProject`) },
+      {
+        dataTestId: `view-unit-details`,
+        onClick: () => router.push(`${generatedUrl}${unitWarehouseId}`),
+        text: t(`projectMenu.viewUnit`),
+      },
+      {
+        dataTestId: `view-project-details`,
+        onClick: () => router.push(`/project?id=${projectWarehouseId}`),
+        text: t(`projectMenu.viewProject`),
+      },
       { dataTestId: `export-project`, icon: <DownloadIcon />, text: t(`projectMenu.exportProject`) },
       { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`) },
     ]
@@ -70,8 +79,8 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
   return (
     <Table variant="simple" className="searchTable">
       <Tbody borderRight="1px solid #B8BEC0">
-        {unitResults?.data ? (
-          generateTableRow(unitResults.data)
+        {unitResults?.data?.projects !== undefined ? (
+          generateTableRow(unitResults.data.projects)
         ) : (
           <Tr height="92px">
             <Td>

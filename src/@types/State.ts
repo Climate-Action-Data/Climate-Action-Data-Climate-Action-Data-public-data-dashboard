@@ -1,7 +1,7 @@
 import { EffectResponse } from './EffectResponse'
 import { ProjectSearchResponse } from './ProjectSearchResult'
 import { TimeframesData } from './Timeframe'
-import { UnitSearchResult } from './UnitSearchResult'
+import { UnitSearchResponse } from './UnitSearchResult'
 import { SubRegion } from './geojson'
 import { AllSearchFilterValues, ProjectSearchFilterValues, UnitSearchFilterValues } from '@/@types/ProjectSearchFilterValues'
 
@@ -95,11 +95,7 @@ export interface ProjectResultState {
 }
 
 export interface UnitResultState {
-  unitResults?: EffectResponse<UnitSearchResult[]>
-}
-
-export interface UnitResultState {
-  unitResults?: EffectResponse<UnitSearchResult[]>
+  unitResults?: EffectResponse<UnitSearchResponse>
 }
 
 export interface GovernanceResponseData {
