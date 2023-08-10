@@ -16,7 +16,6 @@ exports[`renders correctly 1`] = `
       >
         <button
           aria-controls="tabs-:r0:--tabpanel-0"
-          aria-disabled="false"
           aria-selected="true"
           class="chakra-tabs__tab css-3szwb2"
           data-index="0"
@@ -32,7 +31,6 @@ exports[`renders correctly 1`] = `
         </button>
         <button
           aria-controls="tabs-:r0:--tabpanel-1"
-          aria-disabled="false"
           aria-selected="false"
           class="chakra-tabs__tab css-z08854"
           data-index="1"
