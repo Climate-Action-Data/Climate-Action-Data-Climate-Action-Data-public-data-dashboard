@@ -205,7 +205,11 @@ exports[`ProjectFilterAndSearch renders correctly 1`] = `
             <div
               class="css-jmqhys"
             >
-              Crediting Period
+              <div
+                class="css-k008qs"
+              >
+                Crediting Period
+              </div>
               <div
                 class="css-17xejub"
               />
@@ -494,7 +498,11 @@ exports[`ProjectFilterAndSearch renders correctly and the filter-and-search-trig
             <div
               class="css-jmqhys"
             >
-              Crediting Period
+              <div
+                class="css-k008qs"
+              >
+                Crediting Period
+              </div>
               <div
                 class="css-17xejub"
               />

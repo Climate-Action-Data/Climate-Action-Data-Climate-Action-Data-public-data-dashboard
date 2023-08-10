@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Box, Flex, Spacer, Stack, StackDivider } from '@chakra-ui/react'
+import { Flex, Spacer, Stack, StackDivider } from '@chakra-ui/react'
 import { Link } from '@chakra-ui/next-js'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
@@ -9,6 +9,7 @@ import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import CreditingPeriodFilter from '@/components/molecules/CreditingPeriodFilter/CreditingPeriodFilter'
 import { KYOTO_PROTOCOL_START_DATE } from '@/@types/CarbonStandards'
 import { DatesFilter } from '@/@types/ProjectSearchFilterValues'
+import FilterBarWrapper from '@/components/molecules/FilterBarWarpper/FilterBarWrapper'
 
 const ProjectFilterBar: FC = () => {
   const {
@@ -51,18 +52,7 @@ const ProjectFilterBar: FC = () => {
   }
 
   return (
-    <Box
-      sx={{
-        color: `black`,
-        boxShadow: `2px 2px 8px 0px #0000001A;`,
-        minHeight: `min-content`,
-        borderRadius: `12px`,
-        background: `#FFFFFF`,
-        padding: `16px`,
-        marginX: `auto`,
-        w: [`100%`, null, null, `min-content`],
-      }}
-    >
+    <FilterBarWrapper>
       <Stack direction={[`column`, null, null, `row`]}>
         <Stack direction={[`column`, null, null, `row`]} divider={<StackDivider borderColor={`#B8BEC0`} />} width={[`100%`]}>
           <AutoCompleteCheckbox
@@ -120,7 +110,7 @@ const ProjectFilterBar: FC = () => {
           </Link>
         </Flex>
       </Stack>
-    </Box>
+    </FilterBarWrapper>
   )
 }
 

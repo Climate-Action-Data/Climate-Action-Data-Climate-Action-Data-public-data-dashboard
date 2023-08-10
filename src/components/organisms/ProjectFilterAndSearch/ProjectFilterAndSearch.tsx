@@ -5,8 +5,8 @@ import { VStack } from '@chakra-ui/react'
 import ProjectFilterBar from '@/components/organisms/ProjectFilterBar/ProjectFilterBar'
 import { MatchWordIcon } from '@/components/atoms/MatchWordIcon/MatchWordIcon'
 import { FilterIcon } from '@/components/atoms/FilterIcon/FilterIcon'
-import ProjectSearchBar from '@/components/organisms/ProjectSearchBar/ProjectSearchBar'
 import FilterAndSearchTrigger from '@/components/atoms/FilterAndSearchTrigger/FilterAndSearchTrigger'
+import ProjectUnitSearchBar from '@/components/organisms/ProjectUnitSearchBar/ProjectUnitSearchBar'
 
 const ProjectFilterAndSearch = () => {
   const { t } = useTranslation(`search`)
@@ -27,7 +27,7 @@ const ProjectFilterAndSearch = () => {
   const renderSearchBar = () => {
     return (
       <>
-        <ProjectSearchBar />
+        <ProjectUnitSearchBar isProjectSearch={true} />
         <FilterAndSearchTrigger icon={<FilterIcon />} label={t(`searchProjectsByFilters`)} handleOnClick={handleOnClick} />
       </>
     )

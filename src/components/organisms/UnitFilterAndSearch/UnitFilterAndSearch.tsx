@@ -4,8 +4,8 @@ import FilterAndSearchTrigger from '@/components/atoms/FilterAndSearchTrigger/Fi
 import { MatchWordIcon } from '@/components/atoms/MatchWordIcon/MatchWordIcon'
 import { FilterIcon } from '@/components/atoms/FilterIcon/FilterIcon'
 import { VStack } from '@chakra-ui/react'
-import UnitSearchBar from '@/components/organisms/UnitSearchBar/UnitSearchBar'
 import UnitFilterBar from '@/components/organisms/UnitFilterBar/UnitFilterBar'
+import ProjectUnitSearchBar from '@/components/organisms/ProjectUnitSearchBar/ProjectUnitSearchBar'
 
 const UnitFilterAndSearch = () => {
   const { t } = useTranslation(`search`)
@@ -26,7 +26,7 @@ const UnitFilterAndSearch = () => {
   const renderSearchBar = () => {
     return (
       <>
-        <UnitSearchBar />
+        <ProjectUnitSearchBar isProjectSearch={false} />
         <FilterAndSearchTrigger icon={<FilterIcon />} label={t(`searchUnitsByFilters`)} handleOnClick={handleOnClick} />
       </>
     )

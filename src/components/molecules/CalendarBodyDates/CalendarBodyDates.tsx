@@ -19,6 +19,10 @@ const CalendarBodyDates: FC<CalendarBodyDatesProps> = (props) => {
     return !selectable ? `transparent` : background
   }
 
+  const generateDateButtonColor = (selected: boolean) => {
+    return selected ? `white` : `black`
+  }
+
   const generateDateElements = () => {
     const result: ReactElement[] = []
 
@@ -27,23 +31,23 @@ const CalendarBodyDates: FC<CalendarBodyDatesProps> = (props) => {
         const key = `${calendar.month}${calendar.year}${weekIndex}${index}`
         if (dateObj === ``) {
           result.push(<WrapItem key={key} width={`calc(100% / 7)`} />)
-        } else {
-          const { date, selected, selectable, today } = dateObj
-          const background = generateDateColor(today, selected, selectable)
-          result.push(
-            <WrapItem key={key} boxSize={`48px`} justifyContent={`center`}>
-              {selectable ? (
-                <Button variant={`calendarDate`} color={selected ? `white` : `black`} backgroundColor={background} {...getDateProps({ dateObj })}>
-                  {date.getDate()}
-                </Button>
-              ) : (
-                <Button variant={`calendarDate`} color={selected ? `white` : `black`} isDisabled backgroundColor={background} {...getDateProps({ dateObj })}>
-                  {date.getDate()}
-                </Button>
-              )}
-            </WrapItem>,
-          )
+          return
         }
+        const { date, selected, selectable, today } = dateObj
+        const background = generateDateColor(today, selected, selectable)
+        result.push(
+          <WrapItem key={key} boxSize={`48px`} justifyContent={`center`}>
+            {selectable ? (
+              <Button variant={`calendarDate`} color={generateDateButtonColor(selected)} backgroundColor={background} {...getDateProps({ dateObj })}>
+                {date.getDate()}
+              </Button>
+            ) : (
+              <Button variant={`calendarDate`} color={generateDateButtonColor(selected)} isDisabled backgroundColor={background} {...getDateProps({ dateObj })}>
+                {date.getDate()}
+              </Button>
+            )}
+          </WrapItem>,
+        )
       }),
     )
     return result

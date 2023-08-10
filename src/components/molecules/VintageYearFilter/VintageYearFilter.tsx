@@ -37,16 +37,11 @@ const VintageYearFilter: FC<VintageYearFilterProp> = (prop) => {
     if (minimumYear && maximumYear) {
       if (minimumYear <= maximumYear) {
         onYearChange({ maxYear: maximumYear, minYear: minimumYear })
-        return
       }
-    }
-    if (minimumYear) {
+    } else if (minimumYear) {
       onYearChange({ minYear: minimumYear })
-      return
-    }
-    if (maximumYear) {
+    } else if (maximumYear) {
       onYearChange({ maxYear: maximumYear })
-      return
     }
   }
 

@@ -13,7 +13,11 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter and open it 1`] =
     <div
       class="css-jmqhys"
     >
-      label
+      <div
+        class="css-k008qs"
+      >
+        label
+      </div>
       <div
         class="css-17xejub"
       />
@@ -171,7 +175,11 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter and open the date
     <div
       class="css-jmqhys"
     >
-      label
+      <div
+        class="css-k008qs"
+      >
+        label
+      </div>
       <div
         class="css-17xejub"
       />
@@ -329,7 +337,11 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
     <div
       class="css-jmqhys"
     >
-      Up to 2023/08/01
+      <div
+        class="css-k008qs"
+      >
+        Up to 2023/08/01
+      </div>
       <div
         class="css-17xejub"
       />
@@ -487,7 +499,11 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
     <div
       class="css-jmqhys"
     >
-      2023/08/01 and later
+      <div
+        class="css-k008qs"
+      >
+        2023/08/01 and later
+      </div>
       <div
         class="css-17xejub"
       />
@@ -645,7 +661,12 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
     <div
       class="css-jmqhys"
     >
-      2023/08/01 - 2023/08/01
+      <div
+        class="css-k008qs"
+      >
+        2023/08/01 -
+2023/08/01
+      </div>
       <div
         class="css-17xejub"
       />
