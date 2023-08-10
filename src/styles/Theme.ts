@@ -12,6 +12,7 @@ import {
   dropdownSelected,
   dropdownUnselected,
   hoverOnly,
+  hoverOnlyNoBold,
   lightGray,
   lightGrayRound,
   lightGrayRound32,
@@ -23,10 +24,10 @@ import { Aeonik, AeonikFono } from '@/styles/fonts'
 import { Checkbox } from '@/styles/Checkbox'
 import { cardSection, cardSectionNoMargin, cardSectionNoMarginNoPadding, filterCardSection, searchBar } from '@/styles/Section'
 import fontSizes from './FontSizes'
-import { Text } from './Text'
+import { Text, headingAeonik } from './Text'
 import { Input } from '@/styles/Input'
 import { paginationBar } from './PaginationBar'
-import { searchTable } from './SearchTable'
+import { searchTable, searchTableSmall } from './SearchTable'
 import { menuWhite } from './Menu'
 import { statMain } from './Stat'
 import { tagTheme } from '@/styles/Tag'
@@ -64,6 +65,7 @@ const theme = extendTheme({
         lightGray,
         lightGrayRound32,
         hoverOnly,
+        hoverOnlyNoBold,
         accentPrimary32,
         textLink,
         underlinedLink,
@@ -74,6 +76,9 @@ const theme = extendTheme({
         calendarAction,
         calendarDate,
       },
+    },
+    Heading: {
+      variants: { aeonik: headingAeonik },
     },
     Stat: {
       variants: {
@@ -205,6 +210,7 @@ const theme = extendTheme({
         boxShadow: `0 0 0 1px var(--chakra-colors-green-800) !important`,
       },
       ...searchTable,
+      ...searchTableSmall,
     }),
   },
 })

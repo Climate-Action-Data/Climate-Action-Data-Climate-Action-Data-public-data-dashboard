@@ -1,0 +1,355 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RetirementDetails renders correctly issuances 1`] = `
+<div>
+  <div
+    class="css-ejqwgx"
+  >
+    <div
+      class="css-h9i6sp"
+    >
+      <div
+        class="css-1i18okm"
+      >
+        <h3
+          class="chakra-heading css-zux3ex"
+        >
+          Issuances
+        </h3>
+      </div>
+    </div>
+    <table
+      class="chakra-table searchTableSmall css-0"
+    >
+      <thead
+        class="css-0"
+      >
+        <tr
+          class="css-0"
+        >
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Vintage
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Quantity
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Units Available
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Verification Report Date
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="css-0"
+      />
+    </table>
+  </div>
+</div>
+`;
+
+exports[`RetirementDetails renders correctly with empty array 1`] = `
+<div>
+  <div
+    class="css-ejqwgx"
+  >
+    <div
+      class="css-h9i6sp"
+    >
+      <div
+        class="css-1i18okm"
+      >
+        <h3
+          class="chakra-heading css-zux3ex"
+        >
+          Issuances
+        </h3>
+      </div>
+    </div>
+    <table
+      class="chakra-table searchTableSmall css-0"
+    >
+      <thead
+        class="css-0"
+      >
+        <tr
+          class="css-0"
+        >
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Vintage
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Quantity
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Units Available
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+          <th
+            class="css-0"
+          >
+            <div
+              class="css-0"
+            >
+              Verification Report Date
+              <div
+                class="chakra-stack css-1yu3riu"
+              >
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortAsc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  class="chakra-icon css-18gm00e"
+                  data-testid="sortDesc"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="css-0"
+      />
+    </table>
+  </div>
+</div>
+`;

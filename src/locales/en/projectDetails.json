@@ -20,6 +20,7 @@
     "status": "Status",
     "statusUpdated": "Status Updated On",
     "availableUnits": "Total Available Units",
+    "availableVintages": "Available Vintages",
     "issuances": "Total Issuances",
     "retirememts": "Total Retirements",
     "estimatedUnits": "Annual Estimated Units",
@@ -55,8 +56,16 @@
     "verificationApproach": "Verification Approach",
     "verificationPeriod": "Verification Period"
   },
+  "issuances": {
+    "title": "Issuances",
+    "vintage":  "Vintage",
+    "quantity": "Quantity",
+    "unitsAvailable": "Units Available",
+    "verificationReportDate": "Verification Report Date"
+  },
   "viewHistory": "View History",
   "viewMore": "View More",
+  "moreDetails": "More Details",
   "viewLess": "View Less",
   "scroll": "Scroll to read more",
   "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum ex vel blandit congue. Integer turpis lectus, porttitor sed tellus et, rhoncus suscipit lorem. Donec quis ante vitae mi commodo ultrices. Pellentesque accumsan magna enim, nec venenatis sapien vestibulum vitae.",

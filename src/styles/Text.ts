@@ -1,3 +1,6 @@
+import { defineStyle } from '@chakra-ui/react'
+import { Aeonik } from './fonts'
+
 export const Text = {
   baseStyle: {
     fontSize: `14px`,
@@ -10,3 +13,8 @@ export const Text = {
     },
   },
 }
+
+export const headingAeonik = defineStyle({
+  fontFamily: Aeonik.style.fontFamily,
+  fontWeight: `500`,
+})
