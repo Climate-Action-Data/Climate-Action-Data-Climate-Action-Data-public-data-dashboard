@@ -19,9 +19,108 @@ exports[`RetirementDetails renders correctly issuances 1`] = `
       </div>
     </div>
     <div
-      class="css-1ma1xtl"
+      class="css-xsnn5"
     >
-      No retirement data available for this issuance
+      <table
+        class="chakra-table searchTableSmall css-0"
+      >
+        <thead
+          class="css-893o8r"
+        >
+          <tr
+            class="css-0"
+          >
+            <th
+              class="css-0"
+            >
+              <div
+                class="css-0"
+              >
+                Quantity
+                <div
+                  class="chakra-stack css-1yu3riu"
+                >
+                  <svg
+                    class="chakra-icon css-18gm00e"
+                    data-testid="sortAsc"
+                    focusable="false"
+                    viewBox="0 0 8 4"
+                  >
+                    <path
+                      d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="chakra-icon css-18gm00e"
+                    data-testid="sortDesc"
+                    focusable="false"
+                    viewBox="0 0 8 4"
+                  >
+                    <path
+                      d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </th>
+            <th
+              class="css-0"
+            >
+              <div
+                class="css-0"
+              >
+                Retirement Notes
+                <div
+                  class="chakra-stack css-1yu3riu"
+                >
+                  <svg
+                    class="chakra-icon css-18gm00e"
+                    data-testid="sortAsc"
+                    focusable="false"
+                    viewBox="0 0 8 4"
+                  >
+                    <path
+                      d="M3.99911 0.1923L0.191406 4H7.80681L3.99911 0.1923Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="chakra-icon css-18gm00e"
+                    data-testid="sortDesc"
+                    focusable="false"
+                    viewBox="0 0 8 4"
+                  >
+                    <path
+                      d="M3.99911 3.8077L0.191406 0H7.80681L3.99911 3.8077Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="css-0"
+        >
+          <tr
+            class="noClick css-1ow40j4"
+          >
+            <td
+              class="css-0"
+            >
+              191
+            </td>
+            <td
+              class="css-0"
+            >
+              --
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

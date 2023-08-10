@@ -1,4 +1,4 @@
-import { IssuanceUnit, ProjectDetails } from '@/@types/ProjectDetails'
+import { Issuance, IssuanceUnit, ProjectDetails } from '@/@types/ProjectDetails'
 import { UnitStatus } from '@/@types/Unit'
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
 import { IssuanceTable } from '@/components/molecules/IssuanceTable/IssuanceTable'
@@ -11,6 +11,16 @@ interface IssuancesRetirementsProps {
   project: ProjectDetails
 }
 
+const getRetiredUnits = (issuances: Issuance[], issuanceId: string) => {
+  const issuance = issuances.find((issuance) => issuance.id === issuanceId)
+  if (issuance?.units) {
+    const units = issuance.units.filter((unit) => unit.status === UnitStatus.RETIRED)
+    return units
+  } else {
+    return []
+  }
+}
+
 export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
   const { project } = props
   const [selectedRetirements, setSelectedRetirements] = useState<IssuanceUnit[] | undefined>(undefined)
@@ -18,10 +28,7 @@ export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
   const { t: tHome } = useTranslation(`home`)
 
   const handleClick = (issuanceId: string) => {
-    const issuance = project.issuances.find((issuance) => issuance.id === issuanceId)
-    if (issuance) {
-      setSelectedRetirements(issuance.units.filter((unit) => unit.status === UnitStatus.RETIRED))
-    }
+    setSelectedRetirements(getRetiredUnits(project.issuances, issuanceId))
   }
 
   return (
