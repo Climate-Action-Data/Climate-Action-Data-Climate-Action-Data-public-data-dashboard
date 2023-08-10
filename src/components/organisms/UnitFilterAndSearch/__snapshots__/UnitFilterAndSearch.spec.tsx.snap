@@ -6,7 +6,7 @@ exports[`UnitFilterBar renders correctly 1`] = `
     class="chakra-stack css-8t7d9a"
   >
     <div
-      class="css-1rivlx7"
+      class="css-1mjj88o"
     >
       <div
         class="chakra-stack css-18mjik"
@@ -57,7 +57,7 @@ exports[`UnitFilterBar renders correctly 1`] = `
             />
           </div>
           <div
-            class="chakra-stack__divider css-1mn8x5k"
+            class="chakra-stack__divider css-1psh3p6"
           />
           <button
             aria-controls="popover-content-:r3:"
@@ -102,7 +102,7 @@ exports[`UnitFilterBar renders correctly 1`] = `
             />
           </div>
           <div
-            class="chakra-stack__divider css-1mn8x5k"
+            class="chakra-stack__divider css-1psh3p6"
           />
           <button
             aria-controls="popover-content-:r5:"
@@ -147,7 +147,7 @@ exports[`UnitFilterBar renders correctly 1`] = `
             />
           </div>
           <div
-            class="chakra-stack__divider css-1mn8x5k"
+            class="chakra-stack__divider css-1psh3p6"
           />
           <button
             aria-controls="popover-content-:r7:"
@@ -192,7 +192,7 @@ exports[`UnitFilterBar renders correctly 1`] = `
             />
           </div>
           <div
-            class="chakra-stack__divider css-1mn8x5k"
+            class="chakra-stack__divider css-1psh3p6"
           />
           <button
             aria-controls="popover-content-:r9:"
@@ -228,295 +228,6 @@ exports[`UnitFilterBar renders correctly 1`] = `
             <section
               class="chakra-popover__content css-1j9y0nx"
               id="popover-content-:r9:"
-              role="dialog"
-              style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-              tabindex="-1"
-            />
-          </div>
-        </div>
-        <div
-          class="css-k008qs"
-        >
-          <div
-            class="css-1lkwiwl"
-          />
-          <a
-            class="chakra-link css-183olx0"
-            href="/search/units"
-          >
-            <div
-              class="css-70qvj9"
-            >
-              Search
-              <svg
-                class="chakra-icon css-1hrwg97"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <button
-      class="chakra-button css-1tebppt"
-      data-testid="filter-and-search-trigger"
-      type="button"
-    >
-      Search units by keywords
-      <span
-        class="chakra-button__icon css-1hzyiq5"
-      >
-        <svg
-          aria-hidden="true"
-          class="chakra-icon css-n059si"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M3.30773 18.5246C2.80901 18.5246 2.38305 18.348 2.02985 17.9948C1.67662 17.6416 1.5 17.2156 1.5 16.7169V15.0246C1.5 14.8118 1.5718 14.6336 1.7154 14.49C1.85898 14.3464 2.03718 14.2746 2.25 14.2746C2.46282 14.2746 2.64102 14.3464 2.7846 14.49C2.9282 14.6336 3 14.8118 3 15.0246V16.7169C3 16.8066 3.02885 16.8804 3.08655 16.9381C3.14425 16.9958 3.21798 17.0246 3.30773 17.0246H20.6923C20.782 17.0246 20.8558 16.9958 20.9135 16.9381C20.9711 16.8804 21 16.8066 21 16.7169V15.0246C21 14.8118 21.0718 14.6336 21.2154 14.49C21.359 14.3464 21.5372 14.2746 21.75 14.2746C21.9628 14.2746 22.141 14.3464 22.2846 14.49C22.4282 14.6336 22.5 14.8118 22.5 15.0246V16.7169C22.5 17.2156 22.3234 17.6416 21.9702 17.9948C21.617 18.348 21.191 18.5246 20.6923 18.5246H3.30773ZM7.48463 15.215C6.71924 15.215 6.11443 15.0121 5.6702 14.6063C5.22598 14.2006 5.00388 13.6503 5.00388 12.9554C5.00388 12.2554 5.26348 11.6862 5.7827 11.2477C6.30193 10.8092 6.97373 10.59 7.7981 10.59C8.1622 10.59 8.50835 10.6224 8.83655 10.6871C9.16475 10.7519 9.44873 10.8509 9.68848 10.9842V10.5381C9.68848 9.99192 9.53271 9.56948 9.22117 9.27076C8.90962 8.97203 8.46795 8.82266 7.89615 8.82266C7.62693 8.82266 7.37341 8.86016 7.13558 8.93516C6.89776 9.01016 6.67116 9.12074 6.45577 9.26691C6.33141 9.35793 6.19615 9.40857 6.05 9.41883C5.90385 9.42908 5.7718 9.38549 5.65385 9.28806C5.53592 9.19063 5.46829 9.06883 5.45098 8.92268C5.43368 8.77653 5.48208 8.65282 5.59618 8.55153C5.90258 8.28743 6.24553 8.0916 6.62503 7.96403C7.00451 7.83647 7.43014 7.77268 7.90193 7.77268C8.88398 7.77268 9.62596 8.01532 10.1279 8.50058C10.6298 8.98583 10.8808 9.69833 10.8808 10.6381V14.4092C10.8808 14.5708 10.8243 14.7079 10.7115 14.8208C10.5987 14.9336 10.4615 14.99 10.3 14.99C10.1282 14.99 9.98591 14.9336 9.87308 14.8208C9.76026 14.7079 9.70385 14.5656 9.70385 14.3939V14.0631H9.61925C9.39617 14.4349 9.10289 14.7198 8.73943 14.9179C8.37598 15.116 7.95771 15.215 7.48463 15.215ZM8.0154 11.5631C7.45002 11.5631 7.00963 11.6849 6.69423 11.9285C6.37884 12.172 6.22115 12.5111 6.22115 12.9458C6.22115 13.324 6.35096 13.6269 6.61058 13.8544C6.87019 14.082 7.20962 14.1958 7.62885 14.1958C8.21347 14.1958 8.70289 13.9826 9.09713 13.5564C9.49136 13.1301 9.68848 12.6022 9.68848 11.9727C9.46156 11.8394 9.19489 11.7378 8.88847 11.6679C8.58206 11.598 8.29103 11.5631 8.0154 11.5631ZM16.123 15.2246C15.5166 15.2246 15.0295 15.0938 14.6615 14.8323C14.2936 14.5708 14.0404 14.3182 13.9019 14.0746H13.8365V14.5631C13.8365 14.7182 13.7817 14.8506 13.6721 14.9602C13.5625 15.0698 13.4301 15.1246 13.275 15.1246C13.1199 15.1246 12.9834 15.0656 12.8654 14.9477C12.7475 14.8297 12.6885 14.6932 12.6885 14.5381V5.58613C12.6885 5.41435 12.7475 5.26948 12.8654 5.15153C12.9834 5.03358 13.1282 4.97461 13.3 4.97461C13.4718 4.97461 13.6166 5.03358 13.7346 5.15153C13.8525 5.26948 13.9115 5.41435 13.9115 5.58613V8.05923L13.8365 9.05923H13.9019C14.0288 8.86052 14.2721 8.61918 14.6317 8.33521C14.9913 8.05123 15.4917 7.90923 16.1327 7.90923C17.1032 7.90923 17.8743 8.26373 18.4461 8.97271C19.0179 9.68168 19.3038 10.5554 19.3038 11.5939C19.3038 12.6195 19.0221 13.481 18.4586 14.1785C17.8952 14.8759 17.1166 15.2246 16.123 15.2246ZM15.975 9.04961C15.3212 9.04961 14.8013 9.30185 14.4154 9.80633C14.0295 10.3108 13.8365 10.9015 13.8365 11.5785C13.8365 12.2656 14.0295 12.8573 14.4154 13.3535C14.8013 13.8496 15.3212 14.0977 15.975 14.0977C16.6288 14.0977 17.14 13.8544 17.5086 13.3679C17.8772 12.8814 18.0615 12.2849 18.0615 11.5785C18.0615 10.872 17.8772 10.274 17.5086 9.78423C17.14 9.29448 16.6288 9.04961 15.975 9.04961Z"
-            fill="currentColor"
-          />
-        </svg>
-      </span>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`UnitFilterBar renders correctly and the filter-and-search-trigger was clicked 1`] = `
-<div>
-  <div
-    class="chakra-stack css-8t7d9a"
-  >
-    <div
-      class="css-1rivlx7"
-    >
-      <div
-        class="chakra-stack css-18mjik"
-      >
-        <div
-          class="chakra-stack css-17z0ye3"
-        >
-          <button
-            aria-controls="popover-content-:rl:"
-            aria-expanded="false"
-            aria-haspopup="dialog"
-            class="chakra-button css-4xx2wk"
-            id="popover-trigger-:rl:"
-            type="button"
-          >
-            <div
-              class="css-jmqhys"
-            >
-              Unit Status
-              <div
-                class="css-1gq8co7"
-              />
-              <div
-                class="css-17xejub"
-              />
-              <svg
-                class="chakra-icon css-c0air1"
-                focusable="false"
-                viewBox="0 0 8 4"
-              >
-                <path
-                  d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </button>
-          <div
-            class="chakra-popover__popper css-0"
-            style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-          >
-            <section
-              class="chakra-popover__content css-gt8u74"
-              id="popover-content-:rl:"
-              role="dialog"
-              style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-              tabindex="-1"
-            />
-          </div>
-          <div
-            class="chakra-stack__divider css-1mn8x5k"
-          />
-          <button
-            aria-controls="popover-content-:rn:"
-            aria-expanded="false"
-            aria-haspopup="dialog"
-            class="chakra-button css-4xx2wk"
-            id="popover-trigger-:rn:"
-            type="button"
-          >
-            <div
-              class="css-jmqhys"
-            >
-              Standard
-              <div
-                class="css-1gq8co7"
-              />
-              <div
-                class="css-17xejub"
-              />
-              <svg
-                class="chakra-icon css-c0air1"
-                focusable="false"
-                viewBox="0 0 8 4"
-              >
-                <path
-                  d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </button>
-          <div
-            class="chakra-popover__popper css-0"
-            style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-          >
-            <section
-              class="chakra-popover__content css-gt8u74"
-              id="popover-content-:rn:"
-              role="dialog"
-              style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-              tabindex="-1"
-            />
-          </div>
-          <div
-            class="chakra-stack__divider css-1mn8x5k"
-          />
-          <button
-            aria-controls="popover-content-:rp:"
-            aria-expanded="false"
-            aria-haspopup="dialog"
-            class="chakra-button css-4xx2wk"
-            id="popover-trigger-:rp:"
-            type="button"
-          >
-            <div
-              class="css-jmqhys"
-            >
-              Sector
-              <div
-                class="css-1gq8co7"
-              />
-              <div
-                class="css-17xejub"
-              />
-              <svg
-                class="chakra-icon css-c0air1"
-                focusable="false"
-                viewBox="0 0 8 4"
-              >
-                <path
-                  d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </button>
-          <div
-            class="chakra-popover__popper css-0"
-            style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-          >
-            <section
-              class="chakra-popover__content css-gt8u74"
-              id="popover-content-:rp:"
-              role="dialog"
-              style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-              tabindex="-1"
-            />
-          </div>
-          <div
-            class="chakra-stack__divider css-1mn8x5k"
-          />
-          <button
-            aria-controls="popover-content-:rr:"
-            aria-expanded="false"
-            aria-haspopup="dialog"
-            class="chakra-button css-4xx2wk"
-            id="popover-trigger-:rr:"
-            type="button"
-          >
-            <div
-              class="css-jmqhys"
-            >
-              Country
-              <div
-                class="css-1gq8co7"
-              />
-              <div
-                class="css-17xejub"
-              />
-              <svg
-                class="chakra-icon css-c0air1"
-                focusable="false"
-                viewBox="0 0 8 4"
-              >
-                <path
-                  d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </button>
-          <div
-            class="chakra-popover__popper css-0"
-            style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-          >
-            <section
-              class="chakra-popover__content css-gt8u74"
-              id="popover-content-:rr:"
-              role="dialog"
-              style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-              tabindex="-1"
-            />
-          </div>
-          <div
-            class="chakra-stack__divider css-1mn8x5k"
-          />
-          <button
-            aria-controls="popover-content-:rt:"
-            aria-expanded="false"
-            aria-haspopup="dialog"
-            class="chakra-button css-4xx2wk"
-            id="popover-trigger-:rt:"
-            type="button"
-          >
-            <div
-              class="css-jmqhys"
-            >
-              Vintage Year
-              <div
-                class="css-17xejub"
-              />
-              <svg
-                class="chakra-icon css-c0air1"
-                focusable="false"
-                viewBox="0 0 8 4"
-              >
-                <path
-                  d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </button>
-          <div
-            class="chakra-popover__popper css-0"
-            style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-          >
-            <section
-              class="chakra-popover__content css-1j9y0nx"
-              id="popover-content-:rt:"
               role="dialog"
               style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
               tabindex="-1"

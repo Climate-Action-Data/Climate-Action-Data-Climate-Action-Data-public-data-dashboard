@@ -64,10 +64,8 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
   }
 
   const handleOnApplyClick = () => {
-    if (minimumDate && maximumDate) {
-      if (minimumDate <= maximumDate) {
-        applyFilters({ maxDate: maximumDate, minDate: minimumDate })
-      }
+    if (minimumDate && maximumDate && minimumDate <= maximumDate) {
+      applyFilters({ maxDate: maximumDate, minDate: minimumDate })
     } else if (minimumDate) {
       applyFilters({ minDate: minimumDate })
     } else if (maximumDate) {

@@ -34,7 +34,7 @@ const ProjectFilterAndSearch = () => {
   }
 
   return (
-    <VStack width={`100%`} gap={`32px`}>
+    <VStack width="100%" gap="32px">
       {showFilters && renderFilterBar()}
       {!showFilters && renderSearchBar()}
     </VStack>

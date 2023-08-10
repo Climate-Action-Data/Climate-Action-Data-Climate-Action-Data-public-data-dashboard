@@ -59,7 +59,7 @@ exports[`renders correctly 1`] = `
             class="chakra-stack css-8t7d9a"
           >
             <div
-              class="css-1rivlx7"
+              class="css-1mjj88o"
             >
               <div
                 class="chakra-stack css-18mjik"
@@ -110,7 +110,7 @@ exports[`renders correctly 1`] = `
                     />
                   </div>
                   <div
-                    class="chakra-stack__divider css-1mn8x5k"
+                    class="chakra-stack__divider css-1psh3p6"
                   />
                   <button
                     aria-controls="popover-content-:r4:"
@@ -155,7 +155,7 @@ exports[`renders correctly 1`] = `
                     />
                   </div>
                   <div
-                    class="chakra-stack__divider css-1mn8x5k"
+                    class="chakra-stack__divider css-1psh3p6"
                   />
                   <button
                     aria-controls="popover-content-:r6:"
@@ -200,7 +200,7 @@ exports[`renders correctly 1`] = `
                     />
                   </div>
                   <div
-                    class="chakra-stack__divider css-1mn8x5k"
+                    class="chakra-stack__divider css-1psh3p6"
                   />
                   <button
                     aria-controls="popover-content-:r8:"
@@ -245,7 +245,7 @@ exports[`renders correctly 1`] = `
                     />
                   </div>
                   <div
-                    class="chakra-stack__divider css-1mn8x5k"
+                    class="chakra-stack__divider css-1psh3p6"
                   />
                   <button
                     aria-controls="popover-content-:ra:"
@@ -356,7 +356,7 @@ exports[`renders correctly 1`] = `
             class="chakra-stack css-8t7d9a"
           >
             <div
-              class="css-1rivlx7"
+              class="css-1mjj88o"
             >
               <div
                 class="chakra-stack css-18mjik"
@@ -407,7 +407,7 @@ exports[`renders correctly 1`] = `
                     />
                   </div>
                   <div
-                    class="chakra-stack__divider css-1mn8x5k"
+                    class="chakra-stack__divider css-1psh3p6"
                   />
                   <button
                     aria-controls="popover-content-:re:"
@@ -452,7 +452,7 @@ exports[`renders correctly 1`] = `
                     />
                   </div>
                   <div
-                    class="chakra-stack__divider css-1mn8x5k"
+                    class="chakra-stack__divider css-1psh3p6"
                   />
                   <button
                     aria-controls="popover-content-:rg:"
@@ -497,7 +497,7 @@ exports[`renders correctly 1`] = `
                     />
                   </div>
                   <div
-                    class="chakra-stack__divider css-1mn8x5k"
+                    class="chakra-stack__divider css-1psh3p6"
                   />
                   <button
                     aria-controls="popover-content-:ri:"
@@ -542,7 +542,7 @@ exports[`renders correctly 1`] = `
                     />
                   </div>
                   <div
-                    class="chakra-stack__divider css-1mn8x5k"
+                    class="chakra-stack__divider css-1psh3p6"
                   />
                   <button
                     aria-controls="popover-content-:rk:"

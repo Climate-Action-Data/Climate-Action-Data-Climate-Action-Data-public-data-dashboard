@@ -15,7 +15,7 @@ exports[`YearInput renders a DateInput and type in a value later than maxDate 1`
       data-group="true"
     >
       <input
-        class="chakra-input css-p5mn3g"
+        class="chakra-input css-p8rns9"
         placeholder="yyyy"
         value="2024"
       />
@@ -39,7 +39,7 @@ exports[`YearInput renders a YearInput 1`] = `
       data-group="true"
     >
       <input
-        class="chakra-input css-p5mn3g"
+        class="chakra-input css-p8rns9"
         placeholder="yyyy"
         value="2023"
       />
@@ -63,7 +63,7 @@ exports[`YearInput renders a YearInput and type in a correct value 1`] = `
       data-group="true"
     >
       <input
-        class="chakra-input css-p5mn3g"
+        class="chakra-input css-p8rns9"
         placeholder="yyyy"
         value="2023"
       />
@@ -87,7 +87,7 @@ exports[`YearInput renders a YearInput and type in a value earlier than minYear 
       data-group="true"
     >
       <input
-        class="chakra-input css-p5mn3g"
+        class="chakra-input css-p8rns9"
         placeholder="yyyy"
         value="2022"
       />
@@ -111,7 +111,7 @@ exports[`YearInput renders a YearInput and type in a wrong value 1`] = `
       data-group="true"
     >
       <input
-        class="chakra-input css-p5mn3g"
+        class="chakra-input css-p8rns9"
         placeholder="yyyy"
         value=""
       />
@@ -135,7 +135,7 @@ exports[`YearInput renders a YearInput with undefined value 1`] = `
       data-group="true"
     >
       <input
-        class="chakra-input css-p5mn3g"
+        class="chakra-input css-p8rns9"
         placeholder="yyyy"
         value=""
       />

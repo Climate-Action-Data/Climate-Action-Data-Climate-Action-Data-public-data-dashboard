@@ -21,26 +21,12 @@ const YearInput: FC<YearInputProp> = (prop) => {
     setTextInputValue(value ? value?.toString() : ``)
   }, [value])
 
-  const inputConfig = {
-    height: `28px`,
-    padding: 0,
-    _active: { boxShadow: `none` },
-    border: `none`,
-    borderRadius: 0,
-    borderBottom: `solid`,
-    borderBottomWidth: `1px`,
-    _placeholder: { color: `lightGray.600` },
-  }
-
   const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value
     if (value === ``) {
       setTextInputValue(value)
     }
 
-    console.log(YEAR_INPUT_REGEX.test(value))
-    console.log(value)
-    console.log(YEAR_INPUT_REGEX.test(value))
     if (YEAR_INPUT_REGEX.test(value)) {
       setTextInputValue(value)
     }
@@ -66,18 +52,18 @@ const YearInput: FC<YearInputProp> = (prop) => {
   }
 
   return (
-    <VStack alignItems={`start`}>
+    <VStack alignItems="start">
       <Text>{label}</Text>
-      <InputGroup width={`143px`} alignItems={`top`}>
+      <InputGroup width="143px" alignItems="top">
         <Input
+          variant="yearInput"
           placeholder={DateFormats.YYYY}
-          borderBottomColor={`lightGray.600`}
+          borderBottomColor="lightGray.600"
           value={textInputValue}
           onChange={handleOnChange}
           onBlur={handleOnBlur}
           isInvalid={isInvalid}
-          errorBorderColor={`red`}
-          sx={{ ...inputConfig }}
+          errorBorderColor="red"
         />
       </InputGroup>
     </VStack>

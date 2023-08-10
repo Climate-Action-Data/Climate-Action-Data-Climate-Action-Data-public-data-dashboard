@@ -33,9 +33,6 @@ describe(`VintageYearFilter`, () => {
 
     await user.click(screen.getByText(tLabel2))
     await user.click(screen.getByTestId(`vintage-year-filter-apply`))
-
-    // await new Promise((r) => setTimeout(r, 5000))
-    // expect(container).toMatchSnapshot()
   })
 
   test(`renders a VintageYearFilter with a pre-selected min year and click on apply`, async () => {
@@ -51,9 +48,6 @@ describe(`VintageYearFilter`, () => {
 
     await user.click(screen.getByText(tLabel2))
     await user.click(screen.getByTestId(`vintage-year-filter-apply`))
-
-    // await new Promise((r) => setTimeout(r, 5000))
-    // expect(container).toMatchSnapshot()
   })
 
   test(`renders a VintageYearFilter with a pre-selected min year and click on clear`, async () => {
