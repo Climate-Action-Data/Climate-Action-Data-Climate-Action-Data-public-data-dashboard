@@ -5,21 +5,21 @@ import { LargeTextWithScroll } from '../LargeTextWithScroll/LargeTextWithScroll'
 import { ProjectTypeBanner } from '../ProjectTypeBanner/ProjectTypeBanner'
 
 export interface ProjectDetailHeaderProps {
-  id: string
-  title: string
+  id?: string
+  title?: string
   description?: string
-  location: string
-  type: string
+  location?: string
+  type?: string
 }
 
 export const ProjectDetailHeader = (props: ProjectDetailHeaderProps) => {
   const { id, title, description, location, type } = props
   const { t } = useTranslation(`projectDetails`)
-
+  const { t: tHome } = useTranslation(`home`)
   return (
     <Flex flexWrap="wrap" gap={6}>
       <Box position="relative" h="336px" flex={1}>
-        <ProjectTypeBanner projectType={extractProjectTypeFromString(type)} projectTypeText={type} />
+        <ProjectTypeBanner projectType={extractProjectTypeFromString(type)} projectTypeText={type ?? tHome(`noData`)} />
         <VStack
           background={`linear-gradient(0deg, rgba(0, 0, 0, 0.8) 33.85%, rgba(17, 17, 17, 0) 100%)`}
           borderRadius="8px"

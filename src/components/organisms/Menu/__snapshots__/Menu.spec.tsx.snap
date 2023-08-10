@@ -11,11 +11,16 @@ exports[`renders correctly 1`] = `
       <div
         class="css-70qvj9"
       >
-        <img
-          alt="logo"
-          class="chakra-image css-1tz19zq"
-          src="/img.jpg"
-        />
+        <a
+          class="chakra-link css-0"
+          href="/"
+        >
+          <img
+            alt="logo"
+            class="chakra-image css-1tz19zq"
+            src="/img.jpg"
+          />
+        </a>
       </div>
       <div
         class="css-1nwj029"

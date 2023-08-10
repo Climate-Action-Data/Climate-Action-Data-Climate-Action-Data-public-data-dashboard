@@ -1,13 +1,19 @@
+export interface UnitProject {
+  developer: string
+  name: string
+  warehouseProjectId: string
+  id: string
+  standard: string
+  methodology: string
+  sector: string
+  country?: string
+  type: string
+}
+
 export interface UnitSearchResult {
   id: string
   warehouseUnitId: string
-  projectDeveloper: string
-  projectId: string
-  projectName: string
-  projectStandard: string
-  projectMethodology: string
-  projectSector: string
-  projectCountry?: string
+  project: UnitProject
   status: string
   issuanceDate?: string
   retirementDate?: string
