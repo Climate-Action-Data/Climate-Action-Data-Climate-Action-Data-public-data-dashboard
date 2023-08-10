@@ -4,7 +4,7 @@ exports[`getImageAndText returns correct image and text for SDG1 1`] = `
 <div>
   <img
     alt="No Poverty"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -14,7 +14,7 @@ exports[`getImageAndText returns correct image and text for SDG2 1`] = `
 <div>
   <img
     alt="Zero Hunger"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -24,7 +24,7 @@ exports[`getImageAndText returns correct image and text for SDG3 1`] = `
 <div>
   <img
     alt="Good Health and Well-Being"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -34,7 +34,7 @@ exports[`getImageAndText returns correct image and text for SDG4 1`] = `
 <div>
   <img
     alt="Quality Education"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -44,7 +44,7 @@ exports[`getImageAndText returns correct image and text for SDG5 1`] = `
 <div>
   <img
     alt="Gender Equality"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -54,7 +54,7 @@ exports[`getImageAndText returns correct image and text for SDG6 1`] = `
 <div>
   <img
     alt="Clean Water and Sanitation"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -64,7 +64,7 @@ exports[`getImageAndText returns correct image and text for SDG7 1`] = `
 <div>
   <img
     alt="Affordable and Clean Energy"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -74,7 +74,7 @@ exports[`getImageAndText returns correct image and text for SDG8 1`] = `
 <div>
   <img
     alt="Decent Work and Economic Growth"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -84,7 +84,7 @@ exports[`getImageAndText returns correct image and text for SDG9 1`] = `
 <div>
   <img
     alt="Industry, Innovation and Infrastructure"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -94,7 +94,7 @@ exports[`getImageAndText returns correct image and text for SDG10 1`] = `
 <div>
   <img
     alt="Reduced Inequalities"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -104,7 +104,7 @@ exports[`getImageAndText returns correct image and text for SDG11 1`] = `
 <div>
   <img
     alt="Sustainable Cities and Communities"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -114,7 +114,7 @@ exports[`getImageAndText returns correct image and text for SDG12 1`] = `
 <div>
   <img
     alt="Responsible Consumption and Production"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -124,7 +124,7 @@ exports[`getImageAndText returns correct image and text for SDG13 1`] = `
 <div>
   <img
     alt="Climate Action"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -134,7 +134,7 @@ exports[`getImageAndText returns correct image and text for SDG14 1`] = `
 <div>
   <img
     alt="Life Below Water"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -144,7 +144,7 @@ exports[`getImageAndText returns correct image and text for SDG15 1`] = `
 <div>
   <img
     alt="Life on Land"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -154,7 +154,7 @@ exports[`getImageAndText returns correct image and text for SDG16 1`] = `
 <div>
   <img
     alt="Peace, Justice and Strong Institutions"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>
@@ -164,7 +164,7 @@ exports[`getImageAndText returns correct image and text for SDG17 1`] = `
 <div>
   <img
     alt="Partnerships for the Goals"
-    class="chakra-image css-1ngw63v"
+    class="chakra-image css-6gxpji"
     src="/img.jpg"
   />
 </div>

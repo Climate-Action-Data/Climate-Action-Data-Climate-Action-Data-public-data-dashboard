@@ -594,11 +594,41 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
         <p
           class="chakra-text css-0"
         >
-          More information in the project link. || Cercarbono Standard. || Sectors of project: Agriculture; forestry and fishing . || Methodologies of project: AR-ACM0003: Afforestation and reforestation of lands except wetlands . || Latest or current Validation Number: 1 . || Latest or current Verification Number: 1
+          <div
+            class="css-0"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              More information in the project link.
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              Cercarbono Standard.
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              Sectors of project: Agriculture; forestry and fishing .
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              Methodologies of project: AR-ACM0003: Afforestation and reforestation of lands except wetlands .
+            </p>
+            <button
+              class="chakra-button css-4xx2wk"
+              data-testid="verification-expand"
+              type="button"
+            >
+              View More
+            </button>
+          </div>
         </p>
       </div>
       <div
-        class="css-0"
+        class="css-tjtdba"
       >
         <p
           class="chakra-text css-1xi4xed"
@@ -613,32 +643,32 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
           >
             <img
               alt="Decent Work and Economic Growth"
-              class="chakra-image css-1ngw63v"
+              class="chakra-image css-6gxpji"
               src="/img.jpg"
             />
             <img
               alt="Life on Land"
-              class="chakra-image css-1ngw63v"
+              class="chakra-image css-6gxpji"
               src="/img.jpg"
             />
             <img
               alt="Climate Action"
-              class="chakra-image css-1ngw63v"
+              class="chakra-image css-6gxpji"
               src="/img.jpg"
             />
             <img
               alt="Industry, Innovation and Infrastructure"
-              class="chakra-image css-1ngw63v"
+              class="chakra-image css-6gxpji"
               src="/img.jpg"
             />
             <img
               alt="Affordable and Clean Energy"
-              class="chakra-image css-1ngw63v"
+              class="chakra-image css-6gxpji"
               src="/img.jpg"
             />
             <img
               alt="Quality Education"
-              class="chakra-image css-1ngw63v"
+              class="chakra-image css-6gxpji"
               src="/img.jpg"
             />
           </div>
@@ -913,11 +943,41 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
         <p
           class="chakra-text css-0"
         >
-          More information in the project link. || Cercarbono Standard. || Sectors of project: Agriculture; forestry and fishing . || Methodologies of project: AR-ACM0003: Afforestation and reforestation of lands except wetlands . || Latest or current Validation Number: 1 . || Latest or current Verification Number: 1
+          <div
+            class="css-0"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              More information in the project link.
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              Cercarbono Standard.
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              Sectors of project: Agriculture; forestry and fishing .
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              Methodologies of project: AR-ACM0003: Afforestation and reforestation of lands except wetlands .
+            </p>
+            <button
+              class="chakra-button css-4xx2wk"
+              data-testid="verification-expand"
+              type="button"
+            >
+              View More
+            </button>
+          </div>
         </p>
       </div>
       <div
-        class="css-0"
+        class="css-tjtdba"
       >
         <p
           class="chakra-text css-1xi4xed"

@@ -1,5 +1,5 @@
 import { EWebGoal } from '@/@types/EWebGoal'
-import { extractTitleFromUrl, capitalizeString, extractEWebGoalFromString, sanitizeString, extractProjectTypeFromString } from './TextConverter'
+import { extractTitleFromUrl, capitalizeString, extractEWebGoalFromString, sanitizeString, extractProjectTypeFromString, extractTagItemsFromTag } from './TextConverter'
 import { ProjectType } from '@/@types/ProjectDetails'
 
 const TEST_FULL_CAP = `LOREM`
@@ -79,5 +79,23 @@ describe(`extractProjectTypeFromString`, () => {
 
   test(`extract project type from string to be default`, () => {
     expect(extractProjectTypeFromString(DEFAULT_STRING)).toBe(ProjectType.DEFAULT)
+  })
+})
+
+const DEFAULT_TAG_TEXT = `My Tag || My Tag 2 || My Tag 3`
+const DEFAULT_TAG_TEXT_WITH_EMPTY = `My Tag || My Tag 2 || || My Tag 3`
+const DEFAULT_TAG_ARR = [`My Tag`, `My Tag 2`, `My Tag 3`]
+
+describe(`extractTagItemsFromTag`, () => {
+  test(`extract tag items from tag`, () => {
+    expect(extractTagItemsFromTag(DEFAULT_TAG_TEXT)).toEqual(DEFAULT_TAG_ARR)
+  })
+
+  test(`extract tag items from tag`, () => {
+    expect(extractTagItemsFromTag(DEFAULT_TAG_TEXT_WITH_EMPTY)).toEqual(DEFAULT_TAG_ARR)
+  })
+
+  test(`extract tag items from tag to be empty`, () => {
+    expect(extractTagItemsFromTag(undefined)).toEqual([])
   })
 })

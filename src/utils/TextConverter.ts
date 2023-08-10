@@ -36,3 +36,14 @@ export const extractProjectTypeFromString = (str: string | undefined) => {
   }
   return ProjectType.DEFAULT
 }
+
+export const extractTagItemsFromTag = (tags: string | undefined) => {
+  if (!tags) {
+    return []
+  }
+  const tagItems = tags
+    .split(`||`)
+    .map((tag) => tag.trim())
+    .filter(Boolean)
+  return Array.from(new Set(tagItems))
+}
