@@ -1,3 +1,4 @@
+import { generateRandomString } from '@/utils/GenerationHelpers'
 import { Box, Button, Hide, Text } from '@chakra-ui/react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -28,7 +29,7 @@ export const ExpandableList = (props: ExpandableListProps) => {
   const renderItemList = () => {
     return items
       .map((item, index) => {
-        return <Text key={`${items}-${index}`}>{item ?? tHome(`noData`)}</Text>
+        return <Text key={`expandable-${generateRandomString()}`}>{item ?? tHome(`noData`)}</Text>
       })
       .slice(0, elementToRender)
   }
