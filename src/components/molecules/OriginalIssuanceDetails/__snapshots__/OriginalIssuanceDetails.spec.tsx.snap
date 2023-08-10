@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RetirementDetails renders correctly with no project 1`] = `
+<div>
+  <div
+    class="chakra-skeleton css-1p3r0co"
+  />
+</div>
+`;
+
+exports[`RetirementDetails renders correctly with validation 1`] = `
+<div>
+  <div
+    class="css-5c35e0"
+  >
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Project Issued To
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        --
+      </p>
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Issuance Batch Serial N0.
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        --
+      </p>
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Vintage
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        2019
+      </p>
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Quantity Issued
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        --
+      </p>
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Unit Type
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        Reduction - nature
+      </p>
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Monitoring Period
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        --
+      </p>
+    </div>
+  </div>
+</div>
+`;

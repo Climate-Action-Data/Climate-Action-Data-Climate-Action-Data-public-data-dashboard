@@ -12,7 +12,7 @@ exports[`IssuancePage renders correctly 1`] = `
         class="css-1teq9s8"
       >
         <img
-          alt="default"
+          alt="--"
           class="chakra-image css-19vnwa0"
           src="/img.jpg"
         />
@@ -31,9 +31,7 @@ exports[`IssuancePage renders correctly 1`] = `
           </h2>
           <p
             class="chakra-text css-0"
-          >
-            France
-          </p>
+          />
         </div>
       </div>
     </div>
@@ -191,8 +189,9 @@ exports[`IssuancePage renders correctly 1`] = `
         <div
           class="chakra-container css-tqikoc"
         >
-          This is the placeholder for the issuance page
-           - 
+          <div
+            class="chakra-skeleton css-1p3r0co"
+          />
         </div>
       </div>
     </div>

@@ -24,7 +24,9 @@ export const Menu = (): React.JSX.Element => {
           {/* <Button position={`sticky`} top={0} colorScheme="gray" width={`56px`} height={`56px`} backgroundColor={isOpen ? `gray.200` : `gray.500`} onClick={onToggle}>
                         <HamburgerIcon color={`white`} />
                     </Button> */}
-          <Image marginX={`8px`} alt={t(`logo`)} height={`32px`} src={Logo.src} />
+          <Link href="/">
+            <Image marginX={`8px`} alt={t(`logo`)} height={`32px`} src={Logo.src} />
+          </Link>
         </Flex>
         <Box flex={1} textAlign="center">
           {t(`title`)}

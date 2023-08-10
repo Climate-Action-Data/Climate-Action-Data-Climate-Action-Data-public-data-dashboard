@@ -1,14 +1,16 @@
-export type UnitProject = {
-  warehouseProjectId: string
-  id: string
-  originProjectId: string
-  name: string
-}
+import { Validation } from './ProjectDetails'
+import { UnitProject } from './UnitSearchResult'
 
 export enum UnitStatus {
   RETIRED = `Retired`,
   HELD = `Held`,
   BUFFER = `Buffer`,
+}
+
+export type UnitIssuance = {
+  issuedTo: string
+  issuanceBatchSerial: string
+  quantityIssued: number
 }
 
 export type Unit = {
@@ -23,4 +25,9 @@ export type Unit = {
   vintage: number
   tags: string
   retirementNote?: string
+  usingEntity?: string
+  correspondingAdjustment?: string
+  monitoringPeriod: string
+  validation: Validation
+  issuance: UnitIssuance
 }

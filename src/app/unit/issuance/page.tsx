@@ -1,9 +1,9 @@
 'use client'
-import { ProjectType } from '@/@types/ProjectDetails'
 import { ESearchParams } from '@/@types/ProjectSearchResult'
 import { Unit } from '@/@types/Unit'
 import { ProjectDetailHeader } from '@/components/atoms/ProjectDetailHeader/ProjectDetailHeader'
 import { CardSection } from '@/components/molecules/CardSection/CardSection'
+import { OriginalIssuanceDetails } from '@/components/molecules/OriginalIssuanceDetails/OriginalIssuanceDetails'
 import { RetirementDetails } from '@/components/molecules/RetirementDetails/RetirementDetails'
 import { useEffects } from '@/overmind'
 import { Box, Container, Flex } from '@chakra-ui/react'
@@ -27,13 +27,10 @@ const IssuancePage: NextPage = () => {
       }
     })
   }, [])
-
-  const DEFAULT_COUNTRY = `France`
-
   return (
     <>
       <Box paddingBottom="40px">
-        <ProjectDetailHeader id={unit?.project.id ?? tHome(`noData`)} location={DEFAULT_COUNTRY} title={unit?.project?.name ?? tHome(`noData`)} type={ProjectType.DEFAULT} />
+        <ProjectDetailHeader id={unit?.project.id ?? tHome(`noData`)} location={unit?.project?.country} title={unit?.project?.name ?? tHome(`noData`)} type={unit?.project?.type} />
       </Box>
       <Flex flexDirection="column" minW="100%" gap="40px">
         <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.retirementDetails`) }}>
@@ -43,7 +40,7 @@ const IssuancePage: NextPage = () => {
         </CardSection>
         <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.originalIssuanceDetails`) }}>
           <Container padding={[`12px`, `24px`]} flex={2} variant="cardSectionNoMargin">
-            {t(`placeholderIssuance`)} - {unit?.warehouseUnitId}
+            <OriginalIssuanceDetails unit={unit} />
           </Container>
         </CardSection>
       </Flex>
