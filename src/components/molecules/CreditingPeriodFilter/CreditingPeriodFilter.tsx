@@ -15,10 +15,11 @@ interface CreditingPeriodFilterProp {
   latestDate?: Date
   dateFilter?: DatesFilter
   applyFilters: (payload: DatesFilter) => void
+  isResultsPage?: boolean
 }
 
 const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
-  const { label, earliestDate, latestDate, applyFilters, dateFilter } = prop
+  const { label, earliestDate, latestDate, applyFilters, dateFilter, isResultsPage } = prop
 
   const [minimumDate, setMinimumDate] = useState<Date | undefined>()
   const [maximumDate, setMaximumDate] = useState<Date | undefined>()
@@ -136,10 +137,17 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
     return label
   }
 
+  const generateVariant = () => {
+    if (isResultsPage) {
+      return dateFilter?.minDate || dateFilter?.maxDate ? `dropdownSelectedDark` : `dropdownUnselectedDark`
+    }
+    return dateFilter?.minDate || dateFilter?.maxDate ? `dropdownSelected` : `dropdownUnselected`
+  }
+
   return (
     <Popover gutter={0} isLazy placement={`bottom`} matchWidth onClose={handleOnClose}>
       <PopoverTrigger>
-        <Button variant={`dropdownUnselected`}>
+        <Button variant={generateVariant()}>
           <Flex fontWeight={`normal`} fontSize={`16px`} alignItems={`center`} grow={1}>
             <Flex>{renderLabel()}</Flex>
             <Spacer />

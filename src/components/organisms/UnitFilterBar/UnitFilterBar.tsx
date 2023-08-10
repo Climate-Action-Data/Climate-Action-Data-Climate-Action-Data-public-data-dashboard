@@ -10,7 +10,12 @@ import { YearsFilter } from '@/@types/ProjectSearchFilterValues'
 import FilterBarWrapper from '@/components/molecules/FilterBarWarpper/FilterBarWrapper'
 import SearchButton from '@/components/atoms/SearchButton/SearchButton'
 
-const UnitFilterBar: FC = () => {
+interface UnitFilterBarProps {
+  isResultsPage?: boolean
+}
+
+const UnitFilterBar: FC<UnitFilterBarProps> = (props) => {
+  const { isResultsPage } = props
   const {
     selectedUnitSearchFilterValues: { searchFilterValues: selectedSearchFilters },
     allSearchFilterValues: { searchFilterValues, isEmpty },
@@ -50,7 +55,7 @@ const UnitFilterBar: FC = () => {
   }
 
   return (
-    <FilterBarWrapper>
+    <FilterBarWrapper isResultsPage={isResultsPage}>
       <Stack direction={[`column`, null, null, `row`]}>
         <Stack direction={[`column`, null, null, `row`]} divider={<StackDivider borderColor="lightGray.400" />} width="100%">
           <AutoCompleteCheckbox
@@ -59,6 +64,7 @@ const UnitFilterBar: FC = () => {
             selectedFilters={selectedSearchFilters.unitStatus}
             noOfSelectedFilters={selectedSearchFilters.unitStatus.length}
             applyFilters={handleSetUnitStatusFilter}
+            isResultsPage={isResultsPage}
           />
           <AutoCompleteCheckbox
             label={t(`filterBar.standard`)}
@@ -66,14 +72,15 @@ const UnitFilterBar: FC = () => {
             selectedFilters={selectedSearchFilters.projectStatus}
             noOfSelectedFilters={selectedSearchFilters.projectStatus.length}
             applyFilters={handleSetUnitsStandardsFilter}
+            isResultsPage={isResultsPage}
           />
-
           <AutoCompleteCheckbox
             label={t(`filterBar.sector`)}
             options={searchFilterValues.sectors}
             selectedFilters={selectedSearchFilters.sectors}
             noOfSelectedFilters={selectedSearchFilters.sectors.length}
             applyFilters={handleSetUnitSectorFilter}
+            isResultsPage={isResultsPage}
           />
           <AutoCompleteCheckbox
             label={t(`filterBar.country`)}
@@ -81,17 +88,19 @@ const UnitFilterBar: FC = () => {
             selectedFilters={selectedSearchFilters.countries}
             noOfSelectedFilters={selectedSearchFilters.countries.length}
             applyFilters={handleSetUnitCountriesFilter}
+            isResultsPage={isResultsPage}
           />
           <VintageYearFilter
             label={t(`filterBar.vintageYear`)}
             yearFilter={selectedSearchFilters.vintageYear}
             earliestYear={KYOTO_PROTOCOL_START_YEAR}
             onYearChange={handleSetUnitVintageYearFilter}
+            isResultsPage={isResultsPage}
           />
         </Stack>
         <Flex>
           <Spacer minWidth={`32px`} />
-          <SearchButton href={`/search/units`} />
+          <SearchButton href={`/search/units`} isResultsPage={isResultsPage} />
         </Flex>
       </Stack>
     </FilterBarWrapper>

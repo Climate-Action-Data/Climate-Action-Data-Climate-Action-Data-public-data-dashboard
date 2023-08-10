@@ -3,7 +3,7 @@
 exports[`renders correctly with loaded data 1`] = `
 <div>
   <div
-    class="css-1mjj88o"
+    class="chakra-container css-0"
   >
     <div
       class="chakra-stack css-18mjik"
@@ -27,7 +27,7 @@ exports[`renders correctly with loaded data 1`] = `
               class="css-1gq8co7"
             />
             <div
-              class="css-1vzx6oo"
+              class="css-zmlf4"
             >
               <p
                 class="chakra-text css-11iqvn7"
@@ -81,7 +81,7 @@ exports[`renders correctly with loaded data 1`] = `
               class="css-1gq8co7"
             />
             <div
-              class="css-1vzx6oo"
+              class="css-zmlf4"
             >
               <p
                 class="chakra-text css-11iqvn7"
@@ -135,7 +135,7 @@ exports[`renders correctly with loaded data 1`] = `
               class="css-1gq8co7"
             />
             <div
-              class="css-1vzx6oo"
+              class="css-zmlf4"
             >
               <p
                 class="chakra-text css-11iqvn7"
@@ -189,7 +189,7 @@ exports[`renders correctly with loaded data 1`] = `
               class="css-1gq8co7"
             />
             <div
-              class="css-1vzx6oo"
+              class="css-zmlf4"
             >
               <p
                 class="chakra-text css-11iqvn7"
@@ -259,7 +259,7 @@ exports[`renders correctly with loaded data 1`] = `
           style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
         >
           <section
-            class="chakra-popover__content css-1j9y0nx"
+            class="chakra-popover__content css-yntw6i"
             id="popover-content-:rj:"
             role="dialog"
             style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
@@ -274,7 +274,7 @@ exports[`renders correctly with loaded data 1`] = `
           class="css-1lkwiwl"
         />
         <a
-          class="chakra-link css-183olx0"
+          class="chakra-link css-1vx4e4n"
           href="/search/units"
         >
           <div
@@ -302,7 +302,7 @@ exports[`renders correctly with loaded data 1`] = `
 exports[`renders correctly with no data 1`] = `
 <div>
   <div
-    class="css-1mjj88o"
+    class="chakra-container css-0"
   >
     <div
       class="chakra-stack css-18mjik"
@@ -522,7 +522,7 @@ exports[`renders correctly with no data 1`] = `
           style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
         >
           <section
-            class="chakra-popover__content css-1j9y0nx"
+            class="chakra-popover__content css-yntw6i"
             id="popover-content-:r9:"
             role="dialog"
             style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
@@ -537,7 +537,7 @@ exports[`renders correctly with no data 1`] = `
           class="css-1lkwiwl"
         />
         <a
-          class="chakra-link css-183olx0"
+          class="chakra-link css-1vx4e4n"
           href="/search/units"
         >
           <div

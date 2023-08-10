@@ -12,10 +12,11 @@ interface AutoCompleteCheckboxProps {
   options: string[]
   selectedFilters: string[]
   applyFilters: (values: string[]) => void
+  isResultsPage?: boolean
 }
 
 const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
-  const { label, options, applyFilters, noOfSelectedFilters, selectedFilters } = props
+  const { label, options, applyFilters, noOfSelectedFilters, selectedFilters, isResultsPage } = props
   const [selectedValues, setSelectedValues] = useState<string[]>([])
   const [searchInput, setSearchInput] = useState<string>(``)
   const { t } = useTranslation(`search`)
@@ -48,14 +49,21 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
     }
   }
 
+  const generateVariant = () => {
+    if (isResultsPage) {
+      return noOfSelectedFilters !== 0 ? `dropdownSelectedDark` : `dropdownUnselectedDark`
+    }
+    return noOfSelectedFilters !== 0 ? `dropdownSelected` : `dropdownUnselected`
+  }
+
   return (
     <Popover gutter={0} isLazy placement="bottom-start" matchWidth onClose={handleOnClose}>
       <PopoverTrigger>
-        <Button variant={noOfSelectedFilters !== 0 ? `dropdownSelected` : `dropdownUnselected`}>
+        <Button variant={generateVariant()}>
           <Flex fontWeight={`normal`} fontSize={`16px`} alignItems={`center`} grow={1}>
             {label}
             <Box width={`8px`} />
-            {noOfSelectedFilters !== 0 && <FilterCountIndicator count={noOfSelectedFilters} />}
+            {noOfSelectedFilters !== 0 && <FilterCountIndicator count={noOfSelectedFilters} isResultsPage={isResultsPage} />}
             <Spacer />
             <DropDownIcon />
           </Flex>

@@ -10,7 +10,12 @@ import { DatesFilter } from '@/@types/ProjectSearchFilterValues'
 import FilterBarWrapper from '@/components/molecules/FilterBarWarpper/FilterBarWrapper'
 import SearchButton from '@/components/atoms/SearchButton/SearchButton'
 
-const ProjectFilterBar: FC = () => {
+interface ProjectFilterBarProps {
+  isResultsPage?: boolean
+}
+
+const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
+  const { isResultsPage } = props
   const {
     allSearchFilterValues: { searchFilterValues, isEmpty },
     selectedProjectSearchFilterValues: { searchFilterValues: selectedSearchFilters },
@@ -51,7 +56,7 @@ const ProjectFilterBar: FC = () => {
   }
 
   return (
-    <FilterBarWrapper>
+    <FilterBarWrapper isResultsPage={isResultsPage}>
       <Stack direction={[`column`, null, null, `row`]}>
         <Stack direction={[`column`, null, null, `row`]} divider={<StackDivider borderColor="lightGray.400" />} width="100%">
           <AutoCompleteCheckbox
@@ -60,6 +65,7 @@ const ProjectFilterBar: FC = () => {
             selectedFilters={selectedSearchFilters.projectStatus}
             noOfSelectedFilters={selectedSearchFilters.projectStatus.length}
             applyFilters={handleProjectStatusFilter}
+            isResultsPage={isResultsPage}
           />
           <AutoCompleteCheckbox
             label={t(`filterBar.methodology`)}
@@ -67,6 +73,7 @@ const ProjectFilterBar: FC = () => {
             selectedFilters={selectedSearchFilters.methodologies}
             noOfSelectedFilters={selectedSearchFilters.methodologies.length}
             applyFilters={handleSetProjectMethodologiesFilter}
+            isResultsPage={isResultsPage}
           />
           <AutoCompleteCheckbox
             label={t(`filterBar.sector`)}
@@ -74,6 +81,7 @@ const ProjectFilterBar: FC = () => {
             selectedFilters={selectedSearchFilters.sectors}
             noOfSelectedFilters={selectedSearchFilters.sectors.length}
             applyFilters={handleSetProjectSectorsFilter}
+            isResultsPage={isResultsPage}
           />
           <AutoCompleteCheckbox
             label={t(`filterBar.country`)}
@@ -81,17 +89,19 @@ const ProjectFilterBar: FC = () => {
             selectedFilters={selectedSearchFilters.countries}
             noOfSelectedFilters={selectedSearchFilters.countries.length}
             applyFilters={handleSetProjectCountriesFilter}
+            isResultsPage={isResultsPage}
           />
           <CreditingPeriodFilter
             label={t(`filterBar.creditingPeriod`)}
             dateFilter={selectedSearchFilters.creditingPeriod}
             earliestDate={KYOTO_PROTOCOL_START_DATE}
             applyFilters={handleSetProjectCreditingPeriodFilter}
+            isResultsPage={isResultsPage}
           />
         </Stack>
         <Flex>
           <Spacer minWidth={`32px`} />
-          <SearchButton href={`/search/projects`} />
+          <SearchButton href={`/search/projects`} isResultsPage={isResultsPage} />
         </Flex>
       </Stack>
     </FilterBarWrapper>

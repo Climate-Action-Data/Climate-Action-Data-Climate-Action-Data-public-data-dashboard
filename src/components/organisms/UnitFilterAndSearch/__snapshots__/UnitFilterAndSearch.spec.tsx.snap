@@ -6,7 +6,7 @@ exports[`UnitFilterBar renders correctly 1`] = `
     class="chakra-stack css-8t7d9a"
   >
     <div
-      class="css-1mjj88o"
+      class="chakra-container css-0"
     >
       <div
         class="chakra-stack css-18mjik"
@@ -226,7 +226,7 @@ exports[`UnitFilterBar renders correctly 1`] = `
             style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
           >
             <section
-              class="chakra-popover__content css-1j9y0nx"
+              class="chakra-popover__content css-yntw6i"
               id="popover-content-:r9:"
               role="dialog"
               style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
@@ -241,7 +241,7 @@ exports[`UnitFilterBar renders correctly 1`] = `
             class="css-1lkwiwl"
           />
           <a
-            class="chakra-link css-183olx0"
+            class="chakra-link css-1vx4e4n"
             href="/search/units"
           >
             <div

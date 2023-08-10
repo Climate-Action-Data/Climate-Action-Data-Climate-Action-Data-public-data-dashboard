@@ -182,14 +182,26 @@ export const dropdownUnselected = defineStyle({
   backgroundColor: `white`,
   color: `lightGray.700`,
   _hover: { backgroundColor: `gray.50` },
-  _active: { backgroundColor: `#DBDEE0` },
 })
 
 export const dropdownSelected = defineStyle({
   width: [`100%`, null, null, `140px`, `176px`],
   backgroundColor: `#EAFDF2`,
   _hover: { backgroundColor: `#D5FBE5` },
-  _active: { backgroundColor: `#EAFDF2` },
+})
+
+export const dropdownUnselectedDark = defineStyle({
+  width: [`100%`, null, null, `calc((100vw - 32px)/7)`],
+  backgroundColor: `transparent`,
+  margin: 0,
+  color: `lightGray.50`,
+  _hover: { backgroundColor: `lightGray.800` },
+})
+
+export const dropdownSelectedDark = defineStyle({
+  width: [`100%`, null, null, `calc((100vw - 32px)/7)`],
+  backgroundColor: `green.900`,
+  _hover: { backgroundColor: `lightGray.800` },
 })
 
 export const calendarNavigation = defineStyle({
