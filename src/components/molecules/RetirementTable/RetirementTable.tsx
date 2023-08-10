@@ -23,18 +23,9 @@ export const RetirementTable = (props: RetirementTableProps) => {
     ))
   }
 
-  return (
-    <Flex direction="column" w="100%">
-      <Box borderBottom="2px solid" borderBottomColor="lightGray.700">
-        <Flex padding="0 24px" alignItems="center" height="56px">
-          <Heading variant={`aeonik`} color="lightGray.700" textTransform="uppercase" as="h3" size="16px">
-            {t(`issuances.retirememts`)}
-          </Heading>
-        </Flex>
-      </Box>
-      {!retirements ? (
-        <NoDataScreen message={t(`issuances.noIssuanceSelected`)} />
-      ) : retirements.length > 0 ? (
+  const renderTableBody = (retirements: IssuanceUnit[]) => {
+    if (retirements.length > 0) {
+      return (
         <Box overflowY="scroll" height="329px" maxH="329px">
           <Table variant="simple" className="searchTableSmall">
             <Thead outline="2px solid" outlineColor="lightGray.700" zIndex="4" top="0" position="sticky">
@@ -56,9 +47,22 @@ export const RetirementTable = (props: RetirementTableProps) => {
             <Tbody>{renderRetirementRow(retirements)}</Tbody>
           </Table>
         </Box>
-      ) : (
-        <NoDataScreen message={t(`issuances.noRetirementData`)} />
-      )}
+      )
+    } else {
+      return <NoDataScreen message={t(`issuances.noRetirementData`)} />
+    }
+  }
+
+  return (
+    <Flex direction="column" w="100%">
+      <Box borderBottom="2px solid" borderBottomColor="lightGray.700">
+        <Flex padding="0 24px" alignItems="center" height="56px">
+          <Heading variant={`aeonik`} color="lightGray.700" textTransform="uppercase" as="h3" size="16px">
+            {t(`issuances.retirememts`)}
+          </Heading>
+        </Flex>
+      </Box>
+      {!retirements ? <NoDataScreen message={t(`issuances.noIssuanceSelected`)} /> : renderTableBody(retirements)}
     </Flex>
   )
 }

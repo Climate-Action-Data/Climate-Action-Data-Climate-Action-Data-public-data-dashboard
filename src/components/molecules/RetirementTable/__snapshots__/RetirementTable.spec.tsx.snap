@@ -21,7 +21,7 @@ exports[`RetirementDetails renders correctly issuances 1`] = `
     <div
       class="css-1ma1xtl"
     >
-      Click on an issuance to display its corresponding retirements
+      No retirement data available for this issuance
     </div>
   </div>
 </div>
@@ -48,7 +48,7 @@ exports[`RetirementDetails renders correctly with empty array 1`] = `
     <div
       class="css-1ma1xtl"
     >
-      Click on an issuance to display its corresponding retirements
+      No retirement data available for this issuance
     </div>
   </div>
 </div>
