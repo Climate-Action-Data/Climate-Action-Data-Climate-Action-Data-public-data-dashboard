@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RetirementDetails renders correctly with message 1`] = `
+<div>
+  <div
+    class="css-1ma1xtl"
+  >
+    No data available
+  </div>
+</div>
+`;
+
+exports[`RetirementDetails renders correctly with no message 1`] = `
+<div>
+  <div
+    class="css-1ma1xtl"
+  >
+    --
+  </div>
+</div>
+`;
