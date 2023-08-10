@@ -13,6 +13,10 @@ export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
   const { t } = useTranslation(`projectDetails`)
   const { t: tHome } = useTranslation(`home`)
 
+  const handleClick = (issuanceId: string) => {
+    return issuanceId
+  }
+
   return (
     <>
       <Container padding={[`12px`, `24px`]} w={`100%`} variant="cardSectionNoMargin">
@@ -22,7 +26,7 @@ export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
         </SimpleGrid>
       </Container>
       <Container padding={0} flex={2} variant="cardSectionNoMargin">
-        <IssuanceTable issuances={project.issuances} />
+        <IssuanceTable onClick={handleClick} issuances={project.issuances} />
       </Container>
     </>
   )
