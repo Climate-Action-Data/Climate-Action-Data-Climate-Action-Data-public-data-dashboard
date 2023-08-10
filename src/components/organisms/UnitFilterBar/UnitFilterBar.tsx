@@ -1,15 +1,14 @@
 import { FC, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Flex, Spacer, Stack, StackDivider } from '@chakra-ui/react'
-import { Link } from '@chakra-ui/next-js'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
 import AutoCompleteCheckbox from '@/components/molecules/AutoCompleteCheckbox/AutoCompleteCheckbox'
-import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import VintageYearFilter from '@/components/molecules/VintageYearFilter/VintageYearFilter'
 import { KYOTO_PROTOCOL_START_YEAR } from '@/@types/CarbonStandards'
 import { YearsFilter } from '@/@types/ProjectSearchFilterValues'
 import FilterBarWrapper from '@/components/molecules/FilterBarWarpper/FilterBarWrapper'
+import SearchButton from '@/components/atoms/SearchButton/SearchButton'
 
 const UnitFilterBar: FC = () => {
   const {
@@ -92,22 +91,7 @@ const UnitFilterBar: FC = () => {
         </Stack>
         <Flex>
           <Spacer minWidth={`32px`} />
-          <Link
-            as={`button`}
-            variant={`accentPrimary32`}
-            padding={`8px 16px`}
-            width={`min-content`}
-            _hover={{ backgroundColor: `#24BD63` }}
-            _active={{ backgroundColor: `#1B8E4A` }}
-            href={`/search/units`}
-            fontSize={`16px`}
-            fontWeight={`medium`}
-          >
-            <Flex alignItems={`center`}>
-              {t(`search`)}
-              <SearchIcon width={`16px`} height={`16px`} marginLeft={`4px`} />
-            </Flex>
-          </Link>
+          <SearchButton href={`/search/units`} />
         </Flex>
       </Stack>
     </FilterBarWrapper>
