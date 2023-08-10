@@ -95,6 +95,11 @@ export const searchTableSmall = defineStyle({
           cursor: `pointer`,
         },
       },
+      '.noClick': {
+        _hover: {
+          cursor: `default`,
+        },
+      },
     },
   },
 })

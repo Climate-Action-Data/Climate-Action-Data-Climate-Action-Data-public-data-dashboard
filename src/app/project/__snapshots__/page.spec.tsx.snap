@@ -676,9 +676,39 @@ exports[`renders correctly 1`] = `
           class="css-1mliti3"
         >
           <div
-            class="chakra-container css-kzfr2u"
+            class="chakra-container css-8hlr3i"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum ex vel blandit congue. Integer turpis lectus, porttitor sed tellus et, rhoncus suscipit lorem. Donec quis ante vitae mi commodo ultrices. Pellentesque accumsan magna enim, nec venenatis sapien vestibulum vitae.
+            <div
+              class="css-r8f3hd"
+            >
+              <div
+                class="css-h9i6sp"
+              >
+                <div
+                  class="css-urywxl"
+                >
+                  <h3
+                    class="chakra-heading css-zux3ex"
+                  >
+                    Document name
+                  </h3>
+                  <h3
+                    class="chakra-heading css-zux3ex"
+                  >
+                    Date updated
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="css-xsnn5"
+              >
+                <div
+                  class="css-1ma1xtl"
+                >
+                  Document retrieval is currently under maintenance.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

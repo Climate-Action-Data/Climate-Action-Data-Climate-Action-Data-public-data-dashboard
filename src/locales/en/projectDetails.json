@@ -20,7 +20,6 @@
     "status": "Status",
     "statusUpdated": "Status Updated On",
     "availableUnits": "Total Available Units",
-    "availableVintages": "Available Vintages",
     "issuances": "Total Issuances",
     "retirememts": "Total Retirements",
     "estimatedUnits": "Annual Estimated Units",
@@ -60,14 +59,23 @@
     "title": "Issuances",
     "vintage":  "Vintage",
     "quantity": "Quantity",
+    "retirememts": "Retirements",
+    "retirementNotes": "Retirement Notes",
     "unitsAvailable": "Units Available",
-    "verificationReportDate": "Verification Report Date"
+    "verificationReportDate": "Verification Report Date",
+    "noRetirementData": "No retirement data available for this issuance",
+    "noIssuanceSelected": "Click on an issuance to display its corresponding retirements"
+  },
+  "documents": {
+    "name": "Document name",
+    "updated": "Date updated"
   },
   "viewHistory": "View History",
   "viewMore": "View More",
   "moreDetails": "More Details",
   "viewLess": "View Less",
   "scroll": "Scroll to read more",
+  "noDocuments": "Document retrieval is currently under maintenance.",
   "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum ex vel blandit congue. Integer turpis lectus, porttitor sed tellus et, rhoncus suscipit lorem. Donec quis ante vitae mi commodo ultrices. Pellentesque accumsan magna enim, nec venenatis sapien vestibulum vitae.",
   "noApiKey": "Could not load google maps api key",
   "noCoordinates": "This project location is currently unavailable within the carbon registries."

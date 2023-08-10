@@ -26,19 +26,21 @@ export type Validation = {
   verifications: Verification[]
 }
 
-type IssuanceUnit = {
+export type IssuanceUnit = {
   id: string
   status: string
   quantity: number
   date: string
+  retirementsNotes?: string
 }
 
 export type Issuance = {
+  id: string
+  status: string
   vintage: number
   quantity: number
   availableUnits: number
   date: string
-  id: string
   units: IssuanceUnit[]
 }
 
@@ -66,8 +68,8 @@ export type ProjectDetails = {
   coBenefits: string[]
   creditingPeriodStart: string
   creditingPeriodEnd: string
-  validation: Validation
   availableVintages?: string
+  validation: Validation
   units: Units
   issuances: Issuance[]
   documents: ProjectDocument[]

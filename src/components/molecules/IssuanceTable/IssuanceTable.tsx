@@ -3,7 +3,8 @@ import { Issuance } from '@/@types/ProjectDetails'
 import { ColumnSortFilter } from '@/components/atoms/ColumnSortFilter/ColumnSortFilter'
 import { formatDate } from '@/utils/DateFormat'
 import { generateRandomString } from '@/utils/GenerationHelpers'
-import { Box, Heading, Flex, Table, Tbody, Td, Th, Thead, Tr, Button } from '@chakra-ui/react'
+import { Link } from '@chakra-ui/next-js'
+import { Box, Heading, Flex, Table, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
 interface IssuanceTableProps {
@@ -26,13 +27,15 @@ export const IssuanceTable = (props: IssuanceTableProps) => {
 
   const renderIssuanceRow = (issuances: Issuance[]) => {
     return issuances.map((issuance) => (
-      <Tr data-testid="issuance-row" onClick={(event) => handleClick(issuance.id, event)} key={`issuance-row-${generateRandomString()}`}>
+      <Tr h="76px" data-testid="issuance-row" onClick={(event) => handleClick(issuance.id, event)} key={`issuance-row-${generateRandomString()}`}>
         <Td>{issuance.vintage}</Td>
         <Td>{issuance.quantity.toLocaleString()}</Td>
         <Td>{issuance.availableUnits.toLocaleString()}</Td>
         <Td>{formatDate(issuance.date, DateFormats.YYYY_MM_DD)}</Td>
         <Td>
-          <Button variant="hoverOnlyNoBold">{t(`moreDetails`)}</Button>
+          <Link href={`/unit/retirement?id=${issuance.id}`} as="button" variant="hoverOnlyNoBold">
+            {t(`moreDetails`)}
+          </Link>
         </Td>
       </Tr>
     ))

@@ -183,7 +183,7 @@ exports[`RetirementDetails renders correctly issuances 1`] = `
           class="css-oznbim"
         >
           <tr
-            class="css-0"
+            class="css-1ow40j4"
             data-testid="issuance-row"
           >
             <td
@@ -209,16 +209,16 @@ exports[`RetirementDetails renders correctly issuances 1`] = `
             <td
               class="css-0"
             >
-              <button
-                class="chakra-button css-4xx2wk"
-                type="button"
+              <a
+                class="chakra-link css-0"
+                href="/unit/retirement?id=00cfede2-5701-4237-b7cf-8b962ba02aa5"
               >
                 More Details
-              </button>
+              </a>
             </td>
           </tr>
           <tr
-            class="css-0"
+            class="css-1ow40j4"
             data-testid="issuance-row"
           >
             <td
@@ -244,12 +244,12 @@ exports[`RetirementDetails renders correctly issuances 1`] = `
             <td
               class="css-0"
             >
-              <button
-                class="chakra-button css-4xx2wk"
-                type="button"
+              <a
+                class="chakra-link css-0"
+                href="/unit/retirement?id=136cadbc-83a5-4c43-a172-baf7770796fc"
               >
                 More Details
-              </button>
+              </a>
             </td>
           </tr>
         </tbody>
@@ -442,7 +442,7 @@ exports[`RetirementDetails renders correctly issuances and row click 1`] = `
           class="css-oznbim"
         >
           <tr
-            class="css-0"
+            class="css-1ow40j4"
             data-testid="issuance-row"
           >
             <td
@@ -468,16 +468,16 @@ exports[`RetirementDetails renders correctly issuances and row click 1`] = `
             <td
               class="css-0"
             >
-              <button
-                class="chakra-button css-4xx2wk"
-                type="button"
+              <a
+                class="chakra-link css-0"
+                href="/unit/retirement?id=00cfede2-5701-4237-b7cf-8b962ba02aa5"
               >
                 More Details
-              </button>
+              </a>
             </td>
           </tr>
           <tr
-            class="css-0"
+            class="css-1ow40j4"
             data-testid="issuance-row"
           >
             <td
@@ -503,12 +503,12 @@ exports[`RetirementDetails renders correctly issuances and row click 1`] = `
             <td
               class="css-0"
             >
-              <button
-                class="chakra-button css-4xx2wk"
-                type="button"
+              <a
+                class="chakra-link css-0"
+                href="/unit/retirement?id=136cadbc-83a5-4c43-a172-baf7770796fc"
               >
                 More Details
-              </button>
+              </a>
             </td>
           </tr>
         </tbody>
