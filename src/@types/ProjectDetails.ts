@@ -59,6 +59,7 @@ export type ProjectDetails = {
   creditingPeriodStart: string
   creditingPeriodEnd: string
   validation: Validation
+  availableVintages?: string
   units: Units
   issuances: Issuance[]
   documents: ProjectDocument[]

@@ -95,6 +95,18 @@ export const hoverOnly = defineStyle({
   },
 })
 
+export const hoverOnlyNoBold = defineStyle({
+  ...hoverOnly,
+  fontWeight: `normal`,
+  padding: `6px 12px`,
+  _hover: {
+    background: `gray.50`,
+  },
+  _active: {
+    background: `lightGray.200`,
+  },
+})
+
 export const accentPrimary32 = defineStyle({
   background: `#2DEC7C`,
   color: `black`,

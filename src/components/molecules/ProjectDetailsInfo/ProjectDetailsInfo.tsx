@@ -51,7 +51,7 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
       </SimpleGrid>
       <Flex flexWrap="wrap">
         <SimpleGrid columns={2} gap="24px">
-          <DetailWidget title={t(`detailsHeaders.availableUnits`)}>{0}</DetailWidget>
+          <DetailWidget title={t(`detailsHeaders.availableUnits`)}>{project.units.available}</DetailWidget>
           <DetailWidget title={t(`detailsHeaders.issuances`)}>{project.units.issued}</DetailWidget>
           <DetailWidget title={t(`detailsHeaders.creditingPeriod`)}>{renderCreditingPeriod(project.units.creditingPeriodStart, project.units.creditingPeriodEnd)}</DetailWidget>
         </SimpleGrid>

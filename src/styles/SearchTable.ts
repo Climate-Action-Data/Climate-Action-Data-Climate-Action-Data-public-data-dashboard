@@ -76,3 +76,17 @@ export const searchTable = defineStyle({
     },
   },
 })
+
+export const searchTableSmall = defineStyle({
+  '.searchTableSmall': {
+    ...searchTable[`.searchTable`],
+    td: {
+      minW: [`100px`, `120px`],
+      maxW: [`100px`, `120px`],
+    },
+    th: {
+      minW: [`100px`, `120px`],
+      maxW: [`100px`, `120px`],
+    },
+  },
+})

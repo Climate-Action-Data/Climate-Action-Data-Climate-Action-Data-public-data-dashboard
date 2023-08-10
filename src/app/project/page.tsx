@@ -8,6 +8,7 @@ import { ProjectDetailHeader } from '@/components/atoms/ProjectDetailHeader/Proj
 import { CardSection } from '@/components/molecules/CardSection/CardSection'
 import { ProjectDetailsInfo } from '@/components/molecules/ProjectDetailsInfo/ProjectDetailsInfo'
 import { ProjectDetailsVerification } from '@/components/molecules/ProjectDetailsVerification/ProjectDetailsVerification'
+import { IssuancesRetirements } from '@/components/organisms/IssuancesRetirements/IssuancesRetirements'
 import { useEffects } from '@/overmind'
 import { coordinatesToString, toCoordinates } from '@/utils/UnitConverter'
 import { Flex, Container, SimpleGrid, Box } from '@chakra-ui/react'
@@ -57,9 +58,7 @@ const ProjectPage: NextPage = () => {
           </Container>
         </CardSection>
         <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.issuancesRetirements`) }}>
-          <Container flex={2} variant="cardSectionNoMargin">
-            <>{t(`lorem`)}</>
-          </Container>
+          {project && <IssuancesRetirements project={project} />}
         </CardSection>
         <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.documents`) }}>
           <Container flex={2} variant="cardSectionNoMargin">
