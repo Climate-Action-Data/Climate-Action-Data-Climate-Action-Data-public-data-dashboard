@@ -275,7 +275,7 @@ exports[`renders correctly with loaded data 1`] = `
         />
         <a
           class="chakra-link css-183olx0"
-          href="/search/projects"
+          href="/search/units"
         >
           <div
             class="css-70qvj9"
@@ -538,7 +538,7 @@ exports[`renders correctly with no data 1`] = `
         />
         <a
           class="chakra-link css-183olx0"
-          href="/search/projects"
+          href="/search/units"
         >
           <div
             class="css-70qvj9"

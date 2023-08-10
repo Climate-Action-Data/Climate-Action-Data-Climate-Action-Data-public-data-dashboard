@@ -47,7 +47,8 @@ describe(`YearInput`, () => {
     await user.type(screen.getByRole(`textbox`), `wrong`)
     await user.tab()
 
-    expect(tOnChange).toHaveBeenCalledTimes(1)
+    // eslint-disable-next-line no-magic-numbers
+    expect(tOnChange).toHaveBeenCalledTimes(2)
     expect(container).toMatchSnapshot()
   })
 

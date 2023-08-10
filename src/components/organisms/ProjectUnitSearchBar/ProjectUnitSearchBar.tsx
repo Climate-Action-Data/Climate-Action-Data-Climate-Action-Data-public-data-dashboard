@@ -1,12 +1,17 @@
 import { CloseIcon } from '@/components/atoms/CloseIcon/CloseIcon'
 import { Button, Container, Flex, Input, InputGroup, InputRightElement } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, FC, useState } from 'react'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import { useRouter } from 'next/navigation'
 import { ESearchParams } from '@/@types/ProjectSearchResult'
 
-const ProjectSearchBar = () => {
+interface ProjectUnitSearchBarProp {
+  isProjectSearch?: boolean
+}
+
+const ProjectUnitSearchBar: FC<ProjectUnitSearchBarProp> = (props) => {
+  const { isProjectSearch } = props
   const [searchInput, setSearchInput] = useState(``)
   const router = useRouter()
   const { t } = useTranslation(`search`)
@@ -22,7 +27,11 @@ const ProjectSearchBar = () => {
   const handleOnSearch = () => {
     const searchParams = new URLSearchParams()
     searchParams.append(ESearchParams.KEYWORD, searchInput)
-    router.push(`/search/projects?${searchParams}`)
+    if (isProjectSearch) {
+      router.push(`/search/projects?${searchParams}`)
+    } else {
+      router.push(`/search/units?${searchParams}`)
+    }
   }
 
   return (
@@ -34,7 +43,11 @@ const ProjectSearchBar = () => {
               <CloseIcon onClick={handleOnClear} data-testid={`search-bar-clear`} />
             </InputRightElement>
           )}
-          <Input placeholder={t(`searchProjectsByKeywordsPlaceholder`)} value={searchInput} onChange={handleInputOnChange} />
+          <Input
+            placeholder={isProjectSearch ? t(`searchProjectsByKeywordsPlaceholder`) : t(`searchUnitsByKeywordsPlaceholder`)}
+            value={searchInput}
+            onChange={handleInputOnChange}
+          />
         </InputGroup>
         <Button rightIcon={<SearchIcon width={`16px`} height={`16px`} />} variant={`accentPrimary32`} data-testid={`search-bar-search`} onClick={handleOnSearch} marginLeft={`8px`}>
           {t(`search`)}
@@ -44,4 +57,4 @@ const ProjectSearchBar = () => {
   )
 }
 
-export default ProjectSearchBar
+export default ProjectUnitSearchBar

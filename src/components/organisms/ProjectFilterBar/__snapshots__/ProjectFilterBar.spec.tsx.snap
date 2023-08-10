@@ -238,7 +238,11 @@ exports[`renders correctly with loaded data 1`] = `
           <div
             class="css-jmqhys"
           >
-            Crediting Period
+            <div
+              class="css-k008qs"
+            >
+              Crediting Period
+            </div>
             <div
               class="css-17xejub"
             />
@@ -501,7 +505,11 @@ exports[`renders correctly with no data 1`] = `
           <div
             class="css-jmqhys"
           >
-            Crediting Period
+            <div
+              class="css-k008qs"
+            >
+              Crediting Period
+            </div>
             <div
               class="css-17xejub"
             />

@@ -18,7 +18,7 @@ const YearInput: FC<YearInputProp> = (prop) => {
   const [isInvalid, setIsInvalid] = useState<boolean>(false)
 
   useEffect(() => {
-    setTextInputValue(value?.toString() ?? ``)
+    setTextInputValue(value ? value?.toString() : ``)
   }, [value])
 
   const inputConfig = {
@@ -36,11 +36,11 @@ const YearInput: FC<YearInputProp> = (prop) => {
     const value = event.target.value
     if (value === ``) {
       setTextInputValue(value)
-      return
     }
-    if (YEAR_INPUT_REGEX.test(value)) {
+    if (value.match(YEAR_INPUT_REGEX)) {
       setTextInputValue(value)
-      return
+    } else {
+      setTextInputValue((prevState) => prevState)
     }
   }
 
@@ -48,18 +48,17 @@ const YearInput: FC<YearInputProp> = (prop) => {
     if (textInputValue === ``) {
       setIsInvalid(false)
       onChange(undefined)
-      return
     }
 
-    if (!YEAR_INPUT_REGEX.test(textInputValue)) {
+    if (!textInputValue.match(YEAR_INPUT_REGEX)) {
       setIsInvalid(true)
-      return
     }
+
     const yearNumber = parseInt(textInputValue)
     if ((maxYear && yearNumber > maxYear) || (minYear && yearNumber < minYear)) {
       setIsInvalid(true)
-      return
     }
+
     setIsInvalid(false)
     onChange(yearNumber)
   }

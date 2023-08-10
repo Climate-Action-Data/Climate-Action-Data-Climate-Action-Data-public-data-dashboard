@@ -68,11 +68,9 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
       if (minimumDate <= maximumDate) {
         applyFilters({ maxDate: maximumDate, minDate: minimumDate })
       }
-    }
-    if (minimumDate) {
+    } else if (minimumDate) {
       applyFilters({ minDate: minimumDate })
-    }
-    if (maximumDate) {
+    } else if (maximumDate) {
       applyFilters({ maxDate: maximumDate })
     }
   }
@@ -129,7 +127,7 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
 
   const renderLabel = () => {
     if (dateFilter?.minDate && dateFilter?.maxDate) {
-      return `${format(dateFilter.minDate, DateFormats.YYYY_MM_DD)} - ${format(dateFilter.maxDate, DateFormats.YYYY_MM_DD)}`
+      return `${format(dateFilter.minDate, DateFormats.YYYY_MM_DD)} -\n${format(dateFilter.maxDate, DateFormats.YYYY_MM_DD)}`
     }
     if (dateFilter?.minDate) {
       return t(`andLater`, { date: format(dateFilter.minDate, DateFormats.YYYY_MM_DD) })
@@ -145,7 +143,7 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
       <PopoverTrigger>
         <Button variant={`dropdownUnselected`}>
           <Flex fontWeight={`normal`} fontSize={`16px`} alignItems={`center`} grow={1}>
-            {renderLabel()}
+            <Flex>{renderLabel()}</Flex>
             <Spacer />
             <DropDownIcon />
           </Flex>

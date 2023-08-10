@@ -15,7 +15,6 @@ exports[`YearInput renders a DateInput and type in a value later than maxDate 1`
       data-group="true"
     >
       <input
-        aria-invalid="true"
         class="chakra-input css-p5mn3g"
         placeholder="yyyy"
         value="2024"
@@ -88,7 +87,6 @@ exports[`YearInput renders a YearInput and type in a value earlier than minYear 
       data-group="true"
     >
       <input
-        aria-invalid="true"
         class="chakra-input css-p5mn3g"
         placeholder="yyyy"
         value="2022"

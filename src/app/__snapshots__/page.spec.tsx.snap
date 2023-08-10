@@ -258,7 +258,11 @@ exports[`renders correctly 1`] = `
                     <div
                       class="css-jmqhys"
                     >
-                      Crediting Period
+                      <div
+                        class="css-k008qs"
+                      >
+                        Crediting Period
+                      </div>
                       <div
                         class="css-17xejub"
                       />
@@ -588,7 +592,7 @@ exports[`renders correctly 1`] = `
                   />
                   <a
                     class="chakra-link css-183olx0"
-                    href="/search/projects"
+                    href="/search/units"
                   >
                     <div
                       class="css-70qvj9"

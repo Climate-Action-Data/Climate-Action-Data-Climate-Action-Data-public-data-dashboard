@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Box, Flex, Spacer, Stack, StackDivider } from '@chakra-ui/react'
+import { Flex, Spacer, Stack, StackDivider } from '@chakra-ui/react'
 import { Link } from '@chakra-ui/next-js'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
@@ -9,11 +9,12 @@ import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import VintageYearFilter from '@/components/molecules/VintageYearFilter/VintageYearFilter'
 import { KYOTO_PROTOCOL_START_YEAR } from '@/@types/CarbonStandards'
 import { YearsFilter } from '@/@types/ProjectSearchFilterValues'
+import FilterBarWrapper from '@/components/molecules/FilterBarWarpper/FilterBarWrapper'
 
 const UnitFilterBar: FC = () => {
   const {
-    allSearchFilterValues: { searchFilterValues, isEmpty },
     selectedUnitSearchFilterValues: { searchFilterValues: selectedSearchFilters },
+    allSearchFilterValues: { searchFilterValues, isEmpty },
   } = useAppState().searchFilters
 
   const { setUnitCountriesFilter, setUnitStandardsFilter, setUnitSectorFilter, setUnitStatusFilter, setUnitVintageYearFilter } = useActions().searchFilters
@@ -50,18 +51,7 @@ const UnitFilterBar: FC = () => {
   }
 
   return (
-    <Box
-      sx={{
-        color: `black`,
-        boxShadow: `2px 2px 8px 0px #0000001A;`,
-        minHeight: `min-content`,
-        borderRadius: `12px`,
-        background: `#FFFFFF`,
-        padding: `16px`,
-        marginX: `auto`,
-        w: [`100%`, null, null, `min-content`],
-      }}
-    >
+    <FilterBarWrapper>
       <Stack direction={[`column`, null, null, `row`]}>
         <Stack direction={[`column`, null, null, `row`]} divider={<StackDivider borderColor={`#B8BEC0`} />} width={[`100%`]}>
           <AutoCompleteCheckbox
@@ -109,7 +99,7 @@ const UnitFilterBar: FC = () => {
             width={`min-content`}
             _hover={{ backgroundColor: `#24BD63` }}
             _active={{ backgroundColor: `#1B8E4A` }}
-            href={`/search/projects`}
+            href={`/search/units`}
             fontSize={`16px`}
             fontWeight={`medium`}
           >
@@ -120,7 +110,7 @@ const UnitFilterBar: FC = () => {
           </Link>
         </Flex>
       </Stack>
-    </Box>
+    </FilterBarWrapper>
   )
 }
 
