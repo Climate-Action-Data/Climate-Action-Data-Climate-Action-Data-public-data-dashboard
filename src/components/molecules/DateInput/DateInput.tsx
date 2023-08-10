@@ -41,7 +41,7 @@ const DateInput: FC<DateInputProp> = (prop) => {
 
   const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value
-    value.match(DATE_INPUT_REGEX) && setTextInputValue(value)
+    DATE_INPUT_REGEX.exec(value) && setTextInputValue(value)
   }
 
   const handleOnBlur = () => {
