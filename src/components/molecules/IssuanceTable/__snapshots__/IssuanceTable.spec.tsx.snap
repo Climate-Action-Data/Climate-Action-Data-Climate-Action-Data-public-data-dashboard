@@ -3,7 +3,7 @@
 exports[`RetirementDetails renders correctly issuances 1`] = `
 <div>
   <div
-    class="css-ejqwgx"
+    class="css-gsocru"
   >
     <div
       class="css-h9i6sp"
@@ -262,7 +262,7 @@ exports[`RetirementDetails renders correctly issuances 1`] = `
 exports[`RetirementDetails renders correctly issuances and row click 1`] = `
 <div>
   <div
-    class="css-ejqwgx"
+    class="css-gsocru"
   >
     <div
       class="css-h9i6sp"
@@ -521,7 +521,7 @@ exports[`RetirementDetails renders correctly issuances and row click 1`] = `
 exports[`RetirementDetails renders correctly with empty array 1`] = `
 <div>
   <div
-    class="css-ejqwgx"
+    class="css-gsocru"
   >
     <div
       class="css-h9i6sp"

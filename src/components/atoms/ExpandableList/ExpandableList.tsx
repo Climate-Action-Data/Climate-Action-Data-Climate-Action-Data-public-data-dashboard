@@ -18,7 +18,7 @@ export const ExpandableList = (props: ExpandableListProps) => {
   const { items, itemLimit } = actualProps
   const [isExpanded, setIsExpanded] = useState(false)
   const { t } = useTranslation(`projectDetails`)
-  const { t: tHome } = useTranslation(`ome`)
+  const { t: tHome } = useTranslation(`home`)
 
   if (items.length === 0) {
     return <Text>{tHome(`noData`)}</Text>

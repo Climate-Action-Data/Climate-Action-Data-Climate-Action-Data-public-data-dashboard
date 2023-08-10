@@ -5,7 +5,7 @@ exports[`ProjectDetailsVerificationList renders correctly with empty array 1`] =
   <p
     class="chakra-text css-0"
   >
-    noData
+    --
   </p>
 </div>
 `;

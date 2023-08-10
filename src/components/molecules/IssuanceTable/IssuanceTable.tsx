@@ -39,7 +39,7 @@ export const IssuanceTable = (props: IssuanceTableProps) => {
   }
 
   return (
-    <Box minW={`840px`} maxW={`840px`} borderRight="1px solid #B8BEC0">
+    <Box minW="840px" maxW="840px" borderRight="1px solid" borderRightColor="lightGray.400">
       <Box borderBottom="2px solid" borderBottomColor="lightGray.700">
         <Flex padding="0 24px" alignItems="center" height="56px">
           <Heading variant={`aeonik`} color="lightGray.700" textTransform="uppercase" as="h3" size="16px">
