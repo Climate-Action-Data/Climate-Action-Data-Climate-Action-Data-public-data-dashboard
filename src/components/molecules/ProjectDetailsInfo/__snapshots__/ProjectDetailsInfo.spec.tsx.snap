@@ -628,7 +628,7 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
         </p>
       </div>
       <div
-        class="css-tjtdba"
+        class="css-0"
       >
         <p
           class="chakra-text css-1xi4xed"
@@ -977,7 +977,7 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
         </p>
       </div>
       <div
-        class="css-tjtdba"
+        class="css-0"
       >
         <p
           class="chakra-text css-1xi4xed"
