@@ -9,6 +9,7 @@ import { useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { UnitSearchResponse, UnitSearchResult } from '@/@types/UnitSearchResult'
 import { generateUnitUrl } from '@/utils/RequestHelpers'
+import { generateRandomString } from '@/utils/GenerationHelpers'
 
 interface UnitSearchHeadContentProps {
   unitResults?: EffectResponse<UnitSearchResponse>
@@ -54,7 +55,7 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
         onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
         data-testid="project-search-head-row"
         className={`project-row-${idx}`}
-        key={`project-row-${unitResults.id}`}
+        key={`project-row-${generateRandomString()}`}
         height="92px"
       >
         <Td data-testid="project-search-head-row-td">

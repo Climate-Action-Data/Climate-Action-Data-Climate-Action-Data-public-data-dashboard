@@ -18,13 +18,13 @@ interface UnitFilterBarProps {
 const UnitFilterBar: FC<UnitFilterBarProps> = (props) => {
   const { isResultsPage } = props
   const {
-    selectedUnitSearchFilterValues: { searchFilterValues: selectedSearchFilters },
+    selectedUnitSearchFilterValues: { searchFilterValues: selectedSearchFilters, isEmpty: selectedIsEmpty },
     allSearchFilterValues: { searchFilterValues, isEmpty },
   } = useAppState().searchFilters
 
   const { setUnitCountriesFilter, setUnitStandardsFilter, setUnitSectorFilter, setUnitStatusFilter, setUnitVintageYearFilter } = useActions().searchFilters
   const { getGovernanceData } = useEffects().searchFilters
-  const { transformGovernanceDataToSearchFilterData } = useActions().searchFilters
+  const { transformGovernanceDataToSearchFilterData, clearKeywordSearch } = useActions().searchFilters
   const { t } = useTranslation(`search`)
   const router = useRouter()
 
@@ -57,7 +57,12 @@ const UnitFilterBar: FC<UnitFilterBarProps> = (props) => {
   }
 
   const handleOnClick = () => {
-    router.push(`/search/units?filter=true`)
+    clearKeywordSearch()
+    if (selectedIsEmpty) {
+      router.push(`/search/units?keyword=`)
+    } else {
+      router.push(`/search/units?filter=true?keyword=`)
+    }
   }
 
   return (

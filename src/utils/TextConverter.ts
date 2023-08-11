@@ -1,7 +1,12 @@
 import { EWebGoal } from '@/@types/EWebGoal'
 import { ProjectType } from '@/@types/ProjectDetails'
 
+const NO_INDEX_FOUND = -1
+
 export const extractPageFromUrl = (url: string) => {
+  if (!url || (url && url.indexOf(`/`) === NO_INDEX_FOUND)) {
+    return ``
+  }
   return url.slice(url.lastIndexOf(`/`) + 1, url.length)
 }
 

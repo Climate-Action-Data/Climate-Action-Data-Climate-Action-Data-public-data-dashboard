@@ -15,7 +15,7 @@ import { UnitSearchBody } from '@/components/molecules/UnitSearchBody/UnitSearch
 
 const UnitPage: NextPage = () => {
   const { getUnitResults, getUnitFilterResults } = useEffects().unitResult
-  const { setUnitResults } = useActions().unitResult
+  const { setUnitResults, clearUnitResults } = useActions().unitResult
   const { resetSearchFilters } = useActions().searchFilters
   const { unitResults } = useAppState().unitResult
   const { selectedUnitSearchFilterValues } = useAppState().searchFilters
@@ -24,16 +24,18 @@ const UnitPage: NextPage = () => {
   const filter = searchParams.get(ESearchParams.FILTER) ?? undefined
   useEffect(() => {
     if (filter) {
+      clearUnitResults()
       getUnitFilterResults(selectedUnitSearchFilterValues.searchFilterValues).then((hasProjectResults) => {
         setUnitResults(hasProjectResults)
       })
     } else {
+      clearUnitResults()
       resetSearchFilters()
       getUnitResults(pattern).then((hasProjectResults) => {
         setUnitResults(hasProjectResults)
       })
     }
-  }, [])
+  }, [pattern])
 
   const handlePageChange = (currentPage: number, from: number) => {
     getUnitResults(pattern, from).then((hasProjectResults) => {

@@ -19,7 +19,7 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
   const { isResultsPage } = props
   const {
     allSearchFilterValues: { searchFilterValues, isEmpty },
-    selectedProjectSearchFilterValues: { searchFilterValues: selectedSearchFilters },
+    selectedProjectSearchFilterValues: { searchFilterValues: selectedSearchFilters, isEmpty: selectedIsEmpty },
   } = useAppState().searchFilters
 
   const { setProjectCountriesFilter, clearKeywordSearch, setProjectMethodologiesFilter, setProjectSectorsFilter, setProjectStandardsFilter, setProjectCreditingPeriodFilter } =
@@ -59,7 +59,11 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
 
   const handleOnClick = () => {
     clearKeywordSearch()
-    router.push(`/search/projects?filter=true&keywords=`)
+    if (selectedIsEmpty) {
+      router.push(`/search/projects?keywords=`)
+    } else {
+      router.push(`/search/projects?filter=true&keywords=`)
+    }
   }
 
   return (
