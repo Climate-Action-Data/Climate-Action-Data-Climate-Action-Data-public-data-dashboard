@@ -39,6 +39,10 @@ export const setKeywordSearch = (context: Context, keywordSearch: string) => {
   context.state.searchFilters.keywordSearch = keywordSearch
 }
 
+export const clearKeywordSearch = (context: Context) => {
+  context.state.searchFilters.keywordSearch = ``
+}
+
 export const resetSearchFilters = (context: Context) => {
   context.state.searchFilters.selectedProjectSearchFilterValues.searchFilterValues = {
     countries: [],

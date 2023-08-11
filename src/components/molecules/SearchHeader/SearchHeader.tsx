@@ -1,9 +1,9 @@
-import { ChangeEvent, useEffect, useState } from 'react'
+import { ChangeEvent, useEffect } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { Box, Button, Flex, Heading, HStack, Input, InputGroup, InputRightElement, VStack } from '@chakra-ui/react'
 
-import { extractTitleFromUrl } from '@/utils/TextConverter'
+import { extractPageFromUrl, extractTitleFromUrl } from '@/utils/TextConverter'
 
 import { BreadCrumbs } from '@/components/atoms/BreadCrumbs/BreadCrumbs'
 import { ESearchParams } from '@/@types/ProjectSearchResult'
@@ -12,7 +12,6 @@ import UnitFilterBar from '@/components/organisms/UnitFilterBar/UnitFilterBar'
 import ProjectFilterBar from '@/components/organisms/ProjectFilterBar/ProjectFilterBar'
 
 export const SearchHeader = () => {
-  const [searchInput, setSearchInput] = useState(``)
   const { keywordSearch } = useAppState().searchFilters
   const { setKeywordSearch } = useActions().searchFilters
   const currentPath = usePathname()
@@ -24,24 +23,23 @@ export const SearchHeader = () => {
   //TODO: refactor search to use state and not url params
   useEffect(() => {
     if (pattern) {
-      setSearchInput(pattern)
       if (searchParams.get(ESearchParams.KEYWORD) !== keywordSearch && keywordSearch !== ``) {
         const searchParams = new URLSearchParams()
         searchParams.append(ESearchParams.KEYWORD, keywordSearch)
-        router.push(`/search/projects?${searchParams}`)
+        router.push(`/search/${extractPageFromUrl(currentPath)}?${searchParams}`)
       }
     }
   }, [])
 
   const handleOnSearch = () => {
     const searchParams = new URLSearchParams()
-    searchParams.append(ESearchParams.KEYWORD, searchInput)
+    searchParams.append(ESearchParams.KEYWORD, keywordSearch)
     setKeywordSearch(searchParams.get(ESearchParams.KEYWORD) ?? ``)
-    router.push(`/search/projects?${searchParams}`)
+    router.push(`/search/${extractPageFromUrl(currentPath)}?${searchParams}`)
   }
 
   const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setSearchInput(event.target.value)
+    setKeywordSearch(event.target.value)
   }
 
   const generateFilterBar = () => {
@@ -62,7 +60,7 @@ export const SearchHeader = () => {
           </Box>
           <Box>
             <InputGroup size="md">
-              <Input pr="4.5rem" type={`text`} placeholder="Search" value={searchInput} onChange={handleOnChange} />
+              <Input pr="4.5rem" type={`text`} placeholder="Search" value={keywordSearch} onChange={handleOnChange} />
               <InputRightElement width="4.5rem">
                 <Button colorScheme="white" variant="brandPrimary" h="1.75rem" size="sm" onClick={handleOnSearch} data-testid={`search-header-button`}>
                   {t(`search`)}

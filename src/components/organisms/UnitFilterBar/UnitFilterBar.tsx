@@ -57,7 +57,7 @@ const UnitFilterBar: FC<UnitFilterBarProps> = (props) => {
   }
 
   const handleOnClick = () => {
-    router.push(`/filter/units`)
+    router.push(`/search/units?filter=true`)
   }
 
   return (
@@ -106,7 +106,7 @@ const UnitFilterBar: FC<UnitFilterBarProps> = (props) => {
         </Stack>
         <Flex>
           <Spacer minWidth={`32px`} />
-          <SearchButton href={`/search/units`} isResultsPage={isResultsPage} onClick={handleOnClick} />
+          <SearchButton isResultsPage={isResultsPage} onClick={handleOnClick} />
         </Flex>
       </Stack>
     </FilterBarWrapper>

@@ -22,7 +22,7 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
     selectedProjectSearchFilterValues: { searchFilterValues: selectedSearchFilters },
   } = useAppState().searchFilters
 
-  const { setProjectCountriesFilter, setProjectMethodologiesFilter, setProjectSectorsFilter, setProjectStandardsFilter, setProjectCreditingPeriodFilter } =
+  const { setProjectCountriesFilter, clearKeywordSearch, setProjectMethodologiesFilter, setProjectSectorsFilter, setProjectStandardsFilter, setProjectCreditingPeriodFilter } =
     useActions().searchFilters
   const { getGovernanceData } = useEffects().searchFilters
   const { transformGovernanceDataToSearchFilterData } = useActions().searchFilters
@@ -58,7 +58,8 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
   }
 
   const handleOnClick = () => {
-    router.push(`/filter/projects`)
+    clearKeywordSearch()
+    router.push(`/search/projects?filter=true&keywords=`)
   }
 
   return (
@@ -107,7 +108,7 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
         </Stack>
         <Flex>
           <Spacer minWidth={`32px`} />
-          <SearchButton href={`/search/projects`} isResultsPage={isResultsPage} onClick={handleOnClick} />
+          <SearchButton isResultsPage={isResultsPage} onClick={handleOnClick} />
         </Flex>
       </Stack>
     </FilterBarWrapper>

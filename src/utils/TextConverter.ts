@@ -1,6 +1,10 @@
 import { EWebGoal } from '@/@types/EWebGoal'
 import { ProjectType } from '@/@types/ProjectDetails'
 
+export const extractPageFromUrl = (url: string) => {
+  return url.slice(url.lastIndexOf(`/`) + 1, url.length)
+}
+
 export const extractTitleFromUrl = (url: string) => {
   let str = ``
   try {
