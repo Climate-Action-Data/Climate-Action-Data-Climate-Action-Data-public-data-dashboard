@@ -244,9 +244,9 @@ exports[`ProjectFilterAndSearch renders correctly 1`] = `
           <div
             class="css-1lkwiwl"
           />
-          <a
-            class="chakra-link css-1vx4e4n"
-            href="/search/projects"
+          <button
+            class="chakra-button css-7i7203"
+            type="button"
           >
             <div
               class="css-70qvj9"
@@ -263,7 +263,7 @@ exports[`ProjectFilterAndSearch renders correctly 1`] = `
                 />
               </svg>
             </div>
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -537,9 +537,9 @@ exports[`ProjectFilterAndSearch renders correctly and the filter-and-search-trig
           <div
             class="css-1lkwiwl"
           />
-          <a
-            class="chakra-link css-1vx4e4n"
-            href="/search/projects"
+          <button
+            class="chakra-button css-7i7203"
+            type="button"
           >
             <div
               class="css-70qvj9"
@@ -556,7 +556,7 @@ exports[`ProjectFilterAndSearch renders correctly and the filter-and-search-trig
                 />
               </svg>
             </div>
-          </a>
+          </button>
         </div>
       </div>
     </div>
