@@ -36,7 +36,7 @@ const ProjectPage: NextPage = () => {
         setProjectResults(hasProjectResults)
       })
     }
-  }, [pattern])
+  }, [pattern, filter])
 
   const handleOnPageChange = (currentPage: number, from: number) => {
     getProjectSearchResults(pattern, from).then((hasProjectResults) => {

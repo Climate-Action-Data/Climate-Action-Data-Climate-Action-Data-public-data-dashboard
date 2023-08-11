@@ -22,6 +22,7 @@ const UnitPage: NextPage = () => {
   const searchParams = useSearchParams()
   const pattern = searchParams.get(ESearchParams.KEYWORD) ?? ``
   const filter = searchParams.get(ESearchParams.FILTER) ?? undefined
+
   useEffect(() => {
     if (filter) {
       clearUnitResults()
@@ -35,7 +36,7 @@ const UnitPage: NextPage = () => {
         setUnitResults(hasProjectResults)
       })
     }
-  }, [pattern])
+  }, [pattern, filter])
 
   const handlePageChange = (currentPage: number, from: number) => {
     getUnitResults(pattern, from).then((hasProjectResults) => {
