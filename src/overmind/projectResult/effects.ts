@@ -49,8 +49,8 @@ export const getProjectFilterResults = async (
           methodologies: filters.methodologies,
           sectors: filters.sectors,
           countries: filters.countries,
-          creditingPeriodStart: filters.creditingPeriod?.minDate?.toDateString(),
-          creditingPeriodEnd: filters.creditingPeriod?.maxDate?.toDateString(),
+          creditingPeriodStart: filters.creditingPeriod?.minDate?.toISOString(),
+          creditingPeriodEnd: filters.creditingPeriod?.maxDate?.toISOString(),
         },
         defaultHeaders,
       )

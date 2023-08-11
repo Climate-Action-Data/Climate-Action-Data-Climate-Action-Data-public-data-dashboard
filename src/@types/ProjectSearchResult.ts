@@ -28,6 +28,7 @@ export enum ESearchParams {
   COUNT = `count`,
   OFFSET = `offset`,
   ID = `id`,
+  FILTER = `filter`,
 }
 
 export const DEFAULT_PROJECT_COUNT_TO_DISPLAY = 15

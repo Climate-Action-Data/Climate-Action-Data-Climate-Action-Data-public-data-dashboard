@@ -14,16 +14,25 @@ import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 import { UnitSearchBody } from '@/components/molecules/UnitSearchBody/UnitSearchBody'
 
 const UnitPage: NextPage = () => {
-  const { getUnitResults } = useEffects().unitResult
+  const { getUnitResults, getUnitFilterResults } = useEffects().unitResult
   const { setUnitResults } = useActions().unitResult
+  const { resetSearchFilters } = useActions().searchFilters
   const { unitResults } = useAppState().unitResult
+  const { selectedUnitSearchFilterValues } = useAppState().searchFilters
   const searchParams = useSearchParams()
   const pattern = searchParams.get(ESearchParams.KEYWORD) ?? ``
-
+  const filter = searchParams.get(ESearchParams.FILTER) ?? undefined
   useEffect(() => {
-    getUnitResults(pattern).then((hasProjectResults) => {
-      setUnitResults(hasProjectResults)
-    })
+    if (filter) {
+      getUnitFilterResults(selectedUnitSearchFilterValues.searchFilterValues).then((hasProjectResults) => {
+        setUnitResults(hasProjectResults)
+      })
+    } else {
+      resetSearchFilters()
+      getUnitResults(pattern).then((hasProjectResults) => {
+        setUnitResults(hasProjectResults)
+      })
+    }
   }, [])
 
   const handlePageChange = (currentPage: number, from: number) => {

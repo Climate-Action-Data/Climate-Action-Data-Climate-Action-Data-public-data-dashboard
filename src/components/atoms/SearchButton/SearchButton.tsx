@@ -4,7 +4,6 @@ import { Button, Flex } from '@chakra-ui/react'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 
 interface SearchButtonProps {
-  href: string
   isResultsPage?: boolean
   onClick: () => void
 }

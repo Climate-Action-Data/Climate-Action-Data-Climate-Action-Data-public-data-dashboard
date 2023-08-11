@@ -5,7 +5,7 @@ import { EffectResponse } from '@/@types/EffectResponse'
 import { Unit } from '@/@types/Unit'
 import { Issuance } from '@/@types/ProjectDetails'
 import { UnitSearchResponse } from '@/@types/UnitSearchResult'
-import { DEFAULT_PROJECT_COUNT_TO_DISPLAY, ESearchParams, ProjectSearchResponse } from '@/@types/ProjectSearchResult'
+import { DEFAULT_PROJECT_COUNT_TO_DISPLAY, ESearchParams } from '@/@types/ProjectSearchResult'
 import { UnitSearchFilterValues } from '@/@types/ProjectSearchFilterValues'
 
 const SLEEP = 3000
@@ -38,13 +38,9 @@ export const getUnitResults = async (pattern: string, offset = 0, count = DEFAUL
   })
 }
 
-export const getProjectFilterResults = async (
-  filters: UnitSearchFilterValues,
-  offset = 0,
-  count = DEFAULT_PROJECT_COUNT_TO_DISPLAY,
-): Promise<EffectResponse<ProjectSearchResponse>> => {
+export const getUnitFilterResults = async (filters: UnitSearchFilterValues, offset = 0, count = DEFAULT_PROJECT_COUNT_TO_DISPLAY): Promise<EffectResponse<UnitSearchResponse>> => {
   return new Promise((resolve) => {
-    let result: EffectResponse<ProjectSearchResponse>
+    let result: EffectResponse<UnitSearchResponse>
 
     axios
       .post(
@@ -61,7 +57,7 @@ export const getProjectFilterResults = async (
       )
       .then((body) => {
         if (body.data) {
-          const ProjectSearchData = body.data as ProjectSearchResponse
+          const ProjectSearchData = body.data as UnitSearchResponse
           result = { data: ProjectSearchData }
         } else {
           result = { error: { code: body.status.toString(), message: body.statusText } }
