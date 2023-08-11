@@ -13,6 +13,6 @@ export const generateUnitUrl = (status: string) => {
   if (status === UnitStatus.RETIRED) {
     return `/unit/retirement?id=`
   } else {
-    return `/unit/issuance?id=`
+    return `/issuance?id=`
   }
 }

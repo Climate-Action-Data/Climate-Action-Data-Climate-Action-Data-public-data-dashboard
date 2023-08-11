@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IssuancePage renders correctly 1`] = `
+<div>
+  <div
+    class="css-1c0mwkm"
+  >
+    This is the placeholder for the issuance page
+     - 
+  </div>
+</div>
+`;
