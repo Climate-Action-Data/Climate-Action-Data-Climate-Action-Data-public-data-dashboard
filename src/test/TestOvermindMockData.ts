@@ -152,6 +152,7 @@ const SEARCH_FILTER_VALUES: SearchFiltersStateData = {
       projectStatus: SearchOptions,
       countries: SearchOptions,
     },
+    isEmpty: false,
   },
   selectedUnitSearchFilterValues: {
     searchFilterValues: {
@@ -160,6 +161,7 @@ const SEARCH_FILTER_VALUES: SearchFiltersStateData = {
       projectStatus: SearchOptions,
       countries: SearchOptions,
     },
+    isEmpty: false,
   },
   allSearchFilterValues: {
     searchFilterValues: {
