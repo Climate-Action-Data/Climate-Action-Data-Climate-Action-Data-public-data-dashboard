@@ -20,13 +20,15 @@ export const SearchHeader = () => {
   const searchParams = useSearchParams()
   const router = useRouter()
   const pattern = searchParams.get(ESearchParams.KEYWORD) ?? keywordSearch
+  const extractedPage = extractPageFromUrl(currentPath)
   //TODO: refactor search to use state and not url params
   useEffect(() => {
     if (pattern) {
       if (searchParams.get(ESearchParams.KEYWORD) !== keywordSearch && keywordSearch !== ``) {
         const searchParams = new URLSearchParams()
         searchParams.append(ESearchParams.KEYWORD, keywordSearch)
-        router.push(`/search/${extractPageFromUrl(currentPath)}?${searchParams}`)
+
+        router.push(`/search/${extractedPage}?${searchParams}`)
       }
     }
   }, [])
@@ -35,7 +37,7 @@ export const SearchHeader = () => {
     const searchParams = new URLSearchParams()
     searchParams.append(ESearchParams.KEYWORD, keywordSearch)
     setKeywordSearch(searchParams.get(ESearchParams.KEYWORD) ?? ``)
-    router.push(`/search/${extractPageFromUrl(currentPath)}?${searchParams}`)
+    router.push(`/search/${extractedPage}?${searchParams}`)
   }
 
   const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {

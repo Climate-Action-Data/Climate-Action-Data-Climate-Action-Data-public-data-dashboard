@@ -47,11 +47,12 @@ export const getUnitFilterResults = async (filters: UnitSearchFilterValues, offs
         `${defaultDomain}/v1/units/filter`,
         {
           status: filters.unitStatus,
+          standards: filters.projectStatus,
           methodologies: filters.projectStatus,
           sectors: filters.sectors,
           countries: filters.countries,
-          creditingPeriodStart: filters.vintageYear?.minYear,
-          creditingPeriodEnd: filters.vintageYear?.maxYear,
+          minYear: filters.vintageYear?.minYear ?? 0,
+          maxYear: filters.vintageYear?.maxYear ?? 0,
         },
         defaultHeaders,
       )

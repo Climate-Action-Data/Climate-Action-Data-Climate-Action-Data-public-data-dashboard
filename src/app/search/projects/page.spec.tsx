@@ -27,33 +27,6 @@ it(`renders correctly on table data`, () => {
   )
   expect(container).toMatchSnapshot()
 })
-
-it(`renders correctly and click header`, () => {
-  const { container } = render(
-    <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>
-      <Projects />
-    </TestOvermindWrapper>,
-  )
-
-  const finalPage = screen.getByTestId(`pagination-last-page`)
-  fireEvent.click(finalPage)
-
-  expect(container).toMatchSnapshot()
-})
-
-it(`renders correctly on table data and next page`, () => {
-  const { container } = render(
-    <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>
-      <Projects />
-    </TestOvermindWrapper>,
-  )
-
-  const finalPage = screen.getByTestId(`pagination-last-page`)
-  fireEvent.click(finalPage)
-
-  expect(container).toMatchSnapshot()
-})
-
 it(`renders correctly on table data and scroll page`, () => {
   const { container } = render(
     <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>

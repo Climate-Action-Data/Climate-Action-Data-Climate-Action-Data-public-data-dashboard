@@ -1,4 +1,4 @@
-import { Button, Flex, HStack, Popover, PopoverBody, PopoverContent, PopoverTrigger, Spacer, VStack } from '@chakra-ui/react'
+import { Button, Flex, HStack, Popover, PopoverBody, PopoverContent, PopoverTrigger, Spacer, VStack, Box } from '@chakra-ui/react'
 import { DropDownIcon } from '@/components/atoms/DropDownIcon/DropDownIcon'
 import { Dispatch, FC, SetStateAction, useEffect, useState } from 'react'
 import CalendarWrapper from '@/components/molecules/CalendarWrapper/CalendarWrapper'
@@ -145,24 +145,26 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
   }
 
   return (
-    <Popover gutter={0} isLazy placement={`bottom`} matchWidth onClose={handleOnClose}>
-      <PopoverTrigger>
-        <Button variant={generateVariant()}>
-          <Flex fontWeight={`normal`} fontSize={`16px`} alignItems={`center`} grow={1}>
-            <Flex>{renderLabel()}</Flex>
-            <Spacer />
-            <DropDownIcon />
-          </Flex>
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent zIndex={401} border={0} borderRadius={`8px`} width={[`100%`, null, null, `min-content`]} height={`min-content`} backgroundColor={`white`} boxShadow={`xl`}>
-        <PopoverBody width={`100%`}>
-          {renderContent()}
-          {showMinimumDateSelector && renderDateSelector(minimumDate, setMinimumDate)}
-          {showMaximumDateSelector && renderDateSelector(maximumDate, setMaximumDate)}
-        </PopoverBody>
-      </PopoverContent>
-    </Popover>
+    <Box zIndex={999}>
+      <Popover gutter={0} isLazy placement={`bottom`} matchWidth onClose={handleOnClose}>
+        <PopoverTrigger>
+          <Button variant={generateVariant()}>
+            <Flex fontWeight={`normal`} fontSize={`16px`} alignItems={`center`} grow={1}>
+              <Flex>{renderLabel()}</Flex>
+              <Spacer />
+              <DropDownIcon />
+            </Flex>
+          </Button>
+        </PopoverTrigger>
+        <PopoverContent zIndex={401} border={0} borderRadius={`8px`} width={[`100%`, null, null, `min-content`]} height={`min-content`} backgroundColor={`white`} boxShadow={`xl`}>
+          <PopoverBody width={`100%`}>
+            {renderContent()}
+            {showMinimumDateSelector && renderDateSelector(minimumDate, setMinimumDate)}
+            {showMaximumDateSelector && renderDateSelector(maximumDate, setMaximumDate)}
+          </PopoverBody>
+        </PopoverContent>
+      </Popover>
+    </Box>
   )
 }
 

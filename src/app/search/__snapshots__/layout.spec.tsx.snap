@@ -30,7 +30,7 @@ exports[`renders correctly 1`] = `
               class="chakra-input css-1n0hj84"
               placeholder="Search"
               type="text"
-              value="testParams"
+              value=""
             />
             <div
               class="chakra-input__right-element css-vcnsx7"

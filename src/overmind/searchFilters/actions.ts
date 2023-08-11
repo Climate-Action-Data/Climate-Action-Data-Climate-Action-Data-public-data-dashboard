@@ -50,6 +50,13 @@ export const resetSearchFilters = (context: Context) => {
     projectStatus: [],
     methodologies: [],
   }
+  context.state.searchFilters.selectedUnitSearchFilterValues.searchFilterValues = {
+    countries: [],
+    sectors: [],
+    projectStatus: [],
+    unitStatus: [],
+    vintageYear: {},
+  }
 }
 
 export const setUnitStatusFilter = (context: Context, selectedFilters: string[]) => {

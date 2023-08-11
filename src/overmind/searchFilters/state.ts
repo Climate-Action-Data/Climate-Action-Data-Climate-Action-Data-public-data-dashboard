@@ -25,6 +25,14 @@ export const state: SearchFiltersStateData = {
       sectors: [],
       countries: [],
     },
+    get isEmpty() {
+      return (
+        this.searchFilterValues.projectStatus?.length === 0 &&
+        this.searchFilterValues.methodologies?.length === 0 &&
+        this.searchFilterValues.sectors?.length === 0 &&
+        this.searchFilterValues.countries?.length === 0
+      )
+    },
   },
   selectedUnitSearchFilterValues: {
     searchFilterValues: {
@@ -32,6 +40,14 @@ export const state: SearchFiltersStateData = {
       projectStatus: [],
       sectors: [],
       countries: [],
+    },
+    get isEmpty() {
+      return (
+        this.searchFilterValues.unitStatus?.length === 0 &&
+        this.searchFilterValues.projectStatus?.length === 0 &&
+        this.searchFilterValues.sectors?.length === 0 &&
+        this.searchFilterValues.countries?.length === 0
+      )
     },
   },
   keywordSearch: ``,

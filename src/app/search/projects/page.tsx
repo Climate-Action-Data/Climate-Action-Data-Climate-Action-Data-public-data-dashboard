@@ -15,7 +15,7 @@ import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 
 const ProjectPage: NextPage = () => {
   const { getProjectSearchResults, getProjectFilterResults } = useEffects().projectResult
-  const { setProjectResults } = useActions().projectResult
+  const { setProjectResults, clearProjectResults } = useActions().projectResult
   const { resetSearchFilters } = useActions().searchFilters
   const { projectResults } = useAppState().projectResult
   const { selectedProjectSearchFilterValues } = useAppState().searchFilters
@@ -25,10 +25,12 @@ const ProjectPage: NextPage = () => {
 
   useEffect(() => {
     if (filter) {
+      clearProjectResults()
       getProjectFilterResults(selectedProjectSearchFilterValues.searchFilterValues).then((hasProjectResults) => {
         setProjectResults(hasProjectResults)
       })
     } else {
+      clearProjectResults()
       resetSearchFilters()
       getProjectSearchResults(pattern).then((hasProjectResults) => {
         setProjectResults(hasProjectResults)

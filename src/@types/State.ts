@@ -127,7 +127,7 @@ export interface GovernanceData {
 
 export interface SearchFiltersStateData {
   allSearchFilterValues: { searchFilterValues: AllSearchFilterValues; readonly isEmpty: boolean }
-  selectedProjectSearchFilterValues: { searchFilterValues: ProjectSearchFilterValues }
-  selectedUnitSearchFilterValues: { searchFilterValues: UnitSearchFilterValues }
+  selectedProjectSearchFilterValues: { searchFilterValues: ProjectSearchFilterValues; readonly isEmpty: boolean }
+  selectedUnitSearchFilterValues: { searchFilterValues: UnitSearchFilterValues; readonly isEmpty: boolean }
   keywordSearch: string
 }
