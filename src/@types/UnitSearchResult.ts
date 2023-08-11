@@ -21,6 +21,7 @@ export interface UnitSearchResult {
   project: UnitProject
   status: string
   issuanceDate?: string
+  issuanceId?: string
   retirementDate?: string
   annualEst?: number
   correspondingAdjustment?: string

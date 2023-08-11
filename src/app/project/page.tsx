@@ -7,7 +7,6 @@ import { ProjectBreadcrumb } from '@/components/atoms/ProjectBreadcrumb/ProjectB
 import { ProjectDetailHeader } from '@/components/atoms/ProjectDetailHeader/ProjectDetailHeader'
 import { CardSection } from '@/components/molecules/CardSection/CardSection'
 import { ProjectDetailsInfo } from '@/components/molecules/ProjectDetailsInfo/ProjectDetailsInfo'
-import { ProjectDetailsVerification } from '@/components/molecules/ProjectDetailsVerification/ProjectDetailsVerification'
 import { IssuancesRetirements } from '@/components/organisms/IssuancesRetirements/IssuancesRetirements'
 import { ProjectDocuments } from '@/components/organisms/ProjectDocuments/ProjectDocuments'
 import { useEffects } from '@/overmind'
@@ -51,11 +50,6 @@ const ProjectPage: NextPage = () => {
                 <DetailWidget title={t(`geographicIdentifier`)}>{coordinatesToString(toCoordinates(project?.location.geoCoordinates))}</DetailWidget>
               </SimpleGrid>
             </Container>
-          </Container>
-        </CardSection>
-        <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.verificationValidation`) }}>
-          <Container padding={[`12px`, `24px`]} flex={2} variant="cardSectionNoMargin">
-            <ProjectDetailsVerification validation={project?.validation} />
           </Container>
         </CardSection>
         <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.issuancesRetirements`) }}>

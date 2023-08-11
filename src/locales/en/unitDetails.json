@@ -3,6 +3,7 @@
     "placeholderIssuance": "This is the placeholder for the issuance page",
     "sectionHeaders": {
         "retirementDetails": "Retirement Details",
+        "issuanceDetails": "Issuance Details",
         "originalIssuanceDetails": "Original Issuance Details"
     },
     "retirement": {

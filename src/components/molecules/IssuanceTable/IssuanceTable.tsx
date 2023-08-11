@@ -33,7 +33,7 @@ export const IssuanceTable = (props: IssuanceTableProps) => {
         <Td>{issuance.availableUnits.toLocaleString()}</Td>
         <Td>{formatDate(issuance.date, DateFormats.YYYY_MM_DD)}</Td>
         <Td>
-          <Link href={`/unit/retirement?id=${issuance.id}`} as="button" variant="hoverOnlyNoBold">
+          <Link href={`/issuance?id=${issuance.id}`} as="button" variant="hoverOnlyNoBold">
             {t(`moreDetails`)}
           </Link>
         </Td>
