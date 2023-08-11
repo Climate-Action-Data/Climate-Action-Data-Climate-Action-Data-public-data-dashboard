@@ -42,6 +42,7 @@ export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
         countries: [],
         unitStatus: [],
       },
+      isEmpty: true,
     },
     selectedProjectSearchFilterValues: {
       searchFilterValues: {
@@ -50,6 +51,7 @@ export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
         sectors: [],
         countries: [],
       },
+      isEmpty: true,
     },
     allSearchFilterValues: {
       searchFilterValues: {
