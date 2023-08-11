@@ -22,6 +22,7 @@ const customJestConfig = {
         'node_modules',
         'src/overmind',
         'src/assets',
+        'src/test/mock-data',
         'src/styles',
         "<rootDir>/src/app/layout.tsx",
         "<rootDir>/src/utils/Stickify.ts",
