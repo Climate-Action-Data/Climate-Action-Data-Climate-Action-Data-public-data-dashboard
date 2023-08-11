@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next'
 import { UnitSearchResponse, UnitSearchResult } from '@/@types/UnitSearchResult'
 import { generateUnitUrl } from '@/utils/RequestHelpers'
 import { generateRandomString } from '@/utils/GenerationHelpers'
+import { UnitStatus } from '@/@types/Unit'
 
 interface UnitSearchHeadContentProps {
   unitResults?: EffectResponse<UnitSearchResponse>
@@ -25,12 +26,14 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
       const target = event.target as HTMLElement
       if (target instanceof HTMLTableCellElement || target instanceof HTMLParagraphElement) {
         const generatedUrl = generateUnitUrl(`${unitStatus}`)
+
         router.push(`${generatedUrl}${unitId}`)
       }
     }
   }
   const generateMenuList = (unitWarehouseId: string, projectWarehouseId: string, unitStatus: string) => {
     const generatedUrl = generateUnitUrl(`${unitStatus}`)
+
     const menuList: MenuItemProps[] = [
       {
         dataTestId: `view-unit-details`,
@@ -49,32 +52,36 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
   }
 
   const generateTableRow = (unitList: UnitSearchResult[]) => {
-    return unitList.map((unitResults, idx) => (
-      <Tr
-        onClick={(event) => handleClick(unitResults.warehouseUnitId, unitResults.status, event)}
-        onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
-        data-testid="project-search-head-row"
-        className={`project-row-${idx}`}
-        key={`project-row-${generateRandomString()}`}
-        height="92px"
-      >
-        <Td data-testid="project-search-head-row-td">
-          <Flex alignItems="center">
-            <Box title={unitResults?.project?.name} overflow="hidden" flex={1}>
-              <Text fontWeight={500}>{unitResults?.project?.name}</Text>
-              <Text fontSize="sm">{unitResults?.project?.id}</Text>
-              <Text textOverflow="ellipsis" color="lightGray.700" fontSize="sm">
-                {unitResults?.project?.developer}
-              </Text>
-            </Box>
-            <Menu variant="menuWhite">
-              <MenuButton as={Button} textAlign="center" iconSpacing={0} rightIcon={<KebabMenuIcon />} variant="lightGrayRound32"></MenuButton>
-              <MenuContent menuItems={generateMenuList(unitResults.warehouseUnitId, unitResults?.project?.id, unitResults.status)} />
-            </Menu>
-          </Flex>
-        </Td>
-      </Tr>
-    ))
+    return unitList.map((unitResults, idx) => {
+      const redirectId = unitResults?.status === UnitStatus.RETIRED ? unitResults.warehouseUnitId : unitResults.issuanceId
+
+      return (
+        <Tr
+          onClick={(event) => handleClick(redirectId ?? unitResults.warehouseUnitId, unitResults.status, event)}
+          onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
+          data-testid="project-search-head-row"
+          className={`project-row-${idx}`}
+          key={`project-row-${generateRandomString()}`}
+          height="92px"
+        >
+          <Td data-testid="project-search-head-row-td">
+            <Flex alignItems="center">
+              <Box title={unitResults?.project?.name} overflow="hidden" flex={1}>
+                <Text fontWeight={500}>{unitResults?.project?.name}</Text>
+                <Text fontSize="sm">{unitResults?.project?.id}</Text>
+                <Text textOverflow="ellipsis" color="lightGray.700" fontSize="sm">
+                  {unitResults?.project?.developer}
+                </Text>
+              </Box>
+              <Menu variant="menuWhite">
+                <MenuButton as={Button} textAlign="center" iconSpacing={0} rightIcon={<KebabMenuIcon />} variant="lightGrayRound32"></MenuButton>
+                <MenuContent menuItems={generateMenuList(redirectId ?? unitResults.warehouseUnitId, unitResults?.project?.id, unitResults.status)} />
+              </Menu>
+            </Flex>
+          </Td>
+        </Tr>
+      )
+    })
   }
 
   return (

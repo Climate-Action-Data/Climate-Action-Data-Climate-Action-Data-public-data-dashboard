@@ -1,6 +1,7 @@
 'use client'
 import { ESearchParams } from '@/@types/ProjectSearchResult'
 import { Unit } from '@/@types/Unit'
+import { ProjectBreadcrumb } from '@/components/atoms/ProjectBreadcrumb/ProjectBreadcrumb'
 import { ProjectDetailHeader } from '@/components/atoms/ProjectDetailHeader/ProjectDetailHeader'
 import { CardSection } from '@/components/molecules/CardSection/CardSection'
 import { OriginalIssuanceDetails } from '@/components/molecules/OriginalIssuanceDetails/OriginalIssuanceDetails'
@@ -29,21 +30,29 @@ const RetirementPage: NextPage = () => {
   }, [])
   return (
     <>
-      <Box paddingBottom="40px">
-        <ProjectDetailHeader id={unit?.project.id ?? tHome(`noData`)} location={unit?.project?.country} title={unit?.project?.name ?? tHome(`noData`)} type={unit?.project?.type} />
+      {unit?.project?.warehouseProjectId && unit?.project?.name && <ProjectBreadcrumb id={unit?.project?.warehouseProjectId} title={unit?.project?.name} />}
+      <Box padding="12px 24px">
+        <Box paddingBottom="40px">
+          <ProjectDetailHeader
+            id={unit?.project.id ?? tHome(`noData`)}
+            location={unit?.project?.country}
+            title={unit?.project?.name ?? tHome(`noData`)}
+            type={unit?.project?.type}
+          />
+        </Box>
+        <Flex flexDirection="column" minW="100%" gap="40px">
+          <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.retirementDetails`) }}>
+            <Container padding={[`12px`, `24px`]} flex={2} variant="cardSectionNoMargin">
+              <RetirementDetails unit={unit} />
+            </Container>
+          </CardSection>
+          <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.originalIssuanceDetails`) }}>
+            <Container padding={[`12px`, `24px`]} flex={2} variant="cardSectionNoMargin">
+              <OriginalIssuanceDetails unit={unit} />
+            </Container>
+          </CardSection>
+        </Flex>
       </Box>
-      <Flex flexDirection="column" minW="100%" gap="40px">
-        <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.retirementDetails`) }}>
-          <Container padding={[`12px`, `24px`]} flex={2} variant="cardSectionNoMargin">
-            <RetirementDetails unit={unit} />
-          </Container>
-        </CardSection>
-        <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.originalIssuanceDetails`) }}>
-          <Container padding={[`12px`, `24px`]} flex={2} variant="cardSectionNoMargin">
-            <OriginalIssuanceDetails unit={unit} />
-          </Container>
-        </CardSection>
-      </Flex>
     </>
   )
 }

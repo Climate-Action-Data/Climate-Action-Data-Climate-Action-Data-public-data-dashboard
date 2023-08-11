@@ -211,7 +211,7 @@ exports[`RetirementDetails renders correctly issuances 1`] = `
             >
               <a
                 class="chakra-link css-0"
-                href="/unit/retirement?id=00cfede2-5701-4237-b7cf-8b962ba02aa5"
+                href="/issuance?id=00cfede2-5701-4237-b7cf-8b962ba02aa5"
               >
                 More Details
               </a>
@@ -246,7 +246,7 @@ exports[`RetirementDetails renders correctly issuances 1`] = `
             >
               <a
                 class="chakra-link css-0"
-                href="/unit/retirement?id=136cadbc-83a5-4c43-a172-baf7770796fc"
+                href="/issuance?id=136cadbc-83a5-4c43-a172-baf7770796fc"
               >
                 More Details
               </a>
@@ -470,7 +470,7 @@ exports[`RetirementDetails renders correctly issuances and row click 1`] = `
             >
               <a
                 class="chakra-link css-0"
-                href="/unit/retirement?id=00cfede2-5701-4237-b7cf-8b962ba02aa5"
+                href="/issuance?id=00cfede2-5701-4237-b7cf-8b962ba02aa5"
               >
                 More Details
               </a>
@@ -505,7 +505,7 @@ exports[`RetirementDetails renders correctly issuances and row click 1`] = `
             >
               <a
                 class="chakra-link css-0"
-                href="/unit/retirement?id=136cadbc-83a5-4c43-a172-baf7770796fc"
+                href="/issuance?id=136cadbc-83a5-4c43-a172-baf7770796fc"
               >
                 More Details
               </a>

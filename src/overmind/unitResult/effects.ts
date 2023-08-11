@@ -3,7 +3,7 @@ import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
 
 import { EffectResponse } from '@/@types/EffectResponse'
 import { Unit } from '@/@types/Unit'
-import { Issuance } from '@/@types/ProjectDetails'
+import { Issuance } from '@/@types/Issuance'
 import { UnitSearchResponse } from '@/@types/UnitSearchResult'
 import { DEFAULT_PROJECT_COUNT_TO_DISPLAY, ESearchParams } from '@/@types/ProjectSearchResult'
 import { UnitSearchFilterValues } from '@/@types/ProjectSearchFilterValues'
