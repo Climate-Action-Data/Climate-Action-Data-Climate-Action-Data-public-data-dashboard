@@ -1,5 +1,5 @@
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
-import { render } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import { MockData } from '@/test/TestOvermindMockData'
 import UnitFilterBar from '@/components/organisms/UnitFilterBar/UnitFilterBar'
 import { TestRouter } from '@/test/TestRouter'
@@ -23,5 +23,19 @@ it(`renders correctly with loaded data`, () => {
       </TestRouter>
     </TestOvermindWrapper>,
   )
+  expect(container).toMatchSnapshot()
+})
+it(`renders correctly with loaded data and search click`, () => {
+  const push = jest.fn()
+
+  const { container } = render(
+    <TestOvermindWrapper searchFilters={MockData.SEARCH_FILTER_VALUES}>
+      <TestRouter router={{ push }}>
+        <UnitFilterBar />
+      </TestRouter>
+    </TestOvermindWrapper>,
+  )
+  const button = screen.getByTestId(`search-button`)
+  fireEvent.click(button)
   expect(container).toMatchSnapshot()
 })

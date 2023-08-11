@@ -52,7 +52,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter and open it 1`] =
         tabindex="-1"
       >
         <div
-          class="chakra-popover__body css-8atqhb"
+          class="chakra-popover__body css-1cwynyq"
           id="popover-body-:r1:"
         >
           <div
@@ -218,7 +218,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter and open the date
         tabindex="-1"
       >
         <div
-          class="chakra-popover__body css-8atqhb"
+          class="chakra-popover__body css-1cwynyq"
           id="popover-body-:r9:"
         >
           <div
@@ -384,7 +384,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
         tabindex="-1"
       >
         <div
-          class="chakra-popover__body css-8atqhb"
+          class="chakra-popover__body css-1cwynyq"
           id="popover-body-:r3:"
         >
           <div
@@ -550,7 +550,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
         tabindex="-1"
       >
         <div
-          class="chakra-popover__body css-8atqhb"
+          class="chakra-popover__body css-1cwynyq"
           id="popover-body-:r5:"
         >
           <div
@@ -717,7 +717,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
         tabindex="-1"
       >
         <div
-          class="chakra-popover__body css-8atqhb"
+          class="chakra-popover__body css-1cwynyq"
           id="popover-body-:r7:"
         >
           <div

@@ -157,7 +157,7 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
           </Button>
         </PopoverTrigger>
         <PopoverContent zIndex={401} border={0} borderRadius={`8px`} width={[`100%`, null, null, `min-content`]} height={`min-content`} backgroundColor={`white`} boxShadow={`xl`}>
-          <PopoverBody width={`100%`}>
+          <PopoverBody color="lightGray.700" width={`100%`}>
             {renderContent()}
             {showMinimumDateSelector && renderDateSelector(minimumDate, setMinimumDate)}
             {showMaximumDateSelector && renderDateSelector(maximumDate, setMaximumDate)}
