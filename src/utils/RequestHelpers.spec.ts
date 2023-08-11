@@ -2,7 +2,7 @@ import { UnitStatus } from '@/@types/Unit'
 import { generateUnitUrl } from './RequestHelpers'
 
 const DEFAULT_RETIRED_URL = `/unit/retirement?id=`
-const DEFAULT_ISSUANCE_URL = `/unit/issuance?id=`
+const DEFAULT_ISSUANCE_URL = `/issuance?id=`
 
 describe(`generateUnitUrl`, () => {
   test(`generateUnitUrl with status retired`, () => {
