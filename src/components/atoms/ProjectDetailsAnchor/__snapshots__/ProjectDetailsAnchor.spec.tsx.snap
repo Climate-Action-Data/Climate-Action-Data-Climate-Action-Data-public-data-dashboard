@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="chakra-stack css-16cccpx"
+  >
+    <svg
+      class="chakra-icon css-uvbeem"
+      focusable="false"
+      viewBox="0 0 16 16"
+    >
+      <ellipse
+        cx="8"
+        cy="8"
+        fill="currentColor"
+        rx="3"
+        ry="3"
+      />
+    </svg>
+    <a
+      class="chakra-link css-ytumd6"
+      href="#issuancesRetirements"
+    >
+      <p
+        class="chakra-text css-1xd9xr2"
+      >
+        Project Title
+      </p>
+    </a>
+  </div>
+</div>
+`;
