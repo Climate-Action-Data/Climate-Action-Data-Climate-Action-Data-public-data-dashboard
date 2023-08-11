@@ -105,3 +105,9 @@ export enum ProjectType {
   ENERGY_EFFICIENCY_IMPROVEMENT = `energyefficiencyimprovement`,
   DEFAULT = `default`,
 }
+
+export enum AnchorSection {
+  PROJECT_DETAILS = `projectDetails`,
+  ISSUANCES_RETIREMENTS = `issuancesRetirements`,
+  DOCUMENTS = `documents`,
+}

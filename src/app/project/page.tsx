@@ -1,5 +1,5 @@
 'use client'
-import { ProjectDetails } from '@/@types/ProjectDetails'
+import { AnchorSection, ProjectDetails } from '@/@types/ProjectDetails'
 import { ESearchParams } from '@/@types/ProjectSearchResult'
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
 import { GoogleMapWidget } from '@/components/atoms/GoogleMapWidget/GoogleMapWidget'
@@ -34,8 +34,8 @@ const ProjectPage: NextPage = () => {
 
   return (
     <Box>
-      {project?.warehouseProjectId && project?.name && <ProjectBreadcrumb id={project?.warehouseProjectId} title={project?.name} />}
-      <Flex flexDirection={`column`} gap={6} paddingX={6} paddingY={3}>
+      {project?.warehouseProjectId && project?.name && <ProjectBreadcrumb id={project?.warehouseProjectId} title={project?.name} displayProjectNav={true} />}
+      <Flex id={AnchorSection.PROJECT_DETAILS} flexDirection={`column`} gap={6} padding={`16px 24px`} scrollMarginTop={`172px`}>
         {project && <ProjectDetailHeader id={project.id} location={project.location.country} title={project.name} description={project.description} type={project.type} />}
         <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.projectDetails`) }}>
           <Container padding={[`12px`, `24px`]} flex={2} variant="cardSectionNoMargin">
@@ -52,10 +52,10 @@ const ProjectPage: NextPage = () => {
             </Container>
           </Container>
         </CardSection>
-        <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.issuancesRetirements`) }}>
+        <CardSection id={AnchorSection.ISSUANCES_RETIREMENTS} displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.issuancesRetirements`) }} scrollMarginTop={`172px`}>
           {project && <IssuancesRetirements project={project} />}
         </CardSection>
-        <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.documents`) }}>
+        <CardSection id={AnchorSection.DOCUMENTS} displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.documents`) }} scrollMarginTop={`172px`}>
           <ProjectDocuments />
         </CardSection>
       </Flex>

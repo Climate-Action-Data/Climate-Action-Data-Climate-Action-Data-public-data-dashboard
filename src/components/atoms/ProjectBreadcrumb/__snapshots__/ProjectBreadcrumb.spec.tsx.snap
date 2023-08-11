@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="css-1mlna27"
+    class="css-m2ersj"
     id="headerReference"
   >
     <div
@@ -20,7 +20,7 @@ exports[`renders correctly 1`] = `
             class="chakra-breadcrumb__list-item css-13pussk"
           >
             <a
-              class="chakra-link css-0"
+              class="chakra-link css-g5hezf"
               href="/"
             >
               Home
@@ -38,7 +38,7 @@ exports[`renders correctly 1`] = `
             title="Projects"
           >
             <a
-              class="chakra-link css-ytumd6"
+              class="chakra-link css-fvnrx9"
               href="/search/projects"
             >
               Projects
@@ -56,7 +56,7 @@ exports[`renders correctly 1`] = `
             title="Proyecto de Mitigación Forestal Bonanza Verde"
           >
             <a
-              class="chakra-link css-ytumd6"
+              class="chakra-link css-1mc518j"
               href="/project?id=a442a765-50f4-43dc-aa38-24e08d88c821"
             >
               Proyecto de Mitigación Forestal Bonanza Verde

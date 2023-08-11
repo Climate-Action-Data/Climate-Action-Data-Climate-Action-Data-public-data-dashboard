@@ -6,7 +6,8 @@ exports[`renders correctly 1`] = `
     class="css-0"
   >
     <div
-      class="css-14fdyiq"
+      class="css-10k5p03"
+      id="projectDetails"
     >
       <div
         class="css-0"
@@ -462,7 +463,8 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="css-0"
+        class="css-8dnrdk"
+        id="issuancesRetirements"
       >
         <div
           class="chakra-stack css-qlxuh7"
@@ -529,7 +531,8 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="css-0"
+        class="css-8dnrdk"
+        id="documents"
       >
         <div
           class="chakra-stack css-qlxuh7"

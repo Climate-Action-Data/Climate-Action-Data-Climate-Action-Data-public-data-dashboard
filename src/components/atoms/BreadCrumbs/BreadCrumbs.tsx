@@ -1,11 +1,10 @@
 import { Link } from '@chakra-ui/next-js'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbItemProps } from '@chakra-ui/react'
-import { usePathname } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 
 interface BreadCrumbsProps {
   showHome?: boolean
-  items: { title: string; link: string; isCurrentPage?: boolean }[]
+  items: { title: string; link: string }[]
   color?: string
 }
 
@@ -18,7 +17,7 @@ const BreadCrumbsItem = (props: BreadCrumbsItemProps) => {
   const { title, link, isCurrentPage } = props
   return (
     <BreadcrumbItem _hover={{ color: `blue.600` }} isCurrentPage={isCurrentPage} {...props}>
-      <Link textDecoration={isCurrentPage ? `underline` : `none`} href={link}>
+      <Link textDecoration={isCurrentPage ? `underline` : `none`} href={link} fontSize="sm">
         {title}
       </Link>
     </BreadcrumbItem>
@@ -34,17 +33,19 @@ export const BreadCrumbs = (props: BreadCrumbsProps) => {
     color: props.color ?? `lightGray.200`,
   }
 
-  const currentPath = usePathname()
   const { t } = useTranslation(`home`)
+
   return (
     <Breadcrumb separator={DEFAULT_BREADCRUMB_SEPERATOR} color={actualProps.color}>
       {actualProps.showHome && (
         <BreadcrumbItem _hover={{ color: `blue.600` }}>
-          <Link href="/">{t(`homeBreadcrumb`)}</Link>
+          <Link href="/" fontSize="sm">
+            {t(`homeBreadcrumb`)}
+          </Link>
         </BreadcrumbItem>
       )}
-      {actualProps.items.map((item) => (
-        <BreadCrumbsItem key={`breadcrumb-${item.title}`} title={item.title} link={item.link} isCurrentPage={currentPath === item.link} />
+      {actualProps.items.map((item, index) => (
+        <BreadCrumbsItem key={`breadcrumb-${item.title}`} title={item.title} link={item.link} isCurrentPage={index === actualProps.items.length - 1} />
       ))}
     </Breadcrumb>
   )
