@@ -2,7 +2,7 @@ import { FC, PropsWithChildren } from 'react'
 import { Circle, Tab, TabProps, useTab } from '@chakra-ui/react'
 
 const HeaderTab: FC<PropsWithChildren<TabProps>> = (props) => {
-  const tabProps = { ...useTab(props), ariaDisabled: false }
+  const tabProps = { ...useTab(props), 'aria-disabled': false }
   const isSelected = tabProps[`aria-selected`]
   const textColor = isSelected ? `gray.500` : `lightGray.700`
   return (
