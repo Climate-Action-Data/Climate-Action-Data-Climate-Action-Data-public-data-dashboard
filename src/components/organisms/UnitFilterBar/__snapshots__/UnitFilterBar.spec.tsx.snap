@@ -273,9 +273,9 @@ exports[`renders correctly with loaded data 1`] = `
         <div
           class="css-1lkwiwl"
         />
-        <a
-          class="chakra-link css-1vx4e4n"
-          href="/search/units"
+        <button
+          class="chakra-button css-7i7203"
+          type="button"
         >
           <div
             class="css-70qvj9"
@@ -292,7 +292,7 @@ exports[`renders correctly with loaded data 1`] = `
               />
             </svg>
           </div>
-        </a>
+        </button>
       </div>
     </div>
   </div>
@@ -536,9 +536,9 @@ exports[`renders correctly with no data 1`] = `
         <div
           class="css-1lkwiwl"
         />
-        <a
-          class="chakra-link css-1vx4e4n"
-          href="/search/units"
+        <button
+          class="chakra-button css-7i7203"
+          type="button"
         >
           <div
             class="css-70qvj9"
@@ -555,7 +555,7 @@ exports[`renders correctly with no data 1`] = `
               />
             </svg>
           </div>
-        </a>
+        </button>
       </div>
     </div>
   </div>
