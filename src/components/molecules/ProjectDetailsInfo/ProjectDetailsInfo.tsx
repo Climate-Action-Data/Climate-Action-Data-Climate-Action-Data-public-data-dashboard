@@ -68,7 +68,7 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
         <DetailWidget title={t(`detailsHeaders.tags`)}>
           <ExpandableList items={extractTagItemsFromTag(project?.tags)} />
         </DetailWidget>
-        <DetailWidget minW={[`100%`, `607px`]} asBox title={t(`detailsHeaders.coBenefits`)}>
+        <DetailWidget asBox title={t(`detailsHeaders.coBenefits`)}>
           <HStack flexWrap="wrap" gap="4px">
             {project.coBenefits.map((benefit) => {
               const eWebGoal = extractEWebGoalFromString(benefit)
