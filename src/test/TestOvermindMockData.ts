@@ -199,6 +199,6 @@ export const UNIT_DETAIL: Unit = unitDetail
 
 export const UNIT_SEARCH_RESULT: UnitResultState = {
   unitResults: {
-    data: unitsData,
+    data: { units: unitsData, totalCount: 99 },
   },
 }
