@@ -242,6 +242,7 @@ exports[`UnitFilterBar renders correctly 1`] = `
           />
           <button
             class="chakra-button css-7i7203"
+            data-testid="search-button"
             type="button"
           >
             <div

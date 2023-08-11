@@ -1,5 +1,13 @@
 import { EWebGoal } from '@/@types/EWebGoal'
-import { extractTitleFromUrl, capitalizeString, extractEWebGoalFromString, sanitizeString, extractProjectTypeFromString, extractTagItemsFromTag } from './TextConverter'
+import {
+  extractTitleFromUrl,
+  capitalizeString,
+  extractEWebGoalFromString,
+  sanitizeString,
+  extractProjectTypeFromString,
+  extractTagItemsFromTag,
+  extractPageFromUrl,
+} from './TextConverter'
 import { ProjectType } from '@/@types/ProjectDetails'
 
 const TEST_FULL_CAP = `LOREM`
@@ -97,5 +105,17 @@ describe(`extractTagItemsFromTag`, () => {
 
   test(`extract tag items from tag to be empty`, () => {
     expect(extractTagItemsFromTag(undefined)).toEqual([])
+  })
+})
+
+const URL_PAGE = `ipsum`
+
+describe(`extractPageFromUrl`, () => {
+  test(`extract page from url`, () => {
+    expect(extractPageFromUrl(URL)).toBe(URL_PAGE)
+  })
+
+  test(`extract page from coid url to be default`, () => {
+    expect(extractPageFromUrl(URL_VOID)).toBe(``)
   })
 })

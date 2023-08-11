@@ -250,6 +250,7 @@ exports[`ProjectFilterAndSearch renders correctly 1`] = `
           />
           <button
             class="chakra-button css-7i7203"
+            data-testid="search-button"
             type="button"
           >
             <div
@@ -547,6 +548,7 @@ exports[`ProjectFilterAndSearch renders correctly and the filter-and-search-trig
           />
           <button
             class="chakra-button css-7i7203"
+            data-testid="search-button"
             type="button"
           >
             <div

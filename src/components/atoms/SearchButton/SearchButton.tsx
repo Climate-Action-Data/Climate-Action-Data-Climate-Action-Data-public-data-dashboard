@@ -30,14 +30,15 @@ const SearchButton: FC<SearchButtonProps> = (props) => {
 
   return (
     <Button
-      variant={`accentPrimary32`}
-      padding={`8px 16px`}
-      width={`max-content`}
+      variant="accentPrimary32"
+      padding="8px 16px"
+      width="max-content"
       _hover={{ backgroundColor: `#24BD63` }}
       _active={{ backgroundColor: `#1B8E4A` }}
       onClick={handleOnClick}
-      fontSize={`16px`}
-      fontWeight={`medium`}
+      fontSize="16px"
+      fontWeight="medium"
+      data-testid="search-button"
     >
       <Flex alignItems={`center`}>{generateLabel()}</Flex>
     </Button>
