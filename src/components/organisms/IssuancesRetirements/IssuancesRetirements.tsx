@@ -2,8 +2,9 @@ import { Issuance, IssuanceUnit, ProjectDetails } from '@/@types/ProjectDetails'
 import { UnitStatus } from '@/@types/Unit'
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
 import { IssuanceTable } from '@/components/molecules/IssuanceTable/IssuanceTable'
+import { IssuanceTableMobile } from '@/components/molecules/IssuanceTableMobile/IssuanceTableMobile'
 import { RetirementTable } from '@/components/molecules/RetirementTable/RetirementTable'
-import { Container, SimpleGrid } from '@chakra-ui/react'
+import { Container, Hide, SimpleGrid } from '@chakra-ui/react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -52,8 +53,13 @@ export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
         </SimpleGrid>
       </Container>
       <Container padding={0} display="flex" variant="cardSectionNoMargin">
-        <IssuanceTable onClick={handleClick} issuances={project.issuances} />
-        <RetirementTable retirements={selectedRetirements} />
+        <Hide above="sm">
+          <IssuanceTableMobile issuances={project.issuances} />
+        </Hide>
+        <Hide below="sm">
+          <IssuanceTable onClick={handleClick} issuances={project.issuances} />
+          <RetirementTable retirements={selectedRetirements} />
+        </Hide>
       </Container>
     </>
   )

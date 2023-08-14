@@ -3,7 +3,7 @@
 exports[`RetirementDetails renders correctly with message 1`] = `
 <div>
   <div
-    class="css-1ma1xtl"
+    class="css-jof02b"
   >
     No data available
   </div>
@@ -13,7 +13,7 @@ exports[`RetirementDetails renders correctly with message 1`] = `
 exports[`RetirementDetails renders correctly with no message 1`] = `
 <div>
   <div
-    class="css-1ma1xtl"
+    class="css-jof02b"
   >
     --
   </div>

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, Box } from '@chakra-ui/react'
 import { createOvermind } from 'overmind'
 import { Provider } from 'overmind-react'
 
@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
               <ChakraProvider theme={theme}>
                 {currentPath === `/` && <AppHeader />}
                 <Menu />
-                {children}
+                <Box paddingBottom="60px">{children}</Box>
               </ChakraProvider>
             </CacheProvider>
           </NoSSR>

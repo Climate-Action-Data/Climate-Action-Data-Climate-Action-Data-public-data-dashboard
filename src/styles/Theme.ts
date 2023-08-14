@@ -4,7 +4,9 @@ import { mode } from '@chakra-ui/theme-tools'
 import {
   accentPrimary32,
   blackLink,
+  blueFilled,
   blueLink,
+  blueOutline,
   brandPrimary,
   calendarAction,
   calendarDate,
@@ -18,6 +20,7 @@ import {
   lightGray,
   lightGrayRound,
   lightGrayRound32,
+  modalClose,
   textLink,
   underlinedLink,
   whiteSecondary,
@@ -80,6 +83,9 @@ const theme = extendTheme({
         calendarNavigation,
         calendarAction,
         calendarDate,
+        blueFilled,
+        blueOutline,
+        modalClose,
       },
     },
     Heading: {
@@ -97,6 +103,8 @@ const theme = extendTheme({
         accentPrimary32,
         blueLink,
         blackLink,
+        blueOutline,
+        blueFilled,
       },
     },
     Container: {
@@ -188,7 +196,7 @@ const theme = extendTheme({
       },
       '.fixed': {
         position: `fixed`,
-        top: `240px`,
+        top: [`480px`, `240px`],
         width: `100%`,
         display: `inherit`,
         tr: {

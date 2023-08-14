@@ -581,7 +581,7 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
       class="chakra-stack__divider css-1g2u1yc"
     />
     <div
-      class="css-s8hfc8"
+      class="css-1ss9yhm"
     >
       <div
         class="css-0"
@@ -930,7 +930,7 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
       class="chakra-stack__divider css-1g2u1yc"
     />
     <div
-      class="css-s8hfc8"
+      class="css-1ss9yhm"
     >
       <div
         class="css-0"

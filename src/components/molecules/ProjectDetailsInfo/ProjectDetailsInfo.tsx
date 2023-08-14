@@ -33,9 +33,11 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
     return `${startDate} - ${endDate}`
   }
 
+  const DEFAULT_COLUMN = 2
+
   return (
     <Stack divider={<StackDivider />} spacing="24px">
-      <SimpleGrid columns={2} gap="24px">
+      <SimpleGrid columns={DEFAULT_COLUMN} gap="24px">
         <DetailWidget title={t(`detailsHeaders.standard`)}>{project.standard}</DetailWidget>
         <DetailWidget title={t(`detailsHeaders.methodology`)}>{project.methodology}</DetailWidget>
         <DetailWidget title={t(`detailsHeaders.developer`)}>{project.developer}</DetailWidget>
@@ -50,21 +52,21 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
         <DetailWidget title={t(`detailsHeaders.statusUpdated`)}>{project.statusDate ? formatDate(project.statusDate, DateFormats.YYYY_MM_DD) : tHome(`noData`)}</DetailWidget>
       </SimpleGrid>
       <Flex flexWrap="wrap">
-        <SimpleGrid columns={2} gap="24px">
+        <SimpleGrid columns={DEFAULT_COLUMN} gap="24px">
           <DetailWidget title={t(`detailsHeaders.availableUnits`)}>{project.units.available.toLocaleString()}</DetailWidget>
           <DetailWidget title={t(`detailsHeaders.issuances`)}>{project.units.issued.toLocaleString()}</DetailWidget>
           <DetailWidget title={t(`detailsHeaders.creditingPeriod`)}>{renderCreditingPeriod(project.units.creditingPeriodStart, project.units.creditingPeriodEnd)}</DetailWidget>
         </SimpleGrid>
-        <SimpleGrid columns={2} gap="24px">
+        <SimpleGrid columns={DEFAULT_COLUMN} gap="24px">
           <DetailWidget title={t(`detailsHeaders.retirememts`)}>{project.units.retired.toLocaleString()}</DetailWidget>
           <DetailWidget title={t(`detailsHeaders.estimatedUnits`)}>{project.units.estimated.toLocaleString()}</DetailWidget>
           <DetailWidget title={t(`detailsHeaders.unitMetric`)}>{project.units.unitMetric}</DetailWidget>
         </SimpleGrid>
       </Flex>
-      <SimpleGrid columns={2} gap="24px">
+      <SimpleGrid columns={DEFAULT_COLUMN} gap="24px">
         <DetailWidget title={t(`detailsHeaders.ndcCoverage`)}>{project.coveredByNdc}</DetailWidget>
       </SimpleGrid>
-      <SimpleGrid columns={2} gap="24px">
+      <SimpleGrid columns={[1, DEFAULT_COLUMN]} gap="24px">
         <DetailWidget title={t(`detailsHeaders.tags`)}>
           <ExpandableList items={extractTagItemsFromTag(project?.tags)} />
         </DetailWidget>

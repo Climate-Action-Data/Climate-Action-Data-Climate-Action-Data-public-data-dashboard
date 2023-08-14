@@ -3,7 +3,7 @@
 exports[`CreditingPeriodFilter renders a CreditingPeriodFilter and open it 1`] = `
 <div>
   <div
-    class="css-ddkw9a"
+    class="css-0"
   >
     <button
       aria-controls="popover-content-:r1:"
@@ -59,7 +59,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter and open it 1`] =
             class="chakra-stack css-tl3ftk"
           >
             <div
-              class="chakra-stack css-h0nw9k"
+              class="chakra-stack css-1x60cb9"
             >
               <div
                 class="chakra-stack css-m3jj3s"
@@ -169,7 +169,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter and open it 1`] =
 exports[`CreditingPeriodFilter renders a CreditingPeriodFilter and open the date selectors and click on clear on the calendar 1`] = `
 <div>
   <div
-    class="css-ddkw9a"
+    class="css-0"
   >
     <button
       aria-controls="popover-content-:r9:"
@@ -225,7 +225,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter and open the date
             class="chakra-stack css-tl3ftk"
           >
             <div
-              class="chakra-stack css-h0nw9k"
+              class="chakra-stack css-1x60cb9"
             >
               <div
                 class="chakra-stack css-m3jj3s"
@@ -335,7 +335,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter and open the date
 exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-selected max date 1`] = `
 <div>
   <div
-    class="css-ddkw9a"
+    class="css-0"
   >
     <button
       aria-controls="popover-content-:r3:"
@@ -391,7 +391,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
             class="chakra-stack css-tl3ftk"
           >
             <div
-              class="chakra-stack css-h0nw9k"
+              class="chakra-stack css-1x60cb9"
             >
               <div
                 class="chakra-stack css-m3jj3s"
@@ -501,7 +501,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
 exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-selected min date and click on clear 1`] = `
 <div>
   <div
-    class="css-ddkw9a"
+    class="css-0"
   >
     <button
       aria-controls="popover-content-:r5:"
@@ -557,7 +557,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
             class="chakra-stack css-tl3ftk"
           >
             <div
-              class="chakra-stack css-h0nw9k"
+              class="chakra-stack css-1x60cb9"
             >
               <div
                 class="chakra-stack css-m3jj3s"
@@ -667,7 +667,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
 exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-selected min date and max date and click on apply 1`] = `
 <div>
   <div
-    class="css-ddkw9a"
+    class="css-0"
   >
     <button
       aria-controls="popover-content-:r7:"
@@ -724,7 +724,7 @@ exports[`CreditingPeriodFilter renders a CreditingPeriodFilter with a pre-select
             class="chakra-stack css-tl3ftk"
           >
             <div
-              class="chakra-stack css-h0nw9k"
+              class="chakra-stack css-1x60cb9"
             >
               <div
                 class="chakra-stack css-m3jj3s"

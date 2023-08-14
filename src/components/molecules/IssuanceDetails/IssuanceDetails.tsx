@@ -12,6 +12,9 @@ interface IssuanceDetailsProps {
   issuance?: Issuance
 }
 
+const DEFAULT_COLUMN_MOBILE = 2
+const DEFAULT_COLUMN_WEB = 4
+
 export const IssuanceDetails = (props: IssuanceDetailsProps) => {
   const { issuance } = props
   const { t } = useTranslation(`projectDetails`)
@@ -29,7 +32,7 @@ export const IssuanceDetails = (props: IssuanceDetailsProps) => {
   }
 
   return (
-    <SimpleGrid columns={4} gap="24px">
+    <SimpleGrid columns={[DEFAULT_COLUMN_MOBILE, DEFAULT_COLUMN_WEB]} gap="24px">
       <DetailWidget title={t(`issuanceDetails.issuedTo`)}>{issuance.issuedTo}</DetailWidget>
       <DetailWidget title={t(`issuanceDetails.vintage`)}>{issuance.vintage}</DetailWidget>
       <DetailWidget title={t(`issuanceDetails.quantity`)}>{issuance.quantity.toLocaleString()}</DetailWidget>
