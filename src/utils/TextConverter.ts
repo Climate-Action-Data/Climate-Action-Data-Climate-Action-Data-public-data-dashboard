@@ -56,3 +56,9 @@ export const extractTagItemsFromTag = (tags: string | undefined) => {
     .filter(Boolean)
   return Array.from(new Set(tagItems))
 }
+
+export const extractUrlFromString = (str: string) => {
+  const urlRegex = /(https?:\/\/[^\s]+)/
+  const url = str.match(urlRegex)
+  return url ? url[0] : undefined
+}

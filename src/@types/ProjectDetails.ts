@@ -16,6 +16,7 @@ export type Units = {
 
 export type Verification = {
   approach: string
+  body: string
   startDate: string
   endDate: string
 }

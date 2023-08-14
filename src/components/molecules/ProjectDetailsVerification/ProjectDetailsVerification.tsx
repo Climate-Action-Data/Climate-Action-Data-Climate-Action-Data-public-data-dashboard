@@ -20,15 +20,18 @@ export const ProjectDetailsVerification = (props: ProjectDetailsVerificationProp
   }
 
   return (
-    <SimpleGrid columns={2} gap="24px">
-      <DetailWidget title={t(`verificationHeaders.validationBody`)}>{validation.body ?? tHome(`noData`)}</DetailWidget>
-      <DetailWidget title={t(`verificationHeaders.validationUpdated`)}>{validation.date ? formatDate(validation.date, DateFormats.YYYY_MM_DD) : tHome(`noData`)}</DetailWidget>
-      <DetailWidget title={t(`verificationHeaders.verificationApproach`)}>
-        {validation.verifications.length > 0 ? <Text>{validation.verifications[0].approach}</Text> : tHome(`noData`)}
-      </DetailWidget>
-      <DetailWidget asBox title={t(`verificationHeaders.verificationPeriod`)}>
-        <ProjectDetailsVerificationList verificationList={validation.verifications} />
-      </DetailWidget>
-    </SimpleGrid>
+    <>
+      <SimpleGrid columns={1} gap="24px">
+        <DetailWidget title={t(`verificationHeaders.validationUpdated`)}>{validation.date ? formatDate(validation.date, DateFormats.YYYY_MM_DD) : tHome(`noData`)}</DetailWidget>
+      </SimpleGrid>
+      <SimpleGrid columns={2} gap="24px">
+        <DetailWidget title={t(`verificationHeaders.verificationApproach`)}>
+          {validation.verifications.length > 0 ? <Text>{validation.verifications[0].approach}</Text> : tHome(`noData`)}
+        </DetailWidget>
+        <DetailWidget asBox title={t(`verificationHeaders.verificationPeriod`)}>
+          <ProjectDetailsVerificationList verificationList={validation.verifications} />
+        </DetailWidget>
+      </SimpleGrid>
+    </>
   )
 }

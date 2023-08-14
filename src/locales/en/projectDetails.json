@@ -52,7 +52,7 @@
   },
   "verificationHeaders": {
     "validationBody": "Validation Body",
-    "validationUpdated": "Validation Status Updated On",
+    "validationUpdated": "Verification Report Date",
     "verificationApproach": "Verification Approach",
     "verificationPeriod": "Verification Period"
   },
@@ -71,6 +71,16 @@
     "name": "Document name",
     "updated": "Date updated"
   },
+  "issuanceDetails": {
+    "issuedTo": "Project Issued To",
+    "vintage": "Vintage",
+    "quantity": "Quantity",
+    "unitType": "Unit Type",
+    "monitoringPeriod": "Monitoring Period",
+    "correspodinglyAdjusted":"Correspondingly Adjusted",
+    "issuanceTags": "Issuance Tags"
+  },
+  "by": "by ",
   "viewHistory": "View History",
   "viewMore": "View More",
   "moreDetails": "More Details",

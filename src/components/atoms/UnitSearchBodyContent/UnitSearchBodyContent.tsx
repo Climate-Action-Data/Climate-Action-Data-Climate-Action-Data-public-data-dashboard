@@ -24,6 +24,8 @@ export const UnitSearchBodyContent = (props: UnitSearchBodyContentProps) => {
     return unitList.map((unit, idx) => {
       const generatedUrl = generateUnitUrl(`${unit?.status}`)
       const redirectId = unit?.status === UnitStatus.RETIRED ? unit.warehouseUnitId : unit.issuanceId
+      console.log(unit.marketplace)
+      console.log(typeof unit.marketplace)
       return (
         <Tr
           onClick={() => router.push(`${generatedUrl}${redirectId}`)}
@@ -64,7 +66,7 @@ export const UnitSearchBodyContent = (props: UnitSearchBodyContentProps) => {
             <TableData data={unit?.correspondingAdjustment} />
           </Td>
           <Td minW="250px !important" title={unit.marketplace}>
-            <TableData data={unit.marketplace} />
+            <TableData data={unit?.marketplace} />
           </Td>
           <Td minW="250px !important" title={unit.serialNumber}>
             <TableData data={unit.serialNumber} />

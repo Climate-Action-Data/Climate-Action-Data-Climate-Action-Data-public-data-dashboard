@@ -10,7 +10,7 @@ export const TableData = (props: TableDataProps) => {
   if (props.data !== undefined && typeof props.data === `number`) {
     return <>{props.data.toLocaleString()}</>
   }
-  if (props.data !== undefined) {
+  if (props.data !== undefined && props.data !== `` && props.data !== null) {
     return <>{props.data}</>
   } else {
     return <Text color="lightGray.500">{t(`noData`)}</Text>

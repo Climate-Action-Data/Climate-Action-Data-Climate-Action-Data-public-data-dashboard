@@ -41,11 +41,13 @@ export const ExpandableList = (props: ExpandableListProps) => {
   return (
     <Box>
       {renderItemList()}
-      <Hide below="md">
-        <Button data-testid="verification-expand" onClick={handleExpand} variant="underlinedLink">
-          {isExpanded ? t(`viewLess`) : t(`viewMore`)}
-        </Button>
-      </Hide>
+      {items.length > itemLimit && (
+        <Hide below="md">
+          <Button data-testid="verification-expand" onClick={handleExpand} variant="underlinedLink">
+            {isExpanded ? t(`viewLess`) : t(`viewMore`)}
+          </Button>
+        </Hide>
+      )}
     </Box>
   )
 }

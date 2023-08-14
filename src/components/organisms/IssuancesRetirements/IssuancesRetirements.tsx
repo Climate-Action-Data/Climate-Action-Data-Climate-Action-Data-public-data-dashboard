@@ -27,16 +27,28 @@ export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
   const { t } = useTranslation(`projectDetails`)
   const { t: tHome } = useTranslation(`home`)
 
+  const vintages = project.issuances.map((issuance) => issuance.vintage).sort()
+
   const handleClick = (issuanceId: string) => {
     setSelectedRetirements(getRetiredUnits(project.issuances, issuanceId))
+  }
+
+  const renderVintages = () => {
+    if (vintages.length === 0) {
+      return tHome(`noData`)
+    } else if (vintages.length === 1) {
+      return vintages[0]
+    } else {
+      return `${vintages[0]} - ${vintages[vintages.length - 1]}`
+    }
   }
 
   return (
     <>
       <Container padding={[`12px`, `24px`]} w={`100%`} variant="cardSectionNoMargin">
         <SimpleGrid columns={2} gap="24px">
-          <DetailWidget title={t(`detailsHeaders.availableUnits`)}>{project.units.available ?? tHome(`noData`)}</DetailWidget>
-          <DetailWidget title={t(`detailsHeaders.availableVintages`)}>{project?.availableVintages ?? tHome(`noData`)}</DetailWidget>
+          <DetailWidget title={t(`detailsHeaders.availableUnits`)}>{project.units.available.toLocaleString() ?? tHome(`noData`)}</DetailWidget>
+          <DetailWidget title={t(`detailsHeaders.availableVintages`)}>{renderVintages()}</DetailWidget>
         </SimpleGrid>
       </Container>
       <Container padding={0} display="flex" variant="cardSectionNoMargin">

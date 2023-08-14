@@ -153,6 +153,7 @@ export const underlinedLink = defineStyle({
   color: `gray.100`,
   fontWeight: `400`,
   textDecoration: `underline`,
+  height: `auto`,
   padding: `0`,
   _hover: {
     color: `blue.600`,
