@@ -24,8 +24,6 @@ export const UnitSearchBodyContent = (props: UnitSearchBodyContentProps) => {
     return unitList.map((unit, idx) => {
       const generatedUrl = generateUnitUrl(`${unit?.status}`)
       const redirectId = unit?.status === UnitStatus.RETIRED ? unit.warehouseUnitId : unit.issuanceId
-      console.log(unit.marketplace)
-      console.log(typeof unit.marketplace)
       return (
         <Tr
           onClick={() => router.push(`${generatedUrl}${redirectId}`)}
