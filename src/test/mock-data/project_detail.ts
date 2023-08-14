@@ -36,26 +36,31 @@ export const projectDetail: ProjectDetails = {
     verifications: [
       {
         approach: `Details on website: https://www.ecoregistry.io/projects/151`,
+        body: `Colombian Institute for Technical Standards and Certification (ICONTEC)`,
         startDate: `2019-12-04T00:00:00.000Z`,
         endDate: `2023-12-31T00:00:00.000Z`,
       },
       {
         approach: `Details on website: https://www.ecoregistry.io/projects/151`,
+        body: `Colombian Institute for Technical Standards and Certification (ICONTEC)`,
         startDate: `2019-12-04T00:00:00.000Z`,
         endDate: `2023-12-31T00:00:00.000Z`,
       },
       {
         approach: `Details on website: https://www.ecoregistry.io/projects/151`,
+        body: `Colombian Institute for Technical Standards and Certification (ICONTEC)`,
         startDate: `2019-12-04T00:00:00.000Z`,
         endDate: `2023-12-31T00:00:00.000Z`,
       },
       {
         approach: `Details on website: https://www.ecoregistry.io/projects/151`,
+        body: `Colombian Institute for Technical Standards and Certification (ICONTEC)`,
         startDate: `2019-12-04T00:00:00.000Z`,
         endDate: `2023-12-31T00:00:00.000Z`,
       },
       {
         approach: `Details on website: https://www.ecoregistry.io/projects/151`,
+        body: `Colombian Institute for Technical Standards and Certification (ICONTEC)`,
         startDate: `2019-12-04T00:00:00.000Z`,
         endDate: `2023-12-31T00:00:00.000Z`,
       },
