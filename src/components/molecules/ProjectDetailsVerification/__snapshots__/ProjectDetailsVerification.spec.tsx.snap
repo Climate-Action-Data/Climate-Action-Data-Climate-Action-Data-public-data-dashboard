@@ -69,6 +69,9 @@ exports[`renders correctly with validation 1`] = `
             2019/12/04
              - 
             2023/12/31
+            by 
+             
+            Colombian Institute for Technical Standards and Certification (ICONTEC)
           </p>
           <button
             class="chakra-button css-4xx2wk"
@@ -145,6 +148,9 @@ exports[`renders correctly with validation and no date 1`] = `
             2019/12/04
              - 
             2023/12/31
+            by 
+             
+            Colombian Institute for Technical Standards and Certification (ICONTEC)
           </p>
           <button
             class="chakra-button css-4xx2wk"
