@@ -27,7 +27,7 @@ export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
   const { t } = useTranslation(`projectDetails`)
   const { t: tHome } = useTranslation(`home`)
 
-  const vintages = project.issuances.map((issuance) => issuance.vintage).sort()
+  const vintages = project.issuances.map((issuance) => issuance.vintage).sort((a, b) => Number(a) - Number(b))
 
   const handleClick = (issuanceId: string) => {
     setSelectedRetirements(getRetiredUnits(project.issuances, issuanceId))

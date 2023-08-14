@@ -59,6 +59,6 @@ export const extractTagItemsFromTag = (tags: string | undefined) => {
 
 export const extractUrlFromString = (str: string) => {
   const urlRegex = /(https?:\/\/[^\s]+)/
-  const url = str.match(urlRegex)
-  return url ? url[0] : undefined
+  const match = urlRegex.exec(str)
+  return match ? match[0] : undefined
 }
