@@ -7,6 +7,7 @@ import {
   extractProjectTypeFromString,
   extractTagItemsFromTag,
   extractPageFromUrl,
+  extractUrlFromString,
 } from './TextConverter'
 import { ProjectType } from '@/@types/ProjectDetails'
 
@@ -117,5 +118,18 @@ describe(`extractPageFromUrl`, () => {
 
   test(`extract page from coid url to be default`, () => {
     expect(extractPageFromUrl(URL_VOID)).toBe(``)
+  })
+})
+
+const URL_STRING = `Details on website: https://www.ecoregistry.io/projects/65`
+const URL_PARSED = `https://www.ecoregistry.io/projects/65`
+
+describe(`extractUrlFromString`, () => {
+  test(`extract url from string`, () => {
+    expect(extractUrlFromString(URL_STRING)).toBe(URL_PARSED)
+  })
+
+  test(`extract url from string with no url`, () => {
+    expect(extractUrlFromString(TITLE)).toBe(undefined)
   })
 })

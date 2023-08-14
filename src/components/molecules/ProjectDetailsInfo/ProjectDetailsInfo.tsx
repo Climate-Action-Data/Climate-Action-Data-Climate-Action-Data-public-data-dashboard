@@ -51,13 +51,13 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
       </SimpleGrid>
       <Flex flexWrap="wrap">
         <SimpleGrid columns={2} gap="24px">
-          <DetailWidget title={t(`detailsHeaders.availableUnits`)}>{project.units.available}</DetailWidget>
-          <DetailWidget title={t(`detailsHeaders.issuances`)}>{project.units.issued}</DetailWidget>
+          <DetailWidget title={t(`detailsHeaders.availableUnits`)}>{project.units.available.toLocaleString()}</DetailWidget>
+          <DetailWidget title={t(`detailsHeaders.issuances`)}>{project.units.issued.toLocaleString()}</DetailWidget>
           <DetailWidget title={t(`detailsHeaders.creditingPeriod`)}>{renderCreditingPeriod(project.units.creditingPeriodStart, project.units.creditingPeriodEnd)}</DetailWidget>
         </SimpleGrid>
         <SimpleGrid columns={2} gap="24px">
-          <DetailWidget title={t(`detailsHeaders.retirememts`)}>{project.units.retired}</DetailWidget>
-          <DetailWidget title={t(`detailsHeaders.estimatedUnits`)}>{project.units.estimated}</DetailWidget>
+          <DetailWidget title={t(`detailsHeaders.retirememts`)}>{project.units.retired.toLocaleString()}</DetailWidget>
+          <DetailWidget title={t(`detailsHeaders.estimatedUnits`)}>{project.units.estimated.toLocaleString()}</DetailWidget>
           <DetailWidget title={t(`detailsHeaders.unitMetric`)}>{project.units.unitMetric}</DetailWidget>
         </SimpleGrid>
       </Flex>

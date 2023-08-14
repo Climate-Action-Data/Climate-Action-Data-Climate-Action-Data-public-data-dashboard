@@ -46,12 +46,12 @@ const theme = extendTheme({
     Skeleton: {
       baseStyle: {
         _light: {
-          '--skeleton-start-color': `#717D81`,
-          '--skeleton-end-color': `#949DA1`,
+          '--skeleton-start-color': `#CACED0`,
+          '--skeleton-end-color': `#EDEFEF`,
         },
         _dark: {
-          '--skeleton-start-color': `#717D81`,
-          '--skeleton-end-color': `#949DA1`,
+          '--skeleton-start-color': `#CACED0`,
+          '--skeleton-end-color': `#EDEFEF`,
         },
       },
     },

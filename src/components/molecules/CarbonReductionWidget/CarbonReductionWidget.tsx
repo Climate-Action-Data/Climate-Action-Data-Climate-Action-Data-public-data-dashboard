@@ -90,7 +90,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
           <Stack>
             <Center>
               <Box textAlign={`center`} width={`50%`}>
-                <ImportantText>{carbonMapDataFiltered.activeProjects}</ImportantText>
+                <ImportantText>{carbonMapDataFiltered.activeProjects.toLocaleString()}</ImportantText>
                 <Text fontWeight="500">{t(`carbonReduction.activeProjects`)}</Text>
               </Box>
             </Center>
@@ -98,7 +98,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
             <Flex textAlign={`center`}>
               <Box marginRight={`5px`} flex={1}>
                 <Box>
-                  <ImportantText as="p">{convertToMtCO2(carbonMapDataFiltered.totalReductions, true)}</ImportantText>
+                  <ImportantText as="p">{convertToMtCO2(carbonMapDataFiltered.totalReductions, true).toLocaleString()}</ImportantText>
                   <Text fontSize="sm">{t(`carbonReduction.MtCO2`)}</Text>
                 </Box>
                 <Text fontWeight="500">{t(`carbonReduction.totalReduction`)}</Text>
@@ -106,7 +106,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
               <Box marginLeft={`5px`} flex={1}>
                 <Box>
                   <ImportantText as="p" color="green.700">
-                    {convertToMtCO2(carbonMapDataFiltered.estimatedReductions, true)}
+                    {convertToMtCO2(carbonMapDataFiltered.estimatedReductions, true).toLocaleString()}
                   </ImportantText>
                   <Text fontSize="sm">{t(`carbonReduction.MtCO2`)}</Text>
                 </Box>

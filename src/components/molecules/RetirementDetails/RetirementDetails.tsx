@@ -19,7 +19,7 @@ export const RetirementDetails = (props: RetirementDetailsProps) => {
   return (
     <SimpleGrid columns={3} gap="24px">
       <DetailWidget title={t(`retirement.status`)}>{unit.status}</DetailWidget>
-      <DetailWidget title={t(`retirement.quantityRetired`)}>{unit.credits}</DetailWidget>
+      <DetailWidget title={t(`retirement.quantityRetired`)}>{unit.credits.toLocaleString()}</DetailWidget>
       <DetailWidget title={t(`retirement.retirementNotes`)}>{unit.retirementNote ?? tHome(`noData`)}</DetailWidget>
       <DetailWidget title={t(`retirement.usingEntity`)}>{tHome(`noData`)}</DetailWidget>
       <DetailWidget title={t(`retirement.correspondingAdjustment`)}>{tHome(`noData`)}</DetailWidget>

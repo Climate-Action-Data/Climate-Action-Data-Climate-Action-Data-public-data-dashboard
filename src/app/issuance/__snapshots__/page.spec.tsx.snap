@@ -112,8 +112,15 @@ exports[`IssuancePage renders correctly 1`] = `
           class="css-1mliti3"
         >
           <div
-            class="chakra-container css-tqikoc"
+            class="chakra-container css-18pol40"
           >
+            <div
+              class="chakra-skeleton css-1p3r0co"
+            />
+            <hr
+              aria-orientation="horizontal"
+              class="chakra-divider css-1upb9tn"
+            />
             <div
               class="chakra-skeleton css-1p3r0co"
             />

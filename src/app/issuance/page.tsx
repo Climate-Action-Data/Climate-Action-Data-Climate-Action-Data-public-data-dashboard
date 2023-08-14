@@ -4,9 +4,10 @@ import { ESearchParams } from '@/@types/ProjectSearchResult'
 import { ProjectBreadcrumb } from '@/components/atoms/ProjectBreadcrumb/ProjectBreadcrumb'
 import { ProjectDetailHeader } from '@/components/atoms/ProjectDetailHeader/ProjectDetailHeader'
 import { CardSection } from '@/components/molecules/CardSection/CardSection'
+import { IssuanceDetails } from '@/components/molecules/IssuanceDetails/IssuanceDetails'
 import { ProjectDetailsVerification } from '@/components/molecules/ProjectDetailsVerification/ProjectDetailsVerification'
 import { useEffects } from '@/overmind'
-import { Box, Container, Flex } from '@chakra-ui/react'
+import { Box, Container, Divider, Flex } from '@chakra-ui/react'
 import { NextPage } from 'next'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -42,7 +43,9 @@ const IssuancePage: NextPage = () => {
         </Box>
         <Flex flexDirection="column" minW="100%" gap="40px">
           <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.issuanceDetails`) }}>
-            <Container padding={[`12px`, `24px`]} flex={2} variant="cardSectionNoMargin">
+            <Container padding={[`12px`, `24px`]} flex={2} gap="24px" display="flex" flexDirection="column" variant="cardSectionNoMargin">
+              <IssuanceDetails issuance={issuance} />
+              <Divider />
               <ProjectDetailsVerification validation={issuance?.validation} />
             </Container>
           </CardSection>

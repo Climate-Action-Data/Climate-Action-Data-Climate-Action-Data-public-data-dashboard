@@ -13,7 +13,7 @@ export const ProjectDetailsVerificationList = (props: ProjectDetailsVerification
   const { verificationList } = props
   const [isExpanded, setIsExpanded] = useState(false)
   const { t } = useTranslation(`projectDetails`)
-  const { t: tHome } = useTranslation(`ome`)
+  const { t: tHome } = useTranslation(`home`)
 
   if (verificationList.length === 0) {
     return <Text>{tHome(`noData`)}</Text>
@@ -27,6 +27,11 @@ export const ProjectDetailsVerificationList = (props: ProjectDetailsVerification
       verificationListToRender.push(
         <Text key={`${verificationList[i].startDate}-${i}`}>
           {formatDate(verificationList[i].startDate, DateFormats.YYYY_MM_DD)} - {formatDate(verificationList[i].endDate, DateFormats.YYYY_MM_DD)}
+          {verificationList[i].body && (
+            <>
+              {t(`by`)} {verificationList[i].body}
+            </>
+          )}
         </Text>,
       )
     }
@@ -40,11 +45,13 @@ export const ProjectDetailsVerificationList = (props: ProjectDetailsVerification
   return (
     <Box>
       {renderVerificationList()}
-      <Hide below="md">
-        <Button data-testid="verification-expand" onClick={handleExpand} variant="underlinedLink">
-          {isExpanded ? t(`viewLess`) : t(`viewMore`)}
-        </Button>
-      </Hide>
+      {verificationList.length > 1 && (
+        <Hide below="md">
+          <Button data-testid="verification-expand" onClick={handleExpand} variant="underlinedLink">
+            {isExpanded ? t(`viewLess`) : t(`viewMore`)}
+          </Button>
+        </Hide>
+      )}
     </Box>
   )
 }

@@ -56,16 +56,16 @@ export const ProjectSearchBodyContent = (props: ProjectSearchBodyContentProps) =
           <TableData data={renderCreditingPeriod(project.creditingPeriodStart, project.creditingPeriodEnd)} />
         </Td>
         <Td isNumeric title={project.annualEst?.toString()}>
-          <TableData data={project.annualEst} />
+          <TableData data={project.annualEst?.toLocaleString()} />
         </Td>
         <Td isNumeric title={project.annualIssued?.toString()}>
-          <TableData data={project.annualIssued} />
+          <TableData data={project.annualIssued?.toLocaleString()} />
         </Td>
         <Td isNumeric title={project.annualRetired?.toString()}>
-          <TableData data={project.annualRetired} />
+          <TableData data={project.annualRetired?.toLocaleString()} />
         </Td>
         <Td isNumeric title={project.annualAvailable?.toString()}>
-          <TableData data={project.annualAvailable} />
+          <TableData data={project.annualAvailable?.toLocaleString()} />
         </Td>
       </Tr>
     ))

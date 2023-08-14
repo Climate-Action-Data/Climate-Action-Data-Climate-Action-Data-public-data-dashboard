@@ -11,7 +11,7 @@ exports[`renders correctly with no project 1`] = `
 exports[`renders correctly with validation 1`] = `
 <div>
   <div
-    class="css-1ncpqsg"
+    class="css-cwfjkj"
   >
     <div
       class="css-0"
@@ -19,34 +19,26 @@ exports[`renders correctly with validation 1`] = `
       <p
         class="chakra-text css-1xi4xed"
       >
-        Verification Report Date
+        Project Issued To
       </p>
       <p
         class="chakra-text css-0"
       >
-        2023/04/15
+        South Pole Carbon Asset Management
       </p>
     </div>
-  </div>
-  <div
-    class="css-s8hfc8"
-  >
     <div
       class="css-0"
     >
       <p
         class="chakra-text css-1xi4xed"
       >
-        Verification Approach
+        Vintage
       </p>
       <p
         class="chakra-text css-0"
       >
-        <p
-          class="chakra-text css-0"
-        >
-          Details on website: https://www.ecoregistry.io/projects/151
-        </p>
+        2016
       </p>
     </div>
     <div
@@ -55,47 +47,49 @@ exports[`renders correctly with validation 1`] = `
       <p
         class="chakra-text css-1xi4xed"
       >
-        Verification Period
+        Quantity
       </p>
-      <div
-        class="css-0"
+      <p
+        class="chakra-text css-0"
       >
-        <div
-          class="css-0"
-        >
-          <p
-            class="chakra-text css-0"
-          >
-            2019/12/04
-             - 
-            2023/12/31
-          </p>
-          <button
-            class="chakra-button css-4xx2wk"
-            data-testid="verification-expand"
-            type="button"
-          >
-            View More
-          </button>
-        </div>
-      </div>
+        195
+      </p>
     </div>
-  </div>
-</div>
-`;
-
-exports[`renders correctly with validation and no date 1`] = `
-<div>
-  <div
-    class="css-1ncpqsg"
-  >
     <div
       class="css-0"
     >
       <p
         class="chakra-text css-1xi4xed"
       >
-        Verification Report Date
+        Unit Type
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        Reduction - nature
+      </p>
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Monitoring Period
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        2010/04/30 - 2020/03/04
+      </p>
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Correspondingly Adjusted
       </p>
       <p
         class="chakra-text css-0"
@@ -103,38 +97,16 @@ exports[`renders correctly with validation and no date 1`] = `
         --
       </p>
     </div>
-  </div>
-  <div
-    class="css-s8hfc8"
-  >
     <div
       class="css-0"
     >
       <p
         class="chakra-text css-1xi4xed"
       >
-        Verification Approach
+        Issuance Tags
       </p>
       <p
         class="chakra-text css-0"
-      >
-        <p
-          class="chakra-text css-0"
-        >
-          Details on website: https://www.ecoregistry.io/projects/151
-        </p>
-      </p>
-    </div>
-    <div
-      class="css-0"
-    >
-      <p
-        class="chakra-text css-1xi4xed"
-      >
-        Verification Period
-      </p>
-      <div
-        class="css-0"
       >
         <div
           class="css-0"
@@ -142,9 +114,22 @@ exports[`renders correctly with validation and no date 1`] = `
           <p
             class="chakra-text css-0"
           >
-            2019/12/04
-             - 
-            2023/12/31
+            More information in the project link.
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            Cercarbono Standard.
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            Ecoregistry Serial Number of Issuance: CDC_12_2_1_322_14_CO_1_1_2019 .
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            Sector of issuance: Agriculture; forestry and fishing .
           </p>
           <button
             class="chakra-button css-4xx2wk"
@@ -154,7 +139,7 @@ exports[`renders correctly with validation and no date 1`] = `
             View More
           </button>
         </div>
-      </div>
+      </p>
     </div>
   </div>
 </div>
