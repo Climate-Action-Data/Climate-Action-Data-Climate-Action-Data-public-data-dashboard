@@ -228,7 +228,7 @@ exports[`renders correctly with loaded data 1`] = `
           class="chakra-stack__divider css-1psh3p6"
         />
         <div
-          class="css-ddkw9a"
+          class="css-0"
         >
           <button
             aria-controls="popover-content-:rj:"
@@ -536,7 +536,7 @@ exports[`renders correctly with loaded data and search click 1`] = `
           class="chakra-stack__divider css-1psh3p6"
         />
         <div
-          class="css-ddkw9a"
+          class="css-0"
         >
           <button
             aria-controls="popover-content-:rt:"
@@ -808,7 +808,7 @@ exports[`renders correctly with no data 1`] = `
           class="chakra-stack__divider css-1psh3p6"
         />
         <div
-          class="css-ddkw9a"
+          class="css-0"
         >
           <button
             aria-controls="popover-content-:r9:"

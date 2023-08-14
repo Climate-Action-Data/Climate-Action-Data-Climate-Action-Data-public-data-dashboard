@@ -1,4 +1,4 @@
-import { Button, Flex, HStack, Popover, PopoverBody, PopoverContent, PopoverTrigger, Spacer, VStack } from '@chakra-ui/react'
+import { Button, Flex, HStack, Hide, Popover, PopoverBody, PopoverContent, PopoverTrigger, Spacer, VStack } from '@chakra-ui/react'
 import { DropDownIcon } from '@/components/atoms/DropDownIcon/DropDownIcon'
 import { FC, useEffect, useState } from 'react'
 import { MinusIcon } from '@/components/atoms/MinusIcon/MinusIcon'
@@ -97,9 +97,11 @@ const VintageYearFilter: FC<VintageYearFilterProp> = (prop) => {
       >
         <PopoverBody width={`100%`}>
           <VStack>
-            <HStack width={`100%`} justify={`center`} alignItems={`end`}>
+            <HStack flexWrap={[`wrap`, `nowrap`]} width={`100%`} justify={`center`} alignItems={`end`}>
               <YearInput label={`Minimum Date`} value={minimumYear} maxYear={latestYear ?? maximumYear} minYear={earliestYear} onChange={handleMinDateOnChange} />
-              <MinusIcon />
+              <Hide below="sm">
+                <MinusIcon />
+              </Hide>
               <YearInput label={`Maximum Date`} value={maximumYear} maxYear={latestYear} minYear={earliestYear ?? minimumYear} onChange={handleMaxDateOnChange} />
             </HStack>
             <HStack justify={`space-between`} width={`100%`} margin={`8px`}>

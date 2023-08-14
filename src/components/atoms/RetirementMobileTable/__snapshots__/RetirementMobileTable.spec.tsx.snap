@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RetirementMobileTable renders correctly issuances 1`] = `
+<div>
+  <div
+    class="css-arp1f7"
+  >
+    <div
+      class="css-1ow11qq"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Quantity
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          191
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Retirement Notes
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          --
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RetirementMobileTable renders correctly with empty array 1`] = `<div />`;

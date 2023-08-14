@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="css-14kckdx"
+    class="css-8y3igr"
     id="headerReference"
   >
     <div
@@ -54,7 +54,7 @@ exports[`renders correctly 1`] = `
 exports[`renders correctly and clear the search values 1`] = `
 <div>
   <div
-    class="css-14kckdx"
+    class="css-8y3igr"
     id="headerReference"
   >
     <div
@@ -105,7 +105,7 @@ exports[`renders correctly and clear the search values 1`] = `
 exports[`renders correctly with no params, add a search value and submits a search 1`] = `
 <div>
   <div
-    class="css-14kckdx"
+    class="css-8y3igr"
     id="headerReference"
   >
     <div

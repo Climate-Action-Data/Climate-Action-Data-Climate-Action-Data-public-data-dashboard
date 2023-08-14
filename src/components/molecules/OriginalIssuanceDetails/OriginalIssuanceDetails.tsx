@@ -8,6 +8,9 @@ interface OriginalIssuanceDetailsProps {
   unit?: Unit
 }
 
+const DEFAULT_COLUMN_MOBILE = 2
+const DEFAULT_COLUMN_WEB = 3
+
 export const OriginalIssuanceDetails = (props: OriginalIssuanceDetailsProps) => {
   const { unit } = props
   const { t } = useTranslation(`unitDetails`)
@@ -17,7 +20,7 @@ export const OriginalIssuanceDetails = (props: OriginalIssuanceDetailsProps) => 
   }
 
   return (
-    <SimpleGrid columns={3} gap="24px">
+    <SimpleGrid columns={[DEFAULT_COLUMN_MOBILE, DEFAULT_COLUMN_WEB]} gap="24px">
       <DetailWidget title={t(`originalIssuance.projectIssuedTo`)}>{unit?.project?.developer ?? tHome(`noData`)}</DetailWidget>
       <DetailWidget title={t(`originalIssuance.issuanceBatchSerialNumber`)}>{unit?.issuance?.issuanceBatchSerial ?? tHome(`noData`)}</DetailWidget>
       <DetailWidget title={t(`originalIssuance.vintage`)}>{unit?.vintage ?? tHome(`noData`)}</DetailWidget>

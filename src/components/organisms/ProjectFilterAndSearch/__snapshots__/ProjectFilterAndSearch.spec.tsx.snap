@@ -195,7 +195,7 @@ exports[`ProjectFilterAndSearch renders correctly 1`] = `
             class="chakra-stack__divider css-1psh3p6"
           />
           <div
-            class="css-ddkw9a"
+            class="css-0"
           >
             <button
               aria-controls="popover-content-:r9:"
@@ -493,7 +493,7 @@ exports[`ProjectFilterAndSearch renders correctly and the filter-and-search-trig
             class="chakra-stack__divider css-1psh3p6"
           />
           <div
-            class="css-ddkw9a"
+            class="css-0"
           >
             <button
               aria-controls="popover-content-:rt:"

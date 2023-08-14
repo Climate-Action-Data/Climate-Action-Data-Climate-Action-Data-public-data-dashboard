@@ -1,4 +1,4 @@
-import { Button, Flex, HStack, Popover, PopoverBody, PopoverContent, PopoverTrigger, Spacer, VStack, Box } from '@chakra-ui/react'
+import { Button, Flex, HStack, Popover, PopoverBody, PopoverContent, PopoverTrigger, Spacer, VStack, Box, Hide } from '@chakra-ui/react'
 import { DropDownIcon } from '@/components/atoms/DropDownIcon/DropDownIcon'
 import { Dispatch, FC, SetStateAction, useEffect, useState } from 'react'
 import CalendarWrapper from '@/components/molecules/CalendarWrapper/CalendarWrapper'
@@ -93,7 +93,7 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
     }
     return (
       <VStack>
-        <HStack width={`100%`} justify={`center`} alignItems={`end`}>
+        <HStack flexWrap={[`wrap`, `nowrap`]} width={`100%`} justify={`center`} alignItems={`end`}>
           <DateInput
             label={`Minimum Date`}
             value={minimumDate}
@@ -102,7 +102,9 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
             minDate={earliestDate}
             onChange={handleMinDateOnChange}
           />
-          <MinusIcon />
+          <Hide below="sm">
+            <MinusIcon />
+          </Hide>
           <DateInput
             label={`Maximum Date`}
             value={maximumDate}
@@ -145,7 +147,7 @@ const CreditingPeriodFilter: FC<CreditingPeriodFilterProp> = (prop) => {
   }
 
   return (
-    <Box zIndex={999}>
+    <Box>
       <Popover gutter={0} isLazy placement={`bottom`} matchWidth onClose={handleOnClose}>
         <PopoverTrigger>
           <Button variant={generateVariant()}>

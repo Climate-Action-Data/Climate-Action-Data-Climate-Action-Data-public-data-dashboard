@@ -42,6 +42,275 @@ exports[`RetirementDetails renders correctly project issuances 1`] = `
     class="chakra-container css-8hlr3i"
   >
     <div
+      class="css-8atqhb"
+    >
+      <div
+        class="css-1bnwekn"
+      >
+        <div
+          class="css-1i18okm"
+        >
+          <h3
+            class="chakra-heading css-zux3ex"
+          >
+            Issuances
+          </h3>
+        </div>
+      </div>
+      <div
+        class="chakra-accordion css-1cvb60n"
+      >
+        <div
+          class="chakra-accordion__item css-1obe73b"
+        >
+          <h2>
+            <button
+              aria-controls="accordion-panel-:r1:"
+              aria-expanded="false"
+              class="chakra-accordion__button css-1kfav1u"
+              data-index="0"
+              data-testid="expand-accordion"
+              id="accordion-button-:r1:"
+              type="button"
+            >
+              <div
+                class="css-13buc9q"
+              >
+                <div
+                  class="css-xrub82"
+                >
+                  <div
+                    class="css-0"
+                  >
+                    <p
+                      class="chakra-text css-1xi4xed"
+                    >
+                      Vintage
+                    </p>
+                    <p
+                      class="chakra-text css-0"
+                    >
+                      2010
+                    </p>
+                  </div>
+                  <div
+                    class="css-0"
+                  >
+                    <p
+                      class="chakra-text css-1xi4xed"
+                    >
+                      Quantity
+                    </p>
+                    <p
+                      class="chakra-text css-0"
+                    >
+                      191
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chakra-icon css-n059si"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12.0045 15.0135C11.8904 15.0135 11.7798 14.9942 11.6728 14.9558C11.5657 14.9173 11.4654 14.8513 11.3718 14.7577L6.86221 10.2481C6.71734 10.1032 6.64747 9.93014 6.65261 9.72886C6.65772 9.52758 6.73272 9.3545 6.87761 9.20964C7.02247 9.06477 7.19811 8.99234 7.40451 8.99234C7.61091 8.99234 7.78654 9.06477 7.93141 9.20964L12.0045 13.2827L16.093 9.19426C16.2378 9.04939 16.4109 8.97952 16.6122 8.98464C16.8135 8.98977 16.9865 9.06477 17.1314 9.20964C17.2763 9.3545 17.3487 9.53015 17.3487 9.73656C17.3487 9.94296 17.2763 10.1186 17.1314 10.2635L12.6372 14.7577C12.5436 14.8513 12.4449 14.9173 12.341 14.9558C12.2372 14.9942 12.125 15.0135 12.0045 15.0135Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </button>
+          </h2>
+          <div
+            class="chakra-collapse"
+            style="overflow: hidden; display: none; opacity: 0; height: 0px;"
+          >
+            <div
+              aria-labelledby="accordion-button-:r1:"
+              class="chakra-accordion__panel css-old1by"
+              id="accordion-panel-:r1:"
+              role="region"
+            >
+              <div
+                class="css-1ow11qq"
+              >
+                <div
+                  class="css-0"
+                >
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    Units Available
+                  </p>
+                  <p
+                    class="chakra-text css-0"
+                  >
+                    191
+                  </p>
+                </div>
+                <div
+                  class="css-0"
+                >
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    Verification Report Date
+                  </p>
+                  <p
+                    class="chakra-text css-0"
+                  >
+                    2020/03/04
+                  </p>
+                </div>
+              </div>
+              <div
+                class="css-gl17gz"
+              >
+                <a
+                  class="chakra-link css-0"
+                  data-testid="expand-more-details"
+                  href="/issuance?id=00cfede2-5701-4237-b7cf-8b962ba02aa5"
+                >
+                  More Details
+                </a>
+                <button
+                  class="chakra-button css-4xx2wk"
+                  data-testid="issuance-mobile-item-click"
+                  type="button"
+                >
+                  View Retirements
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="chakra-accordion__item css-1obe73b"
+        >
+          <h2>
+            <button
+              aria-controls="accordion-panel-:r3:"
+              aria-expanded="false"
+              class="chakra-accordion__button css-1kfav1u"
+              data-index="1"
+              data-testid="expand-accordion"
+              id="accordion-button-:r3:"
+              type="button"
+            >
+              <div
+                class="css-13buc9q"
+              >
+                <div
+                  class="css-xrub82"
+                >
+                  <div
+                    class="css-0"
+                  >
+                    <p
+                      class="chakra-text css-1xi4xed"
+                    >
+                      Vintage
+                    </p>
+                    <p
+                      class="chakra-text css-0"
+                    >
+                      2015
+                    </p>
+                  </div>
+                  <div
+                    class="css-0"
+                  >
+                    <p
+                      class="chakra-text css-1xi4xed"
+                    >
+                      Quantity
+                    </p>
+                    <p
+                      class="chakra-text css-0"
+                    >
+                      1,102
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chakra-icon css-n059si"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12.0045 15.0135C11.8904 15.0135 11.7798 14.9942 11.6728 14.9558C11.5657 14.9173 11.4654 14.8513 11.3718 14.7577L6.86221 10.2481C6.71734 10.1032 6.64747 9.93014 6.65261 9.72886C6.65772 9.52758 6.73272 9.3545 6.87761 9.20964C7.02247 9.06477 7.19811 8.99234 7.40451 8.99234C7.61091 8.99234 7.78654 9.06477 7.93141 9.20964L12.0045 13.2827L16.093 9.19426C16.2378 9.04939 16.4109 8.97952 16.6122 8.98464C16.8135 8.98977 16.9865 9.06477 17.1314 9.20964C17.2763 9.3545 17.3487 9.53015 17.3487 9.73656C17.3487 9.94296 17.2763 10.1186 17.1314 10.2635L12.6372 14.7577C12.5436 14.8513 12.4449 14.9173 12.341 14.9558C12.2372 14.9942 12.125 15.0135 12.0045 15.0135Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </button>
+          </h2>
+          <div
+            class="chakra-collapse"
+            style="overflow: hidden; display: none; opacity: 0; height: 0px;"
+          >
+            <div
+              aria-labelledby="accordion-button-:r3:"
+              class="chakra-accordion__panel css-old1by"
+              id="accordion-panel-:r3:"
+              role="region"
+            >
+              <div
+                class="css-1ow11qq"
+              >
+                <div
+                  class="css-0"
+                >
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    Units Available
+                  </p>
+                  <p
+                    class="chakra-text css-0"
+                  >
+                    0
+                  </p>
+                </div>
+                <div
+                  class="css-0"
+                >
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    Verification Report Date
+                  </p>
+                  <p
+                    class="chakra-text css-0"
+                  >
+                    2020/03/04
+                  </p>
+                </div>
+              </div>
+              <div
+                class="css-gl17gz"
+              >
+                <a
+                  class="chakra-link css-0"
+                  data-testid="expand-more-details"
+                  href="/issuance?id=136cadbc-83a5-4c43-a172-baf7770796fc"
+                >
+                  More Details
+                </a>
+                <button
+                  class="chakra-button css-4xx2wk"
+                  data-testid="issuance-mobile-item-click"
+                  type="button"
+                >
+                  View Retirements
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
       class="css-gsocru"
     >
       <div
@@ -312,7 +581,7 @@ exports[`RetirementDetails renders correctly project issuances 1`] = `
         </div>
       </div>
       <div
-        class="css-1ma1xtl"
+        class="css-jof02b"
       >
         Click on an issuance to display its corresponding retirements
       </div>
@@ -362,6 +631,151 @@ exports[`RetirementDetails renders correctly project issuances 2`] = `
   <div
     class="chakra-container css-8hlr3i"
   >
+    <div
+      class="css-8atqhb"
+    >
+      <div
+        class="css-1bnwekn"
+      >
+        <div
+          class="css-1i18okm"
+        >
+          <h3
+            class="chakra-heading css-zux3ex"
+          >
+            Issuances
+          </h3>
+        </div>
+      </div>
+      <div
+        class="chakra-accordion css-1cvb60n"
+      >
+        <div
+          class="chakra-accordion__item css-1obe73b"
+        >
+          <h2>
+            <button
+              aria-controls="accordion-panel-:r7:"
+              aria-expanded="false"
+              class="chakra-accordion__button css-1kfav1u"
+              data-index="0"
+              data-testid="expand-accordion"
+              id="accordion-button-:r7:"
+              type="button"
+            >
+              <div
+                class="css-13buc9q"
+              >
+                <div
+                  class="css-xrub82"
+                >
+                  <div
+                    class="css-0"
+                  >
+                    <p
+                      class="chakra-text css-1xi4xed"
+                    >
+                      Vintage
+                    </p>
+                    <p
+                      class="chakra-text css-0"
+                    >
+                      2010
+                    </p>
+                  </div>
+                  <div
+                    class="css-0"
+                  >
+                    <p
+                      class="chakra-text css-1xi4xed"
+                    >
+                      Quantity
+                    </p>
+                    <p
+                      class="chakra-text css-0"
+                    >
+                      191
+                    </p>
+                  </div>
+                </div>
+                <svg
+                  class="chakra-icon css-n059si"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12.0045 15.0135C11.8904 15.0135 11.7798 14.9942 11.6728 14.9558C11.5657 14.9173 11.4654 14.8513 11.3718 14.7577L6.86221 10.2481C6.71734 10.1032 6.64747 9.93014 6.65261 9.72886C6.65772 9.52758 6.73272 9.3545 6.87761 9.20964C7.02247 9.06477 7.19811 8.99234 7.40451 8.99234C7.61091 8.99234 7.78654 9.06477 7.93141 9.20964L12.0045 13.2827L16.093 9.19426C16.2378 9.04939 16.4109 8.97952 16.6122 8.98464C16.8135 8.98977 16.9865 9.06477 17.1314 9.20964C17.2763 9.3545 17.3487 9.53015 17.3487 9.73656C17.3487 9.94296 17.2763 10.1186 17.1314 10.2635L12.6372 14.7577C12.5436 14.8513 12.4449 14.9173 12.341 14.9558C12.2372 14.9942 12.125 15.0135 12.0045 15.0135Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </button>
+          </h2>
+          <div
+            class="chakra-collapse"
+            style="overflow: hidden; display: none; opacity: 0; height: 0px;"
+          >
+            <div
+              aria-labelledby="accordion-button-:r7:"
+              class="chakra-accordion__panel css-old1by"
+              id="accordion-panel-:r7:"
+              role="region"
+            >
+              <div
+                class="css-1ow11qq"
+              >
+                <div
+                  class="css-0"
+                >
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    Units Available
+                  </p>
+                  <p
+                    class="chakra-text css-0"
+                  >
+                    191
+                  </p>
+                </div>
+                <div
+                  class="css-0"
+                >
+                  <p
+                    class="chakra-text css-1xi4xed"
+                  >
+                    Verification Report Date
+                  </p>
+                  <p
+                    class="chakra-text css-0"
+                  >
+                    2020/03/04
+                  </p>
+                </div>
+              </div>
+              <div
+                class="css-gl17gz"
+              >
+                <a
+                  class="chakra-link css-0"
+                  data-testid="expand-more-details"
+                  href="/issuance?id=00cfede2-5701-4237-b7cf-8b962ba02aa5"
+                >
+                  More Details
+                </a>
+                <button
+                  class="chakra-button css-4xx2wk"
+                  data-testid="issuance-mobile-item-click"
+                  type="button"
+                >
+                  View Retirements
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div
       class="css-gsocru"
     >
@@ -598,7 +1012,7 @@ exports[`RetirementDetails renders correctly project issuances 2`] = `
         </div>
       </div>
       <div
-        class="css-1ma1xtl"
+        class="css-jof02b"
       >
         Click on an issuance to display its corresponding retirements
       </div>
@@ -648,6 +1062,26 @@ exports[`RetirementDetails renders correctly project issuances 3`] = `
   <div
     class="chakra-container css-8hlr3i"
   >
+    <div
+      class="css-8atqhb"
+    >
+      <div
+        class="css-1bnwekn"
+      >
+        <div
+          class="css-1i18okm"
+        >
+          <h3
+            class="chakra-heading css-zux3ex"
+          >
+            Issuances
+          </h3>
+        </div>
+      </div>
+      <div
+        class="chakra-accordion css-1cvb60n"
+      />
+    </div>
     <div
       class="css-gsocru"
     >
@@ -848,7 +1282,7 @@ exports[`RetirementDetails renders correctly project issuances 3`] = `
         </div>
       </div>
       <div
-        class="css-1ma1xtl"
+        class="css-jof02b"
       >
         Click on an issuance to display its corresponding retirements
       </div>

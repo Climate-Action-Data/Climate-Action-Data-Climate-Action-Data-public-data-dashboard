@@ -8,6 +8,9 @@ interface RetirementDetailsProps {
   unit?: Unit
 }
 
+const DEFAULT_COLUMN_MOBILE = 2
+const DEFAULT_COLUMN_WEB = 3
+
 export const RetirementDetails = (props: RetirementDetailsProps) => {
   const { unit } = props
   const { t } = useTranslation(`unitDetails`)
@@ -17,7 +20,7 @@ export const RetirementDetails = (props: RetirementDetailsProps) => {
   }
 
   return (
-    <SimpleGrid columns={3} gap="24px">
+    <SimpleGrid columns={[DEFAULT_COLUMN_MOBILE, DEFAULT_COLUMN_WEB]} gap="24px">
       <DetailWidget title={t(`retirement.status`)}>{unit.status}</DetailWidget>
       <DetailWidget title={t(`retirement.quantityRetired`)}>{unit.credits.toLocaleString()}</DetailWidget>
       <DetailWidget title={t(`retirement.retirementNotes`)}>{unit.retirementNote ?? tHome(`noData`)}</DetailWidget>
