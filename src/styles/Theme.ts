@@ -183,6 +183,9 @@ const theme = extendTheme({
         userSelect: `auto`,
         color: `gray.700`,
       },
+      '.chakra-popover__popper': {
+        zIndex: 999,
+      },
       '.fixed': {
         position: `fixed`,
         top: `240px`,
