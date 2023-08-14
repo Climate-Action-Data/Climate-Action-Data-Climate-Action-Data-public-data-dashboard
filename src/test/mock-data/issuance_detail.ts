@@ -27,110 +27,136 @@ export const issuanceDetail: Issuance = {
     verifications: [
       {
         approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        body: `AENOR International S.A.U.`,
+
         startDate: `2010-04-30T00:00:00.000Z`,
         endDate: `2020-03-04T00:00:00.000Z`,
       },
       {
+        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        body: `AENOR International S.A.U.`,
+
+        startDate: `2010-04-30T00:00:00.000Z`,
+        endDate: `2020-03-04T00:00:00.000Z`,
+      },
+      {
+        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        body: `AENOR International S.A.U.`,
+
+        startDate: `2010-04-30T00:00:00.000Z`,
+        endDate: `2020-03-04T00:00:00.000Z`,
+      },
+      {
+        body: `AENOR International S.A.U.`,
+        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+
+        startDate: `2010-04-30T00:00:00.000Z`,
+        endDate: `2020-03-04T00:00:00.000Z`,
+      },
+      {
+        body: `AENOR International S.A.U.`,
+        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        startDate: `2010-04-30T00:00:00.000Z`,
+        endDate: `2020-03-04T00:00:00.000Z`,
+      },
+      {
+        body: `AENOR International S.A.U.`,
+        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        startDate: `2010-04-30T00:00:00.000Z`,
+        endDate: `2020-03-04T00:00:00.000Z`,
+      },
+      {
+        body: `AENOR International S.A.U.`,
+        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        startDate: `2010-04-30T00:00:00.000Z`,
+        endDate: `2020-03-04T00:00:00.000Z`,
+      },
+      {
+        body: `AENOR International S.A.U.`,
+        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        startDate: `2010-04-30T00:00:00.000Z`,
+        endDate: `2020-03-04T00:00:00.000Z`,
+      },
+      {
+        body: `AENOR International S.A.U.`,
+        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        startDate: `2010-04-30T00:00:00.000Z`,
+        endDate: `2020-03-04T00:00:00.000Z`,
+      },
+      {
+        body: `AENOR International S.A.U.`,
         approach: `Details on website: https://www.ecoregistry.io/projects/12`,
         startDate: `2010-04-30T00:00:00.000Z`,
         endDate: `2020-03-04T00:00:00.000Z`,
       },
       {
         approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        body: `AENOR International S.A.U.`,
         startDate: `2010-04-30T00:00:00.000Z`,
         endDate: `2020-03-04T00:00:00.000Z`,
       },
       {
+        body: `AENOR International S.A.U.`,
         approach: `Details on website: https://www.ecoregistry.io/projects/12`,
         startDate: `2010-04-30T00:00:00.000Z`,
         endDate: `2020-03-04T00:00:00.000Z`,
       },
       {
         approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        body: `AENOR International S.A.U.`,
+        startDate: `2010-04-30T00:00:00.000Z`,
+        endDate: `2020-03-04T00:00:00.000Z`,
+      },
+      {
+        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        body: `AENOR International S.A.U.`,
+        startDate: `2010-04-30T00:00:00.000Z`,
+        endDate: `2020-03-04T00:00:00.000Z`,
+      },
+      {
+        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        body: `AENOR International S.A.U.`,
+        startDate: `2010-04-30T00:00:00.000Z`,
+        endDate: `2020-03-04T00:00:00.000Z`,
+      },
+      {
+        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        body: `AENOR International S.A.U.`,
+        startDate: `2010-04-30T00:00:00.000Z`,
+        endDate: `2020-03-04T00:00:00.000Z`,
+      },
+      {
+        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        body: `AENOR International S.A.U.`,
         startDate: `2010-04-30T00:00:00.000Z`,
         endDate: `2020-03-04T00:00:00.000Z`,
       },
       {
         approach: `Details on website: https://www.ecoregistry.io/projects/12`,
         startDate: `2010-04-30T00:00:00.000Z`,
+        body: `AENOR International S.A.U.`,
         endDate: `2020-03-04T00:00:00.000Z`,
       },
       {
+        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        body: `AENOR International S.A.U.`,
+        startDate: `2010-04-30T00:00:00.000Z`,
+        endDate: `2020-03-04T00:00:00.000Z`,
+      },
+      {
+        body: `AENOR International S.A.U.`,
         approach: `Details on website: https://www.ecoregistry.io/projects/12`,
         startDate: `2010-04-30T00:00:00.000Z`,
         endDate: `2020-03-04T00:00:00.000Z`,
       },
       {
         approach: `Details on website: https://www.ecoregistry.io/projects/12`,
+        body: `AENOR International S.A.U.`,
         startDate: `2010-04-30T00:00:00.000Z`,
         endDate: `2020-03-04T00:00:00.000Z`,
       },
       {
-        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
-        startDate: `2010-04-30T00:00:00.000Z`,
-        endDate: `2020-03-04T00:00:00.000Z`,
-      },
-      {
-        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
-        startDate: `2010-04-30T00:00:00.000Z`,
-        endDate: `2020-03-04T00:00:00.000Z`,
-      },
-      {
-        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
-        startDate: `2010-04-30T00:00:00.000Z`,
-        endDate: `2020-03-04T00:00:00.000Z`,
-      },
-      {
-        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
-        startDate: `2010-04-30T00:00:00.000Z`,
-        endDate: `2020-03-04T00:00:00.000Z`,
-      },
-      {
-        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
-        startDate: `2010-04-30T00:00:00.000Z`,
-        endDate: `2020-03-04T00:00:00.000Z`,
-      },
-      {
-        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
-        startDate: `2010-04-30T00:00:00.000Z`,
-        endDate: `2020-03-04T00:00:00.000Z`,
-      },
-      {
-        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
-        startDate: `2010-04-30T00:00:00.000Z`,
-        endDate: `2020-03-04T00:00:00.000Z`,
-      },
-      {
-        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
-        startDate: `2010-04-30T00:00:00.000Z`,
-        endDate: `2020-03-04T00:00:00.000Z`,
-      },
-      {
-        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
-        startDate: `2010-04-30T00:00:00.000Z`,
-        endDate: `2020-03-04T00:00:00.000Z`,
-      },
-      {
-        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
-        startDate: `2010-04-30T00:00:00.000Z`,
-        endDate: `2020-03-04T00:00:00.000Z`,
-      },
-      {
-        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
-        startDate: `2010-04-30T00:00:00.000Z`,
-        endDate: `2020-03-04T00:00:00.000Z`,
-      },
-      {
-        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
-        startDate: `2010-04-30T00:00:00.000Z`,
-        endDate: `2020-03-04T00:00:00.000Z`,
-      },
-      {
-        approach: `Details on website: https://www.ecoregistry.io/projects/12`,
-        startDate: `2010-04-30T00:00:00.000Z`,
-        endDate: `2020-03-04T00:00:00.000Z`,
-      },
-      {
+        body: `AENOR International S.A.U.`,
         approach: `Details on website: https://www.ecoregistry.io/projects/12`,
         startDate: `2010-04-30T00:00:00.000Z`,
         endDate: `2020-03-04T00:00:00.000Z`,
