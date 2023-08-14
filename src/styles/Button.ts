@@ -239,7 +239,6 @@ export const blueOutline = defineStyle({
   height: `32px`,
   padding: `4px 12px 4px 12px`,
   borderRadius: `32px`,
-  // background: `#00242C`,
   border: `1px solid`,
   borderColor: `gray.900`,
   color: `gray.900`,
@@ -257,7 +256,7 @@ export const blueOutline = defineStyle({
 
 export const blueFilled = defineStyle({
   ...blueOutline,
-  background: `#00242C`,
+  background: `gray.900`,
   color: `white`,
   _hover: {
     background: `gray.200`,
