@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 import userEvent from '@testing-library/user-event'
 import VintageYearFilter from '@/components/molecules/VintageYearFilter/VintageYearFilter'
@@ -18,6 +18,53 @@ describe(`VintageYearFilter`, () => {
 
     await user.click(screen.getByText(tLabel))
     expect(screen.getByRole(`button`, { expanded: true })).toBeTruthy()
+  })
+
+  test(`renders a VintageYearFilter and open it and esc`, async () => {
+    const tOnYearChange = jest.fn()
+    render(
+      <TestOvermindWrapper>
+        <VintageYearFilter label={tLabel} onYearChange={tOnYearChange} />
+      </TestOvermindWrapper>,
+    )
+
+    await user.click(screen.getByText(tLabel))
+    expect(screen.getByRole(`button`, { expanded: true })).toBeTruthy()
+    fireEvent.keyDown(screen.getByTestId(`vintage-popover`), {
+      key: `Escape`,
+      code: `Escape`,
+      keyCode: 27,
+      charCode: 27,
+    })
+  })
+
+  const DEFAULT_INPUT_NUMBER = 2
+
+  test(`renders a VintageYearFilter and open it and enter`, async () => {
+    const tOnYearChange = jest.fn()
+    render(
+      <TestOvermindWrapper>
+        <VintageYearFilter label={tLabel} onYearChange={tOnYearChange} />
+      </TestOvermindWrapper>,
+    )
+
+    await user.click(screen.getByText(tLabel))
+    expect(screen.getByRole(`button`, { expanded: true })).toBeTruthy()
+    const inputs = screen.getAllByRole(`textbox`)
+    expect(inputs.length).toBe(DEFAULT_INPUT_NUMBER)
+
+    fireEvent.keyDown(inputs[0], {
+      key: `Enter`,
+      code: `Enter`,
+      keyCode: 13,
+      charCode: 13,
+    })
+    fireEvent.keyDown(inputs[1], {
+      key: `Enter`,
+      code: `Enter`,
+      keyCode: 13,
+      charCode: 13,
+    })
   })
 
   test(`renders a VintageYearFilter with a pre-selected max year and click on apply`, async () => {

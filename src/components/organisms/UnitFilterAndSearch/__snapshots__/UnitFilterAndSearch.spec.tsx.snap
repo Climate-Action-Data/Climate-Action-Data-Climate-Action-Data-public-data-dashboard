@@ -507,6 +507,7 @@ exports[`UnitFilterBar renders correctly 1`] = `
           >
             <section
               class="chakra-popover__content css-yntw6i"
+              data-testid="vintage-popover"
               id="popover-content-:r9:"
               role="dialog"
               style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"

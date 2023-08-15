@@ -105,6 +105,7 @@ const VintageYearFilter: FC<VintageYearFilterProp> = (prop) => {
       </PopoverTrigger>
       <PopoverContent
         zIndex={401}
+        data-testid="vintage-popover"
         border={0}
         borderRadius={`8px`}
         width={[`100%`, null, null, `min-content`]}

@@ -60,7 +60,7 @@ export const SearchHeader = () => {
           </Box>
           <Box>
             <InputGroup size="md">
-              <Input pr="4.5rem" type={`text`} placeholder="Search" value={searchPattern} onChange={handleOnChange} onKeyDown={handleOnKeyDown} />
+              <Input pr="4.5rem" data-testid="search-input-enter" type={`text`} placeholder="Search" value={searchPattern} onChange={handleOnChange} onKeyDown={handleOnKeyDown} />
               <InputRightElement width="4.5rem">
                 <Button colorScheme="white" variant="brandPrimary" h="1.75rem" size="sm" onClick={handleOnSearch} data-testid={`search-header-button`}>
                   {t(`search`)}
