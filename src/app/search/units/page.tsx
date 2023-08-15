@@ -12,6 +12,7 @@ import { ProjectSearchHead } from '@/components/molecules/ProjectSearchHead/Proj
 import { PaginationWidget } from '@/components/atoms/PaginationWidget/PaginationWidget'
 import { UnitSearchBody } from '@/components/molecules/UnitSearchBody/UnitSearchBody'
 import { CSVDownload } from '@/components/molecules/CSVDownload/CSVDownload'
+import { CSVExportTypes } from '@/@types/CSV'
 
 const UnitPage: NextPage = () => {
   const { getUnitResults, getUnitFilterResults } = useEffects().unitResult
@@ -65,7 +66,7 @@ const UnitPage: NextPage = () => {
       <Container variant={`paginationBar`}>
         <PaginationWidget onPageChange={handlePageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={unitResults?.data?.totalCount ?? 0} />
         <Box position={[`unset`, `absolute`]} right="10px" float="right">
-          <CSVDownload isProject={false} pattern={pattern} />
+          <CSVDownload exportType={CSVExportTypes.UNIT} pattern={pattern} />
         </Box>
       </Container>
     </Flex>

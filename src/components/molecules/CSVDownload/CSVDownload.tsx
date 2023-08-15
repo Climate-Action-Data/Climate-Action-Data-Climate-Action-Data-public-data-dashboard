@@ -1,3 +1,4 @@
+import { CSVExportTypes } from '@/@types/CSV'
 import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 import { useActions, useAppState, useEffects } from '@/overmind'
 import { Button, Hide, Text } from '@chakra-ui/react'
@@ -5,12 +6,12 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 interface CSVDownloadProps {
-  isProject: boolean
+  exportType: CSVExportTypes
   pattern?: string
 }
 
 export const CSVDownload = (props: CSVDownloadProps) => {
-  const { isProject, pattern } = props
+  const { exportType, pattern } = props
   const [preparing, setPreparing] = useState<boolean>(false)
   const { t } = useTranslation(`search`)
   const { setDownloadStatus } = useActions().exports
@@ -20,14 +21,17 @@ export const CSVDownload = (props: CSVDownloadProps) => {
   const handleOnClick = async () => {
     setPreparing(true)
     setDownloadStatus(false)
+    let downloadStatus = false
+    switch (exportType) {
+      case CSVExportTypes.PROJECT:
+        downloadStatus = await exportProjectSearchResultToCSV(pattern ?? ``)
+        break
 
-    if (isProject) {
-      const downloadStatus = await exportProjectSearchResultToCSV(pattern ?? ``)
-      setDownloadStatus(downloadStatus)
-    } else {
-      const downloadStatus = await exportUnitSearchResultToCSV(pattern ?? ``)
-      setDownloadStatus(downloadStatus)
+      case CSVExportTypes.UNIT:
+        downloadStatus = await exportUnitSearchResultToCSV(pattern ?? ``)
+        break
     }
+    setDownloadStatus(downloadStatus)
   }
 
   useEffect(() => {
