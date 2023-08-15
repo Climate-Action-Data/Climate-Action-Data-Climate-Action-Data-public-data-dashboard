@@ -18,6 +18,8 @@ interface VintageYearFilterProp {
 const VintageYearFilter: FC<VintageYearFilterProp> = (prop) => {
   const { label, earliestYear, latestYear, onYearChange, yearFilter, isResultsPage } = prop
 
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+
   const [minimumYear, setMinimumYear] = useState<number | undefined>()
   const [maximumYear, setMaximumYear] = useState<number | undefined>()
 
@@ -34,7 +36,17 @@ const VintageYearFilter: FC<VintageYearFilterProp> = (prop) => {
     onYearChange({})
   }
 
+  const handleOnOpen = () => {
+    setIsOpen(true)
+  }
+
+  const handleOnClose = () => {
+    setIsOpen(false)
+  }
+
   const handleOnApplyClick = () => {
+    setIsOpen(false)
+
     if (minimumYear && maximumYear) {
       if (minimumYear <= maximumYear) {
         onYearChange({ maxYear: maximumYear, minYear: minimumYear })
@@ -43,6 +55,12 @@ const VintageYearFilter: FC<VintageYearFilterProp> = (prop) => {
       onYearChange({ minYear: minimumYear })
     } else if (maximumYear) {
       onYearChange({ maxYear: maximumYear })
+    }
+  }
+
+  const handleOnKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === `Enter`) {
+      handleOnApplyClick()
     }
   }
 
@@ -75,7 +93,7 @@ const VintageYearFilter: FC<VintageYearFilterProp> = (prop) => {
   }
 
   return (
-    <Popover gutter={0} isLazy placement={`bottom`} matchWidth>
+    <Popover gutter={0} isLazy placement={`bottom`} matchWidth isOpen={isOpen} onOpen={handleOnOpen} onClose={handleOnClose} closeOnBlur closeOnEsc>
       <PopoverTrigger>
         <Button variant={generateVariant()}>
           <Flex fontWeight={`normal`} fontSize={`16px`} alignItems={`center`} grow={1}>
@@ -98,11 +116,25 @@ const VintageYearFilter: FC<VintageYearFilterProp> = (prop) => {
         <PopoverBody width={`100%`}>
           <VStack>
             <HStack flexWrap={[`wrap`, `nowrap`]} width={`100%`} justify={`center`} alignItems={`end`}>
-              <YearInput label={`Minimum Date`} value={minimumYear} maxYear={latestYear ?? maximumYear} minYear={earliestYear} onChange={handleMinDateOnChange} />
+              <YearInput
+                label={`Minimum Date`}
+                value={minimumYear}
+                maxYear={latestYear ?? maximumYear}
+                minYear={earliestYear}
+                onChange={handleMinDateOnChange}
+                onKeyDown={handleOnKeyDown}
+              />
               <Hide below="sm">
                 <MinusIcon />
               </Hide>
-              <YearInput label={`Maximum Date`} value={maximumYear} maxYear={latestYear} minYear={earliestYear ?? minimumYear} onChange={handleMaxDateOnChange} />
+              <YearInput
+                label={`Maximum Date`}
+                value={maximumYear}
+                maxYear={latestYear}
+                minYear={earliestYear ?? minimumYear}
+                onChange={handleMaxDateOnChange}
+                onKeyDown={handleOnKeyDown}
+              />
             </HStack>
             <HStack justify={`space-between`} width={`100%`} margin={`8px`}>
               <Button variant={`textLink`} onClick={handleOnClearClick} data-testid={`vintage-year-filter-clear`}>

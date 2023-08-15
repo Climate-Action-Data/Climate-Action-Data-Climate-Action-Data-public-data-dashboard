@@ -18,13 +18,13 @@ interface UnitFilterBarProps {
 const UnitFilterBar: FC<UnitFilterBarProps> = (props) => {
   const { isResultsPage } = props
   const {
-    selectedUnitSearchFilterValues: { searchFilterValues: selectedSearchFilters, isEmpty: selectedIsEmpty },
+    selectedUnitSearchFilterValues: { searchFilterValues: selectedSearchFilters },
     allSearchFilterValues: { searchFilterValues, isEmpty },
   } = useAppState().searchFilters
 
   const { setUnitCountriesFilter, setUnitStandardsFilter, setUnitSectorFilter, setUnitStatusFilter, setUnitVintageYearFilter } = useActions().searchFilters
   const { getGovernanceData } = useEffects().searchFilters
-  const { transformGovernanceDataToSearchFilterData, clearKeywordSearch } = useActions().searchFilters
+  const { transformGovernanceDataToSearchFilterData } = useActions().searchFilters
   const { t } = useTranslation(`search`)
   const router = useRouter()
 
@@ -57,12 +57,7 @@ const UnitFilterBar: FC<UnitFilterBarProps> = (props) => {
   }
 
   const handleOnClick = () => {
-    clearKeywordSearch()
-    if (selectedIsEmpty) {
-      router.push(`/search/units?keyword=`)
-    } else {
-      router.push(`/search/units?filter=true?keyword=`)
-    }
+    router.push(`/search/units`)
   }
 
   return (
@@ -109,10 +104,12 @@ const UnitFilterBar: FC<UnitFilterBarProps> = (props) => {
             isResultsPage={isResultsPage}
           />
         </Stack>
-        <Flex>
-          <Spacer minWidth={`32px`} />
-          <SearchButton isResultsPage={isResultsPage} onClick={handleOnClick} />
-        </Flex>
+        {!isResultsPage && (
+          <Flex>
+            <Spacer minWidth={`32px`} />
+            <SearchButton isResultsPage={isResultsPage} onClick={handleOnClick} />
+          </Flex>
+        )}
       </Stack>
     </FilterBarWrapper>
   )
