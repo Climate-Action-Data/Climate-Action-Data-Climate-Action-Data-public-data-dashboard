@@ -1,6 +1,6 @@
 'use client'
 import { NextPage } from 'next'
-import { useEffect, useLayoutEffect } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import { Box, Container, Flex } from '@chakra-ui/react'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
@@ -12,10 +12,12 @@ import { PaginationWidget } from '@/components/atoms/PaginationWidget/Pagination
 import { UnitSearchBody } from '@/components/molecules/UnitSearchBody/UnitSearchBody'
 import { CSVDownload } from '@/components/molecules/CSVDownload/CSVDownload'
 import { CSVExportTypes } from '@/@types/CSV'
+import { SpinnerScreen } from '@/components/atoms/SpinnerScreen/SpinnerScreen'
 
 const UnitPage: NextPage = () => {
   const { getUnitsSearchResults } = useEffects().unitResult
   const { setUnitResults, clearUnitResults } = useActions().unitResult
+  const [isLoading, setIsLoading] = useState<boolean>(false)
   const { unitResults } = useAppState().unitResult
   const { selectedUnitSearchFilterValues, keywordSearch } = useAppState().searchFilters
 
@@ -34,8 +36,10 @@ const UnitPage: NextPage = () => {
   ])
 
   const handlePageChange = (currentPage: number, from: number) => {
+    setIsLoading(true)
     getUnitsSearchResults(keywordSearch, selectedUnitSearchFilterValues.searchFilterValues, from).then((hasProjectResults) => {
       setUnitResults(hasProjectResults)
+      setIsLoading(false)
     })
   }
 
@@ -54,9 +58,16 @@ const UnitPage: NextPage = () => {
   })
 
   return (
-    <Flex maxW={`100vw`} paddingBottom="50px">
-      <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.UNIT} />
-      <UnitSearchBody renderType={ALLOWED_RENDER_TYPE.UNIT} />
+    <Flex w="100vw" maxW="100vw" paddingBottom="50px">
+      {isLoading ? (
+        <SpinnerScreen />
+      ) : (
+        <>
+          <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.UNIT} />
+          <UnitSearchBody renderType={ALLOWED_RENDER_TYPE.UNIT} />
+        </>
+      )}
+
       <Container variant={`paginationBar`}>
         <PaginationWidget onPageChange={handlePageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={unitResults?.data?.totalCount ?? 0} />
         <Box position={[`unset`, `absolute`]} right="10px" float="right">

@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useLayoutEffect } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import { NextPage } from 'next'
 import { Box, Container, Flex } from '@chakra-ui/react'
 
@@ -12,10 +12,12 @@ import { ProjectSearchBody } from '@/components/molecules/ProjectSearchBody/Proj
 import { PaginationWidget } from '@/components/atoms/PaginationWidget/PaginationWidget'
 import { CSVDownload } from '@/components/molecules/CSVDownload/CSVDownload'
 import { CSVExportTypes } from '@/@types/CSV'
+import { SpinnerScreen } from '@/components/atoms/SpinnerScreen/SpinnerScreen'
 
 const ProjectPage: NextPage = () => {
   const { getProjectSearchResults } = useEffects().projectResult
   const { setProjectResults, clearProjectResults } = useActions().projectResult
+  const [isLoading, setIsLoading] = useState<boolean>(false)
   const { projectResults } = useAppState().projectResult
   const { selectedProjectSearchFilterValues, keywordSearch } = useAppState().searchFilters
 
@@ -34,7 +36,9 @@ const ProjectPage: NextPage = () => {
   ])
 
   const handleOnPageChange = (currentPage: number, from: number) => {
+    setIsLoading(true)
     getProjectSearchResults(keywordSearch, selectedProjectSearchFilterValues.searchFilterValues, from).then((hasProjectResults) => {
+      setIsLoading(false)
       setProjectResults(hasProjectResults)
     })
   }
@@ -54,9 +58,16 @@ const ProjectPage: NextPage = () => {
   })
 
   return (
-    <Flex maxW={`100vw`} paddingBottom="50px">
-      <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.PROJECT} />
-      <ProjectSearchBody renderType={ALLOWED_RENDER_TYPE.PROJECT} />
+    <Flex maxW={`100vw`} w="100vw" minH="100%" h="100%" position="relative" paddingBottom="50px">
+      {isLoading ? (
+        <SpinnerScreen />
+      ) : (
+        <>
+          <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.PROJECT} />
+          <ProjectSearchBody renderType={ALLOWED_RENDER_TYPE.PROJECT} />
+        </>
+      )}
+
       <Container variant={`paginationBar`}>
         <PaginationWidget onPageChange={handleOnPageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={projectResults?.data?.totalCount ?? 0} />
         <Box position={[`unset`, `absolute`]} right="10px" float="right">

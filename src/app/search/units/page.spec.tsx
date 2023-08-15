@@ -54,3 +54,15 @@ it(`renders correctly and click next page`, () => {
 
   expect(container).toMatchSnapshot()
 })
+
+it(`renders correctly and set isLoading to false`, () => {
+  const { container } = render(
+    <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>
+      <Projects />
+    </TestOvermindWrapper>,
+  )
+  const inputElement = screen.getByTestId(`pagination-page-up`)
+  fireEvent.click(inputElement)
+
+  expect(container).toMatchSnapshot()
+})

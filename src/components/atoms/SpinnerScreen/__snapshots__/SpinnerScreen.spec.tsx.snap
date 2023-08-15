@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SpinnerScreen renders correctly 1`] = `
+<div>
+  <div
+    class="css-nbj2o1"
+  >
+    <div
+      class="chakra-spinner css-1mj9nl5"
+    >
+      <span
+        class="css-8b45rq"
+      >
+        Loading...
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SpinnerScreen renders correctly 2`] = `
+<div>
+  <div
+    class="css-nbj2o1"
+  >
+    <div
+      class="chakra-spinner css-1mj9nl5"
+    >
+      <span
+        class="css-8b45rq"
+      >
+        Loading...
+      </span>
+    </div>
+    <p
+      class="chakra-text css-0"
+    >
+      Loading...
+    </p>
+  </div>
+</div>
+`;
