@@ -42,3 +42,13 @@ it(`renders correctly with pattern no project and click`, () => {
   fireEvent.click(downloadButton)
   expect(container).toMatchSnapshot()
 })
+it(`renders correctly with pattern as project and click`, () => {
+  const { container } = render(
+    <TestOvermindWrapper>
+      <CSVDownload isProject pattern={DEFAULT_PATTERN} />
+    </TestOvermindWrapper>,
+  )
+  const downloadButton = screen.getByTestId(`export-data`)
+  fireEvent.click(downloadButton)
+  expect(container).toMatchSnapshot()
+})
