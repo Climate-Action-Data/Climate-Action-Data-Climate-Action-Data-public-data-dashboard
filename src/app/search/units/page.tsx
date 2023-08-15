@@ -2,11 +2,10 @@
 import { NextPage } from 'next'
 import { useEffect, useLayoutEffect } from 'react'
 import { Box, Container, Flex } from '@chakra-ui/react'
-import { useSearchParams } from 'next/navigation'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
 import { setScrollEventListeners } from '@/utils/Stickify'
-import { ALLOWED_RENDER_TYPE, DEFAULT_PROJECT_COUNT_TO_DISPLAY, ESearchParams } from '@/@types/ProjectSearchResult'
+import { ALLOWED_RENDER_TYPE, DEFAULT_PROJECT_COUNT_TO_DISPLAY } from '@/@types/ProjectSearchResult'
 
 import { ProjectSearchHead } from '@/components/molecules/ProjectSearchHead/ProjectSearchHead'
 import { PaginationWidget } from '@/components/atoms/PaginationWidget/PaginationWidget'
@@ -15,32 +14,27 @@ import { CSVDownload } from '@/components/molecules/CSVDownload/CSVDownload'
 import { CSVExportTypes } from '@/@types/CSV'
 
 const UnitPage: NextPage = () => {
-  const { getUnitResults, getUnitFilterResults } = useEffects().unitResult
+  const { getUnitsSearchResults } = useEffects().unitResult
   const { setUnitResults, clearUnitResults } = useActions().unitResult
-  const { resetSearchFilters } = useActions().searchFilters
   const { unitResults } = useAppState().unitResult
-  const { selectedUnitSearchFilterValues } = useAppState().searchFilters
-  const searchParams = useSearchParams()
-  const pattern = searchParams.get(ESearchParams.KEYWORD) ?? ``
-  const filter = searchParams.get(ESearchParams.FILTER) ?? undefined
+  const { selectedUnitSearchFilterValues, keywordSearch } = useAppState().searchFilters
 
   useEffect(() => {
-    if (filter) {
-      clearUnitResults()
-      getUnitFilterResults(selectedUnitSearchFilterValues.searchFilterValues).then((hasProjectResults) => {
-        setUnitResults(hasProjectResults)
-      })
-    } else {
-      clearUnitResults()
-      resetSearchFilters()
-      getUnitResults(pattern).then((hasProjectResults) => {
-        setUnitResults(hasProjectResults)
-      })
-    }
-  }, [pattern, filter])
+    clearUnitResults()
+    getUnitsSearchResults(keywordSearch, selectedUnitSearchFilterValues.searchFilterValues).then((hasProjectResults) => {
+      setUnitResults(hasProjectResults)
+    })
+  }, [
+    keywordSearch,
+    selectedUnitSearchFilterValues.searchFilterValues.unitStatus,
+    selectedUnitSearchFilterValues.searchFilterValues.projectStatus,
+    selectedUnitSearchFilterValues.searchFilterValues.sectors,
+    selectedUnitSearchFilterValues.searchFilterValues.countries,
+    selectedUnitSearchFilterValues.searchFilterValues.vintageYear,
+  ])
 
   const handlePageChange = (currentPage: number, from: number) => {
-    getUnitResults(pattern, from).then((hasProjectResults) => {
+    getUnitsSearchResults(keywordSearch, selectedUnitSearchFilterValues.searchFilterValues, from).then((hasProjectResults) => {
       setUnitResults(hasProjectResults)
     })
   }
@@ -66,7 +60,7 @@ const UnitPage: NextPage = () => {
       <Container variant={`paginationBar`}>
         <PaginationWidget onPageChange={handlePageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={unitResults?.data?.totalCount ?? 0} />
         <Box position={[`unset`, `absolute`]} right="10px" float="right">
-          <CSVDownload exportType={CSVExportTypes.UNIT} pattern={pattern} />
+          <CSVDownload exportType={CSVExportTypes.UNIT} pattern={keywordSearch} />
         </Box>
       </Container>
     </Flex>

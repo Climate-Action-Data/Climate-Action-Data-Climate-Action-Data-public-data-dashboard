@@ -18,7 +18,6 @@ const ProjectPage: NextPage = () => {
   const { setProjectResults, clearProjectResults } = useActions().projectResult
   const { projectResults } = useAppState().projectResult
   const { selectedProjectSearchFilterValues, keywordSearch } = useAppState().searchFilters
-  const pattern = keywordSearch
 
   useEffect(() => {
     clearProjectResults()
@@ -35,7 +34,7 @@ const ProjectPage: NextPage = () => {
   ])
 
   const handleOnPageChange = (currentPage: number, from: number) => {
-    getProjectSearchResults(pattern, selectedProjectSearchFilterValues.searchFilterValues, from).then((hasProjectResults) => {
+    getProjectSearchResults(keywordSearch, selectedProjectSearchFilterValues.searchFilterValues, from).then((hasProjectResults) => {
       setProjectResults(hasProjectResults)
     })
   }
@@ -61,7 +60,7 @@ const ProjectPage: NextPage = () => {
       <Container variant={`paginationBar`}>
         <PaginationWidget onPageChange={handleOnPageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={projectResults?.data?.totalCount ?? 0} />
         <Box position={[`unset`, `absolute`]} right="10px" float="right">
-          <CSVDownload exportType={CSVExportTypes.PROJECT} pattern={pattern} />
+          <CSVDownload exportType={CSVExportTypes.PROJECT} pattern={keywordSearch} />
         </Box>
       </Container>
     </Flex>

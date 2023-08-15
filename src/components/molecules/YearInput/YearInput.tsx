@@ -9,10 +9,11 @@ interface YearInputProp {
   maxYear?: number
   minYear?: number
   onChange: (year: number | undefined) => void
+  onKeyDown: (event: React.KeyboardEvent<HTMLInputElement>) => void
 }
 
 const YearInput: FC<YearInputProp> = (prop) => {
-  const { label, value, maxYear, minYear, onChange } = prop
+  const { label, value, maxYear, minYear, onChange, onKeyDown } = prop
 
   const [textInputValue, setTextInputValue] = useState<string>(``)
   const [isInvalid, setIsInvalid] = useState<boolean>(false)
@@ -32,7 +33,7 @@ const YearInput: FC<YearInputProp> = (prop) => {
     }
   }
 
-  const handleOnBlur = () => {
+  const updateValue = () => {
     if (textInputValue === ``) {
       setIsInvalid(false)
       onChange(undefined)
@@ -51,6 +52,18 @@ const YearInput: FC<YearInputProp> = (prop) => {
     onChange(yearNumber)
   }
 
+  const handleOnBlur = () => {
+    updateValue()
+  }
+
+  const handleOnKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === `Enter`) {
+      console.log(`===========   ${textInputValue}`)
+      updateValue()
+      onKeyDown(event)
+    }
+  }
+
   return (
     <VStack alignItems="start">
       <Text>{label}</Text>
@@ -64,6 +77,7 @@ const YearInput: FC<YearInputProp> = (prop) => {
           onBlur={handleOnBlur}
           isInvalid={isInvalid}
           errorBorderColor="red"
+          onKeyDown={handleOnKeyDown}
         />
       </InputGroup>
     </VStack>
