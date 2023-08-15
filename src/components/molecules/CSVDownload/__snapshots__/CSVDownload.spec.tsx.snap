@@ -44,6 +44,16 @@ exports[`renders correctly with pattern 1`] = `
 </div>
 `;
 
+exports[`renders correctly with pattern as project and click 1`] = `
+<div>
+  <p
+    class="chakra-text css-0"
+  >
+    Preparing download...
+  </p>
+</div>
+`;
+
 exports[`renders correctly with pattern no project 1`] = `
 <div>
   <button
