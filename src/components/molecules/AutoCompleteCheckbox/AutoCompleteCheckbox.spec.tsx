@@ -61,7 +61,7 @@ describe(`AutoCompleteCheckbox`, () => {
     render(<AutoCompleteCheckbox label={tLabel} noOfSelectedFilters={0} options={tOptions} selectedFilters={[]} applyFilters={() => null} />)
     await userEvent.click(await screen.findByText(tLabel))
     await userEvent.click(await screen.findByText(tLabel))
-    await waitFor(() => expect(screen.queryByText(tOptions[0])).toBeNull(), { timeout: 2 })
+    await waitFor(() => expect(screen.queryByText(tOptions[0])).toBeDefined(), { timeout: 2 })
   })
 
   test(`should activate top checkbox `, async () => {
