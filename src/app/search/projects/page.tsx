@@ -2,7 +2,7 @@
 import { useEffect, useLayoutEffect } from 'react'
 import { NextPage } from 'next'
 import { useSearchParams } from 'next/navigation'
-import { Box, Button, Container, Flex, Hide } from '@chakra-ui/react'
+import { Box, Container, Flex } from '@chakra-ui/react'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
 import { setScrollEventListeners } from '@/utils/Stickify'
@@ -11,7 +11,7 @@ import { ALLOWED_RENDER_TYPE, DEFAULT_PROJECT_COUNT_TO_DISPLAY, ESearchParams } 
 import { ProjectSearchHead } from '@/components/molecules/ProjectSearchHead/ProjectSearchHead'
 import { ProjectSearchBody } from '@/components/molecules/ProjectSearchBody/ProjectSearchBody'
 import { PaginationWidget } from '@/components/atoms/PaginationWidget/PaginationWidget'
-import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
+import { CSVDownload } from '@/components/molecules/CSVDownload/CSVDownload'
 
 const ProjectPage: NextPage = () => {
   const { getProjectSearchResults, getProjectFilterResults } = useEffects().projectResult
@@ -65,10 +65,7 @@ const ProjectPage: NextPage = () => {
       <Container variant={`paginationBar`}>
         <PaginationWidget onPageChange={handleOnPageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={projectResults?.data?.totalCount ?? 0} />
         <Box position={[`unset`, `absolute`]} right="10px" float="right">
-          <Button variant="hoverOnly" display="flex" gap="4px" fontWeight="500px">
-            <Hide below="md">Export</Hide>
-            <DownloadIcon />
-          </Button>
+          <CSVDownload isProject pattern={pattern} />
         </Box>
       </Container>
     </Flex>

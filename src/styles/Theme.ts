@@ -227,6 +227,12 @@ const theme = extendTheme({
         borderColor: `green.700 !important`,
         boxShadow: `0 0 0 1px var(--chakra-colors-green-800) !important`,
       },
+      '.disabled': {
+        _hover: {
+          cursor: `not-allowed`,
+          pointerEvents: `none`,
+        },
+      },
       ...searchTable,
       ...searchTableSmall,
     }),

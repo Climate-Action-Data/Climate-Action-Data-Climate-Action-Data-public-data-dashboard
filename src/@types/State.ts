@@ -131,3 +131,5 @@ export interface SearchFiltersStateData {
   selectedUnitSearchFilterValues: { searchFilterValues: UnitSearchFilterValues; readonly isEmpty: boolean }
   keywordSearch: string
 }
+
+export const DEFAULT_EXPORT_MAXLINE = 1000

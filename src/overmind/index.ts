@@ -7,6 +7,7 @@ import * as creditsHistory from './creditsHistory'
 import * as projectResult from './projectResult'
 import * as searchFilters from './searchFilters'
 import * as unitResult from './unitResult'
+import * as exports from './exports'
 
 export const config = namespaced({
   analytics,
@@ -14,6 +15,7 @@ export const config = namespaced({
   projectResult,
   searchFilters,
   unitResult,
+  exports,
 })
 
 export type Context = IContext<typeof config>

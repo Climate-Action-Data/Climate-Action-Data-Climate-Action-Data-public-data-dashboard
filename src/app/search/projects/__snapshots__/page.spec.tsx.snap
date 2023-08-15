@@ -625,6 +625,7 @@ exports[`renders correctly 1`] = `
       >
         <button
           class="chakra-button css-hli6hn"
+          data-testid="export-data"
           type="button"
         >
           Export
@@ -1270,6 +1271,7 @@ exports[`renders correctly and click next page 1`] = `
       >
         <button
           class="chakra-button css-hli6hn"
+          data-testid="export-data"
           type="button"
         >
           Export
@@ -1915,6 +1917,7 @@ exports[`renders correctly on table data 1`] = `
       >
         <button
           class="chakra-button css-hli6hn"
+          data-testid="export-data"
           type="button"
         >
           Export
@@ -2560,6 +2563,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
       >
         <button
           class="chakra-button css-hli6hn"
+          data-testid="export-data"
           type="button"
         >
           Export
