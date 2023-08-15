@@ -12,6 +12,8 @@
   "ok": "OK",
   "upTo": "Up to {{- date}}",
   "andLater": "{{- date}} and later",
+  "export": "Export",
+  "preparing": "Preparing download...",
   "filterBar": {
     "standard": "Standard",
     "unitStatus": "Unit Status",
