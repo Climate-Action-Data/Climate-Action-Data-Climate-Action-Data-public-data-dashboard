@@ -58,7 +58,6 @@ const YearInput: FC<YearInputProp> = (prop) => {
 
   const handleOnKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === `Enter`) {
-      console.log(`===========   ${textInputValue}`)
       updateValue()
       onKeyDown(event)
     }

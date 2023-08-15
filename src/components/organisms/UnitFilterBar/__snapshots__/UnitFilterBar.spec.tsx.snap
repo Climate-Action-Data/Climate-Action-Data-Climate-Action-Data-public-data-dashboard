@@ -784,6 +784,7 @@ exports[`renders correctly with loaded data 1`] = `
         >
           <section
             class="chakra-popover__content css-yntw6i"
+            data-testid="vintage-popover"
             id="popover-content-:rj:"
             role="dialog"
             style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
@@ -1608,6 +1609,7 @@ exports[`renders correctly with loaded data and search click 1`] = `
         >
           <section
             class="chakra-popover__content css-yntw6i"
+            data-testid="vintage-popover"
             id="popover-content-:rt:"
             role="dialog"
             style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
@@ -2152,6 +2154,7 @@ exports[`renders correctly with no data 1`] = `
         >
           <section
             class="chakra-popover__content css-yntw6i"
+            data-testid="vintage-popover"
             id="popover-content-:r9:"
             role="dialog"
             style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"

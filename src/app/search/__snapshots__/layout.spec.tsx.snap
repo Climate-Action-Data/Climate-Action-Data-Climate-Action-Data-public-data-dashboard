@@ -28,6 +28,7 @@ exports[`renders correctly 1`] = `
           >
             <input
               class="chakra-input css-1n0hj84"
+              data-testid="search-input-enter"
               placeholder="Search"
               type="text"
               value=""

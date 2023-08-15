@@ -28,6 +28,7 @@ exports[`renders correctly 1`] = `
           >
             <input
               class="chakra-input css-1n0hj84"
+              data-testid="search-input-enter"
               placeholder="Search"
               type="text"
               value=""
@@ -79,6 +80,59 @@ exports[`renders correctly and clear the search values 1`] = `
           >
             <input
               class="chakra-input css-1n0hj84"
+              data-testid="search-input-enter"
+              placeholder="Search"
+              type="text"
+              value=""
+            />
+            <div
+              class="chakra-input__right-element css-vcnsx7"
+            >
+              <button
+                class="chakra-button css-xsdlqf"
+                data-testid="search-header-button"
+                type="button"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly and clear the search values 2`] = `
+<div>
+  <div
+    class="css-8y3igr"
+    id="headerReference"
+  >
+    <div
+      class="chakra-stack css-ryi8m5"
+    >
+      <div
+        class="chakra-stack css-1jjq5p5"
+      >
+        <div
+          class="css-0"
+        >
+          <h2
+            class="chakra-heading css-0"
+          />
+        </div>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-input__group css-bx0blc"
+            data-group="true"
+          >
+            <input
+              class="chakra-input css-1n0hj84"
+              data-testid="search-input-enter"
               placeholder="Search"
               type="text"
               value=""
@@ -130,6 +184,7 @@ exports[`renders correctly with no params, add a search value and submits a sear
           >
             <input
               class="chakra-input css-1n0hj84"
+              data-testid="search-input-enter"
               placeholder="Search"
               type="text"
               value="hello"
