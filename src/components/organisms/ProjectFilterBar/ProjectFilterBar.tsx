@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Stack, StackDivider } from '@chakra-ui/react'
+import { Flex, Spacer, Stack, StackDivider } from '@chakra-ui/react'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
 import AutoCompleteCheckbox from '@/components/molecules/AutoCompleteCheckbox/AutoCompleteCheckbox'
@@ -8,6 +8,8 @@ import CreditingPeriodFilter from '@/components/molecules/CreditingPeriodFilter/
 import { KYOTO_PROTOCOL_START_DATE } from '@/@types/CarbonStandards'
 import { DatesFilter } from '@/@types/ProjectSearchFilterValues'
 import FilterBarWrapper from '@/components/molecules/FilterBarWarpper/FilterBarWrapper'
+import SearchButton from '@/components/atoms/SearchButton/SearchButton'
+import { useRouter } from 'next/navigation'
 
 interface ProjectFilterBarProps {
   isResultsPage?: boolean
@@ -24,6 +26,7 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
     useActions().searchFilters
   const { getGovernanceData } = useEffects().searchFilters
   const { transformGovernanceDataToSearchFilterData } = useActions().searchFilters
+  const router = useRouter()
   const { t } = useTranslation(`search`)
 
   useEffect(() => {
@@ -52,6 +55,9 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
 
   const handleSetProjectCreditingPeriodFilter = (value: DatesFilter) => {
     setProjectCreditingPeriodFilter(value)
+  }
+  const handleOnClick = () => {
+    router.push(`/search/projects`)
   }
 
   return (
@@ -98,6 +104,12 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
             isResultsPage={isResultsPage}
           />
         </Stack>
+        {!isResultsPage && (
+          <Flex>
+            <Spacer minWidth={`32px`} />
+            <SearchButton isResultsPage={isResultsPage} onClick={handleOnClick} />
+          </Flex>
+        )}
       </Stack>
     </FilterBarWrapper>
   )
