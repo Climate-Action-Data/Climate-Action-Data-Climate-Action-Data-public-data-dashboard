@@ -1,7 +1,7 @@
 'use client'
 import { Box, Container, Flex, Hide, Spacer, Text } from '@chakra-ui/react'
 
-import { useAppState } from '@/overmind'
+import { useActions, useAppState } from '@/overmind'
 import { CarbonReductionWidget } from '@/components/molecules/CarbonReductionWidget/CarbonReductionWidget'
 import { RegionSearch } from '@/components/molecules/RegionSearch/RegionSearch'
 import { TimeframeSearch } from '@/components/molecules/TimeframeSearch/TimeframeSearch'
@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next'
 import ProjectFilterAndSearch from '@/components/organisms/ProjectFilterAndSearch/ProjectFilterAndSearch'
 import UnitFilterAndSearch from '@/components/organisms/UnitFilterAndSearch/UnitFilterAndSearch'
 import SearchAndFilter from '@/components/molecules/SearchAndFilter/SearchAndFilter'
+import { useEffect } from 'react'
 
 export default function Home(): React.JSX.Element {
   const { carbonReduction } = useAppState().analytics
@@ -18,6 +19,11 @@ export default function Home(): React.JSX.Element {
   const dataRepresentedAsOf = t(`dataRepresentedAsOf`)
   const formattedDate = new Date(carbonReduction.carbonMapData?.data?.lastUpdated ?? ``)
   const formattedDateTime = `${formattedDate.toLocaleDateString()} ${formattedDate.toLocaleTimeString()}`
+  const { resetSearchFilters } = useActions().searchFilters
+
+  useEffect(() => {
+    resetSearchFilters()
+  }, [])
 
   const tabs = [
     {

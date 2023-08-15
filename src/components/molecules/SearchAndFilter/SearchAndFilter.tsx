@@ -8,6 +8,7 @@ interface SearchAndFilterProps {
 
 const SearchAndFilter: FC<SearchAndFilterProps> = (props) => {
   const { tabs } = props
+
   return (
     <Tabs variant="unstyled" align="center">
       <TabList>

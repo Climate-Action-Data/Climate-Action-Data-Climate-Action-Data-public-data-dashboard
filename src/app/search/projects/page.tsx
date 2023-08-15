@@ -1,12 +1,11 @@
 'use client'
 import { useEffect, useLayoutEffect } from 'react'
 import { NextPage } from 'next'
-import { useSearchParams } from 'next/navigation'
 import { Box, Container, Flex } from '@chakra-ui/react'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
 import { setScrollEventListeners } from '@/utils/Stickify'
-import { ALLOWED_RENDER_TYPE, DEFAULT_PROJECT_COUNT_TO_DISPLAY, ESearchParams } from '@/@types/ProjectSearchResult'
+import { ALLOWED_RENDER_TYPE, DEFAULT_PROJECT_COUNT_TO_DISPLAY } from '@/@types/ProjectSearchResult'
 
 import { ProjectSearchHead } from '@/components/molecules/ProjectSearchHead/ProjectSearchHead'
 import { ProjectSearchBody } from '@/components/molecules/ProjectSearchBody/ProjectSearchBody'
@@ -15,32 +14,28 @@ import { CSVDownload } from '@/components/molecules/CSVDownload/CSVDownload'
 import { CSVExportTypes } from '@/@types/CSV'
 
 const ProjectPage: NextPage = () => {
-  const { getProjectSearchResults, getProjectFilterResults } = useEffects().projectResult
+  const { getProjectSearchResults } = useEffects().projectResult
   const { setProjectResults, clearProjectResults } = useActions().projectResult
-  const { resetSearchFilters } = useActions().searchFilters
   const { projectResults } = useAppState().projectResult
-  const { selectedProjectSearchFilterValues } = useAppState().searchFilters
-  const searchParams = useSearchParams()
-  const pattern = searchParams.get(ESearchParams.KEYWORD) ?? ``
-  const filter = searchParams.get(ESearchParams.FILTER) ?? undefined
+  const { selectedProjectSearchFilterValues, keywordSearch } = useAppState().searchFilters
+  const pattern = keywordSearch
 
   useEffect(() => {
-    if (filter) {
-      clearProjectResults()
-      getProjectFilterResults(selectedProjectSearchFilterValues.searchFilterValues).then((hasProjectResults) => {
-        setProjectResults(hasProjectResults)
-      })
-    } else {
-      clearProjectResults()
-      resetSearchFilters()
-      getProjectSearchResults(pattern).then((hasProjectResults) => {
-        setProjectResults(hasProjectResults)
-      })
-    }
-  }, [pattern, filter])
+    clearProjectResults()
+    getProjectSearchResults(keywordSearch, selectedProjectSearchFilterValues.searchFilterValues).then((hasProjectResults) => {
+      setProjectResults(hasProjectResults)
+    })
+  }, [
+    keywordSearch,
+    selectedProjectSearchFilterValues.searchFilterValues.projectStatus,
+    selectedProjectSearchFilterValues.searchFilterValues.countries,
+    selectedProjectSearchFilterValues.searchFilterValues.methodologies,
+    selectedProjectSearchFilterValues.searchFilterValues.sectors,
+    selectedProjectSearchFilterValues.searchFilterValues.creditingPeriod,
+  ])
 
   const handleOnPageChange = (currentPage: number, from: number) => {
-    getProjectSearchResults(pattern, from).then((hasProjectResults) => {
+    getProjectSearchResults(pattern, selectedProjectSearchFilterValues.searchFilterValues, from).then((hasProjectResults) => {
       setProjectResults(hasProjectResults)
     })
   }
