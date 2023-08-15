@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import { CSVDownload } from './CSVDownload'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
+import { CSVExportTypes } from '@/@types/CSV'
 
 const DEFAULT_PATTERN_EMPTY = ``
 const DEFAULT_PATTERN = `solar`
@@ -8,7 +9,7 @@ const DEFAULT_PATTERN = `solar`
 it(`renders correctly with no pattern`, () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <CSVDownload isProject pattern={DEFAULT_PATTERN_EMPTY} />
+      <CSVDownload exportType={CSVExportTypes.PROJECT} pattern={DEFAULT_PATTERN_EMPTY} />
     </TestOvermindWrapper>,
   )
   expect(container).toMatchSnapshot()
@@ -17,7 +18,7 @@ it(`renders correctly with no pattern`, () => {
 it(`renders correctly with pattern`, () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <CSVDownload isProject pattern={DEFAULT_PATTERN} />
+      <CSVDownload exportType={CSVExportTypes.PROJECT} pattern={DEFAULT_PATTERN} />
     </TestOvermindWrapper>,
   )
   expect(container).toMatchSnapshot()
@@ -26,7 +27,7 @@ it(`renders correctly with pattern`, () => {
 it(`renders correctly with pattern no project`, () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <CSVDownload isProject={false} pattern={DEFAULT_PATTERN} />
+      <CSVDownload exportType={CSVExportTypes.UNIT} pattern={DEFAULT_PATTERN} />
     </TestOvermindWrapper>,
   )
   expect(container).toMatchSnapshot()
@@ -35,7 +36,7 @@ it(`renders correctly with pattern no project`, () => {
 it(`renders correctly with pattern no project and click`, () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <CSVDownload isProject={false} pattern={DEFAULT_PATTERN} />
+      <CSVDownload exportType={CSVExportTypes.UNIT} pattern={DEFAULT_PATTERN} />
     </TestOvermindWrapper>,
   )
   const downloadButton = screen.getByTestId(`export-data`)
@@ -45,7 +46,7 @@ it(`renders correctly with pattern no project and click`, () => {
 it(`renders correctly with pattern as project and click`, () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <CSVDownload isProject pattern={DEFAULT_PATTERN} />
+      <CSVDownload exportType={CSVExportTypes.PROJECT} pattern={DEFAULT_PATTERN} />
     </TestOvermindWrapper>,
   )
   const downloadButton = screen.getByTestId(`export-data`)
