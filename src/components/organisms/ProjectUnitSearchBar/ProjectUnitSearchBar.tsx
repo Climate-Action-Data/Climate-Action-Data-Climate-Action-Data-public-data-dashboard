@@ -5,6 +5,7 @@ import React, { ChangeEvent, FC, useState } from 'react'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import { useRouter } from 'next/navigation'
 import { ESearchParams } from '@/@types/ProjectSearchResult'
+import { useActions } from '@/overmind'
 
 interface ProjectUnitSearchBarProp {
   isProjectSearch?: boolean
@@ -12,6 +13,7 @@ interface ProjectUnitSearchBarProp {
 
 const ProjectUnitSearchBar: FC<ProjectUnitSearchBarProp> = (props) => {
   const { isProjectSearch } = props
+  const { setKeywordSearch } = useActions().searchFilters
   const [searchInput, setSearchInput] = useState(``)
   const router = useRouter()
   const { t } = useTranslation(`search`)
@@ -27,6 +29,9 @@ const ProjectUnitSearchBar: FC<ProjectUnitSearchBarProp> = (props) => {
   const handleOnSearch = () => {
     const searchParams = new URLSearchParams()
     searchParams.append(ESearchParams.KEYWORD, searchInput)
+
+    setKeywordSearch(searchInput)
+
     if (isProjectSearch) {
       router.push(`/search/projects?${searchParams}`)
     } else {

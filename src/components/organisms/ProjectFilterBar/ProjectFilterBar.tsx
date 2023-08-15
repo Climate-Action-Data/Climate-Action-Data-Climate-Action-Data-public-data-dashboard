@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Flex, Spacer, Stack, StackDivider } from '@chakra-ui/react'
+import { Stack, StackDivider } from '@chakra-ui/react'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
 import AutoCompleteCheckbox from '@/components/molecules/AutoCompleteCheckbox/AutoCompleteCheckbox'
@@ -8,8 +8,6 @@ import CreditingPeriodFilter from '@/components/molecules/CreditingPeriodFilter/
 import { KYOTO_PROTOCOL_START_DATE } from '@/@types/CarbonStandards'
 import { DatesFilter } from '@/@types/ProjectSearchFilterValues'
 import FilterBarWrapper from '@/components/molecules/FilterBarWarpper/FilterBarWrapper'
-import SearchButton from '@/components/atoms/SearchButton/SearchButton'
-import { useRouter } from 'next/navigation'
 
 interface ProjectFilterBarProps {
   isResultsPage?: boolean
@@ -19,15 +17,14 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
   const { isResultsPage } = props
   const {
     allSearchFilterValues: { searchFilterValues, isEmpty },
-    selectedProjectSearchFilterValues: { searchFilterValues: selectedSearchFilters, isEmpty: selectedIsEmpty },
+    selectedProjectSearchFilterValues: { searchFilterValues: selectedSearchFilters },
   } = useAppState().searchFilters
 
-  const { setProjectCountriesFilter, clearKeywordSearch, setProjectMethodologiesFilter, setProjectSectorsFilter, setProjectStandardsFilter, setProjectCreditingPeriodFilter } =
+  const { setProjectCountriesFilter, setProjectMethodologiesFilter, setProjectSectorsFilter, setProjectStandardsFilter, setProjectCreditingPeriodFilter } =
     useActions().searchFilters
   const { getGovernanceData } = useEffects().searchFilters
   const { transformGovernanceDataToSearchFilterData } = useActions().searchFilters
   const { t } = useTranslation(`search`)
-  const router = useRouter()
 
   useEffect(() => {
     if (isEmpty) {
@@ -55,15 +52,6 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
 
   const handleSetProjectCreditingPeriodFilter = (value: DatesFilter) => {
     setProjectCreditingPeriodFilter(value)
-  }
-
-  const handleOnClick = () => {
-    clearKeywordSearch()
-    if (selectedIsEmpty) {
-      router.push(`/search/projects?keywords=`)
-    } else {
-      router.push(`/search/projects?filter=true&keywords=`)
-    }
   }
 
   return (
@@ -110,10 +98,6 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
             isResultsPage={isResultsPage}
           />
         </Stack>
-        <Flex>
-          <Spacer minWidth={`32px`} />
-          <SearchButton isResultsPage={isResultsPage} onClick={handleOnClick} />
-        </Flex>
       </Stack>
     </FilterBarWrapper>
   )

@@ -19,12 +19,14 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
   const { label, options, applyFilters, noOfSelectedFilters, selectedFilters, isResultsPage } = props
   const [selectedValues, setSelectedValues] = useState<string[]>([])
   const [searchInput, setSearchInput] = useState<string>(``)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
   const { t } = useTranslation(`search`)
 
   const allChecked = options.length != 0 && selectedValues.length === options.length
   const isIndeterminate = selectedValues.length !== 0 && selectedValues.length !== options.length
 
   const handleOnClose = () => {
+    setIsOpen(false)
     setSearchInput(``)
     setSelectedValues([...selectedFilters])
   }
@@ -49,6 +51,15 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
     }
   }
 
+  const handleOnOpen = () => {
+    setIsOpen(true)
+  }
+
+  const handleOnApplyClick = () => {
+    setIsOpen(false)
+    applyFilters(selectedValues)
+  }
+
   const generateVariant = () => {
     if (isResultsPage) {
       return noOfSelectedFilters !== 0 ? `dropdownSelectedDark` : `dropdownUnselectedDark`
@@ -57,7 +68,7 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
   }
 
   return (
-    <Popover gutter={0} isLazy placement="bottom-start" matchWidth onClose={handleOnClose}>
+    <Popover gutter={0} placement="bottom-start" matchWidth isOpen={isOpen} onOpen={handleOnOpen} onClose={handleOnClose} closeOnBlur closeOnEsc>
       <PopoverTrigger>
         <Button variant={generateVariant()}>
           <Flex fontWeight={`normal`} fontSize={`16px`} alignItems={`center`} grow={1}>
@@ -86,7 +97,7 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
             <Flex width={`100%`} marginTop={`4px`} alignItems={`center`} padding={`8px 0.75rem`}>
               <Checkbox isIndeterminate={isIndeterminate} data-testid={`AutoCompleteCheckbox-top-checkbox`} isChecked={allChecked} onChange={handleTopCheckboxOnChange} />
               <Spacer />
-              <Button onClick={() => applyFilters(selectedValues)} variant={`textLink`}>
+              <Button onClick={handleOnApplyClick} variant={`textLink`}>
                 {t(`apply`)}
               </Button>
             </Flex>
