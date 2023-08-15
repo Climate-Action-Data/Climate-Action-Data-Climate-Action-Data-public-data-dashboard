@@ -6,7 +6,7 @@ const DEFAUL_REQUEST_SIMULATION_TIME = 5000
 export const exportProjectSearchResultToCSV = async (pattern: string) => {
   // sleep for 5 seconds
   await new Promise((resolve) => setTimeout(resolve, DEFAUL_REQUEST_SIMULATION_TIME))
-  return await getProjectSearchResults(pattern, 0)
+  return await getProjectSearchResults(pattern)
     .then((response) => {
       if (response.data) {
         return true
@@ -20,7 +20,7 @@ export const exportProjectSearchResultToCSV = async (pattern: string) => {
 }
 
 export const exportUnitSearchResultToCSV = async (pattern: string) => {
-  return await getUnitResults(pattern, 0)
+  return await getUnitResults(pattern)
     .then((response) => {
       if (response.data) {
         return true
