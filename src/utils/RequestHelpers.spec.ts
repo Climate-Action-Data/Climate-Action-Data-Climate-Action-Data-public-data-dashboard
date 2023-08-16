@@ -1,5 +1,5 @@
 import { UnitStatus } from '@/@types/Unit'
-import { generateExportUrl, generateUnitUrl } from './RequestHelpers'
+import { defaultDomain, generateExportUrl, generateUnitUrl } from './RequestHelpers'
 import { CSVExportTypes } from '@/@types/CSV'
 
 const DEFAULT_RETIRED_URL = `/unit/retirement?id=`
@@ -19,8 +19,8 @@ describe(`generateUnitUrl`, () => {
   })
 })
 
-const DEFAULT_EXPORT_PROJECT_URL = `${process.env.NEXT_PUBLIC_API_HOST}/v1/projects/export`
-const DEFAULT_EXPORT_UNIT_URL = `${process.env.NEXT_PUBLIC_API_HOST}/v1/units/export`
+const DEFAULT_EXPORT_PROJECT_URL = `${defaultDomain}/v1/projects/export`
+const DEFAULT_EXPORT_UNIT_URL = `${defaultDomain}/v1/units/export`
 
 describe(`generateExportUrl`, () => {
   test(`generateExportUrl with type project`, () => {
