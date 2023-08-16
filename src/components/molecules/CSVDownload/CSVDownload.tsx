@@ -1,4 +1,5 @@
 import { CSVExportTypes } from '@/@types/CSV'
+import { ProjectSearchFilterValues, UnitSearchFilterValues } from '@/@types/ProjectSearchFilterValues'
 import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 import { useActions, useAppState, useEffects } from '@/overmind'
 import { Button, Hide, Text } from '@chakra-ui/react'
@@ -7,30 +8,51 @@ import { useTranslation } from 'react-i18next'
 
 interface CSVDownloadProps {
   exportType: CSVExportTypes
-  pattern?: string
+}
+
+const DEFAULT_BLOB_TYPE = `application/octet-stream`
+const DEFAULT_LINK_ELEMENT = `a`
+const DEFAULT_DL_ATTRIBUTE = `download`
+const DEFAULT_FILE_NAME = `export.csv`
+const DEFAULT_LINK_DISPLAY = `none`
+const createAndDownload = (data: Blob) => {
+  const blob = new Blob([data], { type: DEFAULT_BLOB_TYPE })
+  const url = window.URL.createObjectURL(blob)
+  const link = document.createElement(DEFAULT_LINK_ELEMENT)
+  link.style.display = DEFAULT_LINK_DISPLAY
+  link.href = url
+  link.setAttribute(DEFAULT_DL_ATTRIBUTE, DEFAULT_FILE_NAME)
+  document.body.appendChild(link)
+  link.click()
+  URL.revokeObjectURL(url)
 }
 
 export const CSVDownload = (props: CSVDownloadProps) => {
-  const { exportType, pattern } = props
+  const { exportType } = props
   const [preparing, setPreparing] = useState<boolean>(false)
   const { t } = useTranslation(`search`)
   const { setDownloadStatus } = useActions().exports
+  const { keywordSearch, selectedProjectSearchFilterValues, selectedUnitSearchFilterValues } = useAppState().searchFilters
   const { hasDownloaded } = useAppState().exports
-  const { exportUnitSearchResultToCSV, exportProjectSearchResultToCSV } = useEffects().exports
+  const { exportToCSV } = useEffects().exports
 
   const handleOnClick = async () => {
     setPreparing(true)
     setDownloadStatus(false)
-    let downloadStatus = false
-    switch (exportType) {
-      case CSVExportTypes.PROJECT:
-        downloadStatus = await exportProjectSearchResultToCSV(pattern ?? ``)
-        break
-
-      case CSVExportTypes.UNIT:
-        downloadStatus = await exportUnitSearchResultToCSV(pattern ?? ``)
-        break
+    const downloadStatus = false
+    let searchFilters: ProjectSearchFilterValues | UnitSearchFilterValues = selectedProjectSearchFilterValues.searchFilterValues
+    if (exportType === CSVExportTypes.UNIT) {
+      searchFilters = selectedUnitSearchFilterValues.searchFilterValues
     }
+    exportToCSV(exportType, keywordSearch, searchFilters).then((exportData) => {
+      if (exportData.data) {
+        // Create a blob from the response data
+        createAndDownload(exportData.data)
+      } else {
+        console.error(`No data`)
+      }
+      setPreparing(false)
+    })
     setDownloadStatus(downloadStatus)
   }
 

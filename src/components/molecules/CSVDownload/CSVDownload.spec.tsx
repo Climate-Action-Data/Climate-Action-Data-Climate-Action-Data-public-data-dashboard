@@ -3,50 +3,38 @@ import { CSVDownload } from './CSVDownload'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 import { CSVExportTypes } from '@/@types/CSV'
 
-const DEFAULT_PATTERN_EMPTY = ``
-const DEFAULT_PATTERN = `solar`
-
-it(`renders correctly with no pattern`, () => {
+it(`renders correctly`, () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <CSVDownload exportType={CSVExportTypes.PROJECT} pattern={DEFAULT_PATTERN_EMPTY} />
+      <CSVDownload exportType={CSVExportTypes.PROJECT} />
     </TestOvermindWrapper>,
   )
   expect(container).toMatchSnapshot()
 })
 
-it(`renders correctly with pattern`, () => {
+it(`renders correctly as unit`, () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <CSVDownload exportType={CSVExportTypes.PROJECT} pattern={DEFAULT_PATTERN} />
+      <CSVDownload exportType={CSVExportTypes.UNIT} />
     </TestOvermindWrapper>,
   )
   expect(container).toMatchSnapshot()
 })
 
-it(`renders correctly with pattern no project`, () => {
+it(`renders correctly as unit and click`, () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <CSVDownload exportType={CSVExportTypes.UNIT} pattern={DEFAULT_PATTERN} />
-    </TestOvermindWrapper>,
-  )
-  expect(container).toMatchSnapshot()
-})
-
-it(`renders correctly with pattern no project and click`, () => {
-  const { container } = render(
-    <TestOvermindWrapper>
-      <CSVDownload exportType={CSVExportTypes.UNIT} pattern={DEFAULT_PATTERN} />
+      <CSVDownload exportType={CSVExportTypes.UNIT} />
     </TestOvermindWrapper>,
   )
   const downloadButton = screen.getByTestId(`export-data`)
   fireEvent.click(downloadButton)
   expect(container).toMatchSnapshot()
 })
-it(`renders correctly with pattern as project and click`, () => {
+it(`renders correctly as pattern and click`, () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <CSVDownload exportType={CSVExportTypes.PROJECT} pattern={DEFAULT_PATTERN} />
+      <CSVDownload exportType={CSVExportTypes.PROJECT} />
     </TestOvermindWrapper>,
   )
   const downloadButton = screen.getByTestId(`export-data`)

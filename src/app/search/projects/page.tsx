@@ -60,7 +60,7 @@ const ProjectPage: NextPage = () => {
       <Container variant={`paginationBar`}>
         <PaginationWidget onPageChange={handleOnPageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={projectResults?.data?.totalCount ?? 0} />
         <Box position={[`unset`, `absolute`]} right="10px" float="right">
-          <CSVDownload exportType={CSVExportTypes.PROJECT} pattern={keywordSearch} />
+          <CSVDownload exportType={CSVExportTypes.PROJECT} />
         </Box>
       </Container>
     </Flex>
