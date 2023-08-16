@@ -1,36 +1,79 @@
 // import { getProjectSearchResults } from '@/overmind/projectResult/effects'
 // import { getUnitsSearchResults } from '../unitResult/effects'
 
-const DEFAUL_REQUEST_SIMULATION_TIME = 5000
+import { CSVExportTypes, ExportCompleteFilters } from '@/@types/CSV'
+import { EffectResponse } from '@/@types/EffectResponse'
+import { ProjectSearchFilterValues, UnitSearchFilterValues } from '@/@types/ProjectSearchFilterValues'
+import { DEFAULT_PROJECT_COUNT_TO_DISPLAY } from '@/@types/ProjectSearchResult'
+import { defaultHeaders, generateExportUrl } from '@/utils/RequestHelpers'
+import axios from 'axios'
 
-export const exportProjectSearchResultToCSV = async (pattern: string): Promise<boolean> => {
-  // sleep for 5 seconds
-  //   await new Promise((resolve) => setTimeout(resolve, DEFAUL_REQUEST_SIMULATION_TIME))
-  //   return await getProjectSearchResults(pattern)
-  //     .then((response) => {
-  //       if (response.data) {
-  //         return true
-  //       } else {
-  //         return false
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       return false
-  //     })
-  return await new Promise((resolve) => setTimeout(() => true, DEFAUL_REQUEST_SIMULATION_TIME))
+const extractFiltersFromType = (
+  exportType: CSVExportTypes,
+  keywords: string,
+  filters: ProjectSearchFilterValues | UnitSearchFilterValues,
+  offset = 0,
+  count = DEFAULT_PROJECT_COUNT_TO_DISPLAY,
+) => {
+  let differences: Partial<ExportCompleteFilters> = {
+    keywords,
+    offset,
+    count,
+  }
+  if (exportType === CSVExportTypes.PROJECT) {
+    const currentFilters = filters as ProjectSearchFilterValues
+    differences = {
+      ...differences,
+      standards: currentFilters.projectStatus,
+      methodologies: currentFilters.methodologies,
+      sectors: currentFilters.sectors,
+      countries: currentFilters.countries,
+      creditingPeriodStart: currentFilters.creditingPeriod?.minDate?.toISOString(),
+      creditingPeriodEnd: currentFilters.creditingPeriod?.maxDate?.toISOString(),
+    }
+  } else {
+    const currentFilters = filters as UnitSearchFilterValues
+    differences = {
+      ...differences,
+      keywords,
+      status: currentFilters.unitStatus,
+      standards: currentFilters.projectStatus,
+      methodologies: currentFilters.projectStatus,
+      sectors: currentFilters.sectors,
+      countries: currentFilters.countries,
+      minYear: currentFilters.vintageYear?.minYear,
+      maxYear: currentFilters.vintageYear?.maxYear,
+      offset,
+      count,
+    }
+  }
+  return differences
 }
 
-export const exportUnitSearchResultToCSV = async (pattern: string): Promise<boolean> => {
-  //   return await getUnitsSearchResults(pattern)
-  //     .then((response) => {
-  //       if (response.data) {
-  //         return true
-  //       } else {
-  //         return false
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       return false
-  //     })
-  return await new Promise((resolve) => setTimeout(() => true, DEFAUL_REQUEST_SIMULATION_TIME))
+export const exportToCSV = async (
+  exportType: CSVExportTypes,
+  keywords: string,
+  filters: ProjectSearchFilterValues | UnitSearchFilterValues,
+  offset = 0,
+  count = DEFAULT_PROJECT_COUNT_TO_DISPLAY,
+): Promise<EffectResponse<Blob>> => {
+  return new Promise((resolve) => {
+    let result: EffectResponse<Blob>
+    const filtersParsed = extractFiltersFromType(exportType, keywords, filters, offset, count)
+    axios
+      .post(generateExportUrl(exportType), filtersParsed, { ...defaultHeaders, responseType: `blob` })
+      .then((body) => {
+        if (body.data) {
+          result = { data: body.data }
+        } else {
+          result = { error: { code: body.status.toString(), message: body.statusText } }
+        }
+      })
+      .catch(() => {
+        result = { error: { code: `400`, message: `could not fetch data` } }
+      })
+      .finally(() => {
+        resolve(result)
+      })
+  })
 }
