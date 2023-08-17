@@ -43,6 +43,12 @@ To generate the map's support files, run the utils program from root:
 pnpm run utils:run
 ```
 
+## Export PDF setup
+Package used to export project details pdf is [React-pdf](https://react-pdf.org/). 
+- Required fonts for PDF are added in `/public` folder
+- All 17 Cobenefits goals media are added as png files in assets.
+- Google map in PDF is rendered using [Google Maps Static API](https://developers.google.com/maps/documentation/maps-static/overview)
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

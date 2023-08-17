@@ -9,7 +9,7 @@ jest.mock(`next/navigation`, () => ({
   useSearchParams: () => ({ get: () => `id` }),
 }))
 
-it(`renders correctly`, () => {
+it(`renders correctly`, async () => {
   const { container } = render(
     <TestOvermindWrapper>
       <PageDetails />

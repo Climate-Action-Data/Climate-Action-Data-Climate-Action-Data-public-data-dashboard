@@ -4,7 +4,7 @@ import { SubRegion } from '@/@types/geojson'
 import MAP_DASHBOARD_MOCK_DATA from '@/test/mock-data/map_dashboard_data'
 import CREDIT_HISTORY_MOCK_DATA from '@/test/mock-data/credit_history_data'
 import { projectData } from '@/test/mock-data/projects_data'
-import { projectDetail } from './mock-data/project_detail'
+import { pdfProjectDetail, projectDetail } from './mock-data/project_detail'
 import { ProjectDetails } from '@/@types/ProjectDetails'
 import { unitsData } from './mock-data/units_data'
 import { Unit } from '@/@types/Unit'
@@ -202,6 +202,7 @@ export const PROJECT_SEARCH_RESULT: ProjectResultState = {
   },
 }
 export const PROJECT_DETAIL: ProjectDetails = projectDetail
+export const PROJECT_DETAIL_PDF: ProjectDetails = pdfProjectDetail
 export const UNIT_DETAIL: Unit = unitDetail
 
 export const UNIT_SEARCH_RESULT: UnitResultState = {

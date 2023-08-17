@@ -223,3 +223,26 @@ export const projectDetail: ProjectDetails = {
   ],
   documents: [],
 }
+
+export const pdfProjectDetail: ProjectDetails = {
+  ...projectDetail,
+  coBenefits: [
+    `SDG 1 - No poverty`,
+    `SDG 8 - Decent work and economic growth`,
+    `SDG 15 - Life on land`,
+    `SDG 14 - Life below water`,
+    `SDG 2 - Zero hunger`,
+    `SDG 13 - Climate action`,
+    `SDG 5 - Gender equality`,
+    `SDG 9 - Industry, innovation, and infrastructure`,
+    `SDG 6 - Clean water and sanitation`,
+    `SDG 7 - Affordable and clean energy`,
+    `SDG 10 - Reduced inequalities`,
+    `SDG 12 - Responsible consumption and production`,
+    `SDG 17 - Partnerships for the goals`,
+    `SDG 3 - Good health and well-being`,
+    `SDG 11 - Sustainable cities and communities`,
+    `SDG 4 - Quality education`,
+    `SDG 16 - Peace and justice strong institutions`,
+  ],
+}
