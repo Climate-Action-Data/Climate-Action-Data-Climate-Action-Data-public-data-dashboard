@@ -17,11 +17,13 @@ const DEFAULT_LINK_ELEMENT = `a`
 const DEFAULT_DL_ATTRIBUTE = `download`
 const DEFAULT_FILE_NAME = `export.csv`
 const DEFAULT_LINK_DISPLAY = `none`
-const createAndDownload = (data: Blob) => {
+
+export const createAndDownload = (data: Blob) => {
   const blob = new Blob([data], { type: DEFAULT_BLOB_TYPE })
   const url = window.URL.createObjectURL(blob)
   const link = document.createElement(DEFAULT_LINK_ELEMENT)
   link.style.display = DEFAULT_LINK_DISPLAY
+  link.setAttribute(`data-testid`, `invisible-link`)
   link.href = url
   link.setAttribute(DEFAULT_DL_ATTRIBUTE, DEFAULT_FILE_NAME)
   document.body.appendChild(link)
