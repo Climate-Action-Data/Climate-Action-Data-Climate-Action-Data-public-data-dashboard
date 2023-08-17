@@ -1,4 +1,4 @@
-import { act, fireEvent, render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 import userEvent from '@testing-library/user-event'
 import VintageYearFilter from '@/components/molecules/VintageYearFilter/VintageYearFilter'
@@ -10,30 +10,28 @@ describe(`VintageYearFilter`, () => {
   const tLabel = `label`
   const user = userEvent.setup({ delay: null })
 
-  test(`renders a VintageYearFilter and open it`, async () => {
+  test(`renders a VintageYearFilter and open it`, () => {
     const tOnYearChange = jest.fn()
     render(
       <TestOvermindWrapper>
         <VintageYearFilter label={tLabel} onYearChange={tOnYearChange} />
       </TestOvermindWrapper>,
     )
-    await act(async () => {
-      await user.click(screen.getByText(tLabel))
-    })
+
+    fireEvent.click(screen.getByText(tLabel))
 
     expect(screen.getByRole(`button`, { expanded: true })).toBeTruthy()
   })
 
-  test(`renders a VintageYearFilter and open it and esc`, async () => {
+  test(`renders a VintageYearFilter and open it and esc`, () => {
     const tOnYearChange = jest.fn()
     render(
       <TestOvermindWrapper>
         <VintageYearFilter label={tLabel} onYearChange={tOnYearChange} />
       </TestOvermindWrapper>,
     )
-    await act(async () => {
-      await user.click(screen.getByText(tLabel))
-    })
+
+    fireEvent.click(screen.getByText(tLabel))
     expect(screen.getByRole(`button`, { expanded: true })).toBeTruthy()
     fireEvent.keyDown(screen.getByTestId(`vintage-popover`), {
       key: `Escape`,
@@ -45,15 +43,15 @@ describe(`VintageYearFilter`, () => {
 
   const DEFAULT_INPUT_NUMBER = 2
 
-  test(`renders a VintageYearFilter and open it and enter`, async () => {
+  test(`renders a VintageYearFilter and open it and enter`, () => {
     const tOnYearChange = jest.fn()
     render(
       <TestOvermindWrapper>
         <VintageYearFilter label={tLabel} onYearChange={tOnYearChange} />
       </TestOvermindWrapper>,
     )
-    fireEvent.click(screen.getByText(tLabel))
 
+    fireEvent.click(screen.getByText(tLabel))
     expect(screen.getByRole(`button`, { expanded: true })).toBeTruthy()
     const inputs = screen.getAllByRole(`textbox`)
     expect(inputs.length).toBe(DEFAULT_INPUT_NUMBER)
@@ -72,7 +70,7 @@ describe(`VintageYearFilter`, () => {
     })
   })
 
-  test(`renders a VintageYearFilter with a pre-selected max year and click on apply`, async () => {
+  test(`renders a VintageYearFilter with a pre-selected max year and click on apply`, () => {
     const tOnYearChange = jest.fn()
 
     const tLabel2 = `Up to ${tYear}`
@@ -83,11 +81,10 @@ describe(`VintageYearFilter`, () => {
       </TestOvermindWrapper>,
     )
     fireEvent.click(screen.getByText(tLabel2))
-    await new Promise((resolve) => setTimeout(resolve, DEFAULT_DELAY)) // Delay for component update
     fireEvent.click(screen.getByTestId(`vintage-year-filter-apply`))
   })
 
-  test(`renders a VintageYearFilter with a pre-selected min year and click on apply`, async () => {
+  test(`renders a VintageYearFilter with a pre-selected min year and click on apply`, () => {
     const tOnYearChange = jest.fn()
 
     const tLabel2 = `${tYear} and later`
@@ -98,11 +95,10 @@ describe(`VintageYearFilter`, () => {
       </TestOvermindWrapper>,
     )
     fireEvent.click(screen.getByText(tLabel2))
-    await new Promise((resolve) => setTimeout(resolve, DEFAULT_DELAY)) // Delay for component update
     fireEvent.click(screen.getByTestId(`vintage-year-filter-apply`))
   })
 
-  test(`renders a VintageYearFilter with a pre-selected min year and click on clear`, async () => {
+  test(`renders a VintageYearFilter with a pre-selected min year and click on clear`, () => {
     const tOnYearChange = jest.fn()
 
     const tLabel2 = `${tYear} and later`
@@ -113,13 +109,12 @@ describe(`VintageYearFilter`, () => {
       </TestOvermindWrapper>,
     )
     fireEvent.click(screen.getByText(tLabel2))
-    await new Promise((resolve) => setTimeout(resolve, DEFAULT_DELAY)) // Delay for component update
     fireEvent.click(screen.getByTestId(`vintage-year-filter-clear`))
 
     expect(tOnYearChange).toBeCalledTimes(1)
   })
 
-  test(`renders a VintageYearFilter with a pre-selected min year and max year and click on apply`, async () => {
+  test(`renders a VintageYearFilter with a pre-selected min year and max year and click on apply`, () => {
     const tOnYearChange = jest.fn()
 
     const tLabel2 = `${tYear} - ${tYear}`
@@ -130,7 +125,6 @@ describe(`VintageYearFilter`, () => {
       </TestOvermindWrapper>,
     )
     fireEvent.click(screen.getByText(tLabel2))
-    await new Promise((resolve) => setTimeout(resolve, DEFAULT_DELAY)) // Delay for component update
     fireEvent.click(screen.getByTestId(`vintage-year-filter-apply`))
   })
 
