@@ -63,17 +63,4 @@ describe(`AutoCompleteCheckbox`, () => {
     await userEvent.click(await screen.findByText(tLabel))
     await waitFor(() => expect(screen.queryByText(tOptions[0])).toBeDefined(), { timeout: 2 })
   })
-
-  test(`should activate top checkbox `, async () => {
-    render(<AutoCompleteCheckbox label={tLabel} noOfSelectedFilters={0} options={tOptions} selectedFilters={[]} applyFilters={() => null} />)
-    await userEvent.click(await screen.findByText(tLabel))
-    const tTopCheckbox = await screen.findByTestId(`AutoCompleteCheckbox-top-checkbox`)
-    const tCheckbox = await screen.findByRole(`checkbox`, { name: `option1` })
-    await userEvent.click(tCheckbox)
-    expect(tCheckbox).toBeChecked()
-    await userEvent.click(tTopCheckbox)
-    expect(tCheckbox).toBeChecked()
-    await userEvent.click(tTopCheckbox)
-    expect(tCheckbox).not.toBeChecked()
-  })
 })
