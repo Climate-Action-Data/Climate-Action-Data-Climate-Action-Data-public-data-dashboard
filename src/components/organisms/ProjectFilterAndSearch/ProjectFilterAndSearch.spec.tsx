@@ -1,7 +1,6 @@
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import ProjectFilterAndSearch from '@/components/organisms/ProjectFilterAndSearch/ProjectFilterAndSearch'
-import userEvent from '@testing-library/user-event'
 
 const mockPush = jest.fn()
 jest.mock(`next/navigation`, () => ({
@@ -19,15 +18,15 @@ it(`ProjectFilterAndSearch renders correctly`, () => {
   expect(container).toMatchSnapshot()
 })
 
-it(`ProjectFilterAndSearch renders correctly and the filter-and-search-trigger was clicked`, async () => {
+it(`ProjectFilterAndSearch renders correctly and the filter-and-search-trigger was clicked`, () => {
   const { container } = render(
     <TestOvermindWrapper>
       <ProjectFilterAndSearch />
     </TestOvermindWrapper>,
   )
 
-  await userEvent.click(screen.getByTestId(`filter-and-search-trigger`))
-  await userEvent.click(screen.getByTestId(`filter-and-search-trigger`))
+  fireEvent.click(screen.getByTestId(`filter-and-search-trigger`))
+  fireEvent.click(screen.getByTestId(`filter-and-search-trigger`))
 
   expect(container).toMatchSnapshot()
 })
