@@ -16,6 +16,7 @@ import { NextPage } from 'next'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { generateProjectPDFDocument } from './page.pdf'
 
 const ProjectPage: NextPage = () => {
   const [project, setProject] = useState<ProjectDetails | undefined>(undefined)
@@ -34,7 +35,14 @@ const ProjectPage: NextPage = () => {
 
   return (
     <Box>
-      {project?.warehouseProjectId && project?.name && <ProjectBreadcrumb id={project?.warehouseProjectId} title={project?.name} displayProjectNav={true} />}
+      {project?.warehouseProjectId && project?.name && (
+        <ProjectBreadcrumb
+          id={project?.warehouseProjectId}
+          title={project?.name}
+          displayProjectNav={true}
+          onExport={() => generateProjectPDFDocument({ projectDetails: project })}
+        />
+      )}
       <Flex id={AnchorSection.PROJECT_DETAILS} flexDirection={`column`} gap={6} padding={`16px 24px`} scrollMarginTop={`172px`}>
         {project && <ProjectDetailHeader id={project.id} location={project.location.country} title={project.name} description={project.description} type={project.type} />}
         <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.projectDetails`) }}>

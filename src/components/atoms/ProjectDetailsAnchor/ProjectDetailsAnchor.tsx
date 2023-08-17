@@ -11,7 +11,7 @@ export interface ProjectDetailsAnchorProps {
 export const ProjectDetailsAnchor = (props: ProjectDetailsAnchorProps) => {
   const { id, title, isSelected, onClick } = props
   return (
-    <HStack padding={`8px`} flexShrink="0">
+    <HStack padding={`8px`} flexShrink={0}>
       <EllipseIcon color={isSelected ? `black` : `white`} />
       <Link href={`#${id}`} textDecoration={`none`} onClick={onClick}>
         <Text fontSize="lg" fontWeight={isSelected ? `500` : `400`} color={isSelected ? `lightGray.main` : `lightGray.700`}>

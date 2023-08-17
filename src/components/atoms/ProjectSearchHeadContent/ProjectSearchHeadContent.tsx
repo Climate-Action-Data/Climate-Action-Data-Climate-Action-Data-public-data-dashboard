@@ -8,6 +8,7 @@ import { EffectResponse } from '@/@types/EffectResponse'
 import { useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { MenuContent, MenuItemProps } from '../MenuContent/MenuContent'
+import { generateProjectPDFDocument } from '../../../app/project/page.pdf'
 
 interface ProjectSearchHeadContentProps {
   projectResults?: EffectResponse<ProjectSearchResponse>
@@ -30,7 +31,16 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
   const generateMenuList = (projectWarehouseId: string) => {
     const menuList: MenuItemProps[] = [
       { dataTestId: `view-project-details`, onClick: () => router.push(`/project?id=${projectWarehouseId}`), text: t(`projectMenu.viewProject`) },
-      { dataTestId: `export-project`, icon: <DownloadIcon />, text: t(`projectMenu.exportProject`) },
+      {
+        dataTestId: `export-project`,
+        onClick: () => {
+          ;(async () => {
+            generateProjectPDFDocument({ id: projectWarehouseId })
+          })()
+        },
+        icon: <DownloadIcon />,
+        text: t(`projectMenu.exportProject`),
+      },
       { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`) },
     ]
     return menuList

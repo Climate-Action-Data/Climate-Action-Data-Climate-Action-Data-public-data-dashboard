@@ -1,14 +1,16 @@
-import { Flex, HStack, VStack } from '@chakra-ui/react'
+import { Box, Flex, HStack, Spacer, VStack } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { BreadCrumbs } from '../BreadCrumbs/BreadCrumbs'
 import { AnchorSection } from '../../../@types/ProjectDetails'
 import { ProjectDetailsAnchor } from '../ProjectDetailsAnchor/ProjectDetailsAnchor'
 import { useState } from 'react'
+import { DownloadIcon } from '../DownloadIcon/DownloadIcon'
 
 export interface ProjectBreadcrumbProps {
   id: string
   title: string
   displayProjectNav?: boolean
+  onExport?: () => void
 }
 
 export const ProjectBreadcrumb = (props: ProjectBreadcrumbProps) => {
@@ -17,7 +19,7 @@ export const ProjectBreadcrumb = (props: ProjectBreadcrumbProps) => {
     displayProjectNav: props.displayProjectNav ?? false,
   }
 
-  const { id, title, displayProjectNav } = actualProps
+  const { id, title, displayProjectNav, onExport } = actualProps
 
   const { t } = useTranslation(`projectDetails`)
 
@@ -47,10 +49,14 @@ export const ProjectBreadcrumb = (props: ProjectBreadcrumbProps) => {
         />
       </VStack>
       {displayProjectNav && (
-        <HStack alignItems={`start`} spacing={`16px`} marginTop={`24px`} overflowX="auto" className="hide-scrollbar">
+        <HStack overflowX="auto" spacing={`16px`} marginTop={`24px`} className="hide-scrollbar" position={`relative`}>
           {Object.values(AnchorSection).map((anchor) => (
             <ProjectDetailsAnchor key={anchor} id={anchor} title={t(`sectionHeaders.${anchor}`)} isSelected={anchor == activeAnchor} onClick={() => setActiveAnchor(anchor)} />
           ))}
+          <Spacer />
+          <Box position="sticky" right="0" bg={`white`} zIndex="1">
+            <DownloadIcon alignSelf="center" onClick={onExport} />
+          </Box>
         </HStack>
       )}
     </Flex>
