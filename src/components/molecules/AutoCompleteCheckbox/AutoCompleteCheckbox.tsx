@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import { DropDownIcon } from '@/components/atoms/DropDownIcon/DropDownIcon'
 import { FilterCountIndicator } from '@/components/atoms/FilterCountIndicator/FilterCountIndicator'
+import { generateRandomString } from '@/utils/GenerationHelpers'
 
 interface AutoCompleteCheckboxProps {
   label: string
@@ -109,7 +110,7 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
               (value) =>
                 value.toUpperCase().includes(searchInput.toUpperCase()) && (
                   <Checkbox
-                    key={`${label}-${value}`}
+                    key={`auto-complete-${generateRandomString()}`}
                     name={value}
                     isChecked={selectedValues.includes(value)}
                     onChange={(event) => {
