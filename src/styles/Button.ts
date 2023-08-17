@@ -278,3 +278,17 @@ export const modalClose = defineStyle({
     background: `gray.50`,
   },
 })
+
+export const toastButton = defineStyle({
+  background: `transparent`,
+  weight: `500`,
+  padding: `8px`,
+  display: `inline`,
+  lineHeight: `20px`,
+  _hover: {
+    background: `transparent`,
+  },
+  _active: {
+    background: `transparent`,
+  },
+})

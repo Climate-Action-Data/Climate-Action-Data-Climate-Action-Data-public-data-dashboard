@@ -388,8 +388,8 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
         >
           Project Link
         </p>
-        <p
-          class="chakra-text css-0"
+        <div
+          class="css-0"
         >
           <a
             class="chakra-link css-0"
@@ -398,7 +398,7 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
           >
             https://www.ecoregistry.io/projects/79
           </a>
-        </p>
+        </div>
       </div>
       <div
         class="css-0"
@@ -502,11 +502,11 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
           >
             Crediting Period
           </p>
-          <p
-            class="chakra-text css-0"
+          <div
+            class="css-0"
           >
             2011/05/23 - 2030/05/22
-          </p>
+          </div>
         </div>
       </div>
       <div
@@ -591,8 +591,8 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
         >
           Project Tags
         </p>
-        <p
-          class="chakra-text css-0"
+        <div
+          class="css-0"
         >
           <div
             class="css-0"
@@ -625,7 +625,7 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
               View More
             </button>
           </div>
-        </p>
+        </div>
       </div>
       <div
         class="css-0"
@@ -737,8 +737,8 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
         >
           Project Link
         </p>
-        <p
-          class="chakra-text css-0"
+        <div
+          class="css-0"
         >
           <a
             class="chakra-link css-0"
@@ -747,7 +747,7 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
           >
             https://www.ecoregistry.io/projects/79
           </a>
-        </p>
+        </div>
       </div>
       <div
         class="css-0"
@@ -851,11 +851,11 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
           >
             Crediting Period
           </p>
-          <p
-            class="chakra-text css-0"
+          <div
+            class="css-0"
           >
             2011/05/23 - 2030/05/22
-          </p>
+          </div>
         </div>
       </div>
       <div
@@ -940,8 +940,8 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
         >
           Project Tags
         </p>
-        <p
-          class="chakra-text css-0"
+        <div
+          class="css-0"
         >
           <div
             class="css-0"
@@ -974,7 +974,7 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
               View More
             </button>
           </div>
-        </p>
+        </div>
       </div>
       <div
         class="css-0"

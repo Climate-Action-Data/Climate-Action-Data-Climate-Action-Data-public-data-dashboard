@@ -22,6 +22,7 @@ import {
   lightGrayRound32,
   modalClose,
   textLink,
+  toastButton,
   underlinedLink,
   whiteSecondary,
 } from '@/styles/Button'
@@ -86,6 +87,7 @@ const theme = extendTheme({
         blueFilled,
         blueOutline,
         modalClose,
+        toastButton,
       },
     },
     Heading: {
@@ -182,6 +184,19 @@ const theme = extendTheme({
       800: `#1A365D`,
       900: `#002F66`,
     },
+    red: {
+      main: `#CC4A42`,
+      50: `#FFE9E8`,
+      100: `#FFD1CF`,
+      200: `#FFD1CF`,
+      300: `#FF5C53`,
+      400: `#CC4A42`,
+      500: `#CC4A42`,
+      600: `#993732`,
+      700: `#993732`,
+      800: `#652828`,
+      900: `#652828`,
+    },
   },
   styles: {
     global: (props: any) => ({
@@ -232,6 +247,16 @@ const theme = extendTheme({
           cursor: `not-allowed`,
           pointerEvents: `none`,
         },
+      },
+      '.toast.success': {
+        borderColor: `green.600`,
+        color: `green.800`,
+        backgroundColor: `green.50`,
+      },
+      '.toast.failure': {
+        borderColor: `red.300`,
+        color: `red.800`,
+        backgroundColor: `red.100`,
       },
       ...searchTable,
       ...searchTableSmall,

@@ -41,7 +41,7 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
         <DetailWidget title={t(`detailsHeaders.standard`)}>{project.standard}</DetailWidget>
         <DetailWidget title={t(`detailsHeaders.methodology`)}>{project.methodology}</DetailWidget>
         <DetailWidget title={t(`detailsHeaders.developer`)}>{project.developer}</DetailWidget>
-        <DetailWidget title={t(`detailsHeaders.link`)}>
+        <DetailWidget asBox title={t(`detailsHeaders.link`)}>
           <Link variant={`blueLink`} target="_blank" href={project.link}>
             {project.link}
           </Link>
@@ -55,7 +55,9 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
         <SimpleGrid columns={DEFAULT_COLUMN} gap="24px">
           <DetailWidget title={t(`detailsHeaders.availableUnits`)}>{project.units.available.toLocaleString()}</DetailWidget>
           <DetailWidget title={t(`detailsHeaders.issuances`)}>{project.units.issued.toLocaleString()}</DetailWidget>
-          <DetailWidget title={t(`detailsHeaders.creditingPeriod`)}>{renderCreditingPeriod(project.units.creditingPeriodStart, project.units.creditingPeriodEnd)}</DetailWidget>
+          <DetailWidget asBox title={t(`detailsHeaders.creditingPeriod`)}>
+            {renderCreditingPeriod(project.units.creditingPeriodStart, project.units.creditingPeriodEnd)}
+          </DetailWidget>
         </SimpleGrid>
         <SimpleGrid columns={DEFAULT_COLUMN} gap="24px">
           <DetailWidget title={t(`detailsHeaders.retirememts`)}>{project.units.retired.toLocaleString()}</DetailWidget>
@@ -67,7 +69,7 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
         <DetailWidget title={t(`detailsHeaders.ndcCoverage`)}>{project.coveredByNdc}</DetailWidget>
       </SimpleGrid>
       <SimpleGrid columns={[1, DEFAULT_COLUMN]} gap="24px">
-        <DetailWidget title={t(`detailsHeaders.tags`)}>
+        <DetailWidget asBox title={t(`detailsHeaders.tags`)}>
           <ExpandableList items={extractTagItemsFromTag(project?.tags)} />
         </DetailWidget>
         <DetailWidget asBox title={t(`detailsHeaders.coBenefits`)}>
