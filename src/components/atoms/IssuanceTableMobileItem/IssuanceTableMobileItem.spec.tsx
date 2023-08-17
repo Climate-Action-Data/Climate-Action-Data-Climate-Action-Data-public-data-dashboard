@@ -5,6 +5,10 @@ import { TestRouter } from '@/test/TestRouter'
 import { Accordion } from '@chakra-ui/react'
 
 describe(`IssuanceTableMobileItem`, () => {
+  beforeAll(() => {
+    window.scrollTo = jest.fn()
+  })
+
   it(`renders correctly issuances`, () => {
     const { container } = render(
       <Accordion>
