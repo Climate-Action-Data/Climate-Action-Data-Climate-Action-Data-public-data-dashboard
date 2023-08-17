@@ -17,9 +17,7 @@ describe(`VintageYearFilter`, () => {
         <VintageYearFilter label={tLabel} onYearChange={tOnYearChange} />
       </TestOvermindWrapper>,
     )
-
     fireEvent.click(screen.getByText(tLabel))
-
     expect(screen.getByRole(`button`, { expanded: true })).toBeTruthy()
   })
 

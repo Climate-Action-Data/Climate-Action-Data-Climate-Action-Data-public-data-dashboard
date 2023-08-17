@@ -1,6 +1,8 @@
 import { CSVExportTypes } from '@/@types/CSV'
 import { ProjectSearchFilterValues, UnitSearchFilterValues } from '@/@types/ProjectSearchFilterValues'
+import { ToastVariants } from '@/@types/Toast'
 import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
+import { useToastHook } from '@/components/atoms/Toast/Toast'
 import { useActions, useAppState, useEffects } from '@/overmind'
 import { Button, Hide, Text } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
@@ -35,6 +37,7 @@ export const CSVDownload = (props: CSVDownloadProps) => {
   const { keywordSearch, selectedProjectSearchFilterValues, selectedUnitSearchFilterValues } = useAppState().searchFilters
   const { hasDownloaded } = useAppState().exports
   const { exportToCSV } = useEffects().exports
+  const [newToast] = useToastHook()
 
   const handleOnClick = async () => {
     setPreparing(true)
@@ -48,8 +51,9 @@ export const CSVDownload = (props: CSVDownloadProps) => {
       if (exportData.data) {
         // Create a blob from the response data
         createAndDownload(exportData.data)
+        newToast({ variant: ToastVariants.SUCCESS, message: t(`exportValid`), icon: <DownloadIcon /> })
       } else {
-        console.error(`No data`)
+        newToast({ variant: ToastVariants.FAILURE, message: t(`exportFail`), icon: <DownloadIcon /> })
       }
       setPreparing(false)
     })

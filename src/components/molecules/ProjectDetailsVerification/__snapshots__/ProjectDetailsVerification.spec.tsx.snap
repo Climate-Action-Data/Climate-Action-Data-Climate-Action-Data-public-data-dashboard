@@ -42,11 +42,7 @@ exports[`renders correctly with validation 1`] = `
       <p
         class="chakra-text css-0"
       >
-        <p
-          class="chakra-text css-0"
-        >
-          Details on website: https://www.ecoregistry.io/projects/151
-        </p>
+        Details on website: https://www.ecoregistry.io/projects/151
       </p>
     </div>
     <div
@@ -121,11 +117,7 @@ exports[`renders correctly with validation and no date 1`] = `
       <p
         class="chakra-text css-0"
       >
-        <p
-          class="chakra-text css-0"
-        >
-          Details on website: https://www.ecoregistry.io/projects/151
-        </p>
+        Details on website: https://www.ecoregistry.io/projects/151
       </p>
     </div>
     <div

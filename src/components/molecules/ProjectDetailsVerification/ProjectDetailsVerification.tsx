@@ -1,4 +1,4 @@
-import { SimpleGrid, Skeleton, Text } from '@chakra-ui/react'
+import { SimpleGrid, Skeleton } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
@@ -26,7 +26,7 @@ export const ProjectDetailsVerification = (props: ProjectDetailsVerificationProp
       </SimpleGrid>
       <SimpleGrid columns={2} gap="24px">
         <DetailWidget title={t(`verificationHeaders.verificationApproach`)}>
-          {validation.verifications.length > 0 ? <Text>{validation.verifications[0].approach}</Text> : tHome(`noData`)}
+          {validation.verifications.length > 0 ? validation.verifications[0].approach : tHome(`noData`)}
         </DetailWidget>
         <DetailWidget asBox title={t(`verificationHeaders.verificationPeriod`)}>
           <ProjectDetailsVerificationList verificationList={validation.verifications} />
