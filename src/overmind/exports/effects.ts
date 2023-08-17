@@ -20,32 +20,36 @@ const extractFiltersFromType = (
     offset,
     count,
   }
-  if (exportType === CSVExportTypes.PROJECT) {
-    const currentFilters = filters as ProjectSearchFilterValues
-    differences = {
-      ...differences,
-      standards: currentFilters.projectStatus,
-      methodologies: currentFilters.methodologies,
-      sectors: currentFilters.sectors,
-      countries: currentFilters.countries,
-      creditingPeriodStart: currentFilters.creditingPeriod?.minDate?.toISOString(),
-      creditingPeriodEnd: currentFilters.creditingPeriod?.maxDate?.toISOString(),
-    }
-  } else {
-    const currentFilters = filters as UnitSearchFilterValues
-    differences = {
-      ...differences,
-      keywords,
-      status: currentFilters.unitStatus,
-      standards: currentFilters.projectStatus,
-      methodologies: currentFilters.projectStatus,
-      sectors: currentFilters.sectors,
-      countries: currentFilters.countries,
-      minYear: currentFilters.vintageYear?.minYear,
-      maxYear: currentFilters.vintageYear?.maxYear,
-      offset,
-      count,
-    }
+  switch (exportType) {
+    case CSVExportTypes.PROJECT:
+      const currentFilters = filters as ProjectSearchFilterValues
+      differences = {
+        ...differences,
+        standards: currentFilters.projectStatus,
+        methodologies: currentFilters.methodologies,
+        sectors: currentFilters.sectors,
+        countries: currentFilters.countries,
+        creditingPeriodStart: currentFilters.creditingPeriod?.minDate?.toISOString(),
+        creditingPeriodEnd: currentFilters.creditingPeriod?.maxDate?.toISOString(),
+      }
+      break
+
+    case CSVExportTypes.UNIT:
+      const currentFiltersUnit = filters as UnitSearchFilterValues
+      differences = {
+        ...differences,
+        keywords,
+        status: currentFiltersUnit.unitStatus,
+        standards: currentFiltersUnit.projectStatus,
+        methodologies: currentFiltersUnit.projectStatus,
+        sectors: currentFiltersUnit.sectors,
+        countries: currentFiltersUnit.countries,
+        minYear: currentFiltersUnit.vintageYear?.minYear,
+        maxYear: currentFiltersUnit.vintageYear?.maxYear,
+        offset,
+        count,
+      }
+      break
   }
   return differences
 }

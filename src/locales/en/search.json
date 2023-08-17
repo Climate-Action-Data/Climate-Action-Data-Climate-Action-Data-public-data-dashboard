@@ -14,7 +14,7 @@
   "andLater": "{{- date}} and later",
   "export": "Export",
   "preparing": "Preparing download...",
-  "exportValid": "Data retrieved, Download will start shortly.",
+  "exportValid": "Data retrieved. Download will start shortly.",
   "exportFail": "Could not retrieve data. Please try again later.",
   "filterBar": {
     "standard": "Standard",
