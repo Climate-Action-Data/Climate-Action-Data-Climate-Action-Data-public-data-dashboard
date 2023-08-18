@@ -35,6 +35,14 @@ const UnitPage: NextPage = () => {
     selectedUnitSearchFilterValues.searchFilterValues.vintageYear,
   ])
 
+  const handleRefreshData = () => {
+    setIsLoading(true)
+    getUnitsSearchResults(keywordSearch, selectedUnitSearchFilterValues.searchFilterValues).then((hasProjectResults) => {
+      setUnitResults(hasProjectResults)
+      setIsLoading(false)
+    })
+  }
+
   const handlePageChange = (currentPage: number, from: number) => {
     setIsLoading(true)
     getUnitsSearchResults(keywordSearch, selectedUnitSearchFilterValues.searchFilterValues, from).then((hasProjectResults) => {
@@ -63,8 +71,8 @@ const UnitPage: NextPage = () => {
         <SpinnerScreen />
       ) : (
         <>
-          <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.UNIT} />
-          <UnitSearchBody renderType={ALLOWED_RENDER_TYPE.UNIT} />
+          <ProjectSearchHead refreshData={handleRefreshData} renderType={ALLOWED_RENDER_TYPE.UNIT} />
+          <UnitSearchBody refreshData={handleRefreshData} renderType={ALLOWED_RENDER_TYPE.UNIT} />
         </>
       )}
 

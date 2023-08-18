@@ -2,9 +2,25 @@ import { TableContainer, Table, Thead, Tr, Th, Box } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
 import { ColumnSortFilter } from '@/components/atoms/ColumnSortFilter/ColumnSortFilter'
+import { useActions, useAppState } from '@/overmind'
+import { DatabaseQueryDirection, ProjectSearchSortBy, UnitSearchSortBy } from '@/@types/ProjectSearchFilterValues'
 
-export const UnitSearchBodyHeader = () => {
+interface UnitSearchBodyHeaderProps {
+  refreshData?: () => void
+}
+
+export const UnitSearchBodyHeader = (props: UnitSearchBodyHeaderProps) => {
+  const { refreshData } = props
   const { t } = useTranslation(`search`)
+  const { setSortByUnit } = useActions().searchFilters
+  const { selectedUnitSearchFilterValues } = useAppState().searchFilters
+
+  const handleSort = (sortBy: ProjectSearchSortBy | UnitSearchSortBy, direction: DatabaseQueryDirection) => {
+    setSortByUnit({ sortBy: sortBy as UnitSearchSortBy, direction })
+    if (refreshData) {
+      refreshData()
+    }
+  }
 
   return (
     <TableContainer id="tableReference" className="hide-scrollbar" minH="72px">
@@ -14,73 +30,122 @@ export const UnitSearchBodyHeader = () => {
             <Th>
               <Box>
                 {t(`unitTable.status`)}
-                <ColumnSortFilter />
+                <ColumnSortFilter
+                  currentDirection={selectedUnitSearchFilterValues.searchFilterValues.direction}
+                  currentValue={selectedUnitSearchFilterValues.searchFilterValues.sortBy}
+                  sortValue={UnitSearchSortBy.UNIT_STATUS}
+                  onClick={handleSort}
+                />
               </Box>
             </Th>
             <Th>
               <Box>
                 {t(`unitTable.vintage`)}
-                <ColumnSortFilter />
+                <ColumnSortFilter
+                  currentDirection={selectedUnitSearchFilterValues.searchFilterValues.direction}
+                  currentValue={selectedUnitSearchFilterValues.searchFilterValues.sortBy}
+                  sortValue={UnitSearchSortBy.VINTAGE}
+                  onClick={handleSort}
+                />
               </Box>
             </Th>
             <Th isNumeric>
               <Box>
-                {t(`table.annualEstUnits`)}
-                <ColumnSortFilter />
+                {t(`unitTable.quantity`)}
+                <ColumnSortFilter
+                  currentDirection={selectedUnitSearchFilterValues.searchFilterValues.direction}
+                  currentValue={selectedUnitSearchFilterValues.searchFilterValues.sortBy}
+                  sortValue={UnitSearchSortBy.QUANTITY}
+                  onClick={handleSort}
+                />
               </Box>
             </Th>
             <Th>
               <Box>
                 {t(`unitTable.issuanceDate`)}
-                <ColumnSortFilter />
-              </Box>
-            </Th>
-            <Th>
-              <Box>
-                {t(`unitTable.retirementDate`)}
-                <ColumnSortFilter />
+                <ColumnSortFilter
+                  currentDirection={selectedUnitSearchFilterValues.searchFilterValues.direction}
+                  currentValue={selectedUnitSearchFilterValues.searchFilterValues.sortBy}
+                  sortValue={UnitSearchSortBy.VERIFICATION_REPORT_DATE}
+                  onClick={handleSort}
+                />
               </Box>
             </Th>
             <Th>
               <Box>
                 {t(`table.standard`)}
-                <ColumnSortFilter />
+                <ColumnSortFilter
+                  currentDirection={selectedUnitSearchFilterValues.searchFilterValues.direction}
+                  currentValue={selectedUnitSearchFilterValues.searchFilterValues.sortBy}
+                  sortValue={UnitSearchSortBy.STANDARD}
+                  onClick={handleSort}
+                />
               </Box>
             </Th>
             <Th>
               <Box>
                 {t(`table.methodology`)}
-                <ColumnSortFilter />
+                <ColumnSortFilter
+                  currentDirection={selectedUnitSearchFilterValues.searchFilterValues.direction}
+                  currentValue={selectedUnitSearchFilterValues.searchFilterValues.sortBy}
+                  sortValue={UnitSearchSortBy.METHODOLOGY}
+                  onClick={handleSort}
+                />
               </Box>
             </Th>
             <Th>
               <Box>
                 {t(`table.sector`)}
-                <ColumnSortFilter />
+                <ColumnSortFilter
+                  currentDirection={selectedUnitSearchFilterValues.searchFilterValues.direction}
+                  currentValue={selectedUnitSearchFilterValues.searchFilterValues.sortBy}
+                  sortValue={UnitSearchSortBy.SECTOR}
+                  onClick={handleSort}
+                />
               </Box>
             </Th>
             <Th>
               <Box>
                 {t(`table.country`)}
-                <ColumnSortFilter />
+                <ColumnSortFilter
+                  currentDirection={selectedUnitSearchFilterValues.searchFilterValues.direction}
+                  currentValue={selectedUnitSearchFilterValues.searchFilterValues.sortBy}
+                  sortValue={UnitSearchSortBy.COUNTRY}
+                  onClick={handleSort}
+                />
               </Box>
             </Th>
             <Th>
               <Box>
                 {t(`table.correspondingAdjustment`)}
-                <ColumnSortFilter />
+                <ColumnSortFilter
+                  currentDirection={selectedUnitSearchFilterValues.searchFilterValues.direction}
+                  currentValue={selectedUnitSearchFilterValues.searchFilterValues.sortBy}
+                  sortValue={UnitSearchSortBy.CORRESPONDING_ADJUSTMENT}
+                  onClick={handleSort}
+                />
               </Box>
             </Th>
             <Th>
               <Box>
                 {t(`unitTable.marketplace`)}
-                <ColumnSortFilter />
+                <ColumnSortFilter
+                  currentDirection={selectedUnitSearchFilterValues.searchFilterValues.direction}
+                  currentValue={selectedUnitSearchFilterValues.searchFilterValues.sortBy}
+                  sortValue={UnitSearchSortBy.MARKETPLACE}
+                  onClick={handleSort}
+                />
               </Box>
             </Th>
             <Th>
               <Box>
                 {t(`unitTable.serialNumber`)}
-                <ColumnSortFilter />
+                <ColumnSortFilter
+                  currentDirection={selectedUnitSearchFilterValues.searchFilterValues.direction}
+                  currentValue={selectedUnitSearchFilterValues.searchFilterValues.sortBy}
+                  sortValue={UnitSearchSortBy.SERIAL_NUMBER}
+                  onClick={handleSort}
+                />
               </Box>
             </Th>
           </Tr>

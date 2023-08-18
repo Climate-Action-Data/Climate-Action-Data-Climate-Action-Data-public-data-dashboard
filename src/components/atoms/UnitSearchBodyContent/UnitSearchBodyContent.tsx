@@ -39,14 +39,11 @@ export const UnitSearchBodyContent = (props: UnitSearchBodyContentProps) => {
           <Td title={unit.vintage?.toString()}>
             <TableData data={unit.vintage?.toString()} />
           </Td>
-          <Td isNumeric title={unit.annualEst?.toLocaleString()}>
+          <Td title={unit.annualEst?.toLocaleString()}>
             <TableData data={unit.annualEst?.toLocaleString()} />
           </Td>
           <Td title={unit?.issuanceDate ? formatDate(unit.issuanceDate, DateFormats.YYYY_MM_DD) : t(`noData`)}>
             <TableData data={unit?.issuanceDate ? formatDate(unit.issuanceDate, DateFormats.YYYY_MM_DD) : t(`noData`)} />
-          </Td>
-          <Td title={unit?.retirementDate ? formatDate(unit.retirementDate, DateFormats.YYYY_MM_DD) : t(`noData`)}>
-            <TableData data={unit?.retirementDate ? formatDate(unit.retirementDate, DateFormats.YYYY_MM_DD) : t(`noData`)} />
           </Td>
           <Td title={unit?.project?.standard}>
             <TableData data={unit?.project?.standard} />

@@ -7,10 +7,11 @@ import { UnitSearchBodyContent } from '@/components/atoms/UnitSearchBodyContent/
 
 interface UnitSearchBodyProps {
   renderType?: string
+  refreshData?: () => void
 }
 
 export const UnitSearchBody = (props: UnitSearchBodyProps) => {
-  const { renderType } = props
+  const { renderType, refreshData } = props
   const { unitResults } = useAppState().unitResult
   if (!renderType || !Object.values(ALLOWED_RENDER_TYPE).find((val) => val === renderType)) {
     throw new Error(`This page should only be rendered in UnitProject and is currently rendered in ${renderType}`)
@@ -18,7 +19,7 @@ export const UnitSearchBody = (props: UnitSearchBodyProps) => {
 
   return (
     <Flex flexDirection="column" overflow="hidden">
-      <UnitSearchBodyHeader />
+      <UnitSearchBodyHeader refreshData={refreshData} />
       <TableContainer id="multiScroll">
         <UnitSearchBodyContent unitResults={unitResults} />
       </TableContainer>

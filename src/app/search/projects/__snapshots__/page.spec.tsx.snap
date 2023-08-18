@@ -33,7 +33,7 @@ exports[`renders correctly 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -44,7 +44,7 @@ exports[`renders correctly 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -128,7 +128,7 @@ exports[`renders correctly 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -139,7 +139,7 @@ exports[`renders correctly 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -163,7 +163,7 @@ exports[`renders correctly 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -174,7 +174,7 @@ exports[`renders correctly 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -198,7 +198,7 @@ exports[`renders correctly 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -209,7 +209,7 @@ exports[`renders correctly 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -233,7 +233,7 @@ exports[`renders correctly 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -244,7 +244,7 @@ exports[`renders correctly 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -268,7 +268,7 @@ exports[`renders correctly 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -279,7 +279,7 @@ exports[`renders correctly 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -303,7 +303,7 @@ exports[`renders correctly 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -314,7 +314,7 @@ exports[`renders correctly 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -339,7 +339,7 @@ exports[`renders correctly 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -350,7 +350,7 @@ exports[`renders correctly 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -375,7 +375,7 @@ exports[`renders correctly 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -386,7 +386,7 @@ exports[`renders correctly 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -411,7 +411,7 @@ exports[`renders correctly 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -422,7 +422,7 @@ exports[`renders correctly 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -447,7 +447,7 @@ exports[`renders correctly 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -458,7 +458,7 @@ exports[`renders correctly 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -775,7 +775,7 @@ exports[`renders correctly on table data 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -786,7 +786,7 @@ exports[`renders correctly on table data 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -870,7 +870,7 @@ exports[`renders correctly on table data 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -881,7 +881,7 @@ exports[`renders correctly on table data 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -905,7 +905,7 @@ exports[`renders correctly on table data 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -916,7 +916,7 @@ exports[`renders correctly on table data 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -940,7 +940,7 @@ exports[`renders correctly on table data 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -951,7 +951,7 @@ exports[`renders correctly on table data 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -975,7 +975,7 @@ exports[`renders correctly on table data 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -986,7 +986,7 @@ exports[`renders correctly on table data 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1010,7 +1010,7 @@ exports[`renders correctly on table data 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1021,7 +1021,7 @@ exports[`renders correctly on table data 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1045,7 +1045,7 @@ exports[`renders correctly on table data 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1056,7 +1056,7 @@ exports[`renders correctly on table data 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1081,7 +1081,7 @@ exports[`renders correctly on table data 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1092,7 +1092,7 @@ exports[`renders correctly on table data 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1117,7 +1117,7 @@ exports[`renders correctly on table data 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1128,7 +1128,7 @@ exports[`renders correctly on table data 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1153,7 +1153,7 @@ exports[`renders correctly on table data 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1164,7 +1164,7 @@ exports[`renders correctly on table data 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1189,7 +1189,7 @@ exports[`renders correctly on table data 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1200,7 +1200,7 @@ exports[`renders correctly on table data 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1421,7 +1421,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1432,7 +1432,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1516,7 +1516,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1527,7 +1527,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1551,7 +1551,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1562,7 +1562,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1586,7 +1586,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1597,7 +1597,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1621,7 +1621,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1632,7 +1632,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1656,7 +1656,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1667,7 +1667,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1691,7 +1691,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1702,7 +1702,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1727,7 +1727,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1738,7 +1738,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1763,7 +1763,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1774,7 +1774,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1799,7 +1799,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1810,7 +1810,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1835,7 +1835,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                     class="chakra-stack css-1yu3riu"
                   >
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortAsc"
                       focusable="false"
                       viewBox="0 0 8 4"
@@ -1846,7 +1846,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                       />
                     </svg>
                     <svg
-                      class="chakra-icon css-18gm00e"
+                      class="chakra-icon css-18u6eve"
                       data-testid="sortDesc"
                       focusable="false"
                       viewBox="0 0 8 4"

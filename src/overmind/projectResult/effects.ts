@@ -25,6 +25,8 @@ export const getProjectSearchResults = async (
           countries: filters.countries,
           offset,
           count,
+          sortBy: filters.sortBy,
+          direction: filters.direction,
           creditingPeriodStart: filters.creditingPeriod?.minDate?.toISOString(),
           creditingPeriodEnd: filters.creditingPeriod?.maxDate?.toISOString(),
         },

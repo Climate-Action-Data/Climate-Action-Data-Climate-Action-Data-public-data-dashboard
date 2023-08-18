@@ -42,6 +42,7 @@
   "unitTable": {
     "status": "Unit Status",
     "vintage": "Vintage",
+    "quantity": "Quantity",
     "issuanceDate": "Issuance Date",
     "retirementDate": "Retirement Date",
     "marketplace": "Marketplace",

@@ -1,3 +1,4 @@
+import { DatabaseQueryDirection, ProjectSearchSortBy, UnitSearchSortBy } from '@/@types/ProjectSearchFilterValues'
 import { SearchFiltersStateData } from '@/@types/State'
 
 export const state: SearchFiltersStateData = {
@@ -24,6 +25,8 @@ export const state: SearchFiltersStateData = {
       methodologies: [],
       sectors: [],
       countries: [],
+      sortBy: ProjectSearchSortBy.RELEVANCE,
+      direction: DatabaseQueryDirection.DESC,
     },
     get isEmpty() {
       return (
@@ -40,6 +43,8 @@ export const state: SearchFiltersStateData = {
       projectStatus: [],
       sectors: [],
       countries: [],
+      sortBy: UnitSearchSortBy.RELEVANCE,
+      direction: DatabaseQueryDirection.DESC,
     },
     get isEmpty() {
       return (

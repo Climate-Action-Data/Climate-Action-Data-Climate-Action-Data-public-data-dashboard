@@ -31,6 +31,8 @@ export const getUnitsSearchResults = async (
           countries: filters.countries,
           minYear: filters.vintageYear?.minYear,
           maxYear: filters.vintageYear?.maxYear,
+          sortBy: filters.sortBy,
+          direction: filters.direction,
           offset,
           count,
         },

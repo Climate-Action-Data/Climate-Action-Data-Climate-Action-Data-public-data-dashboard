@@ -35,6 +35,14 @@ const ProjectPage: NextPage = () => {
     selectedProjectSearchFilterValues.searchFilterValues.creditingPeriod,
   ])
 
+  const handleRefreshData = () => {
+    setIsLoading(true)
+    getProjectSearchResults(keywordSearch, selectedProjectSearchFilterValues.searchFilterValues).then((hasProjectResults) => {
+      setIsLoading(false)
+      setProjectResults(hasProjectResults)
+    })
+  }
+
   const handleOnPageChange = (currentPage: number, from: number) => {
     setIsLoading(true)
     getProjectSearchResults(keywordSearch, selectedProjectSearchFilterValues.searchFilterValues, from).then((hasProjectResults) => {
@@ -63,8 +71,8 @@ const ProjectPage: NextPage = () => {
         <SpinnerScreen />
       ) : (
         <>
-          <ProjectSearchHead renderType={ALLOWED_RENDER_TYPE.PROJECT} />
-          <ProjectSearchBody renderType={ALLOWED_RENDER_TYPE.PROJECT} />
+          <ProjectSearchHead refreshData={handleRefreshData} renderType={ALLOWED_RENDER_TYPE.PROJECT} />
+          <ProjectSearchBody refreshData={handleRefreshData} renderType={ALLOWED_RENDER_TYPE.PROJECT} />
         </>
       )}
 
