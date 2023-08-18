@@ -42,6 +42,41 @@ it(`renders correctly as pattern and click`, () => {
   expect(container).toMatchSnapshot()
 })
 
+it(`renders correctly and creates modal on 1k export `, () => {
+  const { container } = render(
+    <TestOvermindWrapper>
+      <CSVDownload totalResults={1100} exportType={CSVExportTypes.PROJECT} />
+    </TestOvermindWrapper>,
+  )
+  const downloadButton = screen.getByTestId(`export-data`)
+  fireEvent.click(downloadButton)
+  expect(container).toMatchSnapshot()
+})
+
+it(`renders correctly and creates modal on 1k export and close modal`, () => {
+  const { container } = render(
+    <TestOvermindWrapper>
+      <CSVDownload totalResults={1100} exportType={CSVExportTypes.PROJECT} />
+    </TestOvermindWrapper>,
+  )
+  const downloadButton = screen.getByTestId(`export-data`)
+  fireEvent.click(downloadButton)
+  fireEvent.click(screen.getByTestId(`cancel-modal`))
+  expect(container).toMatchSnapshot()
+})
+
+it(`renders correctly and creates modal on 1k export and export from modal`, () => {
+  const { container } = render(
+    <TestOvermindWrapper>
+      <CSVDownload totalResults={1100} exportType={CSVExportTypes.PROJECT} />
+    </TestOvermindWrapper>,
+  )
+  const downloadButton = screen.getByTestId(`export-data`)
+  fireEvent.click(downloadButton)
+  fireEvent.click(screen.getByTestId(`accept-modal`))
+  expect(container).toMatchSnapshot()
+})
+
 // Create a test for createAndDownload function in CSVDownload.tsx
 //window.URL.createObjectUR
 const createUrlMock = jest.fn()
