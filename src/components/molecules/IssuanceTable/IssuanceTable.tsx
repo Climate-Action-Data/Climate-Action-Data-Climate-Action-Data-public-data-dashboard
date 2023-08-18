@@ -1,6 +1,5 @@
 import { DateFormats } from '@/@types/DateFormats'
 import { Issuance } from '@/@types/ProjectDetails'
-import { ColumnSortFilter } from '@/components/atoms/ColumnSortFilter/ColumnSortFilter'
 import { formatDate } from '@/utils/DateFormat'
 import { generateRandomString } from '@/utils/GenerationHelpers'
 import { Link } from '@chakra-ui/next-js'
@@ -55,28 +54,16 @@ export const IssuanceTable = (props: IssuanceTableProps) => {
           <Thead zIndex="4" top="0" position="sticky">
             <Tr>
               <Th>
-                <Box>
-                  {t(`issuances.vintage`)}
-                  <ColumnSortFilter />
-                </Box>
+                <Box>{t(`issuances.vintage`)}</Box>
               </Th>
               <Th>
-                <Box>
-                  {t(`issuances.quantity`)}
-                  <ColumnSortFilter />
-                </Box>
+                <Box>{t(`issuances.quantity`)}</Box>
               </Th>
               <Th>
-                <Box>
-                  {t(`issuances.unitsAvailable`)}
-                  <ColumnSortFilter />
-                </Box>
+                <Box>{t(`issuances.unitsAvailable`)}</Box>
               </Th>
               <Th>
-                <Box>
-                  {t(`issuances.verificationReportDate`)}
-                  <ColumnSortFilter />
-                </Box>
+                <Box>{t(`issuances.verificationReportDate`)}</Box>
               </Th>
               <Th>
                 <Box />
