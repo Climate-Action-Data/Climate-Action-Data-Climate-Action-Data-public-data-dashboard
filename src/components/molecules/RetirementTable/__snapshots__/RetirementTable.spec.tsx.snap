@@ -41,7 +41,7 @@ exports[`RetirementDetails renders correctly issuances 1`] = `
                   class="chakra-stack css-1yu3riu"
                 >
                   <svg
-                    class="chakra-icon css-18gm00e"
+                    class="chakra-icon css-18u6eve"
                     data-testid="sortAsc"
                     focusable="false"
                     viewBox="0 0 8 4"
@@ -52,7 +52,7 @@ exports[`RetirementDetails renders correctly issuances 1`] = `
                     />
                   </svg>
                   <svg
-                    class="chakra-icon css-18gm00e"
+                    class="chakra-icon css-18u6eve"
                     data-testid="sortDesc"
                     focusable="false"
                     viewBox="0 0 8 4"
@@ -76,7 +76,7 @@ exports[`RetirementDetails renders correctly issuances 1`] = `
                   class="chakra-stack css-1yu3riu"
                 >
                   <svg
-                    class="chakra-icon css-18gm00e"
+                    class="chakra-icon css-18u6eve"
                     data-testid="sortAsc"
                     focusable="false"
                     viewBox="0 0 8 4"
@@ -87,7 +87,7 @@ exports[`RetirementDetails renders correctly issuances 1`] = `
                     />
                   </svg>
                   <svg
-                    class="chakra-icon css-18gm00e"
+                    class="chakra-icon css-18u6eve"
                     data-testid="sortDesc"
                     focusable="false"
                     viewBox="0 0 8 4"

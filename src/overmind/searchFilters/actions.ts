@@ -1,7 +1,7 @@
 import { Context } from '@/overmind'
 import { EffectResponse } from '@/@types/EffectResponse'
 import { GovernanceResponseData } from '@/@types/State'
-import { DatesFilter, YearsFilter } from '@/@types/ProjectSearchFilterValues'
+import { DatabaseQueryDirection, DatesFilter, ProjectSearchSortBy, UnitSearchSortBy, YearsFilter } from '@/@types/ProjectSearchFilterValues'
 
 export const transformGovernanceDataToSearchFilterData = (context: Context, governanceData: EffectResponse<GovernanceResponseData>) => {
   if (governanceData.data) {
@@ -49,6 +49,8 @@ export const resetSearchFilters = (context: Context) => {
     sectors: [],
     projectStatus: [],
     methodologies: [],
+    sortBy: ProjectSearchSortBy.RELEVANCE,
+    direction: DatabaseQueryDirection.DESC,
   }
   context.state.searchFilters.selectedUnitSearchFilterValues.searchFilterValues = {
     countries: [],
@@ -56,6 +58,8 @@ export const resetSearchFilters = (context: Context) => {
     projectStatus: [],
     unitStatus: [],
     vintageYear: {},
+    sortBy: UnitSearchSortBy.RELEVANCE,
+    direction: DatabaseQueryDirection.DESC,
   }
 }
 
@@ -77,4 +81,14 @@ export const setUnitSectorFilter = (context: Context, selectedFilters: string[])
 
 export const setUnitVintageYearFilter = (context: Context, selectedFilters: YearsFilter) => {
   context.state.searchFilters.selectedUnitSearchFilterValues.searchFilterValues.vintageYear = selectedFilters
+}
+export const setSortByProject = (context: Context, { sortBy, direction }: { sortBy: ProjectSearchSortBy; direction: DatabaseQueryDirection }) => {
+  console.log(`setSortByProject`, sortBy, direction)
+  context.state.searchFilters.selectedProjectSearchFilterValues.searchFilterValues.sortBy = sortBy
+  context.state.searchFilters.selectedProjectSearchFilterValues.searchFilterValues.direction = direction
+}
+
+export const setSortByUnit = (context: Context, { sortBy, direction }: { sortBy: UnitSearchSortBy; direction: DatabaseQueryDirection }) => {
+  context.state.searchFilters.selectedUnitSearchFilterValues.searchFilterValues.sortBy = sortBy
+  context.state.searchFilters.selectedUnitSearchFilterValues.searchFilterValues.direction = direction
 }

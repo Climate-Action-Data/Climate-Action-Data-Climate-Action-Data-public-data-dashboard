@@ -27,7 +27,6 @@ exports[`renders correctly 1`] = `
         </td>
         <td
           class="css-0"
-          data-is-numeric="true"
           title="129,037"
         >
           129,037
@@ -37,12 +36,6 @@ exports[`renders correctly 1`] = `
           title="2023/04/14"
         >
           2023/04/14
-        </td>
-        <td
-          class="css-0"
-          title="2023/08/03"
-        >
-          2023/08/03
         </td>
         <td
           class="css-0"
@@ -108,16 +101,9 @@ exports[`renders correctly 1`] = `
         </td>
         <td
           class="css-0"
-          data-is-numeric="true"
           title="20,394"
         >
           20,394
-        </td>
-        <td
-          class="css-0"
-          title="--"
-        >
-          --
         </td>
         <td
           class="css-0"
@@ -203,7 +189,6 @@ exports[`renders correctly with hover 1`] = `
         </td>
         <td
           class="css-0"
-          data-is-numeric="true"
           title="129,037"
         >
           129,037
@@ -213,12 +198,6 @@ exports[`renders correctly with hover 1`] = `
           title="2023/04/14"
         >
           2023/04/14
-        </td>
-        <td
-          class="css-0"
-          title="2023/08/03"
-        >
-          2023/08/03
         </td>
         <td
           class="css-0"
@@ -284,16 +263,9 @@ exports[`renders correctly with hover 1`] = `
         </td>
         <td
           class="css-0"
-          data-is-numeric="true"
           title="20,394"
         >
           20,394
-        </td>
-        <td
-          class="css-0"
-          title="--"
-        >
-          --
         </td>
         <td
           class="css-0"
