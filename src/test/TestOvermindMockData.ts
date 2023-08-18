@@ -9,6 +9,7 @@ import { ProjectDetails } from '@/@types/ProjectDetails'
 import { unitsData } from './mock-data/units_data'
 import { Unit } from '@/@types/Unit'
 import { unitDetail } from './mock-data/unit_detail'
+import { DatabaseQueryDirection, UnitSearchSortBy, ProjectSearchSortBy } from '@/@types/ProjectSearchFilterValues'
 
 const CARBON_MAP_DATA_FILTERED: CountryPeriodData = {
   activeProjects: 200,
@@ -151,6 +152,8 @@ const SEARCH_FILTER_VALUES: SearchFiltersStateData = {
       methodologies: SearchOptions,
       projectStatus: SearchOptions,
       countries: SearchOptions,
+      sortBy: ProjectSearchSortBy.RELEVANCE,
+      direction: DatabaseQueryDirection.DESC,
     },
     isEmpty: false,
   },
@@ -160,6 +163,8 @@ const SEARCH_FILTER_VALUES: SearchFiltersStateData = {
       unitStatus: SearchOptions,
       projectStatus: SearchOptions,
       countries: SearchOptions,
+      sortBy: UnitSearchSortBy.RELEVANCE,
+      direction: DatabaseQueryDirection.DESC,
     },
     isEmpty: false,
   },
