@@ -49,7 +49,6 @@ export const CSVDownload = (props: CSVDownloadProps) => {
   const handleOnClick = async () => {
     if (totalResults && totalResults > DEFAULT_MAX_DOWNLOAD_SIZE && !validatedLargeDownload) {
       onOpen()
-      return
     } else {
       downloadData()
     }
@@ -104,10 +103,10 @@ export const CSVDownload = (props: CSVDownloadProps) => {
             </Flex>
             <ModalBody>{t(`exportCSVDesc`)}</ModalBody>
             <ModalFooter gap="48px" justifyContent="center">
-              <Button variant={`blueOutline`} onClick={onClose}>
+              <Button data-testid="cancel-modal" variant={`blueOutline`} onClick={onClose}>
                 {t(`cancel`)}
               </Button>
-              <Button variant={`green`} onClick={clickValidateLargeExport}>
+              <Button data-testid="accept-modal" variant={`green`} onClick={clickValidateLargeExport}>
                 {t(`export`)}
               </Button>
             </ModalFooter>
