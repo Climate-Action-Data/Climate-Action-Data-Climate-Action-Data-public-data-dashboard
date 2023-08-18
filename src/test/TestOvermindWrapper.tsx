@@ -6,6 +6,7 @@ import { config } from '@/overmind'
 import { SubRegion } from '@/@types/geojson'
 import { TimeframesData } from '@/@types/Timeframe'
 import { CreditsHistoryDataState, DataState, ProjectResultState, SearchFiltersStateData } from '@/@types/State'
+import { ProjectSearchSortBy, DatabaseQueryDirection, UnitSearchSortBy } from '@/@types/ProjectSearchFilterValues'
 
 interface TestOvermindWrapperProps extends PropsWithChildren {
   analytics?: DataState
@@ -41,6 +42,8 @@ export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
         sectors: [],
         countries: [],
         unitStatus: [],
+        sortBy: UnitSearchSortBy.RELEVANCE,
+        direction: DatabaseQueryDirection.DESC,
       },
       isEmpty: true,
     },
@@ -50,6 +53,8 @@ export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
         methodologies: [],
         sectors: [],
         countries: [],
+        sortBy: ProjectSearchSortBy.RELEVANCE,
+        direction: DatabaseQueryDirection.DESC,
       },
       isEmpty: true,
     },
