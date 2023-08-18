@@ -7,7 +7,7 @@ import { ColumnSortFilter } from '@/components/atoms/ColumnSortFilter/ColumnSort
 
 import { ProjectSearchHeadContent } from '@/components/atoms/ProjectSearchHeadContent/ProjectSearchHeadContent'
 import { UnitSearchHeadContent } from '@/components/atoms/UnitSearchHeadContent/UnitSearchHeadContent'
-import { ProjectSearchSortBy, UnitSearchSortBy } from '@/@types/ProjectSearchFilterValues'
+import { DatabaseQueryDirection, ProjectSearchSortBy, UnitSearchSortBy } from '@/@types/ProjectSearchFilterValues'
 
 interface ProjectSearchHeadProps {
   renderType?: string

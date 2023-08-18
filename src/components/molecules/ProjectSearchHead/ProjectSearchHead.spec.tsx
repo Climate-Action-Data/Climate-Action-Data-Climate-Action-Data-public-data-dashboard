@@ -43,6 +43,38 @@ describe(`ProjectSearchHead`, () => {
     expect(push).toHaveBeenCalled()
     expect(container).toMatchSnapshot()
   })
+
+  it(`renders correctly with projects and handles sort asc`, () => {
+    const mockRefresh = jest.fn()
+    const { container } = render(
+      <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>
+        <TestRouter router={{ push }}>
+          <ProjectSearchHead refreshData={mockRefresh} renderType={ALLOWED_RENDER_TYPE.PROJECT} />
+        </TestRouter>
+      </TestOvermindWrapper>,
+    )
+    const rows = screen.getAllByTestId(`sortAsc`)
+    expect(rows.length).toBeGreaterThan(0)
+    fireEvent.click(rows[0])
+    expect(mockRefresh).toHaveBeenCalled()
+    expect(container).toMatchSnapshot()
+  })
+
+  it(`renders correctly with projects and handles sort desc`, () => {
+    const mockRefresh = jest.fn()
+    const { container } = render(
+      <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>
+        <TestRouter router={{ push }}>
+          <ProjectSearchHead refreshData={mockRefresh} renderType={ALLOWED_RENDER_TYPE.PROJECT} />
+        </TestRouter>
+      </TestOvermindWrapper>,
+    )
+    const rows = screen.getAllByTestId(`sortDesc`)
+    expect(rows.length).toBeGreaterThan(0)
+    fireEvent.click(rows[0])
+    expect(mockRefresh).toHaveBeenCalled()
+    expect(container).toMatchSnapshot()
+  })
 })
 
 describe(`ProjectSearchHead`, () => {
