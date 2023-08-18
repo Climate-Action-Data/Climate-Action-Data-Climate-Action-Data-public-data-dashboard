@@ -16,6 +16,9 @@
   "preparing": "Preparing download...",
   "exportValid": "Data retrieved. Download will start shortly.",
   "exportFail": "Could not retrieve data. Please try again later.",
+  "exportCSVTitle": "Export in CSV",
+  "exportCSVDesc": "Please note that your current selection exceeds 1000 rows and we will only export up to 1000. Consider applying filters to narrow your selection.",
+  "cancel": "Cancel",
   "filterBar": {
     "standard": "Standard",
     "unitStatus": "Unit Status",

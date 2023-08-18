@@ -7,6 +7,8 @@ export type ExportFilters = {
   keywords: string
   count: number
   offset: number
+  sortBy: string
+  direction: string
 }
 
 export type ExportProjectFilters = {

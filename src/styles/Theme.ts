@@ -15,6 +15,7 @@ import {
   dropdownSelectedDark,
   dropdownUnselected,
   dropdownUnselectedDark,
+  green,
   hoverOnly,
   hoverOnlyNoBold,
   lightGray,
@@ -88,6 +89,7 @@ const theme = extendTheme({
         blueOutline,
         modalClose,
         toastButton,
+        green,
       },
     },
     Heading: {

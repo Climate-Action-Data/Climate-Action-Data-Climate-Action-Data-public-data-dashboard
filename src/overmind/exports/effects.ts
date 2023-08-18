@@ -19,6 +19,8 @@ const extractFiltersFromType = (
     keywords,
     offset,
     count,
+    sortBy: filters.sortBy,
+    direction: filters.direction,
   }
   switch (exportType) {
     case CSVExportTypes.PROJECT:

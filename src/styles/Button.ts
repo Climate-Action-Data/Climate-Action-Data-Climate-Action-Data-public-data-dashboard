@@ -123,6 +123,25 @@ export const accentPrimary32 = defineStyle({
   },
 })
 
+export const green = defineStyle({
+  background: `green.300`,
+  color: `black`,
+  padding: `6px 12px`,
+  borderRadius: `32px`,
+  height: `32px`,
+  gap: `4px`,
+  fontSize: `14px`,
+  fontWeight: 500,
+  _hover: {
+    background: `green.600`,
+    color: `white`,
+  },
+  _active: {
+    background: `green.700`,
+    color: `white`,
+  },
+})
+
 export const textLink = defineStyle({
   color: `black`,
   padding: 0,
