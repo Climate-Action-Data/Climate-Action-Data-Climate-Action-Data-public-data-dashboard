@@ -1,5 +1,4 @@
 import { IssuanceUnit } from '@/@types/ProjectDetails'
-import { ColumnSortFilter } from '@/components/atoms/ColumnSortFilter/ColumnSortFilter'
 import { NoDataScreen } from '@/components/atoms/NoDataScreen/NoDataScreen'
 import { generateRandomString } from '@/utils/GenerationHelpers'
 import { Box, Heading, Flex, Table, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react'
@@ -31,16 +30,10 @@ export const RetirementTable = (props: RetirementTableProps) => {
             <Thead outline="2px solid" outlineColor="lightGray.700" zIndex="4" top="0" position="sticky">
               <Tr>
                 <Th>
-                  <Box>
-                    {t(`issuances.quantity`)}
-                    <ColumnSortFilter />
-                  </Box>
+                  <Box>{t(`issuances.quantity`)}</Box>
                 </Th>
                 <Th>
-                  <Box>
-                    {t(`issuances.retirementNotes`)}
-                    <ColumnSortFilter />
-                  </Box>
+                  <Box>{t(`issuances.retirementNotes`)}</Box>
                 </Th>
               </Tr>
             </Thead>
