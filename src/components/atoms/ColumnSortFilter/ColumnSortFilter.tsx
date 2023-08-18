@@ -4,7 +4,7 @@ import { SortUpIcon } from '../SortUpIcon/SortUpIcon'
 import { DatabaseQueryDirection, ProjectSearchSortBy, UnitSearchSortBy } from '@/@types/ProjectSearchFilterValues'
 
 interface ColumnSortFilterProps {
-  onClick?: (sort: ProjectSearchSortBy | UnitSearchSortBy, direction: DatabaseQueryDirection) => void
+  onClick: (sort: ProjectSearchSortBy | UnitSearchSortBy, direction: DatabaseQueryDirection) => void
   isSelected?: boolean
   sortValue: ProjectSearchSortBy | UnitSearchSortBy
   currentValue: ProjectSearchSortBy | UnitSearchSortBy
@@ -16,22 +16,27 @@ export const ColumnSortFilter = (props: ColumnSortFilterProps) => {
 
   const isSelected = (direction: DatabaseQueryDirection) => {
     if (direction === currentDirection && currentValue === sortValue) {
-      return true
+      return `gray.700`
     }
-    return false
+    return `lightGray.500`
   }
+
+  const handleClick = (direction: DatabaseQueryDirection) => {
+    onClick(sortValue, direction)
+  }
+
   return (
     <VStack alignItems={`center`} justifyContent="center" gap="2px" height="20px" minW="20px">
       <SortUpIcon
-        color={isSelected(DatabaseQueryDirection.ASC) ? `gray.700` : `lightGray.500`}
+        color={isSelected(DatabaseQueryDirection.ASC)}
         data-testid="sortAsc"
-        onClick={() => (onClick ? onClick(sortValue, DatabaseQueryDirection.ASC) : undefined)}
+        onClick={() => handleClick(DatabaseQueryDirection.ASC)}
         _hover={{ cursor: `pointer`, color: `gray.700` }}
       />
       <SortDownIcon
-        color={isSelected(DatabaseQueryDirection.DESC) ? `gray.700` : `lightGray.500`}
+        color={isSelected(DatabaseQueryDirection.DESC)}
         data-testid="sortDesc"
-        onClick={() => (onClick ? onClick(sortValue, DatabaseQueryDirection.DESC) : undefined)}
+        onClick={() => handleClick(DatabaseQueryDirection.DESC)}
         _hover={{ cursor: `pointer`, color: `gray.700` }}
       />
     </VStack>
