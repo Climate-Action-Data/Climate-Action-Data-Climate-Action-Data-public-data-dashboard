@@ -11,6 +11,7 @@ import { HomeIcon } from '@/components/atoms/HomeIcon/HomeIcon'
 import { WebRedirectIcon } from '@/components/atoms/WebRedirectIcon/WebRedirectIcon'
 
 import Logo from './../../../assets/logo.png'
+import AuthenticationSection from '@/components/molecules/AuthenticationSection/AuthenticationSection'
 
 export const Menu = (): React.JSX.Element => {
   const { isOpen } = useDisclosure()
@@ -32,13 +33,7 @@ export const Menu = (): React.JSX.Element => {
           {t(`title`)}
         </Box>
         <Flex alignItems={`center`}>
-          {/* <Button alignSelf={`start`} colorScheme="gray" backgroundColor={`gray.500`} width={`56px`} height={`56px`}>
-                        <BellIcon color={`white`} />
-                    </Button>
-                    <Button color={`white`} backgroundColor={`gray.500`} display={`flex`} height={`56px`} padding={`16px`} alignItems={`center`}>
-                        <Text>Hello, Kat</Text>
-                        <Image margin={`4px`} width={`20px`} height={`20px`} alt="Portrait" src={Portrait.src} />
-                    </Button> */}
+          <AuthenticationSection />
         </Flex>
       </Flex>
       <SlideFade in={isOpen} style={{ display: `none`, zIndex: 10, width: `56px` }}>

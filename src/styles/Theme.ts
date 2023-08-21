@@ -35,7 +35,7 @@ import { headingAeonik, Text } from './Text'
 import { Input } from '@/styles/Input'
 import { paginationBar } from './PaginationBar'
 import { searchTable, searchTableSmall } from './SearchTable'
-import { menuWhite } from './Menu'
+import { menuWhite, menuDark } from './Menu'
 import { statMain } from './Stat'
 import { tagTheme } from '@/styles/Tag'
 import { homeFilterAndSearchWrapper, resultsPageFilterAndSearchWrapper } from '@/styles/Container'
@@ -126,6 +126,7 @@ const theme = extendTheme({
     Menu: {
       variants: {
         menuWhite,
+        menuDark,
       },
     },
     Text,

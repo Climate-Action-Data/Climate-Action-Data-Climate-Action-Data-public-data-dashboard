@@ -1,4 +1,9 @@
 {
   "logo": "logo",
-  "title": "Public Data Dashboard"
+  "title": "Public Data Dashboard",
+  "login": "Sign up / Login",
+  "logout": "Log out",
+  "hello": "Hello",
+  "profile": "Profile",
+  "watchlists": "Watchlists"
 }
