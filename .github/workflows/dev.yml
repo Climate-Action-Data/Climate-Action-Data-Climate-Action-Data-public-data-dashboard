@@ -14,12 +14,15 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build env file
-        uses: "./.github/workflows/templates/env"
+        uses: './.github/workflows/templates/env'
         with:
           next_public_api_key: ${{ secrets.NEXT_PUBLIC_API_KEY }}
+          next_public_app_url: ${{ vars.NEXT_PUBLIC_APP_URL }}
           next_public_api_host: ${{ secrets.NEXT_PUBLIC_API_HOST }}
           next_public_google_map_api_key: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAP_API_KEY }}
-
+          next_public_auth0_domain: ${{ vars.NEXT_PUBLIC_AUTH0_DOMAIN }}
+          next_public_auth0_client_id: ${{ vars.NEXT_PUBLIC_AUTH0_CLIENT_ID }}
+          next_public_auth0_audience: ${{ vars.NEXT_PUBLIC_AUTH0_AUDIENCE }}
 
   Checks:
     runs-on: ubuntu-latest
@@ -30,7 +33,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Checks
-        uses: "./.github/workflows/templates/checks"
+        uses: './.github/workflows/templates/checks'
 
   Sonar-analysis:
     name: SonarCloud
@@ -40,12 +43,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
 
       - name: SonarCloud Scan
-        uses: "./.github/workflows/templates/sonar-analysis"
+        uses: './.github/workflows/templates/sonar-analysis'
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           sonar_token: ${{ secrets.SONAR_TOKEN }}
 
   Deploy:
@@ -56,12 +59,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
 
       - name: Deploy into bucket
-        uses: "./.github/workflows/templates/deploy"
+        uses: './.github/workflows/templates/deploy'
         with:
           service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
           bucket_name: ${{ vars.BUCKET_NAME }}
-
-
