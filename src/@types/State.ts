@@ -1,5 +1,5 @@
 import { EffectResponse } from './EffectResponse'
-import { ProjectSearchResponse } from './ProjectSearchResult'
+import { ProjectSearchResponse, ProjectSearchResult } from './ProjectSearchResult'
 import { TimeframesData } from './Timeframe'
 import { UnitSearchResponse } from './UnitSearchResult'
 import { SubRegion } from './geojson'
@@ -130,4 +130,9 @@ export interface SearchFiltersStateData {
   selectedProjectSearchFilterValues: { searchFilterValues: ProjectSearchFilterValues; readonly isEmpty: boolean }
   selectedUnitSearchFilterValues: { searchFilterValues: UnitSearchFilterValues; readonly isEmpty: boolean }
   keywordSearch: string
+}
+
+export interface CompareProjectsStateData {
+  isCompare: boolean
+  projects: ProjectSearchResult[]
 }
