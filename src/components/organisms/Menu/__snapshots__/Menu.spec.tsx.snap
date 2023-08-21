@@ -29,7 +29,17 @@ exports[`renders correctly 1`] = `
       </div>
       <div
         class="css-70qvj9"
-      />
+      >
+        <div
+          class="chakra-stack css-7qa5l6"
+        >
+          <p
+            class="chakra-text css-12our7z"
+          >
+            Login
+          </p>
+        </div>
+      </div>
     </div>
     <div
       class="chakra-offset-slide"
