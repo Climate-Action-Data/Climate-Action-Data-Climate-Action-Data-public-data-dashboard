@@ -415,6 +415,9 @@ const getProject = async (projectId: string): Promise<ProjectDetails | undefined
           resolve(projectData)
         }
       })
+      .catch((error) => {
+        resolve(undefined)
+      })
       .finally(() => {
         resolve(undefined)
       })
