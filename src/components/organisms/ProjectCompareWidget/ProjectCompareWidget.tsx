@@ -54,7 +54,7 @@ export const ProjectCompareWidget = (props: ProjectCompareWidgetProps) => {
     <HStack
       alignItems="center"
       visibility={isVisible ? `visible` : `hidden`}
-      divider={<StackDivider borderColor={`#B8BEC0`} />}
+      divider={projects.length > 0 ? <StackDivider borderColor={`#B8BEC0`} /> : <></>}
       bg="gray.100"
       position={`fixed`}
       height={`136px`}
