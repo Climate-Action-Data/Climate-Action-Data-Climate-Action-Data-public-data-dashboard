@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="chakra-stack css-1qqss25"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      Start a watchlist to easily organise and save carbon projects
+    </p>
+    <button
+      class="chakra-button css-4xx2wk"
+      type="button"
+    >
+      Create new watchlist
+      <span
+        class="chakra-button__icon css-1hzyiq5"
+      >
+        <svg
+          aria-hidden="true"
+          class="chakra-icon css-n059si"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M11.9997 18.75C11.7871 18.75 11.609 18.6781 11.4654 18.5344C11.3218 18.3906 11.25 18.2125 11.25 18V12.75H5.99997C5.78747 12.75 5.60936 12.678 5.46563 12.5342C5.32188 12.3904 5.25 12.2122 5.25 11.9997C5.25 11.7871 5.32188 11.609 5.46563 11.4654C5.60936 11.3218 5.78747 11.25 5.99997 11.25H11.25V5.99997C11.25 5.78747 11.3219 5.60935 11.4657 5.4656C11.6095 5.32187 11.7877 5.25 12.0003 5.25C12.2129 5.25 12.391 5.32187 12.5346 5.4656C12.6782 5.60935 12.7499 5.78747 12.7499 5.99997V11.25H18C18.2125 11.25 18.3906 11.3219 18.5344 11.4657C18.6781 11.6095 18.75 11.7877 18.75 12.0003C18.75 12.2129 18.6781 12.391 18.5344 12.5346C18.3906 12.6782 18.2125 12.75 18 12.75H12.7499V18C12.7499 18.2125 12.678 18.3906 12.5342 18.5344C12.3904 18.6781 12.2122 18.75 11.9997 18.75Z"
+            fill="currentcolor"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;

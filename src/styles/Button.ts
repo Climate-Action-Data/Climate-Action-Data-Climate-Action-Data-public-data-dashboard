@@ -311,3 +311,13 @@ export const toastButton = defineStyle({
     background: `transparent`,
   },
 })
+
+export const dropdown = defineStyle({
+  minWidth: `200px`,
+  backgroundColor: `white`,
+  boxShadow: `2px 2px 8px 0px #0000001A`,
+  padding: `8px, 4px, 8px, 8px`,
+  borderRadius: `4px`,
+  minHeight: `40px`,
+  fontWeight: `400`,
+})

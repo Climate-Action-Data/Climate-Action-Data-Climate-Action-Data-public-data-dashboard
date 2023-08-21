@@ -8,6 +8,7 @@ import * as projectResult from './projectResult'
 import * as searchFilters from './searchFilters'
 import * as unitResult from './unitResult'
 import * as exports from './exports'
+import * as watchlist from './watchlist'
 
 export const config = namespaced({
   analytics,
@@ -16,6 +17,7 @@ export const config = namespaced({
   searchFilters,
   unitResult,
   exports,
+  watchlist,
 })
 
 export type Context = IContext<typeof config>
