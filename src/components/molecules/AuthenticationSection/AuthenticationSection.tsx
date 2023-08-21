@@ -24,7 +24,7 @@ const AuthenticationSection: FC = (props) => {
   const handleLogoutClick = () => {
     logout({
       logoutParams: {
-        returnTo: window.location.origin,
+        returnTo: process.env.NEXT_PUBLIC_APP_URL,
       },
     })
   }
