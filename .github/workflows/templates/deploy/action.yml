@@ -39,25 +39,25 @@ runs:
     - name: 'Move files'
       shell: bash
       run: |
-        sudo mv ./configuration/configuration/.env.production ./
+        sudo mv ./configuration/configuration/.env ./
       working-directory: .
 
     - name: 'cat the .env file'
       shell: bash
       run: |
-        sudo chmod 777 .env.production
+        sudo chmod 777 .env
       working-directory: .
 
     - name: 'cat the .env file'
       shell: bash
       run: |
-        sudo chown runner:docker .env.production
+        sudo chown runner:docker .env
       working-directory: .
 
     - name: 'cat the .env file'
       shell: bash
       run: |
-        sudo chmod 777 .env.production
+        sudo chmod 777 .env
       working-directory: .
 
     - name: Build and test
@@ -79,5 +79,3 @@ runs:
         path: 'out'
         destination: '${{ inputs.bucket_name }}'
         parent: false
-
-
