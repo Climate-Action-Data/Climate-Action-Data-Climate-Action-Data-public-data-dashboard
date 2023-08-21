@@ -29,7 +29,7 @@ const providerConfig = {
   onRedirectCallback,
   authorizationParams: {
     redirect_uri: window.location.origin,
-    ...(authConfig.audience ? { audience: authConfig.audience } : null),
+    audience: authConfig.audience,
   },
 }
 
