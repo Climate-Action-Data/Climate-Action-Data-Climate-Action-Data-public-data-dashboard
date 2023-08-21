@@ -1,0 +1,87 @@
+import { Button, HStack, StackDivider, Text, VStack } from '@chakra-ui/react'
+import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
+import { CloseIcon } from '@/components/atoms/CloseIcon/CloseIcon'
+import { useActions } from '@/overmind'
+
+interface ProjectCompareWidgetProps {
+  isVisible: boolean
+  projects: ProjectSearchResult[]
+  onCompare: () => void
+  onClose: () => void
+}
+
+export const ProjectCompareWidget = (props: ProjectCompareWidgetProps) => {
+  const { isVisible, projects, onCompare, onClose } = props
+  const { removeProjectFromCompare } = useActions().compareProjects
+  const maxProjects = 3
+
+  const renderNoSelection = () => {
+    return (
+      <Text flex={4} fontWeight="500" color="white" fontSize="lg" textAlign={`center`}>
+        Add max 3 projects to compare
+      </Text>
+    )
+  }
+
+  const renderSelectedCount = () => {
+    return (
+      <Text flex={1} fontWeight="500" color="white" fontSize="lg" textAlign={`center`}>
+        Selected {projects.length}
+      </Text>
+    )
+  }
+
+  const renderProjectName = (project: ProjectSearchResult) => {
+    return (
+      <VStack flex={1} height={`100%`} py={`8px`}>
+        <CloseIcon alignSelf={`end`} color={`white`} onClick={() => removeProjectFromCompare(project.warehouseProjectId)} />
+        <Text fontWeight="500" color="white" fontSize="md" noOfLines={3} px={`30px`} height={`100%`} textAlign={`center`}>
+          {project.name}
+        </Text>
+      </VStack>
+    )
+  }
+
+  const renderPlaceholderProjectName = () => {
+    return (
+      <Text flex={1} fontWeight="500" color="white" fontSize="md" px={`8px`}>
+        --
+      </Text>
+    )
+  }
+
+  return (
+    <HStack
+      alignItems="center"
+      visibility={isVisible ? `visible` : `hidden`}
+      divider={<StackDivider borderColor={`#B8BEC0`} />}
+      bg="gray.100"
+      position={`fixed`}
+      height={`136px`}
+      bottom={0}
+      left={0}
+      width={`100%`}
+    >
+      {projects.length == 0 ? (
+        <>{renderNoSelection()}</>
+      ) : (
+        <HStack flex={4} divider={<StackDivider borderColor={`#B8BEC0`} />} height={`100%`}>
+          {renderSelectedCount()}
+
+          {projects.map((project) => {
+            return renderProjectName(project)
+          })}
+
+          {Array.from({ length: maxProjects - projects.length }).map((_, __) => {
+            return renderPlaceholderProjectName()
+          })}
+        </HStack>
+      )}
+
+      <VStack flex={1}>
+        <Button onClick={onCompare}>Compare</Button>
+        <Button onClick={onClose}>Close</Button>
+      </VStack>
+    </HStack>
+  )
+}

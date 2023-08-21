@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useLayoutEffect, useState } from 'react'
 import { NextPage } from 'next'
-import { Box, Container, Flex } from '@chakra-ui/react'
+import { Box, Container, Flex, VStack } from '@chakra-ui/react'
 
 import { useActions, useAppState, useEffects } from '@/overmind'
 import { setScrollEventListeners } from '@/utils/Stickify'
@@ -13,6 +13,7 @@ import { PaginationWidget } from '@/components/atoms/PaginationWidget/Pagination
 import { CSVDownload } from '@/components/molecules/CSVDownload/CSVDownload'
 import { CSVExportTypes } from '@/@types/CSV'
 import { SpinnerScreen } from '@/components/atoms/SpinnerScreen/SpinnerScreen'
+import { ProjectCompareWidget } from '@/components/organisms/ProjectCompareWidget/ProjectCompareWidget'
 
 const ProjectPage: NextPage = () => {
   const { getProjectSearchResults } = useEffects().projectResult
@@ -20,6 +21,8 @@ const ProjectPage: NextPage = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const { projectResults } = useAppState().projectResult
   const { selectedProjectSearchFilterValues, keywordSearch } = useAppState().searchFilters
+  const { isCompare, projects: projectsToCompare } = useAppState().compareProjects
+  const { setCompareToggle, resetProjectsToCompare } = useActions().compareProjects
 
   useEffect(() => {
     clearProjectResults()
@@ -51,6 +54,15 @@ const ProjectPage: NextPage = () => {
     })
   }
 
+  const handleOnCompare = () => {
+    console.log(`compare projects `)
+  }
+
+  const handleOnClose = () => {
+    setCompareToggle(false)
+    resetProjectsToCompare()
+  }
+
   useLayoutEffect(() => {
     const projectTable = document.querySelector(`#projectTable`)
     const projectTableReference = document.querySelector(`#projectTableReference`)
@@ -66,7 +78,7 @@ const ProjectPage: NextPage = () => {
   })
 
   return (
-    <Flex maxW={`100vw`} w="100vw" minH="100%" h="100%" position="relative" paddingBottom="50px">
+    <Flex maxW={`100vw`} w="100vw" minH="100%" h="100%" position="relative" paddingBottom={isCompare ? `186px` : `50px`}>
       {isLoading ? (
         <SpinnerScreen />
       ) : (
@@ -76,12 +88,15 @@ const ProjectPage: NextPage = () => {
         </>
       )}
 
-      <Container variant={`paginationBar`}>
-        <PaginationWidget onPageChange={handleOnPageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={projectResults?.data?.totalCount ?? 0} />
-        <Box position={[`unset`, `absolute`]} right="10px" float="right">
-          <CSVDownload totalResults={projectResults?.data?.totalCount} exportType={CSVExportTypes.PROJECT} />
-        </Box>
-      </Container>
+      <VStack>
+        <Container variant={`paginationBar`} bottom={isCompare ? `136px` : `0px`}>
+          <PaginationWidget onPageChange={handleOnPageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={projectResults?.data?.totalCount ?? 0} />
+          <Box position={[`unset`, `absolute`]} right="10px" float="right">
+            <CSVDownload totalResults={projectResults?.data?.totalCount} exportType={CSVExportTypes.PROJECT} />
+          </Box>
+        </Container>
+        <ProjectCompareWidget isVisible={isCompare} projects={projectsToCompare} onCompare={handleOnCompare} onClose={handleOnClose} />
+      </VStack>
     </Flex>
   )
 }

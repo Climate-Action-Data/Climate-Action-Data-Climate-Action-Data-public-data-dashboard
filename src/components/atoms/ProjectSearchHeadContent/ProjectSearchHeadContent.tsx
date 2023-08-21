@@ -11,6 +11,9 @@ import { MenuContent, MenuItemProps } from '../MenuContent/MenuContent'
 import { generateProjectPDFDocument } from '../../../app/project/page.pdf'
 import { AddWatchlistPopup } from '@/components/molecules/AddWatchlistPopup/AddWatchlistPopup'
 import { useState } from 'react'
+import { AddCompareIcon } from '../AddCompareIcon/AddCompareIcon'
+import { RemoveCompareIcon } from '../RemoveCompareIcon/RemoveCompareIcon'
+import { useActions, useAppState } from '@/overmind'
 
 interface ProjectSearchHeadContentProps {
   projectResults?: EffectResponse<ProjectSearchResponse>
@@ -22,6 +25,8 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
   const [projectIdForWatchlist, setProjectIdForWatchlist] = useState<string>(``)
   const [showAddWatchlistPopup, setShowAddWatchlistPopup] = useState<boolean>(false)
   const { t } = useTranslation(`search`)
+  const { isCompare, projects: projectsToCompare } = useAppState().compareProjects
+  const { setProjectToCompare, removeProjectFromCompare } = useActions().compareProjects
 
   const handleClick = (projectId: string, event?: any) => {
     if (event?.target) {
@@ -57,34 +62,55 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
     ]
     return menuList
   }
+  const handleProjectAddedToCompare = (project: ProjectSearchResult) => {
+    setProjectToCompare(project)
+  }
+
+  const handleProjectRemovedFromCompare = (projectWarehouseId: string) => {
+    removeProjectFromCompare(projectWarehouseId)
+  }
+
+  const renderAddRemoveCompareButton = (project: ProjectSearchResult) => {
+    return projectsToCompare.find((p) => p.warehouseProjectId === project.warehouseProjectId) ? (
+      <RemoveCompareIcon onClick={() => handleProjectRemovedFromCompare(project.warehouseProjectId)} />
+    ) : (
+      <AddCompareIcon onClick={() => handleProjectAddedToCompare(project)} />
+    )
+  }
 
   const generateTableRow = (projectList: ProjectSearchResult[]) => {
-    return projectList.map((projectResults, idx) => (
-      <Tr
-        onClick={(event) => handleClick(projectResults.warehouseProjectId, event)}
-        onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
-        data-testid="project-search-head-row"
-        className={`project-row-${idx}`}
-        key={`project-row-${projectResults.warehouseProjectId}`}
-        height="92px"
-      >
-        <Td data-testid="project-search-head-row-td">
-          <Flex alignItems="center">
-            <Box title={projectResults.name} overflow="hidden" flex={1}>
-              <Text fontWeight={500}>{projectResults.name}</Text>
-              <Text fontSize="sm">{projectResults.id}</Text>
-              <Text textOverflow="ellipsis" color="lightGray.700" fontSize="sm">
-                {projectResults.developer}
-              </Text>
-            </Box>
-            <Menu variant="menuWhite">
-              <MenuButton as={Button} textAlign="center" iconSpacing={0} rightIcon={<KebabMenuIcon />} variant="lightGrayRound32"></MenuButton>
-              <MenuContent menuItems={generateMenuList(projectResults.warehouseProjectId)} />
-            </Menu>
-          </Flex>
-        </Td>
-      </Tr>
-    ))
+    return projectList.map((projectResults, idx) => {
+      return (
+        <Tr
+          onClick={(event) => handleClick(projectResults.warehouseProjectId, event)}
+          onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
+          data-testid="project-search-head-row"
+          className={`project-row-${idx}`}
+          key={`project-row-${projectResults.warehouseProjectId}`}
+          height="92px"
+        >
+          <Td data-testid="project-search-head-row-td">
+            <Flex alignItems="center">
+              <Box title={projectResults.name} overflow="hidden" flex={1}>
+                <Text fontWeight={500}>{projectResults.name}</Text>
+                <Text fontSize="sm">{projectResults.id}</Text>
+                <Text textOverflow="ellipsis" color="lightGray.700" fontSize="sm">
+                  {projectResults.developer}
+                </Text>
+              </Box>
+              {isCompare ? (
+                renderAddRemoveCompareButton(projectResults)
+              ) : (
+                <Menu variant="menuWhite">
+                  <MenuButton as={Button} textAlign="center" iconSpacing={0} rightIcon={<KebabMenuIcon />} variant="lightGrayRound32"></MenuButton>
+                  <MenuContent menuItems={generateMenuList(projectResults.warehouseProjectId)} />
+                </Menu>
+              )}
+            </Flex>
+          </Td>
+        </Tr>
+      )
+    })
   }
 
   return (

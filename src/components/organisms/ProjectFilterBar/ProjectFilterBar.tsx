@@ -10,6 +10,7 @@ import { DatesFilter } from '@/@types/ProjectSearchFilterValues'
 import FilterBarWrapper from '@/components/molecules/FilterBarWarpper/FilterBarWrapper'
 import SearchButton from '@/components/atoms/SearchButton/SearchButton'
 import { useRouter } from 'next/navigation'
+import CompareToggleButton from '../../atoms/CompareToggleButton/CompareToggleButton'
 
 interface ProjectFilterBarProps {
   isResultsPage?: boolean
@@ -25,7 +26,12 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
   const { setProjectCountriesFilter, setProjectMethodologiesFilter, setProjectSectorsFilter, setProjectStandardsFilter, setProjectCreditingPeriodFilter } =
     useActions().searchFilters
   const { getGovernanceData } = useEffects().searchFilters
+
   const { transformGovernanceDataToSearchFilterData } = useActions().searchFilters
+
+  const { isCompare } = useAppState().compareProjects
+  const { setCompareToggle } = useActions().compareProjects
+
   const router = useRouter()
   const { t } = useTranslation(`search`)
 
@@ -61,57 +67,60 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
   }
 
   return (
-    <FilterBarWrapper isResultsPage={isResultsPage}>
-      <Stack direction={[`column`, null, null, `row`]}>
-        <Stack direction={[`column`, null, null, `row`]} divider={<StackDivider borderColor="lightGray.400" />} width="100%">
-          <AutoCompleteCheckbox
-            label={t(`filterBar.standard`)}
-            options={searchFilterValues.projectStatus}
-            selectedFilters={selectedSearchFilters.projectStatus}
-            noOfSelectedFilters={selectedSearchFilters.projectStatus.length}
-            applyFilters={handleProjectStatusFilter}
-            isResultsPage={isResultsPage}
-          />
-          <AutoCompleteCheckbox
-            label={t(`filterBar.methodology`)}
-            options={searchFilterValues.methodologies}
-            selectedFilters={selectedSearchFilters.methodologies}
-            noOfSelectedFilters={selectedSearchFilters.methodologies.length}
-            applyFilters={handleSetProjectMethodologiesFilter}
-            isResultsPage={isResultsPage}
-          />
-          <AutoCompleteCheckbox
-            label={t(`filterBar.sector`)}
-            options={searchFilterValues.sectors}
-            selectedFilters={selectedSearchFilters.sectors}
-            noOfSelectedFilters={selectedSearchFilters.sectors.length}
-            applyFilters={handleSetProjectSectorsFilter}
-            isResultsPage={isResultsPage}
-          />
-          <AutoCompleteCheckbox
-            label={t(`filterBar.country`)}
-            options={searchFilterValues.countries}
-            selectedFilters={selectedSearchFilters.countries}
-            noOfSelectedFilters={selectedSearchFilters.countries.length}
-            applyFilters={handleSetProjectCountriesFilter}
-            isResultsPage={isResultsPage}
-          />
-          <CreditingPeriodFilter
-            label={t(`filterBar.creditingPeriod`)}
-            dateFilter={selectedSearchFilters.creditingPeriod}
-            earliestDate={KYOTO_PROTOCOL_START_DATE}
-            applyFilters={handleSetProjectCreditingPeriodFilter}
-            isResultsPage={isResultsPage}
-          />
+    <Stack direction={`row`}>
+      <FilterBarWrapper isResultsPage={isResultsPage}>
+        <Stack direction={[`column`, null, null, `row`]}>
+          <Stack direction={[`column`, null, null, `row`]} divider={<StackDivider borderColor="lightGray.400" />} width="100%">
+            <AutoCompleteCheckbox
+              label={t(`filterBar.standard`)}
+              options={searchFilterValues.projectStatus}
+              selectedFilters={selectedSearchFilters.projectStatus}
+              noOfSelectedFilters={selectedSearchFilters.projectStatus.length}
+              applyFilters={handleProjectStatusFilter}
+              isResultsPage={isResultsPage}
+            />
+            <AutoCompleteCheckbox
+              label={t(`filterBar.methodology`)}
+              options={searchFilterValues.methodologies}
+              selectedFilters={selectedSearchFilters.methodologies}
+              noOfSelectedFilters={selectedSearchFilters.methodologies.length}
+              applyFilters={handleSetProjectMethodologiesFilter}
+              isResultsPage={isResultsPage}
+            />
+            <AutoCompleteCheckbox
+              label={t(`filterBar.sector`)}
+              options={searchFilterValues.sectors}
+              selectedFilters={selectedSearchFilters.sectors}
+              noOfSelectedFilters={selectedSearchFilters.sectors.length}
+              applyFilters={handleSetProjectSectorsFilter}
+              isResultsPage={isResultsPage}
+            />
+            <AutoCompleteCheckbox
+              label={t(`filterBar.country`)}
+              options={searchFilterValues.countries}
+              selectedFilters={selectedSearchFilters.countries}
+              noOfSelectedFilters={selectedSearchFilters.countries.length}
+              applyFilters={handleSetProjectCountriesFilter}
+              isResultsPage={isResultsPage}
+            />
+            <CreditingPeriodFilter
+              label={t(`filterBar.creditingPeriod`)}
+              dateFilter={selectedSearchFilters.creditingPeriod}
+              earliestDate={KYOTO_PROTOCOL_START_DATE}
+              applyFilters={handleSetProjectCreditingPeriodFilter}
+              isResultsPage={isResultsPage}
+            />
+          </Stack>
+          {!isResultsPage && (
+            <Flex>
+              <Spacer minWidth={`32px`} />
+              <SearchButton isResultsPage={isResultsPage} onClick={handleOnClick} />
+            </Flex>
+          )}
         </Stack>
-        {!isResultsPage && (
-          <Flex>
-            <Spacer minWidth={`32px`} />
-            <SearchButton isResultsPage={isResultsPage} onClick={handleOnClick} />
-          </Flex>
-        )}
-      </Stack>
-    </FilterBarWrapper>
+      </FilterBarWrapper>
+      {isResultsPage && <CompareToggleButton isEnabled={isCompare} onClick={() => setCompareToggle(!isCompare)} />}
+    </Stack>
   )
 }
 
