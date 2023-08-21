@@ -28,7 +28,7 @@ const providerConfig = {
   clientId: authConfig.clientId,
   onRedirectCallback,
   authorizationParams: {
-    redirect_uri: window.location.origin,
+    redirect_uri: process.env.NEXT_PUBLIC_APP_URL,
     audience: authConfig.audience,
   },
 }
