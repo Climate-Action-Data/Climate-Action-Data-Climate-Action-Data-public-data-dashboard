@@ -53,5 +53,18 @@ export const Input = helpers.defineMultiStyleConfig({
         _placeholder: { color: `lightGray.600` },
       },
     },
+    white: {
+      field: {
+        borderRadius: `8px`,
+        boxShadow: `2px 2px 8px 0px #0000001A`,
+        _active: {
+          border: `none`,
+        },
+        _focusVisible: {
+          border: `none !important`,
+          boxShadow: `2px 2px 8px 0px #0000001A !important`,
+        },
+      },
+    },
   },
 })

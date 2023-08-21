@@ -11,6 +11,7 @@ import {
   calendarAction,
   calendarDate,
   calendarNavigation,
+  dropdown,
   dropdownSelected,
   dropdownSelectedDark,
   dropdownUnselected,
@@ -39,6 +40,7 @@ import { menuWhite, menuDark } from './Menu'
 import { statMain } from './Stat'
 import { tagTheme } from '@/styles/Tag'
 import { homeFilterAndSearchWrapper, resultsPageFilterAndSearchWrapper } from '@/styles/Container'
+import { watchlist } from './Card'
 
 const theme = extendTheme({
   fontSizes: fontSizes,
@@ -87,6 +89,7 @@ const theme = extendTheme({
         calendarDate,
         blueFilled,
         blueOutline,
+        dropdown,
         modalClose,
         toastButton,
         green,
@@ -127,6 +130,11 @@ const theme = extendTheme({
       variants: {
         menuWhite,
         menuDark,
+      },
+    },
+    Card: {
+      variants: {
+        watchlist,
       },
     },
     Text,

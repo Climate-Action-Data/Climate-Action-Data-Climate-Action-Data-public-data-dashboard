@@ -10,11 +10,17 @@ import { useActions } from '@/overmind'
 import UnitFilterBar from '@/components/organisms/UnitFilterBar/UnitFilterBar'
 import ProjectFilterBar from '@/components/organisms/ProjectFilterBar/ProjectFilterBar'
 
-export const SearchHeader = () => {
+interface SearchHeaderProps {
+  title?: string
+  hideSearch?: boolean
+}
+
+export const SearchHeader = (props: SearchHeaderProps) => {
   const [searchPattern, setSearchPattern] = useState(``)
+  const { title, hideSearch } = props
   const { setKeywordSearch } = useActions().searchFilters
   const currentPath = usePathname()
-  const currentTitle = extractTitleFromUrl(currentPath)
+  const currentTitle = title ?? extractTitleFromUrl(currentPath)
   const { t } = useTranslation(`search`)
   const router = useRouter()
   const extractedPage = extractPageFromUrl(currentPath)
@@ -58,18 +64,28 @@ export const SearchHeader = () => {
           <Box>
             <Heading>{currentTitle}</Heading>
           </Box>
-          <Box>
-            <InputGroup size="md">
-              <Input pr="4.5rem" data-testid="search-input-enter" type={`text`} placeholder="Search" value={searchPattern} onChange={handleOnChange} onKeyDown={handleOnKeyDown} />
-              <InputRightElement width="4.5rem">
-                <Button colorScheme="white" variant="brandPrimary" h="1.75rem" size="sm" onClick={handleOnSearch} data-testid={`search-header-button`}>
-                  {t(`search`)}
-                </Button>
-              </InputRightElement>
-            </InputGroup>
-          </Box>
+          {!hideSearch && (
+            <Box>
+              <InputGroup size="md">
+                <Input
+                  pr="4.5rem"
+                  data-testid="search-input-enter"
+                  type={`text`}
+                  placeholder="Search"
+                  value={searchPattern}
+                  onChange={handleOnChange}
+                  onKeyDown={handleOnKeyDown}
+                />
+                <InputRightElement width="4.5rem">
+                  <Button colorScheme="white" variant="brandPrimary" h="1.75rem" size="sm" onClick={handleOnSearch} data-testid={`search-header-button`}>
+                    {t(`search`)}
+                  </Button>
+                </InputRightElement>
+              </InputGroup>
+            </Box>
+          )}
         </HStack>
-        {generateFilterBar()}
+        {!hideSearch && generateFilterBar()}
       </VStack>
     </Flex>
   )
