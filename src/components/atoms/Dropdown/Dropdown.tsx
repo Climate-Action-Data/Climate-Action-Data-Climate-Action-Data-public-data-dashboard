@@ -30,7 +30,12 @@ export const Dropdown = <T extends Item>(props: DropdownProps<T>) => {
   const renderItems = () => {
     return items.map((item) => {
       return (
-        <Box onClick={() => handleItemClick(item)} key={`dropdown-item-${generateRandomString()}`} _hover={{ cursor: `pointer`, backgroundColor: `lightGray.300` }}>
+        <Box
+          data-testid="dropdown-item"
+          onClick={() => handleItemClick(item)}
+          key={`dropdown-item-${generateRandomString()}`}
+          _hover={{ cursor: `pointer`, backgroundColor: `lightGray.300` }}
+        >
           <ListItem color="lightGray.700" fontSize="14px" padding="8px 16px 8px 16px">
             {item.label}
           </ListItem>
