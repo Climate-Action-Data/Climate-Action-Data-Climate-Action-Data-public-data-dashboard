@@ -56,7 +56,7 @@ const ProjectPage: NextPage = () => {
     })
   }
 
-  const handleOnClose = () => {
+  const handleOnCloseCompareWidget = () => {
     setCompareToggle(false)
     resetProjectsToCompare()
   }
@@ -93,7 +93,7 @@ const ProjectPage: NextPage = () => {
             <CSVDownload totalResults={projectResults?.data?.totalCount} exportType={CSVExportTypes.PROJECT} />
           </Box>
         </Container>
-        <ProjectCompareWidget isVisible={isCompare} projects={projectsToCompare} onCompare={onOpen} onClose={handleOnClose} />
+        <ProjectCompareWidget isVisible={isCompare} projects={projectsToCompare} onCompare={onOpen} onClose={handleOnCloseCompareWidget} />
       </VStack>
       <ProjectCompareResultDrawer projects={projectsToCompare} isOpen={isOpen} onClose={onClose} />
     </Flex>

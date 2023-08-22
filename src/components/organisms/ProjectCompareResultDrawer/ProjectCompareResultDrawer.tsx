@@ -1,4 +1,4 @@
-import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, Text, HStack, Spacer, Divider, Tr, Table, Td, Hide, Box, Flex } from '@chakra-ui/react'
+import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, Text, HStack, Spacer, Divider, Tr, Table, Td, Hide, Box, Flex, Link } from '@chakra-ui/react'
 import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
 import { CompareIcon } from '@/components/atoms/CompareIcon/CompareIcon'
 import { CloseIcon } from '@/components/atoms/CloseIcon/CloseIcon'
@@ -47,6 +47,14 @@ export const ProjectCompareResultDrawer = (props: ProjectCompareResultDrawerProp
     return { fontFamily, fontWeight }
   }
 
+  const renderLink = (link: string) => {
+    return (
+      <Link href={link} isExternal>
+        {link}
+      </Link>
+    )
+  }
+
   const renderRowMobile = (header: string, data: string[], type: CompareDataType = CompareDataType.TEXT) => {
     const textDataColor = type === CompareDataType.URL ? `blue.main` : `gray.700`
 
@@ -63,7 +71,7 @@ export const ProjectCompareResultDrawer = (props: ProjectCompareResultDrawerProp
             return (
               <>
                 <Text flex="1" pr={data.length > 0 ? `12px` : `0px`} fontSize="14px" overflowX="hidden" textColor={textDataColor} {...fontStyleFromType(type)}>
-                  {item}
+                  {type === CompareDataType.URL ? renderLink(item) : item}
                 </Text>
               </>
             )
@@ -89,7 +97,7 @@ export const ProjectCompareResultDrawer = (props: ProjectCompareResultDrawerProp
           return (
             <>
               <Td borderRight={isLast ? `0px` : `1px solid #B8BEC0`} width={`400px`} textColor={textDataColor} fontSize={`md`} {...fontStyleFromType(type)}>
-                {item}
+                {type === CompareDataType.URL ? renderLink(item) : item}
               </Td>
             </>
           )
