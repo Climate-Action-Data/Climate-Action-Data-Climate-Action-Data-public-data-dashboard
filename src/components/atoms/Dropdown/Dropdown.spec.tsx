@@ -27,6 +27,12 @@ describe(`Dropdown`, () => {
     expect(container).toMatchSnapshot()
   })
 
+  it(`renders correctly on items and mouse leave`, () => {
+    const { container } = render(<Dropdown onItemClick={genericOnItemMock} items={DEFAULT_ITEMS} placeholder={DEFAULT_PLACEHOLDER} />)
+    fireEvent.mouseLeave(screen.getByTestId(`dropdown-body`))
+    expect(container).toMatchSnapshot()
+  })
+
   it(`renders correctly on items and open click on item click`, () => {
     const itemMock = jest.fn()
     const { container } = render(<Dropdown onItemClick={itemMock} items={DEFAULT_ITEMS} placeholder={DEFAULT_PLACEHOLDER} />)

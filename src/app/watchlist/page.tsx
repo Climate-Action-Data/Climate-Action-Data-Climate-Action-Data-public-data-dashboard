@@ -1,6 +1,6 @@
 'use client'
-import { Watchlist } from '@/@types/Watchlist'
-import { Dropdown } from '@/components/atoms/Dropdown/Dropdown'
+import { Watchlist, WatchlistSorting } from '@/@types/Watchlist'
+import { Dropdown, Item } from '@/components/atoms/Dropdown/Dropdown'
 import { NoWatchlistScreen } from '@/components/atoms/NoWatchlistScreen/NoWatchlistScreen'
 import { PlusIcon } from '@/components/atoms/PlusIcon/PlusIcon'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
@@ -19,7 +19,11 @@ const WatchlistPage: NextPage = () => {
   const [watchlists, setWatchlists] = useState<Watchlist[] | undefined>(undefined)
 
   const { t } = useTranslation(`watchlist`)
-  //   const { t: tHome } = useTranslation(`home`)
+
+  const sortOptions: Item[] = Object.values(WatchlistSorting).map((value) => {
+    return { label: t(value), value }
+  })
+
   const { getAllWatchlist } = useEffects().watchlist
 
   useEffect(() => {
@@ -50,6 +54,32 @@ const WatchlistPage: NextPage = () => {
     }
   }
 
+  const handleSort = (selectedSort: Item) => {
+    if (!watchlists) {
+      return
+    }
+    const orderedWatchlists: Watchlist[] = [...watchlists]
+    switch (selectedSort.value) {
+      case WatchlistSorting.RECENTLY_ADDED:
+        orderedWatchlists.sort((a, b) => {
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        })
+        break
+      case WatchlistSorting.ALPHABETICAL:
+        orderedWatchlists.sort((a, b) => {
+          return a.name.localeCompare(b.name)
+        })
+        break
+      case WatchlistSorting.NUMBER_OF_PROJECTS:
+        orderedWatchlists.sort((a, b) => {
+          return b.projects - a.projects
+        })
+      default:
+        break
+    }
+    setWatchlists([...orderedWatchlists])
+  }
+
   return (
     <Box paddingY={[`20px`, `58px`]} paddingX={[`10px`, `220px`]}>
       <Heading>{t(`yourWatchlists`)}</Heading>
@@ -68,16 +98,7 @@ const WatchlistPage: NextPage = () => {
           )}
         </Flex>
         <Flex paddingTop="24px">
-          <Dropdown
-            items={[
-              { label: `Test`, value: `test` },
-              { label: `Plop`, value: `plop` },
-            ]}
-            onItemClick={() => {
-              console.log(`click`)
-            }}
-            placeholder={t(`sortBy`)}
-          />
+          <Dropdown items={sortOptions} onItemClick={(selectedSort) => handleSort(selectedSort)} placeholder={t(`sortBy`)} />
         </Flex>
         {renderBody()}
       </Box>

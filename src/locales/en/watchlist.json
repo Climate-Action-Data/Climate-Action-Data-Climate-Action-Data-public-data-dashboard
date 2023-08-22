@@ -5,6 +5,8 @@
     "sortBy": "Sort by: ",
     "noWatchlist": "Start a watchlist to easily organise and save carbon projects",
     "project_one": "Project",
-    "project_other": "Projects"
-
+    "project_other": "Projects",
+    "recentlyAdded": "Recently Added",
+    "alphabetical": "Alphabetical",
+    "numberOfProjects": "Number of Projects"
 }

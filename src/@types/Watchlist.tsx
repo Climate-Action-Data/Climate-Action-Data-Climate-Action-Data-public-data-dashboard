@@ -5,3 +5,8 @@ export type Watchlist = {
   projects: number
   createdAt: string
 }
+export enum WatchlistSorting {
+  RECENTLY_ADDED = `recentlyAdded`,
+  ALPHABETICAL = `alphabetical`,
+  NUMBER_OF_PROJECTS = `numberOfProjects`,
+}

@@ -7,6 +7,7 @@ exports[`renders correctly 1`] = `
   >
     <div
       class="chakra-card css-2dlz7"
+      data-testid="watchlist-summary-item"
     >
       <div
         class="chakra-card__body css-0"
@@ -43,6 +44,7 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       class="chakra-card css-2dlz7"
+      data-testid="watchlist-summary-item"
     >
       <div
         class="chakra-card__body css-0"
@@ -79,6 +81,7 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       class="chakra-card css-2dlz7"
+      data-testid="watchlist-summary-item"
     >
       <div
         class="chakra-card__body css-0"
@@ -115,6 +118,7 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       class="chakra-card css-2dlz7"
+      data-testid="watchlist-summary-item"
     >
       <div
         class="chakra-card__body css-0"

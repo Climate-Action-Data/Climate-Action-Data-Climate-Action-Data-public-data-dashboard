@@ -2,7 +2,7 @@ import { EffectResponse } from '@/@types/EffectResponse'
 import { Watchlist } from '@/@types/Watchlist'
 import { watchlistData } from '@/test/mock-data/watchlist_data'
 
-const DEFAULT_TIMEOUT = 3000
+const DEFAULT_TIMEOUT = 1000
 
 export const getAllWatchlist = async (): Promise<EffectResponse<Watchlist[]>> => {
   await new Promise((resolve) => setTimeout(resolve, DEFAULT_TIMEOUT))

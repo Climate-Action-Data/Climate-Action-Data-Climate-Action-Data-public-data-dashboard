@@ -149,6 +149,97 @@ exports[`Dropdown renders correctly on items 1`] = `
 </div>
 `;
 
+exports[`Dropdown renders correctly on items and mouse leave 1`] = `
+<div>
+  <button
+    aria-controls="popover-content-:r7:"
+    aria-expanded="false"
+    aria-haspopup="dialog"
+    class="chakra-button css-aay2ge"
+    data-testid="dropdown-button"
+    id="popover-trigger-:r7:"
+    type="button"
+  >
+    <div
+      class="css-1rr4qq7"
+    >
+      Select an item
+       
+      <span
+        class="chakra-text css-10rvbm3"
+      >
+        Item 1
+      </span>
+    </div>
+    <svg
+      class="chakra-icon css-c0air1"
+      focusable="false"
+      viewBox="0 0 8 4"
+    >
+      <path
+        d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+  <div
+    class="chakra-popover__popper css-0"
+    style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+  >
+    <section
+      aria-describedby="popover-body-:r7:"
+      class="chakra-popover__content css-faem7"
+      data-testid="dropdown-body"
+      id="popover-content-:r7:"
+      role="dialog"
+      style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+      tabindex="-1"
+    >
+      <div
+        class="chakra-popover__body css-old1by"
+        id="popover-body-:r7:"
+      >
+        <ul
+          class="css-155za0w"
+          role="list"
+        >
+          <div
+            class="css-ua49oa"
+            data-testid="dropdown-item"
+          >
+            <li
+              class="css-1gf73kr"
+            >
+              Item 1
+            </li>
+          </div>
+          <div
+            class="css-ua49oa"
+            data-testid="dropdown-item"
+          >
+            <li
+              class="css-1gf73kr"
+            >
+              Item 2
+            </li>
+          </div>
+          <div
+            class="css-ua49oa"
+            data-testid="dropdown-item"
+          >
+            <li
+              class="css-1gf73kr"
+            >
+              Item 3
+            </li>
+          </div>
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
 exports[`Dropdown renders correctly on items and open click 1`] = `
 <div>
   <button
@@ -246,12 +337,12 @@ exports[`Dropdown renders correctly on items and open click 1`] = `
 exports[`Dropdown renders correctly on items and open click on item click 1`] = `
 <div>
   <button
-    aria-controls="popover-content-:r7:"
+    aria-controls="popover-content-:r9:"
     aria-expanded="false"
     aria-haspopup="dialog"
     class="chakra-button css-aay2ge"
     data-testid="dropdown-button"
-    id="popover-trigger-:r7:"
+    id="popover-trigger-:r9:"
     type="button"
   >
     <div
@@ -284,17 +375,17 @@ exports[`Dropdown renders correctly on items and open click on item click 1`] = 
     style="visibility: hidden; position: absolute; inset: 0 auto auto 0; left: 0px; top: 0px; margin: 0px; transform: translate(0px, 0px); width: 0px; --popper-transform-origin: top center;"
   >
     <section
-      aria-describedby="popover-body-:r7:"
+      aria-describedby="popover-body-:r9:"
       class="chakra-popover__content css-faem7"
       data-testid="dropdown-body"
-      id="popover-content-:r7:"
+      id="popover-content-:r9:"
       role="dialog"
       style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: visible; transform: scale(0.95) translateZ(0);"
       tabindex="-1"
     >
       <div
         class="chakra-popover__body css-old1by"
-        id="popover-body-:r7:"
+        id="popover-body-:r9:"
       >
         <ul
           class="css-155za0w"
