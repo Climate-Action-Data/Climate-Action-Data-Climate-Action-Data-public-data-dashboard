@@ -20,7 +20,7 @@ const ExportComparisonButton: FC<ExportComparisonButtonProps> = (props) => {
       borderRadius="32px"
       fontSize="14px"
       fontWeight="medium"
-      data-testid="compare-toggle-button"
+      data-testid="export-comparison-button"
     >
       <Flex alignItems={`center`}>Export comparison table</Flex>
       <DownloadIcon ml="4px" />
