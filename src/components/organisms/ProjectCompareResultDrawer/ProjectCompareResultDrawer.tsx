@@ -1,28 +1,18 @@
-import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, Text, HStack, Spacer, Divider, Tr, Table, Td, Hide, Tbody, Th, Thead, Box, Flex } from '@chakra-ui/react'
+import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, Text, HStack, Spacer, Divider, Tr, Table, Td, Hide, Box, Flex } from '@chakra-ui/react'
 import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
 import { CompareIcon } from '@/components/atoms/CompareIcon/CompareIcon'
 import { CloseIcon } from '@/components/atoms/CloseIcon/CloseIcon'
 import { formatDate } from '@/utils/DateFormat'
 import { DateFormats } from '@/@types/DateFormats'
 import { useTranslation } from 'react-i18next'
-import ExportComparisonButton from '../../atoms/ExportComparisonButton/ExportComparisonButton'
-import { DownloadIcon } from '../../atoms/DownloadIcon/DownloadIcon'
+import ExportComparisonButton from '@/components/atoms/ExportComparisonButton/ExportComparisonButton'
+import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
+import { CompareDataType, ProjectCompareData } from '@/@types/ProjectCompare'
 
 interface ProjectCompareResultDrawerProps {
   isOpen: boolean
   onClose: () => void
   projects: ProjectSearchResult[]
-}
-
-enum CompareDataType {
-  STRING = `string`,
-  URL = `url`,
-}
-
-interface ProjectCompareData {
-  header: string
-  data: string[]
-  type?: CompareDataType
 }
 
 export const ProjectCompareResultDrawer = (props: ProjectCompareResultDrawerProps) => {
