@@ -43,7 +43,7 @@ const WatchlistPage: NextPage = () => {
               <VStack flex="1" minH="100%" justifyContent="space-between">
                 {watchlist && (
                   <>
-                    <WatchlistMenu watchlistId={watchlist.id} />
+                    <WatchlistMenu watchlist={watchlist} />
                     <InputGroup variant="white" width="100%">
                       <Input pr="4.5rem" type="text" placeholder={t(`searchProjects`)} />
                       <InputRightElement paddingRight="5px" width="auto">

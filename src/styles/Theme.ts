@@ -70,6 +70,16 @@ const theme = extendTheme({
       },
     },
     Button: {
+      baseStyle: {
+        _hover: {
+          _disabled: {
+            backgroundColor: `lightGray.200`,
+            borderColor: `lightGray.200`,
+            color: `lightGray.500`,
+            opacity: 1,
+          },
+        },
+      },
       variants: {
         brandPrimary,
         whiteSecondary,
