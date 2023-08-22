@@ -22,7 +22,7 @@ const CompareSubmitButton: FC<CompareSubmitButtonProps> = (props) => {
       onClick={onClick}
       isDisabled={isDisabled}
       fontSize="14px"
-      data-testid="compare-toggle-button"
+      data-testid="compare-submit-button"
     >
       <Flex alignItems={`center`} textColor={`black`}>
         {t(`projectCompare.compare`)}
