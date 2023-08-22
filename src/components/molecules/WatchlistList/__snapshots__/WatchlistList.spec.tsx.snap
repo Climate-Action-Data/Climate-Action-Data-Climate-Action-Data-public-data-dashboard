@@ -31,11 +31,13 @@ exports[`renders correctly 1`] = `
         >
           <span
             class="chakra-text css-xtdk5e"
-          />
+          >
+            16
+          </span>
           <p
             class="chakra-text css-1ezsviu"
           >
-            project
+            Projects
           </p>
         </div>
       </div>
@@ -66,11 +68,13 @@ exports[`renders correctly 1`] = `
         >
           <span
             class="chakra-text css-xtdk5e"
-          />
+          >
+            5
+          </span>
           <p
             class="chakra-text css-1ezsviu"
           >
-            project
+            Projects
           </p>
         </div>
       </div>
@@ -101,11 +105,13 @@ exports[`renders correctly 1`] = `
         >
           <span
             class="chakra-text css-xtdk5e"
-          />
+          >
+            1
+          </span>
           <p
             class="chakra-text css-1ezsviu"
           >
-            project
+            Project
           </p>
         </div>
       </div>
@@ -136,11 +142,13 @@ exports[`renders correctly 1`] = `
         >
           <span
             class="chakra-text css-xtdk5e"
-          />
+          >
+            24
+          </span>
           <p
             class="chakra-text css-1ezsviu"
           >
-            project
+            Projects
           </p>
         </div>
       </div>
