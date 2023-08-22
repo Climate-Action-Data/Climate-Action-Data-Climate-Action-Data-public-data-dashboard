@@ -8,7 +8,7 @@ export interface CompareToggleButtonProps {
 }
 
 const CompareToggleButton: FC<CompareToggleButtonProps> = (props) => {
-  const { isDisabled: isEnabled, onClick } = props
+  const { isDisabled, onClick } = props
 
   return (
     <Button
@@ -17,7 +17,7 @@ const CompareToggleButton: FC<CompareToggleButtonProps> = (props) => {
       width="max-content"
       border="1px solid #FFFFFF"
       onClick={onClick}
-      isDisabled={isEnabled}
+      isDisabled={isDisabled}
       borderRadius="32px"
       fontSize="14px"
       fontWeight="medium"

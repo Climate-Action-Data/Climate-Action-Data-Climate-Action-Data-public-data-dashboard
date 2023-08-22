@@ -529,7 +529,7 @@ exports[`ProjectFilterAndSearch renders correctly 1`] = `
             class="css-k008qs"
           >
             <div
-              class="css-1lkwiwl"
+              class="css-17xejub"
             />
             <button
               class="chakra-button css-7i7203"
@@ -1111,7 +1111,7 @@ exports[`ProjectFilterAndSearch renders correctly and the filter-and-search-trig
             class="css-k008qs"
           >
             <div
-              class="css-1lkwiwl"
+              class="css-17xejub"
             />
             <button
               class="chakra-button css-7i7203"

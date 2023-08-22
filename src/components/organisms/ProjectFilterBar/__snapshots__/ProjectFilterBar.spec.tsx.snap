@@ -806,7 +806,7 @@ exports[`renders correctly with loaded data 1`] = `
           class="css-k008qs"
         >
           <div
-            class="css-1lkwiwl"
+            class="css-17xejub"
           />
           <button
             class="chakra-button css-7i7203"
@@ -1642,7 +1642,7 @@ exports[`renders correctly with loaded data and search click 1`] = `
           class="css-k008qs"
         >
           <div
-            class="css-1lkwiwl"
+            class="css-17xejub"
           />
           <button
             class="chakra-button css-7i7203"
@@ -2198,7 +2198,7 @@ exports[`renders correctly with no data 1`] = `
           class="css-k008qs"
         >
           <div
-            class="css-1lkwiwl"
+            class="css-17xejub"
           />
           <button
             class="chakra-button css-7i7203"
