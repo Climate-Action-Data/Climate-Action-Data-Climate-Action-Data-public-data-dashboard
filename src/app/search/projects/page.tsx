@@ -87,7 +87,7 @@ const ProjectPage: NextPage = () => {
       )}
 
       <VStack>
-        <Container variant={`paginationBar`} bottom={isCompare ? `136px` : `0px`}>
+        <Container variant={`paginationBar`} bottom={isCompare ? [`96px`, `96px`, `136px`, `136px`] : `0px`}>
           <PaginationWidget onPageChange={handleOnPageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={projectResults?.data?.totalCount ?? 0} />
           <Box position={[`unset`, `absolute`]} right="10px" float="right">
             <CSVDownload totalResults={projectResults?.data?.totalCount} exportType={CSVExportTypes.PROJECT} />

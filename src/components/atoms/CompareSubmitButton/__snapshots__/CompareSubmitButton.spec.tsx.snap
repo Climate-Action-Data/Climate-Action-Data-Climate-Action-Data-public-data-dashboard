@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <button
-    class="chakra-button css-96ylqc"
+    class="chakra-button css-1t7pqmu"
     data-testid="compare-toggle-button"
     disabled=""
     type="button"

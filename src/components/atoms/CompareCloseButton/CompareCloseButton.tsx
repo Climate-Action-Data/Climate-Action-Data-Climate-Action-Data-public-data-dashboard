@@ -12,6 +12,7 @@ const CompareCloseButton: FC<CompareCloseButtonProps> = (props) => {
     <Button
       variant="blueOutline"
       width="100%"
+      minW={`187px`}
       padding="6px 12px"
       maxWidth="200px"
       height="32px"

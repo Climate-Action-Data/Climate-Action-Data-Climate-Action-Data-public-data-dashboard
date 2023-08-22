@@ -9,7 +9,7 @@ import { CompareDataType, ProjectCompareData } from '@/@types/ProjectCompare'
 import { formatCreditingPeriod } from '@/utils/TextConverter'
 import { AeonikFono } from '@/styles/fonts'
 import { createAndDownload } from '@/components/molecules/CSVDownload/CSVDownload'
-import { compareProjectCsvHeaders, convertCompareProjectToCSV } from '@/utils/CsvCoverter'
+import { compareProjectCsvHeaders, convertCompareProjectToCSV } from '@/utils/CsvHelper'
 
 interface ProjectCompareResultDrawerProps {
   isOpen: boolean
