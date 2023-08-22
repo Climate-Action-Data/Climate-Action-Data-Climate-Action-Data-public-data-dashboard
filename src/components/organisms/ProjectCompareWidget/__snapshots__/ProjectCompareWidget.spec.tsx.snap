@@ -27,7 +27,7 @@ exports[`ProjectCompareWidget renders correctly 1`] = `
       </button>
       <button
         class="chakra-button css-1t7pqmu"
-        data-testid="compare-toggle-button"
+        data-testid="compare-submit-button"
         type="button"
       >
         <div
@@ -157,7 +157,7 @@ exports[`ProjectCompareWidget renders correctly 1`] = `
     >
       <button
         class="chakra-button css-1t7pqmu"
-        data-testid="compare-toggle-button"
+        data-testid="compare-submit-button"
         type="button"
       >
         <div

@@ -669,7 +669,7 @@ exports[`renders correctly 1`] = `
           </button>
           <button
             class="chakra-button css-1t7pqmu"
-            data-testid="compare-toggle-button"
+            data-testid="compare-submit-button"
             type="button"
           >
             <div
@@ -703,7 +703,7 @@ exports[`renders correctly 1`] = `
         >
           <button
             class="chakra-button css-1t7pqmu"
-            data-testid="compare-toggle-button"
+            data-testid="compare-submit-button"
             type="button"
           >
             <div
@@ -859,7 +859,7 @@ exports[`renders correctly and click next page 1`] = `
           </button>
           <button
             class="chakra-button css-1t7pqmu"
-            data-testid="compare-toggle-button"
+            data-testid="compare-submit-button"
             type="button"
           >
             <div
@@ -893,7 +893,7 @@ exports[`renders correctly and click next page 1`] = `
         >
           <button
             class="chakra-button css-1t7pqmu"
-            data-testid="compare-toggle-button"
+            data-testid="compare-submit-button"
             type="button"
           >
             <div
@@ -1599,7 +1599,7 @@ exports[`renders correctly on table data 1`] = `
           </button>
           <button
             class="chakra-button css-1t7pqmu"
-            data-testid="compare-toggle-button"
+            data-testid="compare-submit-button"
             type="button"
           >
             <div
@@ -1633,7 +1633,7 @@ exports[`renders correctly on table data 1`] = `
         >
           <button
             class="chakra-button css-1t7pqmu"
-            data-testid="compare-toggle-button"
+            data-testid="compare-submit-button"
             type="button"
           >
             <div
@@ -2339,7 +2339,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
           </button>
           <button
             class="chakra-button css-1t7pqmu"
-            data-testid="compare-toggle-button"
+            data-testid="compare-submit-button"
             type="button"
           >
             <div
@@ -2373,7 +2373,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
         >
           <button
             class="chakra-button css-1t7pqmu"
-            data-testid="compare-toggle-button"
+            data-testid="compare-submit-button"
             type="button"
           >
             <div
