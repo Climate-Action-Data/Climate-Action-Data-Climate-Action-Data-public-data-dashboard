@@ -13,7 +13,17 @@ const CompareSubmitButton: FC<CompareSubmitButtonProps> = (props) => {
   const { t } = useTranslation(`search`)
 
   return (
-    <Button variant="accentPrimary32" width="100%" height="40px" maxWidth="200px" onClick={onClick} isDisabled={isDisabled} fontSize="14px" data-testid="compare-toggle-button">
+    <Button
+      variant="accentPrimary32"
+      width="100%"
+      minW={`187px`}
+      height="32px"
+      maxWidth="200px"
+      onClick={onClick}
+      isDisabled={isDisabled}
+      fontSize="14px"
+      data-testid="compare-toggle-button"
+    >
       <Flex alignItems={`center`} textColor={`black`}>
         {t(`projectCompare.compare`)}
       </Flex>
