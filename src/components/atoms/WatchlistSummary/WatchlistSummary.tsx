@@ -23,9 +23,9 @@ export const WatchlistSummary = (props: WatchlistSummaryProps) => {
         </Flex>
         <Flex gap="8px" alignItems="center">
           <ImportantText fontFamily={AeonikFono.style.fontFamily} fontWeight="400">
-            {watchlist.projects}
+            {watchlist.projectNumber}
           </ImportantText>
-          <Text fontSize="lg">{t(`project`, { count: watchlist.projects })}</Text>
+          <Text fontSize="lg">{t(`project`, { count: watchlist.projectNumber })}</Text>
         </Flex>
       </CardBody>
     </Card>

@@ -28,13 +28,11 @@ exports[`renders correctly 1`] = `
       >
         <span
           class="chakra-text css-xtdk5e"
-        >
-          16
-        </span>
+        />
         <p
           class="chakra-text css-1ezsviu"
         >
-          Projects
+          project
         </p>
       </div>
     </div>
