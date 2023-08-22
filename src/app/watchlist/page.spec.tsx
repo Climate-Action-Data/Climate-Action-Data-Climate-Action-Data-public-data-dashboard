@@ -14,6 +14,7 @@ it(`renders correctly`, () => {
 const INDEX_RECENTLY_ADDED = 0
 const INDEX_ALPHABETICAL = 1
 const INDEX_PROJECTS = 2
+
 it(`renders correctly with sort Recents`, () => {
   const { container } = render(
     <TestOvermindWrapper>

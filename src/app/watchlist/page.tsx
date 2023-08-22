@@ -8,12 +8,9 @@ import { SpinnerScreen } from '@/components/atoms/SpinnerScreen/SpinnerScreen'
 import { WatchlistList } from '@/components/molecules/WatchlistList/WatchlistList'
 import { useEffects } from '@/overmind'
 import { Heading, Box, Input, InputGroup, InputLeftElement, Flex, Button, Center } from '@chakra-ui/react'
-// import { Watchlist } from '@/@types/Watchlist'
-// import { useEffects } from '@/overmind'
 import { NextPage } from 'next'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-// import { useTranslation } from 'react-i18next'
 
 const WatchlistPage: NextPage = () => {
   const [watchlists, setWatchlists] = useState<Watchlist[] | undefined>(undefined)
@@ -74,7 +71,6 @@ const WatchlistPage: NextPage = () => {
         orderedWatchlists.sort((a, b) => {
           return b.projects - a.projects
         })
-      default:
         break
     }
     setWatchlists([...orderedWatchlists])
