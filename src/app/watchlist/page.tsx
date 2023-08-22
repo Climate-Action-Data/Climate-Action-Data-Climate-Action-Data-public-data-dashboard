@@ -55,7 +55,9 @@ const WatchlistPage: NextPage = () => {
     if (!watchlists) {
       return
     }
+
     const orderedWatchlists: Watchlist[] = [...watchlists]
+
     switch (selectedSort.value) {
       case WatchlistSorting.RECENTLY_ADDED:
         orderedWatchlists.sort((a, b) => {
