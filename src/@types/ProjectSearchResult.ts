@@ -2,10 +2,12 @@ export interface ProjectSearchResult {
   name: string
   id: string
   warehouseProjectId: string
+  link: string
   standard: string
   methodology: string
   sector: string
   country?: string
+  inCountryRegion?: string
   status: string
   creditingPeriodStart?: string
   creditingPeriodEnd?: string
