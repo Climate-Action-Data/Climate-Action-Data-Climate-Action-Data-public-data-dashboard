@@ -12,8 +12,14 @@
     "recentlyAdded": "Recently Added",
     "alphabetical": "Alphabetical",
     "numberOfProjects": "Number of Projects",
-    "renameWatchlist": "Rename Watchlist",
-    "deleteWatchlist": "Delete Watchlist",
-    "deleteWatchlistTitle": "Delete Watchlist?",
-    "deleteWatchlistText": "By confirming this action, your watchlist will be permanently deleted. Any projects currently saved within the watchlist will also be removed."
+    "renameWatchlist": "Rename watchlist",
+    "deleteWatchlist": "Delete watchlist",
+    "deleteWatchlistTitle": "Delete watchlist?",
+    "deleteWatchlistText": "By confirming this action, your watchlist will be permanently deleted. Any projects currently saved within the watchlist will also be removed.",
+    "create": "Create",
+    "save": "Save",
+    "name": "Name", 
+    "description": "Description",
+    "sizeSeperator": "/",
+    "cancel": "Cancel"
 }

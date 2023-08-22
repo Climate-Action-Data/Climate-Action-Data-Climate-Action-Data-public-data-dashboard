@@ -66,5 +66,23 @@ export const Input = helpers.defineMultiStyleConfig({
         },
       },
     },
+    underlined: {
+      field: {
+        border: `none`,
+        borderRadius: 0,
+        borderBottomWidth: `1px`,
+        borderBottomStyle: `solid`,
+        borderBottomColor: `lightGray.400`,
+
+        _focusVisible: {
+          outline: `none !important`,
+          boxShadow: `none !important`,
+          borderRadius: 0,
+          borderBottomWidth: `1px`,
+          borderBottomStyle: `solid`,
+          borderBottomColor: `lightGray.700`,
+        },
+      },
+    },
   },
 })

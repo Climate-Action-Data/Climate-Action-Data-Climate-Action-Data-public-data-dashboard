@@ -6,23 +6,35 @@ import { DeletePopup } from '@/components/atoms/DeletePopup/DeletePopup'
 import { useState } from 'react'
 import { useEffects } from '@/overmind'
 import { useRouter } from 'next/navigation'
+import { EditWatchlistPopup } from '@/components/atoms/EditWatchlistPopup/EditWatchlistPopup'
+import { Watchlist } from '@/@types/Watchlist'
 
 interface WatchlistMenuProps {
-  watchlistId: string
+  watchlist: Watchlist
 }
 
 export const WatchlistMenu = (props: WatchlistMenuProps) => {
-  const { watchlistId } = props
+  const { watchlist } = props
   const { t } = useTranslation(`watchlist`)
   const router = useRouter()
 
   const [showDeletePopup, setShowDeletePopup] = useState<boolean>(false)
+  const [showRenamePopup, setShowRenamePopup] = useState<boolean>(false)
 
-  const { deleteWatchlist } = useEffects().watchlist
+  const { renameWatchlist } = useEffects().watchlist
 
   const handleRename = () => {
-    //TODO: implement rename
-    return true
+    setShowRenamePopup(true)
+  }
+
+  const handleRenameConfirm = async (name: string, description: string) => {
+    await renameWatchlist(watchlist.id, name, description)
+    setShowRenamePopup(false)
+    router.push(`/watchlist/view?id=${watchlist.id}`)
+  }
+
+  const handleRenameCancel = () => {
+    setShowRenamePopup(false)
   }
 
   const handleDelete = () => {
@@ -63,6 +75,14 @@ export const WatchlistMenu = (props: WatchlistMenuProps) => {
         description={t(`deleteWatchlistText`)}
         onCancel={handleDeleteCancel}
         onConfirm={handleDeleteConfirm}
+      />
+      <EditWatchlistPopup
+        isOpen={showRenamePopup}
+        title={t(`renameWatchlist`)}
+        name={watchlist.name}
+        description={watchlist.description}
+        onCancel={handleRenameCancel}
+        onConfirm={handleRenameConfirm}
       />
     </>
   )

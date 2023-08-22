@@ -54,3 +54,8 @@ export const deleteWatchlist = async (id: string): Promise<boolean> => {
   await new Promise((resolve) => setTimeout(resolve, DEFAULT_TIMEOUT))
   return true
 }
+
+export const renameWatchlist = async (id: string, name: string, description: string): Promise<boolean> => {
+  await new Promise((resolve) => setTimeout(resolve, DEFAULT_TIMEOUT))
+  return true
+}

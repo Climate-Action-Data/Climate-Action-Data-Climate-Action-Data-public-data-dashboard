@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeletePopup renders correctly 1`] = `
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+/>
+`;
+
+exports[`DeletePopup renders correctly and closes from cancel button 1`] = `<div />`;
+
+exports[`DeletePopup renders correctly and closes from close button 1`] = `<div />`;
+
+exports[`DeletePopup renders correctly and closes from confirm button 1`] = `<div />`;
+
+exports[`DeletePopup renders correctly when closed 1`] = `<div />`;
