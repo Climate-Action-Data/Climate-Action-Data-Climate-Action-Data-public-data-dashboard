@@ -6,7 +6,7 @@ export const watchlistData: Watchlist[] = [
     name: `Electric - Biogas`,
     description: `Lorem ipsum hello world`,
     projects: 16,
-    createdAt: `2023-05-19T13:52:34.115Z`,
+    createdAt: `2023-04-19T13:52:34.115Z`,
   },
   {
     id: `efd851f9-6c93-4e95-9957-d7f04a43e3c7`,
@@ -20,13 +20,13 @@ export const watchlistData: Watchlist[] = [
     name: `GCC`,
     description: `Lorem ipsum hello world`,
     projects: 1,
-    createdAt: `2023-05-19T13:52:34.115Z`,
+    createdAt: `2023-02-19T13:52:34.115Z`,
   },
   {
     id: `7f9ec251-0285-4beb-a6b4-137081917adc`,
     name: `Cookstoves`,
     description: `Lorem ipsum hello world`,
     projects: 24,
-    createdAt: `2023-05-19T13:52:34.115Z`,
+    createdAt: `2023-01-19T13:52:34.115Z`,
   },
 ]

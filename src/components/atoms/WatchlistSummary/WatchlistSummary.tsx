@@ -11,7 +11,7 @@ export const WatchlistSummary = (props: WatchlistSummaryProps) => {
   const { watchlist } = props
   const { t } = useTranslation(`watchlist`)
   return (
-    <Card variant={`watchlist`}>
+    <Card data-testid="watchlist-summary-item" variant={`watchlist`}>
       <CardBody>
         <Flex gap="4px" justifyContent="center" flexDirection="column" flex={1}>
           <Heading fontFamily={Aeonik.style.fontFamily} fontSize="20px">
