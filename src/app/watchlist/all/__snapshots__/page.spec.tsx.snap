@@ -803,7 +803,7 @@ exports[`should set watchlists correctly when searching 1`] = `
               </p>
             </div>
             <div
-              class="css-1c1kq07"
+              class="css-1pm2dkj"
             >
               <span
                 class="chakra-text css-xtdk5e"
@@ -1002,7 +1002,7 @@ exports[`should set watchlists correctly when searching and going back 1`] = `
               </p>
             </div>
             <div
-              class="css-1c1kq07"
+              class="css-1pm2dkj"
             >
               <span
                 class="chakra-text css-xtdk5e"
@@ -1039,7 +1039,7 @@ exports[`should set watchlists correctly when searching and going back 1`] = `
               </p>
             </div>
             <div
-              class="css-1c1kq07"
+              class="css-1pm2dkj"
             >
               <span
                 class="chakra-text css-xtdk5e"
@@ -1076,7 +1076,7 @@ exports[`should set watchlists correctly when searching and going back 1`] = `
               </p>
             </div>
             <div
-              class="css-1c1kq07"
+              class="css-1pm2dkj"
             >
               <span
                 class="chakra-text css-xtdk5e"
@@ -1113,7 +1113,7 @@ exports[`should set watchlists correctly when searching and going back 1`] = `
               </p>
             </div>
             <div
-              class="css-1c1kq07"
+              class="css-1pm2dkj"
             >
               <span
                 class="chakra-text css-xtdk5e"

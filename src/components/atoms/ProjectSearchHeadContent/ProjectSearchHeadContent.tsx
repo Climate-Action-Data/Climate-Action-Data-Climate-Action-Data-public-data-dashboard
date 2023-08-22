@@ -9,6 +9,8 @@ import { useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { MenuContent, MenuItemProps } from '../MenuContent/MenuContent'
 import { generateProjectPDFDocument } from '../../../app/project/page.pdf'
+import { AddWatchlistPopup } from '@/components/molecules/AddWatchlistPopup/AddWatchlistPopup'
+import { useState } from 'react'
 
 interface ProjectSearchHeadContentProps {
   projectResults?: EffectResponse<ProjectSearchResponse>
@@ -17,6 +19,8 @@ interface ProjectSearchHeadContentProps {
 export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) => {
   const { projectResults } = props
   const router = useRouter()
+  const [projectIdForWatchlist, setProjectIdForWatchlist] = useState<string>(``)
+  const [showAddWatchlistPopup, setShowAddWatchlistPopup] = useState<boolean>(false)
   const { t } = useTranslation(`search`)
 
   const handleClick = (projectId: string, event?: any) => {
@@ -26,6 +30,14 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
         router.push(`/project?id=${projectId}`)
       }
     }
+  }
+
+  const handleAddWatchlistClose = () => {
+    setShowAddWatchlistPopup(false)
+  }
+  const testAlert = (id: string) => {
+    setShowAddWatchlistPopup(true)
+    setProjectIdForWatchlist(id)
   }
 
   const generateMenuList = (projectWarehouseId: string) => {
@@ -41,7 +53,7 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
         icon: <DownloadIcon />,
         text: t(`projectMenu.exportProject`),
       },
-      { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`) },
+      { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`), onClick: () => testAlert(projectWarehouseId) },
     ]
     return menuList
   }
@@ -96,6 +108,7 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
           </Tr>
         )}
       </Tbody>
+      <AddWatchlistPopup onModalClose={handleAddWatchlistClose} warehouseProjectId={projectIdForWatchlist} isOpen={showAddWatchlistPopup} />
     </Table>
   )
 }

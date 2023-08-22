@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditWatchlistPopup renders correctly 1`] = `
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+/>
+`;
+
+exports[`EditWatchlistPopup renders correctly and closes from cancel button 1`] = `<div />`;
+
+exports[`EditWatchlistPopup renders correctly and closes from close button 1`] = `<div />`;
+
+exports[`EditWatchlistPopup renders correctly when closed 1`] = `<div />`;

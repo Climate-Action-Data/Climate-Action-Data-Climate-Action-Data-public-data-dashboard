@@ -59,3 +59,13 @@ export const renameWatchlist = async (id: string, name: string, description: str
   await new Promise((resolve) => setTimeout(resolve, DEFAULT_TIMEOUT))
   return true
 }
+
+export const addProjectToWatchlist = async (projectId: string, watchlistId: string): Promise<boolean> => {
+  await new Promise((resolve) => setTimeout(resolve, DEFAULT_TIMEOUT))
+  return true
+}
+
+export const removeProjectFromWatchlist = async (projectId: string, watchlistId: string): Promise<boolean> => {
+  await new Promise((resolve) => setTimeout(resolve, DEFAULT_TIMEOUT))
+  return true
+}

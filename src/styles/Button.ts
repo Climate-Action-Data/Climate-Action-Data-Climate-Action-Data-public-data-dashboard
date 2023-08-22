@@ -84,7 +84,7 @@ export const hoverOnly = defineStyle({
   color: `gray.800`,
   weight: `500`,
   padding: `8px`,
-  display: `inline`,
+  display: `inline-flex`,
   lineHeight: `20px`,
   borderRadius: `40px`,
   _hover: {

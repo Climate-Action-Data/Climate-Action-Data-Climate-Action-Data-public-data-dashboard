@@ -42,7 +42,7 @@ import { menuWhite, menuDark } from './Menu'
 import { statMain } from './Stat'
 import { tagTheme } from '@/styles/Tag'
 import { homeFilterAndSearchWrapper, resultsPageFilterAndSearchWrapper } from '@/styles/Container'
-import { watchlist } from './Card'
+import { watchlist, watchlistNoHover } from './Card'
 
 const theme = extendTheme({
   fontSizes: fontSizes,
@@ -154,6 +154,7 @@ const theme = extendTheme({
       },
       variants: {
         watchlist,
+        watchlistNoHover,
       },
     },
     Text,

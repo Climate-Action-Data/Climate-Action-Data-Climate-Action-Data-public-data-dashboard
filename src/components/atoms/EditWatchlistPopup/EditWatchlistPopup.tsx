@@ -36,8 +36,8 @@ export const EditWatchlistPopup = (props: EditWatchlistPopupProps) => {
   }
 
   const handleConfirm = () => {
-    setIsOpenModal(false)
     onConfirm?.(nameInput, descriptionInput)
+    setIsOpenModal(false)
   }
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
