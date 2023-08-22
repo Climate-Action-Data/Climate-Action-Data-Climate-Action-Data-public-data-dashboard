@@ -47,5 +47,7 @@
   "homeBreadcrumb": "Home",
   "noData": "--",
   "projectView": "Project View",
+  "cancel": "Cancel",
+  "delete": "Delete",
   "unitView": "Unit View"
 }

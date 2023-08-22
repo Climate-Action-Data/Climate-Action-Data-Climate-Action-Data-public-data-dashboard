@@ -285,6 +285,35 @@ export const blueFilled = defineStyle({
   },
 })
 
+export const redOutline = defineStyle({
+  ...blueOutline,
+  borderColor: `red.400`,
+  color: `red.400`,
+  fontSize: `14px`,
+  lineHeight: `20px`,
+  fontWeight: 500,
+  _hover: {
+    backgroundColor: `gray.50`,
+    textDecoration: `none`,
+  },
+  _active: {
+    backgroundColor: `lightGray.200`,
+  },
+})
+
+export const redFilled = defineStyle({
+  ...blueOutline,
+  borderColor: `red.400`,
+  background: `red.400`,
+  color: `white`,
+  _hover: {
+    background: `red.700`,
+  },
+  _active: {
+    background: `red.800`,
+  },
+})
+
 export const modalClose = defineStyle({
   backgroundColor: `transparent`,
   color: `lightGray.700`,

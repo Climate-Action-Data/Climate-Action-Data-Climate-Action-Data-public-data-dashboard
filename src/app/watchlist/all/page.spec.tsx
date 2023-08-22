@@ -1,11 +1,14 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import WatchlistPage from './page'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
+import { TestRouter } from '@/test/TestRouter'
 
 it(`renders correctly`, () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <WatchlistPage />
+      <TestRouter router={{}}>
+        <WatchlistPage />
+      </TestRouter>
     </TestOvermindWrapper>,
   )
   expect(container).toMatchSnapshot()
@@ -18,7 +21,9 @@ const INDEX_PROJECTS = 2
 it(`renders correctly with sort Recents`, () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <WatchlistPage />
+      <TestRouter router={{}}>
+        <WatchlistPage />
+      </TestRouter>
     </TestOvermindWrapper>,
   )
   fireEvent.click(screen.getByTestId(`dropdown-button`))
@@ -31,7 +36,9 @@ it(`renders correctly with sort Recents`, () => {
 it(`renders correctly with sort Alphabetical`, () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <WatchlistPage />
+      <TestRouter router={{}}>
+        <WatchlistPage />
+      </TestRouter>
     </TestOvermindWrapper>,
   )
   fireEvent.click(screen.getByTestId(`dropdown-button`))
@@ -44,7 +51,9 @@ it(`renders correctly with sort Alphabetical`, () => {
 it(`renders correctly with sort Projects`, () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <WatchlistPage />
+      <TestRouter router={{}}>
+        <WatchlistPage />
+      </TestRouter>
     </TestOvermindWrapper>,
   )
   fireEvent.click(screen.getByTestId(`dropdown-button`))
@@ -59,7 +68,9 @@ const DELAY_FOR_RENDER = 3000
 it(`should set watchlists correctly when sorting`, async () => {
   render(
     <TestOvermindWrapper>
-      <WatchlistPage />
+      <TestRouter router={{}}>
+        <WatchlistPage />
+      </TestRouter>
     </TestOvermindWrapper>,
   )
   await new Promise((r) => setTimeout(r, DELAY_FOR_RENDER))
@@ -70,7 +81,9 @@ it(`should set watchlists correctly when sorting`, async () => {
 it(`should set watchlists correctly when searching`, async () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <WatchlistPage />
+      <TestRouter router={{}}>
+        <WatchlistPage />
+      </TestRouter>
     </TestOvermindWrapper>,
   )
   await new Promise((r) => setTimeout(r, DELAY_FOR_RENDER))
@@ -83,7 +96,9 @@ it(`should set watchlists correctly when searching`, async () => {
 it(`should set watchlists correctly when searching and going back`, async () => {
   const { container } = render(
     <TestOvermindWrapper>
-      <WatchlistPage />
+      <TestRouter router={{}}>
+        <WatchlistPage />
+      </TestRouter>
     </TestOvermindWrapper>,
   )
   await new Promise((r) => setTimeout(r, DELAY_FOR_RENDER))

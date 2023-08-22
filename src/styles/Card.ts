@@ -1,11 +1,13 @@
-import { defineStyle } from '@chakra-ui/react'
-
-export const watchlist = defineStyle({
+export const watchlist = {
   container: {
     minH: `120px`,
     padding: `32px 40px 32px 40px`,
     boxShadow: `2px 2px 8px 0px #0000001A`,
     borderRadius: `12px`,
+    _hover: {
+      boxShadow: `2px 2px 8px 0px #0000004d`,
+      cursor: `pointer`,
+    },
   },
   body: {
     _before: {
@@ -22,4 +24,4 @@ export const watchlist = defineStyle({
     display: `flex`,
     alignContent: `center`,
   },
-})
+}
