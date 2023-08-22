@@ -15,6 +15,7 @@ const CompareToggleButton: FC<CompareToggleButtonProps> = (props) => {
       padding="6px 8px 6px 12px"
       height="32px"
       width="max-content"
+      minWidth={`100px`}
       border="1px solid #FFFFFF"
       onClick={onClick}
       isDisabled={isDisabled}
