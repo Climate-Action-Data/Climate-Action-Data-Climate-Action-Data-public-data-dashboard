@@ -23,10 +23,10 @@ import { formatDate } from '@/utils/DateFormat'
 import { extractEWebGoalFromString, extractProjectTypeFromString, extractTagItemsFromTag } from '@/utils/TextConverter'
 import { EWebGoal } from '@/@types/EWebGoal'
 import { coordinatesToString, toCoordinates } from '@/utils/UnitConverter'
-import { getImage } from '../../components/atoms/ProjectTypeBanner/ProjectTypeBanner'
+import { getImage } from '@/components/atoms/ProjectTypeBanner/ProjectTypeBanner'
 import saveAs from 'file-saver'
 import axios from 'axios'
-import { defaultDomain, defaultHeaders } from '../../utils/RequestHelpers'
+import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
 import { geoDecode } from '@/components/atoms/GoogleMapWidget/GoogleMapWidget'
 
 Font.register({
