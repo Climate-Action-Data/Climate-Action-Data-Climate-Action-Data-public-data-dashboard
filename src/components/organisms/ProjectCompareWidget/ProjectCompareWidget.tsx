@@ -1,8 +1,10 @@
-import { Button, HStack, StackDivider, Text, VStack } from '@chakra-ui/react'
+import { HStack, StackDivider, Text, VStack } from '@chakra-ui/react'
 import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
 import { CloseIcon } from '@/components/atoms/CloseIcon/CloseIcon'
 import { useActions } from '@/overmind'
 import { useTranslation } from 'react-i18next'
+import CompareSubmitButton from '../../atoms/CompareSubmitButton/CompareSubmitButton'
+import CompareCloseButton from '../../atoms/CompareCloseButton/CompareCloseButton'
 
 interface ProjectCompareWidgetProps {
   isVisible: boolean
@@ -81,8 +83,8 @@ export const ProjectCompareWidget = (props: ProjectCompareWidgetProps) => {
       )}
 
       <VStack flex={1}>
-        <Button onClick={onCompare}>{t(`projectCompare.compare`)}</Button>
-        <Button onClick={onClose}>{t(`projectCompare.close`)}</Button>
+        <CompareSubmitButton onClick={onCompare} />
+        <CompareCloseButton onClick={onClose} />
       </VStack>
     </HStack>
   )

@@ -67,7 +67,7 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
   }
 
   return (
-    <Stack direction={`row`}>
+    <Stack direction={`row`} alignItems={`center`}>
       <FilterBarWrapper isResultsPage={isResultsPage}>
         <Stack direction={[`column`, null, null, `row`]}>
           <Stack direction={[`column`, null, null, `row`]} divider={<StackDivider borderColor="lightGray.400" />} width="100%">
@@ -119,7 +119,7 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
           )}
         </Stack>
       </FilterBarWrapper>
-      {isResultsPage && <CompareToggleButton isEnabled={isCompare} onClick={() => setCompareToggle(!isCompare)} />}
+      {isResultsPage && <CompareToggleButton isDisabled={isCompare} onClick={() => setCompareToggle(!isCompare)} />}
     </Stack>
   )
 }
