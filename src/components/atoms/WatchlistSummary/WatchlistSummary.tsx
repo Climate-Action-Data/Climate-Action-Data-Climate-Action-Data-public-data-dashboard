@@ -7,9 +7,11 @@ import { useTranslation } from 'react-i18next'
 interface WatchlistSummaryProps {
   watchlist: Watchlist
 }
+
 export const WatchlistSummary = (props: WatchlistSummaryProps) => {
   const { watchlist } = props
   const { t } = useTranslation(`watchlist`)
+
   return (
     <Card data-testid="watchlist-summary-item" variant={`watchlist`}>
       <CardBody>
