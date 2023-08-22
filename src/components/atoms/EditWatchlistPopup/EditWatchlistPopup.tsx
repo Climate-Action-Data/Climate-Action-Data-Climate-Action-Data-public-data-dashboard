@@ -26,8 +26,8 @@ export const EditWatchlistPopup = (props: EditWatchlistPopupProps) => {
 
   useEffect(() => {
     setIsOpenModal(isOpen)
-    setNameInput(name || ``)
-    setDescriptionInput(description || ``)
+    setNameInput(name ?? ``)
+    setDescriptionInput(description ?? ``)
   }, [isOpen, name, description])
 
   const handleClose = () => {
