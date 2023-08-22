@@ -3,8 +3,8 @@ import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
 import { CloseIcon } from '@/components/atoms/CloseIcon/CloseIcon'
 import { useActions } from '@/overmind'
 import { useTranslation } from 'react-i18next'
-import CompareSubmitButton from '../../atoms/CompareSubmitButton/CompareSubmitButton'
-import CompareCloseButton from '../../atoms/CompareCloseButton/CompareCloseButton'
+import CompareSubmitButton from '@/components/atoms/CompareSubmitButton/CompareSubmitButton'
+import CompareCloseButton from '@/components/atoms/CompareCloseButton/CompareCloseButton'
 
 interface ProjectCompareWidgetProps {
   isVisible: boolean
