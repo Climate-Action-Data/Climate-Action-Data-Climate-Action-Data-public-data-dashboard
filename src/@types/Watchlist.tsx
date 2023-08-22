@@ -2,7 +2,7 @@ export type Watchlist = {
   id: string
   name: string
   description: string
-  projectNumber: number
+  projectsCount: number
   createdAt: string
 }
 
