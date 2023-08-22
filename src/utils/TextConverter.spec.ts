@@ -8,6 +8,8 @@ import {
   extractTagItemsFromTag,
   extractPageFromUrl,
   extractUrlFromString,
+  formatCreditingPeriod,
+  stringifyString,
 } from './TextConverter'
 import { ProjectType } from '@/@types/ProjectDetails'
 
@@ -131,5 +133,34 @@ describe(`extractUrlFromString`, () => {
 
   test(`extract url from string with no url`, () => {
     expect(extractUrlFromString(TITLE)).toBe(undefined)
+  })
+})
+
+const CREDIT_PERIOD_START = `2018-01-01T00:00:00.000Z`
+const CREDIT_PERIOD_END = `2037-12-31T00:00:00.000Z`
+const FORMATTED_CREDIT_PERIOD = `2018/01/01 - 2037/12/31`
+const FORMATTED_CREDIT_PERIOD_FROM_START = `2018/01/01`
+const FORMATTED_CREDIT_PERIOD_FROM_END = `2037/12/31`
+
+describe(`formatCreditingPeriod`, () => {
+  test(`format crediting period from start and end dates`, () => {
+    expect(formatCreditingPeriod(CREDIT_PERIOD_START, CREDIT_PERIOD_END)).toBe(FORMATTED_CREDIT_PERIOD)
+  })
+
+  test(`format crediting period from start date`, () => {
+    expect(formatCreditingPeriod(CREDIT_PERIOD_START, undefined)).toBe(FORMATTED_CREDIT_PERIOD_FROM_START)
+  })
+
+  test(`format crediting period from end date`, () => {
+    expect(formatCreditingPeriod(undefined, CREDIT_PERIOD_END)).toBe(FORMATTED_CREDIT_PERIOD_FROM_END)
+  })
+})
+
+const DEFAULT_TEST_STRING = `test,e`
+const DEFAULT_TEST_STRING_ESCAPED = `"test,e"`
+
+describe(`stringifyString`, () => {
+  it(`should return same string`, async () => {
+    expect(stringifyString(DEFAULT_TEST_STRING)).toBe(DEFAULT_TEST_STRING_ESCAPED)
   })
 })

@@ -1,5 +1,7 @@
 export enum CompareDataType {
-  STRING = `string`,
+  TEXT = `TEXT`,
+  TEXT_HIGHLIGHTED = `TEXT_HIGHLIGHTED`,
+  NUMBER = `NUMBER`,
   URL = `url`,
 }
 
