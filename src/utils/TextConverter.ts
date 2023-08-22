@@ -1,7 +1,11 @@
 import { EWebGoal } from '@/@types/EWebGoal'
 import { ProjectType } from '@/@types/ProjectDetails'
+import { formatDate } from './DateFormat'
+import { DateFormats } from '@/@types/DateFormats'
 
 const NO_INDEX_FOUND = -1
+const REGEX_NEW_LINE = /(\r\n|\r|\n)/g
+const NO_DATA = `--`
 
 export const extractPageFromUrl = (url: string) => {
   if (!url || (url && url.indexOf(`/`) === NO_INDEX_FOUND)) {
@@ -61,4 +65,24 @@ export const extractUrlFromString = (str: string) => {
   const urlRegex = /(https?:\/\/[^\s]+)/
   const match = urlRegex.exec(str)
   return match ? match[0] : undefined
+}
+
+export const formatCreditingPeriod = (startDate: string | undefined, endDate: string | undefined) => {
+  if (startDate && endDate) {
+    return `${formatDate(startDate, DateFormats.YYYY_MM_DD)} - ${formatDate(endDate, DateFormats.YYYY_MM_DD)}`
+  }
+  if (startDate) {
+    return formatDate(startDate, DateFormats.YYYY_MM_DD)
+  }
+  if (endDate) {
+    return formatDate(endDate, DateFormats.YYYY_MM_DD)
+  }
+}
+
+export const stringifyString = (str: string | undefined | null): string => {
+  if (str === undefined || str === null) {
+    return NO_DATA
+  }
+  const strWithoutNewLine = str.replace(REGEX_NEW_LINE, ``).trim()
+  return `"${strWithoutNewLine}"`
 }
