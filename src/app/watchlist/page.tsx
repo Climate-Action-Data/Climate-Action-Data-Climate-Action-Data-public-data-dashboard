@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next'
 
 const WatchlistPage: NextPage = () => {
   const [watchlists, setWatchlists] = useState<Watchlist[] | undefined>(undefined)
+  const [visibleWatchlists, setVisibleWatchlists] = useState<Watchlist[] | undefined>(undefined)
 
   const { t } = useTranslation(`watchlist`)
 
@@ -26,21 +27,25 @@ const WatchlistPage: NextPage = () => {
   useEffect(() => {
     getAllWatchlist().then((result) => {
       if (result.data) {
+        result.data.sort((a, b) => {
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        })
         setWatchlists(result.data)
+        setVisibleWatchlists(result.data)
       }
     })
   }, [])
 
   const renderList = () => {
-    if (watchlists && watchlists.length > 0) {
-      return <WatchlistList watchlists={watchlists} />
+    if (visibleWatchlists && visibleWatchlists.length > 0) {
+      return <WatchlistList watchlists={visibleWatchlists} />
     } else {
       return <NoWatchlistScreen />
     }
   }
 
   const renderBody = () => {
-    if (!watchlists) {
+    if (!visibleWatchlists) {
       return (
         <Center>
           <SpinnerScreen />
@@ -75,7 +80,20 @@ const WatchlistPage: NextPage = () => {
         })
         break
     }
+    setVisibleWatchlists([...orderedWatchlists])
     setWatchlists([...orderedWatchlists])
+  }
+
+  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const searchValue = event.target.value.toLowerCase()
+    if (visibleWatchlists && searchValue !== ``) {
+      const filteredWatchlists = visibleWatchlists?.filter((watchlist) => {
+        return watchlist.name.toLowerCase().includes(searchValue)
+      })
+      setVisibleWatchlists(filteredWatchlists)
+    } else if (searchValue === ``) {
+      setVisibleWatchlists(watchlists)
+    }
   }
 
   return (
@@ -87,9 +105,9 @@ const WatchlistPage: NextPage = () => {
             <InputLeftElement pointerEvents="none">
               <SearchIcon />
             </InputLeftElement>
-            <Input variant={`white`} type="tel" placeholder={t(`searchWatchlist`)} />
+            <Input onChange={handleOnChange} variant={`white`} data-testid="search-watchlist" placeholder={t(`searchWatchlist`)} />
           </InputGroup>
-          {watchlists && watchlists.length > 0 && (
+          {visibleWatchlists && visibleWatchlists.length > 0 && (
             <Button rightIcon={<PlusIcon />} variant={`blueOutline`}>
               {t(`newWatchlist`)}
             </Button>

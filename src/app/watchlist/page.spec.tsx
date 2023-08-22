@@ -66,3 +66,30 @@ it(`should set watchlists correctly when sorting`, async () => {
   const project = screen.getAllByTestId(`watchlist-summary-item`)
   expect(project.length).toBeGreaterThan(0)
 })
+
+it(`should set watchlists correctly when searching`, async () => {
+  const { container } = render(
+    <TestOvermindWrapper>
+      <WatchlistPage />
+    </TestOvermindWrapper>,
+  )
+  await new Promise((r) => setTimeout(r, DELAY_FOR_RENDER))
+  fireEvent.input(screen.getByTestId(`search-watchlist`), { target: { value: `Elec` } })
+  const project = screen.getAllByTestId(`watchlist-summary-item`)
+  expect(project.length).toBeGreaterThan(0)
+  expect(container).toMatchSnapshot()
+})
+
+it(`should set watchlists correctly when searching and going back`, async () => {
+  const { container } = render(
+    <TestOvermindWrapper>
+      <WatchlistPage />
+    </TestOvermindWrapper>,
+  )
+  await new Promise((r) => setTimeout(r, DELAY_FOR_RENDER))
+  fireEvent.input(screen.getByTestId(`search-watchlist`), { target: { value: `Elec` } })
+  fireEvent.input(screen.getByTestId(`search-watchlist`), { target: { value: `` } })
+  const project = screen.getAllByTestId(`watchlist-summary-item`)
+  expect(project.length).toBeGreaterThan(0)
+  expect(container).toMatchSnapshot()
+})
