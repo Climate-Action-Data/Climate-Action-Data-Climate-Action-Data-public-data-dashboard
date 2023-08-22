@@ -1,6 +1,9 @@
 {
     "yourWatchlists": "Your Watchlists",
     "searchWatchlist": "Search for watchlist",
+    "searchProjects": "Search for projects",
+    "search": "Search",
+    "watchlistInteract": "Interact with your watchlist",
     "newWatchlist": "Create new watchlist",
     "sortBy": "Sort by: ",
     "noWatchlist": "Start a watchlist to easily organise and save carbon projects",
@@ -8,5 +11,9 @@
     "project_other": "Projects",
     "recentlyAdded": "Recently Added",
     "alphabetical": "Alphabetical",
-    "numberOfProjects": "Number of Projects"
+    "numberOfProjects": "Number of Projects",
+    "renameWatchlist": "Rename Watchlist",
+    "deleteWatchlist": "Delete Watchlist",
+    "deleteWatchlistTitle": "Delete Watchlist?",
+    "deleteWatchlistText": "By confirming this action, your watchlist will be permanently deleted. Any projects currently saved within the watchlist will also be removed."
 }

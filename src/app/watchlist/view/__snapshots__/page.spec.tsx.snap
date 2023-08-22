@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="css-111zhtb"
+  >
+    <div
+      class="css-1hzilok"
+    >
+      <div
+        class="css-1rr4qq7"
+      />
+      <div
+        class="css-0"
+      >
+        <div
+          class="chakra-card css-8ayj35"
+        >
+          <div
+            class="chakra-card__body css-11t20w3"
+          >
+            <div
+              class="chakra-stack css-1vsjz19"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

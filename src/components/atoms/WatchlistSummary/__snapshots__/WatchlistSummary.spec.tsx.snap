@@ -41,3 +41,45 @@ exports[`renders correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`renders correctly and redirects 1`] = `
+<div>
+  <div
+    class="chakra-card css-2dlz7"
+    data-testid="watchlist-summary-item"
+  >
+    <div
+      class="chakra-card__body css-0"
+    >
+      <div
+        class="css-kp2v9r"
+      >
+        <h2
+          class="chakra-heading css-1dgsmd1"
+        >
+          Electric - Biogas
+        </h2>
+        <p
+          class="chakra-text css-11etsof"
+        >
+          Lorem ipsum hello world
+        </p>
+      </div>
+      <div
+        class="css-1c1kq07"
+      >
+        <span
+          class="chakra-text css-xtdk5e"
+        >
+          16
+        </span>
+        <p
+          class="chakra-text css-1ezsviu"
+        >
+          Projects
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

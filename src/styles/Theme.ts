@@ -23,6 +23,8 @@ import {
   lightGrayRound,
   lightGrayRound32,
   modalClose,
+  redFilled,
+  redOutline,
   textLink,
   toastButton,
   underlinedLink,
@@ -93,6 +95,8 @@ const theme = extendTheme({
         modalClose,
         toastButton,
         green,
+        redFilled,
+        redOutline,
       },
     },
     Heading: {
@@ -133,6 +137,11 @@ const theme = extendTheme({
       },
     },
     Card: {
+      baseStyle: {
+        container: {
+          boxShadow: `2px 2px 8px 0px #0000001A`,
+        },
+      },
       variants: {
         watchlist,
       },
