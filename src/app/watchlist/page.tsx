@@ -71,7 +71,7 @@ const WatchlistPage: NextPage = () => {
         break
       case WatchlistSorting.NUMBER_OF_PROJECTS:
         orderedWatchlists.sort((a, b) => {
-          return b.projectNumber - a.projectNumber
+          return b.projectsCount - a.projectsCount
         })
         break
     }
