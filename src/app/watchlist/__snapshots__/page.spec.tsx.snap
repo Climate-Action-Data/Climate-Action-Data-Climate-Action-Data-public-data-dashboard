@@ -37,8 +37,8 @@ exports[`renders correctly 1`] = `
           </div>
           <input
             class="chakra-input css-0"
+            data-testid="search-watchlist"
             placeholder="Search for watchlist"
-            type="tel"
           />
         </div>
       </div>
@@ -191,8 +191,8 @@ exports[`renders correctly with sort Alphabetical 1`] = `
           </div>
           <input
             class="chakra-input css-0"
+            data-testid="search-watchlist"
             placeholder="Search for watchlist"
-            type="tel"
           />
         </div>
       </div>
@@ -348,8 +348,8 @@ exports[`renders correctly with sort Projects 1`] = `
           </div>
           <input
             class="chakra-input css-0"
+            data-testid="search-watchlist"
             placeholder="Search for watchlist"
-            type="tel"
           />
         </div>
       </div>
@@ -505,8 +505,8 @@ exports[`renders correctly with sort Recents 1`] = `
           </div>
           <input
             class="chakra-input css-0"
+            data-testid="search-watchlist"
             placeholder="Search for watchlist"
-            type="tel"
           />
         </div>
       </div>
@@ -617,6 +617,515 @@ exports[`renders correctly with sort Recents 1`] = `
             >
               Loading...
             </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should set watchlists correctly when searching 1`] = `
+<div>
+  <div
+    class="css-5jgdr3"
+  >
+    <h2
+      class="chakra-heading css-0"
+    >
+      Your Watchlists
+    </h2>
+    <div
+      class="css-xuhmcu"
+    >
+      <div
+        class="css-gg4vpm"
+      >
+        <div
+          class="chakra-input__group css-1vb3ajj"
+          data-group="true"
+        >
+          <div
+            class="chakra-input__left-element css-1u2k0bl"
+            variant="white"
+          >
+            <svg
+              class="chakra-icon css-n059si"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <input
+            class="chakra-input css-0"
+            data-testid="search-watchlist"
+            placeholder="Search for watchlist"
+          />
+        </div>
+        <button
+          class="chakra-button css-4xx2wk"
+          type="button"
+        >
+          Create new watchlist
+          <span
+            class="chakra-button__icon css-1hzyiq5"
+          >
+            <svg
+              aria-hidden="true"
+              class="chakra-icon css-n059si"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M11.9997 18.75C11.7871 18.75 11.609 18.6781 11.4654 18.5344C11.3218 18.3906 11.25 18.2125 11.25 18V12.75H5.99997C5.78747 12.75 5.60936 12.678 5.46563 12.5342C5.32188 12.3904 5.25 12.2122 5.25 11.9997C5.25 11.7871 5.32188 11.609 5.46563 11.4654C5.60936 11.3218 5.78747 11.25 5.99997 11.25H11.25V5.99997C11.25 5.78747 11.3219 5.60935 11.4657 5.4656C11.6095 5.32187 11.7877 5.25 12.0003 5.25C12.2129 5.25 12.391 5.32187 12.5346 5.4656C12.6782 5.60935 12.7499 5.78747 12.7499 5.99997V11.25H18C18.2125 11.25 18.3906 11.3219 18.5344 11.4657C18.6781 11.6095 18.75 11.7877 18.75 12.0003C18.75 12.2129 18.6781 12.391 18.5344 12.5346C18.3906 12.6782 18.2125 12.75 18 12.75H12.7499V18C12.7499 18.2125 12.678 18.3906 12.5342 18.5344C12.3904 18.6781 12.2122 18.75 11.9997 18.75Z"
+                fill="currentcolor"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div
+        class="css-1u8mr4i"
+      >
+        <button
+          aria-controls="popover-content-:rb:"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          class="chakra-button css-aay2ge"
+          data-testid="dropdown-button"
+          id="popover-trigger-:rb:"
+          type="button"
+        >
+          <div
+            class="css-1rr4qq7"
+          >
+            Sort by: 
+             
+            <span
+              class="chakra-text css-10rvbm3"
+            >
+              Recently Added
+            </span>
+          </div>
+          <svg
+            class="chakra-icon css-c0air1"
+            focusable="false"
+            viewBox="0 0 8 4"
+          >
+            <path
+              d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <div
+          class="chakra-popover__popper css-0"
+          style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+        >
+          <section
+            aria-describedby="popover-body-:rb:"
+            class="chakra-popover__content css-faem7"
+            data-testid="dropdown-body"
+            id="popover-content-:rb:"
+            role="dialog"
+            style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+            tabindex="-1"
+          >
+            <div
+              class="chakra-popover__body css-old1by"
+              id="popover-body-:rb:"
+            >
+              <ul
+                class="css-155za0w"
+                role="list"
+              >
+                <div
+                  class="css-ua49oa"
+                  data-testid="dropdown-item"
+                >
+                  <li
+                    class="css-1gf73kr"
+                  >
+                    Recently Added
+                  </li>
+                </div>
+                <div
+                  class="css-ua49oa"
+                  data-testid="dropdown-item"
+                >
+                  <li
+                    class="css-1gf73kr"
+                  >
+                    Alphabetical
+                  </li>
+                </div>
+                <div
+                  class="css-ua49oa"
+                  data-testid="dropdown-item"
+                >
+                  <li
+                    class="css-1gf73kr"
+                  >
+                    Number of Projects
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div
+        class="css-vfe2ul"
+      >
+        <div
+          class="chakra-card css-2dlz7"
+          data-testid="watchlist-summary-item"
+        >
+          <div
+            class="chakra-card__body css-0"
+          >
+            <div
+              class="css-kp2v9r"
+            >
+              <h2
+                class="chakra-heading css-1dgsmd1"
+              >
+                Electric - Biogas
+              </h2>
+              <p
+                class="chakra-text css-11etsof"
+              >
+                Lorem ipsum hello world
+              </p>
+            </div>
+            <div
+              class="css-1c1kq07"
+            >
+              <span
+                class="chakra-text css-xtdk5e"
+              >
+                16
+              </span>
+              <p
+                class="chakra-text css-1ezsviu"
+              >
+                Projects
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should set watchlists correctly when searching and going back 1`] = `
+<div>
+  <div
+    class="css-5jgdr3"
+  >
+    <h2
+      class="chakra-heading css-0"
+    >
+      Your Watchlists
+    </h2>
+    <div
+      class="css-xuhmcu"
+    >
+      <div
+        class="css-gg4vpm"
+      >
+        <div
+          class="chakra-input__group css-1vb3ajj"
+          data-group="true"
+        >
+          <div
+            class="chakra-input__left-element css-1u2k0bl"
+            variant="white"
+          >
+            <svg
+              class="chakra-icon css-n059si"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <input
+            class="chakra-input css-0"
+            data-testid="search-watchlist"
+            placeholder="Search for watchlist"
+          />
+        </div>
+        <button
+          class="chakra-button css-4xx2wk"
+          type="button"
+        >
+          Create new watchlist
+          <span
+            class="chakra-button__icon css-1hzyiq5"
+          >
+            <svg
+              aria-hidden="true"
+              class="chakra-icon css-n059si"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M11.9997 18.75C11.7871 18.75 11.609 18.6781 11.4654 18.5344C11.3218 18.3906 11.25 18.2125 11.25 18V12.75H5.99997C5.78747 12.75 5.60936 12.678 5.46563 12.5342C5.32188 12.3904 5.25 12.2122 5.25 11.9997C5.25 11.7871 5.32188 11.609 5.46563 11.4654C5.60936 11.3218 5.78747 11.25 5.99997 11.25H11.25V5.99997C11.25 5.78747 11.3219 5.60935 11.4657 5.4656C11.6095 5.32187 11.7877 5.25 12.0003 5.25C12.2129 5.25 12.391 5.32187 12.5346 5.4656C12.6782 5.60935 12.7499 5.78747 12.7499 5.99997V11.25H18C18.2125 11.25 18.3906 11.3219 18.5344 11.4657C18.6781 11.6095 18.75 11.7877 18.75 12.0003C18.75 12.2129 18.6781 12.391 18.5344 12.5346C18.3906 12.6782 18.2125 12.75 18 12.75H12.7499V18C12.7499 18.2125 12.678 18.3906 12.5342 18.5344C12.3904 18.6781 12.2122 18.75 11.9997 18.75Z"
+                fill="currentcolor"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div
+        class="css-1u8mr4i"
+      >
+        <button
+          aria-controls="popover-content-:rd:"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          class="chakra-button css-aay2ge"
+          data-testid="dropdown-button"
+          id="popover-trigger-:rd:"
+          type="button"
+        >
+          <div
+            class="css-1rr4qq7"
+          >
+            Sort by: 
+             
+            <span
+              class="chakra-text css-10rvbm3"
+            >
+              Recently Added
+            </span>
+          </div>
+          <svg
+            class="chakra-icon css-c0air1"
+            focusable="false"
+            viewBox="0 0 8 4"
+          >
+            <path
+              d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <div
+          class="chakra-popover__popper css-0"
+          style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+        >
+          <section
+            aria-describedby="popover-body-:rd:"
+            class="chakra-popover__content css-faem7"
+            data-testid="dropdown-body"
+            id="popover-content-:rd:"
+            role="dialog"
+            style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+            tabindex="-1"
+          >
+            <div
+              class="chakra-popover__body css-old1by"
+              id="popover-body-:rd:"
+            >
+              <ul
+                class="css-155za0w"
+                role="list"
+              >
+                <div
+                  class="css-ua49oa"
+                  data-testid="dropdown-item"
+                >
+                  <li
+                    class="css-1gf73kr"
+                  >
+                    Recently Added
+                  </li>
+                </div>
+                <div
+                  class="css-ua49oa"
+                  data-testid="dropdown-item"
+                >
+                  <li
+                    class="css-1gf73kr"
+                  >
+                    Alphabetical
+                  </li>
+                </div>
+                <div
+                  class="css-ua49oa"
+                  data-testid="dropdown-item"
+                >
+                  <li
+                    class="css-1gf73kr"
+                  >
+                    Number of Projects
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div
+        class="css-vfe2ul"
+      >
+        <div
+          class="chakra-card css-2dlz7"
+          data-testid="watchlist-summary-item"
+        >
+          <div
+            class="chakra-card__body css-0"
+          >
+            <div
+              class="css-kp2v9r"
+            >
+              <h2
+                class="chakra-heading css-1dgsmd1"
+              >
+                Verra
+              </h2>
+              <p
+                class="chakra-text css-11etsof"
+              >
+                Lorem ipsum hello world
+              </p>
+            </div>
+            <div
+              class="css-1c1kq07"
+            >
+              <span
+                class="chakra-text css-xtdk5e"
+              >
+                5
+              </span>
+              <p
+                class="chakra-text css-1ezsviu"
+              >
+                Projects
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="chakra-card css-2dlz7"
+          data-testid="watchlist-summary-item"
+        >
+          <div
+            class="chakra-card__body css-0"
+          >
+            <div
+              class="css-kp2v9r"
+            >
+              <h2
+                class="chakra-heading css-1dgsmd1"
+              >
+                Electric - Biogas
+              </h2>
+              <p
+                class="chakra-text css-11etsof"
+              >
+                Lorem ipsum hello world
+              </p>
+            </div>
+            <div
+              class="css-1c1kq07"
+            >
+              <span
+                class="chakra-text css-xtdk5e"
+              >
+                16
+              </span>
+              <p
+                class="chakra-text css-1ezsviu"
+              >
+                Projects
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="chakra-card css-2dlz7"
+          data-testid="watchlist-summary-item"
+        >
+          <div
+            class="chakra-card__body css-0"
+          >
+            <div
+              class="css-kp2v9r"
+            >
+              <h2
+                class="chakra-heading css-1dgsmd1"
+              >
+                GCC
+              </h2>
+              <p
+                class="chakra-text css-11etsof"
+              >
+                Lorem ipsum hello world
+              </p>
+            </div>
+            <div
+              class="css-1c1kq07"
+            >
+              <span
+                class="chakra-text css-xtdk5e"
+              >
+                1
+              </span>
+              <p
+                class="chakra-text css-1ezsviu"
+              >
+                Project
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="chakra-card css-2dlz7"
+          data-testid="watchlist-summary-item"
+        >
+          <div
+            class="chakra-card__body css-0"
+          >
+            <div
+              class="css-kp2v9r"
+            >
+              <h2
+                class="chakra-heading css-1dgsmd1"
+              >
+                Cookstoves
+              </h2>
+              <p
+                class="chakra-text css-11etsof"
+              >
+                Lorem ipsum hello world
+              </p>
+            </div>
+            <div
+              class="css-1c1kq07"
+            >
+              <span
+                class="chakra-text css-xtdk5e"
+              >
+                24
+              </span>
+              <p
+                class="chakra-text css-1ezsviu"
+              >
+                Projects
+              </p>
+            </div>
           </div>
         </div>
       </div>
