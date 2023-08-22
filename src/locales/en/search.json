@@ -56,5 +56,27 @@
     "viewUnit": "View Units",
     "exportProject": "Export Project",
     "addToWatchlists": "Add to Watchlists"
+  },
+  "projectCompare": {
+    "compare": "Compare",
+    "compareProjects": "Compare Projects",
+    "close": "Close",
+    "addProjectLabel": "Add max 3 projects to compare",
+    "exportComparison": "Export comparison table",
+    "projectName": "PROJECT NAME",
+    "projectId": "PROJECT ID",
+    "developer": "DEVELOPER",
+    "linkToProject": "LINK TO PROJECT",
+    "standard": "STANDARD",
+    "methodology": "METHODOLOGY",
+    "sector": "SECTOR",
+    "country": "COUNTRY",
+    "inCountryRegion": "IN-COUNTRY REGION",
+    "projectStatus": "PROJECT STATUS",
+    "creditingPeriod": "CREDITING PERIOD",
+    "annualEstUnits": "ANNUAL EST. UNITS",
+    "totalIssuedUnits": "TOTAL ISSUED UNITS",
+    "totalRetiredUnits": "TOTAL RETIRED UNITS",
+    "totalAvailableUnits": "TOTAL AVAILABLE UNITS"
   }
 }
