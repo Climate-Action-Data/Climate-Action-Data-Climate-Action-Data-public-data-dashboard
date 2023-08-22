@@ -113,7 +113,7 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
           </Stack>
           {!isResultsPage && (
             <Flex>
-              <Spacer minWidth={`32px`} />
+              <Spacer />
               <SearchButton isResultsPage={isResultsPage} onClick={handleOnClick} />
             </Flex>
           )}

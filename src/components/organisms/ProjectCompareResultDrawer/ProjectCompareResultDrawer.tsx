@@ -1,10 +1,12 @@
-import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, Text, HStack, Spacer, Divider, Tr, Table, Td } from '@chakra-ui/react'
+import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, Text, HStack, Spacer, Divider, Tr, Table, Td, Hide, Tbody, Th, Thead, Box, Flex } from '@chakra-ui/react'
 import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
 import { CompareIcon } from '@/components/atoms/CompareIcon/CompareIcon'
 import { CloseIcon } from '@/components/atoms/CloseIcon/CloseIcon'
 import { formatDate } from '@/utils/DateFormat'
 import { DateFormats } from '@/@types/DateFormats'
 import { useTranslation } from 'react-i18next'
+import ExportComparisonButton from '../../atoms/ExportComparisonButton/ExportComparisonButton'
+import { DownloadIcon } from '../../atoms/DownloadIcon/DownloadIcon'
 
 interface ProjectCompareResultDrawerProps {
   isOpen: boolean
@@ -12,12 +14,77 @@ interface ProjectCompareResultDrawerProps {
   projects: ProjectSearchResult[]
 }
 
+enum CompareDataType {
+  STRING = `string`,
+  URL = `url`,
+}
+
+interface ProjectCompareData {
+  header: string
+  data: string[]
+  type?: CompareDataType
+}
+
 export const ProjectCompareResultDrawer = (props: ProjectCompareResultDrawerProps) => {
   const { isOpen, onClose, projects } = props
   const { t } = useTranslation(`search`)
+  const maxColumnCount = 3
+
+  const renderCreditingPeriod = (startDate: string | undefined, endDate: string | undefined) => {
+    if (startDate && endDate) {
+      return `${formatDate(startDate, DateFormats.YYYY_MM_DD)} - ${formatDate(endDate, DateFormats.YYYY_MM_DD)}`
+    }
+    if (startDate) {
+      return formatDate(startDate, DateFormats.YYYY_MM_DD)
+    }
+    if (endDate) {
+      return formatDate(endDate, DateFormats.YYYY_MM_DD)
+    }
+  }
+
+  const projectCompareData: ProjectCompareData[] = [
+    { header: t(`projectCompare.projectName`), data: [...projects.map((p) => p.name)] },
+    { header: t(`projectCompare.projectId`), data: [...projects.map((p) => p.id)] },
+    { header: t(`projectCompare.developer`), data: [...projects.map((p) => p.developer)] },
+    { header: t(`projectCompare.linkToProject`), data: [...projects.map((p) => p.link)], type: CompareDataType.URL },
+    { header: t(`projectCompare.standard`), data: [...projects.map((p) => p.standard)] },
+    { header: t(`projectCompare.methodology`), data: [...projects.map((p) => p.methodology)] },
+    { header: t(`projectCompare.sector`), data: [...projects.map((p) => p.sector)] },
+    { header: t(`projectCompare.country`), data: [...projects.map((p) => p.country ?? ``)] },
+    { header: t(`projectCompare.inCountryRegion`), data: [...projects.map((p) => p.inCountryRegion ?? ``)] },
+    { header: t(`projectCompare.projectStatus`), data: [...projects.map((p) => p.status)] },
+    { header: t(`projectCompare.creditingPeriod`), data: [...projects.map((p) => renderCreditingPeriod(p.creditingPeriodStart, p.creditingPeriodEnd) ?? ``)] },
+    { header: t(`projectCompare.annualEstUnits`), data: [...projects.map((p) => `${p.annualEst?.toLocaleString() ?? 0}`)] },
+    { header: t(`projectCompare.totalIssuedUnits`), data: [...projects.map((p) => `${p.annualIssued?.toLocaleString() ?? 0}`)] },
+    { header: t(`projectCompare.totalRetiredUnits`), data: [...projects.map((p) => `${p.annualRetired?.toLocaleString() ?? 0}`)] },
+    { header: t(`projectCompare.totalAvailableUnits`), data: [...projects.map((p) => `${p.annualAvailable?.toLocaleString() ?? 0}`)] },
+  ]
+
+  const renderRowMobile = (header: string, data: string[], type: CompareDataType = CompareDataType.STRING) => {
+    return (
+      <>
+        <Flex mt="32px">
+          <Text fontSize="14px" flex="1" pb="8px" borderBottom="1px solid" borderColor="lightGray.400" textColor="lightGray.700">
+            {header}
+          </Text>
+        </Flex>
+
+        <Flex mt="16px">
+          {data.map((item) => {
+            return (
+              <>
+                <Text flex="1" pr={data.length > 0 ? `12px` : `0px`} fontSize="14px" overflowX="hidden" textColor={type === CompareDataType.STRING ? `lightGray.700` : `blue.main`}>
+                  {item}
+                </Text>
+              </>
+            )
+          })}
+        </Flex>
+      </>
+    )
+  }
 
   const renderRow = (header: string, data: string[]) => {
-    const maxColumnCount = 3
     const emptyColumnCount = maxColumnCount - data.length
 
     return (
@@ -47,16 +114,28 @@ export const ProjectCompareResultDrawer = (props: ProjectCompareResultDrawerProp
     )
   }
 
-  const renderCreditingPeriod = (startDate: string | undefined, endDate: string | undefined) => {
-    if (startDate && endDate) {
-      return `${formatDate(startDate, DateFormats.YYYY_MM_DD)} - ${formatDate(endDate, DateFormats.YYYY_MM_DD)}`
-    }
-    if (startDate) {
-      return formatDate(startDate, DateFormats.YYYY_MM_DD)
-    }
-    if (endDate) {
-      return formatDate(endDate, DateFormats.YYYY_MM_DD)
-    }
+  const handleExportProjectCompare = () => {
+    // TODO export project compare
+  }
+
+  const renderTableMobile = () => {
+    return (
+      <Box w="100%" px="24px">
+        {projectCompareData.map((item) => {
+          return renderRowMobile(item.header, item.data, item.type)
+        })}
+      </Box>
+    )
+  }
+
+  const renderTable = () => {
+    return (
+      <Table variant={`unstyled`}>
+        {projectCompareData.map(({ header, data }) => {
+          return <>{renderRow(header, data)}</>
+        })}
+      </Table>
+    )
   }
 
   return (
@@ -68,29 +147,19 @@ export const ProjectCompareResultDrawer = (props: ProjectCompareResultDrawerProp
             <CompareIcon />
             <Text fontSize={`24px`}>{t(`projectCompare.compareProjects`)}</Text>
             <Spacer />
-            <Text marginRight={`16px`}>{t(`projectCompare.exportComparison`)}</Text>
+            <Hide above="sm">
+              <DownloadIcon onClick={handleExportProjectCompare} />
+            </Hide>
+            <Hide below="sm">
+              <ExportComparisonButton onClick={handleExportProjectCompare} />
+            </Hide>
             <CloseIcon onClick={onClose} />
           </HStack>
         </DrawerHeader>
         <Divider />
-        <DrawerBody py={0}>
-          <Table variant={`unstyled`}>
-            {renderRow(t(`projectCompare.projectName`), [...projects.map((p) => p.name)])}
-            {renderRow(t(`projectCompare.projectId`), [...projects.map((p) => p.id)])}
-            {renderRow(t(`projectCompare.developer`), [...projects.map((p) => p.developer)])}
-            {renderRow(t(`projectCompare.linkToProject`), [...projects.map((p) => p.link)])}
-            {renderRow(t(`projectCompare.standard`), [...projects.map((p) => p.standard)])}
-            {renderRow(t(`projectCompare.methodology`), [...projects.map((p) => p.methodology)])}
-            {renderRow(t(`projectCompare.sector`), [...projects.map((p) => p.sector)])}
-            {renderRow(t(`projectCompare.country`), [...projects.map((p) => p.country ?? ``)])}
-            {renderRow(t(`projectCompare.inCountryRegion`), [...projects.map((p) => p.inCountryRegion ?? ``)])}
-            {renderRow(t(`projectCompare.projectStatus`), [...projects.map((p) => p.status)])}
-            {renderRow(t(`projectCompare.creditingPeriod`), [...projects.map((p) => renderCreditingPeriod(p.creditingPeriodStart, p.creditingPeriodEnd) ?? ``)])}
-            {renderRow(t(`projectCompare.annualEstUnits`), [...projects.map((p) => `${p.annualEst?.toLocaleString() ?? 0}`)])}
-            {renderRow(t(`projectCompare.totalIssuedUnits`), [...projects.map((p) => `${p.annualIssued?.toLocaleString() ?? 0}`)])}
-            {renderRow(t(`projectCompare.totalRetiredUnits`), [...projects.map((p) => `${p.annualRetired?.toLocaleString() ?? 0}`)])}
-            {renderRow(t(`projectCompare.totalAvailableUnits`), [...projects.map((p) => `${p.annualAvailable?.toLocaleString() ?? 0}`)])}
-          </Table>
+        <DrawerBody p={0}>
+          <Hide below="sm">{renderTable()}</Hide>
+          <Hide above="sm">{renderTableMobile()}</Hide>
         </DrawerBody>
       </DrawerContent>
     </Drawer>
