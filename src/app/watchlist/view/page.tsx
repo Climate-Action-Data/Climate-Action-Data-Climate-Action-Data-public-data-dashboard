@@ -36,7 +36,7 @@ const WatchlistPage: NextPage = () => {
   return (
     <Box paddingY={[`20px`, `58px`]}>
       <Flex flexWrap="wrap" gap="16px" paddingX={[`10px`, `16px`]}>
-        <Box flex={1}>{watchlist ? <WatchlistSummary watchlist={watchlist} /> : <></>}</Box>
+        <Box flex={1}>{watchlist ? <WatchlistSummary disableHover showDivider watchlist={watchlist} /> : <></>}</Box>
         <Box>
           <Card minW="400px" minH="164px">
             <CardBody display="flex" padding="24px">

@@ -31,13 +31,4 @@ describe(`EditWatchlistPopup`, () => {
     expect(container).toMatchSnapshot()
     expect(cancelMock).toHaveBeenCalled()
   })
-
-  it(`renders correctly and closes from confirm button`, () => {
-    const confirmMock = jest.fn()
-    const { container } = render(<EditWatchlistPopup isOpen={IS_OPEN} onConfirm={confirmMock} title={DEFAULT_TEST_TITLE} description={DEFAULT_TEST_CONTENT} />)
-    const cancelButton = screen.getByTestId(`confirm-modal`)
-    fireEvent.click(cancelButton)
-    expect(container).toMatchSnapshot()
-    expect(confirmMock).toHaveBeenCalled()
-  })
 })

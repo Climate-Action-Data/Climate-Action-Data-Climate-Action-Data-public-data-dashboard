@@ -46,7 +46,7 @@ exports[`renders correctly 1`] = `
         <span
           class="chakra-text css-1rr4qq7"
         >
-          Rename Watchlist
+          Rename watchlist
         </span>
       </button>
       <button
@@ -61,7 +61,7 @@ exports[`renders correctly 1`] = `
         <span
           class="chakra-text css-rzksxu"
         >
-          Delete Watchlist
+          Delete watchlist
         </span>
         <svg
           class="chakra-icon css-1tqudqa"
@@ -82,11 +82,11 @@ exports[`renders correctly 1`] = `
 exports[`renders correctly and click delete 1`] = `
 <div>
   <button
-    aria-controls="menu-list-:rb:"
+    aria-controls="menu-list-:rf:"
     aria-expanded="false"
     aria-haspopup="menu"
     class="chakra-button chakra-menu__menu-button css-1jzg6b7"
-    id="menu-button-:rb:"
+    id="menu-button-:rf:"
     type="button"
   >
     <svg
@@ -108,7 +108,7 @@ exports[`renders correctly and click delete 1`] = `
     <div
       aria-orientation="vertical"
       class="chakra-menu__menu-list css-sjt5nk"
-      id="menu-list-:rb:"
+      id="menu-list-:rf:"
       role="menu"
       style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
       tabindex="-1"
@@ -117,7 +117,7 @@ exports[`renders correctly and click delete 1`] = `
         class="chakra-menu__menuitem css-1eocwdv"
         data-index="0"
         data-testid="watchlist-rename"
-        id="menu-list-:rb:-menuitem-:rc:"
+        id="menu-list-:rf:-menuitem-:rg:"
         role="menuitem"
         tabindex="-1"
         type="button"
@@ -125,14 +125,14 @@ exports[`renders correctly and click delete 1`] = `
         <span
           class="chakra-text css-1rr4qq7"
         >
-          Rename Watchlist
+          Rename watchlist
         </span>
       </button>
       <button
         class="chakra-menu__menuitem css-1eocwdv"
         data-index="1"
         data-testid="watchlist-delete"
-        id="menu-list-:rb:-menuitem-:rd:"
+        id="menu-list-:rf:-menuitem-:rh:"
         role="menuitem"
         tabindex="0"
         type="button"
@@ -140,7 +140,7 @@ exports[`renders correctly and click delete 1`] = `
         <span
           class="chakra-text css-rzksxu"
         >
-          Delete Watchlist
+          Delete watchlist
         </span>
         <svg
           class="chakra-icon css-1tqudqa"
@@ -159,13 +159,16 @@ exports[`renders correctly and click delete 1`] = `
 `;
 
 exports[`renders correctly and click rename 1`] = `
-<div>
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+>
   <button
-    aria-controls="menu-list-:r6:"
+    aria-controls="menu-list-:r7:"
     aria-expanded="false"
     aria-haspopup="menu"
     class="chakra-button chakra-menu__menu-button css-1jzg6b7"
-    id="menu-button-:r6:"
+    id="menu-button-:r7:"
     type="button"
   >
     <svg
@@ -187,7 +190,7 @@ exports[`renders correctly and click rename 1`] = `
     <div
       aria-orientation="vertical"
       class="chakra-menu__menu-list css-sjt5nk"
-      id="menu-list-:r6:"
+      id="menu-list-:r7:"
       role="menu"
       style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
       tabindex="-1"
@@ -196,7 +199,7 @@ exports[`renders correctly and click rename 1`] = `
         class="chakra-menu__menuitem css-1eocwdv"
         data-index="0"
         data-testid="watchlist-rename"
-        id="menu-list-:r6:-menuitem-:r7:"
+        id="menu-list-:r7:-menuitem-:r8:"
         role="menuitem"
         tabindex="0"
         type="button"
@@ -204,14 +207,14 @@ exports[`renders correctly and click rename 1`] = `
         <span
           class="chakra-text css-1rr4qq7"
         >
-          Rename Watchlist
+          Rename watchlist
         </span>
       </button>
       <button
         class="chakra-menu__menuitem css-1eocwdv"
         data-index="1"
         data-testid="watchlist-delete"
-        id="menu-list-:r6:-menuitem-:r8:"
+        id="menu-list-:r7:-menuitem-:r9:"
         role="menuitem"
         tabindex="-1"
         type="button"
@@ -219,7 +222,7 @@ exports[`renders correctly and click rename 1`] = `
         <span
           class="chakra-text css-rzksxu"
         >
-          Delete Watchlist
+          Delete watchlist
         </span>
         <svg
           class="chakra-icon css-1tqudqa"

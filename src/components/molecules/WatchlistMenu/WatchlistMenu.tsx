@@ -21,7 +21,7 @@ export const WatchlistMenu = (props: WatchlistMenuProps) => {
   const [showDeletePopup, setShowDeletePopup] = useState<boolean>(false)
   const [showRenamePopup, setShowRenamePopup] = useState<boolean>(false)
 
-  const { renameWatchlist } = useEffects().watchlist
+  const { renameWatchlist, deleteWatchlist } = useEffects().watchlist
 
   const handleRename = () => {
     setShowRenamePopup(true)
@@ -42,7 +42,7 @@ export const WatchlistMenu = (props: WatchlistMenuProps) => {
   }
 
   const handleDeleteConfirm = () => {
-    deleteWatchlist(watchlistId)
+    deleteWatchlist(watchlist.id)
     setShowDeletePopup(false)
     router.push(`/watchlist/all`)
   }

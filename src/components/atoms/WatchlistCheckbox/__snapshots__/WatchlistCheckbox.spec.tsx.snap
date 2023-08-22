@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="css-cqjmew"
+  >
+    <label
+      class="chakra-checkbox css-1elxtiq"
+      data-testid="checkbox-watchlist"
+    >
+      <input
+        class="chakra-checkbox__input"
+        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+        type="checkbox"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="chakra-checkbox__control css-dnty2r"
+      />
+      <span
+        class="chakra-checkbox__label css-1oeb2oe"
+      >
+        Electric - Biogas
+      </span>
+    </label>
+  </div>
+  <div
+    class="css-cqjmew"
+  >
+    <label
+      class="chakra-checkbox css-1elxtiq"
+      data-testid="checkbox-watchlist"
+    >
+      <input
+        class="chakra-checkbox__input"
+        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+        type="checkbox"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="chakra-checkbox__control css-dnty2r"
+      />
+      <span
+        class="chakra-checkbox__label css-1oeb2oe"
+      >
+        Verra
+      </span>
+    </label>
+  </div>
+  <div
+    class="css-cqjmew"
+  >
+    <label
+      class="chakra-checkbox css-1elxtiq"
+      data-testid="checkbox-watchlist"
+    >
+      <input
+        class="chakra-checkbox__input"
+        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+        type="checkbox"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="chakra-checkbox__control css-dnty2r"
+      />
+      <span
+        class="chakra-checkbox__label css-1oeb2oe"
+      >
+        GCC
+      </span>
+    </label>
+  </div>
+  <div
+    class="css-cqjmew"
+  >
+    <label
+      class="chakra-checkbox css-1elxtiq"
+      data-testid="checkbox-watchlist"
+    >
+      <input
+        class="chakra-checkbox__input"
+        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+        type="checkbox"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="chakra-checkbox__control css-dnty2r"
+      />
+      <span
+        class="chakra-checkbox__label css-1oeb2oe"
+      >
+        Cookstoves
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`renders correctly and check checkbox 1`] = `
+<div>
+  <div
+    class="css-cqjmew"
+  >
+    <label
+      class="chakra-checkbox css-1elxtiq"
+      data-checked=""
+      data-testid="checkbox-watchlist"
+    >
+      <input
+        class="chakra-checkbox__input"
+        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+        type="checkbox"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="chakra-checkbox__control css-dnty2r"
+        data-checked=""
+      >
+        <div
+          class="css-0"
+          style="display: flex; align-items: center; justify-content: center; height: 100%;"
+        >
+          <svg
+            class="css-vrf7dt"
+            style="fill: none; stroke-width: 2; stroke: currentColor; stroke-dasharray: 16;"
+            viewBox="0 0 12 10"
+          >
+            <polyline
+              points="1.5 6 4.5 9 10.5 1"
+            />
+          </svg>
+        </div>
+      </span>
+      <span
+        class="chakra-checkbox__label css-1oeb2oe"
+        data-checked=""
+      >
+        Electric - Biogas
+      </span>
+    </label>
+  </div>
+  <div
+    class="css-cqjmew"
+  >
+    <label
+      class="chakra-checkbox css-1elxtiq"
+      data-testid="checkbox-watchlist"
+    >
+      <input
+        class="chakra-checkbox__input"
+        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+        type="checkbox"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="chakra-checkbox__control css-dnty2r"
+      />
+      <span
+        class="chakra-checkbox__label css-1oeb2oe"
+      >
+        Verra
+      </span>
+    </label>
+  </div>
+  <div
+    class="css-cqjmew"
+  >
+    <label
+      class="chakra-checkbox css-1elxtiq"
+      data-testid="checkbox-watchlist"
+    >
+      <input
+        class="chakra-checkbox__input"
+        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+        type="checkbox"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="chakra-checkbox__control css-dnty2r"
+      />
+      <span
+        class="chakra-checkbox__label css-1oeb2oe"
+      >
+        GCC
+      </span>
+    </label>
+  </div>
+  <div
+    class="css-cqjmew"
+  >
+    <label
+      class="chakra-checkbox css-1elxtiq"
+      data-testid="checkbox-watchlist"
+    >
+      <input
+        class="chakra-checkbox__input"
+        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+        type="checkbox"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="chakra-checkbox__control css-dnty2r"
+      />
+      <span
+        class="chakra-checkbox__label css-1oeb2oe"
+      >
+        Cookstoves
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`renders correctly empty 1`] = `
+<div>
+  <div
+    class="css-gmuwbf"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      noWatchlist
+    </p>
+  </div>
+</div>
+`;

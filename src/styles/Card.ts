@@ -25,3 +25,14 @@ export const watchlist = {
     alignContent: `center`,
   },
 }
+
+export const watchlistNoHover = {
+  ...watchlist,
+  container: {
+    ...watchlist.container,
+    _hover: {
+      boxShadow: `2px 2px 8px 0px #0000001A`,
+      cursor: `default`,
+    },
+  },
+}
