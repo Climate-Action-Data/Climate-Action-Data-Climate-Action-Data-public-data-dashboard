@@ -1,16 +1,32 @@
-import { Button } from '@chakra-ui/react'
+import { Button, Flex } from '@chakra-ui/react'
 import { FC } from 'react'
+import { CompareIcon } from '../CompareIcon/CompareIcon'
 
 export interface CompareToggleButtonProps {
-  isEnabled?: boolean
+  isDisabled?: boolean
   onClick: () => void
 }
 
 const CompareToggleButton: FC<CompareToggleButtonProps> = (props) => {
-  const { onClick } = props
+  const { isDisabled: isEnabled, onClick } = props
+
   return (
-    <Button padding="6px 8px 6px 12p" width="max-content" onClick={onClick} borderRadius="32px" fontSize="14px" fontWeight="medium" data-testid="compare-toggle-button">
-      Compare
+    <Button
+      padding="6px 8px 6px 12px"
+      height="32px"
+      width="max-content"
+      border="1px solid #FFFFFF"
+      onClick={onClick}
+      isDisabled={isEnabled}
+      borderRadius="32px"
+      fontSize="14px"
+      fontWeight="medium"
+      data-testid="compare-toggle-button"
+    >
+      <Flex alignItems={`center`} textColor={`white`}>
+        Compare
+      </Flex>
+      <CompareIcon width="16px" height="16px" color={`white`} ml="4px" />
     </Button>
   )
 }

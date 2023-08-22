@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <button
+    class="chakra-button css-1az336n"
+    data-testid="compare-close-button"
+    type="button"
+  >
+    <div
+      class="css-1gpauhq"
+    >
+      Close
+    </div>
+  </button>
+</div>
+`;
