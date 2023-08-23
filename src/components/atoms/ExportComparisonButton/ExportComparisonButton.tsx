@@ -1,6 +1,7 @@
 import { Button, Flex } from '@chakra-ui/react'
 import { FC } from 'react'
 import { DownloadIcon } from '../DownloadIcon/DownloadIcon'
+import { useTranslation } from 'react-i18next'
 
 export interface ExportComparisonButtonProps {
   onClick: () => void
@@ -8,6 +9,7 @@ export interface ExportComparisonButtonProps {
 
 const ExportComparisonButton: FC<ExportComparisonButtonProps> = (props) => {
   const { onClick } = props
+  const { t } = useTranslation(`search`)
 
   return (
     <Button
@@ -22,7 +24,7 @@ const ExportComparisonButton: FC<ExportComparisonButtonProps> = (props) => {
       fontWeight="medium"
       data-testid="export-comparison-button"
     >
-      <Flex alignItems={`center`}>Export comparison table</Flex>
+      <Flex alignItems={`center`}>{t(`projectCompare.exportComparison`)}</Flex>
       <DownloadIcon ml="4px" />
     </Button>
   )

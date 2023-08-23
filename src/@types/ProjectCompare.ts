@@ -2,7 +2,7 @@ export enum CompareDataType {
   TEXT = `TEXT`,
   TEXT_HIGHLIGHTED = `TEXT_HIGHLIGHTED`,
   NUMBER = `NUMBER`,
-  URL = `url`,
+  URL = `URL`,
 }
 
 export type ProjectCompareData = {

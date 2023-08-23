@@ -96,7 +96,7 @@ export const ProjectCompareResultDrawer = (props: ProjectCompareResultDrawerProp
 
           return (
             <>
-              <Td borderRight={isLast ? `0px` : `1px solid #B8BEC0`} width={`400px`} textColor={textDataColor} fontSize={`md`} {...fontStyleFromType(type)}>
+              <Td borderRight={isLast ? `0px` : `1px solid`} borderColor="lightGray.400" width={`400px`} textColor={textDataColor} fontSize={`md`} {...fontStyleFromType(type)}>
                 {type === CompareDataType.URL ? renderLink(item) : item}
               </Td>
             </>

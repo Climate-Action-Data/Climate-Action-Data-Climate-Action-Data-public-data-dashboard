@@ -1,6 +1,7 @@
 import { Button, Flex } from '@chakra-ui/react'
 import { FC } from 'react'
 import { CompareIcon } from '../CompareIcon/CompareIcon'
+import { useTranslation } from 'react-i18next'
 
 export interface CompareToggleButtonProps {
   isDisabled?: boolean
@@ -9,6 +10,7 @@ export interface CompareToggleButtonProps {
 
 const CompareToggleButton: FC<CompareToggleButtonProps> = (props) => {
   const { isDisabled, onClick } = props
+  const { t } = useTranslation(`search`)
 
   return (
     <Button
@@ -25,7 +27,7 @@ const CompareToggleButton: FC<CompareToggleButtonProps> = (props) => {
       data-testid="compare-toggle-button"
     >
       <Flex alignItems={`center`} textColor={`white`}>
-        Compare
+        {t(`projectCompare.compare`)}
       </Flex>
       <CompareIcon width="16px" height="16px" color={`white`} ml="4px" />
     </Button>
