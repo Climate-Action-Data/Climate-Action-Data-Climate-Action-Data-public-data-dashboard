@@ -11,11 +11,12 @@ import { DatabaseQueryDirection, ProjectSearchSortBy, UnitSearchSortBy } from '@
 
 interface ProjectSearchHeadProps {
   renderType?: string
+  watchlistId?: string
   refreshData?: () => void
 }
 
 export const ProjectSearchHead = (props: ProjectSearchHeadProps) => {
-  const { renderType, refreshData } = props
+  const { renderType, refreshData, watchlistId } = props
   const { projectResults } = useAppState().projectResult
   const { unitResults } = useAppState().unitResult
   const { setSortByProject, setSortByUnit } = useActions().searchFilters
@@ -76,7 +77,11 @@ export const ProjectSearchHead = (props: ProjectSearchHeadProps) => {
           </Thead>
         </Table>
       </TableContainer>
-      {renderType === ALLOWED_RENDER_TYPE.PROJECT ? <ProjectSearchHeadContent projectResults={projectResults} /> : <UnitSearchHeadContent unitResults={unitResults} />}
+      {renderType === ALLOWED_RENDER_TYPE.PROJECT ? (
+        <ProjectSearchHeadContent watchlistId={watchlistId} projectResults={projectResults} />
+      ) : (
+        <UnitSearchHeadContent unitResults={unitResults} />
+      )}
     </Flex>
   )
 }
