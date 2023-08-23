@@ -13,6 +13,7 @@ import AppHeader from '@/components/organisms/AppHeader/AppHeader'
 import { Menu } from '@/components/organisms/Menu/Menu'
 import theme from '@/styles/Theme'
 import NoSSR from './noSSR'
+import { GA_TRACKING_ID } from '@/utils/gtag'
 
 import '../i18n'
 import './globals.css'
@@ -36,10 +37,26 @@ const providerConfig = {
 const overmind = createOvermind(config)
 export default function RootLayout({ children }: { children: React.ReactNode }): React.JSX.Element {
   const currentPath = usePathname()
+
   return (
     <Provider value={overmind}>
       <Auth0Provider {...providerConfig}>
         <html lang="en">
+          <head>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+              }}
+            />
+          </head>
           <body>
             <NoSSR>
               <CacheProvider>
