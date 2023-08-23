@@ -35,7 +35,7 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
   const handleAddWatchlistClose = () => {
     setShowAddWatchlistPopup(false)
   }
-  const testAlert = (id: string) => {
+  const hanldeAddToWatchlist = (id: string) => {
     setShowAddWatchlistPopup(true)
     setProjectIdForWatchlist(id)
   }
@@ -53,7 +53,7 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
         icon: <DownloadIcon />,
         text: t(`projectMenu.exportProject`),
       },
-      { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`), onClick: () => testAlert(projectWarehouseId) },
+      { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`), onClick: () => hanldeAddToWatchlist(projectWarehouseId) },
     ]
     return menuList
   }
