@@ -5,6 +5,7 @@ const DEFAULT_TEST_TITLE = `My Title`
 const DEFAULT_TEST_CONTENT = `My Content`
 const IS_OPEN = true
 const IS_CLOSED = false
+
 describe(`EditWatchlistPopup`, () => {
   it(`renders correctly`, () => {
     const { container } = render(<EditWatchlistPopup isOpen={IS_OPEN} title={DEFAULT_TEST_TITLE} description={DEFAULT_TEST_CONTENT} />)
