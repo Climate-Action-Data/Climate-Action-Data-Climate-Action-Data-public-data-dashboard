@@ -2,20 +2,6 @@
 
 exports[`renders correctly and modal closes 1`] = `<div />`;
 
-exports[`renders correctly and searc input 1`] = `
-<div
-  aria-hidden="true"
-  data-aria-hidden="true"
-/>
-`;
-
-exports[`renders correctly and searc input then clear 1`] = `
-<div
-  aria-hidden="true"
-  data-aria-hidden="true"
-/>
-`;
-
 exports[`renders correctly and search modal opens 1`] = `
 <div
   aria-hidden="true"

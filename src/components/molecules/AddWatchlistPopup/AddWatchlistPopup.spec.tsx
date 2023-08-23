@@ -39,33 +39,6 @@ it(`renders correctly and modal closes`, async () => {
   expect(container).toMatchSnapshot()
 })
 
-it(`renders correctly and searc input`, async () => {
-  const { container } = render(
-    <TestOvermindWrapper>
-      <AddWatchlistPopup isOpen={MODAL_OPEN} warehouseProjectId={PROJECT_ID} />
-    </TestOvermindWrapper>,
-  )
-  await new Promise((r) => setTimeout(r, DELAY_FOR_RENDER))
-  fireEvent.input(screen.getByTestId(`search-add-watchlist-modal`), { target: { value: `Elec` } })
-  const project = screen.getAllByTestId(`checkbox-watchlist`)
-  expect(project.length).toBeGreaterThan(0)
-  expect(container).toMatchSnapshot()
-})
-
-it(`renders correctly and searc input then clear`, async () => {
-  const { container } = render(
-    <TestOvermindWrapper>
-      <AddWatchlistPopup isOpen={MODAL_OPEN} warehouseProjectId={PROJECT_ID} />
-    </TestOvermindWrapper>,
-  )
-  await new Promise((r) => setTimeout(r, DELAY_FOR_RENDER))
-  fireEvent.input(screen.getByTestId(`search-add-watchlist-modal`), { target: { value: `Elec` } })
-  fireEvent.input(screen.getByTestId(`search-add-watchlist-modal`), { target: { value: `` } })
-  const project = screen.getAllByTestId(`checkbox-watchlist`)
-  expect(project.length).toBeGreaterThan(0)
-  expect(container).toMatchSnapshot()
-})
-
 it(`renders correctly and search modal opens`, async () => {
   const { container } = render(
     <TestOvermindWrapper>

@@ -1,6 +1,7 @@
 'use client'
 import { Watchlist, WatchlistSorting } from '@/@types/Watchlist'
 import { Dropdown, Item } from '@/components/atoms/Dropdown/Dropdown'
+import { EditWatchlistPopup } from '@/components/atoms/EditWatchlistPopup/EditWatchlistPopup'
 import { NoWatchlistScreen } from '@/components/atoms/NoWatchlistScreen/NoWatchlistScreen'
 import { PlusIcon } from '@/components/atoms/PlusIcon/PlusIcon'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
@@ -13,6 +14,7 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const WatchlistPage: NextPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
   const [watchlists, setWatchlists] = useState<Watchlist[] | undefined>(undefined)
   const [visibleWatchlists, setVisibleWatchlists] = useState<Watchlist[] | undefined>(undefined)
 
@@ -22,9 +24,13 @@ const WatchlistPage: NextPage = () => {
     return { label: t(value), value }
   })
 
-  const { getAllWatchlist } = useEffects().watchlist
+  const { getAllWatchlist, createWatchlist } = useEffects().watchlist
 
   useEffect(() => {
+    getWatchlists()
+  }, [])
+
+  const getWatchlists = () => {
     getAllWatchlist().then((result) => {
       if (result.data) {
         result.data.sort((a, b) => {
@@ -32,15 +38,22 @@ const WatchlistPage: NextPage = () => {
         })
         setWatchlists(result.data)
         setVisibleWatchlists(result.data)
+      } else {
+        setWatchlists([])
+        setVisibleWatchlists([])
       }
     })
-  }, [])
+  }
 
   const renderList = () => {
     if (visibleWatchlists && visibleWatchlists.length > 0) {
       return <WatchlistList watchlists={visibleWatchlists} />
     } else {
-      return <NoWatchlistScreen />
+      return (
+        <Center marginTop={[`20px`, `100px`]}>
+          <NoWatchlistScreen onClick={handleCreateWatchlist} />
+        </Center>
+      )
     }
   }
 
@@ -54,6 +67,20 @@ const WatchlistPage: NextPage = () => {
     } else {
       return renderList()
     }
+  }
+
+  const handleCreateWatchlist = () => {
+    setIsModalOpen(true)
+  }
+
+  const handleCreateConfirm = async (name: string, description: string) => {
+    await createWatchlist(name, description)
+    await getWatchlists()
+    setIsModalOpen(false)
+  }
+
+  const handleCreateCancel = () => {
+    setIsModalOpen(false)
   }
 
   const handleSort = (selectedSort: Item) => {
@@ -108,7 +135,7 @@ const WatchlistPage: NextPage = () => {
             <Input onChange={handleOnChange} variant={`white`} data-testid="search-watchlist" placeholder={t(`searchWatchlist`)} />
           </InputGroup>
           {visibleWatchlists && visibleWatchlists.length > 0 && (
-            <Button rightIcon={<PlusIcon />} variant={`blueOutline`}>
+            <Button onClick={handleCreateWatchlist} rightIcon={<PlusIcon />} variant={`blueOutline`}>
               {t(`newWatchlist`)}
             </Button>
           )}
@@ -118,6 +145,7 @@ const WatchlistPage: NextPage = () => {
         </Flex>
         {renderBody()}
       </Box>
+      <EditWatchlistPopup isOpen={isModalOpen} isNewWatchlist={true} title={t(`newWatchlist`)} onCancel={handleCreateCancel} onConfirm={handleCreateConfirm} />
     </Box>
   )
 }

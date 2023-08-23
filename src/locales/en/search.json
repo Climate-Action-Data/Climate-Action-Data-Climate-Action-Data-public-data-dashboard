@@ -55,7 +55,8 @@
     "viewProject": "View Project",
     "viewUnit": "View Units",
     "exportProject": "Export Project",
-    "addToWatchlists": "Add to Watchlists"
+    "addToWatchlists": "Add to Watchlists",
+    "removeToWatchlists": "Remove project"
   },
   "projectCompare": {
     "compare": "Compare",

@@ -13,20 +13,23 @@ import { AddWatchlistPopup } from '@/components/molecules/AddWatchlistPopup/AddW
 import { useState } from 'react'
 import { AddCompareIcon } from '../AddCompareIcon/AddCompareIcon'
 import { RemoveCompareIcon } from '../RemoveCompareIcon/RemoveCompareIcon'
-import { useActions, useAppState } from '@/overmind'
+import { useActions, useAppState, useEffects } from '@/overmind'
+import { MinusIcon } from '../MinusIcon/MinusIcon'
 
 interface ProjectSearchHeadContentProps {
+  watchlistId?: string
   projectResults?: EffectResponse<ProjectSearchResponse>
 }
 
 export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) => {
-  const { projectResults } = props
+  const { projectResults, watchlistId } = props
   const router = useRouter()
   const [projectIdForWatchlist, setProjectIdForWatchlist] = useState<string>(``)
   const [showAddWatchlistPopup, setShowAddWatchlistPopup] = useState<boolean>(false)
   const { t } = useTranslation(`search`)
   const { isCompare, projects: projectsToCompare } = useAppState().compareProjects
   const { setProjectToCompare, removeProjectFromCompare } = useActions().compareProjects
+  const { removeProjectFromWatchlist } = useEffects().watchlist
 
   const handleClick = (projectId: string, event?: any) => {
     if (event?.target) {
@@ -45,6 +48,12 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
     setProjectIdForWatchlist(id)
   }
 
+  const handleRemoveFromWatchlist = (id: string) => {
+    if (watchlistId) {
+      removeProjectFromWatchlist(id, watchlistId)
+    }
+  }
+
   const generateMenuList = (projectWarehouseId: string) => {
     const menuList: MenuItemProps[] = [
       { dataTestId: `view-project-details`, onClick: () => router.push(`/project?id=${projectWarehouseId}`), text: t(`projectMenu.viewProject`) },
@@ -60,6 +69,9 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
       },
       { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`), onClick: () => hanldeAddToWatchlist(projectWarehouseId) },
     ]
+    if (watchlistId) {
+      menuList.push({ dataTestId: `export-project`, icon: <MinusIcon />, text: t(`projectMenu.removeToWatchlists`), onClick: () => handleRemoveFromWatchlist(projectWarehouseId) })
+    }
     return menuList
   }
   const handleProjectAddedToCompare = (project: ProjectSearchResult) => {
