@@ -61,7 +61,7 @@ exports[`ProjectCompareWidget renders correctly 1`] = `
         4
       </p>
       <div
-        class="chakra-stack__divider css-6ffn6a"
+        class="chakra-stack__divider css-1pvaugz"
       />
       <div
         class="chakra-stack css-1citp8o"
@@ -83,7 +83,7 @@ exports[`ProjectCompareWidget renders correctly 1`] = `
         </p>
       </div>
       <div
-        class="chakra-stack__divider css-6ffn6a"
+        class="chakra-stack__divider css-1pvaugz"
       />
       <div
         class="chakra-stack css-1citp8o"
@@ -105,7 +105,7 @@ exports[`ProjectCompareWidget renders correctly 1`] = `
         </p>
       </div>
       <div
-        class="chakra-stack__divider css-6ffn6a"
+        class="chakra-stack__divider css-1pvaugz"
       />
       <div
         class="chakra-stack css-1citp8o"
@@ -127,7 +127,7 @@ exports[`ProjectCompareWidget renders correctly 1`] = `
         </p>
       </div>
       <div
-        class="chakra-stack__divider css-6ffn6a"
+        class="chakra-stack__divider css-1pvaugz"
       />
       <div
         class="chakra-stack css-1citp8o"
@@ -150,7 +150,7 @@ exports[`ProjectCompareWidget renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="chakra-stack__divider css-6ffn6a"
+      class="chakra-stack__divider css-1pvaugz"
     />
     <div
       class="chakra-stack css-1sd1lge"

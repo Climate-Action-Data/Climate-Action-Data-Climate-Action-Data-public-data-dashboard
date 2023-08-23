@@ -60,7 +60,7 @@ export const ProjectCompareWidget = (props: ProjectCompareWidgetProps) => {
         {projects.length == 0 ? <>{renderNoSelection()}</> : <>{renderSelectedCount()}</>}
         <HStack>
           <CompareCloseButton onClick={onClose} />
-          <CompareSubmitButton onClick={onCompare} />
+          <CompareSubmitButton onClick={onCompare} isDisabled={projects.length == 0} />
         </HStack>
       </VStack>
     )
@@ -73,7 +73,7 @@ export const ProjectCompareWidget = (props: ProjectCompareWidgetProps) => {
         <HStack
           alignItems="center"
           visibility={isVisible ? `visible` : `hidden`}
-          divider={projects.length > 0 ? <StackDivider borderColor={`#B8BEC0`} /> : <></>}
+          divider={projects.length > 0 ? <StackDivider borderColor="lightGray.400" /> : <></>}
           bg="gray.100"
           position={`fixed`}
           height={`136px`}
@@ -84,7 +84,7 @@ export const ProjectCompareWidget = (props: ProjectCompareWidgetProps) => {
           {projects.length == 0 ? (
             <>{renderNoSelection()}</>
           ) : (
-            <HStack flex={4} divider={<StackDivider borderColor={`#B8BEC0`} />} height={`100%`}>
+            <HStack flex={4} divider={<StackDivider borderColor="lightGray.400" />} height={`100%`}>
               {renderSelectedCount()}
 
               {projects.map((project) => {
@@ -98,7 +98,7 @@ export const ProjectCompareWidget = (props: ProjectCompareWidgetProps) => {
           )}
 
           <VStack flex={1}>
-            <CompareSubmitButton onClick={onCompare} />
+            <CompareSubmitButton onClick={onCompare} isDisabled={projects.length == 0} />
             <CompareCloseButton onClick={onClose} />
           </VStack>
         </HStack>
