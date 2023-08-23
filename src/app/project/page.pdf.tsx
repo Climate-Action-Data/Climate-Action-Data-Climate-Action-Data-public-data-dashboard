@@ -220,7 +220,8 @@ export const generateProjectPDFDocument = async (props: GeneratePdfProps) => {
   const projectPdf = pdf(initPdf)
 
   const result = await projectPdf.toBlob()
-  saveAs(result, `${project?.name}.pdf`)
+  const timeStamp = new Date().toISOString()
+  saveAs(result, `${project?.name}-${timeStamp}.pdf`)
 }
 
 const renderCreditingPeriod = (start: string, end: string) => {

@@ -8,8 +8,8 @@ import { DownloadIcon } from '@/components/atoms/DownloadIcon/DownloadIcon'
 import { CompareDataType, ProjectCompareData } from '@/@types/ProjectCompare'
 import { formatCreditingPeriod } from '@/utils/TextConverter'
 import { AeonikFono } from '@/styles/fonts'
-import { createAndDownload } from '@/components/molecules/CSVDownload/CSVDownload'
-import { compareProjectCsvHeaders, convertCompareProjectToCSV } from '@/utils/CsvHelper'
+import { compareProjectCsvHeaders, convertCompareProjectToCSV, createAndDownloadCsv } from '@/utils/CsvHelper'
+import { CSVExportFilenames } from '@/@types/CSV'
 
 interface ProjectCompareResultDrawerProps {
   isOpen: boolean
@@ -119,7 +119,7 @@ export const ProjectCompareResultDrawer = (props: ProjectCompareResultDrawerProp
     const csv = projects.map((project) => convertCompareProjectToCSV(project)).join(`\n`)
     const data = `${headers}\n${csv}`
 
-    createAndDownload(new Blob([data]))
+    createAndDownloadCsv(new Blob([data]), CSVExportFilenames.PROJECT_COMPARE)
   }
 
   const renderTableMobile = () => {

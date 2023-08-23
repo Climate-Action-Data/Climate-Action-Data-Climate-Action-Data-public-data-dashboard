@@ -1,7 +1,8 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import { CSVDownload, createAndDownload } from './CSVDownload'
+import { CSVDownload } from './CSVDownload'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
-import { CSVExportTypes } from '@/@types/CSV'
+import { CSVExportFilenames, CSVExportTypes } from '@/@types/CSV'
+import { createAndDownloadCsv } from '../../../utils/CsvHelper'
 
 it(`renders correctly`, () => {
   const { container } = render(
@@ -87,7 +88,7 @@ beforeAll(() => {
 })
 it(`creates a link and downloads`, () => {
   const testData = new Blob([`test,test2`], { type: `text/csv` })
-  createAndDownload(testData)
+  createAndDownloadCsv(testData, CSVExportFilenames.PROJECT_SEARCH)
   const invisibleLink = screen.getByTestId(`invisible-link`)
   expect(createUrlMock).toHaveBeenCalled()
   expect(revokeUrlMock).toHaveBeenCalled()
