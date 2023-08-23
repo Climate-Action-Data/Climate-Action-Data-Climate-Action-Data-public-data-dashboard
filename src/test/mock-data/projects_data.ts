@@ -78,3 +78,5 @@ export const projectData: ProjectSearchResult[] = [
     annualAvailable: 172795,
   },
 ]
+
+export const csvProjectData = `\"Bosques Solares de los Llanos 1","109","MATRIX RENEWABLES COLOMBIA, S.A.S",test.com,"EcoRegistry","ACM0002: Grid-connected electricity generation from renewable sources / ACM0006: Electricity and heat generation from biomass","Electricity; gas, steam and air conditioning supply","Colombia","Region 1",Authorized,2020/08/22 - 2030/08/21,311410,37202,30167,7035`
