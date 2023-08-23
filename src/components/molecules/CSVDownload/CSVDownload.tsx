@@ -1,4 +1,4 @@
-import { CSVExportTypes } from '@/@types/CSV'
+import { CSVExportFilenames, CSVExportTypes } from '@/@types/CSV'
 import { ProjectSearchFilterValues, UnitSearchFilterValues } from '@/@types/ProjectSearchFilterValues'
 import { ToastVariants } from '@/@types/Toast'
 import { CloseIcon } from '@/components/atoms/CloseIcon/CloseIcon'
@@ -8,31 +8,14 @@ import { useActions, useAppState, useEffects } from '@/overmind'
 import { Button, Flex, Hide, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { createAndDownloadCsv } from '../../../utils/CsvHelper'
 
 interface CSVDownloadProps {
   exportType: CSVExportTypes
   totalResults?: number
 }
 
-const DEFAULT_BLOB_TYPE = `application/octet-stream`
-const DEFAULT_LINK_ELEMENT = `a`
-const DEFAULT_DL_ATTRIBUTE = `download`
-const DEFAULT_FILE_NAME = `export.csv`
-const DEFAULT_LINK_DISPLAY = `none`
 const DEFAULT_MAX_DOWNLOAD_SIZE = 1000
-
-export const createAndDownload = (data: Blob) => {
-  const blob = new Blob([data], { type: DEFAULT_BLOB_TYPE })
-  const url = window.URL.createObjectURL(blob)
-  const link = document.createElement(DEFAULT_LINK_ELEMENT)
-  link.style.display = DEFAULT_LINK_DISPLAY
-  link.setAttribute(`data-testid`, `invisible-link`)
-  link.href = url
-  link.setAttribute(DEFAULT_DL_ATTRIBUTE, DEFAULT_FILE_NAME)
-  document.body.appendChild(link)
-  link.click()
-  URL.revokeObjectURL(url)
-}
 
 export const CSVDownload = (props: CSVDownloadProps) => {
   const { exportType, totalResults } = props
@@ -65,7 +48,7 @@ export const CSVDownload = (props: CSVDownloadProps) => {
     exportToCSV(exportType, keywordSearch, searchFilters).then((exportData) => {
       if (exportData.data) {
         // Create a blob from the response data
-        createAndDownload(exportData.data)
+        createAndDownloadCsv(exportData.data, exportType === CSVExportTypes.UNIT ? CSVExportFilenames.UNIT_SEARCH : CSVExportFilenames.PROJECT_SEARCH)
         newToast({ variant: ToastVariants.SUCCESS, message: t(`exportValid`), icon: <DownloadIcon /> })
       } else {
         newToast({ variant: ToastVariants.FAILURE, message: t(`exportFail`), icon: <DownloadIcon /> })

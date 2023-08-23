@@ -3,6 +3,12 @@ export enum CSVExportTypes {
   UNIT = `unit`,
 }
 
+export enum CSVExportFilenames {
+  PROJECT_SEARCH = `project-search-export`,
+  UNIT_SEARCH = `unit-search-export`,
+  PROJECT_COMPARE = `project-compare-export`,
+}
+
 export type ExportFilters = {
   keywords: string
   count: number

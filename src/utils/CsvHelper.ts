@@ -1,8 +1,32 @@
 import { ProjectSearchResult } from '@/@types/ProjectSearchResult'
 import { formatCreditingPeriod, stringifyString } from './TextConverter'
 import { TFunction } from 'i18next'
+import { CSVExportFilenames } from '../@types/CSV'
 
 const DEFAUL_CSV_DELIMITER = `,`
+const DEFAULT_BLOB_TYPE = `application/octet-stream`
+const DEFAULT_LINK_ELEMENT = `a`
+const DEFAULT_DL_ATTRIBUTE = `download`
+const DEFAULT_FILE_NAME = `export`
+const DEFAULT_LINK_DISPLAY = `none`
+
+const csvFilenameWithTimestamp = (filename: string) => {
+  const timeStamp = new Date().toISOString()
+  return `${filename ?? DEFAULT_FILE_NAME}-${timeStamp}.csv`
+}
+
+export const createAndDownloadCsv = (data: Blob, filename: CSVExportFilenames) => {
+  const blob = new Blob([data], { type: DEFAULT_BLOB_TYPE })
+  const url = window.URL.createObjectURL(blob)
+  const link = document.createElement(DEFAULT_LINK_ELEMENT)
+  link.style.display = DEFAULT_LINK_DISPLAY
+  link.setAttribute(`data-testid`, `invisible-link`)
+  link.href = url
+  link.setAttribute(DEFAULT_DL_ATTRIBUTE, csvFilenameWithTimestamp(filename))
+  document.body.appendChild(link)
+  link.click()
+  URL.revokeObjectURL(url)
+}
 
 export const compareProjectCsvHeaders = (t: TFunction) => {
   return [
