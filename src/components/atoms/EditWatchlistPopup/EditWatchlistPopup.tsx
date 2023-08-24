@@ -65,7 +65,7 @@ export const EditWatchlistPopup = (props: EditWatchlistPopupProps) => {
   }
 
   return (
-    <Modal onClose={handleClose} size={`md`} isOpen={isOpenModal}>
+    <Modal isCentered onClose={handleClose} size={`md`} isOpen={isOpenModal}>
       <ModalOverlay />
       <ModalContent>
         <Flex alignItems="center">

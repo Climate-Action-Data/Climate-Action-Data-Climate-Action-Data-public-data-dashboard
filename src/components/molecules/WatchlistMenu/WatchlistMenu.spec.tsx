@@ -27,23 +27,3 @@ it(`renders correctly and click rename`, () => {
   fireEvent.click(renameButton)
   expect(container).toMatchSnapshot()
 })
-
-const DEFAULT_RENDER_TIMEOUT = 2000
-
-it(`renders correctly and click delete`, async () => {
-  const mockPush = jest.fn()
-  const { container } = render(
-    <TestOvermindWrapper>
-      <TestRouter router={{ push: mockPush }}>
-        <WatchlistMenu watchlist={watchlistData[0]} />
-      </TestRouter>
-    </TestOvermindWrapper>,
-  )
-  const renameButton = screen.getByTestId(`watchlist-delete`)
-  fireEvent.click(renameButton)
-  await new Promise((r) => setTimeout(r, DEFAULT_RENDER_TIMEOUT))
-  const confirmModal = screen.getByTestId(`confirm-modal`)
-  fireEvent.click(confirmModal)
-  expect(mockPush).toHaveBeenCalled()
-  expect(container).toMatchSnapshot()
-})

@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useState } from 'react'
 import { Box, Container, Flex, VStack } from '@chakra-ui/react'
 
-import { useActions, useAppState, useEffects } from '@/overmind'
+import { useActions, useAppState } from '@/overmind'
 import { setScrollEventListeners } from '@/utils/Stickify'
 import { ALLOWED_RENDER_TYPE, DEFAULT_PROJECT_COUNT_TO_DISPLAY } from '@/@types/ProjectSearchResult'
 
@@ -11,6 +11,7 @@ import { PaginationWidget } from '@/components/atoms/PaginationWidget/Pagination
 import { CSVDownload } from '@/components/molecules/CSVDownload/CSVDownload'
 import { CSVExportTypes } from '@/@types/CSV'
 import { SpinnerScreen } from '@/components/atoms/SpinnerScreen/SpinnerScreen'
+import { NoProjectsWatchlist } from '@/components/atoms/NoProjectsWatchlist/NoProjectsWatchlist'
 
 interface WatchlistProjectsProps {
   watchlistId: string
@@ -18,33 +19,39 @@ interface WatchlistProjectsProps {
 
 export const WatchlistProjects = (props: WatchlistProjectsProps) => {
   const { watchlistId } = props
-  const { getProjectSearchResults } = useEffects().projectResult
+  const { getWatchlistProjects } = useActions().watchlist
   const { setProjectResults, clearProjectResults } = useActions().projectResult
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const { projectResults } = useAppState().projectResult
-  const { selectedProjectSearchFilterValues, keywordSearch } = useAppState().searchFilters
+  const { keywordSearch } = useAppState().searchFilters
 
   useEffect(() => {
     clearProjectResults()
-    getProjectSearchResults(keywordSearch, selectedProjectSearchFilterValues.searchFilterValues).then((hasProjectResults) => {
-      setProjectResults(hasProjectResults)
-    })
+    getWatchlistProjects({ id: watchlistId })
+      .then((hasProjectResults) => {
+        setProjectResults(hasProjectResults)
+      })
+      .catch(() => undefined)
   }, [keywordSearch])
 
   const handleRefreshData = () => {
     setIsLoading(true)
-    getProjectSearchResults(keywordSearch, selectedProjectSearchFilterValues.searchFilterValues).then((hasProjectResults) => {
-      setIsLoading(false)
-      setProjectResults(hasProjectResults)
-    })
+    getWatchlistProjects({ id: watchlistId })
+      .then((hasProjectResults) => {
+        setIsLoading(false)
+        setProjectResults(hasProjectResults)
+      })
+      .catch(() => undefined)
   }
 
   const handleOnPageChange = (currentPage: number, from: number) => {
     setIsLoading(true)
-    getProjectSearchResults(keywordSearch, selectedProjectSearchFilterValues.searchFilterValues, from).then((hasProjectResults) => {
-      setIsLoading(false)
-      setProjectResults(hasProjectResults)
-    })
+    getWatchlistProjects({ id: watchlistId, from })
+      .then((hasProjectResults) => {
+        setIsLoading(false)
+        setProjectResults(hasProjectResults)
+      })
+      .catch(() => undefined)
   }
 
   useLayoutEffect(() => {
@@ -61,23 +68,39 @@ export const WatchlistProjects = (props: WatchlistProjectsProps) => {
     }
   })
 
-  return (
-    <Flex maxW={`100vw`} w="100vw" position="relative" paddingBottom="16px">
-      {isLoading ? (
-        <SpinnerScreen />
-      ) : (
+  const renderTable = () => {
+    if (projectResults?.data?.totalCount === 0) {
+      return (
+        <Flex flex={1} paddingTop={[`10px`, `40px`]} justifyContent="center">
+          <NoProjectsWatchlist />
+        </Flex>
+      )
+    } else {
+      return (
         <>
           <ProjectSearchHead watchlistId={watchlistId} refreshData={handleRefreshData} renderType={ALLOWED_RENDER_TYPE.PROJECT} />
           <ProjectSearchBody refreshData={handleRefreshData} renderType={ALLOWED_RENDER_TYPE.PROJECT} />
         </>
-      )}
+      )
+    }
+  }
+
+  return (
+    <Flex maxW={`100vw`} w="100vw" position="relative" paddingBottom="16px">
+      {isLoading ? <SpinnerScreen /> : renderTable()}
 
       <VStack>
         <Container variant={`paginationBar`} bottom="0px">
-          <PaginationWidget onPageChange={handleOnPageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={projectResults?.data?.totalCount ?? 0} />
-          <Box position={[`unset`, `absolute`]} right="10px" float="right">
-            <CSVDownload totalResults={projectResults?.data?.totalCount} exportType={CSVExportTypes.PROJECT} />
-          </Box>
+          {projectResults?.data?.totalCount && projectResults.data.totalCount > 0 ? (
+            <>
+              <PaginationWidget onPageChange={handleOnPageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={projectResults?.data?.totalCount} />
+              <Box position={[`unset`, `absolute`]} right="10px" float="right">
+                <CSVDownload totalResults={projectResults?.data?.totalCount} exportType={CSVExportTypes.PROJECT} />
+              </Box>
+            </>
+          ) : (
+            <></>
+          )}
         </Container>
       </VStack>
     </Flex>

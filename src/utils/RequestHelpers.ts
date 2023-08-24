@@ -8,6 +8,15 @@ export const defaultHeaders = {
   },
 }
 
+export const authedHeaders = (token: string) => {
+  return {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': `application/json`,
+    },
+  }
+}
+
 export const defaultDomain = process.env.NEXT_PUBLIC_API_HOST ?? `http://localhost:3001`
 
 export const generateUnitUrl = (status: string) => {

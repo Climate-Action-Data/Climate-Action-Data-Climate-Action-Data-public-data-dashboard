@@ -1,21 +1,22 @@
 import axios from 'axios'
 import { EffectResponse } from '@/@types/EffectResponse'
 import { WatchListUpdateOperation, Watchlist, WatchlistAddProject, WatchlistModify, WatchlistRemoveProject, WatchlistUpdate } from '@/@types/Watchlist'
-import { defaultDomain, defaultHeaders } from '@/utils/RequestHelpers'
+import { defaultDomain, authedHeaders } from '@/utils/RequestHelpers'
+import { DEFAULT_PROJECT_COUNT_TO_DISPLAY, ProjectSearchResponse } from '@/@types/ProjectSearchResult'
+import { DatabaseQueryDirection, ProjectSearchSortBy } from '@/@types/ProjectSearchFilterValues'
 
-const DEFAULT_TIMEOUT = 500
 const DEFAULT_WATCHLIST_ENDPOINT = `${defaultDomain}/v1/watchlists`
 
-export const getAllWatchlist = async (): Promise<EffectResponse<Watchlist[]>> => {
+export const getAllWatchlist = async (authToken: string): Promise<EffectResponse<Watchlist[]>> => {
   return new Promise((resolve) => {
     let result: EffectResponse<Watchlist[]>
     axios
-      .get(DEFAULT_WATCHLIST_ENDPOINT, defaultHeaders)
+      .get(`${DEFAULT_WATCHLIST_ENDPOINT}/all`, authedHeaders(authToken))
       .then((body) => {
         if (body.data) {
           result = { data: body.data as Watchlist[] }
         } else {
-          result = { error: { code: body.status.toString(), message: body.statusText } }
+          result = { error: { code: body.status.toString(), message: `could not fetch data` } }
         }
       })
       .catch(() => {
@@ -27,16 +28,16 @@ export const getAllWatchlist = async (): Promise<EffectResponse<Watchlist[]>> =>
   })
 }
 
-export const getOneWatchlist = async (id: string): Promise<EffectResponse<Watchlist>> => {
+export const getOneWatchlist = async (authToken: string, id: string): Promise<EffectResponse<Watchlist>> => {
   return new Promise((resolve) => {
     let result: EffectResponse<Watchlist>
     axios
-      .get(`${DEFAULT_WATCHLIST_ENDPOINT}/${id}`, defaultHeaders)
+      .get(`${DEFAULT_WATCHLIST_ENDPOINT}/${id}`, authedHeaders(authToken))
       .then((body) => {
         if (body.data) {
           result = { data: body.data as Watchlist }
         } else {
-          result = { error: { code: body.status.toString(), message: body.statusText } }
+          result = { error: { code: body.status.toString(), message: body?.statusText ?? `` } }
         }
       })
       .catch(() => {
@@ -48,19 +49,31 @@ export const getOneWatchlist = async (id: string): Promise<EffectResponse<Watchl
   })
 }
 
-export const deleteWatchlist = async (id: string): Promise<boolean> => {
-  await new Promise((resolve) => setTimeout(resolve, DEFAULT_TIMEOUT))
-  return true
+export const deleteWatchlist = async (authToken: string, id: string): Promise<boolean> => {
+  return new Promise((resolve) => {
+    axios
+      .delete(`${DEFAULT_WATCHLIST_ENDPOINT}/${id}`, authedHeaders(authToken))
+      .then((body) => {
+        if (body.data) {
+          resolve(true)
+        } else {
+          resolve(false)
+        }
+      })
+      .catch(() => {
+        resolve(false)
+      })
+  })
 }
 
-export const renameWatchlist = async (id: string, name: string, description: string): Promise<boolean> => {
+export const renameWatchlist = async (authToken: string, id: string, name: string, description: string): Promise<boolean> => {
   return new Promise((resolve) => {
     const bodyData: WatchlistUpdate = {
       id,
       name,
       description,
     }
-    updateWatchlist(bodyData).then((result) => {
+    updateWatchlist(authToken, bodyData).then((result) => {
       if (result.error) {
         resolve(false)
       } else {
@@ -70,14 +83,14 @@ export const renameWatchlist = async (id: string, name: string, description: str
   })
 }
 
-export const addProjectToWatchlist = async (warehouseProjectId: string, watchlistId: string): Promise<boolean> => {
+export const addProjectToWatchlist = async (authToken: string, warehouseProjectId: string, watchlistId: string): Promise<boolean> => {
   return new Promise((resolve) => {
     const bodyData: WatchlistAddProject = {
       warehouseProjectId,
       id: watchlistId,
       action: WatchListUpdateOperation.ADD,
     }
-    updateWatchlist(bodyData).then((result) => {
+    updateWatchlist(authToken, bodyData).then((result) => {
       if (result.error) {
         resolve(false)
       } else {
@@ -87,14 +100,14 @@ export const addProjectToWatchlist = async (warehouseProjectId: string, watchlis
   })
 }
 
-export const removeProjectFromWatchlist = async (warehouseProjectId: string, watchlistId: string): Promise<boolean> => {
+export const removeProjectFromWatchlist = async (authToken: string, warehouseProjectId: string, watchlistId: string): Promise<boolean> => {
   return new Promise((resolve) => {
     const bodyData: WatchlistRemoveProject = {
       warehouseProjectId,
       id: watchlistId,
       action: WatchListUpdateOperation.REMOVE,
     }
-    updateWatchlist(bodyData).then((result) => {
+    updateWatchlist(authToken, bodyData).then((result) => {
       if (result.error) {
         resolve(false)
       } else {
@@ -104,16 +117,16 @@ export const removeProjectFromWatchlist = async (warehouseProjectId: string, wat
   })
 }
 
-export const createWatchlist = async (name: string, description: string): Promise<EffectResponse<Watchlist>> => {
+export const createWatchlist = async (authToken: string, name: string, description: string): Promise<EffectResponse<Watchlist>> => {
   return new Promise((resolve) => {
     let result: EffectResponse<Watchlist>
     axios
-      .post(DEFAULT_WATCHLIST_ENDPOINT, { name, description }, defaultHeaders)
+      .post(DEFAULT_WATCHLIST_ENDPOINT, { name, description }, authedHeaders(authToken))
       .then((body) => {
         if (body.data) {
           result = { data: body.data as Watchlist }
         } else {
-          result = { error: { code: body.status.toString(), message: body.statusText } }
+          result = { error: { code: body.status.toString(), message: body?.statusText ?? `` } }
         }
       })
       .catch(() => {
@@ -125,16 +138,55 @@ export const createWatchlist = async (name: string, description: string): Promis
   })
 }
 
-export const updateWatchlist = async (body: WatchlistModify): Promise<EffectResponse<Watchlist>> => {
+export const updateWatchlist = async (authToken: string, body: WatchlistModify): Promise<EffectResponse<Watchlist>> => {
   return new Promise((resolve) => {
     let result: EffectResponse<Watchlist>
     axios
-      .put(DEFAULT_WATCHLIST_ENDPOINT, body, defaultHeaders)
+      .put(DEFAULT_WATCHLIST_ENDPOINT, body, authedHeaders(authToken))
       .then((body) => {
         if (body.data) {
           result = { data: body.data as Watchlist }
         } else {
-          result = { error: { code: body.status.toString(), message: body.statusText } }
+          result = { error: { code: body.status.toString(), message: body?.statusText ?? `` } }
+        }
+      })
+      .catch(() => {
+        result = { error: { code: `400`, message: `could not fetch data` } }
+      })
+      .finally(() => {
+        resolve(result)
+      })
+  })
+}
+
+export const getWatchlistProjects = async (
+  authToken: string,
+  id: string,
+  keywords: string,
+  sortBy: ProjectSearchSortBy,
+  direction: DatabaseQueryDirection,
+  offset = 0,
+  count = DEFAULT_PROJECT_COUNT_TO_DISPLAY,
+): Promise<EffectResponse<ProjectSearchResponse>> => {
+  return new Promise((resolve) => {
+    let result: EffectResponse<ProjectSearchResponse>
+    axios
+      .post(
+        `${DEFAULT_WATCHLIST_ENDPOINT}/${id}`,
+        {
+          keywords,
+          offset,
+          count,
+          sortBy: sortBy,
+          direction: direction,
+        },
+        authedHeaders(authToken),
+      )
+      .then((body) => {
+        if (body.data) {
+          result = { data: body.data as ProjectSearchResponse }
+        } else {
+          result = { error: { code: body.status.toString(), message: body?.statusText ?? `` } }
         }
       })
       .catch(() => {

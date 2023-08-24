@@ -7,7 +7,7 @@ exports[`renders correctly 1`] = `
     data-testid="watchlist-summary-item"
   >
     <div
-      class="chakra-card__body css-0"
+      class="chakra-card__body css-1jkp9i7"
     >
       <div
         class="css-kp2v9r"
@@ -49,7 +49,7 @@ exports[`renders correctly and redirects 1`] = `
     data-testid="watchlist-summary-item"
   >
     <div
-      class="chakra-card__body css-0"
+      class="chakra-card__body css-1jkp9i7"
     >
       <div
         class="css-kp2v9r"

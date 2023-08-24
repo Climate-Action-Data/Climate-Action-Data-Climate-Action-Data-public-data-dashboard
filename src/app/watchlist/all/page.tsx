@@ -7,7 +7,7 @@ import { PlusIcon } from '@/components/atoms/PlusIcon/PlusIcon'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import { SpinnerScreen } from '@/components/atoms/SpinnerScreen/SpinnerScreen'
 import { WatchlistList } from '@/components/molecules/WatchlistList/WatchlistList'
-import { useEffects } from '@/overmind'
+import { useActions } from '@/overmind'
 import { Heading, Box, Input, InputGroup, InputLeftElement, Flex, Button, Center } from '@chakra-ui/react'
 import { NextPage } from 'next'
 import { useEffect, useState } from 'react'
@@ -24,25 +24,32 @@ const WatchlistPage: NextPage = () => {
     return { label: t(value), value }
   })
 
-  const { getAllWatchlist, createWatchlist } = useEffects().watchlist
+  const { getAllWatchlist, createOneWatchlist } = useActions().watchlist
 
   useEffect(() => {
-    getWatchlists()
+    if (watchlists === undefined) {
+      getWatchlists()
+    }
   }, [])
 
   const getWatchlists = () => {
-    getAllWatchlist().then((result) => {
-      if (result.data) {
-        result.data.sort((a, b) => {
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-        })
-        setWatchlists(result.data)
-        setVisibleWatchlists(result.data)
-      } else {
+    getAllWatchlist()
+      .then((result) => {
+        if (result.data) {
+          result.data.sort((a, b) => {
+            return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+          })
+          setWatchlists(result.data)
+          setVisibleWatchlists(result.data)
+        } else {
+          setWatchlists([])
+          setVisibleWatchlists([])
+        }
+      })
+      .catch(() => {
         setWatchlists([])
         setVisibleWatchlists([])
-      }
-    })
+      })
   }
 
   const renderList = () => {
@@ -74,9 +81,16 @@ const WatchlistPage: NextPage = () => {
   }
 
   const handleCreateConfirm = async (name: string, description: string) => {
-    await createWatchlist(name, description)
-    await getWatchlists()
-    setIsModalOpen(false)
+    await createOneWatchlist({ name, description })
+      .then(async (result) => {
+        if (result.data) {
+          await getWatchlists()
+        }
+      })
+      .catch(() => undefined)
+      .finally(() => {
+        setIsModalOpen(false)
+      })
   }
 
   const handleCreateCancel = () => {
@@ -127,20 +141,20 @@ const WatchlistPage: NextPage = () => {
     <Box paddingY={[`20px`, `58px`]} paddingX={[`10px`, `220px`]}>
       <Heading>{t(`yourWatchlists`)}</Heading>
       <Box paddingTop="32px">
-        <Flex justifyContent="space-between">
-          <InputGroup variant="white" w="416px">
+        <Flex flexWrap="wrap" alignItems="center" justifyContent="space-between">
+          <InputGroup marginBottom="24px" variant="white" w="416px">
             <InputLeftElement pointerEvents="none">
               <SearchIcon />
             </InputLeftElement>
             <Input onChange={handleOnChange} variant={`white`} data-testid="search-watchlist" placeholder={t(`searchWatchlist`)} />
           </InputGroup>
           {visibleWatchlists && visibleWatchlists.length > 0 && (
-            <Button onClick={handleCreateWatchlist} rightIcon={<PlusIcon />} variant={`blueOutline`}>
+            <Button marginBottom="24px" onClick={handleCreateWatchlist} rightIcon={<PlusIcon />} variant={`blueOutline`}>
               {t(`newWatchlist`)}
             </Button>
           )}
         </Flex>
-        <Flex paddingTop="24px">
+        <Flex>
           <Dropdown items={sortOptions} onItemClick={(selectedSort) => handleSort(selectedSort)} placeholder={t(`sortBy`)} />
         </Flex>
         {renderBody()}

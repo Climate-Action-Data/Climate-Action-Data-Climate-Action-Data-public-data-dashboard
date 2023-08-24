@@ -78,7 +78,7 @@ export const ProjectSearchHead = (props: ProjectSearchHeadProps) => {
         </Table>
       </TableContainer>
       {renderType === ALLOWED_RENDER_TYPE.PROJECT ? (
-        <ProjectSearchHeadContent watchlistId={watchlistId} projectResults={projectResults} />
+        <ProjectSearchHeadContent refreshData={refreshData} watchlistId={watchlistId} projectResults={projectResults} />
       ) : (
         <UnitSearchHeadContent unitResults={unitResults} />
       )}

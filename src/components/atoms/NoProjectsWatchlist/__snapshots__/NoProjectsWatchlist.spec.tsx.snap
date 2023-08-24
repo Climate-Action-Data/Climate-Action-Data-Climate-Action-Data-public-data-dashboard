@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="chakra-stack css-85b8u"
+  >
+    <p
+      class="chakra-text css-0"
+    >
+      Add projects to your watchlist. Simply click the       on any project and select 'Add to Watchlist' to begin organising them.
+    </p>
+  </div>
+</div>
+`;

@@ -14,10 +14,10 @@ exports[`renders correctly 1`] = `
       class="css-xuhmcu"
     >
       <div
-        class="css-gg4vpm"
+        class="css-1c8ux76"
       >
         <div
-          class="chakra-input__group css-1vb3ajj"
+          class="chakra-input__group css-1akixgz"
           data-group="true"
         >
           <div
@@ -43,7 +43,7 @@ exports[`renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="css-1u8mr4i"
+        class="css-k008qs"
       >
         <button
           aria-controls="popover-content-:r1:"
@@ -168,10 +168,10 @@ exports[`renders correctly with sort Alphabetical 1`] = `
       class="css-xuhmcu"
     >
       <div
-        class="css-gg4vpm"
+        class="css-1c8ux76"
       >
         <div
-          class="chakra-input__group css-1vb3ajj"
+          class="chakra-input__group css-1akixgz"
           data-group="true"
         >
           <div
@@ -197,7 +197,7 @@ exports[`renders correctly with sort Alphabetical 1`] = `
         </div>
       </div>
       <div
-        class="css-1u8mr4i"
+        class="css-k008qs"
       >
         <button
           aria-controls="popover-content-:r7:"
@@ -325,10 +325,10 @@ exports[`renders correctly with sort Projects 1`] = `
       class="css-xuhmcu"
     >
       <div
-        class="css-gg4vpm"
+        class="css-1c8ux76"
       >
         <div
-          class="chakra-input__group css-1vb3ajj"
+          class="chakra-input__group css-1akixgz"
           data-group="true"
         >
           <div
@@ -354,7 +354,7 @@ exports[`renders correctly with sort Projects 1`] = `
         </div>
       </div>
       <div
-        class="css-1u8mr4i"
+        class="css-k008qs"
       >
         <button
           aria-controls="popover-content-:ra:"
@@ -482,10 +482,10 @@ exports[`renders correctly with sort Recents 1`] = `
       class="css-xuhmcu"
     >
       <div
-        class="css-gg4vpm"
+        class="css-1c8ux76"
       >
         <div
-          class="chakra-input__group css-1vb3ajj"
+          class="chakra-input__group css-1akixgz"
           data-group="true"
         >
           <div
@@ -511,7 +511,7 @@ exports[`renders correctly with sort Recents 1`] = `
         </div>
       </div>
       <div
-        class="css-1u8mr4i"
+        class="css-k008qs"
       >
         <button
           aria-controls="popover-content-:r4:"

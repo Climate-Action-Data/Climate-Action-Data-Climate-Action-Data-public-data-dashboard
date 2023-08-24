@@ -1,30 +1,36 @@
-import { Avatar, HStack, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Text } from '@chakra-ui/react'
+import { Avatar, HStack, Hide, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Text } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { useAuth0 } from '@auth0/auth0-react'
 import { FC, useEffect } from 'react'
 import { ProfileIcon } from '@/components/atoms/ProfileIcon/ProfileIcon'
 import { WatchlistsIcon } from '@/components/atoms/WatchlistsIcon/WatchlistsIcon'
-import { useActions, useAppState } from '@/overmind'
+import { useActions } from '@/overmind'
+import { useRouter } from 'next/navigation'
 
 const AuthenticationSection: FC = (props) => {
   const { t } = useTranslation(`menu`)
+  const router = useRouter()
   const { user, isAuthenticated, getAccessTokenSilently, loginWithRedirect, logout } = useAuth0()
   const { setAuthentication, clearAuthentication } = useActions().authentication
-  const { isAuthed } = useAppState().authentication
 
   useEffect(() => {
     if (isAuthenticated) {
       getAccessTokenSilently().then((token) => {
-        console.log(token)
-        if (user && isAuthed === false) {
+        if (user) {
           setAuthentication({ user, authToken: token })
         }
       })
+    } else {
+      clearAuthentication()
     }
-  }, [isAuthenticated])
+  })
 
   const handleLoginClick = () => {
     loginWithRedirect()
+  }
+
+  const handleWatchlistClick = () => {
+    router.push(`/watchlist/all`)
   }
 
   const handleLogoutClick = () => {
@@ -50,16 +56,22 @@ const AuthenticationSection: FC = (props) => {
     <HStack padding={4} verticalAlign="middle">
       <Menu variant="menuDark">
         <MenuButton>
-          {t(`hello`)} {user?.name}
+          <Hide below="sm">
+            <Text as="span">
+              {t(`hello`)} {user?.name}
+            </Text>
+          </Hide>
+          <Avatar marginLeft="6px" size="xs" name={user?.name} src={user?.picture} />
         </MenuButton>
         <MenuList>
           <MenuItem icon={<ProfileIcon />}>{t(`profile`)}</MenuItem>
-          <MenuItem icon={<WatchlistsIcon />}>{t(`watchlists`)}</MenuItem>
+          <MenuItem onClick={handleWatchlistClick} icon={<WatchlistsIcon />}>
+            {t(`watchlists`)}
+          </MenuItem>
           <MenuDivider />
           <MenuItem onClick={handleLogoutClick}>{t(`logout`)}</MenuItem>
         </MenuList>
       </Menu>
-      <Avatar size="xs" name={user?.name} src={user?.picture} />
     </HStack>
   )
 }
