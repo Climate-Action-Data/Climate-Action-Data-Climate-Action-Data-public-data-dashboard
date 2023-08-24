@@ -1,3 +1,4 @@
+import { User } from '@auth0/auth0-react'
 import { EffectResponse } from './EffectResponse'
 import { ProjectSearchResponse, ProjectSearchResult } from './ProjectSearchResult'
 import { TimeframesData } from './Timeframe'
@@ -135,4 +136,10 @@ export interface SearchFiltersStateData {
 export interface CompareProjectsStateData {
   isCompare: boolean
   projects: ProjectSearchResult[]
+}
+
+export interface AuthenticationState {
+  user: User | undefined
+  authToken: string | undefined
+  isAuthed: boolean
 }
