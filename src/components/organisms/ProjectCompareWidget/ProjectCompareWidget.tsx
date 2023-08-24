@@ -5,6 +5,7 @@ import { useActions } from '@/overmind'
 import { useTranslation } from 'react-i18next'
 import CompareSubmitButton from '@/components/atoms/CompareSubmitButton/CompareSubmitButton'
 import CompareCloseButton from '@/components/atoms/CompareCloseButton/CompareCloseButton'
+import { generateRandomString } from '@/utils/GenerationHelpers'
 
 interface ProjectCompareWidgetProps {
   isVisible: boolean
@@ -37,7 +38,7 @@ export const ProjectCompareWidget = (props: ProjectCompareWidgetProps) => {
 
   const renderProjectName = (project: ProjectSearchResult) => {
     return (
-      <VStack flex={1} height={`100%`} py={`8px`}>
+      <VStack key={`compare-project-${generateRandomString()}`} flex={1} height={`100%`} py={`8px`}>
         <CloseIcon alignSelf={`end`} color={`white`} onClick={() => removeProjectFromCompare(project.warehouseProjectId)} />
         <Text fontWeight="500" color="white" fontSize="md" noOfLines={3} px={`30px`} height={`100%`} textAlign={`center`}>
           {project.name}
@@ -48,7 +49,7 @@ export const ProjectCompareWidget = (props: ProjectCompareWidgetProps) => {
 
   const renderPlaceholderProjectName = () => {
     return (
-      <Text flex={1} fontWeight="500" color="white" fontSize="md" px={`8px`}>
+      <Text key={`compare-project-placeholder-${generateRandomString()}`} flex={1} fontWeight="500" color="white" fontSize="md" px={`8px`}>
         --
       </Text>
     )
