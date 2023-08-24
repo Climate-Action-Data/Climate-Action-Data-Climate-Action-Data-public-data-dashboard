@@ -32,8 +32,7 @@ const WatchlistPage: NextPage = () => {
   const getWatchlistDetails = () => {
     getOneWatchlist(id)
       .then((result) => {
-        console.log(result)
-        if (result.data) {
+        if (result?.data) {
           setWatchlist(result.data)
         }
       })

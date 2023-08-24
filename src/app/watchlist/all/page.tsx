@@ -80,10 +80,10 @@ const WatchlistPage: NextPage = () => {
     setIsModalOpen(true)
   }
 
-  const handleCreateConfirm = async (name: string, description: string) => {
-    await createOneWatchlist({ name, description })
+  const handleCreateConfirm = (name: string, description: string) => {
+    createOneWatchlist({ name, description })
       .then(async (result) => {
-        if (result.data) {
+        if (result?.data) {
           await getWatchlists()
         }
       })

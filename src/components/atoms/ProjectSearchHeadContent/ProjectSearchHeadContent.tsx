@@ -50,12 +50,13 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
     setProjectIdForWatchlist(id)
   }
 
-  const handleRemoveFromWatchlist = async (id: string) => {
+  const handleRemoveFromWatchlist = (id: string) => {
     if (watchlistId) {
-      try {
-        await removeProjectFromWatchlist({ warehouseProjectId: id, watchlistId: watchlistId })
-        refreshData?.()
-      } catch (error) {}
+      removeProjectFromWatchlist({ warehouseProjectId: id, watchlistId: watchlistId })
+        .then(() => {
+          refreshData?.()
+        })
+        .catch(() => undefined)
     }
   }
 
