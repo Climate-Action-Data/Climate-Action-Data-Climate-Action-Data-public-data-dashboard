@@ -4,15 +4,21 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { FC, useEffect } from 'react'
 import { ProfileIcon } from '@/components/atoms/ProfileIcon/ProfileIcon'
 import { WatchlistsIcon } from '@/components/atoms/WatchlistsIcon/WatchlistsIcon'
+import { useActions, useAppState } from '@/overmind'
 
 const AuthenticationSection: FC = (props) => {
   const { t } = useTranslation(`menu`)
   const { user, isAuthenticated, getAccessTokenSilently, loginWithRedirect, logout } = useAuth0()
+  const { setAuthentication, clearAuthentication } = useActions().authentication
+  const { isAuthed } = useAppState().authentication
 
   useEffect(() => {
     if (isAuthenticated) {
       getAccessTokenSilently().then((token) => {
         console.log(token)
+        if (user && isAuthed === false) {
+          setAuthentication({ user, authToken: token })
+        }
       })
     }
   }, [isAuthenticated])
@@ -22,6 +28,7 @@ const AuthenticationSection: FC = (props) => {
   }
 
   const handleLogoutClick = () => {
+    clearAuthentication()
     logout({
       logoutParams: {
         returnTo: process.env.NEXT_PUBLIC_APP_URL,

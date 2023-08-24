@@ -9,6 +9,7 @@ import * as searchFilters from './searchFilters'
 import * as unitResult from './unitResult'
 import * as exports from './exports'
 import * as watchlist from './watchlist'
+import * as authentication from './authentication'
 import * as compareProjects from './compareProjects'
 
 export const config = namespaced({
@@ -20,6 +21,7 @@ export const config = namespaced({
   exports,
   watchlist,
   compareProjects,
+  authentication,
 })
 
 export type Context = IContext<typeof config>
