@@ -7,10 +7,11 @@ import { useTranslation } from 'react-i18next'
 interface WatchlistCheckboxProps {
   watchlists?: Watchlist[]
   warehouseProjectId: string
+  selectedWatchlists: string[]
 }
 
 export const WatchlistCheckbox = (props: WatchlistCheckboxProps) => {
-  const { watchlists, warehouseProjectId } = props
+  const { watchlists, warehouseProjectId, selectedWatchlists } = props
   const { t } = useTranslation(`watchlist`)
   const { addProjectToWatchlist, removeProjectFromWatchlist } = useActions().watchlist
 
@@ -24,6 +25,10 @@ export const WatchlistCheckbox = (props: WatchlistCheckboxProps) => {
     } catch (error) {}
   }
 
+  const shouldBeChecked = (id: string) => {
+    return selectedWatchlists.includes(id)
+  }
+
   if (!watchlists || watchlists?.length === 0) {
     return (
       <Flex width="100%" justifyContent="center">
@@ -33,7 +38,7 @@ export const WatchlistCheckbox = (props: WatchlistCheckboxProps) => {
   } else {
     return watchlists.map((watchlist) => (
       <Box key={`watchlist-check-${generateRandomString()}`} padding="6px 16px">
-        <Checkbox data-testid="checkbox-watchlist" onChange={(event) => handleWatchlistClick(event, watchlist)}>
+        <Checkbox isChecked={shouldBeChecked(watchlist.id)} data-testid="checkbox-watchlist" onChange={(event) => handleWatchlistClick(event, watchlist)}>
           {watchlist.name}
         </Checkbox>
       </Box>

@@ -17,6 +17,7 @@ export interface ProjectSearchResult {
   annualAvailable?: number
   developer: string
   coveredByNdc: string
+  watchlists: string[]
 }
 
 export interface ProjectSearchResponse {

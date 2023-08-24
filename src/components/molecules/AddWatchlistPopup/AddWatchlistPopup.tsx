@@ -10,6 +10,7 @@ import { EditWatchlistPopup } from '@/components/atoms/EditWatchlistPopup/EditWa
 import { WatchlistCheckbox } from '@/components/atoms/WatchlistCheckbox/WatchlistCheckbox'
 
 interface AddWatchlistPopupProps {
+  selectedWatchlists: string[]
   warehouseProjectId: string
   onModalClose?: () => void
   isOpen: boolean
@@ -18,7 +19,7 @@ interface AddWatchlistPopupProps {
 export const AddWatchlistPopup = (props: AddWatchlistPopupProps) => {
   const { getAllWatchlist, createOneWatchlist, addProjectToWatchlist } = useActions().watchlist
   const { t } = useTranslation(`watchlist`)
-  const { onModalClose, isOpen, warehouseProjectId } = props
+  const { onModalClose, isOpen, warehouseProjectId, selectedWatchlists } = props
   const [watchlists, setWatchlists] = useState<Watchlist[] | undefined>(undefined)
   const [visibleWatchlists, setVisibleWatchlists] = useState<Watchlist[] | undefined>(undefined)
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
@@ -101,7 +102,7 @@ export const AddWatchlistPopup = (props: AddWatchlistPopupProps) => {
           </Flex>
           <ModalBody paddingX={0} maxH="300px" overflowY="scroll">
             <VStack divider={<Divider />} spacing="8px" alignItems="start">
-              <WatchlistCheckbox watchlists={visibleWatchlists} warehouseProjectId={warehouseProjectId} />
+              <WatchlistCheckbox watchlists={visibleWatchlists} selectedWatchlists={selectedWatchlists} warehouseProjectId={warehouseProjectId} />
             </VStack>
           </ModalBody>
           <ModalFooter boxShadow="2px 2px 8px 0px #0000001A" gap="48px" justifyContent="center">
