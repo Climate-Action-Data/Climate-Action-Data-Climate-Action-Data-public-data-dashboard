@@ -160,3 +160,161 @@ exports[`renders correctly and click rename 1`] = `
   </div>
 </div>
 `;
+
+exports[`renders correctly and click rename 2`] = `
+<div>
+  <button
+    aria-controls="menu-list-:rf:"
+    aria-expanded="false"
+    aria-haspopup="menu"
+    class="chakra-button chakra-menu__menu-button css-1htmeuh"
+    id="menu-button-:rf:"
+    type="button"
+  >
+    <svg
+      aria-hidden="true"
+      class="chakra-icon css-38f4wb"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M4.73118 12C4.73118 11.5875 4.87805 11.2344 5.17178 10.9406C5.46553 10.6469 5.81865 10.5 6.23113 10.5C6.64363 10.5 6.99675 10.6469 7.29048 10.9406C7.58423 11.2344 7.73111 11.5875 7.73111 12C7.73111 12.4125 7.58423 12.7656 7.29048 13.0593C6.99675 13.3531 6.64363 13.4999 6.23113 13.4999C5.81865 13.4999 5.46553 13.3531 5.17178 13.0593C4.87805 12.7656 4.73118 12.4125 4.73118 12ZM10.5004 12C10.5004 11.5875 10.6473 11.2344 10.941 10.9406C11.2348 10.6469 11.5879 10.5 12.0004 10.5C12.4128 10.5 12.766 10.6469 13.0597 10.9406C13.3535 11.2344 13.5003 11.5875 13.5003 12C13.5003 12.4125 13.3535 12.7656 13.0597 13.0593C12.766 13.3531 12.4128 13.5 12.0004 13.5C11.5879 13.5 11.2348 13.3531 10.941 13.0593C10.6473 12.7656 10.5004 12.4125 10.5004 12ZM16.2696 12C16.2696 11.5875 16.4165 11.2344 16.7102 10.9406C17.004 10.6469 17.3571 10.5 17.7696 10.5C18.1821 10.5 18.5352 10.6469 18.8289 10.9406C19.1227 11.2344 19.2695 11.5875 19.2695 12C19.2695 12.4125 19.1227 12.7656 18.8289 13.0593C18.5352 13.3531 18.1821 13.5 17.7696 13.5C17.3571 13.5 17.004 13.3531 16.7102 13.0593C16.4165 12.7656 16.2696 12.4125 16.2696 12Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+  <div
+    class="css-0"
+    style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+  >
+    <div
+      aria-orientation="vertical"
+      class="chakra-menu__menu-list css-sjt5nk"
+      id="menu-list-:rf:"
+      role="menu"
+      style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+      tabindex="-1"
+    >
+      <button
+        class="chakra-menu__menuitem css-1eocwdv"
+        data-index="0"
+        data-testid="watchlist-rename"
+        id="menu-list-:rf:-menuitem-:rg:"
+        role="menuitem"
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="chakra-text css-1rr4qq7"
+        >
+          Rename watchlist
+        </span>
+      </button>
+      <button
+        class="chakra-menu__menuitem css-1eocwdv"
+        data-index="1"
+        data-testid="watchlist-delete"
+        id="menu-list-:rf:-menuitem-:rh:"
+        role="menuitem"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="chakra-text css-rzksxu"
+        >
+          Delete watchlist
+        </span>
+        <svg
+          class="chakra-icon css-1tqudqa"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7.3077 20.4998C6.80898 20.4998 6.38302 20.3232 6.02982 19.97C5.67661 19.6168 5.5 19.1908 5.5 18.6921V5.99981H4.5V4.49983H8.99997V3.61523H15V4.49983H19.5V5.99981H18.5V18.6921C18.5 19.1972 18.325 19.6248 17.975 19.9748C17.625 20.3248 17.1974 20.4998 16.6922 20.4998H7.3077ZM17 5.99981H6.99997V18.6921C6.99997 18.7818 7.02883 18.8556 7.08652 18.9133C7.14422 18.971 7.21795 18.9998 7.3077 18.9998H16.6922C16.7692 18.9998 16.8397 18.9678 16.9038 18.9037C16.9679 18.8395 17 18.769 17 18.6921V5.99981ZM9.40385 16.9998H10.9038V7.99981H9.40385V16.9998ZM13.0961 16.9998H14.5961V7.99981H13.0961V16.9998Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly and click rename 3`] = `
+<div>
+  <button
+    aria-controls="menu-list-:rn:"
+    aria-expanded="false"
+    aria-haspopup="menu"
+    class="chakra-button chakra-menu__menu-button css-1htmeuh"
+    id="menu-button-:rn:"
+    type="button"
+  >
+    <svg
+      aria-hidden="true"
+      class="chakra-icon css-38f4wb"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M4.73118 12C4.73118 11.5875 4.87805 11.2344 5.17178 10.9406C5.46553 10.6469 5.81865 10.5 6.23113 10.5C6.64363 10.5 6.99675 10.6469 7.29048 10.9406C7.58423 11.2344 7.73111 11.5875 7.73111 12C7.73111 12.4125 7.58423 12.7656 7.29048 13.0593C6.99675 13.3531 6.64363 13.4999 6.23113 13.4999C5.81865 13.4999 5.46553 13.3531 5.17178 13.0593C4.87805 12.7656 4.73118 12.4125 4.73118 12ZM10.5004 12C10.5004 11.5875 10.6473 11.2344 10.941 10.9406C11.2348 10.6469 11.5879 10.5 12.0004 10.5C12.4128 10.5 12.766 10.6469 13.0597 10.9406C13.3535 11.2344 13.5003 11.5875 13.5003 12C13.5003 12.4125 13.3535 12.7656 13.0597 13.0593C12.766 13.3531 12.4128 13.5 12.0004 13.5C11.5879 13.5 11.2348 13.3531 10.941 13.0593C10.6473 12.7656 10.5004 12.4125 10.5004 12ZM16.2696 12C16.2696 11.5875 16.4165 11.2344 16.7102 10.9406C17.004 10.6469 17.3571 10.5 17.7696 10.5C18.1821 10.5 18.5352 10.6469 18.8289 10.9406C19.1227 11.2344 19.2695 11.5875 19.2695 12C19.2695 12.4125 19.1227 12.7656 18.8289 13.0593C18.5352 13.3531 18.1821 13.5 17.7696 13.5C17.3571 13.5 17.004 13.3531 16.7102 13.0593C16.4165 12.7656 16.2696 12.4125 16.2696 12Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+  <div
+    class="css-0"
+    style="visibility: hidden; position: absolute; min-width: max-content; inset: 0 auto auto 0;"
+  >
+    <div
+      aria-orientation="vertical"
+      class="chakra-menu__menu-list css-sjt5nk"
+      id="menu-list-:rn:"
+      role="menu"
+      style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0);"
+      tabindex="-1"
+    >
+      <button
+        class="chakra-menu__menuitem css-1eocwdv"
+        data-index="0"
+        data-testid="watchlist-rename"
+        id="menu-list-:rn:-menuitem-:ro:"
+        role="menuitem"
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="chakra-text css-1rr4qq7"
+        >
+          Rename watchlist
+        </span>
+      </button>
+      <button
+        class="chakra-menu__menuitem css-1eocwdv"
+        data-index="1"
+        data-testid="watchlist-delete"
+        id="menu-list-:rn:-menuitem-:rp:"
+        role="menuitem"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="chakra-text css-rzksxu"
+        >
+          Delete watchlist
+        </span>
+        <svg
+          class="chakra-icon css-1tqudqa"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7.3077 20.4998C6.80898 20.4998 6.38302 20.3232 6.02982 19.97C5.67661 19.6168 5.5 19.1908 5.5 18.6921V5.99981H4.5V4.49983H8.99997V3.61523H15V4.49983H19.5V5.99981H18.5V18.6921C18.5 19.1972 18.325 19.6248 17.975 19.9748C17.625 20.3248 17.1974 20.4998 16.6922 20.4998H7.3077ZM17 5.99981H6.99997V18.6921C6.99997 18.7818 7.02883 18.8556 7.08652 18.9133C7.14422 18.971 7.21795 18.9998 7.3077 18.9998H16.6922C16.7692 18.9998 16.8397 18.9678 16.9038 18.9037C16.9679 18.8395 17 18.769 17 18.6921V5.99981ZM9.40385 16.9998H10.9038V7.99981H9.40385V16.9998ZM13.0961 16.9998H14.5961V7.99981H13.0961V16.9998Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;

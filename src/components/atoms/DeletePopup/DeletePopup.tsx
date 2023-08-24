@@ -37,14 +37,14 @@ export const DeletePopup = (props: DeletePopupProps) => {
       <ModalContent>
         <Flex alignItems="center">
           <ModalHeader flex={1}>{title}</ModalHeader>
-          <CloseIcon data-testid="close-modal" _hover={{ cursor: `pointer` }} marginRight="1.5rem" onClick={handleClose} />
+          <CloseIcon data-testid="close-delete-modal" _hover={{ cursor: `pointer` }} marginRight="1.5rem" onClick={handleClose} />
         </Flex>
         <ModalBody>{description}</ModalBody>
         <ModalFooter gap="48px" justifyContent="center">
-          <Button data-testid="cancel-modal" variant={`blueOutline`} onClick={handleClose}>
+          <Button data-testid="cancel-delete-modal" variant={`blueOutline`} onClick={handleClose}>
             {t(`cancel`)}
           </Button>
-          <Button data-testid="confirm-modal" variant={`redFilled`} onClick={handleConfirm}>
+          <Button data-testid="confirm-delete-modal" variant={`redFilled`} onClick={handleConfirm}>
             {t(`delete`)}
           </Button>
         </ModalFooter>

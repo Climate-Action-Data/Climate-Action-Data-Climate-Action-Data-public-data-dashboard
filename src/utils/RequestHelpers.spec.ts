@@ -1,5 +1,5 @@
 import { UnitStatus } from '@/@types/Unit'
-import { defaultDomain, generateExportUrl, generateUnitUrl } from './RequestHelpers'
+import { defaultDomain, generateExportUrl, generateUnitUrl, authedHeaders } from './RequestHelpers'
 import { CSVExportTypes } from '@/@types/CSV'
 
 const DEFAULT_RETIRED_URL = `/unit/retirement?id=`
@@ -29,5 +29,19 @@ describe(`generateExportUrl`, () => {
 
   test(`generateExportUrl with type unit`, () => {
     expect(generateExportUrl(CSVExportTypes.UNIT)).toBe(DEFAULT_EXPORT_UNIT_URL)
+  })
+})
+
+describe(`authedHeaders`, () => {
+  it(`should return headers with Authorization and Content-Type`, () => {
+    const token = `eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY5Mjg3NjM5MywiaWF0IjoxNjkyODc2MzkzfQ.1zXf_vrXcxQvpLHwUdUlKTmWwQONNO0A5TxiKs6PA2s`
+    const result = authedHeaders(token)
+
+    expect(result).toEqual({
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': `application/json`,
+      },
+    })
   })
 })
