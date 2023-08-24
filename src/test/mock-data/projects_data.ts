@@ -20,6 +20,7 @@ export const projectData: ProjectSearchResult[] = [
     annualIssued: 37202,
     annualRetired: 30167,
     annualAvailable: 7035,
+    watchlists: [],
   },
   {
     id: `30`,
@@ -39,6 +40,7 @@ export const projectData: ProjectSearchResult[] = [
     annualIssued: 225734,
     annualRetired: 147403,
     annualAvailable: 78331,
+    watchlists: [],
   },
   {
     id: `65`,
@@ -57,6 +59,7 @@ export const projectData: ProjectSearchResult[] = [
     annualIssued: 0,
     annualRetired: 0,
     annualAvailable: 0,
+    watchlists: [],
   },
   {
     id: `28`,
@@ -76,6 +79,7 @@ export const projectData: ProjectSearchResult[] = [
     annualIssued: 172795,
     annualRetired: 0,
     annualAvailable: 172795,
+    watchlists: [],
   },
 ]
 
