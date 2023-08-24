@@ -23,7 +23,7 @@ export interface UnitSearchResult {
   issuanceDate?: string
   issuanceId?: string
   retirementDate?: string
-  annualEst?: number
+  quantity?: number
   correspondingAdjustment?: string
   marketplace?: string
   serialNumber?: string
