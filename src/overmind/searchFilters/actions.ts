@@ -83,7 +83,6 @@ export const setUnitVintageYearFilter = (context: Context, selectedFilters: Year
   context.state.searchFilters.selectedUnitSearchFilterValues.searchFilterValues.vintageYear = selectedFilters
 }
 export const setSortByProject = (context: Context, { sortBy, direction }: { sortBy: ProjectSearchSortBy; direction: DatabaseQueryDirection }) => {
-  console.log(`setSortByProject`, sortBy, direction)
   context.state.searchFilters.selectedProjectSearchFilterValues.searchFilterValues.sortBy = sortBy
   context.state.searchFilters.selectedProjectSearchFilterValues.searchFilterValues.direction = direction
 }
