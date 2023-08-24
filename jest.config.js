@@ -27,6 +27,7 @@ const customJestConfig = {
         "<rootDir>/src/app/layout.tsx",
         "<rootDir>/src/utils/Stickify.ts",
         "<rootDir>/src/i18n.ts",
+        "<rootDir>/src/components/molecules/AuthenticationSection.tsx",
         '<rootDir>/src/components/organisms/GeoMap/GeoMapDemo.tsx',
     ],
     collectCoverageFrom: ['<rootDir>/src/**', '!<rootDir>/src/**/@types/*', '!<rootDir>/src/**/*.snap'],
