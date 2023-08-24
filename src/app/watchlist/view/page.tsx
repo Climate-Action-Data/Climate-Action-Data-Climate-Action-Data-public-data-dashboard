@@ -80,7 +80,7 @@ const WatchlistPage: NextPage = () => {
                           <Text color="lightGray.700">{watchlist.description}</Text>
                         </VStack>
                       </Hide>
-                      <Flex width={[`auto`, `100%`]} justifyContent={(`start`, `end`)} h="100%">
+                      <Flex width={[`auto`, `100%`]} justifyContent={[`start`, `end`]} h="100%">
                         <WatchlistMenu onRename={handleOnRename} watchlist={watchlist} />
                       </Flex>
                     </Flex>
