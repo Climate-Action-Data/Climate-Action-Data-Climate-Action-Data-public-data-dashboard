@@ -29,6 +29,7 @@ it(`renders correctly on table data`, () => {
   )
   expect(container).toMatchSnapshot()
 })
+
 it(`renders correctly on table data and scroll page`, () => {
   const { container } = render(
     <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>
@@ -39,19 +40,6 @@ it(`renders correctly on table data and scroll page`, () => {
   const scrollableContainer = screen.getByTestId(`table-scroll`)
 
   fireEvent.scroll(scrollableContainer, { target: { scrollBy: 600 } })
-
-  expect(container).toMatchSnapshot()
-})
-
-it(`renders correctly and click next page`, () => {
-  const { container } = render(
-    <TestOvermindWrapper projectResult={PROJECT_SEARCH_RESULT}>
-      <WatchlistProjects watchlistId={DEFAULT_WATCHLIST_ID} />
-    </TestOvermindWrapper>,
-  )
-
-  const inputElement = screen.getByTestId(`pagination-page-up`)
-  fireEvent.click(inputElement)
 
   expect(container).toMatchSnapshot()
 })

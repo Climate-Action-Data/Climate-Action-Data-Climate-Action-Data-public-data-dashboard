@@ -1,7 +1,7 @@
 import { Flex, Button, Modal, ModalBody, ModalContent, ModalFooter, ModalOverlay, Input, InputGroup, InputLeftElement, VStack, Divider } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import { CloseIcon } from '@/components/atoms/CloseIcon/CloseIcon'
-import { useEffects } from '@/overmind'
+import { useActions } from '@/overmind'
 import { Watchlist } from '@/@types/Watchlist'
 import { useTranslation } from 'react-i18next'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
@@ -16,7 +16,7 @@ interface AddWatchlistPopupProps {
 }
 
 export const AddWatchlistPopup = (props: AddWatchlistPopupProps) => {
-  const { getAllWatchlist } = useEffects().watchlist
+  const { getAllWatchlist, createOneWatchlist, addProjectToWatchlist } = useActions().watchlist
   const { t } = useTranslation(`watchlist`)
   const { onModalClose, isOpen, warehouseProjectId } = props
   const [watchlists, setWatchlists] = useState<Watchlist[] | undefined>(undefined)
@@ -26,19 +26,22 @@ export const AddWatchlistPopup = (props: AddWatchlistPopupProps) => {
   const [searchWatchlist, setSearchWatchlist] = useState<string>(``)
 
   useEffect(() => {
-    getAllWatchlist().then((result) => {
-      if (result.data) {
-        result.data.sort((a, b) => {
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-        })
-        setWatchlists(result.data)
-        setVisibleWatchlists(result.data)
-      }
-    })
+    getAllWatchlist()
+      .then((result) => {
+        if (result.data) {
+          result.data.sort((a, b) => {
+            return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+          })
+          setWatchlists(result.data)
+          setVisibleWatchlists(result.data)
+        }
+      })
+      .catch(() => undefined)
+
     if (!isModalOpen) {
       setIsModalOpen(isOpen)
     }
-  }, [isOpen, warehouseProjectId])
+  }, [isOpen])
 
   const handleClose = () => {
     setIsModalOpen(false)
@@ -50,7 +53,13 @@ export const AddWatchlistPopup = (props: AddWatchlistPopupProps) => {
     setIsModalOpen(false)
   }
 
-  const handleCreateConfirm = () => {
+  const handleCreateConfirm = async (name: string, description: string) => {
+    const watchlist = await createOneWatchlist({ name, description })
+    if (watchlist?.data?.id) {
+      try {
+        await addProjectToWatchlist({ warehouseProjectId, watchlistId: watchlist.data.id })
+      } catch (error) {}
+    }
     setShowCreatePopup(false)
     onModalClose?.()
   }

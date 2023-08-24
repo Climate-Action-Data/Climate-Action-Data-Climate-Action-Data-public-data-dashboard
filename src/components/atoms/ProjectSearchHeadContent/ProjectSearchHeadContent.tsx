@@ -13,23 +13,25 @@ import { AddWatchlistPopup } from '@/components/molecules/AddWatchlistPopup/AddW
 import { useState } from 'react'
 import { AddCompareIcon } from '../AddCompareIcon/AddCompareIcon'
 import { RemoveCompareIcon } from '../RemoveCompareIcon/RemoveCompareIcon'
-import { useActions, useAppState, useEffects } from '@/overmind'
+import { useActions, useAppState } from '@/overmind'
 import { MinusIcon } from '../MinusIcon/MinusIcon'
 
 interface ProjectSearchHeadContentProps {
   watchlistId?: string
   projectResults?: EffectResponse<ProjectSearchResponse>
+  refreshData?: () => void
 }
 
 export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) => {
-  const { projectResults, watchlistId } = props
+  const { projectResults, watchlistId, refreshData } = props
   const router = useRouter()
   const [projectIdForWatchlist, setProjectIdForWatchlist] = useState<string>(``)
   const [showAddWatchlistPopup, setShowAddWatchlistPopup] = useState<boolean>(false)
   const { t } = useTranslation(`search`)
   const { isCompare, projects: projectsToCompare } = useAppState().compareProjects
+  const { isAuthed } = useAppState().authentication
   const { setProjectToCompare, removeProjectFromCompare } = useActions().compareProjects
-  const { removeProjectFromWatchlist } = useEffects().watchlist
+  const { removeProjectFromWatchlist } = useActions().watchlist
 
   const handleClick = (projectId: string, event?: any) => {
     if (event?.target) {
@@ -48,9 +50,12 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
     setProjectIdForWatchlist(id)
   }
 
-  const handleRemoveFromWatchlist = (id: string) => {
+  const handleRemoveFromWatchlist = async (id: string) => {
     if (watchlistId) {
-      removeProjectFromWatchlist(id, watchlistId)
+      try {
+        await removeProjectFromWatchlist({ warehouseProjectId: id, watchlistId: watchlistId })
+        refreshData?.()
+      } catch (error) {}
     }
   }
 
@@ -67,8 +72,10 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
         icon: <DownloadIcon />,
         text: t(`projectMenu.exportProject`),
       },
-      { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`), onClick: () => hanldeAddToWatchlist(projectWarehouseId) },
     ]
+    if (isAuthed) {
+      menuList.push({ dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`), onClick: () => hanldeAddToWatchlist(projectWarehouseId) })
+    }
     if (watchlistId) {
       menuList.push({ dataTestId: `export-project`, icon: <MinusIcon />, text: t(`projectMenu.removeToWatchlists`), onClick: () => handleRemoveFromWatchlist(projectWarehouseId) })
     }

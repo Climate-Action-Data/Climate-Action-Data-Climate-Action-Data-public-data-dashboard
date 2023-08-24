@@ -26,7 +26,7 @@ export const WatchlistSummary = (props: WatchlistSummaryProps) => {
 
   return (
     <Card onClick={handleClick} data-testid="watchlist-summary-item" variant={getVariant()}>
-      <CardBody>
+      <CardBody flexWrap="wrap">
         <Flex gap="4px" justifyContent="center" flexDirection="column" flex={1}>
           <Heading fontFamily={Aeonik.style.fontFamily} fontSize="20px">
             {watchlist.name}

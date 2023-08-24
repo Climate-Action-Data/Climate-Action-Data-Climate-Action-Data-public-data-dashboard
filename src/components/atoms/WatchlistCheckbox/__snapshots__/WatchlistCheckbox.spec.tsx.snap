@@ -223,12 +223,12 @@ exports[`renders correctly and check checkbox 1`] = `
 exports[`renders correctly empty 1`] = `
 <div>
   <div
-    class="css-gmuwbf"
+    class="css-1e54vvi"
   >
     <p
       class="chakra-text css-0"
     >
-      noWatchlist
+      Start a watchlist to easily organise and save carbon projects
     </p>
   </div>
 </div>
