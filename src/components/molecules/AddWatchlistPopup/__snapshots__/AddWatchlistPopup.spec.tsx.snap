@@ -16,6 +16,27 @@ exports[`renders correctly and search modal opens and closes 1`] = `
 />
 `;
 
+exports[`renders correctly and search modal opens and closes 2`] = `
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+/>
+`;
+
+exports[`renders correctly and search modal opens and closes 3`] = `
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+/>
+`;
+
+exports[`renders correctly and search modal opens and closes 4`] = `
+<div
+  aria-hidden="true"
+  data-aria-hidden="true"
+/>
+`;
+
 exports[`renders correctly with modal close 1`] = `<div />`;
 
 exports[`renders correctly with modal open 1`] = `
