@@ -29,7 +29,9 @@ export const WatchlistProjects = (props: WatchlistProjectsProps) => {
     clearProjectResults()
     getWatchlistProjects({ id: watchlistId })
       .then((hasProjectResults) => {
-        setProjectResults(hasProjectResults)
+        if (hasProjectResults?.data) {
+          setProjectResults(hasProjectResults)
+        }
       })
       .catch(() => undefined)
   }, [keywordSearch])
@@ -39,7 +41,9 @@ export const WatchlistProjects = (props: WatchlistProjectsProps) => {
     getWatchlistProjects({ id: watchlistId })
       .then((hasProjectResults) => {
         setIsLoading(false)
-        setProjectResults(hasProjectResults)
+        if (hasProjectResults?.data) {
+          setProjectResults(hasProjectResults)
+        }
       })
       .catch(() => undefined)
   }
@@ -49,7 +53,9 @@ export const WatchlistProjects = (props: WatchlistProjectsProps) => {
     getWatchlistProjects({ id: watchlistId, from })
       .then((hasProjectResults) => {
         setIsLoading(false)
-        setProjectResults(hasProjectResults)
+        if (hasProjectResults?.data) {
+          setProjectResults(hasProjectResults)
+        }
       })
       .catch(() => undefined)
   }
