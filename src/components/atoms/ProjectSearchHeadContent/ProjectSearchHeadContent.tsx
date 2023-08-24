@@ -26,13 +26,13 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
   const { projectResults, watchlistId, refreshData } = props
   const router = useRouter()
   const [projectIdForWatchlist, setProjectIdForWatchlist] = useState<string>(``)
+  const [selectedProjectWatchlists, setSelectedProjectWatchlists] = useState<string[]>([])
   const [showAddWatchlistPopup, setShowAddWatchlistPopup] = useState<boolean>(false)
   const { t } = useTranslation(`search`)
   const { isCompare, projects: projectsToCompare } = useAppState().compareProjects
   const { isAuthed } = useAppState().authentication
   const { setProjectToCompare, removeProjectFromCompare } = useActions().compareProjects
   const { removeProjectFromWatchlist } = useActions().watchlist
-
   const handleClick = (projectId: string, event?: any) => {
     if (event?.target) {
       const target = event.target as HTMLElement
@@ -45,8 +45,9 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
   const handleAddWatchlistClose = () => {
     setShowAddWatchlistPopup(false)
   }
-  const hanldeAddToWatchlist = (id: string) => {
+  const hanldeAddToWatchlist = (id: string, watchlists: string[]) => {
     setShowAddWatchlistPopup(true)
+    setSelectedProjectWatchlists(watchlists)
     setProjectIdForWatchlist(id)
   }
 
@@ -60,7 +61,7 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
     }
   }
 
-  const generateMenuList = (projectWarehouseId: string) => {
+  const generateMenuList = (projectWarehouseId: string, watchlists: string[]) => {
     const menuList: MenuItemProps[] = [
       { dataTestId: `view-project-details`, onClick: () => router.push(`/project?id=${projectWarehouseId}`), text: t(`projectMenu.viewProject`) },
       {
@@ -75,7 +76,12 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
       },
     ]
     if (isAuthed) {
-      menuList.push({ dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`), onClick: () => hanldeAddToWatchlist(projectWarehouseId) })
+      menuList.push({
+        dataTestId: `export-project`,
+        icon: <BookmarkPlusIcon />,
+        text: t(`projectMenu.addToWatchlists`),
+        onClick: () => hanldeAddToWatchlist(projectWarehouseId, watchlists),
+      })
     }
     if (watchlistId) {
       menuList.push({ dataTestId: `export-project`, icon: <MinusIcon />, text: t(`projectMenu.removeToWatchlists`), onClick: () => handleRemoveFromWatchlist(projectWarehouseId) })
@@ -123,7 +129,7 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
               ) : (
                 <Menu variant="menuWhite">
                   <MenuButton as={Button} textAlign="center" iconSpacing={0} rightIcon={<KebabMenuIcon />} variant="lightGrayRound32"></MenuButton>
-                  <MenuContent menuItems={generateMenuList(projectResults.warehouseProjectId)} />
+                  <MenuContent menuItems={generateMenuList(projectResults.warehouseProjectId, projectResults.watchlists)} />
                 </Menu>
               )}
             </Flex>
@@ -134,27 +140,34 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
   }
 
   return (
-    <Table variant="simple" className="searchTable">
-      <Tbody borderRight="1px solid #B8BEC0">
-        {projectResults?.data?.projects !== undefined ? (
-          generateTableRow(projectResults.data.projects)
-        ) : (
-          <Tr height="92px">
-            <Td>
-              <Flex alignItems="center">
-                <Box flex={1}>
-                  <Stack>
-                    <Skeleton height="20px" />
-                    <Skeleton height="10px" />
-                    <Skeleton height="10px" />
-                  </Stack>
-                </Box>
-              </Flex>
-            </Td>
-          </Tr>
-        )}
-      </Tbody>
-      <AddWatchlistPopup onModalClose={handleAddWatchlistClose} warehouseProjectId={projectIdForWatchlist} isOpen={showAddWatchlistPopup} />
-    </Table>
+    <>
+      <Table variant="simple" className="searchTable">
+        <Tbody borderRight="1px solid #B8BEC0">
+          {projectResults?.data?.projects !== undefined ? (
+            generateTableRow(projectResults.data.projects)
+          ) : (
+            <Tr height="92px">
+              <Td>
+                <Flex alignItems="center">
+                  <Box flex={1}>
+                    <Stack>
+                      <Skeleton height="20px" />
+                      <Skeleton height="10px" />
+                      <Skeleton height="10px" />
+                    </Stack>
+                  </Box>
+                </Flex>
+              </Td>
+            </Tr>
+          )}
+        </Tbody>
+      </Table>
+      <AddWatchlistPopup
+        selectedWatchlists={selectedProjectWatchlists}
+        onModalClose={handleAddWatchlistClose}
+        warehouseProjectId={projectIdForWatchlist}
+        isOpen={showAddWatchlistPopup}
+      />
+    </>
   )
 }
