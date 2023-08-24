@@ -84,7 +84,7 @@ const WatchlistPage: NextPage = () => {
     createOneWatchlist({ name, description })
       .then(async (result) => {
         if (result?.data) {
-          await getWatchlists()
+          getWatchlists()
         }
       })
       .catch(() => undefined)
@@ -149,7 +149,7 @@ const WatchlistPage: NextPage = () => {
             <Input onChange={handleOnChange} variant={`white`} data-testid="search-watchlist" placeholder={t(`searchWatchlist`)} />
           </InputGroup>
           {visibleWatchlists && visibleWatchlists.length > 0 && (
-            <Button marginBottom="24px" onClick={handleCreateWatchlist} rightIcon={<PlusIcon />} variant={`blueOutline`}>
+            <Button data-testid="page-create-watchlist-button" marginBottom="24px" onClick={handleCreateWatchlist} rightIcon={<PlusIcon />} variant={`blueOutline`}>
               {t(`newWatchlist`)}
             </Button>
           )}
