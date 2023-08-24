@@ -75,7 +75,7 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
               </Box>
               <Menu variant="menuWhite">
                 <MenuButton as={Button} textAlign="center" iconSpacing={0} rightIcon={<KebabMenuIcon />} variant="lightGrayRound32"></MenuButton>
-                <MenuContent menuItems={generateMenuList(redirectId ?? unitResults.warehouseUnitId, unitResults?.project?.id, unitResults.status)} />
+                <MenuContent menuItems={generateMenuList(redirectId ?? unitResults.warehouseUnitId, unitResults?.project?.warehouseProjectId, unitResults.status)} />
               </Menu>
             </Flex>
           </Td>
