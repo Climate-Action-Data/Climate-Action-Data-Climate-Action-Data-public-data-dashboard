@@ -6,6 +6,7 @@ import { NoWatchlistScreen } from '@/components/atoms/NoWatchlistScreen/NoWatchl
 import { PlusIcon } from '@/components/atoms/PlusIcon/PlusIcon'
 import { SearchIcon } from '@/components/atoms/SearchIcon/SearchIcon'
 import { SpinnerScreen } from '@/components/atoms/SpinnerScreen/SpinnerScreen'
+import { WatchlistBreadcrumb } from '@/components/atoms/WatchlistBreadcrumb/WatchlistBreadcrumb'
 import { WatchlistList } from '@/components/molecules/WatchlistList/WatchlistList'
 import { useActions } from '@/overmind'
 import { Heading, Box, Input, InputGroup, InputLeftElement, Flex, Button, Center } from '@chakra-ui/react'
@@ -138,29 +139,32 @@ const WatchlistPage: NextPage = () => {
   }
 
   return (
-    <Box paddingY={[`20px`, `58px`]} paddingX={[`10px`, `220px`]}>
-      <Heading>{t(`yourWatchlists`)}</Heading>
-      <Box paddingTop="32px">
-        <Flex flexWrap="wrap" alignItems="center" justifyContent="space-between">
-          <InputGroup marginBottom="24px" variant="white" w="416px">
-            <InputLeftElement pointerEvents="none">
-              <SearchIcon />
-            </InputLeftElement>
-            <Input onChange={handleOnChange} variant={`white`} data-testid="search-watchlist" placeholder={t(`searchWatchlist`)} />
-          </InputGroup>
-          {visibleWatchlists && visibleWatchlists.length > 0 && (
-            <Button data-testid="page-create-watchlist-button" marginBottom="24px" onClick={handleCreateWatchlist} rightIcon={<PlusIcon />} variant={`blueOutline`}>
-              {t(`newWatchlist`)}
-            </Button>
-          )}
-        </Flex>
-        <Flex>
-          <Dropdown items={sortOptions} onItemClick={(selectedSort) => handleSort(selectedSort)} placeholder={t(`sortBy`)} />
-        </Flex>
-        {renderBody()}
+    <>
+      <WatchlistBreadcrumb />
+      <Box paddingY={[`20px`, `58px`]} paddingX={[`10px`, `220px`]}>
+        <Heading>{t(`yourWatchlists`)}</Heading>
+        <Box paddingTop="32px">
+          <Flex flexWrap="wrap" alignItems="center" justifyContent="space-between">
+            <InputGroup marginBottom="24px" variant="white" w="416px">
+              <InputLeftElement pointerEvents="none">
+                <SearchIcon />
+              </InputLeftElement>
+              <Input onChange={handleOnChange} variant={`white`} data-testid="search-watchlist" placeholder={t(`searchWatchlist`)} />
+            </InputGroup>
+            {visibleWatchlists && visibleWatchlists.length > 0 && (
+              <Button data-testid="page-create-watchlist-button" marginBottom="24px" onClick={handleCreateWatchlist} rightIcon={<PlusIcon />} variant={`blueOutline`}>
+                {t(`newWatchlist`)}
+              </Button>
+            )}
+          </Flex>
+          <Flex>
+            <Dropdown items={sortOptions} onItemClick={(selectedSort) => handleSort(selectedSort)} placeholder={t(`sortBy`)} />
+          </Flex>
+          {renderBody()}
+        </Box>
+        <EditWatchlistPopup isOpen={isModalOpen} isNewWatchlist={true} title={t(`newWatchlist`)} onCancel={handleCreateCancel} onConfirm={handleCreateConfirm} />
       </Box>
-      <EditWatchlistPopup isOpen={isModalOpen} isNewWatchlist={true} title={t(`newWatchlist`)} onCancel={handleCreateCancel} onConfirm={handleCreateConfirm} />
-    </Box>
+    </>
   )
 }
 
