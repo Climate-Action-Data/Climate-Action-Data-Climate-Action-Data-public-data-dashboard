@@ -78,14 +78,19 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
     ]
     if (isAuthed) {
       menuList.push({
-        dataTestId: `export-project`,
+        dataTestId: `add-from-watchlist`,
         icon: <BookmarkPlusIcon />,
         text: t(`projectMenu.addToWatchlists`),
         onClick: () => hanldeAddToWatchlist(projectWarehouseId, watchlists),
       })
     }
     if (watchlistId) {
-      menuList.push({ dataTestId: `export-project`, icon: <MinusIcon />, text: t(`projectMenu.removeToWatchlists`), onClick: () => handleRemoveFromWatchlist(projectWarehouseId) })
+      menuList.push({
+        dataTestId: `remove-from-watchlist`,
+        icon: <MinusIcon />,
+        text: t(`projectMenu.removeToWatchlists`),
+        onClick: () => handleRemoveFromWatchlist(projectWarehouseId),
+      })
     }
     return menuList
   }
