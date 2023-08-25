@@ -44,6 +44,7 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
 
   const handleAddWatchlistClose = () => {
     setShowAddWatchlistPopup(false)
+    refreshData?.()
   }
   const hanldeAddToWatchlist = (id: string, watchlists: string[]) => {
     setShowAddWatchlistPopup(true)
@@ -106,8 +107,6 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
 
   const generateTableRow = (projectList: ProjectSearchResult[]) => {
     return projectList.map((projectResults, idx) => {
-      console.log(projectResults.warehouseProjectId)
-      console.log(projectResults.watchlists)
       return (
         <Tr
           onClick={(event) => handleClick(projectResults.warehouseProjectId, event)}
