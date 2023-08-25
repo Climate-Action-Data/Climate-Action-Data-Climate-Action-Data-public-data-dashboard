@@ -11,6 +11,7 @@ import { UnitSearchResponse, UnitSearchResult } from '@/@types/UnitSearchResult'
 import { generateUnitUrl } from '@/utils/RequestHelpers'
 import { generateRandomString } from '@/utils/GenerationHelpers'
 import { UnitStatus } from '@/@types/Unit'
+import { generateProjectPDFDocument } from '@/app/project/page.pdf'
 
 interface UnitSearchHeadContentProps {
   unitResults?: EffectResponse<UnitSearchResponse>
@@ -45,7 +46,16 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
         onClick: () => router.push(`/project?id=${projectWarehouseId}`),
         text: t(`projectMenu.viewProject`),
       },
-      { dataTestId: `export-project`, icon: <DownloadIcon />, text: t(`projectMenu.exportProject`) },
+      {
+        dataTestId: `export-project`,
+        onClick: () => {
+          ;(async () => {
+            generateProjectPDFDocument({ id: projectWarehouseId })
+          })()
+        },
+        icon: <DownloadIcon />,
+        text: t(`projectMenu.exportProject`),
+      },
       { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`) },
     ]
     return menuList
