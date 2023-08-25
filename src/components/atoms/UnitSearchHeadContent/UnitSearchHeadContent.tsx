@@ -1,8 +1,6 @@
 import { changeHoverColor } from '@/utils/Stickify'
 import { Box, Button, Flex, Menu, MenuButton, Skeleton, Stack, Table, Tbody, Td, Text, Tr } from '@chakra-ui/react'
-import { MenuContent, MenuItemProps } from '@/components/atoms/MenuContent/MenuContent'
-import { BookmarkPlusIcon } from '../BookmarkPlusIcon/BookmarkPlusIcon'
-import { DownloadIcon } from '../DownloadIcon/DownloadIcon'
+import { MenuContent } from '@/components/atoms/MenuContent/MenuContent'
 import { KebabMenuIcon } from '../KebabMenuIcon/KebabMenuIcon'
 import { EffectResponse } from '@/@types/EffectResponse'
 import { useRouter } from 'next/navigation'
@@ -11,7 +9,7 @@ import { UnitSearchResponse, UnitSearchResult } from '@/@types/UnitSearchResult'
 import { generateUnitUrl } from '@/utils/RequestHelpers'
 import { generateRandomString } from '@/utils/GenerationHelpers'
 import { UnitStatus } from '@/@types/Unit'
-import { generateProjectPDFDocument } from '@/app/project/page.pdf'
+import { generateMenuList } from '../../../utils/MenuOptionHelper'
 
 interface UnitSearchHeadContentProps {
   unitResults?: EffectResponse<UnitSearchResponse>
@@ -32,33 +30,9 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
       }
     }
   }
-  const generateMenuList = (unitWarehouseId: string, projectWarehouseId: string, unitStatus: string) => {
-    const generatedUrl = generateUnitUrl(`${unitStatus}`)
 
-    const menuList: MenuItemProps[] = [
-      {
-        dataTestId: `view-unit-details`,
-        onClick: () => router.push(`${generatedUrl}${unitWarehouseId}`),
-        text: t(`projectMenu.viewUnit`),
-      },
-      {
-        dataTestId: `view-project-details`,
-        onClick: () => router.push(`/project?id=${projectWarehouseId}`),
-        text: t(`projectMenu.viewProject`),
-      },
-      {
-        dataTestId: `export-project`,
-        onClick: () => {
-          ;(async () => {
-            generateProjectPDFDocument({ id: projectWarehouseId })
-          })()
-        },
-        icon: <DownloadIcon />,
-        text: t(`projectMenu.exportProject`),
-      },
-      { dataTestId: `export-project`, icon: <BookmarkPlusIcon />, text: t(`projectMenu.addToWatchlists`) },
-    ]
-    return menuList
+  const buildMenuContent = (unitWarehouseId: string, projectWarehouseId: string, unitStatus: string) => {
+    return generateMenuList(unitWarehouseId, projectWarehouseId, unitStatus, router, t)
   }
 
   const generateTableRow = (unitList: UnitSearchResult[]) => {
@@ -85,7 +59,7 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
               </Box>
               <Menu variant="menuWhite">
                 <MenuButton as={Button} textAlign="center" iconSpacing={0} rightIcon={<KebabMenuIcon />} variant="lightGrayRound32"></MenuButton>
-                <MenuContent menuItems={generateMenuList(redirectId ?? unitResults.warehouseUnitId, unitResults?.project?.warehouseProjectId, unitResults.status)} />
+                <MenuContent menuItems={buildMenuContent(redirectId ?? unitResults.warehouseUnitId, unitResults?.project?.warehouseProjectId, unitResults.status)} />
               </Menu>
             </Flex>
           </Td>
