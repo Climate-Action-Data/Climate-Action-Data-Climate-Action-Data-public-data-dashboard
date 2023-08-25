@@ -3,10 +3,10 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="css-nttwsh"
+    class="css-1o6enff"
   >
     <div
-      class="chakra-stack css-1ecqadq"
+      class="chakra-stack css-37v17e"
     >
       <div
         class="css-1rr4qq7"
@@ -23,13 +23,13 @@ exports[`renders correctly 1`] = `
         </span>
       </div>
       <p
-        class="chakra-text css-0"
+        class="chakra-text css-13pzcpe"
       >
         VCS
       </p>
     </div>
     <div
-      class="chakra-stack css-1ecqadq"
+      class="chakra-stack css-37v17e"
     >
       <div
         class="css-1rr4qq7"
@@ -46,7 +46,7 @@ exports[`renders correctly 1`] = `
         </span>
       </div>
       <p
-        class="chakra-text css-0"
+        class="chakra-text css-13pzcpe"
       >
         GCC
       </p>

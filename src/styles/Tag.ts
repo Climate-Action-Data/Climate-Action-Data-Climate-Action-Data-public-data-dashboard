@@ -28,6 +28,8 @@ export const tagTheme = helpers.defineMultiStyleConfig({
       cursor: `pointer`,
       borderRadius: `32px`,
       padding: `6px 12p`,
+      fontSize: `14px`,
+      fontWeight: `400`,
     },
   },
   variants: { selected, notSelected },

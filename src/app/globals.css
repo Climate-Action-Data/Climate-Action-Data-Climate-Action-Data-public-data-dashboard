@@ -84,6 +84,7 @@ body {
   top: 0;
   color: white;
   z-index: 99;
+  border-bottom: 1px solid #3E4A4E
 }
 
 body {

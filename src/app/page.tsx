@@ -50,7 +50,7 @@ export default function Home(): React.JSX.Element {
             </Hide>
             <TimeframeSearch />
           </Flex>
-          <Flex justifyContent="center" marginX={[`8px`, `24px`]}>
+          <Flex padding={0} justifyContent="center" marginX={[`8px`, `24px 0`]}>
             <Hide below="md">
               <Flex maxH="650px" justifyContent="center" alignItems="center" flex={1}>
                 <GeoMap width="90%" height="90%" subRegion={carbonReduction.carbonMapDataFilters.region} hasCountryData={carbonReduction.carbonMapHasCountryData}></GeoMap>
@@ -59,7 +59,7 @@ export default function Home(): React.JSX.Element {
             <CarbonReductionWidget />
           </Flex>
           <Spacer />
-          <Text width="100%" paddingRight="5px" marginTop="40px" color={`lightGray.600`} textAlign={`right`}>{`${dataRepresentedAsOf} ${formattedDateTime}`}</Text>
+          <Text fontSize="sm" width="100%" paddingRight="5px" marginTop="40px" color={`lightGray.600`} textAlign={`right`}>{`${dataRepresentedAsOf} ${formattedDateTime}`}</Text>
         </Container>
       </Flex>
       <Flex>

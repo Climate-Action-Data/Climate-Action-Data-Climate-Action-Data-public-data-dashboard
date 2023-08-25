@@ -15,7 +15,7 @@ const SubregionIndicator: FC<SubregionIndicatorProps> = (props: SubregionIndicat
   return (
     <HStack>
       {subregion != SubRegion.WORLD && <IconButton variant="lightGrayRound" aria-label={``} icon={<ChevronLeftIcon />} onClick={clearSubregion} data-testid="button-region-back" />}
-      <Text sx={{ maxLines: 1, wordWrap: `normal` }} fontWeight={`bold`}>
+      <Text sx={{ maxLines: 1, wordWrap: `normal` }} fontWeight={`500`}>
         {subregion != SubRegion.WORLD ? t(`regions.${subregion}`) : t(`regions.world`)}
       </Text>
     </HStack>

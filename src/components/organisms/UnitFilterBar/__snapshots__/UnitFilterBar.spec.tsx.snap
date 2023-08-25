@@ -6,7 +6,7 @@ exports[`renders correctly with loaded data 1`] = `
     class="chakra-container css-0"
   >
     <div
-      class="chakra-stack css-18mjik"
+      class="chakra-stack css-b7btcn"
     >
       <div
         class="chakra-stack css-17z0ye3"
@@ -831,7 +831,7 @@ exports[`renders correctly with loaded data and search click 1`] = `
     class="chakra-container css-0"
   >
     <div
-      class="chakra-stack css-18mjik"
+      class="chakra-stack css-b7btcn"
     >
       <div
         class="chakra-stack css-17z0ye3"
@@ -1656,7 +1656,7 @@ exports[`renders correctly with no data 1`] = `
     class="chakra-container css-0"
   >
     <div
-      class="chakra-stack css-18mjik"
+      class="chakra-stack css-b7btcn"
     >
       <div
         class="chakra-stack css-17z0ye3"

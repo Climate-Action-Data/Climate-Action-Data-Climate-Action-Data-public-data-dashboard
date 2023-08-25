@@ -10,16 +10,16 @@ export const CarbonReductionStandard = (props: CarbonReductionStandardProps): Re
   const { data } = props
   const colorChart = [`green.600`, `green.700`, `green.800`]
   return (
-    <Flex alignItems={`start`} marginBottom={4}>
+    <Flex flexWrap="wrap" gap={[`20px`, `10px`]} alignItems={`start`} marginBottom={4}>
       {data.map((standard, idx) => (
-        <VStack key={`${standard.name}`} textAlign={`center`} marginX={`5px`} flex={1}>
+        <VStack key={`${standard.name}`} textAlign={`center`} minW={[`80%`, `auto`]} flex={1}>
           <Box flex={1}>
             <ImportantText fontSize="30px" isNumeric color={colorChart[idx] ? colorChart[idx] : colorChart[colorChart.length - 1]}>
               {standard.average}
             </ImportantText>
             <Text as={`span`}>%</Text>
           </Box>
-          <Text>{standard.name}</Text>
+          <Text lineHeight="16px">{standard.name}</Text>
         </VStack>
       ))}
     </Flex>

@@ -67,7 +67,7 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
   }
 
   return (
-    <Stack direction={`row`} alignItems={`center`}>
+    <Stack width="100%" direction={`row`} alignItems={`center`}>
       <FilterBarWrapper isResultsPage={isResultsPage}>
         <Stack direction={[`column`, null, null, `row`]}>
           <Stack direction={[`column`, null, null, `row`]} divider={<StackDivider borderColor="lightGray.400" />} width="100%">

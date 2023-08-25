@@ -32,7 +32,7 @@ const IssuedRetiredChartBody = () => {
           <CreditsHistoryChart />
         </GridItem>
       </Grid>
-      <Text color={`lightGray.600`}>{`${dataRepresentedAsOf} ${formattedDateTime}`}</Text>
+      <Text fontSize="12px" color={`lightGray.600`}>{`${dataRepresentedAsOf} ${formattedDateTime}`}</Text>
     </VStack>
   )
 }

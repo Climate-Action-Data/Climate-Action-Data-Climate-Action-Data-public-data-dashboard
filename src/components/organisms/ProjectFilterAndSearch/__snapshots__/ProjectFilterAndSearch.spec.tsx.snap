@@ -6,7 +6,7 @@ exports[`ProjectFilterAndSearch renders correctly 1`] = `
     class="chakra-stack css-8t7d9a"
   >
     <div
-      class="chakra-stack css-1igwmid"
+      class="chakra-stack css-n3uhkm"
     >
       <div
         class="chakra-container css-0"
@@ -588,7 +588,7 @@ exports[`ProjectFilterAndSearch renders correctly and the filter-and-search-trig
     class="chakra-stack css-8t7d9a"
   >
     <div
-      class="chakra-stack css-1igwmid"
+      class="chakra-stack css-n3uhkm"
     >
       <div
         class="chakra-container css-0"

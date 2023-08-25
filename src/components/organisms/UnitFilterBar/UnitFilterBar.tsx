@@ -62,7 +62,7 @@ const UnitFilterBar: FC<UnitFilterBarProps> = (props) => {
 
   return (
     <FilterBarWrapper isResultsPage={isResultsPage}>
-      <Stack direction={[`column`, null, null, `row`]}>
+      <Stack width="100%" direction={[`column`, null, null, `row`]}>
         <Stack direction={[`column`, null, null, `row`]} divider={<StackDivider borderColor="lightGray.400" />} width="100%">
           <AutoCompleteCheckbox
             label={t(`filterBar.unitStatus`)}
