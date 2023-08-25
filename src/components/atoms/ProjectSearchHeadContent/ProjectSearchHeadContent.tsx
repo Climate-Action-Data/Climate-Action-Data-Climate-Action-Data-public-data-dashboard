@@ -106,6 +106,8 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
 
   const generateTableRow = (projectList: ProjectSearchResult[]) => {
     return projectList.map((projectResults, idx) => {
+      console.log(projectResults.warehouseProjectId)
+      console.log(projectResults.watchlists)
       return (
         <Tr
           onClick={(event) => handleClick(projectResults.warehouseProjectId, event)}
