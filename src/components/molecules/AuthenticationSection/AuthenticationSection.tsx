@@ -14,15 +14,15 @@ const AuthenticationSection: FC = (props) => {
   const { setAuthentication, clearAuthentication } = useActions().authentication
 
   useEffect(() => {
-    if (isAuthenticated) {
-      getAccessTokenSilently().then((token) => {
+    getAccessTokenSilently()
+      .then((token) => {
         if (user) {
           setAuthentication({ user, authToken: token })
         }
       })
-    } else {
-      clearAuthentication()
-    }
+      .catch(() => {
+        clearAuthentication()
+      })
   })
 
   const handleLoginClick = () => {
