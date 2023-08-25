@@ -12,6 +12,7 @@ import { NextPage } from 'next'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { ProjectBannerType } from '@/@types/ProjectDetails'
 
 const RetirementPage: NextPage = () => {
   const [unit, setUnit] = useState<Unit | undefined>(undefined)
@@ -38,6 +39,7 @@ const RetirementPage: NextPage = () => {
             location={unit?.project?.country}
             title={unit?.project?.name ?? tHome(`noData`)}
             type={unit?.project?.type}
+            bannerType={ProjectBannerType.ISSUANCE}
           />
         </Box>
         <Flex flexDirection="column" minW="100%" gap="40px">
