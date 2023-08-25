@@ -3,6 +3,7 @@ import { Box, Flex, Heading, VStack, Text } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { LargeTextWithScroll } from '../LargeTextWithScroll/LargeTextWithScroll'
 import { ProjectTypeBanner } from '../ProjectTypeBanner/ProjectTypeBanner'
+import { ProjectBannerType } from '@/@types/ProjectDetails'
 
 export interface ProjectDetailHeaderProps {
   id?: string
@@ -10,16 +11,17 @@ export interface ProjectDetailHeaderProps {
   description?: string
   location?: string
   type?: string
+  bannerType: ProjectBannerType
 }
 
 export const ProjectDetailHeader = (props: ProjectDetailHeaderProps) => {
-  const { id, title, description, location, type } = props
+  const { id, title, description, location, type, bannerType } = props
   const { t } = useTranslation(`projectDetails`)
   const { t: tHome } = useTranslation(`home`)
   return (
     <Flex flexWrap="wrap" gap={6}>
-      <Box position="relative" h="336px" flex={1}>
-        <ProjectTypeBanner projectType={extractProjectTypeFromString(type)} projectTypeText={type ?? tHome(`noData`)} />
+      <Box position="relative" h={bannerType === ProjectBannerType.PROJECT ? `336px` : `200px`} flex={1}>
+        <ProjectTypeBanner projectType={extractProjectTypeFromString(type)} projectTypeText={type ?? tHome(`noData`)} bannerType={bannerType} />
         <VStack
           background={`linear-gradient(0deg, rgba(0, 0, 0, 0.8) 33.85%, rgba(17, 17, 17, 0) 100%)`}
           borderRadius="8px"
