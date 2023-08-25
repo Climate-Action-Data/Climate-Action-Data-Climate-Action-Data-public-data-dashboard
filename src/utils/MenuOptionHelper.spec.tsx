@@ -51,4 +51,29 @@ describe(`generateMenuList`, () => {
       },
     ])
   })
+
+  it(`should navigate to the correct issuance details page when the "View Unit Details" menu item is clicked`, () => {
+    const { t } = useTranslation(`search`)
+
+    const menuList = generateMenuList(unitWarehouseId, projectWarehouseId, unitStatus, router, t)
+    const viewUnitDetailsMenuItem = menuList.find((item) => item.dataTestId === `view-unit-details`)
+
+    viewUnitDetailsMenuItem?.onClick?.()
+
+    if (router.push) {
+      expect(router.push).toHaveBeenCalledWith(`/issuance?id=${unitWarehouseId}`)
+    }
+  })
+
+  it(`should navigate to the correct project details page when the "View Project" menu item is clicked`, () => {
+    const { t } = useTranslation(`search`)
+    const menuList = generateMenuList(unitWarehouseId, projectWarehouseId, unitStatus, router, t)
+    const viewProjectDetailsMenuItem = menuList.find((item) => item.dataTestId === `view-project-details`)
+
+    viewProjectDetailsMenuItem?.onClick?.()
+
+    if (router.push) {
+      expect(router.push).toHaveBeenCalledWith(`/project?id=${projectWarehouseId}`)
+    }
+  })
 })
