@@ -12,7 +12,7 @@ export const Menu = (): React.JSX.Element => {
   return (
     <Box className="menu">
       <Flex
-        _after={{ display: [`none`, `flex`], fontSize: `14px`, width: `100%`, position: `absolute`, justifyContent: `center`, content: `"${t(`title`)}"` }}
+        _before={{ zIndex: `-1`, display: [`none`, `flex`], fontSize: `14px`, width: `100%`, position: `absolute`, justifyContent: `center`, content: `"${t(`title`)}"` }}
         height={`100%`}
         justifyContent={`space-between`}
         alignItems={`center`}
