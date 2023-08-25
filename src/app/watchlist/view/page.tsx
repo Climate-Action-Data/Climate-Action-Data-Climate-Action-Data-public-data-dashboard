@@ -12,6 +12,7 @@ import { ChangeEvent, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { WatchlistProjects } from '@/components/organisms/WatchlistProjects/WatchlistProjects'
 import { Aeonik } from '@/styles/fonts'
+import { WatchlistBreadcrumb } from '@/components/atoms/WatchlistBreadcrumb/WatchlistBreadcrumb'
 
 const WatchlistPage: NextPage = () => {
   const searchParams = useSearchParams()
@@ -58,51 +59,55 @@ const WatchlistPage: NextPage = () => {
   }
 
   return (
-    <Box paddingTop={[`20px`, `58px`]}>
-      <Flex flexWrap="wrap" gap="16px" paddingX={[`10px`, `16px`]}>
-        <Hide below="md">
-          <Box flex={1}>{watchlist ? <WatchlistSummary disableHover showDivider watchlist={watchlist} /> : <></>}</Box>
-        </Hide>
-        <Box>
-          <Card minW="400px" minH="164px">
-            <CardBody display="flex" padding="24px">
-              <VStack flex="1" minH="100%" justifyContent="space-between">
-                {watchlist && (
-                  <>
-                    <Flex width="100%">
-                      <Hide above="sm">
-                        <VStack alignItems="start" flex={1}>
-                          <Heading fontFamily={Aeonik.style.fontFamily} fontSize="20px">
-                            {watchlist.name}
-                          </Heading>
-                          <Divider />
-                          <Text color="lightGray.700">{watchlist.description}</Text>
-                        </VStack>
-                      </Hide>
-                      <Flex width={[`auto`, `100%`]} justifyContent={[`start`, `end`]} h="100%">
-                        <WatchlistMenu onRename={handleOnRename} watchlist={watchlist} />
-                      </Flex>
-                    </Flex>
+    <>
+      <WatchlistBreadcrumb id={watchlist?.id} title={watchlist?.name} />
 
-                    <InputGroup variant="white" width="100%">
-                      <Input value={searchPattern} onChange={handleOnChange} onKeyDown={handleOnKeyDown} pr="4.5rem" type="text" placeholder={t(`searchProjects`)} />
-                      <InputRightElement paddingRight="5px" width="auto">
-                        <Button data-testid="watchlist-search-projets" padding="4px 8px" variant="blueFilled" rightIcon={<SearchIcon />} onClick={handleOnSearch}>
-                          {t(`search`)}
-                        </Button>
-                      </InputRightElement>
-                    </InputGroup>
-                  </>
-                )}
-              </VStack>
-            </CardBody>
-          </Card>
-        </Box>
-      </Flex>
-      <Flex paddingTop="16px">
-        <WatchlistProjects watchlistId={id} />
-      </Flex>
-    </Box>
+      <Box paddingTop={[`20px`, `58px`]}>
+        <Flex flexWrap="wrap" gap="16px" paddingX={[`10px`, `16px`]}>
+          <Hide below="md">
+            <Box flex={1}>{watchlist ? <WatchlistSummary disableHover showDivider watchlist={watchlist} /> : <></>}</Box>
+          </Hide>
+          <Box>
+            <Card minW="400px" minH="164px">
+              <CardBody display="flex" padding="24px">
+                <VStack flex="1" minH="100%" justifyContent="space-between">
+                  {watchlist && (
+                    <>
+                      <Flex width="100%">
+                        <Hide above="sm">
+                          <VStack alignItems="start" flex={1}>
+                            <Heading fontFamily={Aeonik.style.fontFamily} fontSize="20px">
+                              {watchlist.name}
+                            </Heading>
+                            <Divider />
+                            <Text color="lightGray.700">{watchlist.description}</Text>
+                          </VStack>
+                        </Hide>
+                        <Flex width={[`auto`, `100%`]} justifyContent={[`start`, `end`]} h="100%">
+                          <WatchlistMenu onRename={handleOnRename} watchlist={watchlist} />
+                        </Flex>
+                      </Flex>
+
+                      <InputGroup variant="white" width="100%">
+                        <Input value={searchPattern} onChange={handleOnChange} onKeyDown={handleOnKeyDown} pr="4.5rem" type="text" placeholder={t(`searchProjects`)} />
+                        <InputRightElement paddingRight="5px" width="auto">
+                          <Button data-testid="watchlist-search-projets" padding="4px 8px" variant="blueFilled" rightIcon={<SearchIcon />} onClick={handleOnSearch}>
+                            {t(`search`)}
+                          </Button>
+                        </InputRightElement>
+                      </InputGroup>
+                    </>
+                  )}
+                </VStack>
+              </CardBody>
+            </Card>
+          </Box>
+        </Flex>
+        <Flex paddingTop="16px">
+          <WatchlistProjects watchlistId={id} />
+        </Flex>
+      </Box>
+    </>
   )
 }
 
