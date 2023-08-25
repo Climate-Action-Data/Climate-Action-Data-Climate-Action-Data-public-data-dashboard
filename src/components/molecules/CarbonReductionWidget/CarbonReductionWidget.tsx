@@ -28,14 +28,14 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
   if (carbonReduction.carbonMapData === undefined && carbonMapDataFiltered === undefined) {
     return (
       <Box w={{ md: `328px` }} maxW={{ md: `328px` }} data-testid="loading-indicator" flex={1}>
-        <Stack>
+        <Stack gap={0}>
           <Center>
             <Box width={`50%`}>
               <Skeleton marginBottom={`5px`} height="40px" />
               <Skeleton height="20px" />
             </Box>
           </Center>
-          <Divider marginY={`20px`} />
+          <Divider marginY={`16px`} />
           <Flex>
             <Box marginRight={`5px`} flex={1}>
               <Skeleton marginBottom={`5px`} height="40px" />
@@ -46,7 +46,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
               <Skeleton height="20px" />
             </Box>
           </Flex>
-          <Divider marginY={`20px`} />
+          <Divider marginY={`16px`} />
           <Skeleton height="20px" />
           <Flex>
             <SkeletonCircle marginRight={`10px`} size="160" />
@@ -57,7 +57,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
               <Skeleton height="20px" />
             </Flex>
           </Flex>
-          <Divider marginY={`20px`} />
+          <Divider marginY={`16px`} />
           <Flex>
             <Box marginRight={`5px`} flex={1}>
               <Skeleton marginBottom={`5px`} height="40px" />
@@ -87,16 +87,16 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
 
       return (
         <Box width={{ md: `328px` }}>
-          <Stack>
+          <Stack gap={0}>
             <Center>
               <Box textAlign={`center`} width={`50%`}>
                 <ImportantText>{carbonMapDataFiltered.activeProjects.toLocaleString()}</ImportantText>
                 <Text fontWeight="500">{t(`carbonReduction.activeProjects`)}</Text>
               </Box>
             </Center>
-            <Divider marginY={`20px`} />
-            <Flex textAlign={`center`}>
-              <Box marginRight={`5px`} flex={1}>
+            <Divider marginY={`16px`} />
+            <Flex flexWrap="wrap" gap="10px" textAlign={`center`}>
+              <Box minW={[`80%`, `auto`]} flex={1}>
                 <Box>
                   <ImportantText as="p">{convertToMtCO2(carbonMapDataFiltered.totalReductions, true).toLocaleString()}</ImportantText>
                   <Text fontSize="sm">{t(`carbonReduction.MtCO2`)}</Text>
@@ -113,7 +113,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
                 <Text fontWeight="500">{t(`carbonReduction.annualReduction`)}</Text>
               </Box>
             </Flex>
-            <Divider marginY={`20px`} />
+            <Divider marginY={`16px`} />
             <Text as="h1" fontSize="lg" fontWeight="500" textAlign={`center`}>
               {t(`carbonReduction.sector`)}
             </Text>
@@ -125,7 +125,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
               </Text>
             )}
 
-            <Divider marginY={`20px`} />
+            <Divider marginY={`16px`} />
             <Text as="h1" fontSize="lg" fontWeight="500" textAlign={`center`}>
               {t(`carbonReduction.standard`)}
             </Text>

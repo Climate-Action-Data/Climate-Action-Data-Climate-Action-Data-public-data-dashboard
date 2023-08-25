@@ -1,13 +1,14 @@
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from '@chakra-ui/next-js'
-import { Box, Flex, Image, Spacer, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Flex, Hide, Image, Spacer, Text, useBreakpointValue } from '@chakra-ui/react'
 
 import headerBanner from '../../../assets/header.jpg'
 import headerFeatureLarge from '../../../assets/headerFeatureLarge.svg'
 import headerFeatureSmall from '../../../assets/headerFeatureSmall.svg'
 
 import styles from './Header.module.scss'
+import { AeonikFono } from '@/styles/fonts'
 
 const AppHeader: FC = () => {
   const { t } = useTranslation(`home`)
@@ -21,8 +22,16 @@ const AppHeader: FC = () => {
       <Flex backgroundImage={headerBanner.src} aspectRatio={[`1.5`, `2`, `3`, `4`, `5`]} className={styles.backgroundImage}>
         <Box width={[`100vw`, `60vw`]} className={styles.backgroundGradient} />
         <Flex className={styles.headerContents}>
-          <Flex direction={`column`} gap={`20px`} alignSelf={[`top`, null, `center`]} padding={[`50px 20px`, null, `5%`]} paddingLeft={[`20px`, null, `142px`]}>
-            <Text fontSize={[`lg`, `xl`, `3xl`]} className={styles.headerTitle}>
+          <Flex
+            minW={[`auto`, `685px`]}
+            direction={`column`}
+            gap={`20px`}
+            alignSelf={[`top`, null, `center`]}
+            justifyContent={[`center`, null, `flex-start`]}
+            margin={[`50px 0px`, null, `5%`]}
+            marginLeft={[`20px`, null, `142px`]}
+          >
+            <Text fontSize={[`lg`, `40px`, `40px`]} maxW="685px" className={styles.headerTitle} fontFamily={AeonikFono.style.fontFamily}>
               {t(`appHeader.title`)}
             </Text>
             <Link as={`button`} variant={`whiteSecondary`} href={`https://www.google.com`}>
@@ -30,9 +39,11 @@ const AppHeader: FC = () => {
             </Link>
           </Flex>
           <Spacer />
-          <Flex>
-            <Image {...headerFeatureImage} height={`100%`} alt={t(`appHeader.featureImageAltText`)} />
-          </Flex>
+          <Hide below="xs">
+            <Flex>
+              <Image {...headerFeatureImage} height={`100%`} alt={t(`appHeader.featureImageAltText`)} />
+            </Flex>
+          </Hide>
         </Flex>
       </Flex>
     </Box>

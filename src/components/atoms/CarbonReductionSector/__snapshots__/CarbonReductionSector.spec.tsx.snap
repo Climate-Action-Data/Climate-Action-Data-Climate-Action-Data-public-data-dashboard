@@ -3,10 +3,10 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="chakra-stack css-v2wsrc"
+    class="chakra-stack css-c8abow"
   >
     <div
-      class="css-1ixfnwg"
+      class="css-f0f4ax"
     >
       <div
         style="width: 100%; height: 100%;"
@@ -16,10 +16,10 @@ exports[`renders correctly 1`] = `
       class="css-51blsq"
     >
       <div
-        class="chakra-stack css-2zw9da"
+        class="chakra-stack css-1am2pgk"
       >
         <span
-          class="chakra-text css-1d41w57"
+          class="chakra-text css-6tkz56"
         >
           40
           %
@@ -31,10 +31,10 @@ exports[`renders correctly 1`] = `
         </span>
       </div>
       <div
-        class="chakra-stack css-2zw9da"
+        class="chakra-stack css-1am2pgk"
       >
         <span
-          class="chakra-text css-hgvpt4"
+          class="chakra-text css-192mzaa"
         >
           24
           %
@@ -46,10 +46,10 @@ exports[`renders correctly 1`] = `
         </span>
       </div>
       <div
-        class="chakra-stack css-2zw9da"
+        class="chakra-stack css-1am2pgk"
       >
         <span
-          class="chakra-text css-7oskx6"
+          class="chakra-text css-1y9y2tc"
         >
           19
           %
@@ -61,10 +61,10 @@ exports[`renders correctly 1`] = `
         </span>
       </div>
       <div
-        class="chakra-stack css-2zw9da"
+        class="chakra-stack css-1am2pgk"
       >
         <span
-          class="chakra-text css-6nvuaw"
+          class="chakra-text css-16pc2jw"
         >
           17
           %

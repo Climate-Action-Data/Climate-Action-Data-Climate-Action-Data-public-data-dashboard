@@ -3,7 +3,7 @@
 exports[`renders correctly with loaded data 1`] = `
 <div>
   <div
-    class="chakra-stack css-1igwmid"
+    class="chakra-stack css-n3uhkm"
   >
     <div
       class="chakra-container css-0"
@@ -839,7 +839,7 @@ exports[`renders correctly with loaded data 1`] = `
 exports[`renders correctly with loaded data and search click 1`] = `
 <div>
   <div
-    class="chakra-stack css-1igwmid"
+    class="chakra-stack css-n3uhkm"
   >
     <div
       class="chakra-container css-0"
@@ -1675,7 +1675,7 @@ exports[`renders correctly with loaded data and search click 1`] = `
 exports[`renders correctly with no data 1`] = `
 <div>
   <div
-    class="chakra-stack css-1igwmid"
+    class="chakra-stack css-n3uhkm"
   >
     <div
       class="chakra-container css-0"

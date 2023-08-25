@@ -8,14 +8,14 @@ interface CarbonReductionSectorProps {
 
 export const CarbonReductionSector = ({ colorChart, data }: CarbonReductionSectorProps): React.JSX.Element => {
   return (
-    <HStack spacing="24px">
-      <Flex height="120px" width="120px" padding={0}>
+    <HStack flexWrap="wrap" gap={[`20px`, `10px`]} spacing="24px">
+      <Flex minW={[`80%`, `auto`]} height="120px" width={[`100%`, `120px`]} padding={0}>
         <SectorPieChart data={data.map((d) => ({ value: d.average, label: d.name }))} />
       </Flex>
       <Flex flexDirection={`column`} justifyContent={`space-evenly`} flex={1}>
         {data.map((sector, idx) => (
-          <HStack spacing="8px" paddingY={1} key={`${sector.name}-1`}>
-            <Text textAlign="right" alignSelf="start" minWidth="24px" fontWeight="500" color={colorChart[idx]} fontSize="sm" as="span">
+          <HStack gap={[`14px`, `8px`]} paddingY={1} key={`${sector.name}-1`}>
+            <Text textAlign={[`left`, `right`]} alignSelf="start" minWidth={[`45px`, `24px`]} fontWeight="500" color={colorChart[idx]} fontSize="sm" as="span">
               {sector.average}%
             </Text>
             <Text flex={1} fontSize="sm" as="span" fontWeight="400" color={colorChart[idx]}>

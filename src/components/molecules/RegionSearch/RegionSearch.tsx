@@ -56,7 +56,7 @@ export const RegionSearch = (): React.JSX.Element => {
             onClick={() => clearLocationFilters()}
             data-testid="button-region-back"
           />
-          <Text maxWidth={[`104px`, `unset`]} variant={`ellipsis`} fontWeight="600">
+          <Text maxWidth={[`104px`, `unset`]} variant={`ellipsis`} fontWeight="500">
             {t(`regions.${carbonReduction.carbonMapDataFilters.region}`)}
           </Text>
         </Flex>
@@ -64,7 +64,7 @@ export const RegionSearch = (): React.JSX.Element => {
     } else {
       return (
         <Box>
-          <Text fontWeight="600">Region</Text>
+          <Text fontWeight="500">{t(`region`)}</Text>
         </Box>
       )
     }

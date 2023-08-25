@@ -23,7 +23,7 @@ exports[`CreditsHistorySection renders loading state when creditsHistoryData is 
               class="chakra-stack css-1igwmid"
             >
               <p
-                class="chakra-text css-1vemggd"
+                class="chakra-text css-7b6cxa"
               >
                 World
               </p>
@@ -432,7 +432,7 @@ exports[`CreditsHistorySection renders the widget when rawCreditsHistory and cre
                 </svg>
               </button>
               <p
-                class="chakra-text css-1vemggd"
+                class="chakra-text css-7b6cxa"
               >
                 Latin America and the Caribbean
               </p>
@@ -1164,7 +1164,7 @@ exports[`CreditsHistorySection renders the widget when rawCreditsHistory and cre
             </div>
           </div>
           <p
-            class="chakra-text css-1xi4xed"
+            class="chakra-text css-1pnshin"
           >
             Data represented as of 7/20/2023 6:25:43 PM
           </p>
@@ -1216,7 +1216,7 @@ exports[`CreditsHistorySection renders the widget when rawCreditsHistory and cre
                 </svg>
               </button>
               <p
-                class="chakra-text css-1vemggd"
+                class="chakra-text css-7b6cxa"
               >
                 Latin America and the Caribbean
               </p>
