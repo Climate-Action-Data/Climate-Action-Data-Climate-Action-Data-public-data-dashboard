@@ -53,7 +53,7 @@ const AuthenticationSection: FC = (props) => {
   }
 
   return (
-    <HStack padding={4} verticalAlign="middle">
+    <HStack marginRight="24px" verticalAlign="middle">
       <Menu variant="menuDark">
         <MenuButton>
           <Hide below="sm">
