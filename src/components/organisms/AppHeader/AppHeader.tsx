@@ -31,7 +31,7 @@ const AppHeader: FC = () => {
             margin={[`50px 0px`, null, `5%`]}
             marginLeft={[`20px`, null, `142px`]}
           >
-            <Text fontSize={[`lg`, `40px`, `40px`]} maxW="685px" className={styles.headerTitle} fontFamily={AeonikFono.style.fontFamily}>
+            <Text fontSize={[`lg`, `40px`, `40px`]} className={styles.headerTitle} fontFamily={AeonikFono.style.fontFamily}>
               {t(`appHeader.title`)}
             </Text>
             <Link as={`button`} variant={`whiteSecondary`} href={`https://www.google.com`}>
