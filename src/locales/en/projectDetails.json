@@ -58,7 +58,7 @@
   },
   "issuances": {
     "title": "Issuances",
-    "vintage":  "Vintage",
+    "vintage": "Vintage",
     "quantity": "Quantity",
     "retirememts": "Retirements",
     "retirementNotes": "Retirement Notes",
@@ -77,10 +77,10 @@
     "quantity": "Quantity",
     "unitType": "Unit Type",
     "monitoringPeriod": "Monitoring Period",
-    "correspodinglyAdjusted":"Correspondingly Adjusted",
+    "correspodinglyAdjusted": "Correspondingly Adjusted",
     "issuanceTags": "Issuance Tags"
   },
-  "by": "by ",
+  "by": " by ",
   "viewHistory": "View History",
   "viewRetirements": "View Retirements",
   "viewMore": "View More",
