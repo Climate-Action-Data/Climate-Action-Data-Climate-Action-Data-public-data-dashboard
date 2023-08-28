@@ -111,8 +111,3 @@ export enum AnchorSection {
   ISSUANCES_RETIREMENTS = `issuancesRetirements`,
   DOCUMENTS = `documents`,
 }
-
-export enum ProjectBannerType {
-  PROJECT = `project`,
-  ISSUANCE = `issuance`,
-}

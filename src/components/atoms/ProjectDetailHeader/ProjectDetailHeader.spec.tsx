@@ -2,16 +2,24 @@ import { render } from '@testing-library/react'
 import { ProjectDetailHeader, ProjectDetailHeaderProps } from './ProjectDetailHeader'
 
 const DEFAULT_PROPS: ProjectDetailHeaderProps = {
-  id: `S00123`,
+  topTitle: `S00123`,
   type: `type`,
-  title: `Project Title`,
+  mainTitle: `Project Title`,
   description: `Project Description`,
-  location: `France`,
+  subTitle: `France`,
+  isExpanded: true,
 }
 
 it(`renders correctly`, () => {
   const { container } = render(
-    <ProjectDetailHeader id={DEFAULT_PROPS.id} title={DEFAULT_PROPS.title} location={DEFAULT_PROPS.location} description={DEFAULT_PROPS.description} type={DEFAULT_PROPS.type} />,
+    <ProjectDetailHeader
+      topTitle={DEFAULT_PROPS.topTitle}
+      mainTitle={DEFAULT_PROPS.mainTitle}
+      subTitle={DEFAULT_PROPS.subTitle}
+      description={DEFAULT_PROPS.description}
+      type={DEFAULT_PROPS.type}
+      isExpanded={DEFAULT_PROPS.isExpanded}
+    />,
   )
   expect(container).toMatchSnapshot()
 })

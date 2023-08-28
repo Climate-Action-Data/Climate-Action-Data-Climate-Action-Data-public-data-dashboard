@@ -1,5 +1,5 @@
 'use client'
-import { AnchorSection, ProjectBannerType, ProjectDetails } from '@/@types/ProjectDetails'
+import { AnchorSection, ProjectDetails } from '@/@types/ProjectDetails'
 import { ESearchParams } from '@/@types/ProjectSearchResult'
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
 import { GoogleMapWidget } from '@/components/atoms/GoogleMapWidget/GoogleMapWidget'
@@ -46,12 +46,12 @@ const ProjectPage: NextPage = () => {
       <Flex id={AnchorSection.PROJECT_DETAILS} flexDirection={`column`} gap={6} padding={`16px 24px`} scrollMarginTop={`172px`}>
         {project && (
           <ProjectDetailHeader
-            id={project.id}
-            location={project.location.country}
-            title={project.name}
+            topTitle={project.id}
+            subTitle={project.location.country}
+            mainTitle={project.name}
             description={project.description}
             type={project.type}
-            bannerType={ProjectBannerType.PROJECT}
+            isExpanded={true}
           />
         )}
         <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.projectDetails`) }}>
