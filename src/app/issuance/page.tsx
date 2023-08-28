@@ -35,10 +35,11 @@ const IssuancePage: NextPage = () => {
       <Box padding="12px 24px">
         <Box paddingBottom="40px">
           <ProjectDetailHeader
-            id={issuance?.project.id ?? tHome(`noData`)}
-            location={issuance?.project?.country}
-            title={issuance?.project?.name ?? tHome(`noData`)}
+            topTitle={issuance?.project.id ?? tHome(`noData`)}
+            subTitle={issuance?.project?.country}
+            mainTitle={issuance?.project?.name ?? tHome(`noData`)}
             type={issuance?.project?.type}
+            isExpanded={false}
           />
         </Box>
         <Flex flexDirection="column" minW="100%" gap="40px">

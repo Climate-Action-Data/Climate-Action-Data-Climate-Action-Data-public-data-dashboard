@@ -3,25 +3,25 @@ import { Box, Flex, Heading, VStack, Text } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { LargeTextWithScroll } from '../LargeTextWithScroll/LargeTextWithScroll'
 import { ProjectTypeBanner } from '../ProjectTypeBanner/ProjectTypeBanner'
-import { ProjectBannerType } from '@/@types/ProjectDetails'
 
 export interface ProjectDetailHeaderProps {
-  id?: string
-  title?: string
+  topTitle?: string
+  mainTitle?: string
+  subTitle?: string
   description?: string
-  location?: string
   type?: string
-  bannerType: ProjectBannerType
+  isExpanded: boolean
 }
 
 export const ProjectDetailHeader = (props: ProjectDetailHeaderProps) => {
-  const { id, title, description, location, type, bannerType } = props
+  const { topTitle, mainTitle, description, subTitle, type, isExpanded } = props
   const { t } = useTranslation(`projectDetails`)
   const { t: tHome } = useTranslation(`home`)
+
   return (
     <Flex flexWrap="wrap" gap={6}>
-      <Box position="relative" h={bannerType === ProjectBannerType.PROJECT ? `336px` : `200px`} flex={1}>
-        <ProjectTypeBanner projectType={extractProjectTypeFromString(type)} projectTypeText={type ?? tHome(`noData`)} bannerType={bannerType} />
+      <Box position="relative" h={isExpanded ? `336px` : `200px`} flex={1}>
+        <ProjectTypeBanner projectType={extractProjectTypeFromString(type)} projectTypeText={type ?? tHome(`noData`)} isExpanded={isExpanded} />
         <VStack
           background={`linear-gradient(0deg, rgba(0, 0, 0, 0.8) 33.85%, rgba(17, 17, 17, 0) 100%)`}
           borderRadius="8px"
@@ -33,11 +33,11 @@ export const ProjectDetailHeader = (props: ProjectDetailHeaderProps) => {
           bottom={0}
           position="absolute"
         >
-          <Text fontSize="lg">{id}</Text>
+          <Text fontSize="lg">{topTitle}</Text>
           <Heading textTransform="uppercase" fontSize={[`16px`, `32px`]}>
-            {title}
+            {mainTitle}
           </Heading>
-          <Text>{location}</Text>
+          <Text>{subTitle}</Text>
         </VStack>
       </Box>
       {description && (

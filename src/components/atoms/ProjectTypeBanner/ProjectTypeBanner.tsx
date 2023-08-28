@@ -12,12 +12,12 @@ import REDD from '@/assets/banners/redd.png'
 import Revegetation from '@/assets/banners/reforestation-revegetation.png'
 import Reforestation from '@/assets/banners/reforestation.png'
 
-import { ProjectBannerType, ProjectType } from '@/@types/ProjectDetails'
+import { ProjectType } from '@/@types/ProjectDetails'
 
 interface ProjectTypeBannerProps {
   projectType: ProjectType
   projectTypeText: string
-  bannerType?: ProjectBannerType
+  isExpanded: boolean
 }
 
 export const getImage = (projectType: ProjectType) => {
@@ -70,9 +70,7 @@ export const getImage = (projectType: ProjectType) => {
 }
 
 export const ProjectTypeBanner = (props: ProjectTypeBannerProps) => {
-  const { projectType, projectTypeText, bannerType } = props
+  const { projectType, projectTypeText, isExpanded } = props
 
-  return (
-    <Image borderRadius="8px" alt={projectTypeText} src={getImage(projectType)} h={bannerType === ProjectBannerType.PROJECT ? `336px` : `200px`} w="100%" objectFit={`cover`} />
-  )
+  return <Image borderRadius="8px" alt={projectTypeText} src={getImage(projectType)} h={isExpanded ? `336px` : `200px`} w="100%" objectFit={`cover`} />
 }
