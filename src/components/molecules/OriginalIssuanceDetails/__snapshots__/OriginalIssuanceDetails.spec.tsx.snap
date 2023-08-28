@@ -24,7 +24,12 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       <p
         class="chakra-text css-0"
       >
-        South Pole Carbon Asset Management 
+        <a
+          class="chakra-link css-1081t4c"
+          href="/project?id=a442a765-50f4-43dc-aa38-24e08d88c821"
+        >
+          South Pole Carbon Asset Management 
+        </a>
       </p>
     </div>
     <div

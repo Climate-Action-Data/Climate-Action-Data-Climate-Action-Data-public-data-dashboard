@@ -1,4 +1,4 @@
-import { SimpleGrid, Skeleton } from '@chakra-ui/react'
+import { Link, SimpleGrid, Skeleton } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
@@ -33,7 +33,11 @@ export const IssuanceDetails = (props: IssuanceDetailsProps) => {
 
   return (
     <SimpleGrid columns={[DEFAULT_COLUMN_MOBILE, DEFAULT_COLUMN_WEB]} gap="24px">
-      <DetailWidget title={t(`issuanceDetails.issuedTo`)}>{issuance.issuedTo}</DetailWidget>
+      <DetailWidget title={t(`issuanceDetails.issuedTo`)}>
+        <Link href={`/project?id=${issuance.project.warehouseProjectId}`} textDecoration="underline">
+          {issuance.issuedTo}
+        </Link>
+      </DetailWidget>
       <DetailWidget title={t(`issuanceDetails.vintage`)}>{issuance.vintage}</DetailWidget>
       <DetailWidget title={t(`issuanceDetails.quantity`)}>{issuance.quantity.toLocaleString()}</DetailWidget>
       <DetailWidget title={t(`issuanceDetails.unitType`)}>{issuance.unitType}</DetailWidget>

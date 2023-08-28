@@ -25,7 +25,7 @@ exports[`IssuancePage renders correctly 1`] = `
             <p
               class="chakra-text css-1ezsviu"
             >
-              --
+              UNITS - ISSUANCE
             </p>
             <h2
               class="chakra-heading css-1lr1hz5"
@@ -34,7 +34,9 @@ exports[`IssuancePage renders correctly 1`] = `
             </h2>
             <p
               class="chakra-text css-0"
-            />
+            >
+              --
+            </p>
           </div>
         </div>
       </div>
