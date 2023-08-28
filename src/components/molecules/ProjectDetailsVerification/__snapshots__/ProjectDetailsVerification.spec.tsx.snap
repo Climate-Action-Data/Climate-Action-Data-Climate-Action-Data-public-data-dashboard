@@ -29,53 +29,61 @@ exports[`renders correctly with validation 1`] = `
     </div>
   </div>
   <div
-    class="css-s8hfc8"
+    class="css-1uuaxxk"
   >
     <div
-      class="css-0"
+      class="css-1iv9klp"
     >
-      <p
-        class="chakra-text css-1xi4xed"
-      >
-        Verification Approach
-      </p>
-      <p
-        class="chakra-text css-0"
-      >
-        Details on website: https://www.ecoregistry.io/projects/151
-      </p>
-    </div>
-    <div
-      class="css-0"
-    >
-      <p
-        class="chakra-text css-1xi4xed"
-      >
-        Verification Period
-      </p>
       <div
         class="css-0"
       >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Verification Approach
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Details on website: https://www.ecoregistry.io/projects/151
+        </p>
+      </div>
+    </div>
+    <div
+      class="css-2va3dn"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Verification Period
+        </p>
         <div
           class="css-0"
         >
-          <p
-            class="chakra-text css-0"
+          <div
+            class="css-0"
           >
-            2019/12/04
-             - 
-            2023/12/31
-            by 
-             
-            Colombian Institute for Technical Standards and Certification (ICONTEC)
-          </p>
-          <button
-            class="chakra-button css-4xx2wk"
-            data-testid="verification-expand"
-            type="button"
-          >
-            View More
-          </button>
+            <p
+              class="chakra-text css-0"
+            >
+              2019/12/04
+               - 
+              2023/12/31
+               by 
+               
+              Colombian Institute for Technical Standards and Certification (ICONTEC)
+            </p>
+            <button
+              class="chakra-button css-4xx2wk"
+              data-testid="verification-expand"
+              type="button"
+            >
+              View More
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -104,53 +112,61 @@ exports[`renders correctly with validation and no date 1`] = `
     </div>
   </div>
   <div
-    class="css-s8hfc8"
+    class="css-1uuaxxk"
   >
     <div
-      class="css-0"
+      class="css-1iv9klp"
     >
-      <p
-        class="chakra-text css-1xi4xed"
-      >
-        Verification Approach
-      </p>
-      <p
-        class="chakra-text css-0"
-      >
-        Details on website: https://www.ecoregistry.io/projects/151
-      </p>
-    </div>
-    <div
-      class="css-0"
-    >
-      <p
-        class="chakra-text css-1xi4xed"
-      >
-        Verification Period
-      </p>
       <div
         class="css-0"
       >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Verification Approach
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Details on website: https://www.ecoregistry.io/projects/151
+        </p>
+      </div>
+    </div>
+    <div
+      class="css-2va3dn"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Verification Period
+        </p>
         <div
           class="css-0"
         >
-          <p
-            class="chakra-text css-0"
+          <div
+            class="css-0"
           >
-            2019/12/04
-             - 
-            2023/12/31
-            by 
-             
-            Colombian Institute for Technical Standards and Certification (ICONTEC)
-          </p>
-          <button
-            class="chakra-button css-4xx2wk"
-            data-testid="verification-expand"
-            type="button"
-          >
-            View More
-          </button>
+            <p
+              class="chakra-text css-0"
+            >
+              2019/12/04
+               - 
+              2023/12/31
+               by 
+               
+              Colombian Institute for Technical Standards and Certification (ICONTEC)
+            </p>
+            <button
+              class="chakra-button css-4xx2wk"
+              data-testid="verification-expand"
+              type="button"
+            >
+              View More
+            </button>
+          </div>
         </div>
       </div>
     </div>
