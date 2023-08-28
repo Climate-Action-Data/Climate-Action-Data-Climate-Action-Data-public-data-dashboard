@@ -1,4 +1,4 @@
-import { SimpleGrid, Skeleton } from '@chakra-ui/react'
+import { Link, SimpleGrid, Skeleton } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
@@ -21,7 +21,11 @@ export const OriginalIssuanceDetails = (props: OriginalIssuanceDetailsProps) => 
 
   return (
     <SimpleGrid columns={[DEFAULT_COLUMN_MOBILE, DEFAULT_COLUMN_WEB]} gap="24px">
-      <DetailWidget title={t(`originalIssuance.projectIssuedTo`)}>{unit?.project?.developer ?? tHome(`noData`)}</DetailWidget>
+      <DetailWidget title={t(`originalIssuance.projectIssuedTo`)}>
+        <Link href={`/project?id=${unit.project.warehouseProjectId}`} textDecoration="underline">
+          {unit?.project?.developer ?? tHome(`noData`)}
+        </Link>
+      </DetailWidget>
       <DetailWidget title={t(`originalIssuance.issuanceBatchSerialNumber`)}>{unit?.issuance?.issuanceBatchSerial ?? tHome(`noData`)}</DetailWidget>
       <DetailWidget title={t(`originalIssuance.vintage`)}>{unit?.vintage ?? tHome(`noData`)}</DetailWidget>
       <DetailWidget title={t(`originalIssuance.quantityIssued`)}>{unit?.issuance?.quantityIssued ?? tHome(`noData`)}</DetailWidget>

@@ -1,24 +1,26 @@
 {
-    "placeholderRetirement": "This is the placeholder for the retirement page",
-    "placeholderIssuance": "This is the placeholder for the issuance page",
-    "sectionHeaders": {
-        "retirementDetails": "Retirement Details",
-        "issuanceDetails": "Issuance Details",
-        "originalIssuanceDetails": "Original Issuance Details"
-    },
-    "retirement": {
-        "status": "Status",
-        "quantityRetired": "Quantity Retired",
-        "retirementNotes": "Retirement Notes",
-        "usingEntity": "Using Entity",
-        "correspondingAdjustment": "Corresponding Adjustment"
-    },
-    "originalIssuance": {
-        "projectIssuedTo": "Project Issued To",
-        "issuanceBatchSerialNumber": "Issuance Batch Serial N0.",
-        "vintage": "Vintage",
-        "quantityIssued": "Quantity Issued",
-        "unitType": "Unit Type",
-        "monitoringPeriod": "Monitoring Period"
-    }
+  "placeholderRetirement": "This is the placeholder for the retirement page",
+  "placeholderIssuance": "This is the placeholder for the issuance page",
+  "topTitleUnitsIssuance": "UNITS - ISSUANCE",
+  "topTitleUnitsRetirement": "UNITS - RETIREMENT",
+  "sectionHeaders": {
+    "retirementDetails": "Retirement Details",
+    "issuanceDetails": "Issuance Details",
+    "originalIssuanceDetails": "Original Issuance Details"
+  },
+  "retirement": {
+    "status": "Status",
+    "quantityRetired": "Quantity Retired",
+    "retirementNotes": "Retirement Notes",
+    "usingEntity": "Using Entity",
+    "correspondingAdjustment": "Corresponding Adjustment"
+  },
+  "originalIssuance": {
+    "projectIssuedTo": "Project Issued To",
+    "issuanceBatchSerialNumber": "Issuance Batch Serial N0.",
+    "vintage": "Vintage",
+    "quantityIssued": "Quantity Issued",
+    "unitType": "Unit Type",
+    "monitoringPeriod": "Monitoring Period"
+  }
 }

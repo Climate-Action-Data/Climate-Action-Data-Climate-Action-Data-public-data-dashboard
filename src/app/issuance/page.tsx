@@ -35,9 +35,9 @@ const IssuancePage: NextPage = () => {
       <Box padding="12px 24px">
         <Box paddingBottom="40px">
           <ProjectDetailHeader
-            topTitle={issuance?.project.id ?? tHome(`noData`)}
-            subTitle={issuance?.project?.country}
-            mainTitle={issuance?.project?.name ?? tHome(`noData`)}
+            topTitle={t(`topTitleUnitsIssuance`)}
+            mainTitle={issuance?.project?.id ?? tHome(`noData`)}
+            subTitle={issuance?.project?.name ?? tHome(`noData`)}
             type={issuance?.project?.type}
             isExpanded={false}
           />

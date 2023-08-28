@@ -34,9 +34,9 @@ const RetirementPage: NextPage = () => {
       <Box padding="12px 24px">
         <Box paddingBottom="40px">
           <ProjectDetailHeader
-            topTitle={unit?.project.id ?? tHome(`noData`)}
-            subTitle={unit?.project?.country}
-            mainTitle={unit?.project?.name ?? tHome(`noData`)}
+            topTitle={t(`topTitleUnitsRetirement`)}
+            mainTitle={unit?.project?.id}
+            subTitle={unit?.project?.name ?? tHome(`noData`)}
             type={unit?.project?.type}
             isExpanded={false}
           />
