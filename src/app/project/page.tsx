@@ -8,7 +8,6 @@ import { ProjectDetailHeader } from '@/components/atoms/ProjectDetailHeader/Proj
 import { CardSection } from '@/components/molecules/CardSection/CardSection'
 import { ProjectDetailsInfo } from '@/components/molecules/ProjectDetailsInfo/ProjectDetailsInfo'
 import { IssuancesRetirements } from '@/components/organisms/IssuancesRetirements/IssuancesRetirements'
-import { ProjectDocuments } from '@/components/organisms/ProjectDocuments/ProjectDocuments'
 import { useEffects } from '@/overmind'
 import { coordinatesToString, toCoordinates } from '@/utils/UnitConverter'
 import { Flex, Container, SimpleGrid, Box } from '@chakra-ui/react'
