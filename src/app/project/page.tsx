@@ -72,9 +72,6 @@ const ProjectPage: NextPage = () => {
         <CardSection id={AnchorSection.ISSUANCES_RETIREMENTS} displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.issuancesRetirements`) }} scrollMarginTop={`172px`}>
           {project && <IssuancesRetirements project={project} />}
         </CardSection>
-        <CardSection id={AnchorSection.DOCUMENTS} displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.documents`) }} scrollMarginTop={`172px`}>
-          <ProjectDocuments />
-        </CardSection>
       </Flex>
     </Box>
   )

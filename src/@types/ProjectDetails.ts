@@ -109,5 +109,4 @@ export enum ProjectType {
 export enum AnchorSection {
   PROJECT_DETAILS = `projectDetails`,
   ISSUANCES_RETIREMENTS = `issuancesRetirements`,
-  DOCUMENTS = `documents`,
 }
