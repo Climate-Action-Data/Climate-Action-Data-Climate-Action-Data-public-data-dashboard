@@ -11,6 +11,6 @@ export type Issuance = {
   monitoringPeriodStart: string
   monitoringPeriodEnd: string
   correspondingAdjustment?: string
-  issuanceTags: string
+  issuanceTags?: string
   validation: Validation
 }
