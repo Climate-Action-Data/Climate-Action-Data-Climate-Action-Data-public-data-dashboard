@@ -33,9 +33,9 @@ const ProjectUnitSearchBar: FC<ProjectUnitSearchBarProp> = (props) => {
     setKeywordSearch(searchInput)
 
     if (isProjectSearch) {
-      router.push(`/search/projects?${searchParams}`)
+      router.push(`/search/projects`)
     } else {
-      router.push(`/search/units?${searchParams}`)
+      router.push(`/search/units`)
     }
   }
 
