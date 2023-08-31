@@ -6,7 +6,7 @@ import { Box, Button, Flex, Heading, HStack, Input, InputGroup, InputRightElemen
 import { extractPageFromUrl, extractTitleFromUrl } from '@/utils/TextConverter'
 
 import { BreadCrumbs } from '@/components/atoms/BreadCrumbs/BreadCrumbs'
-import { useActions } from '@/overmind'
+import { useActions, useAppState } from '@/overmind'
 import UnitFilterBar from '@/components/organisms/UnitFilterBar/UnitFilterBar'
 import ProjectFilterBar from '@/components/organisms/ProjectFilterBar/ProjectFilterBar'
 
@@ -19,6 +19,8 @@ export const SearchHeader = (props: SearchHeaderProps) => {
   const [searchPattern, setSearchPattern] = useState(``)
   const { title, hideSearch } = props
   const { setKeywordSearch } = useActions().searchFilters
+  const { keywordSearch } = useAppState().searchFilters
+
   const currentPath = usePathname()
   const currentTitle = title ?? extractTitleFromUrl(currentPath)
   const { t } = useTranslation(`search`)
@@ -28,6 +30,10 @@ export const SearchHeader = (props: SearchHeaderProps) => {
   //TODO: refactor search to use state and not url params
 
   useEffect(() => {
+    if (keywordSearch && keywordSearch !== ``) {
+      setSearchPattern(keywordSearch)
+    }
+
     if (searchPattern && searchPattern !== ``) {
       router.push(`/search/${extractedPage}`)
     }
