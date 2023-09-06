@@ -51,6 +51,8 @@ export const generateHasCountryData = (countryData: CountryData[], timeframe: Ti
   return hasCountryData
 }
 
+const TOP_THREE_STANDARDS = 3
+
 export const combineCountryData = (countryData: CountryData[], timeframe: TimeframesData = TimeframesData.MAX): CountryPeriodData => {
   const combinedData: CountryPeriodData = {
     activeProjects: 0,
@@ -73,7 +75,7 @@ export const combineCountryData = (countryData: CountryData[], timeframe: Timefr
     }
   })
   combinedData.sectors = combinePercentages(sectorsToCombine)
-  combinedData.standards = combinePercentages(standardsToCombine)
+  combinedData.standards = combinePercentages(standardsToCombine).splice(TOP_THREE_STANDARDS)
   return combinedData
 }
 
@@ -107,6 +109,8 @@ export const combinePercentages = (percentageSeries: Sector[][] | Standard[][]) 
     const percentage = Number(((dataset.average / totalAverage) * 100).toFixed(2))
     return { name: dataset.name, average: percentage }
   })
+
+  combinedDataset.sort((a, b) => b.average - a.average)
 
   return combinedDataset
 }
