@@ -734,641 +734,6 @@ exports[`renders correctly and clear the search values 1`] = `
               class="chakra-stack css-17z0ye3"
             >
               <button
-                aria-controls="popover-content-:rl:"
-                aria-expanded="false"
-                aria-haspopup="dialog"
-                class="chakra-button css-4xx2wk"
-                id="popover-trigger-:rl:"
-                type="button"
-              >
-                <div
-                  class="css-jmqhys"
-                >
-                  Standard
-                  <div
-                    class="css-1gq8co7"
-                  />
-                  <div
-                    class="css-17xejub"
-                  />
-                  <svg
-                    class="chakra-icon css-c0air1"
-                    focusable="false"
-                    viewBox="0 0 8 4"
-                  >
-                    <path
-                      d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </button>
-              <div
-                class="chakra-popover__popper css-0"
-                style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-              >
-                <section
-                  aria-describedby="popover-body-:rl:"
-                  aria-labelledby="popover-header-:rl:"
-                  class="chakra-popover__content css-gt8u74"
-                  id="popover-content-:rl:"
-                  role="dialog"
-                  style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                  tabindex="-1"
-                >
-                  <header
-                    class="chakra-popover__header css-1s89pvn"
-                    id="popover-header-:rl:"
-                  >
-                    <div
-                      class="chakra-stack css-1vr2anf"
-                    >
-                      <div
-                        class="css-on1wo"
-                      >
-                        <svg
-                          class="chakra-icon css-18wx2tg"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                        <input
-                          class="chakra-input css-0"
-                          placeholder="Search"
-                          value=""
-                        />
-                      </div>
-                      <div
-                        class="chakra-stack__divider css-lh8pr5"
-                      />
-                      <div
-                        class="css-dge4r2"
-                      >
-                        <label
-                          class="chakra-checkbox css-1elxtiq"
-                          data-testid="AutoCompleteCheckbox-top-checkbox"
-                        >
-                          <input
-                            class="chakra-checkbox__input"
-                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                            type="checkbox"
-                            value=""
-                          />
-                          <span
-                            aria-hidden="true"
-                            class="chakra-checkbox__control css-dnty2r"
-                          />
-                        </label>
-                        <div
-                          class="css-17xejub"
-                        />
-                        <button
-                          class="chakra-button css-4xx2wk"
-                          type="button"
-                        >
-                          Apply
-                        </button>
-                      </div>
-                    </div>
-                  </header>
-                  <div
-                    class="chakra-popover__body css-l6ye25"
-                    id="popover-body-:rl:"
-                  >
-                    <div
-                      class="chakra-stack css-1gnc3qn"
-                    />
-                  </div>
-                </section>
-              </div>
-              <div
-                class="chakra-stack__divider css-1psh3p6"
-              />
-              <button
-                aria-controls="popover-content-:rn:"
-                aria-expanded="false"
-                aria-haspopup="dialog"
-                class="chakra-button css-4xx2wk"
-                id="popover-trigger-:rn:"
-                type="button"
-              >
-                <div
-                  class="css-jmqhys"
-                >
-                  Methodology
-                  <div
-                    class="css-1gq8co7"
-                  />
-                  <div
-                    class="css-17xejub"
-                  />
-                  <svg
-                    class="chakra-icon css-c0air1"
-                    focusable="false"
-                    viewBox="0 0 8 4"
-                  >
-                    <path
-                      d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </button>
-              <div
-                class="chakra-popover__popper css-0"
-                style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-              >
-                <section
-                  aria-describedby="popover-body-:rn:"
-                  aria-labelledby="popover-header-:rn:"
-                  class="chakra-popover__content css-gt8u74"
-                  id="popover-content-:rn:"
-                  role="dialog"
-                  style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                  tabindex="-1"
-                >
-                  <header
-                    class="chakra-popover__header css-1s89pvn"
-                    id="popover-header-:rn:"
-                  >
-                    <div
-                      class="chakra-stack css-1vr2anf"
-                    >
-                      <div
-                        class="css-on1wo"
-                      >
-                        <svg
-                          class="chakra-icon css-18wx2tg"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                        <input
-                          class="chakra-input css-0"
-                          placeholder="Search"
-                          value=""
-                        />
-                      </div>
-                      <div
-                        class="chakra-stack__divider css-lh8pr5"
-                      />
-                      <div
-                        class="css-dge4r2"
-                      >
-                        <label
-                          class="chakra-checkbox css-1elxtiq"
-                          data-testid="AutoCompleteCheckbox-top-checkbox"
-                        >
-                          <input
-                            class="chakra-checkbox__input"
-                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                            type="checkbox"
-                            value=""
-                          />
-                          <span
-                            aria-hidden="true"
-                            class="chakra-checkbox__control css-dnty2r"
-                          />
-                        </label>
-                        <div
-                          class="css-17xejub"
-                        />
-                        <button
-                          class="chakra-button css-4xx2wk"
-                          type="button"
-                        >
-                          Apply
-                        </button>
-                      </div>
-                    </div>
-                  </header>
-                  <div
-                    class="chakra-popover__body css-l6ye25"
-                    id="popover-body-:rn:"
-                  >
-                    <div
-                      class="chakra-stack css-1gnc3qn"
-                    />
-                  </div>
-                </section>
-              </div>
-              <div
-                class="chakra-stack__divider css-1psh3p6"
-              />
-              <button
-                aria-controls="popover-content-:rp:"
-                aria-expanded="false"
-                aria-haspopup="dialog"
-                class="chakra-button css-4xx2wk"
-                id="popover-trigger-:rp:"
-                type="button"
-              >
-                <div
-                  class="css-jmqhys"
-                >
-                  Sector
-                  <div
-                    class="css-1gq8co7"
-                  />
-                  <div
-                    class="css-17xejub"
-                  />
-                  <svg
-                    class="chakra-icon css-c0air1"
-                    focusable="false"
-                    viewBox="0 0 8 4"
-                  >
-                    <path
-                      d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </button>
-              <div
-                class="chakra-popover__popper css-0"
-                style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-              >
-                <section
-                  aria-describedby="popover-body-:rp:"
-                  aria-labelledby="popover-header-:rp:"
-                  class="chakra-popover__content css-gt8u74"
-                  id="popover-content-:rp:"
-                  role="dialog"
-                  style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                  tabindex="-1"
-                >
-                  <header
-                    class="chakra-popover__header css-1s89pvn"
-                    id="popover-header-:rp:"
-                  >
-                    <div
-                      class="chakra-stack css-1vr2anf"
-                    >
-                      <div
-                        class="css-on1wo"
-                      >
-                        <svg
-                          class="chakra-icon css-18wx2tg"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                        <input
-                          class="chakra-input css-0"
-                          placeholder="Search"
-                          value=""
-                        />
-                      </div>
-                      <div
-                        class="chakra-stack__divider css-lh8pr5"
-                      />
-                      <div
-                        class="css-dge4r2"
-                      >
-                        <label
-                          class="chakra-checkbox css-1elxtiq"
-                          data-testid="AutoCompleteCheckbox-top-checkbox"
-                        >
-                          <input
-                            class="chakra-checkbox__input"
-                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                            type="checkbox"
-                            value=""
-                          />
-                          <span
-                            aria-hidden="true"
-                            class="chakra-checkbox__control css-dnty2r"
-                          />
-                        </label>
-                        <div
-                          class="css-17xejub"
-                        />
-                        <button
-                          class="chakra-button css-4xx2wk"
-                          type="button"
-                        >
-                          Apply
-                        </button>
-                      </div>
-                    </div>
-                  </header>
-                  <div
-                    class="chakra-popover__body css-l6ye25"
-                    id="popover-body-:rp:"
-                  >
-                    <div
-                      class="chakra-stack css-1gnc3qn"
-                    />
-                  </div>
-                </section>
-              </div>
-              <div
-                class="chakra-stack__divider css-1psh3p6"
-              />
-              <button
-                aria-controls="popover-content-:rr:"
-                aria-expanded="false"
-                aria-haspopup="dialog"
-                class="chakra-button css-4xx2wk"
-                id="popover-trigger-:rr:"
-                type="button"
-              >
-                <div
-                  class="css-jmqhys"
-                >
-                  Country
-                  <div
-                    class="css-1gq8co7"
-                  />
-                  <div
-                    class="css-17xejub"
-                  />
-                  <svg
-                    class="chakra-icon css-c0air1"
-                    focusable="false"
-                    viewBox="0 0 8 4"
-                  >
-                    <path
-                      d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </button>
-              <div
-                class="chakra-popover__popper css-0"
-                style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-              >
-                <section
-                  aria-describedby="popover-body-:rr:"
-                  aria-labelledby="popover-header-:rr:"
-                  class="chakra-popover__content css-gt8u74"
-                  id="popover-content-:rr:"
-                  role="dialog"
-                  style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                  tabindex="-1"
-                >
-                  <header
-                    class="chakra-popover__header css-1s89pvn"
-                    id="popover-header-:rr:"
-                  >
-                    <div
-                      class="chakra-stack css-1vr2anf"
-                    >
-                      <div
-                        class="css-on1wo"
-                      >
-                        <svg
-                          class="chakra-icon css-18wx2tg"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                        <input
-                          class="chakra-input css-0"
-                          placeholder="Search"
-                          value=""
-                        />
-                      </div>
-                      <div
-                        class="chakra-stack__divider css-lh8pr5"
-                      />
-                      <div
-                        class="css-dge4r2"
-                      >
-                        <label
-                          class="chakra-checkbox css-1elxtiq"
-                          data-testid="AutoCompleteCheckbox-top-checkbox"
-                        >
-                          <input
-                            class="chakra-checkbox__input"
-                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                            type="checkbox"
-                            value=""
-                          />
-                          <span
-                            aria-hidden="true"
-                            class="chakra-checkbox__control css-dnty2r"
-                          />
-                        </label>
-                        <div
-                          class="css-17xejub"
-                        />
-                        <button
-                          class="chakra-button css-4xx2wk"
-                          type="button"
-                        >
-                          Apply
-                        </button>
-                      </div>
-                    </div>
-                  </header>
-                  <div
-                    class="chakra-popover__body css-l6ye25"
-                    id="popover-body-:rr:"
-                  >
-                    <div
-                      class="chakra-stack css-1gnc3qn"
-                    />
-                  </div>
-                </section>
-              </div>
-              <div
-                class="chakra-stack__divider css-1psh3p6"
-              />
-              <div
-                class="css-0"
-              >
-                <button
-                  aria-controls="popover-content-:rt:"
-                  aria-expanded="false"
-                  aria-haspopup="dialog"
-                  class="chakra-button css-4xx2wk"
-                  id="popover-trigger-:rt:"
-                  type="button"
-                >
-                  <div
-                    class="css-jmqhys"
-                  >
-                    <div
-                      class="css-k008qs"
-                    >
-                      Crediting Period
-                    </div>
-                    <div
-                      class="css-17xejub"
-                    />
-                    <svg
-                      class="chakra-icon css-c0air1"
-                      focusable="false"
-                      viewBox="0 0 8 4"
-                    >
-                      <path
-                        d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </div>
-                </button>
-                <div
-                  class="chakra-popover__popper css-0"
-                  style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-                >
-                  <section
-                    class="chakra-popover__content css-1j9y0nx"
-                    id="popover-content-:rt:"
-                    role="dialog"
-                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                    tabindex="-1"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button
-          class="chakra-button css-1h503in"
-          data-testid="compare-toggle-button"
-          type="button"
-        >
-          <div
-            class="css-1gpauhq"
-          >
-            Compare
-          </div>
-          <svg
-            class="chakra-icon css-1mxziaz"
-            focusable="false"
-            viewBox="0 0 32 32"
-          >
-            <path
-              d="M14.9998 30.1541C14.7161 30.1541 14.4785 30.0585 14.287 29.8671C14.0956 29.6757 13.9998 29.4381 13.9998 29.1543V27.3338H7.07677C6.40326 27.3338 5.83317 27.1004 5.3665 26.6338C4.89984 26.1671 4.6665 25.597 4.6665 24.9235V7.07745C4.6665 6.40393 4.89984 5.83385 5.3665 5.36718C5.83317 4.90051 6.40326 4.66718 7.07677 4.66718H13.9998V2.84665C13.9998 2.56289 14.0956 2.32529 14.287 2.13385C14.4785 1.9424 14.7161 1.84668 14.9998 1.84668C15.2836 1.84668 15.5212 1.9424 15.7126 2.13385C15.9041 2.32529 15.9998 2.56289 15.9998 2.84665V29.1543C15.9998 29.4381 15.9041 29.6757 15.7126 29.8671C15.5212 30.0585 15.2836 30.1541 14.9998 30.1541ZM6.66647 24.0005H13.9998V15.2055L6.66647 24.0005ZM18.6665 27.3338V16.0005L25.3331 24.0005V7.07745C25.3331 6.97487 25.2904 6.88084 25.2049 6.79535C25.1194 6.70988 25.0254 6.66715 24.9228 6.66715H18.6665V4.66718H24.9228C25.5963 4.66718 26.1664 4.90051 26.6331 5.36718C27.0998 5.83385 27.3331 6.40393 27.3331 7.07745V24.9235C27.3331 25.597 27.0998 26.1671 26.6331 26.6338C26.1664 27.1004 25.5963 27.3338 24.9228 27.3338H18.6665Z"
-              fill="white"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`renders correctly and clear the search values 2`] = `
-<div>
-  <div
-    class="css-8y3igr"
-    id="headerReference"
-  >
-    <div
-      class="chakra-stack css-ryi8m5"
-    >
-      <nav
-        aria-label="breadcrumb"
-        class="chakra-breadcrumb css-ha5bzq"
-      >
-        <ol
-          class="chakra-breadcrumb__list css-70qvj9"
-        >
-          <li
-            class="chakra-breadcrumb__list-item css-13pussk"
-          >
-            <a
-              class="chakra-link css-g5hezf"
-              href="/"
-            >
-              Home
-            </a>
-            <span
-              class="css-t4q1nq"
-              role="presentation"
-            >
-              &gt;
-            </span>
-          </li>
-          <li
-            class="chakra-breadcrumb__list-item css-13pussk"
-            link="/search/projects"
-            title="Projects"
-          >
-            <a
-              class="chakra-link css-1mc518j"
-              href="/search/projects"
-            >
-              Projects
-            </a>
-          </li>
-        </ol>
-      </nav>
-      <div
-        class="chakra-stack css-1jjq5p5"
-      >
-        <div
-          class="css-0"
-        >
-          <h2
-            class="chakra-heading css-0"
-          >
-            Projects
-          </h2>
-        </div>
-        <div
-          class="css-0"
-        >
-          <div
-            class="chakra-input__group css-bx0blc"
-            data-group="true"
-          >
-            <input
-              class="chakra-input css-1n0hj84"
-              data-testid="search-input-enter"
-              placeholder="Search"
-              type="text"
-              value=""
-            />
-            <div
-              class="chakra-input__right-element css-vcnsx7"
-            >
-              <button
-                class="chakra-button css-xsdlqf"
-                data-testid="search-header-button"
-                type="button"
-              >
-                Search
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="chakra-stack css-n3uhkm"
-      >
-        <div
-          class="chakra-container css-0"
-        >
-          <div
-            class="chakra-stack css-18mjik"
-          >
-            <div
-              class="chakra-stack css-17z0ye3"
-            >
-              <button
                 aria-controls="popover-content-:rv:"
                 aria-expanded="false"
                 aria-haspopup="dialog"
@@ -1905,610 +1270,7 @@ exports[`renders correctly and clear the search values 2`] = `
 </div>
 `;
 
-exports[`renders correctly for units path 1`] = `
-<div>
-  <div
-    class="css-8y3igr"
-    id="headerReference"
-  >
-    <div
-      class="chakra-stack css-ryi8m5"
-    >
-      <nav
-        aria-label="breadcrumb"
-        class="chakra-breadcrumb css-ha5bzq"
-      >
-        <ol
-          class="chakra-breadcrumb__list css-70qvj9"
-        >
-          <li
-            class="chakra-breadcrumb__list-item css-13pussk"
-          >
-            <a
-              class="chakra-link css-g5hezf"
-              href="/"
-            >
-              Home
-            </a>
-            <span
-              class="css-t4q1nq"
-              role="presentation"
-            >
-              &gt;
-            </span>
-          </li>
-          <li
-            class="chakra-breadcrumb__list-item css-13pussk"
-            link="/search/units"
-            title="Units"
-          >
-            <a
-              class="chakra-link css-1mc518j"
-              href="/search/units"
-            >
-              Units
-            </a>
-          </li>
-        </ol>
-      </nav>
-      <div
-        class="chakra-stack css-1jjq5p5"
-      >
-        <div
-          class="css-0"
-        >
-          <h2
-            class="chakra-heading css-0"
-          >
-            Units
-          </h2>
-        </div>
-        <div
-          class="css-0"
-        >
-          <div
-            class="chakra-input__group css-bx0blc"
-            data-group="true"
-          >
-            <input
-              class="chakra-input css-1n0hj84"
-              data-testid="search-input-enter"
-              placeholder="Search"
-              type="text"
-              value=""
-            />
-            <div
-              class="chakra-input__right-element css-vcnsx7"
-            >
-              <button
-                class="chakra-button css-xsdlqf"
-                data-testid="search-header-button"
-                type="button"
-              >
-                Search
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="chakra-container css-0"
-      >
-        <div
-          class="chakra-stack css-b7btcn"
-        >
-          <div
-            class="chakra-stack css-17z0ye3"
-          >
-            <button
-              aria-controls="popover-content-:rb:"
-              aria-expanded="false"
-              aria-haspopup="dialog"
-              class="chakra-button css-4xx2wk"
-              id="popover-trigger-:rb:"
-              type="button"
-            >
-              <div
-                class="css-jmqhys"
-              >
-                Unit Status
-                <div
-                  class="css-1gq8co7"
-                />
-                <div
-                  class="css-17xejub"
-                />
-                <svg
-                  class="chakra-icon css-c0air1"
-                  focusable="false"
-                  viewBox="0 0 8 4"
-                >
-                  <path
-                    d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </button>
-            <div
-              class="chakra-popover__popper css-0"
-              style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-            >
-              <section
-                aria-describedby="popover-body-:rb:"
-                aria-labelledby="popover-header-:rb:"
-                class="chakra-popover__content css-gt8u74"
-                id="popover-content-:rb:"
-                role="dialog"
-                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                tabindex="-1"
-              >
-                <header
-                  class="chakra-popover__header css-1s89pvn"
-                  id="popover-header-:rb:"
-                >
-                  <div
-                    class="chakra-stack css-1vr2anf"
-                  >
-                    <div
-                      class="css-on1wo"
-                    >
-                      <svg
-                        class="chakra-icon css-18wx2tg"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      <input
-                        class="chakra-input css-0"
-                        placeholder="Search"
-                        value=""
-                      />
-                    </div>
-                    <div
-                      class="chakra-stack__divider css-lh8pr5"
-                    />
-                    <div
-                      class="css-dge4r2"
-                    >
-                      <label
-                        class="chakra-checkbox css-1elxtiq"
-                        data-testid="AutoCompleteCheckbox-top-checkbox"
-                      >
-                        <input
-                          class="chakra-checkbox__input"
-                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                          type="checkbox"
-                          value=""
-                        />
-                        <span
-                          aria-hidden="true"
-                          class="chakra-checkbox__control css-dnty2r"
-                        />
-                      </label>
-                      <div
-                        class="css-17xejub"
-                      />
-                      <button
-                        class="chakra-button css-4xx2wk"
-                        type="button"
-                      >
-                        Apply
-                      </button>
-                    </div>
-                  </div>
-                </header>
-                <div
-                  class="chakra-popover__body css-l6ye25"
-                  id="popover-body-:rb:"
-                >
-                  <div
-                    class="chakra-stack css-1gnc3qn"
-                  />
-                </div>
-              </section>
-            </div>
-            <div
-              class="chakra-stack__divider css-1psh3p6"
-            />
-            <button
-              aria-controls="popover-content-:rd:"
-              aria-expanded="false"
-              aria-haspopup="dialog"
-              class="chakra-button css-4xx2wk"
-              id="popover-trigger-:rd:"
-              type="button"
-            >
-              <div
-                class="css-jmqhys"
-              >
-                Standard
-                <div
-                  class="css-1gq8co7"
-                />
-                <div
-                  class="css-17xejub"
-                />
-                <svg
-                  class="chakra-icon css-c0air1"
-                  focusable="false"
-                  viewBox="0 0 8 4"
-                >
-                  <path
-                    d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </button>
-            <div
-              class="chakra-popover__popper css-0"
-              style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-            >
-              <section
-                aria-describedby="popover-body-:rd:"
-                aria-labelledby="popover-header-:rd:"
-                class="chakra-popover__content css-gt8u74"
-                id="popover-content-:rd:"
-                role="dialog"
-                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                tabindex="-1"
-              >
-                <header
-                  class="chakra-popover__header css-1s89pvn"
-                  id="popover-header-:rd:"
-                >
-                  <div
-                    class="chakra-stack css-1vr2anf"
-                  >
-                    <div
-                      class="css-on1wo"
-                    >
-                      <svg
-                        class="chakra-icon css-18wx2tg"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      <input
-                        class="chakra-input css-0"
-                        placeholder="Search"
-                        value=""
-                      />
-                    </div>
-                    <div
-                      class="chakra-stack__divider css-lh8pr5"
-                    />
-                    <div
-                      class="css-dge4r2"
-                    >
-                      <label
-                        class="chakra-checkbox css-1elxtiq"
-                        data-testid="AutoCompleteCheckbox-top-checkbox"
-                      >
-                        <input
-                          class="chakra-checkbox__input"
-                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                          type="checkbox"
-                          value=""
-                        />
-                        <span
-                          aria-hidden="true"
-                          class="chakra-checkbox__control css-dnty2r"
-                        />
-                      </label>
-                      <div
-                        class="css-17xejub"
-                      />
-                      <button
-                        class="chakra-button css-4xx2wk"
-                        type="button"
-                      >
-                        Apply
-                      </button>
-                    </div>
-                  </div>
-                </header>
-                <div
-                  class="chakra-popover__body css-l6ye25"
-                  id="popover-body-:rd:"
-                >
-                  <div
-                    class="chakra-stack css-1gnc3qn"
-                  />
-                </div>
-              </section>
-            </div>
-            <div
-              class="chakra-stack__divider css-1psh3p6"
-            />
-            <button
-              aria-controls="popover-content-:rf:"
-              aria-expanded="false"
-              aria-haspopup="dialog"
-              class="chakra-button css-4xx2wk"
-              id="popover-trigger-:rf:"
-              type="button"
-            >
-              <div
-                class="css-jmqhys"
-              >
-                Sector
-                <div
-                  class="css-1gq8co7"
-                />
-                <div
-                  class="css-17xejub"
-                />
-                <svg
-                  class="chakra-icon css-c0air1"
-                  focusable="false"
-                  viewBox="0 0 8 4"
-                >
-                  <path
-                    d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </button>
-            <div
-              class="chakra-popover__popper css-0"
-              style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-            >
-              <section
-                aria-describedby="popover-body-:rf:"
-                aria-labelledby="popover-header-:rf:"
-                class="chakra-popover__content css-gt8u74"
-                id="popover-content-:rf:"
-                role="dialog"
-                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                tabindex="-1"
-              >
-                <header
-                  class="chakra-popover__header css-1s89pvn"
-                  id="popover-header-:rf:"
-                >
-                  <div
-                    class="chakra-stack css-1vr2anf"
-                  >
-                    <div
-                      class="css-on1wo"
-                    >
-                      <svg
-                        class="chakra-icon css-18wx2tg"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      <input
-                        class="chakra-input css-0"
-                        placeholder="Search"
-                        value=""
-                      />
-                    </div>
-                    <div
-                      class="chakra-stack__divider css-lh8pr5"
-                    />
-                    <div
-                      class="css-dge4r2"
-                    >
-                      <label
-                        class="chakra-checkbox css-1elxtiq"
-                        data-testid="AutoCompleteCheckbox-top-checkbox"
-                      >
-                        <input
-                          class="chakra-checkbox__input"
-                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                          type="checkbox"
-                          value=""
-                        />
-                        <span
-                          aria-hidden="true"
-                          class="chakra-checkbox__control css-dnty2r"
-                        />
-                      </label>
-                      <div
-                        class="css-17xejub"
-                      />
-                      <button
-                        class="chakra-button css-4xx2wk"
-                        type="button"
-                      >
-                        Apply
-                      </button>
-                    </div>
-                  </div>
-                </header>
-                <div
-                  class="chakra-popover__body css-l6ye25"
-                  id="popover-body-:rf:"
-                >
-                  <div
-                    class="chakra-stack css-1gnc3qn"
-                  />
-                </div>
-              </section>
-            </div>
-            <div
-              class="chakra-stack__divider css-1psh3p6"
-            />
-            <button
-              aria-controls="popover-content-:rh:"
-              aria-expanded="false"
-              aria-haspopup="dialog"
-              class="chakra-button css-4xx2wk"
-              id="popover-trigger-:rh:"
-              type="button"
-            >
-              <div
-                class="css-jmqhys"
-              >
-                Country
-                <div
-                  class="css-1gq8co7"
-                />
-                <div
-                  class="css-17xejub"
-                />
-                <svg
-                  class="chakra-icon css-c0air1"
-                  focusable="false"
-                  viewBox="0 0 8 4"
-                >
-                  <path
-                    d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </button>
-            <div
-              class="chakra-popover__popper css-0"
-              style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-            >
-              <section
-                aria-describedby="popover-body-:rh:"
-                aria-labelledby="popover-header-:rh:"
-                class="chakra-popover__content css-gt8u74"
-                id="popover-content-:rh:"
-                role="dialog"
-                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                tabindex="-1"
-              >
-                <header
-                  class="chakra-popover__header css-1s89pvn"
-                  id="popover-header-:rh:"
-                >
-                  <div
-                    class="chakra-stack css-1vr2anf"
-                  >
-                    <div
-                      class="css-on1wo"
-                    >
-                      <svg
-                        class="chakra-icon css-18wx2tg"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      <input
-                        class="chakra-input css-0"
-                        placeholder="Search"
-                        value=""
-                      />
-                    </div>
-                    <div
-                      class="chakra-stack__divider css-lh8pr5"
-                    />
-                    <div
-                      class="css-dge4r2"
-                    >
-                      <label
-                        class="chakra-checkbox css-1elxtiq"
-                        data-testid="AutoCompleteCheckbox-top-checkbox"
-                      >
-                        <input
-                          class="chakra-checkbox__input"
-                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
-                          type="checkbox"
-                          value=""
-                        />
-                        <span
-                          aria-hidden="true"
-                          class="chakra-checkbox__control css-dnty2r"
-                        />
-                      </label>
-                      <div
-                        class="css-17xejub"
-                      />
-                      <button
-                        class="chakra-button css-4xx2wk"
-                        type="button"
-                      >
-                        Apply
-                      </button>
-                    </div>
-                  </div>
-                </header>
-                <div
-                  class="chakra-popover__body css-l6ye25"
-                  id="popover-body-:rh:"
-                >
-                  <div
-                    class="chakra-stack css-1gnc3qn"
-                  />
-                </div>
-              </section>
-            </div>
-            <div
-              class="chakra-stack__divider css-1psh3p6"
-            />
-            <button
-              aria-controls="popover-content-:rj:"
-              aria-expanded="false"
-              aria-haspopup="dialog"
-              class="chakra-button css-4xx2wk"
-              id="popover-trigger-:rj:"
-              type="button"
-            >
-              <div
-                class="css-jmqhys"
-              >
-                Vintage Year
-                <div
-                  class="css-17xejub"
-                />
-                <svg
-                  class="chakra-icon css-c0air1"
-                  focusable="false"
-                  viewBox="0 0 8 4"
-                >
-                  <path
-                    d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </button>
-            <div
-              class="chakra-popover__popper css-0"
-              style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
-            >
-              <section
-                class="chakra-popover__content css-yntw6i"
-                data-testid="vintage-popover"
-                id="popover-content-:rj:"
-                role="dialog"
-                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
-                tabindex="-1"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`renders correctly with no params, add a search value and submits a search 1`] = `
+exports[`renders correctly and clear the search values 2`] = `
 <div>
   <div
     class="css-8y3igr"
@@ -2578,7 +1340,7 @@ exports[`renders correctly with no params, add a search value and submits a sear
               data-testid="search-input-enter"
               placeholder="Search"
               type="text"
-              value="hello"
+              value=""
             />
             <div
               class="chakra-input__right-element css-vcnsx7"
@@ -3107,6 +1869,2159 @@ exports[`renders correctly with no params, add a search value and submits a sear
                   <section
                     class="chakra-popover__content css-1j9y0nx"
                     id="popover-content-:r1h:"
+                    role="dialog"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="chakra-button css-1h503in"
+          data-testid="compare-toggle-button"
+          type="button"
+        >
+          <div
+            class="css-1gpauhq"
+          >
+            Compare
+          </div>
+          <svg
+            class="chakra-icon css-1mxziaz"
+            focusable="false"
+            viewBox="0 0 32 32"
+          >
+            <path
+              d="M14.9998 30.1541C14.7161 30.1541 14.4785 30.0585 14.287 29.8671C14.0956 29.6757 13.9998 29.4381 13.9998 29.1543V27.3338H7.07677C6.40326 27.3338 5.83317 27.1004 5.3665 26.6338C4.89984 26.1671 4.6665 25.597 4.6665 24.9235V7.07745C4.6665 6.40393 4.89984 5.83385 5.3665 5.36718C5.83317 4.90051 6.40326 4.66718 7.07677 4.66718H13.9998V2.84665C13.9998 2.56289 14.0956 2.32529 14.287 2.13385C14.4785 1.9424 14.7161 1.84668 14.9998 1.84668C15.2836 1.84668 15.5212 1.9424 15.7126 2.13385C15.9041 2.32529 15.9998 2.56289 15.9998 2.84665V29.1543C15.9998 29.4381 15.9041 29.6757 15.7126 29.8671C15.5212 30.0585 15.2836 30.1541 14.9998 30.1541ZM6.66647 24.0005H13.9998V15.2055L6.66647 24.0005ZM18.6665 27.3338V16.0005L25.3331 24.0005V7.07745C25.3331 6.97487 25.2904 6.88084 25.2049 6.79535C25.1194 6.70988 25.0254 6.66715 24.9228 6.66715H18.6665V4.66718H24.9228C25.5963 4.66718 26.1664 4.90051 26.6331 5.36718C27.0998 5.83385 27.3331 6.40393 27.3331 7.07745V24.9235C27.3331 25.597 27.0998 26.1671 26.6331 26.6338C26.1664 27.1004 25.5963 27.3338 24.9228 27.3338H18.6665Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly for units path 1`] = `
+<div>
+  <div
+    class="css-8y3igr"
+    id="headerReference"
+  >
+    <div
+      class="chakra-stack css-ryi8m5"
+    >
+      <nav
+        aria-label="breadcrumb"
+        class="chakra-breadcrumb css-ha5bzq"
+      >
+        <ol
+          class="chakra-breadcrumb__list css-70qvj9"
+        >
+          <li
+            class="chakra-breadcrumb__list-item css-13pussk"
+          >
+            <a
+              class="chakra-link css-g5hezf"
+              href="/"
+            >
+              Home
+            </a>
+            <span
+              class="css-t4q1nq"
+              role="presentation"
+            >
+              &gt;
+            </span>
+          </li>
+          <li
+            class="chakra-breadcrumb__list-item css-13pussk"
+            link="/search/units"
+            title="Units"
+          >
+            <a
+              class="chakra-link css-1mc518j"
+              href="/search/units"
+            >
+              Units
+            </a>
+          </li>
+        </ol>
+      </nav>
+      <div
+        class="chakra-stack css-1jjq5p5"
+      >
+        <div
+          class="css-0"
+        >
+          <h2
+            class="chakra-heading css-0"
+          >
+            Units
+          </h2>
+        </div>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-input__group css-bx0blc"
+            data-group="true"
+          >
+            <input
+              class="chakra-input css-1n0hj84"
+              data-testid="search-input-enter"
+              placeholder="Search"
+              type="text"
+              value=""
+            />
+            <div
+              class="chakra-input__right-element css-vcnsx7"
+            >
+              <button
+                class="chakra-button css-xsdlqf"
+                data-testid="search-header-button"
+                type="button"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="chakra-container css-0"
+      >
+        <div
+          class="chakra-stack css-b7btcn"
+        >
+          <div
+            class="chakra-stack css-17z0ye3"
+          >
+            <button
+              aria-controls="popover-content-:rl:"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              class="chakra-button css-4xx2wk"
+              id="popover-trigger-:rl:"
+              type="button"
+            >
+              <div
+                class="css-jmqhys"
+              >
+                Unit Status
+                <div
+                  class="css-1gq8co7"
+                />
+                <div
+                  class="css-17xejub"
+                />
+                <svg
+                  class="chakra-icon css-c0air1"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </button>
+            <div
+              class="chakra-popover__popper css-0"
+              style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+            >
+              <section
+                aria-describedby="popover-body-:rl:"
+                aria-labelledby="popover-header-:rl:"
+                class="chakra-popover__content css-gt8u74"
+                id="popover-content-:rl:"
+                role="dialog"
+                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                tabindex="-1"
+              >
+                <header
+                  class="chakra-popover__header css-1s89pvn"
+                  id="popover-header-:rl:"
+                >
+                  <div
+                    class="chakra-stack css-1vr2anf"
+                  >
+                    <div
+                      class="css-on1wo"
+                    >
+                      <svg
+                        class="chakra-icon css-18wx2tg"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <input
+                        class="chakra-input css-0"
+                        placeholder="Search"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-stack__divider css-lh8pr5"
+                    />
+                    <div
+                      class="css-dge4r2"
+                    >
+                      <label
+                        class="chakra-checkbox css-1elxtiq"
+                        data-testid="AutoCompleteCheckbox-top-checkbox"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                      </label>
+                      <div
+                        class="css-17xejub"
+                      />
+                      <button
+                        class="chakra-button css-4xx2wk"
+                        type="button"
+                      >
+                        Apply
+                      </button>
+                    </div>
+                  </div>
+                </header>
+                <div
+                  class="chakra-popover__body css-l6ye25"
+                  id="popover-body-:rl:"
+                >
+                  <div
+                    class="chakra-stack css-1gnc3qn"
+                  />
+                </div>
+              </section>
+            </div>
+            <div
+              class="chakra-stack__divider css-1psh3p6"
+            />
+            <button
+              aria-controls="popover-content-:rn:"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              class="chakra-button css-4xx2wk"
+              id="popover-trigger-:rn:"
+              type="button"
+            >
+              <div
+                class="css-jmqhys"
+              >
+                Standard
+                <div
+                  class="css-1gq8co7"
+                />
+                <div
+                  class="css-17xejub"
+                />
+                <svg
+                  class="chakra-icon css-c0air1"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </button>
+            <div
+              class="chakra-popover__popper css-0"
+              style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+            >
+              <section
+                aria-describedby="popover-body-:rn:"
+                aria-labelledby="popover-header-:rn:"
+                class="chakra-popover__content css-gt8u74"
+                id="popover-content-:rn:"
+                role="dialog"
+                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                tabindex="-1"
+              >
+                <header
+                  class="chakra-popover__header css-1s89pvn"
+                  id="popover-header-:rn:"
+                >
+                  <div
+                    class="chakra-stack css-1vr2anf"
+                  >
+                    <div
+                      class="css-on1wo"
+                    >
+                      <svg
+                        class="chakra-icon css-18wx2tg"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <input
+                        class="chakra-input css-0"
+                        placeholder="Search"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-stack__divider css-lh8pr5"
+                    />
+                    <div
+                      class="css-dge4r2"
+                    >
+                      <label
+                        class="chakra-checkbox css-1elxtiq"
+                        data-testid="AutoCompleteCheckbox-top-checkbox"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                      </label>
+                      <div
+                        class="css-17xejub"
+                      />
+                      <button
+                        class="chakra-button css-4xx2wk"
+                        type="button"
+                      >
+                        Apply
+                      </button>
+                    </div>
+                  </div>
+                </header>
+                <div
+                  class="chakra-popover__body css-l6ye25"
+                  id="popover-body-:rn:"
+                >
+                  <div
+                    class="chakra-stack css-1gnc3qn"
+                  />
+                </div>
+              </section>
+            </div>
+            <div
+              class="chakra-stack__divider css-1psh3p6"
+            />
+            <button
+              aria-controls="popover-content-:rp:"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              class="chakra-button css-4xx2wk"
+              id="popover-trigger-:rp:"
+              type="button"
+            >
+              <div
+                class="css-jmqhys"
+              >
+                Sector
+                <div
+                  class="css-1gq8co7"
+                />
+                <div
+                  class="css-17xejub"
+                />
+                <svg
+                  class="chakra-icon css-c0air1"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </button>
+            <div
+              class="chakra-popover__popper css-0"
+              style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+            >
+              <section
+                aria-describedby="popover-body-:rp:"
+                aria-labelledby="popover-header-:rp:"
+                class="chakra-popover__content css-gt8u74"
+                id="popover-content-:rp:"
+                role="dialog"
+                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                tabindex="-1"
+              >
+                <header
+                  class="chakra-popover__header css-1s89pvn"
+                  id="popover-header-:rp:"
+                >
+                  <div
+                    class="chakra-stack css-1vr2anf"
+                  >
+                    <div
+                      class="css-on1wo"
+                    >
+                      <svg
+                        class="chakra-icon css-18wx2tg"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <input
+                        class="chakra-input css-0"
+                        placeholder="Search"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-stack__divider css-lh8pr5"
+                    />
+                    <div
+                      class="css-dge4r2"
+                    >
+                      <label
+                        class="chakra-checkbox css-1elxtiq"
+                        data-testid="AutoCompleteCheckbox-top-checkbox"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                      </label>
+                      <div
+                        class="css-17xejub"
+                      />
+                      <button
+                        class="chakra-button css-4xx2wk"
+                        type="button"
+                      >
+                        Apply
+                      </button>
+                    </div>
+                  </div>
+                </header>
+                <div
+                  class="chakra-popover__body css-l6ye25"
+                  id="popover-body-:rp:"
+                >
+                  <div
+                    class="chakra-stack css-1gnc3qn"
+                  />
+                </div>
+              </section>
+            </div>
+            <div
+              class="chakra-stack__divider css-1psh3p6"
+            />
+            <button
+              aria-controls="popover-content-:rr:"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              class="chakra-button css-4xx2wk"
+              id="popover-trigger-:rr:"
+              type="button"
+            >
+              <div
+                class="css-jmqhys"
+              >
+                Country
+                <div
+                  class="css-1gq8co7"
+                />
+                <div
+                  class="css-17xejub"
+                />
+                <svg
+                  class="chakra-icon css-c0air1"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </button>
+            <div
+              class="chakra-popover__popper css-0"
+              style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+            >
+              <section
+                aria-describedby="popover-body-:rr:"
+                aria-labelledby="popover-header-:rr:"
+                class="chakra-popover__content css-gt8u74"
+                id="popover-content-:rr:"
+                role="dialog"
+                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                tabindex="-1"
+              >
+                <header
+                  class="chakra-popover__header css-1s89pvn"
+                  id="popover-header-:rr:"
+                >
+                  <div
+                    class="chakra-stack css-1vr2anf"
+                  >
+                    <div
+                      class="css-on1wo"
+                    >
+                      <svg
+                        class="chakra-icon css-18wx2tg"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <input
+                        class="chakra-input css-0"
+                        placeholder="Search"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      class="chakra-stack__divider css-lh8pr5"
+                    />
+                    <div
+                      class="css-dge4r2"
+                    >
+                      <label
+                        class="chakra-checkbox css-1elxtiq"
+                        data-testid="AutoCompleteCheckbox-top-checkbox"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                      </label>
+                      <div
+                        class="css-17xejub"
+                      />
+                      <button
+                        class="chakra-button css-4xx2wk"
+                        type="button"
+                      >
+                        Apply
+                      </button>
+                    </div>
+                  </div>
+                </header>
+                <div
+                  class="chakra-popover__body css-l6ye25"
+                  id="popover-body-:rr:"
+                >
+                  <div
+                    class="chakra-stack css-1gnc3qn"
+                  />
+                </div>
+              </section>
+            </div>
+            <div
+              class="chakra-stack__divider css-1psh3p6"
+            />
+            <button
+              aria-controls="popover-content-:rt:"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              class="chakra-button css-4xx2wk"
+              id="popover-trigger-:rt:"
+              type="button"
+            >
+              <div
+                class="css-jmqhys"
+              >
+                Vintage Year
+                <div
+                  class="css-17xejub"
+                />
+                <svg
+                  class="chakra-icon css-c0air1"
+                  focusable="false"
+                  viewBox="0 0 8 4"
+                >
+                  <path
+                    d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </button>
+            <div
+              class="chakra-popover__popper css-0"
+              style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+            >
+              <section
+                class="chakra-popover__content css-yntw6i"
+                data-testid="vintage-popover"
+                id="popover-content-:rt:"
+                role="dialog"
+                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                tabindex="-1"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with no params, add a search value and submits a search 1`] = `
+<div>
+  <div
+    class="css-8y3igr"
+    id="headerReference"
+  >
+    <div
+      class="chakra-stack css-ryi8m5"
+    >
+      <nav
+        aria-label="breadcrumb"
+        class="chakra-breadcrumb css-ha5bzq"
+      >
+        <ol
+          class="chakra-breadcrumb__list css-70qvj9"
+        >
+          <li
+            class="chakra-breadcrumb__list-item css-13pussk"
+          >
+            <a
+              class="chakra-link css-g5hezf"
+              href="/"
+            >
+              Home
+            </a>
+            <span
+              class="css-t4q1nq"
+              role="presentation"
+            >
+              &gt;
+            </span>
+          </li>
+          <li
+            class="chakra-breadcrumb__list-item css-13pussk"
+            link="/search/projects"
+            title="Projects"
+          >
+            <a
+              class="chakra-link css-1mc518j"
+              href="/search/projects"
+            >
+              Projects
+            </a>
+          </li>
+        </ol>
+      </nav>
+      <div
+        class="chakra-stack css-1jjq5p5"
+      >
+        <div
+          class="css-0"
+        >
+          <h2
+            class="chakra-heading css-0"
+          >
+            Projects
+          </h2>
+        </div>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-input__group css-bx0blc"
+            data-group="true"
+          >
+            <input
+              class="chakra-input css-1n0hj84"
+              data-testid="search-input-enter"
+              placeholder="Search"
+              type="text"
+              value="hello"
+            />
+            <div
+              class="chakra-input__right-element css-vcnsx7"
+            >
+              <button
+                class="chakra-button css-xsdlqf"
+                data-testid="search-header-button"
+                type="button"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="chakra-stack css-n3uhkm"
+      >
+        <div
+          class="chakra-container css-0"
+        >
+          <div
+            class="chakra-stack css-18mjik"
+          >
+            <div
+              class="chakra-stack css-17z0ye3"
+            >
+              <button
+                aria-controls="popover-content-:r1j:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="chakra-button css-4xx2wk"
+                id="popover-trigger-:r1j:"
+                type="button"
+              >
+                <div
+                  class="css-jmqhys"
+                >
+                  Standard
+                  <div
+                    class="css-1gq8co7"
+                  />
+                  <div
+                    class="css-17xejub"
+                  />
+                  <svg
+                    class="chakra-icon css-c0air1"
+                    focusable="false"
+                    viewBox="0 0 8 4"
+                  >
+                    <path
+                      d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="chakra-popover__popper css-0"
+                style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+              >
+                <section
+                  aria-describedby="popover-body-:r1j:"
+                  aria-labelledby="popover-header-:r1j:"
+                  class="chakra-popover__content css-gt8u74"
+                  id="popover-content-:r1j:"
+                  role="dialog"
+                  style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                  tabindex="-1"
+                >
+                  <header
+                    class="chakra-popover__header css-1s89pvn"
+                    id="popover-header-:r1j:"
+                  >
+                    <div
+                      class="chakra-stack css-1vr2anf"
+                    >
+                      <div
+                        class="css-on1wo"
+                      >
+                        <svg
+                          class="chakra-icon css-18wx2tg"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <input
+                          class="chakra-input css-0"
+                          placeholder="Search"
+                          value=""
+                        />
+                      </div>
+                      <div
+                        class="chakra-stack__divider css-lh8pr5"
+                      />
+                      <div
+                        class="css-dge4r2"
+                      >
+                        <label
+                          class="chakra-checkbox css-1elxtiq"
+                          data-testid="AutoCompleteCheckbox-top-checkbox"
+                        >
+                          <input
+                            class="chakra-checkbox__input"
+                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                            type="checkbox"
+                            value=""
+                          />
+                          <span
+                            aria-hidden="true"
+                            class="chakra-checkbox__control css-dnty2r"
+                          />
+                        </label>
+                        <div
+                          class="css-17xejub"
+                        />
+                        <button
+                          class="chakra-button css-4xx2wk"
+                          type="button"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </header>
+                  <div
+                    class="chakra-popover__body css-l6ye25"
+                    id="popover-body-:r1j:"
+                  >
+                    <div
+                      class="chakra-stack css-1gnc3qn"
+                    />
+                  </div>
+                </section>
+              </div>
+              <div
+                class="chakra-stack__divider css-1psh3p6"
+              />
+              <button
+                aria-controls="popover-content-:r1l:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="chakra-button css-4xx2wk"
+                id="popover-trigger-:r1l:"
+                type="button"
+              >
+                <div
+                  class="css-jmqhys"
+                >
+                  Methodology
+                  <div
+                    class="css-1gq8co7"
+                  />
+                  <div
+                    class="css-17xejub"
+                  />
+                  <svg
+                    class="chakra-icon css-c0air1"
+                    focusable="false"
+                    viewBox="0 0 8 4"
+                  >
+                    <path
+                      d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="chakra-popover__popper css-0"
+                style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+              >
+                <section
+                  aria-describedby="popover-body-:r1l:"
+                  aria-labelledby="popover-header-:r1l:"
+                  class="chakra-popover__content css-gt8u74"
+                  id="popover-content-:r1l:"
+                  role="dialog"
+                  style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                  tabindex="-1"
+                >
+                  <header
+                    class="chakra-popover__header css-1s89pvn"
+                    id="popover-header-:r1l:"
+                  >
+                    <div
+                      class="chakra-stack css-1vr2anf"
+                    >
+                      <div
+                        class="css-on1wo"
+                      >
+                        <svg
+                          class="chakra-icon css-18wx2tg"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <input
+                          class="chakra-input css-0"
+                          placeholder="Search"
+                          value=""
+                        />
+                      </div>
+                      <div
+                        class="chakra-stack__divider css-lh8pr5"
+                      />
+                      <div
+                        class="css-dge4r2"
+                      >
+                        <label
+                          class="chakra-checkbox css-1elxtiq"
+                          data-testid="AutoCompleteCheckbox-top-checkbox"
+                        >
+                          <input
+                            class="chakra-checkbox__input"
+                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                            type="checkbox"
+                            value=""
+                          />
+                          <span
+                            aria-hidden="true"
+                            class="chakra-checkbox__control css-dnty2r"
+                          />
+                        </label>
+                        <div
+                          class="css-17xejub"
+                        />
+                        <button
+                          class="chakra-button css-4xx2wk"
+                          type="button"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </header>
+                  <div
+                    class="chakra-popover__body css-l6ye25"
+                    id="popover-body-:r1l:"
+                  >
+                    <div
+                      class="chakra-stack css-1gnc3qn"
+                    />
+                  </div>
+                </section>
+              </div>
+              <div
+                class="chakra-stack__divider css-1psh3p6"
+              />
+              <button
+                aria-controls="popover-content-:r1n:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="chakra-button css-4xx2wk"
+                id="popover-trigger-:r1n:"
+                type="button"
+              >
+                <div
+                  class="css-jmqhys"
+                >
+                  Sector
+                  <div
+                    class="css-1gq8co7"
+                  />
+                  <div
+                    class="css-17xejub"
+                  />
+                  <svg
+                    class="chakra-icon css-c0air1"
+                    focusable="false"
+                    viewBox="0 0 8 4"
+                  >
+                    <path
+                      d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="chakra-popover__popper css-0"
+                style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+              >
+                <section
+                  aria-describedby="popover-body-:r1n:"
+                  aria-labelledby="popover-header-:r1n:"
+                  class="chakra-popover__content css-gt8u74"
+                  id="popover-content-:r1n:"
+                  role="dialog"
+                  style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                  tabindex="-1"
+                >
+                  <header
+                    class="chakra-popover__header css-1s89pvn"
+                    id="popover-header-:r1n:"
+                  >
+                    <div
+                      class="chakra-stack css-1vr2anf"
+                    >
+                      <div
+                        class="css-on1wo"
+                      >
+                        <svg
+                          class="chakra-icon css-18wx2tg"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <input
+                          class="chakra-input css-0"
+                          placeholder="Search"
+                          value=""
+                        />
+                      </div>
+                      <div
+                        class="chakra-stack__divider css-lh8pr5"
+                      />
+                      <div
+                        class="css-dge4r2"
+                      >
+                        <label
+                          class="chakra-checkbox css-1elxtiq"
+                          data-testid="AutoCompleteCheckbox-top-checkbox"
+                        >
+                          <input
+                            class="chakra-checkbox__input"
+                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                            type="checkbox"
+                            value=""
+                          />
+                          <span
+                            aria-hidden="true"
+                            class="chakra-checkbox__control css-dnty2r"
+                          />
+                        </label>
+                        <div
+                          class="css-17xejub"
+                        />
+                        <button
+                          class="chakra-button css-4xx2wk"
+                          type="button"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </header>
+                  <div
+                    class="chakra-popover__body css-l6ye25"
+                    id="popover-body-:r1n:"
+                  >
+                    <div
+                      class="chakra-stack css-1gnc3qn"
+                    />
+                  </div>
+                </section>
+              </div>
+              <div
+                class="chakra-stack__divider css-1psh3p6"
+              />
+              <button
+                aria-controls="popover-content-:r1p:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="chakra-button css-4xx2wk"
+                id="popover-trigger-:r1p:"
+                type="button"
+              >
+                <div
+                  class="css-jmqhys"
+                >
+                  Country
+                  <div
+                    class="css-1gq8co7"
+                  />
+                  <div
+                    class="css-17xejub"
+                  />
+                  <svg
+                    class="chakra-icon css-c0air1"
+                    focusable="false"
+                    viewBox="0 0 8 4"
+                  >
+                    <path
+                      d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="chakra-popover__popper css-0"
+                style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+              >
+                <section
+                  aria-describedby="popover-body-:r1p:"
+                  aria-labelledby="popover-header-:r1p:"
+                  class="chakra-popover__content css-gt8u74"
+                  id="popover-content-:r1p:"
+                  role="dialog"
+                  style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                  tabindex="-1"
+                >
+                  <header
+                    class="chakra-popover__header css-1s89pvn"
+                    id="popover-header-:r1p:"
+                  >
+                    <div
+                      class="chakra-stack css-1vr2anf"
+                    >
+                      <div
+                        class="css-on1wo"
+                      >
+                        <svg
+                          class="chakra-icon css-18wx2tg"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <input
+                          class="chakra-input css-0"
+                          placeholder="Search"
+                          value=""
+                        />
+                      </div>
+                      <div
+                        class="chakra-stack__divider css-lh8pr5"
+                      />
+                      <div
+                        class="css-dge4r2"
+                      >
+                        <label
+                          class="chakra-checkbox css-1elxtiq"
+                          data-testid="AutoCompleteCheckbox-top-checkbox"
+                        >
+                          <input
+                            class="chakra-checkbox__input"
+                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                            type="checkbox"
+                            value=""
+                          />
+                          <span
+                            aria-hidden="true"
+                            class="chakra-checkbox__control css-dnty2r"
+                          />
+                        </label>
+                        <div
+                          class="css-17xejub"
+                        />
+                        <button
+                          class="chakra-button css-4xx2wk"
+                          type="button"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </header>
+                  <div
+                    class="chakra-popover__body css-l6ye25"
+                    id="popover-body-:r1p:"
+                  >
+                    <div
+                      class="chakra-stack css-1gnc3qn"
+                    />
+                  </div>
+                </section>
+              </div>
+              <div
+                class="chakra-stack__divider css-1psh3p6"
+              />
+              <div
+                class="css-0"
+              >
+                <button
+                  aria-controls="popover-content-:r1r:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-button css-4xx2wk"
+                  id="popover-trigger-:r1r:"
+                  type="button"
+                >
+                  <div
+                    class="css-jmqhys"
+                  >
+                    <div
+                      class="css-k008qs"
+                    >
+                      Crediting Period
+                    </div>
+                    <div
+                      class="css-17xejub"
+                    />
+                    <svg
+                      class="chakra-icon css-c0air1"
+                      focusable="false"
+                      viewBox="0 0 8 4"
+                    >
+                      <path
+                        d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div
+                  class="chakra-popover__popper css-0"
+                  style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+                >
+                  <section
+                    class="chakra-popover__content css-1j9y0nx"
+                    id="popover-content-:r1r:"
+                    role="dialog"
+                    style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                    tabindex="-1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="chakra-button css-1h503in"
+          data-testid="compare-toggle-button"
+          type="button"
+        >
+          <div
+            class="css-1gpauhq"
+          >
+            Compare
+          </div>
+          <svg
+            class="chakra-icon css-1mxziaz"
+            focusable="false"
+            viewBox="0 0 32 32"
+          >
+            <path
+              d="M14.9998 30.1541C14.7161 30.1541 14.4785 30.0585 14.287 29.8671C14.0956 29.6757 13.9998 29.4381 13.9998 29.1543V27.3338H7.07677C6.40326 27.3338 5.83317 27.1004 5.3665 26.6338C4.89984 26.1671 4.6665 25.597 4.6665 24.9235V7.07745C4.6665 6.40393 4.89984 5.83385 5.3665 5.36718C5.83317 4.90051 6.40326 4.66718 7.07677 4.66718H13.9998V2.84665C13.9998 2.56289 14.0956 2.32529 14.287 2.13385C14.4785 1.9424 14.7161 1.84668 14.9998 1.84668C15.2836 1.84668 15.5212 1.9424 15.7126 2.13385C15.9041 2.32529 15.9998 2.56289 15.9998 2.84665V29.1543C15.9998 29.4381 15.9041 29.6757 15.7126 29.8671C15.5212 30.0585 15.2836 30.1541 14.9998 30.1541ZM6.66647 24.0005H13.9998V15.2055L6.66647 24.0005ZM18.6665 27.3338V16.0005L25.3331 24.0005V7.07745C25.3331 6.97487 25.2904 6.88084 25.2049 6.79535C25.1194 6.70988 25.0254 6.66715 24.9228 6.66715H18.6665V4.66718H24.9228C25.5963 4.66718 26.1664 4.90051 26.6331 5.36718C27.0998 5.83385 27.3331 6.40393 27.3331 7.07745V24.9235C27.3331 25.597 27.0998 26.1671 26.6331 26.6338C26.1664 27.1004 25.5963 27.3338 24.9228 27.3338H18.6665Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with search text 1`] = `
+<div>
+  <div
+    class="css-8y3igr"
+    id="headerReference"
+  >
+    <div
+      class="chakra-stack css-ryi8m5"
+    >
+      <nav
+        aria-label="breadcrumb"
+        class="chakra-breadcrumb css-ha5bzq"
+      >
+        <ol
+          class="chakra-breadcrumb__list css-70qvj9"
+        >
+          <li
+            class="chakra-breadcrumb__list-item css-13pussk"
+          >
+            <a
+              class="chakra-link css-g5hezf"
+              href="/"
+            >
+              Home
+            </a>
+            <span
+              class="css-t4q1nq"
+              role="presentation"
+            >
+              &gt;
+            </span>
+          </li>
+          <li
+            class="chakra-breadcrumb__list-item css-13pussk"
+            link="/search/projects"
+            title="Projects"
+          >
+            <a
+              class="chakra-link css-1mc518j"
+              href="/search/projects"
+            >
+              Projects
+            </a>
+          </li>
+        </ol>
+      </nav>
+      <div
+        class="chakra-stack css-1jjq5p5"
+      >
+        <div
+          class="css-0"
+        >
+          <h2
+            class="chakra-heading css-0"
+          >
+            Projects
+          </h2>
+        </div>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-input__group css-bx0blc"
+            data-group="true"
+          >
+            <input
+              class="chakra-input css-1n0hj84"
+              data-testid="search-input-enter"
+              placeholder="Search"
+              type="text"
+              value="test"
+            />
+            <div
+              class="chakra-input__right-element css-vcnsx7"
+            >
+              <button
+                class="chakra-button css-xsdlqf"
+                data-testid="search-header-button"
+                type="button"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="chakra-stack css-n3uhkm"
+      >
+        <div
+          class="chakra-container css-0"
+        >
+          <div
+            class="chakra-stack css-18mjik"
+          >
+            <div
+              class="chakra-stack css-17z0ye3"
+            >
+              <button
+                aria-controls="popover-content-:rb:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="chakra-button css-4xx2wk"
+                id="popover-trigger-:rb:"
+                type="button"
+              >
+                <div
+                  class="css-jmqhys"
+                >
+                  Standard
+                  <div
+                    class="css-1gq8co7"
+                  />
+                  <div
+                    class="css-1f801e0"
+                  >
+                    <p
+                      class="chakra-text css-11iqvn7"
+                    >
+                      3
+                    </p>
+                  </div>
+                  <div
+                    class="css-17xejub"
+                  />
+                  <svg
+                    class="chakra-icon css-c0air1"
+                    focusable="false"
+                    viewBox="0 0 8 4"
+                  >
+                    <path
+                      d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="chakra-popover__popper css-0"
+                style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+              >
+                <section
+                  aria-describedby="popover-body-:rb:"
+                  aria-labelledby="popover-header-:rb:"
+                  class="chakra-popover__content css-gt8u74"
+                  id="popover-content-:rb:"
+                  role="dialog"
+                  style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                  tabindex="-1"
+                >
+                  <header
+                    class="chakra-popover__header css-1s89pvn"
+                    id="popover-header-:rb:"
+                  >
+                    <div
+                      class="chakra-stack css-1vr2anf"
+                    >
+                      <div
+                        class="css-on1wo"
+                      >
+                        <svg
+                          class="chakra-icon css-18wx2tg"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <input
+                          class="chakra-input css-0"
+                          placeholder="Search"
+                          value=""
+                        />
+                      </div>
+                      <div
+                        class="chakra-stack__divider css-lh8pr5"
+                      />
+                      <div
+                        class="css-dge4r2"
+                      >
+                        <label
+                          class="chakra-checkbox css-1elxtiq"
+                          data-testid="AutoCompleteCheckbox-top-checkbox"
+                        >
+                          <input
+                            class="chakra-checkbox__input"
+                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                            type="checkbox"
+                            value=""
+                          />
+                          <span
+                            aria-hidden="true"
+                            class="chakra-checkbox__control css-dnty2r"
+                          />
+                        </label>
+                        <div
+                          class="css-17xejub"
+                        />
+                        <button
+                          class="chakra-button css-4xx2wk"
+                          type="button"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </header>
+                  <div
+                    class="chakra-popover__body css-l6ye25"
+                    id="popover-body-:rb:"
+                  >
+                    <div
+                      class="chakra-stack css-1gnc3qn"
+                    >
+                      <label
+                        class="chakra-checkbox css-n5705u"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          name="option 1"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                        <span
+                          class="chakra-checkbox__label css-1oeb2oe"
+                        >
+                          option 1
+                        </span>
+                      </label>
+                      <label
+                        class="chakra-checkbox css-n5705u"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          name="option 2"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                        <span
+                          class="chakra-checkbox__label css-1oeb2oe"
+                        >
+                          option 2
+                        </span>
+                      </label>
+                      <label
+                        class="chakra-checkbox css-n5705u"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          name="option 2"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                        <span
+                          class="chakra-checkbox__label css-1oeb2oe"
+                        >
+                          option 2
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div
+                class="chakra-stack__divider css-1psh3p6"
+              />
+              <button
+                aria-controls="popover-content-:rd:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="chakra-button css-4xx2wk"
+                id="popover-trigger-:rd:"
+                type="button"
+              >
+                <div
+                  class="css-jmqhys"
+                >
+                  Methodology
+                  <div
+                    class="css-1gq8co7"
+                  />
+                  <div
+                    class="css-1f801e0"
+                  >
+                    <p
+                      class="chakra-text css-11iqvn7"
+                    >
+                      3
+                    </p>
+                  </div>
+                  <div
+                    class="css-17xejub"
+                  />
+                  <svg
+                    class="chakra-icon css-c0air1"
+                    focusable="false"
+                    viewBox="0 0 8 4"
+                  >
+                    <path
+                      d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="chakra-popover__popper css-0"
+                style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+              >
+                <section
+                  aria-describedby="popover-body-:rd:"
+                  aria-labelledby="popover-header-:rd:"
+                  class="chakra-popover__content css-gt8u74"
+                  id="popover-content-:rd:"
+                  role="dialog"
+                  style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                  tabindex="-1"
+                >
+                  <header
+                    class="chakra-popover__header css-1s89pvn"
+                    id="popover-header-:rd:"
+                  >
+                    <div
+                      class="chakra-stack css-1vr2anf"
+                    >
+                      <div
+                        class="css-on1wo"
+                      >
+                        <svg
+                          class="chakra-icon css-18wx2tg"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <input
+                          class="chakra-input css-0"
+                          placeholder="Search"
+                          value=""
+                        />
+                      </div>
+                      <div
+                        class="chakra-stack__divider css-lh8pr5"
+                      />
+                      <div
+                        class="css-dge4r2"
+                      >
+                        <label
+                          class="chakra-checkbox css-1elxtiq"
+                          data-testid="AutoCompleteCheckbox-top-checkbox"
+                        >
+                          <input
+                            class="chakra-checkbox__input"
+                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                            type="checkbox"
+                            value=""
+                          />
+                          <span
+                            aria-hidden="true"
+                            class="chakra-checkbox__control css-dnty2r"
+                          />
+                        </label>
+                        <div
+                          class="css-17xejub"
+                        />
+                        <button
+                          class="chakra-button css-4xx2wk"
+                          type="button"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </header>
+                  <div
+                    class="chakra-popover__body css-l6ye25"
+                    id="popover-body-:rd:"
+                  >
+                    <div
+                      class="chakra-stack css-1gnc3qn"
+                    >
+                      <label
+                        class="chakra-checkbox css-n5705u"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          name="option 1"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                        <span
+                          class="chakra-checkbox__label css-1oeb2oe"
+                        >
+                          option 1
+                        </span>
+                      </label>
+                      <label
+                        class="chakra-checkbox css-n5705u"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          name="option 2"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                        <span
+                          class="chakra-checkbox__label css-1oeb2oe"
+                        >
+                          option 2
+                        </span>
+                      </label>
+                      <label
+                        class="chakra-checkbox css-n5705u"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          name="option 2"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                        <span
+                          class="chakra-checkbox__label css-1oeb2oe"
+                        >
+                          option 2
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div
+                class="chakra-stack__divider css-1psh3p6"
+              />
+              <button
+                aria-controls="popover-content-:rf:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="chakra-button css-4xx2wk"
+                id="popover-trigger-:rf:"
+                type="button"
+              >
+                <div
+                  class="css-jmqhys"
+                >
+                  Sector
+                  <div
+                    class="css-1gq8co7"
+                  />
+                  <div
+                    class="css-1f801e0"
+                  >
+                    <p
+                      class="chakra-text css-11iqvn7"
+                    >
+                      3
+                    </p>
+                  </div>
+                  <div
+                    class="css-17xejub"
+                  />
+                  <svg
+                    class="chakra-icon css-c0air1"
+                    focusable="false"
+                    viewBox="0 0 8 4"
+                  >
+                    <path
+                      d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="chakra-popover__popper css-0"
+                style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+              >
+                <section
+                  aria-describedby="popover-body-:rf:"
+                  aria-labelledby="popover-header-:rf:"
+                  class="chakra-popover__content css-gt8u74"
+                  id="popover-content-:rf:"
+                  role="dialog"
+                  style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                  tabindex="-1"
+                >
+                  <header
+                    class="chakra-popover__header css-1s89pvn"
+                    id="popover-header-:rf:"
+                  >
+                    <div
+                      class="chakra-stack css-1vr2anf"
+                    >
+                      <div
+                        class="css-on1wo"
+                      >
+                        <svg
+                          class="chakra-icon css-18wx2tg"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <input
+                          class="chakra-input css-0"
+                          placeholder="Search"
+                          value=""
+                        />
+                      </div>
+                      <div
+                        class="chakra-stack__divider css-lh8pr5"
+                      />
+                      <div
+                        class="css-dge4r2"
+                      >
+                        <label
+                          class="chakra-checkbox css-1elxtiq"
+                          data-testid="AutoCompleteCheckbox-top-checkbox"
+                        >
+                          <input
+                            class="chakra-checkbox__input"
+                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                            type="checkbox"
+                            value=""
+                          />
+                          <span
+                            aria-hidden="true"
+                            class="chakra-checkbox__control css-dnty2r"
+                          />
+                        </label>
+                        <div
+                          class="css-17xejub"
+                        />
+                        <button
+                          class="chakra-button css-4xx2wk"
+                          type="button"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </header>
+                  <div
+                    class="chakra-popover__body css-l6ye25"
+                    id="popover-body-:rf:"
+                  >
+                    <div
+                      class="chakra-stack css-1gnc3qn"
+                    >
+                      <label
+                        class="chakra-checkbox css-n5705u"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          name="option 1"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                        <span
+                          class="chakra-checkbox__label css-1oeb2oe"
+                        >
+                          option 1
+                        </span>
+                      </label>
+                      <label
+                        class="chakra-checkbox css-n5705u"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          name="option 2"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                        <span
+                          class="chakra-checkbox__label css-1oeb2oe"
+                        >
+                          option 2
+                        </span>
+                      </label>
+                      <label
+                        class="chakra-checkbox css-n5705u"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          name="option 2"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                        <span
+                          class="chakra-checkbox__label css-1oeb2oe"
+                        >
+                          option 2
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div
+                class="chakra-stack__divider css-1psh3p6"
+              />
+              <button
+                aria-controls="popover-content-:rh:"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                class="chakra-button css-4xx2wk"
+                id="popover-trigger-:rh:"
+                type="button"
+              >
+                <div
+                  class="css-jmqhys"
+                >
+                  Country
+                  <div
+                    class="css-1gq8co7"
+                  />
+                  <div
+                    class="css-1f801e0"
+                  >
+                    <p
+                      class="chakra-text css-11iqvn7"
+                    >
+                      3
+                    </p>
+                  </div>
+                  <div
+                    class="css-17xejub"
+                  />
+                  <svg
+                    class="chakra-icon css-c0air1"
+                    focusable="false"
+                    viewBox="0 0 8 4"
+                  >
+                    <path
+                      d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="chakra-popover__popper css-0"
+                style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+              >
+                <section
+                  aria-describedby="popover-body-:rh:"
+                  aria-labelledby="popover-header-:rh:"
+                  class="chakra-popover__content css-gt8u74"
+                  id="popover-content-:rh:"
+                  role="dialog"
+                  style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+                  tabindex="-1"
+                >
+                  <header
+                    class="chakra-popover__header css-1s89pvn"
+                    id="popover-header-:rh:"
+                  >
+                    <div
+                      class="chakra-stack css-1vr2anf"
+                    >
+                      <div
+                        class="css-on1wo"
+                      >
+                        <svg
+                          class="chakra-icon css-18wx2tg"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19.1623 20.2239L13.4084 14.4701C12.9084 14.8829 12.3334 15.206 11.6834 15.4393C11.0334 15.6726 10.361 15.7893 9.66613 15.7893C7.95696 15.7893 6.51045 15.1975 5.32658 14.0139C4.14271 12.8304 3.55078 11.3842 3.55078 9.67552C3.55078 7.96678 4.14256 6.52011 5.32613 5.33549C6.5097 4.15089 7.95585 3.55859 9.66458 3.55859C11.3733 3.55859 12.82 4.15053 14.0046 5.33439C15.1892 6.51826 15.7815 7.96478 15.7815 9.67394C15.7815 10.388 15.6616 11.0701 15.4219 11.7201C15.1821 12.3701 14.8623 12.9355 14.4623 13.4162L20.2411 19.1951C20.3796 19.3309 20.4488 19.4975 20.4488 19.695C20.4488 19.8925 20.3706 20.0695 20.214 20.226C20.0705 20.3695 19.8956 20.4412 19.6892 20.4412C19.4828 20.4412 19.3072 20.3688 19.1623 20.2239ZM9.66613 14.2893C10.9546 14.2893 12.0459 13.8422 12.9402 12.948C13.8344 12.0538 14.2815 10.9624 14.2815 9.67394C14.2815 8.38548 13.8344 7.29413 12.9402 6.39989C12.0459 5.50566 10.9546 5.05854 9.66613 5.05854C8.37766 5.05854 7.28631 5.50566 6.39208 6.39989C5.49786 7.29413 5.05076 8.38548 5.05076 9.67394C5.05076 10.9624 5.49786 12.0538 6.39208 12.948C7.28631 13.8422 8.37766 14.2893 9.66613 14.2893Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <input
+                          class="chakra-input css-0"
+                          placeholder="Search"
+                          value=""
+                        />
+                      </div>
+                      <div
+                        class="chakra-stack__divider css-lh8pr5"
+                      />
+                      <div
+                        class="css-dge4r2"
+                      >
+                        <label
+                          class="chakra-checkbox css-1elxtiq"
+                          data-testid="AutoCompleteCheckbox-top-checkbox"
+                        >
+                          <input
+                            class="chakra-checkbox__input"
+                            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                            type="checkbox"
+                            value=""
+                          />
+                          <span
+                            aria-hidden="true"
+                            class="chakra-checkbox__control css-dnty2r"
+                          />
+                        </label>
+                        <div
+                          class="css-17xejub"
+                        />
+                        <button
+                          class="chakra-button css-4xx2wk"
+                          type="button"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </header>
+                  <div
+                    class="chakra-popover__body css-l6ye25"
+                    id="popover-body-:rh:"
+                  >
+                    <div
+                      class="chakra-stack css-1gnc3qn"
+                    >
+                      <label
+                        class="chakra-checkbox css-n5705u"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          name="option 1"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                        <span
+                          class="chakra-checkbox__label css-1oeb2oe"
+                        >
+                          option 1
+                        </span>
+                      </label>
+                      <label
+                        class="chakra-checkbox css-n5705u"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          name="option 2"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                        <span
+                          class="chakra-checkbox__label css-1oeb2oe"
+                        >
+                          option 2
+                        </span>
+                      </label>
+                      <label
+                        class="chakra-checkbox css-n5705u"
+                      >
+                        <input
+                          class="chakra-checkbox__input"
+                          name="option 2"
+                          style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; white-space: nowrap; position: absolute;"
+                          type="checkbox"
+                          value=""
+                        />
+                        <span
+                          aria-hidden="true"
+                          class="chakra-checkbox__control css-dnty2r"
+                        />
+                        <span
+                          class="chakra-checkbox__label css-1oeb2oe"
+                        >
+                          option 2
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div
+                class="chakra-stack__divider css-1psh3p6"
+              />
+              <div
+                class="css-0"
+              >
+                <button
+                  aria-controls="popover-content-:rj:"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                  class="chakra-button css-4xx2wk"
+                  id="popover-trigger-:rj:"
+                  type="button"
+                >
+                  <div
+                    class="css-jmqhys"
+                  >
+                    <div
+                      class="css-k008qs"
+                    >
+                      Crediting Period
+                    </div>
+                    <div
+                      class="css-17xejub"
+                    />
+                    <svg
+                      class="chakra-icon css-c0air1"
+                      focusable="false"
+                      viewBox="0 0 8 4"
+                    >
+                      <path
+                        d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div
+                  class="chakra-popover__popper css-0"
+                  style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+                >
+                  <section
+                    class="chakra-popover__content css-1j9y0nx"
+                    id="popover-content-:rj:"
                     role="dialog"
                     style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
                     tabindex="-1"

@@ -3,6 +3,7 @@ import { SearchHeader } from '@/components/molecules/SearchHeader/SearchHeader'
 import userEvent from '@testing-library/user-event'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 import { usePathname } from 'next/navigation'
+import { MockData } from '@/test/TestOvermindMockData'
 
 const mockPush = jest.fn()
 jest.mock(`next/navigation`, () => ({
@@ -18,6 +19,19 @@ beforeEach(() => {
 it(`renders correctly`, () => {
   const { container } = render(
     <TestOvermindWrapper>
+      <SearchHeader />
+    </TestOvermindWrapper>,
+  )
+  expect(container).toMatchSnapshot()
+})
+
+it(`renders correctly with search text`, () => {
+  const mockData = {
+    ...MockData.SEARCH_FILTER_VALUES,
+    keywordSearch: `test`,
+  }
+  const { container } = render(
+    <TestOvermindWrapper searchFilters={mockData}>
       <SearchHeader />
     </TestOvermindWrapper>,
   )
