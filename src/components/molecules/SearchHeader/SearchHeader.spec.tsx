@@ -2,15 +2,31 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import { SearchHeader } from '@/components/molecules/SearchHeader/SearchHeader'
 import userEvent from '@testing-library/user-event'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
+import { usePathname } from 'next/navigation'
 
 const mockPush = jest.fn()
 jest.mock(`next/navigation`, () => ({
   ...jest.requireActual(`next/navigation`),
   useRouter: () => ({ push: mockPush }),
-  useSearchParams: () => ({ get: () => `testParams` }),
+  usePathname: jest.fn(),
 }))
 
+beforeEach(() => {
+  ;(usePathname as jest.Mock).mockReturnValue(`/search/projects`)
+})
+
 it(`renders correctly`, () => {
+  const { container } = render(
+    <TestOvermindWrapper>
+      <SearchHeader />
+    </TestOvermindWrapper>,
+  )
+  expect(container).toMatchSnapshot()
+})
+
+it(`renders correctly for units path`, () => {
+  ;(usePathname as jest.Mock).mockReturnValue(`/search/units`)
+
   const { container } = render(
     <TestOvermindWrapper>
       <SearchHeader />
@@ -45,13 +61,6 @@ it(`renders correctly and clear the search values`, async () => {
   await userEvent.clear(screen.getByRole(`textbox`))
   expect(container).toMatchSnapshot()
 })
-
-jest.mock(`next/navigation`, () => ({
-  ...jest.requireActual(`next/navigation`),
-  useRouter: () => ({ push: mockPush }),
-  useSearchParams: () => ({ get: () => undefined }),
-}))
-
 const NUMBER_TIMES_ROUTE_CALLED = 2
 
 it(`renders correctly with no params, add a search value and submits a search`, async () => {
