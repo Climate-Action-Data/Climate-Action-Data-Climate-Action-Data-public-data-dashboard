@@ -23,7 +23,7 @@ export const OriginalIssuanceDetails = (props: OriginalIssuanceDetailsProps) => 
     <SimpleGrid columns={[DEFAULT_COLUMN_MOBILE, DEFAULT_COLUMN_WEB]} gap="24px">
       <DetailWidget title={t(`originalIssuance.projectIssuedTo`)}>
         <Link href={`/project?id=${unit.project.warehouseProjectId}`} textDecoration="underline">
-          {unit?.project?.developer ?? tHome(`noData`)}
+          {unit?.project?.name ?? tHome(`noData`)}
         </Link>
       </DetailWidget>
       <DetailWidget title={t(`originalIssuance.issuanceBatchSerialNumber`)}>{unit?.issuance?.issuanceBatchSerial ?? tHome(`noData`)}</DetailWidget>

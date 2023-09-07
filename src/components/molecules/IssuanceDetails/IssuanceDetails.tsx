@@ -35,7 +35,7 @@ export const IssuanceDetails = (props: IssuanceDetailsProps) => {
     <SimpleGrid columns={[DEFAULT_COLUMN_MOBILE, DEFAULT_COLUMN_WEB]} gap="24px">
       <DetailWidget title={t(`issuanceDetails.issuedTo`)}>
         <Link href={`/project?id=${issuance.project.warehouseProjectId}`} textDecoration="underline">
-          {issuance.issuedTo}
+          {issuance.project.name}
         </Link>
       </DetailWidget>
       <DetailWidget title={t(`issuanceDetails.vintage`)}>{issuance.vintage}</DetailWidget>
