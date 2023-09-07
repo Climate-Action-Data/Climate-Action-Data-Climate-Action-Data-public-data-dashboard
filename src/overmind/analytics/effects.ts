@@ -75,7 +75,7 @@ export const combineCountryData = (countryData: CountryData[], timeframe: Timefr
     }
   })
   combinedData.sectors = combinePercentages(sectorsToCombine)
-  combinedData.standards = combinePercentages(standardsToCombine).splice(TOP_THREE_STANDARDS)
+  combinedData.standards = combinePercentages(standardsToCombine).splice(0, TOP_THREE_STANDARDS)
   return combinedData
 }
 
