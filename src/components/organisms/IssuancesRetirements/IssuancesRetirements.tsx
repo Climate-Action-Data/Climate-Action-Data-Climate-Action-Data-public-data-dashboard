@@ -45,7 +45,7 @@ export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
     } else if (vintages.length === 1) {
       return vintages[0]
     } else {
-      return `${vintages[vintages.length - 1]} - ${vintages[0]} `
+      return `${vintages[vintages.length - 1]} - ${vintages[0]}`
     }
   }
 
