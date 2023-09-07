@@ -62,6 +62,14 @@ export const SearchHeader = (props: SearchHeaderProps) => {
     }
   }
 
+  const getSearchPlaceholder = () => {
+    if (currentPath === `/search/projects`) {
+      return t(`searchProjectsByKeywordsPlaceholder`)
+    } else if (currentPath === `/search/units`) {
+      return t(`searchUnitsByKeywordsPlaceholder`)
+    }
+  }
+
   return (
     <Flex id="headerReference" position="sticky" top={`56px`} zIndex="docked" padding="16px 24px" minH={[`430px`, `184px`]} color="white" backgroundColor="gray.900" width="100%">
       <VStack alignItems="start" flex={1}>
@@ -72,12 +80,13 @@ export const SearchHeader = (props: SearchHeaderProps) => {
           </Box>
           {!hideSearch && (
             <Box>
-              <InputGroup size="md">
+              <InputGroup size="md" w={[`100%`, `446px`]}>
                 <Input
                   pr="4.5rem"
                   data-testid="search-input-enter"
                   type={`text`}
-                  placeholder="Search"
+                  placeholder={getSearchPlaceholder()}
+                  _placeholder={{ color: `lightGray.600` }}
                   value={searchPattern}
                   onChange={handleOnChange}
                   onKeyDown={handleOnKeyDown}
