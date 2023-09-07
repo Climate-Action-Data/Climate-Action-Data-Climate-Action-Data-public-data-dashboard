@@ -23,7 +23,7 @@ const getRetiredUnits = (issuances: Issuance[], issuanceId: string) => {
 }
 
 const sortIssuancesByVintage = (issuances: Issuance[]) => {
-  return issuances.sort((a, b) => Number(a.vintage) - Number(b.vintage))
+  return issuances.sort((a, b) => Number(b.vintage) - Number(a.vintage))
 }
 
 export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
@@ -45,7 +45,7 @@ export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
     } else if (vintages.length === 1) {
       return vintages[0]
     } else {
-      return `${vintages[0]} - ${vintages[vintages.length - 1]}`
+      return `${vintages[vintages.length - 1]} - ${vintages[0]} `
     }
   }
 
