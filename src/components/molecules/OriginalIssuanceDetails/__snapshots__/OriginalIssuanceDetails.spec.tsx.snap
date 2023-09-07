@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RetirementDetails renders correctly with missing unit details 1`] = `
+exports[`RetirementDetails renders correctly with missing details 1`] = `
 <div>
   <div
     class="css-1h55qqd"
