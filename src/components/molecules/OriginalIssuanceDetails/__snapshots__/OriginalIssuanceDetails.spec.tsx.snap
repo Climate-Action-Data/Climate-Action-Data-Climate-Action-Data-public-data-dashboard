@@ -1,5 +1,103 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`RetirementDetails renders correctly with missing unit details 1`] = `
+<div>
+  <div
+    class="css-1h55qqd"
+  >
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Project Issued To
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        <a
+          class="chakra-link css-1081t4c"
+          href="/project?id=a442a765-50f4-43dc-aa38-24e08d88c821"
+        >
+          --
+        </a>
+      </p>
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Issuance Batch Serial N0.
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        --
+      </p>
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Vintage
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        --
+      </p>
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Quantity Issued
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        --
+      </p>
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Unit Type
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        --
+      </p>
+    </div>
+    <div
+      class="css-0"
+    >
+      <p
+        class="chakra-text css-1xi4xed"
+      >
+        Monitoring Period
+      </p>
+      <p
+        class="chakra-text css-0"
+      >
+        --
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`RetirementDetails renders correctly with no project 1`] = `
 <div>
   <div

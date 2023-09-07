@@ -22,7 +22,7 @@ export const OriginalIssuanceDetails = (props: OriginalIssuanceDetailsProps) => 
   return (
     <SimpleGrid columns={[DEFAULT_COLUMN_MOBILE, DEFAULT_COLUMN_WEB]} gap="24px">
       <DetailWidget title={t(`originalIssuance.projectIssuedTo`)}>
-        <Link href={`/project?id=${unit.project.warehouseProjectId}`} textDecoration="underline">
+        <Link href={`/project?id=${unit.project?.warehouseProjectId}`} textDecoration="underline">
           {unit?.project?.name ?? tHome(`noData`)}
         </Link>
       </DetailWidget>

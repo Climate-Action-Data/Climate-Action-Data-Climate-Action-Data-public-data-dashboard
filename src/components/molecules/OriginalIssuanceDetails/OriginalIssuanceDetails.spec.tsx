@@ -12,4 +12,16 @@ describe(`RetirementDetails`, () => {
     const { container } = render(<OriginalIssuanceDetails unit={UNIT_DETAIL} />)
     expect(container).toMatchSnapshot()
   })
+
+  it(`renders correctly with missing details`, () => {
+    const mockDate: any = UNIT_DETAIL
+    mockDate.project.name = undefined
+    mockDate.issuance = undefined
+    mockDate.vintage = undefined
+    mockDate.type = undefined
+    mockDate.monitoringPeriod = undefined
+
+    const { container } = render(<OriginalIssuanceDetails unit={mockDate} />)
+    expect(container).toMatchSnapshot()
+  })
 })
