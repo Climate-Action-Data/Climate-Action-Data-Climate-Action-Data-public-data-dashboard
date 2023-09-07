@@ -22,13 +22,18 @@ const getRetiredUnits = (issuances: Issuance[], issuanceId: string) => {
   }
 }
 
+const sortIssuancesByVintage = (issuances: Issuance[]) => {
+  return issuances.sort((a, b) => Number(a.vintage) - Number(b.vintage))
+}
+
 export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
   const { project } = props
   const [selectedRetirements, setSelectedRetirements] = useState<IssuanceUnit[] | undefined>(undefined)
   const { t } = useTranslation(`projectDetails`)
   const { t: tHome } = useTranslation(`home`)
 
-  const vintages = project.issuances.map((issuance) => issuance.vintage).sort((a, b) => Number(a) - Number(b))
+  const issuances = sortIssuancesByVintage(project.issuances)
+  const vintages = issuances.map((issuance) => issuance.vintage)
 
   const handleClick = (issuanceId: string) => {
     setSelectedRetirements(getRetiredUnits(project.issuances, issuanceId))
@@ -54,10 +59,10 @@ export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
       </Container>
       <Container padding={0} display="flex" variant="cardSectionNoMargin">
         <Hide above="sm">
-          <IssuanceTableMobile issuances={project.issuances} />
+          <IssuanceTableMobile issuances={issuances} />
         </Hide>
         <Hide below="sm">
-          <IssuanceTable onClick={handleClick} issuances={project.issuances} />
+          <IssuanceTable onClick={handleClick} issuances={issuances} />
           <RetirementTable retirements={selectedRetirements} />
         </Hide>
       </Container>
