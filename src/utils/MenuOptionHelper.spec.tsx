@@ -61,7 +61,7 @@ describe(`generateMenuList`, () => {
     viewUnitDetailsMenuItem?.onClick?.()
 
     if (router.push) {
-      expect(router.push).toHaveBeenCalledWith(`/issuance?id=${unitWarehouseId}`)
+      expect(router.push).toHaveBeenCalledWith(`/issuance?id=${unitWarehouseId}&searchFlow=unit`)
     }
   })
 
@@ -73,7 +73,7 @@ describe(`generateMenuList`, () => {
     viewProjectDetailsMenuItem?.onClick?.()
 
     if (router.push) {
-      expect(router.push).toHaveBeenCalledWith(`/project?id=${projectWarehouseId}`)
+      expect(router.push).toHaveBeenCalledWith(`/project?id=${projectWarehouseId}&searchFlow=unit`)
     }
   })
 })

@@ -13,7 +13,7 @@ export const generateMenuList = (unitWarehouseId: string, projectWarehouseId: st
   const menuList: MenuItemProps[] = [
     {
       dataTestId: `view-unit-details`,
-      onClick: () => router.push(`${generatedUrl}${unitWarehouseId}`),
+      onClick: () => router.push(`${generatedUrl}`),
       text: t(`projectMenu.viewUnit`),
     },
     {
