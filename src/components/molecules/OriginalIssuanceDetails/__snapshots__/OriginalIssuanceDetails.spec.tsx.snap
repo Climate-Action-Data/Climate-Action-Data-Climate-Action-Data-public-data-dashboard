@@ -18,7 +18,7 @@ exports[`RetirementDetails renders correctly with missing details 1`] = `
       >
         <a
           class="chakra-link css-1081t4c"
-          href="/project?id=a442a765-50f4-43dc-aa38-24e08d88c821"
+          href="/project?id=a442a765-50f4-43dc-aa38-24e08d88c821&searchFlow=unit"
         >
           --
         </a>
@@ -124,7 +124,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       >
         <a
           class="chakra-link css-1081t4c"
-          href="/project?id=a442a765-50f4-43dc-aa38-24e08d88c821"
+          href="/project?id=a442a765-50f4-43dc-aa38-24e08d88c821&searchFlow=unit"
         >
           Proyecto de Mitigación Forestal Bonanza Verde
         </a>
