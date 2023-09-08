@@ -23,13 +23,12 @@ exports[`renders correctly 1`] = `
           class="css-0"
         >
           <div
-            class="chakra-input__group css-bx0blc"
+            class="chakra-input__group css-10m3jga"
             data-group="true"
           >
             <input
-              class="chakra-input css-1n0hj84"
+              class="chakra-input css-1qyom5j"
               data-testid="search-input-enter"
-              placeholder="Search"
               type="text"
               value=""
             />
