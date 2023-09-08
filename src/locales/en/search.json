@@ -5,7 +5,7 @@
   "searchProjectsByKeywordsPlaceholder": "Search for projects by project name/methodology/country",
   "searchProjectsByFilters": "Search projects by filters",
   "searchUnitsByKeywords": "Search units by keywords",
-  "searchUnitsByKeywordsPlaceholder": "Search for units by project name/country/unit status",
+  "searchUnitsByKeywordsPlaceholder": "Search for units by project name/country/standard/unit status",
   "searchUnitsByFilters": "Search units by filters",
   "apply": "Apply",
   "clear": "Clear",
