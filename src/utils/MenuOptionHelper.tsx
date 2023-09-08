@@ -8,7 +8,7 @@ import { BookmarkPlusIcon } from '../components/atoms/BookmarkPlusIcon/BookmarkP
 import { SearchFlow } from '@/@types/Search'
 
 export const generateMenuList = (unitWarehouseId: string, projectWarehouseId: string, unitStatus: string, router: AppRouterInstance, t: TFunction) => {
-  const generatedUrl = generateUnitUrl(`${unitStatus}`)
+  const generatedUrl = generateUnitUrl(`${unitStatus}`, unitWarehouseId, SearchFlow.UNIT)
 
   const menuList: MenuItemProps[] = [
     {

@@ -20,11 +20,11 @@ export const authedHeaders = (token: string) => {
 
 export const defaultDomain = process.env.NEXT_PUBLIC_API_HOST ?? `http://localhost:3001`
 
-export const generateUnitUrl = (status: string) => {
+export const generateUnitUrl = (status: string, id: string, searchFlow: SearchFlow) => {
   if (status === UnitStatus.RETIRED) {
-    return `/unit/retirement?id=`
+    return `/unit/retirement?id=${id}&searchFlow=${searchFlow}`
   } else {
-    return `/issuance?id=`
+    return `/issuance?id=${id}&searchFlow=${searchFlow}`
   }
 }
 
