@@ -1,21 +1,23 @@
 import { UnitStatus } from '@/@types/Unit'
 import { defaultDomain, generateExportUrl, generateUnitUrl, authedHeaders } from './RequestHelpers'
 import { CSVExportTypes } from '@/@types/CSV'
+import { SearchFlow } from '../@types/Search'
 
-const DEFAULT_RETIRED_URL = `/unit/retirement?id=`
-const DEFAULT_ISSUANCE_URL = `/issuance?id=`
+const MOCK_UNIT_ID = `unit123`
+const DEFAULT_RETIRED_URL = `/unit/retirement?id=${MOCK_UNIT_ID}&searchFlow=unit`
+const DEFAULT_ISSUANCE_URL = `/issuance?id=${MOCK_UNIT_ID}&searchFlow=unit`
 
 describe(`generateUnitUrl`, () => {
   test(`generateUnitUrl with status retired`, () => {
-    expect(generateUnitUrl(UnitStatus.RETIRED)).toBe(DEFAULT_RETIRED_URL)
+    expect(generateUnitUrl(UnitStatus.RETIRED, MOCK_UNIT_ID, SearchFlow.UNIT)).toBe(DEFAULT_RETIRED_URL)
   })
 
   test(`generateUnitUrl with status held`, () => {
-    expect(generateUnitUrl(UnitStatus.HELD)).toBe(DEFAULT_ISSUANCE_URL)
+    expect(generateUnitUrl(UnitStatus.HELD, MOCK_UNIT_ID, SearchFlow.UNIT)).toBe(DEFAULT_ISSUANCE_URL)
   })
 
   test(`generateUnitUrl with status held`, () => {
-    expect(generateUnitUrl(UnitStatus.BUFFER)).toBe(DEFAULT_ISSUANCE_URL)
+    expect(generateUnitUrl(UnitStatus.BUFFER, MOCK_UNIT_ID, SearchFlow.UNIT)).toBe(DEFAULT_ISSUANCE_URL)
   })
 })
 
