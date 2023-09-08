@@ -7,6 +7,9 @@ import { ProjectSearchBodySkeleton } from '../ProjectSearchBodySkeleton/ProjectS
 import { formatDate } from '@/utils/DateFormat'
 import { DateFormats } from '@/@types/DateFormats'
 import { TableData } from '../TableData/TableData'
+import { generateProjectUrl } from '@/utils/RequestHelpers'
+import { SearchFlow } from '@/@types/Search'
+
 const renderCreditingPeriod = (startDate: string | undefined, endDate: string | undefined) => {
   if (startDate && endDate) {
     return `${formatDate(startDate, DateFormats.YYYY_MM_DD)} - ${formatDate(endDate, DateFormats.YYYY_MM_DD)}`
@@ -30,7 +33,7 @@ export const ProjectSearchBodyContent = (props: ProjectSearchBodyContentProps) =
   const generateTableRow = (projectList: ProjectSearchResult[]) => {
     return projectList.map((project, idx) => (
       <Tr
-        onClick={() => router.push(`/project?id=${project.warehouseProjectId}`)}
+        onClick={() => router.push(generateProjectUrl(project.warehouseProjectId, SearchFlow.PROJECT))}
         data-testid="table-row"
         onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
         className={`project-row-${idx}`}

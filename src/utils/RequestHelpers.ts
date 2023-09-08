@@ -1,5 +1,6 @@
 import { CSVExportTypes } from '@/@types/CSV'
 import { UnitStatus } from '@/@types/Unit'
+import { SearchFlow } from '@/@types/Search'
 
 export const defaultHeaders = {
   maxBodyLength: Infinity,
@@ -25,6 +26,14 @@ export const generateUnitUrl = (status: string) => {
   } else {
     return `/issuance?id=`
   }
+}
+
+export const generateProjectUrl = (id: string, searchFlow?: SearchFlow): string => {
+  if (searchFlow) {
+    return `/project?id=${id}&searchFlow=${searchFlow}`
+  }
+
+  return `/project?id=${id}`
 }
 
 export const generateExportUrl = (exportType: CSVExportTypes) => {

@@ -7,6 +7,8 @@ import { DateFormats } from '@/@types/DateFormats'
 import { Issuance } from '@/@types/Issuance'
 import { extractTagItemsFromTag } from '@/utils/TextConverter'
 import { ExpandableList } from '@/components/atoms/ExpandableList/ExpandableList'
+import { generateProjectUrl } from '@/utils/RequestHelpers'
+import { SearchFlow } from '@/@types/Search'
 
 interface IssuanceDetailsProps {
   issuance?: Issuance
@@ -34,7 +36,7 @@ export const IssuanceDetails = (props: IssuanceDetailsProps) => {
   return (
     <SimpleGrid columns={[DEFAULT_COLUMN_MOBILE, DEFAULT_COLUMN_WEB]} gap="24px">
       <DetailWidget title={t(`issuanceDetails.issuedTo`)}>
-        <Link href={`/project?id=${issuance.project.warehouseProjectId}`} textDecoration="underline">
+        <Link href={`${generateProjectUrl(issuance.project.warehouseProjectId, SearchFlow.UNIT)}`} textDecoration="underline">
           {issuance.project.name}
         </Link>
       </DetailWidget>

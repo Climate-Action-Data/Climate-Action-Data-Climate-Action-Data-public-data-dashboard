@@ -15,6 +15,8 @@ import { AddCompareIcon } from '../AddCompareIcon/AddCompareIcon'
 import { RemoveCompareIcon } from '../RemoveCompareIcon/RemoveCompareIcon'
 import { useActions, useAppState } from '@/overmind'
 import { MinusIcon } from '../MinusIcon/MinusIcon'
+import { generateProjectUrl } from '@/utils/RequestHelpers'
+import { SearchFlow } from '@/@types/Search'
 
 interface ProjectSearchHeadContentProps {
   watchlistId?: string
@@ -37,7 +39,7 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
     if (event?.target) {
       const target = event.target as HTMLElement
       if (target instanceof HTMLTableCellElement || target instanceof HTMLParagraphElement) {
-        router.push(`/project?id=${projectId}`)
+        router.push(`${generateProjectUrl(projectId, SearchFlow.PROJECT)}`)
       }
     }
   }
@@ -64,7 +66,7 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
 
   const generateMenuList = (projectWarehouseId: string, watchlists: string[]) => {
     const menuList: MenuItemProps[] = [
-      { dataTestId: `view-project-details`, onClick: () => router.push(`/project?id=${projectWarehouseId}`), text: t(`projectMenu.viewProject`) },
+      { dataTestId: `view-project-details`, onClick: () => router.push(`${generateProjectUrl(projectWarehouseId, SearchFlow.PROJECT)}`), text: t(`projectMenu.viewProject`) },
       {
         dataTestId: `export-project`,
         onClick: () => {
