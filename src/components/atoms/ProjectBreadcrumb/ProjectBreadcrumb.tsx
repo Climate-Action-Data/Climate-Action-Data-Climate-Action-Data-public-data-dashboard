@@ -5,6 +5,10 @@ import { AnchorSection } from '../../../@types/ProjectDetails'
 import { ProjectDetailsAnchor } from '../ProjectDetailsAnchor/ProjectDetailsAnchor'
 import { useState } from 'react'
 import { DownloadIcon } from '../DownloadIcon/DownloadIcon'
+import { useSearchParams } from 'next/navigation'
+import { ESearchParams } from '@/@types/ProjectSearchResult'
+import { SearchFlow } from '@/@types/Search'
+import { generateProjectUrl } from '@/utils/RequestHelpers'
 
 export interface ProjectBreadcrumbProps {
   id: string
@@ -19,11 +23,21 @@ export const ProjectBreadcrumb = (props: ProjectBreadcrumbProps) => {
     displayProjectNav: props.displayProjectNav ?? false,
   }
 
+  const searchParams = useSearchParams()
+  const searchFlow = (searchParams.get(ESearchParams.SEARCH_FLOW) as SearchFlow) ?? SearchFlow.PROJECT
+
   const { id, title, displayProjectNav, onExport } = actualProps
 
   const { t } = useTranslation(`projectDetails`)
 
   const [activeAnchor, setActiveAnchor] = useState(AnchorSection.PROJECT_DETAILS)
+
+  const getBreadCrumbItems = () => {
+    return [
+      searchFlow === SearchFlow.UNIT ? { title: t(`unitsBreadCrumb`), link: `/search/units` } : { title: t(`projectsBreadCrumb`), link: `/search/projects` },
+      { title: `${title}`, link: generateProjectUrl(id, searchFlow) },
+    ]
+  }
 
   return (
     <Flex
@@ -40,13 +54,7 @@ export const ProjectBreadcrumb = (props: ProjectBreadcrumbProps) => {
       width={`100%`}
     >
       <VStack alignItems="start" flex={1}>
-        <BreadCrumbs
-          items={[
-            { title: t(`projectsBreadCrumb`), link: `/search/projects` },
-            { title: `${title}`, link: `/project?id=${id}` },
-          ]}
-          color="lightGray.700"
-        />
+        <BreadCrumbs items={getBreadCrumbItems()} color="lightGray.700" />
       </VStack>
       {displayProjectNav && (
         <HStack overflowX="auto" spacing={`16px`} marginTop={`24px`} className="hide-scrollbar" position={`relative`}>

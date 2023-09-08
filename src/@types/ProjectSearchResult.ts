@@ -31,6 +31,7 @@ export enum ESearchParams {
   COUNT = `count`,
   OFFSET = `offset`,
   ID = `id`,
+  SEARCH_FLOW = `searchFlow`,
   FILTER = `filter`,
 }
 

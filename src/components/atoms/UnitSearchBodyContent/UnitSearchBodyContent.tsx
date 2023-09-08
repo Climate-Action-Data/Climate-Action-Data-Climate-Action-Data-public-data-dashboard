@@ -10,6 +10,7 @@ import { DateFormats } from '@/@types/DateFormats'
 import { TableData } from '../TableData/TableData'
 import { generateUnitUrl } from '@/utils/RequestHelpers'
 import { UnitStatus } from '@/@types/Unit'
+import { SearchFlow } from '@/@types/Search'
 
 interface UnitSearchBodyContentProps {
   unitResults?: EffectResponse<UnitSearchResponse>
@@ -22,11 +23,12 @@ export const UnitSearchBodyContent = (props: UnitSearchBodyContentProps) => {
 
   const generateTableRow = (unitList: UnitSearchResult[]) => {
     return unitList.map((unit, idx) => {
-      const generatedUrl = generateUnitUrl(`${unit?.status}`)
       const redirectId = unit?.status === UnitStatus.RETIRED ? unit.warehouseUnitId : unit.issuanceId
+      const generatedUrl = generateUnitUrl(`${unit?.status}`, redirectId ?? ``, SearchFlow.UNIT)
+
       return (
         <Tr
-          onClick={() => router.push(`${generatedUrl}${redirectId}`)}
+          onClick={() => router.push(`${generatedUrl}`)}
           data-testid="unit-table-row"
           onMouseEnter={() => changeHoverColor(`project-row-${idx}`, `hoverGreen`)}
           className={`project-row-${idx}`}

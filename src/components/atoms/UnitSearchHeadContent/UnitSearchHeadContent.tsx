@@ -9,7 +9,8 @@ import { UnitSearchResponse, UnitSearchResult } from '@/@types/UnitSearchResult'
 import { generateUnitUrl } from '@/utils/RequestHelpers'
 import { generateRandomString } from '@/utils/GenerationHelpers'
 import { UnitStatus } from '@/@types/Unit'
-import { generateMenuList } from '../../../utils/MenuOptionHelper'
+import { generateMenuList } from '@/utils/MenuOptionHelper'
+import { SearchFlow } from '@/@types/Search'
 
 interface UnitSearchHeadContentProps {
   unitResults?: EffectResponse<UnitSearchResponse>
@@ -24,9 +25,9 @@ export const UnitSearchHeadContent = (props: UnitSearchHeadContentProps) => {
     if (event?.target) {
       const target = event.target as HTMLElement
       if (target instanceof HTMLTableCellElement || target instanceof HTMLParagraphElement) {
-        const generatedUrl = generateUnitUrl(`${unitStatus}`)
+        const generatedUrl = generateUnitUrl(`${unitStatus}`, unitId, SearchFlow.UNIT)
 
-        router.push(`${generatedUrl}${unitId}`)
+        router.push(`${generatedUrl}`)
       }
     }
   }
