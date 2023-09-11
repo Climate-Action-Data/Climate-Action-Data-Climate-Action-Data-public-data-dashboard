@@ -5,6 +5,11 @@
     "featureImageAltText": "header feature image"
   },
   "regions": {
+    "asia": "ASIA",
+    "africa": "AFRICA",
+    "europe": "EUROPE",
+    "americas": "AMERICAS",
+    "oceania": "OCEANIA",
     "northern-europe": "Northern Europe",
     "southern-europe": "Southern Europe",
     "northern-africa": "Northern Africa",

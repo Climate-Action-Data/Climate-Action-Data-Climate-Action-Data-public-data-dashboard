@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { AutoComplete } from '../AutoComplete/AutoComplete'
 import { CarbonReduction } from '@/@types/State'
 import { ChevronLeftIcon } from '@/components/atoms/ChevronLeftIcon/ChevronLeftIcon'
+import { getWorldRegionList } from '@/utils/WorldRegionsHelper'
 
 export const getCountryPlaceholder = (carbonReduction: CarbonReduction, t: any, countryTranslate: any): string => {
   let placeholder: string = t(`regions.chooseCountry`)
@@ -31,6 +32,7 @@ export const RegionSearch = (): React.JSX.Element => {
   const getSearchItems = (): {
     value: string
     label: string
+    isHeader?: boolean
   }[] => {
     if (carbonReduction.carbonMapDataFilters.region && carbonReduction.carbonMapDataFilters.region !== SubRegion.WORLD) {
       return generateCountryByRegion(carbonReduction.carbonMapDataFilters.region).map((country) => ({
@@ -38,10 +40,7 @@ export const RegionSearch = (): React.JSX.Element => {
         label: countryTranslate(`${country}`),
       }))
     } else {
-      return Object.values(SubRegion).map((region) => ({
-        value: region,
-        label: t(`regions.${region}`),
-      }))
+      return getWorldRegionList(t)
     }
   }
   const regionTitle = () => {

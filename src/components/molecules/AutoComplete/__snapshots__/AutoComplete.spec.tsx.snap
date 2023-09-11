@@ -66,7 +66,7 @@ exports[`AutoComplete Body do handle mouseEnter and mouseLeave 1`] = `
             role="list"
           >
             <li
-              class="css-1lkne8t"
+              class="css-1di133w"
               data-testid="dropdown-item-0"
             >
               <div
@@ -76,7 +76,7 @@ exports[`AutoComplete Body do handle mouseEnter and mouseLeave 1`] = `
               </div>
             </li>
             <li
-              class="css-1lkne8t"
+              class="css-1di133w"
               data-testid="dropdown-item-1"
             >
               <div
@@ -86,7 +86,7 @@ exports[`AutoComplete Body do handle mouseEnter and mouseLeave 1`] = `
               </div>
             </li>
             <li
-              class="css-1lkne8t"
+              class="css-1di133w"
               data-testid="dropdown-item-2"
             >
               <div
@@ -172,7 +172,7 @@ exports[`AutoComplete Should toggle isOpen when input is clicked twice 1`] = `
             role="list"
           >
             <li
-              class="css-1lkne8t"
+              class="css-1di133w"
               data-testid="dropdown-item-0"
             >
               <div
@@ -182,7 +182,7 @@ exports[`AutoComplete Should toggle isOpen when input is clicked twice 1`] = `
               </div>
             </li>
             <li
-              class="css-1lkne8t"
+              class="css-1di133w"
               data-testid="dropdown-item-1"
             >
               <div
@@ -192,7 +192,7 @@ exports[`AutoComplete Should toggle isOpen when input is clicked twice 1`] = `
               </div>
             </li>
             <li
-              class="css-1lkne8t"
+              class="css-1di133w"
               data-testid="dropdown-item-2"
             >
               <div
@@ -278,7 +278,7 @@ exports[`AutoComplete should render the default item renderer 1`] = `
             role="list"
           >
             <li
-              class="css-1lkne8t"
+              class="css-1di133w"
               data-testid="dropdown-item-0"
             >
               <div
@@ -288,7 +288,7 @@ exports[`AutoComplete should render the default item renderer 1`] = `
               </div>
             </li>
             <li
-              class="css-1lkne8t"
+              class="css-1di133w"
               data-testid="dropdown-item-1"
             >
               <div
@@ -298,7 +298,7 @@ exports[`AutoComplete should render the default item renderer 1`] = `
               </div>
             </li>
             <li
-              class="css-1lkne8t"
+              class="css-1di133w"
               data-testid="dropdown-item-2"
             >
               <div

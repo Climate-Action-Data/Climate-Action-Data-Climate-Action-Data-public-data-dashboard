@@ -9,7 +9,7 @@ import { FC } from 'react'
 import SelectableChip from '@/components/atoms/SelectableChip/SelectableChip'
 
 interface IssuedRetiredChartHeaderProps {
-  autocompleteItems: { value: string; label: string }[]
+  autocompleteItems: { value: string; label: string; isHeader?: boolean }[]
 }
 
 const IssuedRetiredChartHeader: FC<IssuedRetiredChartHeaderProps> = (props) => {
