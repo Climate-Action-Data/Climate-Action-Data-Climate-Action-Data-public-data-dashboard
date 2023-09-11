@@ -32,3 +32,13 @@ it(`renders correctly with project that had emptyBenefit`, () => {
   const { container } = render(<ProjectDetailsInfo project={{ ...PROJECT_DETAIL, coBenefits: [] }} />)
   expect(container).toMatchSnapshot()
 })
+it(`renders correctly with project that had empty dates`, () => {
+  const mockProject: any = { ...PROJECT_DETAIL, validation: { ...PROJECT_DETAIL.validation } }
+  mockProject.statusDate = undefined
+  mockProject.validation.date = undefined
+  mockProject.units.creditingPeriodStart = undefined
+  mockProject.units.creditingPeriodEnd = undefined
+
+  const { container } = render(<ProjectDetailsInfo project={{ ...mockProject }} />)
+  expect(container).toMatchSnapshot()
+})
