@@ -714,6 +714,390 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
 </div>
 `;
 
+exports[`renders correctly with project that had empty dates 1`] = `
+<div>
+  <div
+    class="chakra-stack css-j7qwjs"
+  >
+    <div
+      class="css-s8hfc8"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Standard
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          EcoRegistry
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Methodology
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          AR-ACM0003: Afforestation and reforestation of lands except wetlands
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Developer
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Forestry Consulting Group S.A.S.
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Link
+        </p>
+        <div
+          class="css-0"
+        >
+          <a
+            class="chakra-link css-0"
+            href="https://www.ecoregistry.io/projects/79"
+            target="_blank"
+          >
+            https://www.ecoregistry.io/projects/79
+          </a>
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Sector
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Agriculture; forestry and fishing
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Type
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Reforestation and Revegetation
+        </p>
+      </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-s8hfc8"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Status
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Registered
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Status Updated On
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          --
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Validation Body
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Colombian Institute for Technical Standards and Certification (ICONTEC)
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Validation Date
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          --
+        </p>
+      </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-2imjyh"
+    >
+      <div
+        class="css-s8hfc8"
+      >
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Total Available Units
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            0
+          </p>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Total Issuances
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            0
+          </p>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Crediting Period
+          </p>
+          <div
+            class="css-0"
+          >
+            --
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-s8hfc8"
+      >
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Total Retirements
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            0
+          </p>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Annual Estimated Units
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            127,855
+          </p>
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-1xi4xed"
+          >
+            Unit Metric Measurement
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            tCO2e
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-s8hfc8"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          NDC Coverage
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Unknown
+        </p>
+      </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-1ss9yhm"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Project Tags
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="css-0"
+          >
+            <p
+              class="chakra-text css-0"
+            >
+              More information in the project link.
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              Cercarbono Standard.
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              Sectors of project: Agriculture; forestry and fishing .
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              Methodologies of project: AR-ACM0003: Afforestation and reforestation of lands except wetlands .
+            </p>
+            <button
+              class="chakra-button css-4xx2wk"
+              data-testid="verification-expand"
+              type="button"
+            >
+              View More
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Co-Benefits
+        </p>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-stack css-1odds5u"
+          >
+            <img
+              alt="Decent Work and Economic Growth"
+              class="chakra-image css-6gxpji"
+              src="/img.jpg"
+            />
+            <img
+              alt="Life on Land"
+              class="chakra-image css-6gxpji"
+              src="/img.jpg"
+            />
+            <img
+              alt="Climate Action"
+              class="chakra-image css-6gxpji"
+              src="/img.jpg"
+            />
+            <img
+              alt="Industry, Innovation and Infrastructure"
+              class="chakra-image css-6gxpji"
+              src="/img.jpg"
+            />
+            <img
+              alt="Affordable and Clean Energy"
+              class="chakra-image css-6gxpji"
+              src="/img.jpg"
+            />
+            <img
+              alt="Quality Education"
+              class="chakra-image css-6gxpji"
+              src="/img.jpg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`renders correctly with project that had emptyBenefit 1`] = `
 <div>
   <div
