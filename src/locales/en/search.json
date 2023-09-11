@@ -20,7 +20,7 @@
   "exportCSVDesc": "Please note that your current selection exceeds 1000 rows and we will only export up to 1000. Consider applying filters to narrow your selection.",
   "cancel": "Cancel",
   "filterBar": {
-    "standard": "Standard",
+    "registry": "Registry",
     "unitStatus": "Unit Status",
     "methodology": "Methodology",
     "sector": "Sector",
@@ -30,7 +30,7 @@
   },
   "table": {
     "projectDetails": "Project Details",
-    "standard": "Standard",
+    "registry": "Registry",
     "methodology": "Methodology",
     "sector": "Sector",
     "country": "Country",
@@ -68,7 +68,7 @@
     "projectId": "PROJECT ID",
     "developer": "DEVELOPER",
     "linkToProject": "LINK TO PROJECT",
-    "standard": "STANDARD",
+    "registry": "REGISTRY",
     "methodology": "METHODOLOGY",
     "sector": "SECTOR",
     "country": "COUNTRY",

@@ -248,7 +248,7 @@ const projectDetailsPdf = async (project: ProjectDetails) => {
         {buildSection(`Project Details`)}
 
         <View style={{ marginTop: 4, paddingHorizontal: 8, paddingVertical: 16, borderRadius: 4, backgroundColor: `#FFFFFF` }}>
-          {buildRow([`Standard`, `Methodology`, `Project Developer`], { flexDirection: `row` }, styles.threeColumnHeader)}
+          {buildRow([`Registry`, `Methodology`, `Project Developer`], { flexDirection: `row` }, styles.threeColumnHeader)}
           {buildRow([project.standard, project.methodology, project.developer], { flexDirection: `row`, marginTop: 2 }, styles.threeColumnBody)}
 
           {buildRow([`Sector`, `Project Type`, `Project Link`], { flexDirection: `row`, marginTop: 16 }, styles.threeColumnHeader)}

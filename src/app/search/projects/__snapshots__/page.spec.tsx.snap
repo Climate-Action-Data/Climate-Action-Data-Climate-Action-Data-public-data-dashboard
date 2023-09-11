@@ -123,7 +123,7 @@ exports[`renders correctly 1`] = `
                 <div
                   class="css-0"
                 >
-                  Standard
+                  Registry
                   <div
                     class="chakra-stack css-1yu3riu"
                   >
@@ -1057,7 +1057,7 @@ exports[`renders correctly on table data 1`] = `
                 <div
                   class="css-0"
                 >
-                  Standard
+                  Registry
                   <div
                     class="chakra-stack css-1yu3riu"
                   >
@@ -1799,7 +1799,7 @@ exports[`renders correctly on table data and scroll page 1`] = `
                 <div
                   class="css-0"
                 >
-                  Standard
+                  Registry
                   <div
                     class="chakra-stack css-1yu3riu"
                   >

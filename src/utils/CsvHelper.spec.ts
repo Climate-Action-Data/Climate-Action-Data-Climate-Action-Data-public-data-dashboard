@@ -43,7 +43,7 @@ describe(`CsvHelper`, () => {
       `projectCompare.projectId`,
       `projectCompare.developer`,
       `projectCompare.linkToProject`,
-      `projectCompare.standard`,
+      `projectCompare.registry`,
       `projectCompare.methodology`,
       `projectCompare.sector`,
       `projectCompare.country`,

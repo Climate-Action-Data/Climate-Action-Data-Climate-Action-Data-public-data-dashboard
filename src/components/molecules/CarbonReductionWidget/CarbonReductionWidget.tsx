@@ -127,7 +127,7 @@ export const CarbonReductionWidget: FC = (): React.JSX.Element => {
 
             <Divider marginY={`16px`} />
             <Text as="h1" fontSize="lg" fontWeight="500" textAlign={`center`}>
-              {t(`carbonReduction.standard`)}
+              {t(`carbonReduction.registry`)}
             </Text>
             {carbonMapDataFiltered.standards.length > 0 ? (
               <CarbonReductionStandard data={carbonMapDataFiltered.standards} />

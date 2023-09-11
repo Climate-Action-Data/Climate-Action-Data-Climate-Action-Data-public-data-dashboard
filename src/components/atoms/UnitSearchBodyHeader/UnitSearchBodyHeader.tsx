@@ -73,7 +73,7 @@ export const UnitSearchBodyHeader = (props: UnitSearchBodyHeaderProps) => {
             </Th>
             <Th>
               <Box>
-                {t(`table.standard`)}
+                {t(`table.registry`)}
                 <ColumnSortFilter
                   currentDirection={selectedUnitSearchFilterValues.searchFilterValues.direction}
                   currentValue={selectedUnitSearchFilterValues.searchFilterValues.sortBy}

@@ -25,7 +25,7 @@ exports[`renders correctly with loaded data 1`] = `
             <div
               class="css-jmqhys"
             >
-              Standard
+              Registry
               <div
                 class="css-1gq8co7"
               />
@@ -861,7 +861,7 @@ exports[`renders correctly with loaded data and search click 1`] = `
             <div
               class="css-jmqhys"
             >
-              Standard
+              Registry
               <div
                 class="css-1gq8co7"
               />
@@ -1697,7 +1697,7 @@ exports[`renders correctly with no data 1`] = `
             <div
               class="css-jmqhys"
             >
-              Standard
+              Registry
               <div
                 class="css-1gq8co7"
               />

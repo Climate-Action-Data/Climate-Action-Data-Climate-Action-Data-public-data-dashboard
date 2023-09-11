@@ -37,7 +37,7 @@
     "totalReduction": "Total Reduction (YTD)",
     "annualReduction": "Annual Est. Reduction",
     "sector": "Sector",
-    "standard": "Standard",
+    "registry": "Registry",
     "MtCO2": "MtCO2"
   },
   "selectedDataNotAvailable": "Selected data is currently unavailable within the carbon registries.",

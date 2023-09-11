@@ -72,7 +72,7 @@ const ProjectFilterBar: FC<ProjectFilterBarProps> = (props) => {
         <Stack direction={[`column`, null, null, `row`]}>
           <Stack direction={[`column`, null, null, `row`]} divider={<StackDivider borderColor="lightGray.400" />} width="100%">
             <AutoCompleteCheckbox
-              label={t(`filterBar.standard`)}
+              label={t(`filterBar.registry`)}
               options={searchFilterValues.projectStatus}
               selectedFilters={selectedSearchFilters.projectStatus}
               noOfSelectedFilters={selectedSearchFilters.projectStatus.length}

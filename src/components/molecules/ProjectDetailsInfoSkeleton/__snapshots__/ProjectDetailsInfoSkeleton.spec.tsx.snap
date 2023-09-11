@@ -14,7 +14,7 @@ exports[`renders correctly with no project 1`] = `
         <p
           class="chakra-text css-1xi4xed"
         >
-          Standard
+          Registry
         </p>
         <div
           class="css-0"

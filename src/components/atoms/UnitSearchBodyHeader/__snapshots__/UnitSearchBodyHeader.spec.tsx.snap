@@ -164,7 +164,7 @@ exports[`renders correctly 1`] = `
             <div
               class="css-0"
             >
-              Standard
+              Registry
               <div
                 class="chakra-stack css-1yu3riu"
               >
@@ -574,7 +574,7 @@ exports[`renders correctly with projects and handles sort asc 1`] = `
             <div
               class="css-0"
             >
-              Standard
+              Registry
               <div
                 class="chakra-stack css-1yu3riu"
               >
@@ -984,7 +984,7 @@ exports[`renders correctly with projects and handles sort asc 2`] = `
             <div
               class="css-0"
             >
-              Standard
+              Registry
               <div
                 class="chakra-stack css-1yu3riu"
               >

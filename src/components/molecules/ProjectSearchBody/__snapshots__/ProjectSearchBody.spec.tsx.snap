@@ -26,7 +26,7 @@ exports[`ProjectSearchBody renders correctly with no projects 1`] = `
               <div
                 class="css-0"
               >
-                Standard
+                Registry
                 <div
                   class="chakra-stack css-1yu3riu"
                 >
@@ -500,7 +500,7 @@ exports[`ProjectSearchBody renders correctly with projects 1`] = `
               <div
                 class="css-0"
               >
-                Standard
+                Registry
                 <div
                   class="chakra-stack css-1yu3riu"
                 >
@@ -1172,7 +1172,7 @@ exports[`ProjectSearchBody renders correctly with projects and handles click 1`]
               <div
                 class="css-0"
               >
-                Standard
+                Registry
                 <div
                   class="chakra-stack css-1yu3riu"
                 >
