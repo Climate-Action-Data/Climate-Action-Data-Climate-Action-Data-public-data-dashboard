@@ -34,7 +34,7 @@ export const compareProjectCsvHeaders = (t: TFunction) => {
     t(`projectCompare.projectId`),
     t(`projectCompare.developer`),
     t(`projectCompare.linkToProject`),
-    t(`projectCompare.standard`),
+    t(`projectCompare.registry`),
     t(`projectCompare.methodology`),
     t(`projectCompare.sector`),
     t(`projectCompare.country`),

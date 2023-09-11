@@ -9,7 +9,7 @@ export const ProjectDetailsInfoSkeleton = () => {
   return (
     <Stack divider={<StackDivider />} spacing="24px">
       <SimpleGrid columns={2} gap="24px">
-        <DetailWidget asBox title={t(`detailsHeaders.standard`)}>
+        <DetailWidget asBox title={t(`detailsHeaders.registry`)}>
           <Skeleton height={`20px`} />
         </DetailWidget>
         <DetailWidget asBox title={t(`detailsHeaders.methodology`)}>

@@ -28,7 +28,7 @@ exports[`ProjectFilterAndSearch renders correctly 1`] = `
               <div
                 class="css-jmqhys"
               >
-                Standard
+                Registry
                 <div
                   class="css-1gq8co7"
                 />
@@ -610,7 +610,7 @@ exports[`ProjectFilterAndSearch renders correctly and the filter-and-search-trig
               <div
                 class="css-jmqhys"
               >
-                Standard
+                Registry
                 <div
                   class="css-1gq8co7"
                 />

@@ -38,7 +38,7 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
   return (
     <Stack divider={<StackDivider />} spacing="24px">
       <SimpleGrid columns={DEFAULT_COLUMN} gap="24px">
-        <DetailWidget title={t(`detailsHeaders.standard`)}>{project.standard}</DetailWidget>
+        <DetailWidget title={t(`detailsHeaders.registry`)}>{project.standard}</DetailWidget>
         <DetailWidget title={t(`detailsHeaders.methodology`)}>{project.methodology}</DetailWidget>
         <DetailWidget title={t(`detailsHeaders.developer`)}>{project.developer}</DetailWidget>
         <DetailWidget asBox title={t(`detailsHeaders.link`)}>

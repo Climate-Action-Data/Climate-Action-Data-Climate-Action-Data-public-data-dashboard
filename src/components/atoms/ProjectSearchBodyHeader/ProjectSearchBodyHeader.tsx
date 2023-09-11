@@ -29,7 +29,7 @@ export const ProjectSearchBodyHeader = (props: ProjectSearchBodyHeaderProps) => 
           <Tr id="scrollableHeader">
             <Th>
               <Box>
-                {t(`table.standard`)}
+                {t(`table.registry`)}
                 <ColumnSortFilter
                   currentDirection={selectedProjectSearchFilterValues.searchFilterValues.direction}
                   currentValue={selectedProjectSearchFilterValues.searchFilterValues.sortBy}

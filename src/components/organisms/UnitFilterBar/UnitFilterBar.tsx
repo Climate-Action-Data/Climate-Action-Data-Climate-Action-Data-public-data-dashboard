@@ -73,7 +73,7 @@ const UnitFilterBar: FC<UnitFilterBarProps> = (props) => {
             isResultsPage={isResultsPage}
           />
           <AutoCompleteCheckbox
-            label={t(`filterBar.standard`)}
+            label={t(`filterBar.registry`)}
             options={searchFilterValues.projectStatus}
             selectedFilters={selectedSearchFilters.projectStatus}
             noOfSelectedFilters={selectedSearchFilters.projectStatus.length}
