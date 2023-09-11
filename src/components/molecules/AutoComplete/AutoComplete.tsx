@@ -24,6 +24,7 @@ import { useEffect } from 'react'
 export interface Item {
   label: string
   value: string
+  isHeader?: boolean
 }
 
 export interface AutoCompleteProps<T extends Item> {
@@ -76,16 +77,29 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
         <PopoverContent border="1px solid" borderColor="lightGray.200" data-testid="dropdown-body" onMouseLeave={() => {setIsOpen(false); return (onDropDownLeave) ? onDropDownLeave(): undefined}} maxHeight={`150px`} overflowY="scroll">
           <PopoverBody >
             <List>
-              {inputItems.map((item, index) => (
-                item.value.toUpperCase().includes(inputValue.toUpperCase()) &&
+              {
+                inputItems.map((item, index) => {
+                  if(item.isHeader) {
+                    return <ListItem
+                      p={`8px`}
+                      key={`${item.value}`}
+                      textColor={`lightGray.500`}
+                    >
+                      <Box display="inline-flex" alignItems="center">
+                        {defaultItemRenderer(item)}
+                      </Box>
+                    </ListItem>
+                  }
+                  return item.value.toUpperCase().includes(inputValue.toUpperCase()) &&
                     (<ListItem
-                      px={2}
+                      px={`24px`}
                       py={1}
                       borderBottom="1px solid rgba(0,0,0,0.01)"
                       _hover={{ bg: `lightGray.200`, cursor: `pointer` }}
                       onMouseEnter={() => (onItemHover) ? onItemHover(item): undefined}
                       onClick={() => {setIsOpen(false);onItemClick(item)}}
                       key={`${item.value}`}
+                      textColor={`lightGray.700`}
                       data-testid={`dropdown-item-${index}`}
                     >
                       <Box display="inline-flex" alignItems="center">
@@ -94,7 +108,9 @@ export const AutoComplete = <T extends Item>(props: AutoCompleteProps<T>): React
                         </Highlight>
                       </Box>
                     </ListItem>)
-              ))}
+                }
+                )
+              }
             </List>
           </PopoverBody>
         </PopoverContent>

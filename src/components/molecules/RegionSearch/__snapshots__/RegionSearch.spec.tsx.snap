@@ -82,38 +82,17 @@ exports[`RegionSearch renders the component with a hovered country 1`] = `
               role="list"
             >
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-0"
+                class="css-1t8a73s"
               >
                 <div
                   class="css-18biwo"
                 >
-                  Southern Asia
+                  AFRICA
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-1"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Northern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-2"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Southern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-3"
               >
                 <div
                   class="css-18biwo"
@@ -122,18 +101,8 @@ exports[`RegionSearch renders the component with a hovered country 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-4"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Polynesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-5"
+                class="css-1di133w"
+                data-testid="dropdown-item-2"
               >
                 <div
                   class="css-18biwo"
@@ -142,8 +111,17 @@ exports[`RegionSearch renders the component with a hovered country 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-6"
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  AMERICAS
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-4"
               >
                 <div
                   class="css-18biwo"
@@ -152,48 +130,8 @@ exports[`RegionSearch renders the component with a hovered country 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-7"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Western Asia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-8"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Australia and New Zealand
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-9"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Western Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-10"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Eastern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-11"
+                class="css-1di133w"
+                data-testid="dropdown-item-5"
               >
                 <div
                   class="css-18biwo"
@@ -202,48 +140,17 @@ exports[`RegionSearch renders the component with a hovered country 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-12"
+                class="css-1t8a73s"
               >
                 <div
                   class="css-18biwo"
                 >
-                  South Eastern Asia
+                  ASIA
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-13"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Eastern Asia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-14"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Melanesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-15"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Micronesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-16"
+                class="css-1di133w"
+                data-testid="dropdown-item-7"
               >
                 <div
                   class="css-18biwo"
@@ -252,13 +159,141 @@ exports[`RegionSearch renders the component with a hovered country 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-17"
+                class="css-1di133w"
+                data-testid="dropdown-item-8"
               >
                 <div
                   class="css-18biwo"
                 >
-                  World
+                  Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-9"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-10"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  South Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-11"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Asia
+                </div>
+              </li>
+              <li
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  EUROPE
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-13"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-14"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-15"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-16"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Europe
+                </div>
+              </li>
+              <li
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  OCEANIA
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-18"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Australia and New Zealand
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-19"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Melanesia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-20"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Micronesia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-21"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Polynesia
                 </div>
               </li>
             </ul>
@@ -370,7 +405,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
               role="list"
             >
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-0"
               >
                 <div
@@ -380,7 +415,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-1"
               >
                 <div
@@ -390,7 +425,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-2"
               >
                 <div
@@ -400,7 +435,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-3"
               >
                 <div
@@ -410,7 +445,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-4"
               >
                 <div
@@ -420,7 +455,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-5"
               >
                 <div
@@ -430,7 +465,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-6"
               >
                 <div
@@ -440,7 +475,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-7"
               >
                 <div
@@ -450,7 +485,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-8"
               >
                 <div
@@ -460,7 +495,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-9"
               >
                 <div
@@ -470,7 +505,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-10"
               >
                 <div
@@ -480,7 +515,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-11"
               >
                 <div
@@ -490,7 +525,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-12"
               >
                 <div
@@ -500,7 +535,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-13"
               >
                 <div
@@ -510,7 +545,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-14"
               >
                 <div
@@ -520,7 +555,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-15"
               >
                 <div
@@ -530,7 +565,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-16"
               >
                 <div
@@ -540,7 +575,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-17"
               >
                 <div
@@ -550,7 +585,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-18"
               >
                 <div
@@ -560,7 +595,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-19"
               >
                 <div
@@ -570,7 +605,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-20"
               >
                 <div
@@ -580,7 +615,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-21"
               >
                 <div
@@ -590,7 +625,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-22"
               >
                 <div
@@ -600,7 +635,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-23"
               >
                 <div
@@ -610,7 +645,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-24"
               >
                 <div
@@ -620,7 +655,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-25"
               >
                 <div
@@ -630,7 +665,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-26"
               >
                 <div
@@ -640,7 +675,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-27"
               >
                 <div
@@ -650,7 +685,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-28"
               >
                 <div
@@ -660,7 +695,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-29"
               >
                 <div
@@ -670,7 +705,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-30"
               >
                 <div
@@ -680,7 +715,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-31"
               >
                 <div
@@ -690,7 +725,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-32"
               >
                 <div
@@ -700,7 +735,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-33"
               >
                 <div
@@ -710,7 +745,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-34"
               >
                 <div
@@ -720,7 +755,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-35"
               >
                 <div
@@ -730,7 +765,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-36"
               >
                 <div
@@ -740,7 +775,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-37"
               >
                 <div
@@ -750,7 +785,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-38"
               >
                 <div
@@ -760,7 +795,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-39"
               >
                 <div
@@ -770,7 +805,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-40"
               >
                 <div
@@ -780,7 +815,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-41"
               >
                 <div
@@ -790,7 +825,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-42"
               >
                 <div
@@ -800,7 +835,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-43"
               >
                 <div
@@ -810,7 +845,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-44"
               >
                 <div
@@ -820,7 +855,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-45"
               >
                 <div
@@ -830,7 +865,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-46"
               >
                 <div
@@ -840,7 +875,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-47"
               >
                 <div
@@ -850,7 +885,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-48"
               >
                 <div
@@ -860,7 +895,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-49"
               >
                 <div
@@ -870,7 +905,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-50"
               >
                 <div
@@ -880,7 +915,7 @@ exports[`RegionSearch renders the component with a selected country & region 1`]
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-51"
               >
                 <div
@@ -980,38 +1015,17 @@ exports[`RegionSearch renders the component with a selected country & region and
               role="list"
             >
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-0"
+                class="css-1t8a73s"
               >
                 <div
                   class="css-18biwo"
                 >
-                  Southern Asia
+                  AFRICA
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-1"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Northern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-2"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Southern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-3"
               >
                 <div
                   class="css-18biwo"
@@ -1020,18 +1034,8 @@ exports[`RegionSearch renders the component with a selected country & region and
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-4"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Polynesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-5"
+                class="css-1di133w"
+                data-testid="dropdown-item-2"
               >
                 <div
                   class="css-18biwo"
@@ -1040,8 +1044,17 @@ exports[`RegionSearch renders the component with a selected country & region and
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-6"
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  AMERICAS
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-4"
               >
                 <div
                   class="css-18biwo"
@@ -1050,48 +1063,8 @@ exports[`RegionSearch renders the component with a selected country & region and
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-7"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Western Asia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-8"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Australia and New Zealand
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-9"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Western Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-10"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Eastern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-11"
+                class="css-1di133w"
+                data-testid="dropdown-item-5"
               >
                 <div
                   class="css-18biwo"
@@ -1100,48 +1073,17 @@ exports[`RegionSearch renders the component with a selected country & region and
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-12"
+                class="css-1t8a73s"
               >
                 <div
                   class="css-18biwo"
                 >
-                  South Eastern Asia
+                  ASIA
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-13"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Eastern Asia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-14"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Melanesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-15"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Micronesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-16"
+                class="css-1di133w"
+                data-testid="dropdown-item-7"
               >
                 <div
                   class="css-18biwo"
@@ -1150,13 +1092,141 @@ exports[`RegionSearch renders the component with a selected country & region and
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-17"
+                class="css-1di133w"
+                data-testid="dropdown-item-8"
               >
                 <div
                   class="css-18biwo"
                 >
-                  World
+                  Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-9"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-10"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  South Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-11"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Asia
+                </div>
+              </li>
+              <li
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  EUROPE
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-13"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-14"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-15"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-16"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Europe
+                </div>
+              </li>
+              <li
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  OCEANIA
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-18"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Australia and New Zealand
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-19"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Melanesia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-20"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Micronesia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-21"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Polynesia
                 </div>
               </li>
             </ul>
@@ -1250,38 +1320,17 @@ exports[`RegionSearch renders the component with a selected country & region and
               role="list"
             >
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-0"
+                class="css-1t8a73s"
               >
                 <div
                   class="css-18biwo"
                 >
-                  Southern Asia
+                  AFRICA
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-1"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Northern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-2"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Southern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-3"
               >
                 <div
                   class="css-18biwo"
@@ -1290,18 +1339,8 @@ exports[`RegionSearch renders the component with a selected country & region and
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-4"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Polynesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-5"
+                class="css-1di133w"
+                data-testid="dropdown-item-2"
               >
                 <div
                   class="css-18biwo"
@@ -1310,8 +1349,17 @@ exports[`RegionSearch renders the component with a selected country & region and
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-6"
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  AMERICAS
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-4"
               >
                 <div
                   class="css-18biwo"
@@ -1320,48 +1368,8 @@ exports[`RegionSearch renders the component with a selected country & region and
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-7"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Western Asia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-8"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Australia and New Zealand
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-9"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Western Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-10"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Eastern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-11"
+                class="css-1di133w"
+                data-testid="dropdown-item-5"
               >
                 <div
                   class="css-18biwo"
@@ -1370,48 +1378,17 @@ exports[`RegionSearch renders the component with a selected country & region and
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-12"
+                class="css-1t8a73s"
               >
                 <div
                   class="css-18biwo"
                 >
-                  South Eastern Asia
+                  ASIA
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-13"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Eastern Asia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-14"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Melanesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-15"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Micronesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-16"
+                class="css-1di133w"
+                data-testid="dropdown-item-7"
               >
                 <div
                   class="css-18biwo"
@@ -1420,13 +1397,141 @@ exports[`RegionSearch renders the component with a selected country & region and
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-17"
+                class="css-1di133w"
+                data-testid="dropdown-item-8"
               >
                 <div
                   class="css-18biwo"
                 >
-                  World
+                  Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-9"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-10"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  South Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-11"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Asia
+                </div>
+              </li>
+              <li
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  EUROPE
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-13"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-14"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-15"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-16"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Europe
+                </div>
+              </li>
+              <li
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  OCEANIA
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-18"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Australia and New Zealand
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-19"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Melanesia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-20"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Micronesia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-21"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Polynesia
                 </div>
               </li>
             </ul>
@@ -1520,38 +1625,17 @@ exports[`RegionSearch renders the component with default state 1`] = `
               role="list"
             >
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-0"
+                class="css-1t8a73s"
               >
                 <div
                   class="css-18biwo"
                 >
-                  Southern Asia
+                  AFRICA
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-1"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Northern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-2"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Southern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-3"
               >
                 <div
                   class="css-18biwo"
@@ -1560,18 +1644,8 @@ exports[`RegionSearch renders the component with default state 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-4"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Polynesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-5"
+                class="css-1di133w"
+                data-testid="dropdown-item-2"
               >
                 <div
                   class="css-18biwo"
@@ -1580,8 +1654,17 @@ exports[`RegionSearch renders the component with default state 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-6"
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  AMERICAS
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-4"
               >
                 <div
                   class="css-18biwo"
@@ -1590,48 +1673,8 @@ exports[`RegionSearch renders the component with default state 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-7"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Western Asia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-8"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Australia and New Zealand
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-9"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Western Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-10"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Eastern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-11"
+                class="css-1di133w"
+                data-testid="dropdown-item-5"
               >
                 <div
                   class="css-18biwo"
@@ -1640,48 +1683,17 @@ exports[`RegionSearch renders the component with default state 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-12"
+                class="css-1t8a73s"
               >
                 <div
                   class="css-18biwo"
                 >
-                  South Eastern Asia
+                  ASIA
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-13"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Eastern Asia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-14"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Melanesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-15"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Micronesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-16"
+                class="css-1di133w"
+                data-testid="dropdown-item-7"
               >
                 <div
                   class="css-18biwo"
@@ -1690,13 +1702,141 @@ exports[`RegionSearch renders the component with default state 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-17"
+                class="css-1di133w"
+                data-testid="dropdown-item-8"
               >
                 <div
                   class="css-18biwo"
                 >
-                  World
+                  Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-9"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-10"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  South Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-11"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Asia
+                </div>
+              </li>
+              <li
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  EUROPE
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-13"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-14"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-15"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-16"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Europe
+                </div>
+              </li>
+              <li
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  OCEANIA
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-18"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Australia and New Zealand
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-19"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Melanesia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-20"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Micronesia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-21"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Polynesia
                 </div>
               </li>
             </ul>
@@ -1790,38 +1930,17 @@ exports[`RegionSearch renders the component with default state undefined 1`] = `
               role="list"
             >
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-0"
+                class="css-1t8a73s"
               >
                 <div
                   class="css-18biwo"
                 >
-                  Southern Asia
+                  AFRICA
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
+                class="css-1di133w"
                 data-testid="dropdown-item-1"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Northern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-2"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Southern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-3"
               >
                 <div
                   class="css-18biwo"
@@ -1830,18 +1949,8 @@ exports[`RegionSearch renders the component with default state undefined 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-4"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Polynesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-5"
+                class="css-1di133w"
+                data-testid="dropdown-item-2"
               >
                 <div
                   class="css-18biwo"
@@ -1850,8 +1959,17 @@ exports[`RegionSearch renders the component with default state undefined 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-6"
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  AMERICAS
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-4"
               >
                 <div
                   class="css-18biwo"
@@ -1860,48 +1978,8 @@ exports[`RegionSearch renders the component with default state undefined 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-7"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Western Asia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-8"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Australia and New Zealand
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-9"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Western Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-10"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Eastern Europe
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-11"
+                class="css-1di133w"
+                data-testid="dropdown-item-5"
               >
                 <div
                   class="css-18biwo"
@@ -1910,48 +1988,17 @@ exports[`RegionSearch renders the component with default state undefined 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-12"
+                class="css-1t8a73s"
               >
                 <div
                   class="css-18biwo"
                 >
-                  South Eastern Asia
+                  ASIA
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-13"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Eastern Asia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-14"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Melanesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-15"
-              >
-                <div
-                  class="css-18biwo"
-                >
-                  Micronesia
-                </div>
-              </li>
-              <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-16"
+                class="css-1di133w"
+                data-testid="dropdown-item-7"
               >
                 <div
                   class="css-18biwo"
@@ -1960,13 +2007,141 @@ exports[`RegionSearch renders the component with default state undefined 1`] = `
                 </div>
               </li>
               <li
-                class="css-1lkne8t"
-                data-testid="dropdown-item-17"
+                class="css-1di133w"
+                data-testid="dropdown-item-8"
               >
                 <div
                   class="css-18biwo"
                 >
-                  World
+                  Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-9"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-10"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  South Eastern Asia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-11"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Asia
+                </div>
+              </li>
+              <li
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  EUROPE
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-13"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Eastern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-14"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Northern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-15"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Southern Europe
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-16"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Western Europe
+                </div>
+              </li>
+              <li
+                class="css-1t8a73s"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  OCEANIA
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-18"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Australia and New Zealand
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-19"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Melanesia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-20"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Micronesia
+                </div>
+              </li>
+              <li
+                class="css-1di133w"
+                data-testid="dropdown-item-21"
+              >
+                <div
+                  class="css-18biwo"
+                >
+                  Polynesia
                 </div>
               </li>
             </ul>

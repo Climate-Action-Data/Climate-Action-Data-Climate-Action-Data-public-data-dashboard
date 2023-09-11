@@ -8,6 +8,7 @@ import { generateCountryByRegion } from '@/utils/GenerateCountryByRegion'
 import IssuedRetiredChartHeader from '@/components/organisms/CreditsHistorySection/IssuedRetiredChartHeader'
 import IssuedRetiredChartBody from '@/components/organisms/CreditsHistorySection/IssuedRetiredChartBody'
 import CreditsHistorySkeleton from '@/components/organisms/CreditsHistorySection/CreditsHistorySectionSkeleton'
+import { getWorldRegionList } from '@/utils/WorldRegionsHelper'
 
 const CreditsHistorySection: FC = () => {
   const { getCreditsHistory } = useActions().creditsHistory
@@ -30,6 +31,7 @@ const CreditsHistorySection: FC = () => {
   ): {
     value: string
     label: string
+    isHeader?: boolean
   }[] => {
     if (subRegion !== SubRegion.WORLD) {
       return generateCountryByRegion(subRegion).map((country) => ({
@@ -37,10 +39,7 @@ const CreditsHistorySection: FC = () => {
         label: countryTranslate(`${country}`),
       }))
     } else {
-      return Object.values(SubRegion).map((region) => ({
-        value: region,
-        label: t(`regions.${region}`),
-      }))
+      return getWorldRegionList(t)
     }
   }
 
