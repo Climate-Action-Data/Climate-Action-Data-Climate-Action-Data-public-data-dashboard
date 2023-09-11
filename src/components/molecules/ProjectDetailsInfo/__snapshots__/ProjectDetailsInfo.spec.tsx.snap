@@ -428,6 +428,13 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
           Reforestation and Revegetation
         </p>
       </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-s8hfc8"
+    >
       <div
         class="css-0"
       >
@@ -454,6 +461,34 @@ exports[`ProjectDetailsInfo renders correctly with project 1`] = `
           class="chakra-text css-0"
         >
           2021/04/15
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Validation Body
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Colombian Institute for Technical Standards and Certification (ICONTEC)
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Validation Date
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          2023/04/15
         </p>
       </div>
     </div>
@@ -777,6 +812,13 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
           Reforestation and Revegetation
         </p>
       </div>
+    </div>
+    <div
+      class="chakra-stack__divider css-1g2u1yc"
+    />
+    <div
+      class="css-s8hfc8"
+    >
       <div
         class="css-0"
       >
@@ -803,6 +845,34 @@ exports[`renders correctly with project that had emptyBenefit 1`] = `
           class="chakra-text css-0"
         >
           2021/04/15
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Validation Body
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Colombian Institute for Technical Standards and Certification (ICONTEC)
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Validation Date
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          2023/04/15
         </p>
       </div>
     </div>

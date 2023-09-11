@@ -48,8 +48,14 @@ export const ProjectDetailsInfo = (props: ProjectDetailsInfoProps) => {
         </DetailWidget>
         <DetailWidget title={t(`detailsHeaders.sector`)}>{project.sector}</DetailWidget>
         <DetailWidget title={t(`detailsHeaders.type`)}>{project.type}</DetailWidget>
+      </SimpleGrid>
+      <SimpleGrid columns={DEFAULT_COLUMN} gap="24px">
         <DetailWidget title={t(`detailsHeaders.status`)}>{project.status}</DetailWidget>
         <DetailWidget title={t(`detailsHeaders.statusUpdated`)}>{project.statusDate ? formatDate(project.statusDate, DateFormats.YYYY_MM_DD) : tHome(`noData`)}</DetailWidget>
+        <DetailWidget title={t(`verificationHeaders.validationBody`)}>{project.validation.body}</DetailWidget>
+        <DetailWidget title={t(`verificationHeaders.validationDate`)}>
+          {project.validation.date ? formatDate(project.validation.date, DateFormats.YYYY_MM_DD) : tHome(`noData`)}
+        </DetailWidget>
       </SimpleGrid>
       <Flex flexWrap="wrap">
         <SimpleGrid columns={DEFAULT_COLUMN} gap="24px">
