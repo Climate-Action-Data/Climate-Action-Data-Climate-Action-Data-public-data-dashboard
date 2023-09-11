@@ -53,6 +53,7 @@
   },
   "verificationHeaders": {
     "validationBody": "Validation Body",
+    "validationDate": "Validation Date",
     "validationUpdated": "Verification Report Date",
     "verificationApproach": "Verification Approach",
     "verificationPeriod": "Verification Period"
