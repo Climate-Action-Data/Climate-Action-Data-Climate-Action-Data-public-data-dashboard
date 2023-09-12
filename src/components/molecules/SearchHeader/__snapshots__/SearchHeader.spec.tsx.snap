@@ -68,7 +68,7 @@ exports[`renders correctly 1`] = `
             <input
               class="chakra-input css-1qyom5j"
               data-testid="search-input-enter"
-              placeholder="Search for projects by project name/methodology/country"
+              placeholder="Search projects by name/methodology/country"
               type="text"
               value=""
             />
@@ -703,7 +703,7 @@ exports[`renders correctly and clear the search values 1`] = `
             <input
               class="chakra-input css-1qyom5j"
               data-testid="search-input-enter"
-              placeholder="Search for projects by project name/methodology/country"
+              placeholder="Search projects by name/methodology/country"
               type="text"
               value=""
             />
@@ -1338,7 +1338,7 @@ exports[`renders correctly and clear the search values 2`] = `
             <input
               class="chakra-input css-1qyom5j"
               data-testid="search-input-enter"
-              placeholder="Search for projects by project name/methodology/country"
+              placeholder="Search projects by name/methodology/country"
               type="text"
               value=""
             />
@@ -1973,7 +1973,7 @@ exports[`renders correctly for units path 1`] = `
             <input
               class="chakra-input css-1qyom5j"
               data-testid="search-input-enter"
-              placeholder="Search for units by project name/country/standard/unit status"
+              placeholder="Search units by project name/country/standard/status"
               type="text"
               value=""
             />
@@ -2576,7 +2576,7 @@ exports[`renders correctly with no params, add a search value and submits a sear
             <input
               class="chakra-input css-1qyom5j"
               data-testid="search-input-enter"
-              placeholder="Search for projects by project name/methodology/country"
+              placeholder="Search projects by name/methodology/country"
               type="text"
               value="hello"
             />
@@ -3211,7 +3211,7 @@ exports[`renders correctly with search text 1`] = `
             <input
               class="chakra-input css-1qyom5j"
               data-testid="search-input-enter"
-              placeholder="Search for projects by project name/methodology/country"
+              placeholder="Search projects by name/methodology/country"
               type="text"
               value="test"
             />

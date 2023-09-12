@@ -30,7 +30,7 @@ exports[`renders correctly and perform a search on enter 1`] = `
         </div>
         <input
           class="chakra-input css-0"
-          placeholder="Search for units by project name/country/standard/unit status"
+          placeholder="Search units by project name/country/standard/status"
           value="hello"
         />
       </div>
@@ -75,7 +75,7 @@ exports[`renders correctly for project search 1`] = `
       >
         <input
           class="chakra-input css-0"
-          placeholder="Search for projects by project name/methodology/country"
+          placeholder="Search projects by name/methodology/country"
           value=""
         />
       </div>
@@ -120,7 +120,7 @@ exports[`renders correctly for project search with no params, add a search value
       >
         <input
           class="chakra-input css-0"
-          placeholder="Search for projects by project name/methodology/country"
+          placeholder="Search projects by name/methodology/country"
           value=""
         />
       </div>
@@ -165,7 +165,7 @@ exports[`renders correctly for unit search 1`] = `
       >
         <input
           class="chakra-input css-0"
-          placeholder="Search for units by project name/country/standard/unit status"
+          placeholder="Search units by project name/country/standard/status"
           value=""
         />
       </div>
