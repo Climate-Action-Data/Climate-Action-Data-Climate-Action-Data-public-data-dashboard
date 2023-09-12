@@ -34,7 +34,7 @@ export const getCreditsHistory = async (): Promise<EffectResponse<IssuedRetiredG
 }
 
 export const appendChartDataAndStat = (result: FilteredCreditsHistoryData, formattedDateTime: Date, issued: number, retired: number) => {
-  const index = result.chartData[0].data.findIndex((e) => e.x === formattedDateTime)
+  const index = result.chartData[0].data.findIndex((e) => e.x.toDateString() === formattedDateTime.toDateString())
   if (index < 0) {
     result.chartData[0].data.push({ x: formattedDateTime, y: issued })
     result.chartData[1].data.push({ x: formattedDateTime, y: retired })
