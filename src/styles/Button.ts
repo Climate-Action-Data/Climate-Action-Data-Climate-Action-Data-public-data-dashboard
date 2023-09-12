@@ -25,11 +25,11 @@ export const whiteSecondary = defineStyle({
   borderWidth: `1px`,
   borderRadius: `32px`,
   _hover: {
-    background: `gray.50`,
+    background: `gray.100`,
     textDecoration: `none`,
   },
   _active: {
-    background: `#4D5C62`,
+    background: `lightGray.700`,
     textDecoration: `none`,
   },
 })

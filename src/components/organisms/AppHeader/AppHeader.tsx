@@ -34,7 +34,7 @@ const AppHeader: FC = () => {
             <Text fontSize={[`lg`, `40px`, `40px`]} className={styles.headerTitle} fontFamily={AeonikFono.style.fontFamily}>
               {t(`appHeader.title`)}
             </Text>
-            <Link as={`button`} variant={`whiteSecondary`} href={`https://www.google.com`}>
+            <Link as={`button`} variant={`whiteSecondary`} href={`https://www.climateactiondata.org`}>
               {t(`appHeader.findOutMore`)}
             </Link>
           </Flex>
