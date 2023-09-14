@@ -20,14 +20,12 @@ const ProfilePage = () => {
   const { getUserProfile } = useActions().profile
 
   useEffect(() => {
-    console.log(`useEffect`)
     if (userProfile === undefined) {
       fetchProfile()
     }
   }, [])
 
   const fetchProfile = () => {
-    console.log(`fetching profile`)
     getUserProfile()
       .then((result) => {
         if (result.data) {
@@ -38,6 +36,8 @@ const ProfilePage = () => {
         setUserProfile(undefined)
       })
   }
+
+  const isProfileEditable = !userProfile?.isSocial ?? userProfile?.id.startsWith(`auth0|`)
 
   return (
     <Flex id="headerReference" flexDirection="column" position="sticky" top="56px" minH="48px" px="24px" pt="16px" pb="16px" zIndex="docked" backgroundColor="white" width="100%">
@@ -73,12 +73,14 @@ const ProfilePage = () => {
                     <DetailWidget title={t(`email`)}>{userProfile.email}</DetailWidget>
                   </SimpleGrid>
                   <SimpleGrid columns={2} gap="24px">
-                    <DetailWidget title={t(`country`)}>{userProfile.country}</DetailWidget>
-                    <DetailWidget title={t(`organizationName`)}>{userProfile.company}</DetailWidget>
+                    <DetailWidget title={t(`country`)}>{userProfile.country ?? thome(`noData`)}</DetailWidget>
+                    <DetailWidget title={t(`organizationName`)}>{userProfile.company ?? thome(`noData`)}</DetailWidget>
                   </SimpleGrid>
-                  <Button data-testid="page-create-watchlist-button" marginTop="40px" variant={`blueOutline`} width={`92px`}>
-                    {t(`editProfile`)}
-                  </Button>
+                  {isProfileEditable && (
+                    <Button data-testid="page-create-watchlist-button" marginTop="40px" variant={`blueOutline`} width={`92px`}>
+                      {t(`editProfile`)}
+                    </Button>
+                  )}
                 </Container>
               </TabPanel>
               <TabPanel py={0} px={`56px`} pr={`174px`}>
