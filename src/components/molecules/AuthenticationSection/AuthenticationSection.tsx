@@ -29,6 +29,10 @@ const AuthenticationSection: FC = (props) => {
     loginWithRedirect()
   }
 
+  const handleProfileClick = () => {
+    router.push(`/profile`)
+  }
+
   const handleWatchlistClick = () => {
     router.push(`/watchlist/all`)
   }
@@ -64,7 +68,9 @@ const AuthenticationSection: FC = (props) => {
           <Avatar marginLeft="6px" size="xs" name={user?.name} src={user?.picture} />
         </MenuButton>
         <MenuList>
-          <MenuItem icon={<ProfileIcon />}>{t(`profile`)}</MenuItem>
+          <MenuItem onClick={handleProfileClick} icon={<ProfileIcon />}>
+            {t(`profile`)}
+          </MenuItem>
           <MenuItem onClick={handleWatchlistClick} icon={<WatchlistsIcon />}>
             {t(`watchlists`)}
           </MenuItem>
