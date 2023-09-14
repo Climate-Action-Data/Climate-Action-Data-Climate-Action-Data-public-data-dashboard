@@ -74,7 +74,6 @@ export const getWorldRegionList = (t: TFunction) => [
     value: SubRegion.WESTERN_EUROPE,
     label: t(`regions.${SubRegion.WESTERN_EUROPE}`),
   },
-
   {
     value: Region.OCEANIA,
     label: t(`regions.${Region.OCEANIA}`),
