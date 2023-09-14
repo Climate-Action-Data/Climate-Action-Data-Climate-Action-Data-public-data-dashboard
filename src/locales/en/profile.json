@@ -1,0 +1,16 @@
+{
+  "profileBreadCrumb": "Account",
+  "account": "Account",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "Email",
+  "country": "Country",
+  "organizationName": "Organization Name",
+  "editProfile": "Edit profile",
+  "loginInformation": "Login Information",
+  "saveChanges": "Save changes",
+  "cancel": "Cancel",
+  "username": "Username",
+  "password": "Password",
+  "edit": "Edit"
+}

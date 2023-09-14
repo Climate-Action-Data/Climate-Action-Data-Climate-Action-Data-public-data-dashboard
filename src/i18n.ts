@@ -8,6 +8,7 @@ import enSearch from './locales/en/search.json'
 import enProjectDetails from './locales/en/projectDetails.json'
 import enUnitDetails from './locales/en/unitDetails.json'
 import enWatchlist from './locales/en/watchlist.json'
+import enProfile from './locales/en/profile.json'
 
 i18next.use(initReactI18next).init({
   fallbackLng: `en`,
@@ -20,6 +21,7 @@ i18next.use(initReactI18next).init({
       projectDetails: enProjectDetails,
       unitDetails: enUnitDetails,
       watchlist: enWatchlist,
+      profile: enProfile,
     },
   },
 })
