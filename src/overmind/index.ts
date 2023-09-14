@@ -11,6 +11,7 @@ import * as exports from './exports'
 import * as watchlist from './watchlist'
 import * as authentication from './authentication'
 import * as compareProjects from './compareProjects'
+import * as profile from './profile'
 
 export const config = namespaced({
   analytics,
@@ -22,6 +23,7 @@ export const config = namespaced({
   watchlist,
   compareProjects,
   authentication,
+  profile,
 })
 
 export type Context = IContext<typeof config>

@@ -12,5 +12,7 @@
   "cancel": "Cancel",
   "username": "Username",
   "password": "Password",
-  "edit": "Edit"
+  "edit": "Edit",
+  "incompleteDetailsMessage": "Looks like you have some missing fields. Complete them to enhance your profile.",
+  "incompleteField": "Incomplete field"
 }
