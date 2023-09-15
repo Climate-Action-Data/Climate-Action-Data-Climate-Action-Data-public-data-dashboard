@@ -13,3 +13,11 @@ export type UserProfile = {
   createdAt: string
   updatedAt: string
 }
+
+export type UpdateUserProfile = {
+  id: string
+  firstName?: string
+  lastName?: string
+  company?: string
+  country?: string
+}
