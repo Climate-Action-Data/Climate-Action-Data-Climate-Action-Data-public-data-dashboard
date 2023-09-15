@@ -5,6 +5,8 @@ export const setAuthentication = (context: Context, { user, authToken }: { user:
   context.state.authentication.user = user
   context.state.authentication.authToken = authToken
   context.state.authentication.isAuthed = true
+
+  context.actions.profile.getUserProfile()
 }
 
 export const clearAuthentication = (context: Context) => {
