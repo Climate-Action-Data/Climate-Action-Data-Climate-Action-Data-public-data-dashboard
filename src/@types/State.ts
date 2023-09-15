@@ -5,6 +5,7 @@ import { TimeframesData } from './Timeframe'
 import { UnitSearchResponse } from './UnitSearchResult'
 import { SubRegion } from './geojson'
 import { AllSearchFilterValues, ProjectSearchFilterValues, UnitSearchFilterValues } from '@/@types/ProjectSearchFilterValues'
+import { UserProfile } from './UserProfile'
 
 export interface CountryPeriodData {
   activeProjects: number
@@ -142,4 +143,8 @@ export interface AuthenticationState {
   user: User | undefined
   authToken: string | undefined
   isAuthed: boolean
+}
+
+export interface ProfileState {
+  userProfile?: UserProfile
 }
