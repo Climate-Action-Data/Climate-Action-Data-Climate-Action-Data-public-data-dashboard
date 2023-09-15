@@ -1,4 +1,5 @@
 import { Context } from '@/overmind'
+import { UpdateUserProfile } from '@/@types/UserProfile'
 
 export const getUserProfile = async (context: Context) => {
   const authToken = context.state.authentication.authToken
@@ -13,14 +14,11 @@ export const getUserProfile = async (context: Context) => {
   }
 }
 
-export const updateUserProfile = async (context: Context): Promise<boolean> => {
+export const updateUserProfile = async (context: Context, profile: UpdateUserProfile): Promise<boolean> => {
   const authToken = context.state.authentication.authToken
 
   if (authToken && context.state.profile.userProfile) {
-    const userProfile = await context.effects.profile.updateUserProfile(authToken, {
-      id: context.state.profile.userProfile.id,
-      country: `Singapore`,
-    })
+    const userProfile = await context.effects.profile.updateUserProfile(authToken, profile)
 
     if (userProfile.data) {
       context.state.profile.userProfile = userProfile.data

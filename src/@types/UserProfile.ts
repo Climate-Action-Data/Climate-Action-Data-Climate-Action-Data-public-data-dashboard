@@ -15,7 +15,7 @@ export type UserProfile = {
 }
 
 export type UpdateUserProfile = {
-  id: string
+  id?: string
   firstName?: string
   lastName?: string
   company?: string
