@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 import { DetailWidget } from '@/components/atoms/DetailWidget/DetailWidget'
 import { ProfileIcon } from '@/components/atoms/ProfileIcon/ProfileIcon'
 import { LockIcon } from '@/components/atoms/LockIcon/LockIcon'
-import { useAppState } from '@/overmind'
+import { useActions, useAppState } from '@/overmind'
 
 const ProfilePage = () => {
   const { t } = useTranslation(`profile`)
@@ -15,7 +15,19 @@ const ProfilePage = () => {
 
   const { userProfile } = useAppState().profile
 
+  const { updateUserProfile } = useActions().profile
+
   const isProfileEditable = !userProfile?.isSocial ?? userProfile?.id.startsWith(`auth0|`)
+
+  const handleSaveChanges = () => {
+    updateUserProfile()
+      .then(async (result) => {
+        if (result) {
+          console.log(`Profile updated successfully`)
+        }
+      })
+      .catch(() => console.log(`Profile update error`))
+  }
 
   return (
     <>
@@ -56,7 +68,7 @@ const ProfilePage = () => {
                       <DetailWidget title={t(`organizationName`)}>{userProfile.company ?? thome(`noData`)}</DetailWidget>
                     </SimpleGrid>
                     {isProfileEditable && (
-                      <Button data-testid="page-create-watchlist-button" marginTop="40px" variant={`blueOutline`} width={`92px`}>
+                      <Button data-testid="page-create-watchlist-button" marginTop="40px" variant={`blueOutline`} width={`92px`} onClick={handleSaveChanges}>
                         {t(`editProfile`)}
                       </Button>
                     )}
