@@ -136,7 +136,7 @@ const ProfileContainer = (props: ProfileContainerProps) => {
           )}
         </DetailWidget>
         <DetailWidget title={t(`organizationName`)}>
-          {editMode ? <Input onChange={handleCompanyChange} value={company} variant={`soloDropdown`} data-testid="edit-last-name" /> : company ?? thome(`noData`)}
+          {editMode ? <Input onChange={handleCompanyChange} value={company} variant={`soloDropdown`} data-testid="edit-company" /> : company ?? thome(`noData`)}
         </DetailWidget>
       </SimpleGrid>
       {!userProfile.isSocial &&
