@@ -105,37 +105,35 @@ const ProfilePage = () => {
   }
 
   return (
-    <>
-      <Flex id="headerReference" flexDirection="column" position="sticky" top="56px" minH="48px" px="24px" pt="16px" pb="16px" zIndex="docked" width="100%">
-        <BreadCrumbs items={[{ title: `Account`, link: `/profile` }]} color="lightGray.700" />
-        {userProfile && (
-          <Box paddingY={[`20px`, `20px`, `58px`, `58px`]} paddingX={[`10px`, `10px`, `120px`, `120px`]}>
-            <Heading>{t(`account`)}</Heading>
-            {isTab ? (
-              <Tabs variant="unstyled" orientation="vertical" py={`32px`} onChange={handleTabChange} index={selectedTabIndex}>
-                {buildTabs()}
-                <TabPanels padding={0}>
-                  <TabPanel py={0} px={`56px`} pr={`174px`}>
-                    <ProfileContainer editMode={editMode} userProfile={userProfile} onSave={handleSaveChanges} onEdit={handleEditClick} onCancel={handleCancelClick} />
-                  </TabPanel>
-                  <TabPanel py={0} px={`56px`} pr={`174px`}>
-                    <LoginInformationContainer />
-                  </TabPanel>
-                </TabPanels>
-              </Tabs>
-            ) : (
-              <>
-                <Dropdown items={sections} placeholder="" onItemClick={(item) => handlePageChange(item.value)} />
-                {selectedTabIndex == 0 && (
+    <Flex id="headerReference" flexDirection="column" position="sticky" top="56px" minH="48px" px="24px" pt="16px" pb="16px" zIndex="docked" width="100%">
+      <BreadCrumbs items={[{ title: `Account`, link: `/profile` }]} color="lightGray.700" />
+      {userProfile && (
+        <Box paddingY={[`20px`, `20px`, `58px`, `58px`]} paddingX={[`10px`, `10px`, `120px`, `120px`]}>
+          <Heading>{t(`account`)}</Heading>
+          {isTab ? (
+            <Tabs variant="unstyled" orientation="vertical" py={`32px`} onChange={handleTabChange} index={selectedTabIndex}>
+              {buildTabs()}
+              <TabPanels padding={0}>
+                <TabPanel py={0} px={`56px`} pr={`174px`}>
                   <ProfileContainer editMode={editMode} userProfile={userProfile} onSave={handleSaveChanges} onEdit={handleEditClick} onCancel={handleCancelClick} />
-                )}
-                {selectedTabIndex == 1 && <LoginInformationContainer />}
-              </>
-            )}
-          </Box>
-        )}
-      </Flex>
-    </>
+                </TabPanel>
+                <TabPanel py={0} px={`56px`} pr={`174px`}>
+                  <LoginInformationContainer />
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
+          ) : (
+            <>
+              <Dropdown items={sections} placeholder="" onItemClick={(item) => handlePageChange(item.value)} />
+              {selectedTabIndex == 0 && (
+                <ProfileContainer editMode={editMode} userProfile={userProfile} onSave={handleSaveChanges} onEdit={handleEditClick} onCancel={handleCancelClick} />
+              )}
+              {selectedTabIndex == 1 && <LoginInformationContainer />}
+            </>
+          )}
+        </Box>
+      )}
+    </Flex>
   )
 }
 

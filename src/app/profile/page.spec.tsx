@@ -3,6 +3,7 @@ import { render } from '@testing-library/react'
 import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 import { TestRouter } from '@/test/TestRouter'
 import ProfilePage from './page'
+import { PROFILE_DATA } from '@/test/TestOvermindMockData'
 
 jest.mock(`@chakra-ui/react`, () => ({
   ...jest.requireActual(`@chakra-ui/react`),
@@ -11,7 +12,7 @@ jest.mock(`@chakra-ui/react`, () => ({
 
 it(`renders correctly`, () => {
   const { container } = render(
-    <TestOvermindWrapper>
+    <TestOvermindWrapper profile={PROFILE_DATA}>
       <TestRouter router={{}}>
         <ProfilePage />
       </TestRouter>

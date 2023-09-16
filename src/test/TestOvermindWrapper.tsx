@@ -5,7 +5,7 @@ import { Provider } from 'overmind-react'
 import { config } from '@/overmind'
 import { SubRegion } from '@/@types/geojson'
 import { TimeframesData } from '@/@types/Timeframe'
-import { CreditsHistoryDataState, DataState, ProjectResultState, SearchFiltersStateData } from '@/@types/State'
+import { CreditsHistoryDataState, DataState, ProfileState, ProjectResultState, SearchFiltersStateData } from '@/@types/State'
 import { ProjectSearchSortBy, DatabaseQueryDirection, UnitSearchSortBy } from '@/@types/ProjectSearchFilterValues'
 
 interface TestOvermindWrapperProps extends PropsWithChildren {
@@ -13,6 +13,7 @@ interface TestOvermindWrapperProps extends PropsWithChildren {
   creditsHistory?: CreditsHistoryDataState
   searchFilters?: SearchFiltersStateData
   projectResult?: ProjectResultState
+  profile?: ProfileState
 }
 
 export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
@@ -75,11 +76,16 @@ export const TestOvermindWrapper = (props: TestOvermindWrapperProps) => {
     projectResults: undefined,
   }
 
+  const userProfile = props?.profile ?? {
+    userProfile: undefined,
+  }
+
   const overmind = createOvermindMock(config, (state) => {
     state.analytics = carbonMapData
     state.creditsHistory = creditHistoryData
     state.searchFilters = searchFilters
     state.projectResult = projectResult
+    state.profile = userProfile
   })
 
   return <Provider value={overmind}>{actualProps.children}</Provider>
