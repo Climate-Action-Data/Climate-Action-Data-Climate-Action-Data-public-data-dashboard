@@ -91,7 +91,7 @@ const ProfileContainer = (props: ProfileContainerProps) => {
   const countryList: Item[] = [
     { label: `Select`, value: `` },
     ...Object.values(countries).map((value) => {
-      return { label: value.name || ``, value: value.name || `` }
+      return { label: value.name ?? ``, value: value.name ?? `` }
     }),
   ]
 

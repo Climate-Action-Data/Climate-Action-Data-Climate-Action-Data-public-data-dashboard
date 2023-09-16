@@ -43,6 +43,203 @@ exports[`renders correctly 1`] = `
         </li>
       </ol>
     </nav>
+    <div
+      class="css-1bxespq"
+    >
+      <h2
+        class="chakra-heading css-0"
+      >
+        Account
+      </h2>
+      <button
+        aria-controls="popover-content-:r1:"
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        class="chakra-button css-aay2ge"
+        data-testid="dropdown-button"
+        id="popover-trigger-:r1:"
+        type="button"
+      >
+        <div
+          class="css-1rr4qq7"
+        >
+           
+          <span
+            class="chakra-text css-10rvbm3"
+          >
+            Edit profile
+          </span>
+        </div>
+        <svg
+          class="chakra-icon css-c0air1"
+          focusable="false"
+          viewBox="0 0 8 4"
+        >
+          <path
+            d="M3.99911 3.9034L0.191406 0.0957031H7.80681L3.99911 3.9034Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+      <div
+        class="chakra-popover__popper css-0"
+        style="visibility: hidden; position: absolute; inset: 0 auto auto 0;"
+      >
+        <section
+          aria-describedby="popover-body-:r1:"
+          class="chakra-popover__content css-faem7"
+          data-testid="dropdown-body"
+          id="popover-content-:r1:"
+          role="dialog"
+          style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0);"
+          tabindex="-1"
+        >
+          <div
+            class="chakra-popover__body css-old1by"
+            id="popover-body-:r1:"
+          >
+            <ul
+              class="css-155za0w"
+              role="list"
+            >
+              <div
+                class="css-ua49oa"
+                data-testid="dropdown-item"
+              >
+                <li
+                  class="css-1gf73kr"
+                >
+                  Edit profile
+                </li>
+              </div>
+              <div
+                class="css-ua49oa"
+                data-testid="dropdown-item"
+              >
+                <li
+                  class="css-1gf73kr"
+                >
+                  Login Information
+                </li>
+              </div>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div
+        class="chakra-container css-4io1el"
+      >
+        <div
+          class="chakra-stack css-v2wsrc"
+        >
+          <span
+            class="chakra-avatar css-1g5xqid"
+          >
+            <div
+              aria-label="John"
+              class="chakra-avatar__initials css-0"
+              role="img"
+            >
+              J
+            </div>
+          </span>
+          <p
+            class="chakra-text css-0"
+          >
+            John
+             
+            Doe
+          </p>
+        </div>
+        <div
+          class="css-1ss9yhm"
+        >
+          <div
+            class="css-0"
+          >
+            <p
+              class="chakra-text css-1xi4xed"
+            >
+              First Name
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              John
+            </p>
+          </div>
+          <div
+            class="css-0"
+          >
+            <p
+              class="chakra-text css-1xi4xed"
+            >
+              Last Name
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              Doe
+            </p>
+          </div>
+        </div>
+        <div
+          class="css-1ncpqsg"
+        >
+          <div
+            class="css-0"
+          >
+            <p
+              class="chakra-text css-1xi4xed"
+            >
+              Email
+            </p>
+            <p
+              class="chakra-text css-0"
+            />
+          </div>
+        </div>
+        <div
+          class="css-1ss9yhm"
+        >
+          <div
+            class="css-0"
+          >
+            <p
+              class="chakra-text css-1xi4xed"
+            >
+              Country
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              US
+            </p>
+          </div>
+          <div
+            class="css-0"
+          >
+            <p
+              class="chakra-text css-1xi4xed"
+            >
+              Organization Name
+            </p>
+            <p
+              class="chakra-text css-0"
+            >
+              Company
+            </p>
+          </div>
+        </div>
+        <button
+          class="chakra-button css-fk22cu"
+          data-testid="edit-profile-button"
+          type="button"
+        >
+          Edit profile
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 `;
