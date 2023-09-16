@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginInformationContainer renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="chakra-container css-15249bq"
+  >
+    <div
+      class="chakra-stack css-1igwmid"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Password
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          •••••••••••
+        </p>
+      </div>
+      <button
+        class="chakra-button css-1i5y587"
+        data-testid="edit-password-button"
+        type="button"
+      >
+        Edit
+      </button>
+    </div>
+    <div
+      class="css-h5fkc8"
+    >
+      <p
+        class="chakra-text css-0"
+      >
+        Current Login Method
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

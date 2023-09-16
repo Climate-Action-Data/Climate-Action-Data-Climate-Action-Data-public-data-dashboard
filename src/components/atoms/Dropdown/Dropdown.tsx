@@ -1,7 +1,7 @@
 import { Button, List, ListItem, Popover, PopoverBody, PopoverContent, PopoverTrigger, Box, Text } from '@chakra-ui/react'
 import { DropDownIcon } from '../DropDownIcon/DropDownIcon'
 import { generateRandomString } from '@/utils/GenerationHelpers'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export interface Item {
   label: string
@@ -13,13 +13,20 @@ export interface DropdownProps<T extends Item> {
   placeholder: string
   label?: string
   highlightItemBg?: string
+  defaultSelection?: T
   onItemClick: (item: T) => void
 }
 
 export const Dropdown = <T extends Item>(props: DropdownProps<T>) => {
-  const { items, onItemClick, placeholder } = props
+  const { items, onItemClick, placeholder, defaultSelection } = props
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [selectedItem, setSelectedItem] = useState<T | undefined>(items[0] ?? undefined)
+
+  useEffect(() => {
+    if (defaultSelection) {
+      setSelectedItem(defaultSelection)
+    }
+  }, [])
 
   const handleItemClick = (item: T) => {
     setIsOpen(false)
