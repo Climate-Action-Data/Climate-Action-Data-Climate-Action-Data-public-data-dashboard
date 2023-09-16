@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileContainer renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="chakra-container css-4io1el"
+  >
+    <div
+      class="chakra-stack css-v2wsrc"
+    >
+      <span
+        class="chakra-avatar css-1g5xqid"
+      >
+        <div
+          aria-label="John"
+          class="chakra-avatar__initials css-0"
+          role="img"
+        >
+          J
+        </div>
+      </span>
+      <p
+        class="chakra-text css-0"
+      >
+        John Doe
+      </p>
+    </div>
+    <div
+      class="css-1ss9yhm"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          First Name
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          John
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Last Name
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Doe
+        </p>
+      </div>
+    </div>
+    <div
+      class="css-1ncpqsg"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Email
+        </p>
+        <p
+          class="chakra-text css-0"
+        />
+      </div>
+    </div>
+    <div
+      class="css-1ss9yhm"
+    >
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Country
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          US
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <p
+          class="chakra-text css-1xi4xed"
+        >
+          Organization Name
+        </p>
+        <p
+          class="chakra-text css-0"
+        >
+          Company
+        </p>
+      </div>
+    </div>
+    <button
+      class="chakra-button css-fk22cu"
+      data-testid="edit-profile-button"
+      type="button"
+    >
+      Edit profile
+    </button>
+  </div>
+</DocumentFragment>
+`;
