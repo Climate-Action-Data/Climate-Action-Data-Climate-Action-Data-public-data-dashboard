@@ -8,7 +8,7 @@ import { useState } from 'react'
 import { ProfileIcon } from '@/components/atoms/ProfileIcon/ProfileIcon'
 import { LockIcon } from '@/components/atoms/LockIcon/LockIcon'
 import { useActions, useAppState } from '@/overmind'
-import { UpdateUserProfile } from '@/@types/UserProfile'
+import { UpdateUserProfile, UserProfile } from '@/@types/UserProfile'
 import ProfileContainer from '@/components/organisms/ProfileContainer/ProfileContainer'
 import { useToastHook } from '@/components/atoms/Toast/Toast'
 import { ToastVariants } from '@/@types/Toast'
@@ -104,6 +104,14 @@ const ProfilePage = () => {
     )
   }
 
+  const buildProfileContainer = (profile: UserProfile) => {
+    return <ProfileContainer editMode={editMode} userProfile={profile} onSave={handleSaveChanges} onEdit={handleEditClick} onCancel={handleCancelClick} />
+  }
+
+  const buildLoginInformationContainer = (id: string) => {
+    return <LoginInformationContainer id={id} />
+  }
+
   return (
     <Flex id="headerReference" flexDirection="column" position="sticky" top="56px" minH="48px" px="24px" pt="16px" pb="16px" zIndex="docked" width="100%">
       <BreadCrumbs items={[{ title: `Account`, link: `/profile` }]} color="lightGray.700" />
@@ -115,20 +123,18 @@ const ProfilePage = () => {
               {buildTabs()}
               <TabPanels padding={0}>
                 <TabPanel py={0} px={`56px`} pr={`174px`}>
-                  <ProfileContainer editMode={editMode} userProfile={userProfile} onSave={handleSaveChanges} onEdit={handleEditClick} onCancel={handleCancelClick} />
+                  {buildProfileContainer(userProfile)}
                 </TabPanel>
                 <TabPanel py={0} px={`56px`} pr={`174px`}>
-                  <LoginInformationContainer />
+                  {buildLoginInformationContainer(userProfile.id)}
                 </TabPanel>
               </TabPanels>
             </Tabs>
           ) : (
             <>
               <Dropdown items={sections} placeholder="" onItemClick={(item) => handlePageChange(item.value)} />
-              {selectedTabIndex == 0 && (
-                <ProfileContainer editMode={editMode} userProfile={userProfile} onSave={handleSaveChanges} onEdit={handleEditClick} onCancel={handleCancelClick} />
-              )}
-              {selectedTabIndex == 1 && <LoginInformationContainer />}
+              {selectedTabIndex == 0 && buildProfileContainer(userProfile)}
+              {selectedTabIndex == 1 && buildLoginInformationContainer(userProfile.id)}
             </>
           )}
         </Box>

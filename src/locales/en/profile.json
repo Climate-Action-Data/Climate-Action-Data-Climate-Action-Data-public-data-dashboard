@@ -16,5 +16,6 @@
   "incompleteDetailsMessage": "Looks like you have some missing fields. Complete them to enhance your profile.",
   "incompleteField": "Incomplete field",
   "updateSuccess": "Your profile has been updated successfully.",
-  "updateFailed": "Your profile could not be updated. Please try again."
+  "updateFailed": "Your profile could not be updated. Please try again.",
+  "passordPlaceHolder": "•••••••••••"
 }
