@@ -21,3 +21,7 @@ export type UpdateUserProfile = {
   company?: string
   country?: string
 }
+
+export type ResetPassword = {
+  email: string
+}

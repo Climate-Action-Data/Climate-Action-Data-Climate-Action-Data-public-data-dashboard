@@ -27,3 +27,16 @@ export const updateUserProfile = async (context: Context, profile: UpdateUserPro
   }
   return false
 }
+
+export const resetPassword = async (context: Context): Promise<boolean> => {
+  const authToken = context.state.authentication.authToken
+
+  if (authToken && context.state.profile.userProfile) {
+    const resetPassword = await context.effects.profile.resetPassword(authToken, { email: context.state.profile.userProfile.email })
+
+    if (resetPassword.data) {
+      return true
+    }
+  }
+  return false
+}
