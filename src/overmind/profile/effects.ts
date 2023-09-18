@@ -50,7 +50,7 @@ export const updateUserProfile = async (authToken: string, userProfile: UpdateUs
 }
 
 export const resetPassword = async (authToken: string, resetPassword: ResetPassword): Promise<EffectResponse<boolean>> => {
-  const resetPasswordEndpoint = `${defaultDomain}/v1/users/user/reset-password`
+  const resetPasswordEndpoint = `${defaultDomain}/v1/users/reset-password`
 
   return new Promise((resolve) => {
     let result: EffectResponse<boolean>
