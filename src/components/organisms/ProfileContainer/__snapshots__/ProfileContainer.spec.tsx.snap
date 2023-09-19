@@ -2803,7 +2803,7 @@ exports[`ProfileContainer renders correctly in view mode 1`] = `
       data-testid="edit-profile-button"
       type="button"
     >
-      Edit profile
+      Edit Profile
     </button>
   </div>
 </div>

@@ -82,7 +82,7 @@ exports[`ProfilePage renders correctly on cancel edit 1`] = `
             <p
               class="chakra-text css-1isemmb"
             >
-              Edit profile
+              Edit Profile
             </p>
           </button>
           <button
@@ -232,7 +232,7 @@ exports[`ProfilePage renders correctly on cancel edit 1`] = `
                 data-testid="edit-profile-button"
                 type="button"
               >
-                Edit profile
+                Edit Profile
               </button>
             </div>
           </div>
@@ -248,7 +248,7 @@ exports[`ProfilePage renders correctly on cancel edit 1`] = `
               class="chakra-container css-6g11cv"
             >
               <div
-                class="chakra-stack css-1igwmid"
+                class="chakra-stack css-1gx5vz7"
               >
                 <div
                   class="css-0"
@@ -273,7 +273,7 @@ exports[`ProfilePage renders correctly on cancel edit 1`] = `
                 </button>
               </div>
               <div
-                class="css-fbl425"
+                class="css-0"
               >
                 <p
                   class="chakra-text css-tdf7bg"
@@ -391,7 +391,7 @@ exports[`ProfilePage renders correctly on desktop 1`] = `
             <p
               class="chakra-text css-1isemmb"
             >
-              Edit profile
+              Edit Profile
             </p>
           </button>
           <button
@@ -541,7 +541,7 @@ exports[`ProfilePage renders correctly on desktop 1`] = `
                 data-testid="edit-profile-button"
                 type="button"
               >
-                Edit profile
+                Edit Profile
               </button>
             </div>
           </div>
@@ -557,7 +557,7 @@ exports[`ProfilePage renders correctly on desktop 1`] = `
               class="chakra-container css-6g11cv"
             >
               <div
-                class="chakra-stack css-1igwmid"
+                class="chakra-stack css-1gx5vz7"
               >
                 <div
                   class="css-0"
@@ -582,7 +582,7 @@ exports[`ProfilePage renders correctly on desktop 1`] = `
                 </button>
               </div>
               <div
-                class="css-fbl425"
+                class="css-0"
               >
                 <p
                   class="chakra-text css-tdf7bg"
@@ -700,7 +700,7 @@ exports[`ProfilePage renders correctly on mobile 1`] = `
             <p
               class="chakra-text css-1isemmb"
             >
-              Edit profile
+              Edit Profile
             </p>
           </button>
           <button
@@ -850,7 +850,7 @@ exports[`ProfilePage renders correctly on mobile 1`] = `
                 data-testid="edit-profile-button"
                 type="button"
               >
-                Edit profile
+                Edit Profile
               </button>
             </div>
           </div>
@@ -866,7 +866,7 @@ exports[`ProfilePage renders correctly on mobile 1`] = `
               class="chakra-container css-6g11cv"
             >
               <div
-                class="chakra-stack css-1igwmid"
+                class="chakra-stack css-1gx5vz7"
               >
                 <div
                   class="css-0"
@@ -891,7 +891,7 @@ exports[`ProfilePage renders correctly on mobile 1`] = `
                 </button>
               </div>
               <div
-                class="css-fbl425"
+                class="css-0"
               >
                 <p
                   class="chakra-text css-tdf7bg"
@@ -1009,7 +1009,7 @@ exports[`ProfilePage renders correctly on save 1`] = `
             <p
               class="chakra-text css-1isemmb"
             >
-              Edit profile
+              Edit Profile
             </p>
           </button>
           <button
@@ -1159,7 +1159,7 @@ exports[`ProfilePage renders correctly on save 1`] = `
                 data-testid="edit-profile-button"
                 type="button"
               >
-                Edit profile
+                Edit Profile
               </button>
             </div>
           </div>
@@ -1175,7 +1175,7 @@ exports[`ProfilePage renders correctly on save 1`] = `
               class="chakra-container css-6g11cv"
             >
               <div
-                class="chakra-stack css-1igwmid"
+                class="chakra-stack css-1gx5vz7"
               >
                 <div
                   class="css-0"
@@ -1200,7 +1200,7 @@ exports[`ProfilePage renders correctly on save 1`] = `
                 </button>
               </div>
               <div
-                class="css-fbl425"
+                class="css-0"
               >
                 <p
                   class="chakra-text css-tdf7bg"

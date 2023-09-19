@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoginInformationContainer renders correctly 1`] = `
+exports[`LoginMethodContainer renders correctly 1`] = `
 <div>
   <div
     class="chakra-stack css-eztwi1"

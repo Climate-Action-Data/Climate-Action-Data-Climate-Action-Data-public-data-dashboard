@@ -108,8 +108,8 @@ const ProfilePage = () => {
     return <ProfileContainer editMode={editMode} userProfile={profile} onSave={handleSaveChanges} onEdit={handleEditClick} onCancel={handleCancelClick} />
   }
 
-  const buildLoginInformationContainer = (id: string) => {
-    return <LoginInformationContainer id={id} />
+  const buildLoginInformationContainer = (profile: UserProfile) => {
+    return <LoginInformationContainer id={profile.id} isSocialLogin={profile.isSocial} />
   }
 
   return (
@@ -126,7 +126,7 @@ const ProfilePage = () => {
                   {buildProfileContainer(userProfile)}
                 </TabPanel>
                 <TabPanel py={0} px={`56px`} pr={`174px`}>
-                  {buildLoginInformationContainer(userProfile.id)}
+                  {buildLoginInformationContainer(userProfile)}
                 </TabPanel>
               </TabPanels>
             </Tabs>
@@ -134,7 +134,7 @@ const ProfilePage = () => {
             <>
               <Dropdown items={sections} placeholder="" onItemClick={(item) => handlePageChange(item.value)} />
               {selectedTabIndex == 0 && buildProfileContainer(userProfile)}
-              {selectedTabIndex == 1 && buildLoginInformationContainer(userProfile.id)}
+              {selectedTabIndex == 1 && buildLoginInformationContainer(userProfile)}
             </>
           )}
         </Box>
