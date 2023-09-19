@@ -30,7 +30,7 @@ const ProfilePage = () => {
   const isTab = useBreakpointValue({ base: false, md: true })
 
   const { userProfile } = useAppState().profile
-  const { updateUserProfile } = useActions().profile
+  const { updateUserProfile, resetPassword } = useActions().profile
 
   const handleEditClick = () => {
     setEditMode(!editMode)
@@ -63,6 +63,18 @@ const ProfilePage = () => {
       })
       .catch(() => {
         newToast({ variant: ToastVariants.FAILURE, message: t(`updateFailed`), icon: <ProfileIcon /> })
+      })
+  }
+
+  const handleResetPassword = () => {
+    resetPassword()
+      .then(async (result) => {
+        if (result) {
+          newToast({ variant: ToastVariants.SUCCESS, message: t(`resetPasswordSuccess`), icon: <ProfileIcon /> })
+        }
+      })
+      .catch(() => {
+        newToast({ variant: ToastVariants.FAILURE, message: t(`resetPasswordFailed`), icon: <ProfileIcon /> })
       })
   }
 
@@ -109,7 +121,7 @@ const ProfilePage = () => {
   }
 
   const buildLoginInformationContainer = (profile: UserProfile) => {
-    return <LoginInformationContainer id={profile.id} isSocialLogin={profile.isSocial} />
+    return <LoginInformationContainer id={profile.id} isSocialLogin={profile.isSocial} onResetPasswordClick={handleResetPassword} />
   }
 
   return (

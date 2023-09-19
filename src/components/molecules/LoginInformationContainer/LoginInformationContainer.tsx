@@ -10,12 +10,13 @@ import { LoginProvider } from '@/@types/UserProfile'
 interface LoginInformationContainerProps {
   id: string
   isSocialLogin: boolean
+  onResetPasswordClick?: () => void
 }
 
 const LoginInformationContainer = (props: LoginInformationContainerProps) => {
   const { t } = useTranslation(`profile`)
 
-  const { id, isSocialLogin } = props
+  const { id, isSocialLogin, onResetPasswordClick } = props
 
   const buildLoginMethod = () => {
     if (id.startsWith(LoginProvider.LINKEDIN)) {
@@ -33,8 +34,8 @@ const LoginInformationContainer = (props: LoginInformationContainerProps) => {
     <Container flex={2} display="flex" flexDirection="column" variant="cardSectionNoMargin" borderRadius={`8px`} padding={`24px`}>
       {!isSocialLogin && (
         <HStack alignItems="center" borderBottom={`1px solid #B8BEC0`} pb={`32px`} mb={`32px`}>
-          <DetailWidget title={t(`password`)}>{t(`passordPlaceHolder`)}</DetailWidget>
-          <Button data-testid="edit-password-button" ml="88px" variant={`blueOutline`} width={`92px`}>
+          <DetailWidget title={t(`password`)}>{t(`passwordPlaceHolder`)}</DetailWidget>
+          <Button onClick={onResetPasswordClick} data-testid="edit-password-button" ml="88px" variant={`blueOutline`} width={`92px`}>
             {t(`edit`)}
           </Button>
         </HStack>

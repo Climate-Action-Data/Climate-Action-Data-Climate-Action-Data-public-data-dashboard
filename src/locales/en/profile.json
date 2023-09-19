@@ -17,8 +17,10 @@
   "incompleteField": "Incomplete field",
   "updateSuccess": "Your profile has been updated successfully.",
   "updateFailed": "Your profile could not be updated. Please try again.",
-  "passordPlaceHolder": "•••••••••••",
+  "passwordPlaceHolder": "•••••••••••",
   "google": "Google",
   "linkedIn": "LinkedIn",
-  "currentLoginMethod": "Current Login Method"
+  "currentLoginMethod": "Current Login Method",
+  "resetPasswordSuccess": "Please check your email to reset your password.",
+  "resetPasswordFailed": "Your reset password failed. Please try again."
 }
