@@ -113,7 +113,7 @@ exports[`ProfilePage renders correctly on cancel edit 1`] = `
           </button>
         </div>
         <div
-          class="chakra-tabs__tab-panels css-7m8sgd"
+          class="chakra-tabs__tab-panels css-8atqhb"
         >
           <div
             aria-labelledby="tabs-:r5:--tab-0"
@@ -422,7 +422,7 @@ exports[`ProfilePage renders correctly on desktop 1`] = `
           </button>
         </div>
         <div
-          class="chakra-tabs__tab-panels css-7m8sgd"
+          class="chakra-tabs__tab-panels css-8atqhb"
         >
           <div
             aria-labelledby="tabs-:r0:--tab-0"
@@ -731,7 +731,7 @@ exports[`ProfilePage renders correctly on mobile 1`] = `
           </button>
         </div>
         <div
-          class="chakra-tabs__tab-panels css-7m8sgd"
+          class="chakra-tabs__tab-panels css-8atqhb"
         >
           <div
             aria-labelledby="tabs-:r1:--tab-0"
@@ -1040,7 +1040,7 @@ exports[`ProfilePage renders correctly on save 1`] = `
           </button>
         </div>
         <div
-          class="chakra-tabs__tab-panels css-7m8sgd"
+          class="chakra-tabs__tab-panels css-8atqhb"
         >
           <div
             aria-labelledby="tabs-:r2:--tab-0"

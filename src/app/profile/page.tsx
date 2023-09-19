@@ -3,7 +3,7 @@
 import { BreadCrumbs } from '@/components/atoms/BreadCrumbs/BreadCrumbs'
 import { Box, Flex, Heading, Tab, TabList, TabPanel, TabPanels, Tabs, Text, VStack, useBreakpointValue } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
-import { useState } from 'react'
+import { ReactElement, useState } from 'react'
 
 import { ProfileIcon } from '@/components/atoms/ProfileIcon/ProfileIcon'
 import { LockIcon } from '@/components/atoms/LockIcon/LockIcon'
@@ -116,6 +116,14 @@ const ProfilePage = () => {
     )
   }
 
+  const buildTabPanel = (content: ReactElement) => {
+    return (
+      <TabPanel py={0} px={`56px`} pr={`174px`}>
+        {content}
+      </TabPanel>
+    )
+  }
+
   const buildProfileContainer = (profile: UserProfile) => {
     return <ProfileContainer editMode={editMode} userProfile={profile} onSave={handleSaveChanges} onEdit={handleEditClick} onCancel={handleCancelClick} />
   }
@@ -133,13 +141,9 @@ const ProfilePage = () => {
           {isTab ? (
             <Tabs variant="unstyled" orientation="vertical" py={`32px`} onChange={handleTabChange} index={selectedTabIndex}>
               {buildTabs()}
-              <TabPanels padding={0}>
-                <TabPanel py={0} px={`56px`} pr={`174px`}>
-                  {buildProfileContainer(userProfile)}
-                </TabPanel>
-                <TabPanel py={0} px={`56px`} pr={`174px`}>
-                  {buildLoginInformationContainer(userProfile)}
-                </TabPanel>
+              <TabPanels>
+                {buildTabPanel(buildProfileContainer(userProfile))}
+                {buildTabPanel(buildLoginInformationContainer(userProfile))}
               </TabPanels>
             </Tabs>
           ) : (
