@@ -25,3 +25,9 @@ export type UpdateUserProfile = {
 export type ResetPassword = {
   email: string
 }
+
+export enum LoginProvider {
+  GOOGLE = `google`,
+  LINKEDIN = `linkedin`,
+  AUTH0 = `auth0`,
+}

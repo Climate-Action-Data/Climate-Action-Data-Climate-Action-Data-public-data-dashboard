@@ -5,40 +5,43 @@ import LoginMethodContainer from '../LoginMethodContainer/LoginMethodContainer'
 import { LinkedInIcon } from '../../atoms/LinkedInIcon/LinkedInIcon'
 import { GoogleIcon } from '../../atoms/GoogleIcon/GoogleIcon'
 import { ProfileIcon } from '../../atoms/ProfileIcon/ProfileIcon'
+import { LoginProvider } from '@/@types/UserProfile'
 
 interface LoginInformationContainerProps {
   id: string
+  isSocialLogin: boolean
 }
 
 const LoginInformationContainer = (props: LoginInformationContainerProps) => {
   const { t } = useTranslation(`profile`)
 
-  const { id } = props
+  const { id, isSocialLogin } = props
 
   const buildLoginMethod = () => {
-    console.log(id)
-    if (id.startsWith(`linkedin|`)) {
-      return <LoginMethodContainer icon={<LinkedInIcon />} text="LinkedIn" />
+    if (id.startsWith(LoginProvider.LINKEDIN)) {
+      return <LoginMethodContainer icon={<LinkedInIcon />} text={t(`linkedIn`)} />
     }
 
-    if (id.startsWith(`google|`)) {
-      return <LoginMethodContainer icon={<GoogleIcon />} text="Google" />
+    if (id.startsWith(LoginProvider.GOOGLE)) {
+      return <LoginMethodContainer icon={<GoogleIcon />} text={t(`google`)} />
     }
 
-    return <LoginMethodContainer icon={<ProfileIcon />} text="Email" />
+    return <LoginMethodContainer icon={<ProfileIcon />} text={t(`email`)} />
   }
 
   return (
     <Container flex={2} display="flex" flexDirection="column" variant="cardSectionNoMargin" borderRadius={`8px`} padding={`24px`}>
-      <HStack alignItems="center">
-        <DetailWidget title={t(`password`)}>{t(`passordPlaceHolder`)}</DetailWidget>
-        <Button data-testid="edit-password-button" ml="88px" variant={`blueOutline`} width={`92px`}>
-          {t(`edit`)}
-        </Button>
-      </HStack>
-      <Box mt={`32px`} borderTop={`1px solid #B8BEC0`} pt="32px">
+      {!isSocialLogin && (
+        <HStack alignItems="center" borderBottom={`1px solid #B8BEC0`} pb={`32px`} mb={`32px`}>
+          <DetailWidget title={t(`password`)}>{t(`passordPlaceHolder`)}</DetailWidget>
+          <Button data-testid="edit-password-button" ml="88px" variant={`blueOutline`} width={`92px`}>
+            {t(`edit`)}
+          </Button>
+        </HStack>
+      )}
+      <Box>
         <Text fontSize="md" fontWeight="500" mb="16px">
-          Current Login Method
+          {t(`currentLoginMethod`)}
         </Text>
         {buildLoginMethod()}
       </Box>

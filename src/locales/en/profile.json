@@ -6,7 +6,7 @@
   "email": "Email",
   "country": "Country",
   "organizationName": "Organization Name",
-  "editProfile": "Edit profile",
+  "editProfile": "Edit Profile",
   "loginInformation": "Login Information",
   "saveChanges": "Save changes",
   "cancel": "Cancel",
@@ -17,5 +17,8 @@
   "incompleteField": "Incomplete field",
   "updateSuccess": "Your profile has been updated successfully.",
   "updateFailed": "Your profile could not be updated. Please try again.",
-  "passordPlaceHolder": "•••••••••••"
+  "passordPlaceHolder": "•••••••••••",
+  "google": "Google",
+  "linkedIn": "LinkedIn",
+  "currentLoginMethod": "Current Login Method"
 }
