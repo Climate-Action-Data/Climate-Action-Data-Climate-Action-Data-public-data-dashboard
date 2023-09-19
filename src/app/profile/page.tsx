@@ -1,7 +1,7 @@
 'use client'
 
 import { BreadCrumbs } from '@/components/atoms/BreadCrumbs/BreadCrumbs'
-import { Box, Flex, Heading, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Flex, Heading, Tab, TabList, TabPanel, TabPanels, Tabs, Text, VStack, useBreakpointValue } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
 
@@ -143,11 +143,11 @@ const ProfilePage = () => {
               </TabPanels>
             </Tabs>
           ) : (
-            <>
-              <Dropdown items={sections} placeholder="" onItemClick={(item) => handlePageChange(item.value)} />
+            <VStack gap={`40px`} align={`start`}>
+              <Dropdown items={sections} defaultSelection={sections[selectedTabIndex]} placeholder="" onItemClick={(item) => handlePageChange(item.value)} />
               {selectedTabIndex == 0 && buildProfileContainer(userProfile)}
               {selectedTabIndex == 1 && buildLoginInformationContainer(userProfile)}
-            </>
+            </VStack>
           )}
         </Box>
       )}
