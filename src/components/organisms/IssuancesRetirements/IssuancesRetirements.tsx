@@ -24,6 +24,7 @@ const getRetiredUnits = (issuances: Issuance[], issuanceId: string) => {
 
 export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
   const { project } = props
+  const [selectedIssuance, setSelectedIssuance] = useState<string | undefined>(undefined)
   const [selectedRetirements, setSelectedRetirements] = useState<IssuanceUnit[] | undefined>(undefined)
   const { t } = useTranslation(`projectDetails`)
   const { t: tHome } = useTranslation(`home`)
@@ -32,6 +33,7 @@ export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
   const vintages = project.issuances.map((issuance) => issuance.vintage)
 
   const handleClick = (issuanceId: string) => {
+    setSelectedIssuance(issuanceId)
     setSelectedRetirements(getRetiredUnits(project.issuances, issuanceId))
   }
 
@@ -58,7 +60,7 @@ export const IssuancesRetirements = (props: IssuancesRetirementsProps) => {
           <IssuanceTableMobile issuances={project.issuances} />
         </Hide>
         <Hide below="sm">
-          <IssuanceTable onClick={handleClick} issuances={project.issuances} />
+          <IssuanceTable onClick={handleClick} issuances={project.issuances} selectedIssuance={selectedIssuance} />
           <RetirementTable retirements={selectedRetirements} />
         </Hide>
       </Container>
