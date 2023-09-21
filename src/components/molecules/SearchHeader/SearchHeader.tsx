@@ -1,7 +1,7 @@
 import { ChangeEvent, useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
-import { Box, Button, Flex, Heading, HStack, Input, InputGroup, InputRightElement, VStack } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack, Input, InputGroup, InputRightElement, VStack } from '@chakra-ui/react'
 
 import { extractPageFromUrl, extractTitleFromUrl } from '@/utils/TextConverter'
 
@@ -9,6 +9,7 @@ import { BreadCrumbs } from '@/components/atoms/BreadCrumbs/BreadCrumbs'
 import { useActions, useAppState } from '@/overmind'
 import UnitFilterBar from '@/components/organisms/UnitFilterBar/UnitFilterBar'
 import ProjectFilterBar from '@/components/organisms/ProjectFilterBar/ProjectFilterBar'
+import InputSearchButton from '../../atoms/InputSearchButton/InputSearchButton'
 
 interface SearchHeaderProps {
   title?: string
@@ -80,9 +81,9 @@ export const SearchHeader = (props: SearchHeaderProps) => {
           </Box>
           {!hideSearch && (
             <Box>
-              <InputGroup size="md" w={[`100%`, `446px`]}>
+              <InputGroup w={[`100%`, `446px`]} height={`48px`}>
                 <Input
-                  pr="4.5rem"
+                  pr="5rem"
                   data-testid="search-input-enter"
                   type={`text`}
                   placeholder={getSearchPlaceholder()}
@@ -91,10 +92,8 @@ export const SearchHeader = (props: SearchHeaderProps) => {
                   onChange={handleOnChange}
                   onKeyDown={handleOnKeyDown}
                 />
-                <InputRightElement width="4.5rem">
-                  <Button colorScheme="white" variant="brandPrimary" h="1.75rem" size="sm" onClick={handleOnSearch} data-testid={`search-header-button`}>
-                    {t(`search`)}
-                  </Button>
+                <InputRightElement width="5rem" mr={`10px`}>
+                  <InputSearchButton onClick={handleOnSearch} />
                 </InputRightElement>
               </InputGroup>
             </Box>
