@@ -79,7 +79,7 @@ exports[`RetirementDetails renders correctly issuances 1`] = `
           class="css-oznbim"
         >
           <tr
-            class="css-1ow40j4"
+            class="css-18gfgn2"
             data-testid="issuance-row"
           >
             <td
@@ -114,7 +114,7 @@ exports[`RetirementDetails renders correctly issuances 1`] = `
             </td>
           </tr>
           <tr
-            class="css-1ow40j4"
+            class="css-18gfgn2"
             data-testid="issuance-row"
           >
             <td
@@ -234,7 +234,7 @@ exports[`RetirementDetails renders correctly issuances and row click 1`] = `
           class="css-oznbim"
         >
           <tr
-            class="css-1ow40j4"
+            class="css-18gfgn2"
             data-testid="issuance-row"
           >
             <td
@@ -269,7 +269,7 @@ exports[`RetirementDetails renders correctly issuances and row click 1`] = `
             </td>
           </tr>
           <tr
-            class="css-1ow40j4"
+            class="css-18gfgn2"
             data-testid="issuance-row"
           >
             <td

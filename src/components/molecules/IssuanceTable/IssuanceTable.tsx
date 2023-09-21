@@ -8,11 +8,12 @@ import { useTranslation } from 'react-i18next'
 
 interface IssuanceTableProps {
   issuances: Issuance[]
+  selectedIssuance?: string
   onClick: (issuanceId: string) => void
 }
 
 export const IssuanceTable = (props: IssuanceTableProps) => {
-  const { issuances, onClick } = props
+  const { issuances, selectedIssuance, onClick } = props
   const { t } = useTranslation(`projectDetails`)
 
   const handleClick = (issuanceId: string, event?: any) => {
@@ -26,7 +27,13 @@ export const IssuanceTable = (props: IssuanceTableProps) => {
 
   const renderIssuanceRow = (issuances: Issuance[]) => {
     return issuances.map((issuance) => (
-      <Tr h="76px" data-testid="issuance-row" onClick={(event) => handleClick(issuance.id, event)} key={`issuance-row-${generateRandomString()}`}>
+      <Tr
+        bgColor={selectedIssuance === issuance.id ? `green.100` : `white`}
+        h="76px"
+        data-testid="issuance-row"
+        onClick={(event) => handleClick(issuance.id, event)}
+        key={`issuance-row-${generateRandomString()}`}
+      >
         <Td>{issuance.vintage}</Td>
         <Td>{issuance.quantity.toLocaleString()}</Td>
         <Td>{issuance.availableUnits.toLocaleString()}</Td>
