@@ -97,6 +97,7 @@ exports[`AutoCompleteCheckbox should render AutoCompleteCheckbox with no data in
             />
             <button
               class="chakra-button css-4xx2wk"
+              disabled=""
               type="button"
             >
               Apply
@@ -214,6 +215,7 @@ exports[`AutoCompleteCheckbox should render AutoCompleteCheckbox with options 1`
             />
             <button
               class="chakra-button css-4xx2wk"
+              disabled=""
               type="button"
             >
               Apply
