@@ -46,7 +46,7 @@ const AuthenticationSection: FC = (props) => {
     return (
       <HStack padding={4}>
         <Text onClick={handleLoginClick} _hover={{ cursor: `pointer`, color: `lightGray.300` }}>
-          Login
+          {t(`login`)}
         </Text>
       </HStack>
     )
