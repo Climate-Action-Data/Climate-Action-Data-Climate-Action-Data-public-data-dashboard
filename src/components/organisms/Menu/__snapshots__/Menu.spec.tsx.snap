@@ -45,7 +45,7 @@ exports[`Menu renders correctly 1`] = `
           <p
             class="chakra-text css-12our7z"
           >
-            Login
+            Sign up / Login
           </p>
         </div>
       </div>
