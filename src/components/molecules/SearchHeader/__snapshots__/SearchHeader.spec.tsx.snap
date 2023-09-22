@@ -207,6 +207,7 @@ exports[`renders correctly 1`] = `
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -322,6 +323,7 @@ exports[`renders correctly 1`] = `
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -437,6 +439,7 @@ exports[`renders correctly 1`] = `
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -552,6 +555,7 @@ exports[`renders correctly 1`] = `
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -856,6 +860,7 @@ exports[`renders correctly and clear the search values 1`] = `
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -971,6 +976,7 @@ exports[`renders correctly and clear the search values 1`] = `
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -1086,6 +1092,7 @@ exports[`renders correctly and clear the search values 1`] = `
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -1201,6 +1208,7 @@ exports[`renders correctly and clear the search values 1`] = `
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -1505,6 +1513,7 @@ exports[`renders correctly and clear the search values 2`] = `
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -1620,6 +1629,7 @@ exports[`renders correctly and clear the search values 2`] = `
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -1735,6 +1745,7 @@ exports[`renders correctly and clear the search values 2`] = `
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -1850,6 +1861,7 @@ exports[`renders correctly and clear the search values 2`] = `
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -2151,6 +2163,7 @@ exports[`renders correctly for units path 1`] = `
                       />
                       <button
                         class="chakra-button css-4xx2wk"
+                        disabled=""
                         type="button"
                       >
                         Apply
@@ -2266,6 +2279,7 @@ exports[`renders correctly for units path 1`] = `
                       />
                       <button
                         class="chakra-button css-4xx2wk"
+                        disabled=""
                         type="button"
                       >
                         Apply
@@ -2381,6 +2395,7 @@ exports[`renders correctly for units path 1`] = `
                       />
                       <button
                         class="chakra-button css-4xx2wk"
+                        disabled=""
                         type="button"
                       >
                         Apply
@@ -2496,6 +2511,7 @@ exports[`renders correctly for units path 1`] = `
                       />
                       <button
                         class="chakra-button css-4xx2wk"
+                        disabled=""
                         type="button"
                       >
                         Apply
@@ -2771,6 +2787,7 @@ exports[`renders correctly with no params, add a search value and submits a sear
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -2886,6 +2903,7 @@ exports[`renders correctly with no params, add a search value and submits a sear
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -3001,6 +3019,7 @@ exports[`renders correctly with no params, add a search value and submits a sear
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply
@@ -3116,6 +3135,7 @@ exports[`renders correctly with no params, add a search value and submits a sear
                         />
                         <button
                           class="chakra-button css-4xx2wk"
+                          disabled=""
                           type="button"
                         >
                           Apply

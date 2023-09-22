@@ -79,6 +79,29 @@ export const lightGray = defineStyle({
     background: `lightGray.200`,
   },
 })
+
+export const applyButton = defineStyle({
+  color: `black`,
+  padding: `4px`,
+  borderRadius: `32px`,
+  fontSize: `14px`,
+  fontWeight: `normal`,
+  height: `min-content`,
+  bgColor: `lightGray.main`,
+  textColor: `white`,
+  _hover: {
+    background: `gray.100`,
+  },
+  _active: {
+    color: `#002F66`,
+    background: `gray.50`,
+  },
+  _disabled: {
+    background: `white`,
+    textColor: `grey`,
+  },
+})
+
 export const hoverOnly = defineStyle({
   background: `transparent`,
   color: `gray.800`,

@@ -1756,6 +1756,7 @@ exports[`renders correctly with no data 1`] = `
                   />
                   <button
                     class="chakra-button css-4xx2wk"
+                    disabled=""
                     type="button"
                   >
                     Apply
@@ -1871,6 +1872,7 @@ exports[`renders correctly with no data 1`] = `
                   />
                   <button
                     class="chakra-button css-4xx2wk"
+                    disabled=""
                     type="button"
                   >
                     Apply
@@ -1986,6 +1988,7 @@ exports[`renders correctly with no data 1`] = `
                   />
                   <button
                     class="chakra-button css-4xx2wk"
+                    disabled=""
                     type="button"
                   >
                     Apply
@@ -2101,6 +2104,7 @@ exports[`renders correctly with no data 1`] = `
                   />
                   <button
                     class="chakra-button css-4xx2wk"
+                    disabled=""
                     type="button"
                   >
                     Apply
