@@ -17,7 +17,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Status
       </p>
@@ -31,7 +31,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Quantity Retired
       </p>
@@ -45,7 +45,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Retirement Notes
       </p>
@@ -59,7 +59,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Using Entity
       </p>
@@ -73,7 +73,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Corresponding Adjustment
       </p>

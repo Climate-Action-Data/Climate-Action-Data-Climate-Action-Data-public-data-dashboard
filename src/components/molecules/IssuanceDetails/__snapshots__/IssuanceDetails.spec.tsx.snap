@@ -17,7 +17,7 @@ exports[`renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Project Issued To
       </p>
@@ -36,7 +36,7 @@ exports[`renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Vintage
       </p>
@@ -50,7 +50,7 @@ exports[`renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Quantity
       </p>
@@ -64,7 +64,7 @@ exports[`renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Unit Type
       </p>
@@ -78,7 +78,7 @@ exports[`renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Monitoring Period
       </p>
@@ -92,7 +92,7 @@ exports[`renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Correspondingly Adjusted
       </p>
@@ -106,7 +106,7 @@ exports[`renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Issuance Tags
       </p>
@@ -139,6 +139,7 @@ exports[`renders correctly with validation 1`] = `
           <button
             class="chakra-button css-4xx2wk"
             data-testid="verification-expand"
+            style="color: rgb(0, 36, 44); font-weight: 500;"
             type="button"
           >
             View More
@@ -159,7 +160,7 @@ exports[`renders correctly without tags 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Project Issued To
       </p>
@@ -178,7 +179,7 @@ exports[`renders correctly without tags 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Vintage
       </p>
@@ -192,7 +193,7 @@ exports[`renders correctly without tags 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Quantity
       </p>
@@ -206,7 +207,7 @@ exports[`renders correctly without tags 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Unit Type
       </p>
@@ -220,7 +221,7 @@ exports[`renders correctly without tags 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Monitoring Period
       </p>
@@ -234,7 +235,7 @@ exports[`renders correctly without tags 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Correspondingly Adjusted
       </p>
@@ -248,7 +249,7 @@ exports[`renders correctly without tags 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Issuance Tags
       </p>
