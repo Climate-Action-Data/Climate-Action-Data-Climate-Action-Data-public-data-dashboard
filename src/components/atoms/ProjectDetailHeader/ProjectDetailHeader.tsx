@@ -34,7 +34,7 @@ export const ProjectDetailHeader = (props: ProjectDetailHeaderProps) => {
           position="absolute"
         >
           <Text fontSize="20px">{topTitle}</Text>
-          <Heading textTransform="uppercase" fontSize={[`16px`, `32px`]} style={{ fontWeight: `400px` }}>
+          <Heading textTransform="uppercase" fontSize={[`16px`, `32px`]} style={{ fontWeight: `400` }}>
             {mainTitle}
           </Heading>
           <Text>{subTitle}</Text>
