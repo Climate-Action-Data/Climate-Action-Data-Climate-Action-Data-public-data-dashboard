@@ -28,7 +28,7 @@ exports[`IssuanceTableMobileItem renders correctly issuance and click header 1`]
                 class="css-0"
               >
                 <p
-                  class="chakra-text css-1xi4xed"
+                  class="chakra-text css-uwkl65"
                 >
                   Vintage
                 </p>
@@ -42,7 +42,7 @@ exports[`IssuanceTableMobileItem renders correctly issuance and click header 1`]
                 class="css-0"
               >
                 <p
-                  class="chakra-text css-1xi4xed"
+                  class="chakra-text css-uwkl65"
                 >
                   Quantity
                 </p>
@@ -83,7 +83,7 @@ exports[`IssuanceTableMobileItem renders correctly issuance and click header 1`]
               class="css-0"
             >
               <p
-                class="chakra-text css-1xi4xed"
+                class="chakra-text css-uwkl65"
               >
                 Units Available
               </p>
@@ -97,7 +97,7 @@ exports[`IssuanceTableMobileItem renders correctly issuance and click header 1`]
               class="css-0"
             >
               <p
-                class="chakra-text css-1xi4xed"
+                class="chakra-text css-uwkl65"
               >
                 Verification Report Date
               </p>
@@ -161,7 +161,7 @@ exports[`IssuanceTableMobileItem renders correctly issuance and click header and
                 class="css-0"
               >
                 <p
-                  class="chakra-text css-1xi4xed"
+                  class="chakra-text css-uwkl65"
                 >
                   Vintage
                 </p>
@@ -175,7 +175,7 @@ exports[`IssuanceTableMobileItem renders correctly issuance and click header and
                 class="css-0"
               >
                 <p
-                  class="chakra-text css-1xi4xed"
+                  class="chakra-text css-uwkl65"
                 >
                   Quantity
                 </p>
@@ -216,7 +216,7 @@ exports[`IssuanceTableMobileItem renders correctly issuance and click header and
               class="css-0"
             >
               <p
-                class="chakra-text css-1xi4xed"
+                class="chakra-text css-uwkl65"
               >
                 Units Available
               </p>
@@ -230,7 +230,7 @@ exports[`IssuanceTableMobileItem renders correctly issuance and click header and
               class="css-0"
             >
               <p
-                class="chakra-text css-1xi4xed"
+                class="chakra-text css-uwkl65"
               >
                 Verification Report Date
               </p>
@@ -294,7 +294,7 @@ exports[`IssuanceTableMobileItem renders correctly issuances 1`] = `
                 class="css-0"
               >
                 <p
-                  class="chakra-text css-1xi4xed"
+                  class="chakra-text css-uwkl65"
                 >
                   Vintage
                 </p>
@@ -308,7 +308,7 @@ exports[`IssuanceTableMobileItem renders correctly issuances 1`] = `
                 class="css-0"
               >
                 <p
-                  class="chakra-text css-1xi4xed"
+                  class="chakra-text css-uwkl65"
                 >
                   Quantity
                 </p>
@@ -349,7 +349,7 @@ exports[`IssuanceTableMobileItem renders correctly issuances 1`] = `
               class="css-0"
             >
               <p
-                class="chakra-text css-1xi4xed"
+                class="chakra-text css-uwkl65"
               >
                 Units Available
               </p>
@@ -363,7 +363,7 @@ exports[`IssuanceTableMobileItem renders correctly issuances 1`] = `
               class="css-0"
             >
               <p
-                class="chakra-text css-1xi4xed"
+                class="chakra-text css-uwkl65"
               >
                 Verification Report Date
               </p>

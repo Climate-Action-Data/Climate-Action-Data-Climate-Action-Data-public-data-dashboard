@@ -17,12 +17,13 @@ exports[`renders correctly 1`] = `
         class="chakra-stack css-1ibnd6w"
       >
         <p
-          class="chakra-text css-1ezsviu"
+          class="chakra-text css-bk9fzy"
         >
           S00123
         </p>
         <h2
           class="chakra-heading css-1lr1hz5"
+          style="font-weight: 400;"
         >
           Project Title
         </h2>

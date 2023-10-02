@@ -9,7 +9,7 @@ exports[`RetirementDetails renders correctly with missing details 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Project Issued To
       </p>
@@ -28,7 +28,7 @@ exports[`RetirementDetails renders correctly with missing details 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Issuance Batch Serial N0.
       </p>
@@ -42,7 +42,7 @@ exports[`RetirementDetails renders correctly with missing details 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Vintage
       </p>
@@ -56,7 +56,7 @@ exports[`RetirementDetails renders correctly with missing details 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Quantity Issued
       </p>
@@ -70,7 +70,7 @@ exports[`RetirementDetails renders correctly with missing details 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Unit Type
       </p>
@@ -84,7 +84,7 @@ exports[`RetirementDetails renders correctly with missing details 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Monitoring Period
       </p>
@@ -115,7 +115,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Project Issued To
       </p>
@@ -134,7 +134,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Issuance Batch Serial N0.
       </p>
@@ -148,7 +148,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Vintage
       </p>
@@ -162,7 +162,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Quantity Issued
       </p>
@@ -176,7 +176,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Unit Type
       </p>
@@ -190,7 +190,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Monitoring Period
       </p>

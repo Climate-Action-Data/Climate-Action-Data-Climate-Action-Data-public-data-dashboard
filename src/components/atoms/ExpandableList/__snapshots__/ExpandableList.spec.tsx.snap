@@ -38,6 +38,7 @@ exports[`ProjectDetailsVerificationList renders correctly with full array 1`] = 
     <button
       class="chakra-button css-4xx2wk"
       data-testid="verification-expand"
+      style="color: rgb(0, 36, 44); font-weight: 500;"
       type="button"
     >
       View More
@@ -79,6 +80,7 @@ exports[`ProjectDetailsVerificationList renders correctly with full array and cl
     <button
       class="chakra-button css-4xx2wk"
       data-testid="verification-expand"
+      style="color: rgb(0, 36, 44); font-weight: 500;"
       type="button"
     >
       View Less
@@ -105,6 +107,7 @@ exports[`ProjectDetailsVerificationList renders correctly with full array and li
     <button
       class="chakra-button css-4xx2wk"
       data-testid="verification-expand"
+      style="color: rgb(0, 36, 44); font-weight: 500;"
       type="button"
     >
       View More

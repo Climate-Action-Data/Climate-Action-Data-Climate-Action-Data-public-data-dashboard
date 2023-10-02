@@ -34,7 +34,7 @@ exports[`ProfileContainer renders correctly in editMode 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           First Name
         </p>
@@ -53,7 +53,7 @@ exports[`ProfileContainer renders correctly in editMode 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Last Name
         </p>
@@ -76,7 +76,7 @@ exports[`ProfileContainer renders correctly in editMode 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Email
         </p>
@@ -92,7 +92,7 @@ exports[`ProfileContainer renders correctly in editMode 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Country
         </p>
@@ -2650,7 +2650,7 @@ exports[`ProfileContainer renders correctly in editMode 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Organization Name
         </p>
@@ -2725,7 +2725,7 @@ exports[`ProfileContainer renders correctly in view mode 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           First Name
         </p>
@@ -2739,7 +2739,7 @@ exports[`ProfileContainer renders correctly in view mode 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Last Name
         </p>
@@ -2757,7 +2757,7 @@ exports[`ProfileContainer renders correctly in view mode 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Email
         </p>
@@ -2773,7 +2773,7 @@ exports[`ProfileContainer renders correctly in view mode 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Country
         </p>
@@ -2787,7 +2787,7 @@ exports[`ProfileContainer renders correctly in view mode 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Organization Name
         </p>

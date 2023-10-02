@@ -17,7 +17,7 @@ exports[`renders correctly with validation 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Verification Report Date
       </p>
@@ -38,7 +38,7 @@ exports[`renders correctly with validation 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Verification Approach
         </p>
@@ -56,7 +56,7 @@ exports[`renders correctly with validation 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Verification Period
         </p>
@@ -100,7 +100,7 @@ exports[`renders correctly with validation and no date 1`] = `
       class="css-0"
     >
       <p
-        class="chakra-text css-1xi4xed"
+        class="chakra-text css-uwkl65"
       >
         Verification Report Date
       </p>
@@ -121,7 +121,7 @@ exports[`renders correctly with validation and no date 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Verification Approach
         </p>
@@ -139,7 +139,7 @@ exports[`renders correctly with validation and no date 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Verification Period
         </p>

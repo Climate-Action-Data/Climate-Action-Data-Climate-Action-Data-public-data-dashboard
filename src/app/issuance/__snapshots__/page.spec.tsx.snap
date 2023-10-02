@@ -23,12 +23,13 @@ exports[`IssuancePage renders correctly 1`] = `
             class="chakra-stack css-1ibnd6w"
           >
             <p
-              class="chakra-text css-1ezsviu"
+              class="chakra-text css-bk9fzy"
             >
               UNITS - ISSUANCE
             </p>
             <h2
               class="chakra-heading css-1lr1hz5"
+              style="font-weight: 400;"
             >
               --
             </h2>
@@ -115,6 +116,7 @@ exports[`IssuancePage renders correctly 1`] = `
         >
           <div
             class="chakra-container css-18pol40"
+            style="margin-top: 12px;"
           >
             <div
               class="chakra-skeleton css-1p3r0co"

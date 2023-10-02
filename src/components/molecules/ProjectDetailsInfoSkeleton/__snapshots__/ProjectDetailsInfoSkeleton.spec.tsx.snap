@@ -12,7 +12,7 @@ exports[`renders correctly with no project 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Registry
         </p>
@@ -28,7 +28,7 @@ exports[`renders correctly with no project 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Methodology
         </p>
@@ -44,7 +44,7 @@ exports[`renders correctly with no project 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Project Developer
         </p>
@@ -60,7 +60,7 @@ exports[`renders correctly with no project 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Project Link
         </p>
@@ -76,7 +76,7 @@ exports[`renders correctly with no project 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Sector
         </p>
@@ -92,7 +92,7 @@ exports[`renders correctly with no project 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Project Type
         </p>
@@ -108,7 +108,7 @@ exports[`renders correctly with no project 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Status
         </p>
@@ -124,7 +124,7 @@ exports[`renders correctly with no project 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Status Updated On
         </p>
@@ -150,7 +150,7 @@ exports[`renders correctly with no project 1`] = `
           class="css-0"
         >
           <p
-            class="chakra-text css-1xi4xed"
+            class="chakra-text css-uwkl65"
           >
             Total Available Units
           </p>
@@ -166,7 +166,7 @@ exports[`renders correctly with no project 1`] = `
           class="css-0"
         >
           <p
-            class="chakra-text css-1xi4xed"
+            class="chakra-text css-uwkl65"
           >
             Total Issuances
           </p>
@@ -182,7 +182,7 @@ exports[`renders correctly with no project 1`] = `
           class="css-0"
         >
           <p
-            class="chakra-text css-1xi4xed"
+            class="chakra-text css-uwkl65"
           >
             Crediting Period
           </p>
@@ -202,7 +202,7 @@ exports[`renders correctly with no project 1`] = `
           class="css-0"
         >
           <p
-            class="chakra-text css-1xi4xed"
+            class="chakra-text css-uwkl65"
           >
             Total Retirements
           </p>
@@ -218,7 +218,7 @@ exports[`renders correctly with no project 1`] = `
           class="css-0"
         >
           <p
-            class="chakra-text css-1xi4xed"
+            class="chakra-text css-uwkl65"
           >
             Annual Estimated Units
           </p>
@@ -234,7 +234,7 @@ exports[`renders correctly with no project 1`] = `
           class="css-0"
         >
           <p
-            class="chakra-text css-1xi4xed"
+            class="chakra-text css-uwkl65"
           >
             Unit Metric Measurement
           </p>
@@ -258,7 +258,7 @@ exports[`renders correctly with no project 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           NDC Coverage
         </p>
@@ -274,7 +274,7 @@ exports[`renders correctly with no project 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Correspondingly Adjusted
         </p>
@@ -297,7 +297,7 @@ exports[`renders correctly with no project 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Project Tags
         </p>
@@ -313,7 +313,7 @@ exports[`renders correctly with no project 1`] = `
         class="css-0"
       >
         <p
-          class="chakra-text css-1xi4xed"
+          class="chakra-text css-uwkl65"
         >
           Co-Benefits
         </p>
