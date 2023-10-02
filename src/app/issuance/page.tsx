@@ -44,7 +44,7 @@ const IssuancePage: NextPage = () => {
         </Box>
         <Flex flexDirection="column" minW="100%" gap="40px">
           <CardSection displaySectionTitle sectionTitle={{ title: t(`sectionHeaders.issuanceDetails`) }}>
-            <Container padding={[`12px`, `24px`]} flex={2} gap="24px" display="flex" flexDirection="column" variant="cardSectionNoMargin">
+            <Container style={{ marginTop: `12px` }} padding={[`12px`, `24px`]} flex={2} gap="24px" display="flex" flexDirection="column" variant="cardSectionNoMargin">
               <IssuanceDetails issuance={issuance} />
               <Divider />
               <ProjectDetailsVerification validation={issuance?.validation} />

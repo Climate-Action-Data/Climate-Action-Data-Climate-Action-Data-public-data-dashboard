@@ -22,7 +22,9 @@ export const DetailWidget = (props: DetailWidgetProps): React.JSX.Element => {
 
   return (
     <Box {...designProps}>
-      <Text color="lightGray.600">{title}</Text>
+      <Text marginBottom="4px" color="lightGray.600">
+        {title}
+      </Text>
       {asBox ? <Box>{children}</Box> : <Text>{children}</Text>}
     </Box>
   )
