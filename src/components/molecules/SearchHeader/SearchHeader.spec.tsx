@@ -76,20 +76,15 @@ it(`renders correctly and clear the search values`, async () => {
   expect(container).toMatchSnapshot()
 })
 const NUMBER_TIMES_ROUTE_CALLED = 2
-const TIMEOUT = 100000
 
-it(
-  `renders correctly with no params, add a search value and submits a search`,
-  async () => {
-    const { container } = render(
-      <TestOvermindWrapper>
-        <SearchHeader />
-      </TestOvermindWrapper>,
-    )
-    await userEvent.type(screen.getByRole(`textbox`), `hello`)
-    await userEvent.click(screen.getByTestId(`search-header-button`))
-    expect(mockPush).toBeCalledTimes(NUMBER_TIMES_ROUTE_CALLED)
-    expect(container).toMatchSnapshot()
-  },
-  TIMEOUT,
-)
+it(`renders correctly with no params, add a search value and submits a search`, async () => {
+  const { container } = render(
+    <TestOvermindWrapper>
+      <SearchHeader />
+    </TestOvermindWrapper>,
+  )
+  await userEvent.type(screen.getByRole(`textbox`), `hello`)
+  await userEvent.click(screen.getByTestId(`search-header-button`))
+  expect(mockPush).toBeCalledTimes(NUMBER_TIMES_ROUTE_CALLED)
+  expect(container).toMatchSnapshot()
+})
