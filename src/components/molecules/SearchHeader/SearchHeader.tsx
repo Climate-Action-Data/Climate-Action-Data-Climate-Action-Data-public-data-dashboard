@@ -77,7 +77,7 @@ export const SearchHeader = (props: SearchHeaderProps) => {
         {currentPath && <BreadCrumbs items={[{ title: currentTitle, link: currentPath }]} />}
         <HStack w={`100%`} justifyContent={`space-between`}>
           <Box>
-            <Heading>{currentTitle}</Heading>
+            <Heading style={{ marginBottom: `16px`, fontWeight: 500 }}>{currentTitle}</Heading>
           </Box>
           {!hideSearch && (
             <Box>
