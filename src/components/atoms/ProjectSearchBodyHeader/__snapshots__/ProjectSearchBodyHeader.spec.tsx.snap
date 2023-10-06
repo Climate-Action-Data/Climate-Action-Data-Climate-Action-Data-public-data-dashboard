@@ -234,7 +234,8 @@ exports[`renders correctly 1`] = `
             <div
               class="css-0"
             >
-              Annual Est. Units
+              Annual
+Est. Units
               <div
                 class="chakra-stack css-1yu3riu"
               >
@@ -270,7 +271,8 @@ exports[`renders correctly 1`] = `
             <div
               class="css-0"
             >
-              Total Issued Units
+              Total
+Issued Units
               <div
                 class="chakra-stack css-1yu3riu"
               >
@@ -306,7 +308,8 @@ exports[`renders correctly 1`] = `
             <div
               class="css-0"
             >
-              Total Retired Units
+              Total
+Retired Units
               <div
                 class="chakra-stack css-1yu3riu"
               >
@@ -342,7 +345,8 @@ exports[`renders correctly 1`] = `
             <div
               class="css-0"
             >
-              Total Available Units
+              Total
+Available Units
               <div
                 class="chakra-stack css-1yu3riu"
               >
@@ -612,7 +616,8 @@ exports[`renders correctly with projects and handles sort asc 1`] = `
             <div
               class="css-0"
             >
-              Annual Est. Units
+              Annual
+Est. Units
               <div
                 class="chakra-stack css-1yu3riu"
               >
@@ -648,7 +653,8 @@ exports[`renders correctly with projects and handles sort asc 1`] = `
             <div
               class="css-0"
             >
-              Total Issued Units
+              Total
+Issued Units
               <div
                 class="chakra-stack css-1yu3riu"
               >
@@ -684,7 +690,8 @@ exports[`renders correctly with projects and handles sort asc 1`] = `
             <div
               class="css-0"
             >
-              Total Retired Units
+              Total
+Retired Units
               <div
                 class="chakra-stack css-1yu3riu"
               >
@@ -720,7 +727,8 @@ exports[`renders correctly with projects and handles sort asc 1`] = `
             <div
               class="css-0"
             >
-              Total Available Units
+              Total
+Available Units
               <div
                 class="chakra-stack css-1yu3riu"
               >
@@ -990,7 +998,8 @@ exports[`renders correctly with projects and handles sort asc 2`] = `
             <div
               class="css-0"
             >
-              Annual Est. Units
+              Annual
+Est. Units
               <div
                 class="chakra-stack css-1yu3riu"
               >
@@ -1026,7 +1035,8 @@ exports[`renders correctly with projects and handles sort asc 2`] = `
             <div
               class="css-0"
             >
-              Total Issued Units
+              Total
+Issued Units
               <div
                 class="chakra-stack css-1yu3riu"
               >
@@ -1062,7 +1072,8 @@ exports[`renders correctly with projects and handles sort asc 2`] = `
             <div
               class="css-0"
             >
-              Total Retired Units
+              Total
+Retired Units
               <div
                 class="chakra-stack css-1yu3riu"
               >
@@ -1098,7 +1109,8 @@ exports[`renders correctly with projects and handles sort asc 2`] = `
             <div
               class="css-0"
             >
-              Total Available Units
+              Total
+Available Units
               <div
                 class="chakra-stack css-1yu3riu"
               >

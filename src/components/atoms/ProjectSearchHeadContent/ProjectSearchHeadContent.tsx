@@ -127,8 +127,10 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
             <Flex alignItems="center">
               <Box title={projectResults.name} overflow="hidden" flex={1}>
                 <Text fontWeight={500}>{projectResults.name}</Text>
-                <Text fontSize="sm">{projectResults.id}</Text>
-                <Text textOverflow="ellipsis" color="lightGray.700" fontSize="sm">
+                <Text color="#00242C" fontSize="sm">
+                  {projectResults.id}
+                </Text>
+                <Text textOverflow="ellipsis" color="#00242C" fontSize="sm">
                   {projectResults.developer}
                 </Text>
               </Box>
@@ -136,7 +138,7 @@ export const ProjectSearchHeadContent = (props: ProjectSearchHeadContentProps) =
                 renderAddRemoveCompareButton(projectResults)
               ) : (
                 <Menu variant="menuWhite">
-                  <MenuButton as={Button} textAlign="center" iconSpacing={0} rightIcon={<KebabMenuIcon />} variant="lightGrayRound32"></MenuButton>
+                  <MenuButton as={Button} textAlign="center" iconSpacing={0} rightIcon={<KebabMenuIcon />} variant="lightGrayRound32" style={{ marginRight: `12px` }}></MenuButton>
                   <MenuContent menuItems={generateMenuList(projectResults.warehouseProjectId, projectResults.watchlists)} />
                 </Menu>
               )}

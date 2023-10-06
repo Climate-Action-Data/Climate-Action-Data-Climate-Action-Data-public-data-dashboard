@@ -76,7 +76,7 @@ const ProjectPage: NextPage = () => {
   })
 
   return (
-    <Flex maxW={`100vw`} w="100vw" minH="100%" h="100%" position="relative" paddingBottom={isCompare ? `186px` : `50px`}>
+    <Flex maxW={`100vw`} w="100vw" minH="100%" h="100%" position="relative" paddingBottom={isCompare ? `186px` : `0px`}>
       {isLoading ? (
         <SpinnerScreen />
       ) : (

@@ -184,12 +184,12 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
                   Bosques Solares de los Llanos 1
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   109
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   MATRIX RENEWABLES COLOMBIA, S.A.S
                 </p>
@@ -200,6 +200,7 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:r3:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -212,7 +213,7 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -299,12 +300,12 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
                   Carbono Ganados y Bosques
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   30
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   Forestry Consulting Group S.A.S.
                 </p>
@@ -315,6 +316,7 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:r7:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -327,7 +329,7 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -414,12 +416,12 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
                   Manejo Sostenible de los Bosques Aplicado al Predio Santa Ana, Vereda El Popal, Municipio De Sonsón, Bajo El Esquema BancO2
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   65
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   Corporación Masbosques
                 </p>
@@ -430,6 +432,7 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:rb:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -442,7 +445,7 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -529,12 +532,12 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
                   Manejo Sostenible de los Bosques Aplicado en el Oriente Antioqueño bajo el esquema BancO2®
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   28
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   Corporación Masbosques
                 </p>
@@ -545,6 +548,7 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:rf:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -557,7 +561,7 @@ exports[`ProjectSearchHead renders correctly with projects 1`] = `
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -714,12 +718,12 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
                   Bosques Solares de los Llanos 1
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   109
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   MATRIX RENEWABLES COLOMBIA, S.A.S
                 </p>
@@ -730,6 +734,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:rl:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -742,7 +747,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -829,12 +834,12 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
                   Carbono Ganados y Bosques
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   30
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   Forestry Consulting Group S.A.S.
                 </p>
@@ -845,6 +850,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:rp:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -857,7 +863,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -944,12 +950,12 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
                   Manejo Sostenible de los Bosques Aplicado al Predio Santa Ana, Vereda El Popal, Municipio De Sonsón, Bajo El Esquema BancO2
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   65
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   Corporación Masbosques
                 </p>
@@ -960,6 +966,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:rt:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -972,7 +979,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -1059,12 +1066,12 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
                   Manejo Sostenible de los Bosques Aplicado en el Oriente Antioqueño bajo el esquema BancO2®
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   28
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   Corporación Masbosques
                 </p>
@@ -1075,6 +1082,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:r11:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -1087,7 +1095,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles click 1`]
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -1244,12 +1252,12 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort asc 
                   Bosques Solares de los Llanos 1
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   109
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   MATRIX RENEWABLES COLOMBIA, S.A.S
                 </p>
@@ -1260,6 +1268,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort asc 
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:r17:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -1272,7 +1281,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort asc 
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -1359,12 +1368,12 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort asc 
                   Carbono Ganados y Bosques
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   30
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   Forestry Consulting Group S.A.S.
                 </p>
@@ -1375,6 +1384,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort asc 
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:r1b:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -1387,7 +1397,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort asc 
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -1474,12 +1484,12 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort asc 
                   Manejo Sostenible de los Bosques Aplicado al Predio Santa Ana, Vereda El Popal, Municipio De Sonsón, Bajo El Esquema BancO2
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   65
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   Corporación Masbosques
                 </p>
@@ -1490,6 +1500,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort asc 
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:r1f:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -1502,7 +1513,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort asc 
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -1589,12 +1600,12 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort asc 
                   Manejo Sostenible de los Bosques Aplicado en el Oriente Antioqueño bajo el esquema BancO2®
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   28
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   Corporación Masbosques
                 </p>
@@ -1605,6 +1616,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort asc 
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:r1j:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -1617,7 +1629,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort asc 
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -1873,12 +1885,12 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort desc
                   Bosques Solares de los Llanos 1
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   109
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   MATRIX RENEWABLES COLOMBIA, S.A.S
                 </p>
@@ -1889,6 +1901,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort desc
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:r21:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -1901,7 +1914,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort desc
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -1988,12 +2001,12 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort desc
                   Carbono Ganados y Bosques
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   30
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   Forestry Consulting Group S.A.S.
                 </p>
@@ -2004,6 +2017,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort desc
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:r25:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -2016,7 +2030,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort desc
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -2103,12 +2117,12 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort desc
                   Manejo Sostenible de los Bosques Aplicado al Predio Santa Ana, Vereda El Popal, Municipio De Sonsón, Bajo El Esquema BancO2
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   65
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   Corporación Masbosques
                 </p>
@@ -2119,6 +2133,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort desc
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:r29:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -2131,7 +2146,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort desc
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
@@ -2218,12 +2233,12 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort desc
                   Manejo Sostenible de los Bosques Aplicado en el Oriente Antioqueño bajo el esquema BancO2®
                 </p>
                 <p
-                  class="chakra-text css-g5hezf"
+                  class="chakra-text css-1rnltwg"
                 >
                   28
                 </p>
                 <p
-                  class="chakra-text css-nufbzj"
+                  class="chakra-text css-1y8xp3h"
                 >
                   Corporación Masbosques
                 </p>
@@ -2234,6 +2249,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort desc
                 aria-haspopup="menu"
                 class="chakra-button chakra-menu__menu-button css-o0w9ox"
                 id="menu-button-:r2d:"
+                style="margin-right: 12px;"
                 type="button"
               >
                 <span
@@ -2246,7 +2262,7 @@ exports[`ProjectSearchHead renders correctly with projects and handles sort desc
                     aria-hidden="true"
                     class="chakra-icon css-n059si"
                     focusable="false"
-                    viewBox="0 0 24 24"
+                    viewBox="1.5 0 24 24"
                   >
                     <path
                       d="M12 19.2688C11.5875 19.2688 11.2344 19.122 10.9406 18.8282C10.6469 18.5345 10.5 18.1814 10.5 17.7689C10.5 17.3564 10.6469 17.0033 10.9406 16.7095C11.2344 16.4158 11.5875 16.2689 12 16.2689C12.4125 16.2689 12.7656 16.4158 13.0593 16.7095C13.3531 17.0033 13.5 17.3564 13.5 17.7689C13.5 18.1814 13.3531 18.5345 13.0593 18.8282C12.7656 19.122 12.4125 19.2688 12 19.2688ZM12 13.4996C11.5875 13.4996 11.2344 13.3527 10.9406 13.059C10.6469 12.7652 10.5 12.4121 10.5 11.9996C10.5 11.5872 10.6469 11.234 10.9406 10.9403C11.2344 10.6465 11.5875 10.4997 12 10.4997C12.4125 10.4997 12.7656 10.6465 13.0593 10.9403C13.3531 11.234 13.5 11.5872 13.5 11.9996C13.5 12.4121 13.3531 12.7652 13.0593 13.059C12.7656 13.3527 12.4125 13.4996 12 13.4996ZM12 7.73039C11.5875 7.73039 11.2344 7.58352 10.9406 7.28977C10.6469 6.99604 10.5 6.64292 10.5 6.23042C10.5 5.81794 10.6469 5.46482 10.9406 5.17107C11.2344 4.87734 11.5875 4.73047 12 4.73047C12.4125 4.73047 12.7656 4.87734 13.0593 5.17107C13.3531 5.46482 13.5 5.81794 13.5 6.23042C13.5 6.64292 13.3531 6.99604 13.0593 7.28977C12.7656 7.58352 12.4125 7.73039 12 7.73039Z"
