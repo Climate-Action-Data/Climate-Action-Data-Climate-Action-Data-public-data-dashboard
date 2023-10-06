@@ -66,7 +66,7 @@ const UnitPage: NextPage = () => {
   })
 
   return (
-    <Flex w="100vw" maxW="100vw" paddingBottom="50px">
+    <Flex w="100vw" maxW="100vw" paddingBottom="0px">
       {isLoading ? (
         <SpinnerScreen />
       ) : (
