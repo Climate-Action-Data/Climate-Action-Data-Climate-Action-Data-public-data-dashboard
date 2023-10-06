@@ -54,6 +54,7 @@ exports[`renders correctly 1`] = `
         >
           <h2
             class="chakra-heading css-0"
+            style="margin-bottom: 16px; font-weight: 500;"
           >
             Projects
           </h2>
@@ -707,6 +708,7 @@ exports[`renders correctly and clear the search values 1`] = `
         >
           <h2
             class="chakra-heading css-0"
+            style="margin-bottom: 16px; font-weight: 500;"
           >
             Projects
           </h2>
@@ -1360,6 +1362,7 @@ exports[`renders correctly and clear the search values 2`] = `
         >
           <h2
             class="chakra-heading css-0"
+            style="margin-bottom: 16px; font-weight: 500;"
           >
             Projects
           </h2>
@@ -2013,6 +2016,7 @@ exports[`renders correctly for units path 1`] = `
         >
           <h2
             class="chakra-heading css-0"
+            style="margin-bottom: 16px; font-weight: 500;"
           >
             Units
           </h2>
@@ -2634,6 +2638,7 @@ exports[`renders correctly with no params, add a search value and submits a sear
         >
           <h2
             class="chakra-heading css-0"
+            style="margin-bottom: 16px; font-weight: 500;"
           >
             Projects
           </h2>
@@ -3287,6 +3292,7 @@ exports[`renders correctly with search text 1`] = `
         >
           <h2
             class="chakra-heading css-0"
+            style="margin-bottom: 16px; font-weight: 500;"
           >
             Projects
           </h2>
