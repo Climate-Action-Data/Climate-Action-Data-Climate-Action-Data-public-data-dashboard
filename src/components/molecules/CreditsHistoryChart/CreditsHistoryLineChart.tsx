@@ -7,7 +7,7 @@ import { Aeonik } from '@/styles/fonts'
 const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
   const format = new Intl.DateTimeFormat(`en-SG`, { month: `short`, year: `2-digit` }).format
 
-  const xScale: ScaleSpec = { type: `point` }
+  const xScale: ScaleSpec = { type: `time` }
 
   const yScale: ScaleSpec = {
     type: `linear`,
@@ -20,6 +20,7 @@ const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
     tickSize: 0,
     tickPadding: 10,
     tickRotation: 0,
+    tickValues: `every month`,
     legend: ``,
     legendOffset: 36,
     legendPosition: `middle`,
