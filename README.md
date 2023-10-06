@@ -23,7 +23,7 @@ Before committing changes to the Git Repository, run the following commands:
 
 ```bash
 pnpm test:once
-pnpm test:once -u
+npm run test:once -- -u
 ```
 
 ## Used Libraries
