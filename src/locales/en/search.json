@@ -36,10 +36,10 @@
     "country": "Country",
     "projectStatus": "Project Status",
     "creditingPeriod": "Crediting Period",
-    "annualEstUnits": "Annual Est. Units",
-    "totalIssuedUnits": "Total Issued Units",
-    "totalRetiredUnits": "Total Retired Units",
-    "totalAvailableUnits": "Total Available Units",
+    "annualEstUnits": "Annual\nEst. Units",
+    "totalIssuedUnits": "Total\nIssued Units",
+    "totalRetiredUnits": "Total\nRetired Units",
+    "totalAvailableUnits": "Total\nAvailable Units",
     "correspondingAdjustment": "Corresponding Adjustment"
   },
   "unitTable": {
