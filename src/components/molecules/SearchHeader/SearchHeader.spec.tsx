@@ -5,8 +5,6 @@ import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 import { usePathname } from 'next/navigation'
 import { MockData } from '@/test/TestOvermindMockData'
 
-const TIMEOUT = 20000
-
 const mockPush = jest.fn()
 jest.mock(`next/navigation`, () => ({
   ...jest.requireActual(`next/navigation`),
@@ -79,18 +77,14 @@ it(`renders correctly and clear the search values`, async () => {
 })
 const NUMBER_TIMES_ROUTE_CALLED = 2
 
-it(
-  `renders correctly with no params, add a search value and submits a search`,
-  async () => {
-    const { container } = render(
-      <TestOvermindWrapper>
-        <SearchHeader />
-      </TestOvermindWrapper>,
-    )
-    await userEvent.type(screen.getByRole(`textbox`), `hello`)
-    await userEvent.click(screen.getByTestId(`search-header-button`))
-    expect(mockPush).toBeCalledTimes(NUMBER_TIMES_ROUTE_CALLED)
-    expect(container).toMatchSnapshot()
-  },
-  TIMEOUT,
-)
+it(`renders correctly with no params, add a search value and submits a search`, async () => {
+  const { container } = render(
+    <TestOvermindWrapper>
+      <SearchHeader />
+    </TestOvermindWrapper>,
+  )
+  await userEvent.type(screen.getByRole(`textbox`), `hello`)
+  await userEvent.click(screen.getByTestId(`search-header-button`))
+  expect(mockPush).toBeCalledTimes(NUMBER_TIMES_ROUTE_CALLED)
+  expect(container).toMatchSnapshot()
+})
