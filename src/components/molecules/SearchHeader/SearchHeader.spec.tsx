@@ -5,7 +5,7 @@ import { TestOvermindWrapper } from '@/test/TestOvermindWrapper'
 import { usePathname } from 'next/navigation'
 import { MockData } from '@/test/TestOvermindMockData'
 
-const TIMEOUT = 25000
+const TIMEOUT = 20000
 
 const mockPush = jest.fn()
 jest.mock(`next/navigation`, () => ({
