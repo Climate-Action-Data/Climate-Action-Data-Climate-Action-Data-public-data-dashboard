@@ -20,7 +20,7 @@ const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
     tickSize: 0,
     tickPadding: 10,
     tickRotation: 0,
-    tickValues: `every month`,
+    tickValues: 8,
     legend: ``,
     legendOffset: 36,
     legendPosition: `middle`,
