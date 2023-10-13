@@ -5,8 +5,16 @@ import { AxisProps } from '@nivo/axes'
 import { Aeonik } from '@/styles/fonts'
 
 const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
-  const format = new Intl.DateTimeFormat(`en-SG`, { month: `short`, year: `2-digit` }).format
+  let tickCount = 0
+  const maxTickCount = 12
 
+  if (props.data[1].data.length > maxTickCount) {
+    tickCount = maxTickCount
+    console.log(`tickCount: ` + tickCount)
+  } else {
+    tickCount = props.data[1].data.length
+    console.log(`tickCount: ` + tickCount)
+  }
   const xScale: ScaleSpec = { type: `time` }
 
   const yScale: ScaleSpec = {
@@ -20,11 +28,11 @@ const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
     tickSize: 0,
     tickPadding: 10,
     tickRotation: 0,
-    tickValues: 8,
+    tickValues: tickCount,
     legend: ``,
     legendOffset: 36,
     legendPosition: `middle`,
-    format: (value) => format(new Date(value)).toLocaleUpperCase(),
+    format: `%b %y`,
   }
 
   const axisLeft: AxisProps = {
@@ -46,7 +54,7 @@ const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
       xScale={xScale}
       yScale={yScale}
       yFormat=" >-.2s"
-      xFormat={(value) => format(new Date(value)).toLocaleUpperCase()}
+      xFormat={`time:%Y-%m-%d`}
       axisTop={null}
       axisRight={null}
       axisBottom={axisBottom}
