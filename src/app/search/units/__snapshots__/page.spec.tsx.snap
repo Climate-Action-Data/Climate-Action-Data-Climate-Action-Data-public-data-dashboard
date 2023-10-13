@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 <div>
   <div
-    class="css-ry16w4"
+    class="css-srq381"
   >
     <div
       class="css-13cl24c"
@@ -681,7 +681,7 @@ exports[`renders correctly 1`] = `
 exports[`renders correctly and click next page 1`] = `
 <div>
   <div
-    class="css-ry16w4"
+    class="css-srq381"
   >
     <div
       class="css-nbj2o1"
@@ -777,7 +777,7 @@ exports[`renders correctly and click next page 1`] = `
 exports[`renders correctly and set isLoading to false 1`] = `
 <div>
   <div
-    class="css-ry16w4"
+    class="css-srq381"
   >
     <div
       class="css-nbj2o1"
@@ -873,7 +873,7 @@ exports[`renders correctly and set isLoading to false 1`] = `
 exports[`renders correctly on table data 1`] = `
 <div>
   <div
-    class="css-ry16w4"
+    class="css-srq381"
   >
     <div
       class="css-13cl24c"
@@ -1551,7 +1551,7 @@ exports[`renders correctly on table data 1`] = `
 exports[`renders correctly on table data and scroll page 1`] = `
 <div>
   <div
-    class="css-ry16w4"
+    class="css-srq381"
   >
     <div
       class="css-13cl24c"
