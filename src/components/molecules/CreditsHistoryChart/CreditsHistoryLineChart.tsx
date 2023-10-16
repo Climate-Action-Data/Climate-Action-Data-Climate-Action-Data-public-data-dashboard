@@ -4,10 +4,14 @@ import { ScaleSpec } from '@nivo/scales'
 import { AxisProps } from '@nivo/axes'
 import { Aeonik } from '@/styles/fonts'
 
+export const calculateTickCount = (dataLength: number, maxTickCount: number) => {
+  const tickCount = dataLength > maxTickCount ? maxTickCount : dataLength
+  return Math.floor(tickCount)
+}
+
 const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
   const maxTickCount = 12
   const dataLength = props.data[0].data.length
-  const tickCount = dataLength > maxTickCount ? maxTickCount : dataLength
 
   const xScale: ScaleSpec = { type: `time` }
 
@@ -22,7 +26,7 @@ const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
     tickSize: 0,
     tickPadding: 10,
     tickRotation: 0,
-    tickValues: tickCount,
+    tickValues: calculateTickCount(dataLength, maxTickCount),
     legend: ``,
     legendOffset: 36,
     legendPosition: `middle`,
