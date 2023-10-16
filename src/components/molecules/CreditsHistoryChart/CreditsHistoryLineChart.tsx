@@ -5,16 +5,10 @@ import { AxisProps } from '@nivo/axes'
 import { Aeonik } from '@/styles/fonts'
 
 const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
-  let tickCount = 0
   const maxTickCount = 12
+  const dataLength = props.data[0].data.length
+  const tickCount = dataLength > maxTickCount ? maxTickCount : dataLength
 
-  if (props.data[1].data.length > maxTickCount) {
-    tickCount = maxTickCount
-    console.log(`tickCount: ` + tickCount)
-  } else {
-    tickCount = props.data[1].data.length
-    console.log(`tickCount: ` + tickCount)
-  }
   const xScale: ScaleSpec = { type: `time` }
 
   const yScale: ScaleSpec = {
