@@ -30,7 +30,7 @@ const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
     legend: ``,
     legendOffset: 36,
     legendPosition: `middle`,
-    format: `%b %y`,
+    format: `%b %Y`,
   }
 
   const axisLeft: AxisProps = {
