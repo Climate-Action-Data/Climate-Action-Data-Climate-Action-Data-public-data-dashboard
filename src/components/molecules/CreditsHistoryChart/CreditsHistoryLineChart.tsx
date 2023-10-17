@@ -35,13 +35,13 @@ const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
 
   const axisLeft: AxisProps = {
     tickSize: 0,
-    tickPadding: 8,
+    tickPadding: 11,
     tickRotation: 0,
     legend: ``,
     legendOffset: -40,
     legendPosition: `middle`,
     format: ` >-.1s`,
-    tickValues: 8,
+    tickValues: 5,
   }
 
   return (
