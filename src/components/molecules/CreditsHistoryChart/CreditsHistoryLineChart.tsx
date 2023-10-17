@@ -41,7 +41,7 @@ const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
     legendOffset: -40,
     legendPosition: `middle`,
     format: ` >-.1s`,
-    tickValues: 5,
+    tickValues: 7,
   }
 
   return (
