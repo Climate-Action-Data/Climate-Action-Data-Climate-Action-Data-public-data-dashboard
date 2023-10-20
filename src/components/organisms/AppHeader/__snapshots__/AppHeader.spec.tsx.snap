@@ -20,7 +20,7 @@ exports[`renders correctly 1`] = `
           <p
             class="chakra-text headerTitle css-qs4c7r"
           >
-            Connecting Carbon markets through open data.
+            Connecting carbon markets through open data.
           </p>
           <a
             class="chakra-link css-spn4bz"

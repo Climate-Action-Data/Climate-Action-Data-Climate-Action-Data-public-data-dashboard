@@ -20,10 +20,10 @@ export const Menu = (): React.JSX.Element => {
         <Flex alignItems={`center`}>
           <Link href="/">
             <Hide below="md">
-              <Image marginLeft={`24px`} alt={t(`logo`)} height={`32px`} src={Logo.src} />
+              <Image marginLeft={`24px`} alt={t(`logo`)} height={`54px`} src={Logo.src} />
             </Hide>
             <Hide above="md">
-              <CADIcon marginLeft={`24px`} />
+              <CADIcon marginLeft={`24px`} height={`54px`} width={`54px`} />
             </Hide>
           </Link>
         </Flex>

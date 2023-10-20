@@ -40,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
     <Provider value={overmind}>
       <Auth0Provider {...providerConfig}>
         <html lang="en">
+          <title>Data Dashboard : Climate Action Data Trust</title>
           <body>
             <NoSSR>
               <CacheProvider>

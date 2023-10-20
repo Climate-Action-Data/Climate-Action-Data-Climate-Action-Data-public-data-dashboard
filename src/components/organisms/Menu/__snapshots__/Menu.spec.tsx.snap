@@ -17,11 +17,11 @@ exports[`Menu renders correctly 1`] = `
         >
           <img
             alt="logo"
-            class="chakra-image css-1qxlk6d"
+            class="chakra-image css-7qs5u7"
             src="/img.jpg"
           />
           <svg
-            class="chakra-icon css-16rxtj9"
+            class="chakra-icon css-b3heck"
             focusable="false"
             viewBox="0 0 32 32"
           >
