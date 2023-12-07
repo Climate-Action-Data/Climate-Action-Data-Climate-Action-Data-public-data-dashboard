@@ -69,8 +69,8 @@ describe(`CalendarWrapper`, () => {
 
     const { container } = render(<CalendarWrapper onApplySelectedDate={tApplySelectedDate} preSelectedDate={tDate} />)
 
-    const tPrevMonth = screen.getByLabelText(`before Oct`)
-    const tNextMonth = screen.getByLabelText(`after Oct`)
+    const tPrevMonth = screen.getByLabelText(`before Dec`)
+    const tNextMonth = screen.getByLabelText(`after Dec`)
     const tPrevYear = screen.getByLabelText(`before 2023`)
     const tNextYear = screen.getByLabelText(`after 2023`)
 
