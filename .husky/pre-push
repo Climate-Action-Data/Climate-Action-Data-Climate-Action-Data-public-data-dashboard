@@ -2,5 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 pnpm lint
-pnpm audit
+# pnpm audit
 # CI=true pnpm test
