@@ -63,7 +63,7 @@ exports[`RetirementDetails renders correctly with missing details 1`] = `
       <p
         class="chakra-text css-0"
       >
-        --
+        233
       </p>
     </div>
     <div
@@ -91,7 +91,7 @@ exports[`RetirementDetails renders correctly with missing details 1`] = `
       <p
         class="chakra-text css-0"
       >
-        --
+        2010/04/30 - 2020/03/04
       </p>
     </div>
   </div>
@@ -169,7 +169,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       <p
         class="chakra-text css-0"
       >
-        1102
+        233
       </p>
     </div>
     <div
@@ -197,7 +197,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       <p
         class="chakra-text css-0"
       >
-        2019-12-16T02:50:47.000Z
+        2010/04/30 - 2020/03/04
       </p>
     </div>
   </div>
