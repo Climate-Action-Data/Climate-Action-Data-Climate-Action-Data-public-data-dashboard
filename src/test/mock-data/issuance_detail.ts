@@ -19,7 +19,7 @@ export const issuanceDetail: Issuance = {
   unitType: `Reduction - nature`,
   monitoringPeriodStart: `2010-04-30T00:00:00.000Z`,
   monitoringPeriodEnd: `2020-03-04T00:00:00.000Z`,
-  correspondingAdjustment: undefined,
+  correspondingAdjusted: undefined,
   issuanceTags: `More information in the project link. || Cercarbono Standard. || Ecoregistry Serial Number of Issuance: CDC_12_2_1_322_14_CO_1_1_2019 . || Sector of issuance: Agriculture; forestry and fishing . || Methodology of issuance: AR-ACM0003: Afforestation and reforestation of lands except wetlands`,
   validation: {
     body: `AENOR International S.A.U.`,
