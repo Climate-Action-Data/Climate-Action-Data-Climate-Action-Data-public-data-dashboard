@@ -13,6 +13,7 @@ export const unitDetail: Unit = {
     type: `Reforestation and Revegetation`,
     warehouseProjectId: `a442a765-50f4-43dc-aa38-24e08d88c821`,
   },
+  serialNumberBlock: `null`,
   status: `Retired`,
   type: `Reduction - nature`,
   credits: 233,
