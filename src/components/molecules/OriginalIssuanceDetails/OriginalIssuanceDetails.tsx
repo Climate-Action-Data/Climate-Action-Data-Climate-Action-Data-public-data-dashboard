@@ -39,7 +39,7 @@ export const OriginalIssuanceDetails = (props: OriginalIssuanceDetailsProps) => 
           {unit?.project?.name ?? tHome(`noData`)}
         </Link>
       </DetailWidget>
-      <DetailWidget title={t(`originalIssuance.issuanceBatchSerialNumber`)}>{unit?.issuance?.issuanceBatchSerial ?? tHome(`noData`)}</DetailWidget>
+      <DetailWidget title={t(`originalIssuance.issuanceBatchSerialNumber`)}>{unit?.serialNumberBlock ?? tHome(`noData`)}</DetailWidget>
       <DetailWidget title={t(`originalIssuance.vintage`)}>{unit?.vintage ?? tHome(`noData`)}</DetailWidget>
       <DetailWidget title={t(`originalIssuance.quantityIssued`)}>{unit?.credits ?? tHome(`noData`)}</DetailWidget>
       <DetailWidget title={t(`originalIssuance.unitType`)}>{unit?.type ?? tHome(`noData`)}</DetailWidget>

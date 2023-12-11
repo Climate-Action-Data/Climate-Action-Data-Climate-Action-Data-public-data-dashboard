@@ -44,7 +44,7 @@ export const IssuanceDetails = (props: IssuanceDetailsProps) => {
       <DetailWidget title={t(`issuanceDetails.quantity`)}>{issuance.quantity.toLocaleString()}</DetailWidget>
       <DetailWidget title={t(`issuanceDetails.unitType`)}>{issuance.unitType}</DetailWidget>
       <DetailWidget title={t(`issuanceDetails.monitoringPeriod`)}>{renderMonitoringDate(issuance?.monitoringPeriodStart, issuance?.monitoringPeriodEnd)}</DetailWidget>
-      <DetailWidget title={t(`issuanceDetails.correspodinglyAdjusted`)}>{issuance.correspondingAdjustment ?? tHome(`noData`)}</DetailWidget>
+      <DetailWidget title={t(`issuanceDetails.correspodinglyAdjusted`)}>{issuance.correspondingAdjusted ?? tHome(`noData`)}</DetailWidget>
       <DetailWidget asBox title={t(`issuanceDetails.issuanceTags`)}>
         {issuance.issuanceTags && issuance.issuanceTags.length > 0 ? <ExpandableList items={extractTagItemsFromTag(issuance.issuanceTags)} /> : tHome(`noData`)}
       </DetailWidget>
