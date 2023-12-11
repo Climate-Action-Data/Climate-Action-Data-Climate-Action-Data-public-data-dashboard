@@ -24,8 +24,8 @@ export const RetirementDetails = (props: RetirementDetailsProps) => {
       <DetailWidget title={t(`retirement.status`)}>{unit.status}</DetailWidget>
       <DetailWidget title={t(`retirement.quantityRetired`)}>{unit.credits.toLocaleString()}</DetailWidget>
       <DetailWidget title={t(`retirement.retirementNotes`)}>{unit.retirementNote ?? tHome(`noData`)}</DetailWidget>
-      <DetailWidget title={t(`retirement.usingEntity`)}>{tHome(`noData`)}</DetailWidget>
-      <DetailWidget title={t(`retirement.correspondingAdjustment`)}>{tHome(`noData`)}</DetailWidget>
+      <DetailWidget title={t(`retirement.usingEntity`)}>{unit.usingEntity ?? tHome(`noData`)}</DetailWidget>
+      <DetailWidget title={t(`retirement.correspondingAdjustment`)}>{unit.correspondingAdjustment ?? tHome(`noData`)}</DetailWidget>
     </SimpleGrid>
   )
 }

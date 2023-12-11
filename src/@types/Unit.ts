@@ -30,4 +30,5 @@ export type Unit = {
   monitoringPeriod: string
   validation: Validation
   issuance: UnitIssuance
+  serialNumberBlock: string
 }
