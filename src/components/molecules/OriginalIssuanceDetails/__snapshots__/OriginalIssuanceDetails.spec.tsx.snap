@@ -35,7 +35,7 @@ exports[`RetirementDetails renders correctly with missing details 1`] = `
       <p
         class="chakra-text css-0"
       >
-        --
+        Null
       </p>
     </div>
     <div
@@ -141,7 +141,7 @@ exports[`RetirementDetails renders correctly with validation 1`] = `
       <p
         class="chakra-text css-0"
       >
-        --
+        Null
       </p>
     </div>
     <div
