@@ -25,7 +25,7 @@ const IssuedRetiredChartBody = () => {
         <GridItem area={`stats`}>
           <Stack direction={[`row`, null, `column`]} divider={<StackDivider borderBottomColor={`lightGray.400`} borderBottomWidth={`1px`} />}>
             <CreditsHistoryStat amount={filteredCreditsHistory?.issued} label={t(`issued`)} textColor={`green.600`} />
-            <CreditsHistoryStat amount={filteredCreditsHistory?.retired} label={t(`retired`)} textColor={`green.800`} />
+            {/* <CreditsHistoryStat amount={filteredCreditsHistory?.retired} label={t(`retired`)} textColor={`green.800`} /> */}
           </Stack>
         </GridItem>
         <GridItem area={`chart`} height={`300px`} minW={0}>
