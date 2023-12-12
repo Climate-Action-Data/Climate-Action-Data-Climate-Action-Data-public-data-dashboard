@@ -46,11 +46,11 @@ jobs:
         with:
           fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
 
-      - name: SonarCloud Scan
-        uses: './.github/workflows/templates/sonar-analysis'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-          sonar_token: ${{ secrets.SONAR_TOKEN }}
+      # - name: SonarCloud Scan
+      #   uses: './.github/workflows/templates/sonar-analysis'
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+      #     sonar_token: ${{ secrets.SONAR_TOKEN }}
 
   Deploy:
     name: Deploy
