@@ -45,8 +45,7 @@ const CreditsHistorySection: FC = () => {
 
   if (filteredCreditsHistory) {
     const issuedValues = filteredCreditsHistory?.chartData[0].data?.length
-    // const retiredValues = filteredCreditsHistory?.chartData[1].data?.length
-    const retiredValues = 0
+    const retiredValues = filteredCreditsHistory?.chartData[1].data?.length
 
     if (issuedValues > 0 || retiredValues > 0) {
       ChartBodyComponent = <IssuedRetiredChartBody />

@@ -43,7 +43,7 @@ export const appendChartDataAndStat = (result: FilteredCreditsHistoryData, forma
     result.chartData[1].data[index] = { x: formattedDateTime, y: result.chartData[1].data[index].y + retired }
   }
   result.issued += issued
-  result.retired += retired
+  // result.retired += retired
 }
 
 export const generateFilteredCreditsHistory = (rawData: IssuedRetiredDataCountry[], dataFilters: DataFilters): FilteredCreditsHistoryData => {
