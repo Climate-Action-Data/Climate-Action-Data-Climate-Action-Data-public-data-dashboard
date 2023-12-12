@@ -14,7 +14,7 @@ const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
   const dataLength = props.data[0].data.length
 
   // Extract the first dataset from props.data
-  const firstDataset = props.data[0]
+  const firstDataset = props.data[1]
   const dataToDisplay = [firstDataset] // Display only the first dataset
   const xScale: ScaleSpec = { type: `time` }
 
