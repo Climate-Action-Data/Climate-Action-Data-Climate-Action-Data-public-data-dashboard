@@ -37,13 +37,13 @@ export const appendChartDataAndStat = (result: FilteredCreditsHistoryData, forma
   const index = result.chartData[0].data.findIndex((e) => e.x.toDateString() === formattedDateTime.toDateString())
   if (index < 0) {
     result.chartData[0].data.push({ x: formattedDateTime, y: issued })
-    // result.chartData[1].data.push({ x: formattedDateTime, y: retired })
+    result.chartData[1].data.push({ x: formattedDateTime, y: retired })
   } else {
     result.chartData[0].data[index] = { x: formattedDateTime, y: result.chartData[0].data[index].y + issued }
-    // result.chartData[1].data[index] = { x: formattedDateTime, y: result.chartData[1].data[index].y + retired }
+    result.chartData[1].data[index] = { x: formattedDateTime, y: result.chartData[1].data[index].y + retired }
   }
   result.issued += issued
-  // result.retired += retired
+  result.retired += retired
 }
 
 export const generateFilteredCreditsHistory = (rawData: IssuedRetiredDataCountry[], dataFilters: DataFilters): FilteredCreditsHistoryData => {
@@ -56,8 +56,13 @@ export const generateFilteredCreditsHistory = (rawData: IssuedRetiredDataCountry
         id: `issued`,
         data: [],
       },
+      {
+        id: `retired`,
+        data: [],
+      },
     ],
     issued: 0,
+    retired: 0,
   }
 
   rawData.forEach((countryEntry) => {
@@ -78,7 +83,7 @@ export const generateFilteredCreditsHistory = (rawData: IssuedRetiredDataCountry
   })
   // eslint-disable-next-line no-magic-numbers
   result.chartData[0].data.sort((a, b) => (isBefore(a.x, b.x) ? -1 : 1))
-  // // eslint-disable-next-line no-magic-numbers
-  // result.chartData[1].data.sort((a, b) => (isBefore(a.x, b.x) ? -1 : 1))
+  // eslint-disable-next-line no-magic-numbers
+  result.chartData[1].data.sort((a, b) => (isBefore(a.x, b.x) ? -1 : 1))
   return result
 }
