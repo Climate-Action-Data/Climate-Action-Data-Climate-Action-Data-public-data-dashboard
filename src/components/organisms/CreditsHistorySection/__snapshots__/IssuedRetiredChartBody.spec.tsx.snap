@@ -38,32 +38,6 @@ exports[`renders correctly 1`] = `
               </dt>
             </dl>
           </div>
-          <div
-            class="chakra-stack__divider css-2if2sn"
-          />
-          <div
-            class="chakra-stat css-1882jtg"
-          >
-            <dl>
-              <dd
-                class="chakra-stat__number css-1e672z"
-              >
-                <p
-                  class="chakra-text css-0"
-                >
-                  0.00
-                </p>
-                <p
-                  class="chakra-text css-0"
-                />
-              </dd>
-              <dt
-                class="chakra-stat__label css-0"
-              >
-                Retired
-              </dt>
-            </dl>
-          </div>
         </div>
       </div>
       <div
