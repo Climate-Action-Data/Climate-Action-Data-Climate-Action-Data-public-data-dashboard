@@ -83,6 +83,7 @@ export interface CreditsHistoryChartData {
 export interface FilteredCreditsHistoryData {
   chartData: CreditsHistoryChartData[]
   issued: number
+  retired: number
 }
 
 export interface CreditsHistoryDataState {
