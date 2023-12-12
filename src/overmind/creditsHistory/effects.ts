@@ -56,6 +56,10 @@ export const generateFilteredCreditsHistory = (rawData: IssuedRetiredDataCountry
         id: `issued`,
         data: [],
       },
+      {
+        id: `retired`,
+        data: [],
+      },
     ],
     issued: 0,
     retired: 0,

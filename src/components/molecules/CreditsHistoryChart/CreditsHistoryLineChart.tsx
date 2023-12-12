@@ -13,6 +13,9 @@ const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
   const maxTickCount = 12
   const dataLength = props.data[0].data.length
 
+  // Extract the first dataset from props.data
+  const firstDataset = props.data[0]
+  const dataToDisplay = [firstDataset] // Display only the first dataset
   const xScale: ScaleSpec = { type: `time` }
 
   const yScale: ScaleSpec = {
@@ -47,7 +50,7 @@ const CreditHistoryLineChart = (props: { data: CreditsHistoryChartData[] }) => {
   return (
     <ResponsiveLine
       colors={[`#24BD63`, `#125E32`]}
-      data={props.data}
+      data={dataToDisplay}
       margin={{ top: 50, right: 50, bottom: 50, left: 50 }}
       xScale={xScale}
       yScale={yScale}
