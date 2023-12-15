@@ -5,6 +5,7 @@ import { Status } from '@googlemaps/react-wrapper'
 const DEFAULT_COORDINATES = { latitude: 45.76342, longitude: 4.834277 }
 const DEFAULT_COORDINATES_LATLNG = { lat: 45.76342, lng: 4.834277 }
 const DEFAULT_COUNTRY = `France`
+const RETRY_DELAY = 3000
 
 it(`renders correctly with coordinates`, async () => {
   await act(async () => {
@@ -100,6 +101,9 @@ it(`renders correctly with bad coord`, async () => {
     geoDecode(``)
       .then((res) => mockHandleData(res))
       .catch((err) => mockHandleError(err))
+    const delay = (ms: number | undefined) => new Promise((resolve) => setTimeout(resolve, ms))
+    await delay(RETRY_DELAY)
+
     await waitFor(() => {
       expect(mockHandleError).toHaveBeenCalled()
     })

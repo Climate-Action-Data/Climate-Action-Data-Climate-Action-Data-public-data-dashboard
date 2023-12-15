@@ -8,23 +8,37 @@ import { ProjectCoordinates } from '@/@types/ProjectDetails'
 const DEFAULT_MAP_LOCATION = { lat: 45.76342, lng: 4.834277 }
 const DEFAULT_MAP_ZOOM_IN = 10
 const DEFAULT_MAP_ZOOM = 1
-export const geoDecode = (coordinates: ProjectCoordinates | string) => {
-  return new Promise<google.maps.LatLngLiteral>((resolve, reject) => {
-    if (`string` !== typeof coordinates) {
-      resolve({ lat: coordinates.latitude, lng: coordinates.longitude })
-    } else {
-      const geocoder = new google.maps.Geocoder()
-      geocoder.geocode({ address: coordinates }, (results, status) => {
-        if (status === google.maps.GeocoderStatus.OK && results && results.length > 0) {
-          resolve({ lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() })
+const RETRY_DELAY = 1000
+const MAX_RETRY = 3
+
+export const geoDecode = async (coordinates: ProjectCoordinates | string, maxRetries = MAX_RETRY): Promise<google.maps.LatLngLiteral> => {
+  let retries = 0
+
+  while (retries < maxRetries) {
+    try {
+      return await new Promise<google.maps.LatLngLiteral>((resolve, reject) => {
+        if (typeof coordinates !== `string`) {
+          resolve({ lat: coordinates.latitude, lng: coordinates.longitude })
         } else {
-          reject()
+          const geocoder = new google.maps.Geocoder()
+          geocoder.geocode({ address: coordinates }, (results, status) => {
+            if (status === google.maps.GeocoderStatus.OK && results && results.length > 0) {
+              resolve({ lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() })
+            } else {
+              reject()
+            }
+          })
         }
       })
+    } catch (error) {
+      // Retry on error (e.g., if coordinates is undefined)
+      retries++
+      await new Promise((resolve) => setTimeout(resolve, RETRY_DELAY)) // Delay for 1 second before retrying
     }
-  })
-}
+  }
 
+  throw new Error(`Exceeded maximum number of retries (${maxRetries})`)
+}
 export const render = (status: Status, coordinates: google.maps.LatLngLiteral) => {
   if (status === Status.LOADING) {
     return <Skeleton borderTopLeftRadius="8px" borderTopRightRadius="8px" width={[`unset`, `448px`]} height="448px" />
