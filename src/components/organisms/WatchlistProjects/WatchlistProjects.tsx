@@ -8,8 +8,6 @@ import { ALLOWED_RENDER_TYPE, DEFAULT_PROJECT_COUNT_TO_DISPLAY } from '@/@types/
 import { ProjectSearchHead } from '@/components/molecules/ProjectSearchHead/ProjectSearchHead'
 import { ProjectSearchBody } from '@/components/molecules/ProjectSearchBody/ProjectSearchBody'
 import { PaginationWidget } from '@/components/atoms/PaginationWidget/PaginationWidget'
-import { CSVDownload } from '@/components/molecules/CSVDownload/CSVDownload'
-import { CSVExportTypes } from '@/@types/CSV'
 import { SpinnerScreen } from '@/components/atoms/SpinnerScreen/SpinnerScreen'
 import { NoProjectsWatchlist } from '@/components/atoms/NoProjectsWatchlist/NoProjectsWatchlist'
 
