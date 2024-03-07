@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next'
 import { createAndDownloadCsv } from '../../../utils/CsvHelper'
 
 interface CSVDownloadProps {
+  watchlistId?: string
   exportType: CSVExportTypes
   totalResults?: number
 }
@@ -30,6 +31,7 @@ export const CSVDownload = (props: CSVDownloadProps) => {
   const [newToast] = useToastHook()
 
   const handleOnClick = async () => {
+    console.log(props)
     if (totalResults && totalResults > DEFAULT_MAX_DOWNLOAD_SIZE && !validatedLargeDownload) {
       onOpen()
     } else {
@@ -45,7 +47,7 @@ export const CSVDownload = (props: CSVDownloadProps) => {
     if (exportType === CSVExportTypes.UNIT) {
       searchFilters = selectedUnitSearchFilterValues.searchFilterValues
     }
-    exportToCSV(exportType, keywordSearch, searchFilters).then((exportData) => {
+    exportToCSV(exportType, keywordSearch, searchFilters, props.watchlistId).then((exportData) => {
       if (exportData.data) {
         // Create a blob from the response data
         createAndDownloadCsv(exportData.data, exportType === CSVExportTypes.UNIT ? CSVExportFilenames.UNIT_SEARCH : CSVExportFilenames.PROJECT_SEARCH)
@@ -57,7 +59,6 @@ export const CSVDownload = (props: CSVDownloadProps) => {
     })
     setDownloadStatus(downloadStatus)
   }
-
   const clickValidateLargeExport = () => {
     setValidatedLargeDownload(true)
     onClose()

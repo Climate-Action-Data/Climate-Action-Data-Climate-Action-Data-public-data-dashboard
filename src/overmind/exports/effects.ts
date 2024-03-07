@@ -60,6 +60,7 @@ export const exportToCSV = async (
   exportType: CSVExportTypes,
   keywords: string,
   filters: ProjectSearchFilterValues | UnitSearchFilterValues,
+  watchlistId?: string,
   offset = 0,
   count = DEFAULT_PROJECT_COUNT_TO_DISPLAY,
 ): Promise<EffectResponse<Blob>> => {
@@ -67,7 +68,7 @@ export const exportToCSV = async (
     let result: EffectResponse<Blob>
     const filtersParsed = extractFiltersFromType(exportType, keywords, filters, offset, count)
     axios
-      .post(generateExportUrl(exportType), filtersParsed, { ...defaultHeaders, responseType: `blob` })
+      .post(generateExportUrl(exportType), { ...filtersParsed, watchlistId }, { ...defaultHeaders, responseType: `blob` })
       .then((body) => {
         if (body.data) {
           result = { data: body.data }
