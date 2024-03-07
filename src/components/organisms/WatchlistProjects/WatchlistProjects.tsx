@@ -101,7 +101,7 @@ export const WatchlistProjects = (props: WatchlistProjectsProps) => {
             <>
               <PaginationWidget onPageChange={handleOnPageChange} resultPerPage={DEFAULT_PROJECT_COUNT_TO_DISPLAY} totalResults={projectResults?.data?.totalCount} />
               <Box position={[`unset`, `absolute`]} right="10px" float="right">
-                <CSVDownload totalResults={projectResults?.data?.totalCount} exportType={CSVExportTypes.PROJECT} />
+                {/* <CSVDownload totalResults={projectResults?.data?.totalCount} exportType={CSVExportTypes.PROJECT} /> */}
               </Box>
             </>
           ) : (
