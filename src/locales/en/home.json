@@ -39,7 +39,7 @@
   },
   "carbonReduction": {
     "activeProjects": "Active Projects",
-    "totalReduction": "Total Reduction (YTD)",
+    "totalReduction": "Total Reduction",
     "annualReduction": "Annual Est. Reduction",
     "sector": "Sector",
     "registry": "Registry",
