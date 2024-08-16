@@ -177,7 +177,7 @@ exports[`CarbonReductionWidget renders the widget when carbonMapData and carbonM
           <p
             class="chakra-text css-10rvbm3"
           >
-            Total Reduction (YTD)
+            Total Reduction
           </p>
         </div>
         <div
