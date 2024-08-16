@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import { Box, Button, Checkbox, Flex, Input, Popover, PopoverBody, PopoverContent, PopoverHeader, PopoverTrigger, Spacer, Stack, StackDivider, VStack } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
@@ -25,6 +25,12 @@ const AutoCompleteCheckbox: FC<AutoCompleteCheckboxProps> = (props) => {
 
   const allChecked = options.length != 0 && selectedValues.length === options.length
   const isIndeterminate = selectedValues.length !== 0 && selectedValues.length !== options.length
+
+  const popoverContentRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    setSelectedValues([...selectedFilters])
+  }, [])
 
   const handleOnClose = () => {
     setIsOpen(false)
